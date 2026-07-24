@@ -1923,8 +1923,37 @@
       .movement-total { width: 100%; min-height: 58px; }
       .listing-copy { grid-area: copy; }
       .movement-arrow { grid-area: arrow; justify-self: end; }
-      .detail-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
-      .detail-evidence-button { width: 100%; }
+      .home-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+      }
+      .home-actions button {
+        width: 100%;
+        min-height: 44px;
+        text-align: center;
+      }
+      .detail-actions {
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .detail-actions .movement-summary-meta {
+        flex-basis: 100%;
+        margin-top: 0;
+      }
+      .detail-actions .compare-tray-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .detail-actions .compare-button,
+      .detail-actions .detail-evidence-button,
+      .detail-actions .add-movement-button {
+        width: auto;
+        min-height: 34px;
+        padding: 7px 10px;
+        font-size: 12px;
+      }
       .collection-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .collection-menu-button { padding: 8px; }
       .collection-menu-button span { font-size: 11px; }
@@ -1962,7 +1991,47 @@
       .workout-builder-save-footer { grid-template-columns: 1fr; }
       .workout-builder-save-footer button { width: 100%; }
       .collection-options, .movement-card-tags { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
-      .rating-grid, .muscle-grid, .compare-grid, .evidence-readout, .role-evidence-card { grid-template-columns: 1fr; }
+      .rating-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+      .rating-box {
+        padding: 8px;
+      }
+      .rating-box strong {
+        font-size: 11px;
+      }
+      .score-value {
+        font-size: 17px;
+      }
+      .score-dots {
+        gap: 3px;
+      }
+      .score-dots span {
+        width: 6px;
+        height: 6px;
+      }
+      .muscle-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+      }
+      .muscle-box {
+        padding: 7px 5px;
+      }
+      .muscle-box .role-label {
+        display: block;
+        font-size: 10px;
+        line-height: 1.1;
+      }
+      .muscle-role {
+        gap: 5px;
+      }
+      .muscle-chip {
+        padding: 7px 5px;
+        font-size: 10px;
+        line-height: 1.15;
+      }
+      .compare-grid, .evidence-readout, .role-evidence-card { grid-template-columns: 1fr; }
       .local-anatomy-viewer { min-height: 360px; }
       .evidence-modal,
       .quick-view-modal { padding: 0; }
