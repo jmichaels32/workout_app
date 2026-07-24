@@ -1,0 +1,235 @@
+{
+  "id": "lying_machine_leg_curl",
+  "name": "Lying Machine Hamstring Curl",
+  "aliases": [
+    "lying_machine_leg_curl",
+    "lying_leg_curl",
+    "prone_leg_curl",
+    "prone_machine_leg_curl",
+    "lying_hamstring_curl",
+    "machine_hamstring_curl"
+  ],
+  "family": "leg_curl",
+  "equipment": "machine",
+  "variantType": "lying_machine",
+  "variant": "Prone or lying hamstring curl machine with the thighs supported and a lower-leg roller or pad applying knee-flexion resistance.",
+  "description": "Lie prone on the leg-curl machine with the knees aligned near the machine pivot and the roller set just above the heels. Brace lightly into the pads without letting the hips lift, flex the knees to curl the roller toward the back of the thighs, pause under control, then lower until the knees are nearly straight without losing hamstring tension.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Hamstrings",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Knee flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 82,
+      "rationale": "Excellent direct knee-flexion hypertrophy movement for hamstrings, though hip position is less lengthened than seated curls."
+    },
+    "strength": {
+      "score": 45,
+      "rationale": "Builds isolated knee-flexion force, but it does not express integrated lower-body strength."
+    },
+    "joint_resilience": {
+      "score": 62,
+      "rationale": "Meaningful posterior-knee and hamstring tolerance builder under controlled loading, but less broad than integrated lower-body resilience work."
+    },
+    "athletic_transfer": {
+      "score": 8,
+      "rationale": "Very low athletic-transfer contribution because the task is supported and isolates knee flexion without gait, balance, or hip-knee coordination."
+    },
+    "control": {
+      "score": 8,
+      "rationale": "The machine constrains almost everything; the user mainly controls tempo, pelvis position, and ankle position."
+    },
+    "fatigue_efficiency": {
+      "score": 84,
+      "rationale": "High local hamstring stimulus with low systemic fatigue and little unrelated recovery cost."
+    },
+    "setup": {
+      "score": 70,
+      "rationale": "Low setup once the machine is available, but pad fit, machine availability, and reproducible body position still matter."
+    },
+    "ease": {
+      "score": 86,
+      "rationale": "Easy guided pattern with minimal balance demand, limited mainly by knee-axis alignment, pad position, and controlled range."
+    },
+    "progression": {
+      "score": 78,
+      "rationale": "Load and reps are easy to track, with deductions for machine-specific geometry, stack increments, and pad setup."
+    },
+    "support": {
+      "score": 94,
+      "rationale": "Very high external support from the machine pad, torso position, and guided lever path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Biceps femoris",
+        "evidenceShort": "Direct lying/prone leg-curl EMG and MRI support biceps femoris involvement.",
+        "evidence": "Direct lying and prone leg-curl studies measured lateral hamstrings or biceps femoris long-head activity, and MRI training evidence showed biceps femoris long- and short-head adaptation after prone leg-curl training. It is classified as a primary knee-flexion target.",
+        "sourceIds": [
+          "schoenfeld-2015",
+          "hegyi-2019",
+          "veeck-2024",
+          "maeo-2021",
+          "krommes-2021",
+          "marchetti-2021"
+        ]
+      },
+      {
+        "name": "Semitendinosus",
+        "evidenceShort": "Direct prone leg-curl EMG supports high semitendinosus activity.",
+        "evidence": "High-density and conventional EMG studies directly measured semitendinosus activity during prone or lying leg-curl conditions, with leg-curl variants producing high hamstring activity and meaningful medial-hamstring involvement.",
+        "sourceIds": [
+          "schoenfeld-2015",
+          "hegyi-2019",
+          "veeck-2024",
+          "maeo-2021",
+          "krommes-2021"
+        ]
+      },
+      {
+        "name": "Semimembranosus",
+        "evidenceShort": "Prone leg-curl MRI supports biarticular medial-hamstring adaptation.",
+        "evidence": "Semimembranosus is included conservatively from MRI evidence showing prone leg-curl training increased biarticular hamstring muscle volume, including semimembranosus. It is not isolated by the surface EMG studies, so the role relies primarily on MRI and knee-flexion biomechanics.",
+        "sourceIds": [
+          "maeo-2021"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Gastrocnemius",
+        "evidenceShort": "Measured prone leg-curl knee-flexion assistant.",
+        "evidence": "A prone leg-curl study measured gastrocnemius lateralis activity during knee-flexion contractions and evaluated how ankle and knee position affected force and activation. It is classified as a secondary assistant, not the intended hamstring target.",
+        "sourceIds": [
+          "marchetti-2021"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Prone machine knee-flexion leg curl: biceps femoris, semitendinosus, and semimembranosus primary; gastrocnemius secondary; no separate support muscles listed.",
+    "clinicalShort": "EMG estimates acute excitation, while MRI training studies estimate adaptation; neither alone proves hypertrophy, mechanical tension, injury risk, or best programming.",
+    "limitsShort": "Machine geometry, hip angle, knee angle, ankle position, range of motion, load, tempo, unilateral versus bilateral setup, and seated versus prone position can shift emphasis.",
+    "summary": "The lying machine leg curl is classified as a supported knee-flexion isolation exercise for the hamstrings. Direct lying and prone leg-curl EMG supports high biceps femoris and semitendinosus involvement, with lying leg curl showing high hamstring-to-quadriceps activation relative to other lower-body exercises. MRI training evidence supports semimembranosus inclusion because prone leg-curl training increased biarticular hamstring muscle volume. Gastrocnemius is visible as a secondary role because it was directly measured during prone leg-curl contractions and can assist knee flexion, especially as ankle position changes its mechanical contribution.",
+    "clinicalInterpretation": "Surface EMG, high-density EMG, and MRI answer different questions. EMG is condition-specific excitation data affected by electrode placement, normalization, contraction mode, and load; MRI volume and T2 data provide adaptation or muscle-damage context but do not identify every acute force contributor.",
+    "limitations": "Several useful studies used prone leg curls, lying leg curls, or band/manual prone knee flexion rather than one standardized commercial lying machine. Surface EMG evidence is strongest for biceps femoris long head and semitendinosus; semimembranosus is included mainly from MRI training data, not isolated surface EMG. Prone leg curls train the biarticular hamstrings at shorter lengths than seated leg curls, and Maeo et al. found greater hypertrophy after seated versus prone training for the biarticular hamstrings. Local BodyParts3D mappings are now available for biceps femoris, semitendinosus, semimembranosus, and gastrocnemius.",
+    "studies": [
+      {
+        "id": "schoenfeld-2015",
+        "type": "Lying leg curl regional EMG",
+        "shortCitation": "Schoenfeld et al., JSCR, 2015",
+        "finding": "Lying leg curl produced greater normalized mean activation of lower lateral and lower medial hamstrings than stiff-legged deadlift in trained men.",
+        "citation": "Schoenfeld BJ, Contreras B, Tiryaki-Sonmez G, Wilson JM, Kolber MJ, Peterson MD. Regional differences in muscle activation during hamstrings exercise. Journal of Strength and Conditioning Research. 2015;29(1):159-164. doi:10.1519/JSC.0000000000000598.",
+        "doi": "10.1519/JSC.0000000000000598",
+        "url": "https://journals.lww.com/nsca-jscr/fulltext/2015/01000/regional_differences_in_muscle_activation_during.20.aspx",
+        "relevance": "Direct lying leg-curl EMG in resistance-trained men using an 8RM load; supports hamstring primary classification and regional-emphasis limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "hegyi-2019",
+        "type": "High-density prone leg-curl EMG",
+        "shortCitation": "Hegyi et al., Scand J Med Sci Sports, 2019",
+        "finding": "Prone leg curl was among the exercises with high hamstring activity, and high-density EMG showed exercise-dependent biceps femoris long-head and semitendinosus regional patterns.",
+        "citation": "Hegyi A, Csala D, Peter A, Finni T, Cronin NJ. High-density electromyography activity in various hamstring exercises. Scandinavian Journal of Medicine & Science in Sports. 2019;29(1):34-43. doi:10.1111/sms.13303.",
+        "doi": "10.1111/sms.13303",
+        "url": "https://eprints.glos.ac.uk/8862/",
+        "relevance": "Directly included prone leg curl and measured biceps femoris long head and semitendinosus with 15-channel high-density EMG in amateur athletes.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "veeck-2024",
+        "type": "Lying leg curl hamstring-to-quadriceps EMG",
+        "shortCitation": "Veeck et al., Res Sports Med, 2024",
+        "finding": "Lying leg curl produced the greatest hamstring-to-quadriceps activation ratio among parallel squat, Romanian deadlift, hip thrust, lying leg curl, and seated knee extension, with relatively homogeneous lateral-to-medial hamstring activation.",
+        "citation": "Veeck F, de Vargas JS, Godinho RAT, Wilhelm EN, Daros Pinto M, Pinto RS. Hamstring-to-quadriceps activation ratio during lower-limb strengthening exercises. Research in Sports Medicine. 2024;32(5):843-856. doi:10.1080/15438627.2023.2286355.",
+        "doi": "10.1080/15438627.2023.2286355",
+        "url": "https://ro.ecu.edu.au/ecuworks2022-2026/3461/",
+        "relevance": "Directly studied lying leg curl among common lower-body exercises and supports its high hamstring targeting with low quadriceps contribution.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "maeo-2021",
+        "type": "Seated versus prone leg-curl MRI training study",
+        "shortCitation": "Maeo et al., Med Sci Sports Exerc, 2021",
+        "finding": "Both seated and prone leg-curl training increased hamstring muscle volume, but seated training produced greater hypertrophy in the biarticular hamstrings because they operated at longer muscle lengths.",
+        "citation": "Maeo S, Huang M, Wu Y, Sakurai H, Kusagawa Y, Sugiyama T, Kanehisa H, Isaka T. Greater Hamstrings Muscle Hypertrophy but Similar Damage Protection after Training at Long versus Short Muscle Lengths. Medicine & Science in Sports & Exercise. 2021;53(4):825-837. doi:10.1249/MSS.0000000000002523.",
+        "doi": "10.1249/MSS.0000000000002523",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33009197/",
+        "relevance": "Direct prone leg-curl training comparison with MRI-measured individual hamstring muscle volume and T2; supports semimembranosus inclusion and seated-versus-prone limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "krommes-2021",
+        "type": "Prone leg-curl EMG and EMG-rise study",
+        "shortCitation": "Krommes et al., IJSPT, 2021",
+        "finding": "Conventional prone leg curls at 8, 16, and 24RM produced substantial biceps femoris long-head and semitendinosus peak nEMG, while Nordic hamstring produced faster EMG rise.",
+        "citation": "Krommes K, Jakobsen MD, Bandholm T, Andersen LL, Zebis MK, Shield AJ, Holmich P, Thorborg K. Cross-sectional Study of EMG and EMG Rise During Fast and Slow Hamstring Exercises. International Journal of Sports Physical Therapy. 2021;16(4):1033-1042. doi:10.26603/001c.25364.",
+        "doi": "10.26603/001c.25364",
+        "url": "https://ijspt.scholasticahq.com/article/25364-cross-sectional-study-of-emg-and-emg-rise-during-fast-and-slow-hamstring-exercises",
+        "relevance": "Close prone knee-flexion evidence using an elastic-band leg-curl setup; useful for biceps femoris long-head and semitendinosus activation and fatigue interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "marchetti-2021",
+        "type": "Prone leg-curl knee and ankle position EMG",
+        "shortCitation": "Marchetti et al., JSCR, 2021",
+        "finding": "In trained men, prone leg-curl maximal isometric contractions measured biceps femoris, gastrocnemius lateralis, and soleus lateralis activity, with force and activation affected by knee and ankle position.",
+        "citation": "Marchetti PH, Magalhaes RA, Gomes WA, da Silva JJ, Stecyk SD, Whiting WC. Different Knee and Ankle Positions Affect Force and Muscle Activation During Prone Leg Curl in Trained Subjects. Journal of Strength and Conditioning Research. 2021;35(12):3322-3326. doi:10.1519/JSC.0000000000003333.",
+        "doi": "10.1519/JSC.0000000000003333",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31469769/",
+        "relevance": "Direct prone leg-curl evidence measuring biceps femoris and gastrocnemius lateralis; supports gastrocnemius as a secondary knee-flexion assistant and ankle-position limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "ease score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

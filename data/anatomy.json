@@ -1,0 +1,493 @@
+{
+  "meshBase": "./assets/bodyparts3d/",
+  "muscles": [
+    {
+      "id": "pectoralis_major",
+      "name": "Pectoralis major",
+      "region": "Chest",
+      "source": "BodyParts3D partof_parts_list_e",
+      "fmaIds": [
+        "FMA34690",
+        "FMA34691",
+        "FMA45874",
+        "FMA45875",
+        "FMA79979",
+        "FMA79980"
+      ],
+      "meshFiles": [
+        "chest-press/FJ1446.obj",
+        "chest-press/FJ1446M.obj",
+        "chest-press/FJ1447.obj",
+        "chest-press/FJ1447M.obj",
+        "chest-press/FJ1464.obj",
+        "chest-press/FJ1464M.obj"
+      ]
+    },
+    {
+      "id": "anterior_deltoid",
+      "name": "Anterior deltoid",
+      "displayName": "Anterior deltoid (clavicular deltoid)",
+      "region": "Shoulder",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA34680",
+        "FMA34681"
+      ],
+      "meshFiles": [
+        "chest-press/FJ1468.obj",
+        "chest-press/FJ1468M.obj"
+      ]
+    },
+    {
+      "id": "triceps_brachii",
+      "name": "Triceps brachii",
+      "region": "Arm",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA37695",
+        "FMA37696",
+        "FMA37697",
+        "FMA37698",
+        "FMA37699",
+        "FMA37700"
+      ],
+      "meshFiles": [
+        "chest-press/FJ1477.obj",
+        "chest-press/FJ1477M.obj",
+        "chest-press/FJ1479.obj",
+        "chest-press/FJ1479M.obj",
+        "chest-press/FJ1480.obj",
+        "chest-press/FJ1480M.obj"
+      ]
+    },
+    {
+      "id": "biceps_brachii",
+      "name": "Biceps brachii",
+      "region": "Arm",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA37682",
+        "FMA37683",
+        "FMA37684",
+        "FMA37685",
+        "FMA37686",
+        "FMA37687"
+      ],
+      "meshFiles": [
+        "chest-press/FJ1512.obj",
+        "chest-press/FJ1512M.obj",
+        "chest-press/FJ1478.obj",
+        "chest-press/FJ1478M.obj"
+      ]
+    },
+    {
+      "id": "serratus_anterior",
+      "name": "Serratus anterior",
+      "region": "Torso",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA13398",
+        "FMA13399"
+      ],
+      "meshFiles": [
+        "chest-press/FJ1459.obj",
+        "chest-press/FJ1459M.obj"
+      ]
+    },
+    {
+      "id": "rotator_cuff",
+      "name": "Rotator cuff",
+      "region": "Shoulder",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA32544",
+        "FMA32545",
+        "FMA32547",
+        "FMA32548",
+        "FMA32553",
+        "FMA32554",
+        "FMA13414",
+        "FMA13415"
+      ],
+      "meshFiles": [
+        "chest-press/FJ1500.obj",
+        "chest-press/FJ1500M.obj",
+        "chest-press/FJ1504.obj",
+        "chest-press/FJ1504M.obj",
+        "chest-press/FJ1506.obj",
+        "chest-press/FJ1506M.obj",
+        "chest-press/FJ1508.obj",
+        "chest-press/FJ1508M.obj"
+      ]
+    },
+    {
+      "id": "quadriceps",
+      "name": "Quadriceps",
+      "displayName": "Quadriceps femoris",
+      "region": "Leg",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA22429",
+        "FMA22430",
+        "FMA22431",
+        "FMA22432",
+        "FMA22433"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1433.obj",
+        "lower-body/FJ1433M.obj",
+        "lower-body/FJ1441.obj",
+        "lower-body/FJ1441M.obj",
+        "lower-body/FJ1442.obj",
+        "lower-body/FJ1442M.obj",
+        "lower-body/FJ1443.obj",
+        "lower-body/FJ1443M.obj"
+      ]
+    },
+    {
+      "id": "gluteus_maximus",
+      "name": "Gluteus maximus",
+      "region": "Hip",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA22314",
+        "FMA22328",
+        "FMA22329"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1418.obj",
+        "lower-body/FJ1418M.obj"
+      ]
+    },
+    {
+      "id": "hamstrings",
+      "name": "Hamstrings",
+      "region": "Leg",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA45881",
+        "FMA45887",
+        "FMA45890",
+        "FMA22357",
+        "FMA22438"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1395.obj",
+        "lower-body/FJ1395M.obj",
+        "lower-body/FJ1444.obj",
+        "lower-body/FJ1444M.obj",
+        "lower-body/FJ1436.obj",
+        "lower-body/FJ1436M.obj",
+        "lower-body/FJ1435.obj",
+        "lower-body/FJ1435M.obj"
+      ]
+    },
+    {
+      "id": "gluteus_medius",
+      "name": "Gluteus medius",
+      "region": "Hip",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA22315",
+        "FMA22330",
+        "FMA22331"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1419.obj",
+        "lower-body/FJ1419M.obj"
+      ]
+    },
+    {
+      "id": "adductor_longus",
+      "name": "Adductor longus",
+      "region": "Leg",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA22441",
+        "FMA22456",
+        "FMA22457"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1402.obj",
+        "lower-body/FJ1402M.obj"
+      ]
+    },
+    {
+      "id": "gastrocnemius",
+      "name": "Gastrocnemius",
+      "region": "Leg",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA45950",
+        "FMA45956",
+        "FMA45959"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1394.obj",
+        "lower-body/FJ1394M.obj",
+        "lower-body/FJ1397.obj",
+        "lower-body/FJ1397M.obj"
+      ]
+    },
+    {
+      "id": "biceps_femoris",
+      "name": "Biceps femoris",
+      "region": "Leg",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA45881",
+        "FMA45887",
+        "FMA45890"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1395.obj",
+        "lower-body/FJ1395M.obj",
+        "lower-body/FJ1444.obj",
+        "lower-body/FJ1444M.obj"
+      ]
+    },
+    {
+      "id": "semitendinosus",
+      "name": "Semitendinosus",
+      "region": "Leg",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA22357",
+        "FMA22358",
+        "FMA22359"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1436.obj",
+        "lower-body/FJ1436M.obj"
+      ]
+    },
+    {
+      "id": "semimembranosus",
+      "name": "Semimembranosus",
+      "region": "Leg",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA22438",
+        "FMA22448",
+        "FMA22449"
+      ],
+      "meshFiles": [
+        "lower-body/FJ1435.obj",
+        "lower-body/FJ1435M.obj"
+      ]
+    },
+    {
+      "id": "latissimus_dorsi",
+      "name": "Latissimus dorsi",
+      "displayName": "Latissimus dorsi muscle",
+      "aliases": [
+        "Latissimus dorsi muscle",
+        "Lats",
+        "Lat"
+      ],
+      "region": "Back",
+      "source": "Z-Anatomy Resources/Models/FBX/MuscularSystem100.fbx",
+      "fmaIds": [
+        "FMA13357",
+        "FMA13358",
+        "FMA13359"
+      ],
+      "sourceObjects": [
+        "Latissimus dorsi muscle.l",
+        "Latissimus dorsi muscle.r"
+      ],
+      "sourceFaceFilter": "Z-Anatomy FBX material index 1 only; Tendon material faces excluded to show the visible muscle belly instead of the thoracolumbar tendinous sheet.",
+      "sourceTransform": "Converted from Z-Anatomy FBX meters into BodyParts3D-style millimeter coordinates; depth axis reflected and shifted so the latissimus dorsi muscle belly aligns with the posterior back mesh coordinate band.",
+      "meshFiles": [
+        "z-anatomy/latissimus_dorsi_left.obj",
+        "z-anatomy/latissimus_dorsi_right.obj"
+      ]
+    },
+    {
+      "id": "teres_major",
+      "name": "Teres major",
+      "region": "Shoulder",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA32549",
+        "FMA32551",
+        "FMA32552"
+      ],
+      "meshFiles": [
+        "back/FJ1507.obj",
+        "back/FJ1507M.obj"
+      ]
+    },
+    {
+      "id": "middle_trapezius",
+      "name": "Middle trapezius",
+      "displayName": "Middle trapezius (transverse trapezius)",
+      "region": "Back",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA32556",
+        "FMA33584",
+        "FMA33585"
+      ],
+      "meshFiles": [
+        "back/FJ1554.obj",
+        "back/FJ1554M.obj"
+      ]
+    },
+    {
+      "id": "trapezius_middle_lower",
+      "name": "Trapezius (middle and lower fibers)",
+      "displayName": "Middle and lower trapezius",
+      "region": "Back",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA32555",
+        "FMA32556",
+        "FMA33581",
+        "FMA33583",
+        "FMA33584",
+        "FMA33585"
+      ],
+      "meshFiles": [
+        "back/FJ1520.obj",
+        "back/FJ1520M.obj",
+        "back/FJ1554.obj",
+        "back/FJ1554M.obj"
+      ]
+    },
+    {
+      "id": "rhomboids",
+      "name": "Rhomboids",
+      "displayName": "Rhomboid major and minor",
+      "region": "Back",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA13379",
+        "FMA13380",
+        "FMA13381",
+        "FMA13382",
+        "FMA13383",
+        "FMA13384"
+      ],
+      "meshFiles": [
+        "back/FJ1536.obj",
+        "back/FJ1536M.obj",
+        "back/FJ1537.obj",
+        "back/FJ1537M.obj"
+      ]
+    },
+    {
+      "id": "posterior_deltoid",
+      "name": "Posterior deltoid",
+      "displayName": "Posterior deltoid (spinal deltoid)",
+      "region": "Shoulder",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA34679",
+        "FMA34684",
+        "FMA34685"
+      ],
+      "meshFiles": [
+        "back/FJ1513.obj",
+        "back/FJ1513M.obj"
+      ]
+    },
+    {
+      "id": "erector_spinae",
+      "name": "Erector spinae",
+      "displayName": "Erector spinae (iliocostalis, longissimus, spinalis)",
+      "region": "Back",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA77177",
+        "FMA77178",
+        "FMA77179"
+      ],
+      "meshFiles": [
+        "back/FJ1526.obj",
+        "back/FJ1526M.obj",
+        "back/FJ1527.obj",
+        "back/FJ1527M.obj",
+        "back/FJ1528.obj",
+        "back/FJ1528M.obj",
+        "back/FJ1533.obj",
+        "back/FJ1533M.obj",
+        "back/FJ1534.obj",
+        "back/FJ1534M.obj",
+        "back/FJ1535.obj",
+        "back/FJ1535M.obj",
+        "back/FJ1543.obj",
+        "back/FJ1543M.obj",
+        "back/FJ1544.obj",
+        "back/FJ1544M.obj"
+      ]
+    },
+    {
+      "id": "trapezius",
+      "name": "Trapezius",
+      "displayName": "Trapezius (imported upper, middle, and lower fibers)",
+      "aliases": [
+        "Traps",
+        "Trap",
+        "Upper traps",
+        "Middle traps",
+        "Lower traps"
+      ],
+      "region": "Back",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA32555",
+        "FMA32556",
+        "FMA32557",
+        "FMA33581",
+        "FMA33583",
+        "FMA33584",
+        "FMA33585",
+        "FMA33586",
+        "FMA33587"
+      ],
+      "meshFiles": [
+        "back/FJ1520.obj",
+        "back/FJ1520M.obj",
+        "back/FJ1554.obj",
+        "back/FJ1554M.obj",
+        "back/FJ1521.obj",
+        "back/FJ1521M.obj"
+      ]
+    },
+    {
+      "id": "trunk_stabilizers",
+      "name": "Trunk stabilizers",
+      "displayName": "Trunk stabilizers (erector spinae)",
+      "aliases": [
+        "Core stabilizers",
+        "Spinal stabilizers"
+      ],
+      "region": "Trunk",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA77177",
+        "FMA77178",
+        "FMA77179"
+      ],
+      "meshFiles": [
+        "back/FJ1526.obj",
+        "back/FJ1526M.obj",
+        "back/FJ1527.obj",
+        "back/FJ1527M.obj",
+        "back/FJ1528.obj",
+        "back/FJ1528M.obj",
+        "back/FJ1533.obj",
+        "back/FJ1533M.obj",
+        "back/FJ1534.obj",
+        "back/FJ1534M.obj",
+        "back/FJ1535.obj",
+        "back/FJ1535M.obj",
+        "back/FJ1543.obj",
+        "back/FJ1543M.obj",
+        "back/FJ1544.obj",
+        "back/FJ1544M.obj"
+      ]
+    }
+  ]
+}

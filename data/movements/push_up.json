@@ -1,0 +1,250 @@
+{
+  "id": "push_up",
+  "name": "Push-Up",
+  "aliases": [
+    "pushup",
+    "press_up",
+    "floor_push_up",
+    "standard_push_up"
+  ],
+  "family": "chest_press",
+  "equipment": "bodyweight",
+  "variantType": "standard_floor",
+  "variant": "Standard floor push-up with hands near shoulder width, feet on the floor, and bodyweight loading.",
+  "description": "Start in a straight-body plank with hands near shoulder width, wrists under or slightly outside the shoulders, feet on the floor, and the torso braced. Lower under control by bending the elbows until the chest approaches the floor without losing body position, then press the floor away until the elbows are extended and the body remains aligned.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Chest",
+      "group": "region"
+    },
+    {
+      "group": "equipment",
+      "label": "Calisthenics"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 58,
+      "rationale": "Useful chest, triceps, and anterior-deltoid stimulus, but target loading is limited by bodyweight, high reps, and relative-strength constraints."
+    },
+    "strength": {
+      "score": 30,
+      "rationale": "Builds early pressing strength, but loading is indirect and quickly becomes less precise for maximal force development."
+    },
+    "joint_resilience": {
+      "score": 48,
+      "rationale": "Can build wrist, elbow, shoulder, and scapular tolerance, but the fixed hand position and bodyweight load are not ideal for every user."
+    },
+    "athletic_transfer": {
+      "score": 58,
+      "rationale": "Good body-control transfer for a simple floor press, though it is still a fixed closed-chain pattern without locomotion or external load handling."
+    },
+    "control": {
+      "score": 62,
+      "rationale": "Meaningful plank, scapular, wrist, and whole-body line control demand."
+    },
+    "fatigue_efficiency": {
+      "score": 68,
+      "rationale": "Efficient setup and moderate systemic cost, but high-rep sets can become endurance-limited before target muscles receive enough overload."
+    },
+    "setup": {
+      "score": 98,
+      "rationale": "Nearly frictionless: needs only floor space and repeatable hand and foot placement."
+    },
+    "ease": {
+      "score": 54,
+      "rationale": "Familiar and simple to start, but good reps require enough relative strength, wrist tolerance, depth control, and trunk stiffness."
+    },
+    "progression": {
+      "score": 24,
+      "rationale": "Overload is noisy because load changes require angle, tempo, external weight, bands, or variation changes rather than simple increments."
+    },
+    "support": {
+      "score": 18,
+      "rationale": "Hands and feet contact the floor, but the torso and shoulders are not externally supported."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "High activation in standard and shoulder-width push-up EMG.",
+        "evidence": "Conventional and shoulder-width floor push-up EMG studies consistently report meaningful pectoralis major activation; Freeman et al. measured the standard shoulder-width variant and Youdas et al. reported high pectoralis major activation across conventional hand positions.",
+        "sourceIds": [
+          "cogley-2005",
+          "gouvali-2005",
+          "freeman-2006",
+          "youdas-2010"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "High elbow-extension activation; hand width sensitive.",
+        "evidence": "Multiple direct push-up EMG studies measured triceps brachii activation during conventional, normal, or shoulder-width floor push-ups. The triceps is classified as secondary because it is a major elbow-extension contributor but not the main chest-press target in this entry.",
+        "sourceIds": [
+          "cogley-2005",
+          "gouvali-2005",
+          "freeman-2006",
+          "youdas-2010"
+        ]
+      },
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Measured shoulder-flexion assist in the standard push-up.",
+        "evidence": "Freeman et al. directly measured anterior deltoid during a standard shoulder-width floor push-up and reported moderate activation, supporting a secondary pressing role rather than a primary target classification.",
+        "sourceIds": [
+          "freeman-2006"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Scapulothoracic support measured in conventional push-ups.",
+        "evidence": "Youdas et al. measured considerable serratus anterior activation during conventional floor push-ups, and Lear and Gross showed serratus anterior involvement across push-up progressions. It is classified as scapulothoracic support rather than the primary hypertrophy target.",
+        "sourceIds": [
+          "youdas-2010",
+          "lear-1998"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Standard floor push-up: pectoralis major primary; triceps brachii and anterior deltoid secondary; serratus anterior support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Hand width, body angle, range of motion, tempo, fatigue, wrist position, and relative body mass can shift load and muscle contribution.",
+    "summary": "The standard floor push-up is classified as a bodyweight horizontal pressing exercise. Direct EMG evidence supports pectoralis major as the primary app target, with triceps brachii and anterior deltoid as meaningful secondary movers. Serratus anterior is included as a support muscle because conventional push-up studies directly measure substantial scapulothoracic activity, but it is not treated as the primary hypertrophy target.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation under a specific technique, hand position, tempo, and normalization method. It should not be interpreted as a direct measure of hypertrophy, long-term adaptation, mechanical tension, or injury risk.",
+    "limitations": "Most direct studies used small samples of healthy young adults, and definitions of normal or shoulder-width hand placement vary. Biceps brachii was not included as a visible role because Freeman et al. reported very low activation in the standard variant. Rotator cuff and trunk muscles were not included as visible roles because the strongest exact-variant evidence in this record does not directly support a concise app classification for the available anatomy set.",
+    "studies": [
+      {
+        "id": "cogley-2005",
+        "type": "Push-up hand-position EMG",
+        "shortCitation": "Cogley et al., JSCR, 2005",
+        "finding": "Shoulder-width, wide, and narrow push-ups measured pectoralis major and triceps brachii activation.",
+        "citation": "Cogley RM, Archambault TA, Fibeger JF, Koverman MM, Youdas JW, Hollman JH. Comparison of Muscle Activation Using Various Hand Positions During the Push-Up Exercise. Journal of Strength and Conditioning Research. 2005;19(3):628-633. doi:10.1519/15094.1.",
+        "doi": "10.1519/15094.1",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16095413/",
+        "relevance": "Directly studied floor push-ups using shoulder-width, wide-base, and narrow-base hand positions and measured pectoralis major and triceps brachii.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "gouvali-2005",
+        "type": "Push-up variant EMG and kinetics",
+        "shortCitation": "Gouvali and Boudolos, JSCR, 2005",
+        "finding": "Normal push-up loaded about two-thirds of body weight initially and measured pectoralis major and triceps activity across variants.",
+        "citation": "Gouvali MK, Boudolos K. Dynamic and Electromyographical Analysis in Variants of Push-Up Exercise. Journal of Strength and Conditioning Research. 2005;19(1):146-151. doi:10.1519/14733.1.",
+        "doi": "10.1519/14733.1",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15705025/",
+        "relevance": "Direct push-up study including a normal variant, surface EMG of pectoralis major and triceps brachii, and bodyweight-relative loading.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "progression score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "freeman-2006",
+        "type": "Standard push-up EMG and spine load",
+        "shortCitation": "Freeman et al., MSSE, 2006",
+        "finding": "Standard shoulder-width push-up measured pectoralis major, anterior deltoid, triceps brachii, biceps brachii, trunk EMG, and spine compression.",
+        "citation": "Freeman S, Karpowicz A, Gray J, McGill S. Quantifying Muscle Patterns and Spine Load during Various Forms of the Push-Up. Medicine and Science in Sports and Exercise. 2006;38(3):570-577. doi:10.1249/01.mss.0000189317.08635.1b.",
+        "doi": "10.1249/01.mss.0000189317.08635.1b",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16540847/",
+        "relevance": "Directly matches the standard floor push-up assumption: hands and toes on the floor, hands shoulder width apart, straight body position, and bodyweight loading.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "youdas-2010",
+        "type": "Conventional push-up EMG",
+        "shortCitation": "Youdas et al., JSCR, 2010",
+        "finding": "Conventional push-ups required high pectoralis major, triceps brachii, and serratus anterior activation across hand positions.",
+        "citation": "Youdas JW, Budach BD, Ellerbusch JV, Stucky CM, Wait KR, Hollman JH. Comparison of Muscle-Activation Patterns During the Conventional Push-Up and Perfect Pushup Exercises. Journal of Strength and Conditioning Research. 2010;24(12):3352-3362. doi:10.1519/JSC.0b013e3181cc23b0.",
+        "doi": "10.1519/JSC.0b013e3181cc23b0",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20664364/",
+        "relevance": "Direct conventional floor push-up study measuring pectoralis major, triceps brachii, serratus anterior, and posterior deltoid at shoulder-width, wide-base, and narrow-base positions.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score"
+        ]
+      },
+      {
+        "id": "lear-1998",
+        "type": "Scapular stabilizer EMG during push-up progression",
+        "shortCitation": "Lear and Gross, JOSPT, 1998",
+        "finding": "Push-up progressions facilitated serratus anterior and upper trapezius activation as scapular stabilizers.",
+        "citation": "Lear LJ, Gross MT. An Electromyographical Analysis of the Scapular Stabilizing Synergists During a Push-Up Progression. Journal of Orthopaedic and Sports Physical Therapy. 1998;28(3):146-157. doi:10.2519/jospt.1998.28.3.146.",
+        "doi": "10.2519/jospt.1998.28.3.146",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9742471/",
+        "relevance": "Supports serratus anterior as a scapular stabilizing/support contributor during push-up progressions, not as the primary chest-press target.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "suprak-2011",
+        "type": "Traditional push-up body-mass support",
+        "shortCitation": "Suprak et al., JSCR, 2011",
+        "finding": "Traditional push-ups support less body mass at the top than bottom position, informing bodyweight loading and progression limits.",
+        "citation": "Suprak DN, Dawes J, Stephenson MD. The Effect of Position on the Percentage of Body Mass Supported During Traditional and Modified Push-Up Variants. Journal of Strength and Conditioning Research. 2011;25(2):497-503. doi:10.1519/JSC.0b013e3181bde2cf.",
+        "doi": "10.1519/JSC.0b013e3181bde2cf",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20179649/",
+        "relevance": "Quantifies traditional push-up body-mass support across top and bottom positions, supporting progression and fatigue scoring.",
+        "usedFor": [
+          "progression score",
+          "setup score",
+          "fatigue efficiency score",
+          "rating anchors"
+        ]
+      },
+      {
+        "id": "ebben-2011",
+        "type": "Push-up variant force-plate analysis",
+        "shortCitation": "Ebben et al., JSCR, 2011",
+        "finding": "Regular, knee, feet-elevated, and hands-elevated push-ups produced different vertical ground-reaction forces.",
+        "citation": "Ebben WP, Wurm B, VanderZanden TL, Spadavecchia ML, Durocher JJ, Bickham CT, Petushek EJ. Kinetic Analysis of Several Variations of Push-Ups. Journal of Strength and Conditioning Research. 2011;25(10):2891-2894. doi:10.1519/JSC.0b013e31820c8587.",
+        "doi": "10.1519/JSC.0b013e31820c8587",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21873902/",
+        "relevance": "Supports the rating interpretation that push-up intensity can be progressed by body angle, but with less precision than external loading.",
+        "usedFor": [
+          "progression score",
+          "ease score",
+          "setup score",
+          "fatigue efficiency score"
+        ]
+      }
+    ]
+  }
+}

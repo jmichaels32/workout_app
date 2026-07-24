@@ -1,0 +1,274 @@
+{
+  "id": "pull_up",
+  "name": "Pull-Up",
+  "aliases": [
+    "pullup",
+    "pronated_pull_up",
+    "bodyweight_pull_up",
+    "strict_pull_up",
+    "bar_pull_up"
+  ],
+  "family": "vertical_pull",
+  "equipment": "bodyweight",
+  "variantType": "pronated_bodyweight_bar",
+  "variant": "Pronated bodyweight pull-up from a fixed overhead bar, performed without assistance, kipping, or added external load.",
+  "description": "Hang from a fixed overhead bar with a pronated grip and arms long, then set the shoulders down without swinging. Pull the chest toward the bar by driving the elbows down and back until the chin clears the bar, then lower under control to the starting hang while keeping the torso organized.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 74,
+      "rationale": "Strong bodyweight stimulus for lats, elbow flexors, posterior shoulder, and scapular stabilizers, with the main tradeoff that relative strength can cap usable volume."
+    },
+    "strength": {
+      "score": 72,
+      "rationale": "High-force closed-chain vertical pulling builds meaningful upper-body strength, but the bodyweight-only variant has less precise loading than weighted or machine options."
+    },
+    "joint_resilience": {
+      "score": 42,
+      "rationale": "Full-range shoulder, elbow, and grip loading can build tolerance, but the hanging position and high relative load make it less forgiving than supported progressions."
+    },
+    "athletic_transfer": {
+      "score": 64,
+      "rationale": "Bodyweight vertical pulling transfers well to climbing, obstacle, and self-movement tasks, though it remains bilateral and bar-constrained."
+    },
+    "control": {
+      "score": 60,
+      "rationale": "Requires scapular timing, body-line control, grip organization, and swing management without external torso support."
+    },
+    "fatigue_efficiency": {
+      "score": 58,
+      "rationale": "Setup cost is low and the stimulus is focused, but grip, elbow flexors, shoulders, and failed reps can add recovery cost before enough target volume is accumulated."
+    },
+    "setup": {
+      "score": 86,
+      "rationale": "Needs only a fixed overhead bar and bodyweight, but bar availability, height, and grip surface still matter."
+    },
+    "ease": {
+      "score": 30,
+      "rationale": "The pattern is simple to understand but difficult to perform well because it requires substantial relative strength and controlled scapular mechanics."
+    },
+    "progression": {
+      "score": 36,
+      "rationale": "Reps are easy to track, but bodyweight-only overload is coarse unless the user changes assistance, tempo, range, or adds weight as a separate variant."
+    },
+    "support": {
+      "score": 8,
+      "rationale": "The hands are fixed to the bar, but the body is otherwise suspended and must stabilize itself through the pull."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Direct pull-up EMG supports the main vertical-pull role.",
+        "evidence": "Pull-up and grip-variation EMG studies report high latissimus dorsi activation during conventional and pronated pull-ups, and shoulder-modeling work supports latissimus dorsi as a major contributor across pull-up techniques.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017",
+          "snarr-2017",
+          "urbanczyk-2020"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Measured elbow-flexion contributor in pull-up EMG.",
+        "evidence": "Biceps brachii is repeatedly measured during pull-up and chin-up EMG, with Youdas et al. reporting substantial activation and Dickie et al. showing higher biceps activity in the concentric phase across pull-up variations; it assists the pull but is not the main back target.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017",
+          "snarr-2017"
+        ]
+      },
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Measured shoulder-extension assistant in traditional pull-ups.",
+        "evidence": "Traditional pull-up EMG directly measured posterior deltoid along with latissimus dorsi, middle trapezius, and biceps brachii, supporting a meaningful shoulder-extension assistant role rather than a primary target.",
+        "sourceIds": [
+          "snarr-2017"
+        ]
+      },
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Measured shoulder-adduction assistant, not the main target.",
+        "evidence": "Youdas et al. measured pectoralis major activity during conventional pull-ups, and Dickie et al. found greater pectoralis major activity in the concentric phase across pull-up variations; it is included as a secondary shoulder-adduction contributor, not as a chest-focused target.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Trapezius (middle and lower fibers)",
+        "evidenceShort": "Middle and lower trapezius activity supports scapular control.",
+        "evidence": "Youdas et al. reported lower trapezius activity and a sequential activation pattern during pull-ups, while Dickie et al. and Snarr et al. measured middle trapezius during pronated or traditional pull-up variations; these fibers are classified as scapular support.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017",
+          "snarr-2017"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Infraspinatus EMG and shoulder modeling support stabilization.",
+        "evidence": "Youdas et al. directly measured substantial infraspinatus activity during pull-ups, and Urbanczyk et al. modeled rotator-cuff and scapular-stabilizer loading across pull-up techniques; the broader rotator cuff role is treated as glenohumeral support.",
+        "sourceIds": [
+          "youdas-2010",
+          "urbanczyk-2020"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Pronated bodyweight pull-up: latissimus dorsi primary; biceps brachii, posterior deltoid, and pectoralis major secondary; middle/lower trapezius and rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Grip width, grip orientation, bar path, range of motion, swing, fatigue, and relative body mass can shift muscle contribution and performance.",
+    "summary": "The pull-up is classified as an unsupported bodyweight vertical pull from a fixed bar with a pronated grip. Direct pull-up EMG supports latissimus dorsi as the primary visible target, with biceps brachii, posterior deltoid, and pectoralis major as meaningful secondary contributors. Middle/lower trapezius and rotator cuff involvement are included as support because the evidence points to scapular and glenohumeral control demands rather than primary hypertrophy targeting.",
+    "clinicalInterpretation": "Surface EMG and shoulder modeling are useful for estimating acute excitation and loading in specific pull-up setups, but they should not be treated as direct measures of hypertrophy, long-term adaptation, or injury risk. A bodyweight pull-up also mixes target-muscle capacity with relative body mass and technique quality.",
+    "limitations": "The entry applies only to a strict pronated bodyweight pull-up from a fixed bar. Chin-ups, neutral-grip pull-ups, towel pull-ups, suspension pull-ups, assisted pull-ups, kipping pull-ups, and weighted pull-ups should be treated as separate variants. Brachioradialis and brachialis were not added as visible roles because the current local anatomy map does not expose those muscles; biceps brachii is the mapped elbow-flexor role retained for the app card.",
+    "studies": [
+      {
+        "id": "youdas-2010",
+        "type": "Pull-up, chin-up, and rotating-handle EMG",
+        "shortCitation": "Youdas et al., JSCR, 2010",
+        "finding": "Conventional pull-ups showed high latissimus dorsi, biceps brachii, infraspinatus, lower trapezius, pectoralis major, erector spinae, and external oblique activation, with lower trapezius more active in the pull-up than chin-up.",
+        "citation": "Youdas JW, Amundson CL, Cicero KS, Hahn JJ, Harezlak DT, Hollman JH. Surface electromyographic activation patterns and elbow joint motion during a pull-up, chin-up, or Perfect-Pullup rotational exercise. Journal of Strength and Conditioning Research. 2010;24(12):3404-3414. doi:10.1519/JSC.0b013e3181f1598c.",
+        "doi": "10.1519/JSC.0b013e3181f1598c",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21068680/",
+        "relevance": "Directly studied conventional pull-ups and chin-ups in healthy adults using surface EMG of latissimus dorsi, biceps brachii, infraspinatus, lower trapezius, pectoralis major, erector spinae, and external oblique.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "dickie-2017",
+        "type": "Pull-up grip-variation EMG",
+        "shortCitation": "Dickie et al., J Electromyogr Kinesiol, 2017",
+        "finding": "Pronated, supinated, neutral, and rope pull-ups produced broadly similar shoulder-arm-forearm activation across full repetitions, with pronated grip increasing middle trapezius activity versus neutral grip.",
+        "citation": "Dickie JA, Faulkner JA, Barnes MJ, Lark SD. Electromyographic analysis of muscle activation during pull-up variations. Journal of Electromyography and Kinesiology. 2017;32:30-36. doi:10.1016/j.jelekin.2016.11.004.",
+        "doi": "10.1016/j.jelekin.2016.11.004",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28011412/",
+        "relevance": "Directly includes the chosen pronated pull-up condition in strength-trained men and compares it with supinated, neutral, and rope pull-up variations.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "snarr-2017",
+        "type": "Traditional, suspension, and towel pull-up EMG",
+        "shortCitation": "Snarr et al., J Hum Kinet, 2017",
+        "finding": "Traditional pronated pull-ups at 1.5 times bi-acromial grip width produced meaningful latissimus dorsi, posterior deltoid, middle trapezius, and biceps brachii activity.",
+        "citation": "Snarr RL, Hallmark AV, Casey JC, Esco MR. Electromyographical Comparison of a Traditional, Suspension Device, and Towel Pull-Up. Journal of Human Kinetics. 2017;58:5-13. doi:10.1515/hukin-2017-0068.",
+        "doi": "10.1515/hukin-2017-0068",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5548150/",
+        "relevance": "Very close to the selected variant: traditional pull-ups from a secure overhead bar with pronated hands at 1.5 times bi-acromial width, performed by resistance-trained adults.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "ronai-2014",
+        "type": "Pull-up technique article",
+        "shortCitation": "Ronai and Scibek, Strength Cond J, 2014",
+        "finding": "Described pull-up setup, phases, technique, progressions, and common variation boundaries.",
+        "citation": "Ronai P, Scibek E. The Pull-up. Strength & Conditioning Journal. 2014;36(3):88-90. doi:10.1519/SSC.0000000000000052.",
+        "doi": "10.1519/SSC.0000000000000052",
+        "url": "https://digitalcommons.sacredheart.edu/pthms_fac/129/",
+        "relevance": "Peer-reviewed technique context for defining the fixed-bar bodyweight pull-up variant and rating setup, ease, progression, and support.",
+        "usedFor": [
+          "description",
+          "setup score",
+          "ease score",
+          "progression score",
+          "support score"
+        ]
+      },
+      {
+        "id": "urbanczyk-2020",
+        "type": "Pull-up shoulder muscle-force modeling",
+        "shortCitation": "Urbanczyk et al., Scand J Med Sci Sports, 2020",
+        "finding": "Kinematic, kinetic, and shoulder-modeling analysis found variant-specific muscle-force patterns and emphasized rotator cuff, scapular stabilizer, and shoulder-girdle loading during pull-ups.",
+        "citation": "Urbanczyk CA, Prinold JAI, Reilly P, Bull AMJ. Avoiding high-risk rotator cuff loading: Muscle force during three pull-up techniques. Scandinavian Journal of Medicine & Science in Sports. 2020;30(11):2205-2214. doi:10.1111/sms.13780.",
+        "doi": "10.1111/sms.13780",
+        "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/sms.13780",
+        "relevance": "Direct pull-up biomechanics and modeled muscle-force evidence for pronated front grip, pronated wide grip, and supinated reverse grip pull-ups.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "garavaglia-2023",
+        "type": "Pull-up kinematic characterization",
+        "shortCitation": "Garavaglia et al., Sport Sci Health, 2023",
+        "finding": "Motion-capture analysis of pull-ups in climbers and active subjects characterized execution quality, compensations, and segmental kinematics across repetitions.",
+        "citation": "Garavaglia L, Romano J, Lazzari F, Pittaccio S. Biomechanical characterisation of the pull-up exercise. Sport Sciences for Health. 2024;20(1):221-234. doi:10.1007/s11332-023-01097-1.",
+        "doi": "10.1007/s11332-023-01097-1",
+        "url": "https://link.springer.com/article/10.1007/s11332-023-01097-1",
+        "relevance": "Biomechanics source for motor-control, athletic-transfer, and technique-quality interpretation during repeated pull-ups.",
+        "usedFor": [
+          "control score",
+          "athletic transfer score",
+          "ease score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "sanchez-moreno-2020",
+        "type": "Body-mass prone-grip pull-up training study",
+        "shortCitation": "Sanchez-Moreno et al., JSCR, 2020",
+        "finding": "Eight weeks of velocity-based body-mass prone-grip pull-up training improved pull-up strength and endurance, with lower velocity loss outperforming higher velocity loss on most outcomes.",
+        "citation": "Sanchez-Moreno M, Cornejo-Daza PJ, Gonzalez-Badillo JJ, Pareja-Blanco F. Effects of Velocity Loss During Body Mass Prone-Grip Pull-up Training on Strength and Endurance Performance. Journal of Strength and Conditioning Research. 2020;34(4):911-917. doi:10.1519/JSC.0000000000003500.",
+        "doi": "10.1519/JSC.0000000000003500",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32213783/",
+        "relevance": "Direct body-mass prone-grip pull-up training evidence in strength-trained men, supporting strength, progression, fatigue, and programming interpretation.",
+        "usedFor": [
+          "strength score",
+          "progression score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "id": "standing_barbell_overhead_press",
+  "name": "Standing Barbell Overhead Press",
+  "aliases": [
+    "barbell_overhead_press",
+    "standing_military_press",
+    "strict_press",
+    "barbell_shoulder_press"
+  ],
+  "family": "shoulder_press",
+  "equipment": "barbell",
+  "variantType": "standing_barbell",
+  "variant": "Standing free-weight barbell overhead press from shoulder or clavicle height, performed as a strict press without leg drive.",
+  "description": "Stand with the bar at the front of the shoulders or upper chest, hands just outside shoulder width, wrists stacked over the elbows, and ribs braced over the pelvis; press the bar up while moving the head back just enough for a close bar path, finish with the bar over the shoulder joints and elbows extended, then lower under control to the starting position without using the legs.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Shoulders",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 58,
+      "rationale": "Useful shoulder and triceps hypertrophy stimulus, but balance, bracing, and fatigue can limit targeted local loading."
+    },
+    "strength": {
+      "score": 82,
+      "rationale": "Strong vertical pressing strength anchor with clear barbell loading and high force demand."
+    },
+    "joint_resilience": {
+      "score": 45,
+      "rationale": "Can build shoulder and trunk tolerance when well dosed, but overhead mobility and irritation risk make it less universally resilience-positive."
+    },
+    "athletic_transfer": {
+      "score": 62,
+      "rationale": "Meaningful transfer from standing force production, trunk bracing, and overhead control, though it remains bilateral and stationary."
+    },
+    "control": {
+      "score": 78,
+      "rationale": "High control demand from overhead bar path, bracing, rib/pelvis position, shoulder rotation, and balance."
+    },
+    "fatigue_efficiency": {
+      "score": 32,
+      "rationale": "Low-to-moderate efficiency because systemic bracing, shoulder fatigue, and technical failure can accumulate before target stimulus is maximized."
+    },
+    "setup": {
+      "score": 48,
+      "rationale": "Requires barbell setup, rack height or clean-to-start, plates, and enough overhead space."
+    },
+    "ease": {
+      "score": 28,
+      "rationale": "Technically demanding because mobility, bar path, bracing, head position, and overhead lockout must be coordinated."
+    },
+    "progression": {
+      "score": 72,
+      "rationale": "Barbell loading is measurable, but small jumps, technical sensitivity, and overhead fatigue make progression less smooth than bench or machines."
+    },
+    "support": {
+      "score": 12,
+      "rationale": "Very little external support; the user stabilizes the load while standing under a free bar path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Direct shoulder-press EMG supports major deltoid involvement.",
+        "evidence": "Standing barbell shoulder press EMG directly measures anterior deltoid activity, and front barbell military press EMG supports anterior deltoid involvement in the close overhead-press family. Medial deltoid is also important in the literature, but it is not available as a visible shared anatomy entry in this dataset.",
+        "sourceIds": [
+          "saeterbakken-2013",
+          "coratella-2022"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Elbow-extension contributor in direct shoulder-press EMG.",
+        "evidence": "The triceps brachii is directly measured during standing and seated barbell shoulder press variants and contributes to the elbow-extension component of the overhead press.",
+        "sourceIds": [
+          "saeterbakken-2013",
+          "coratella-2022"
+        ]
+      },
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Clavicular pec assists the front overhead press.",
+        "evidence": "Front barbell military press EMG shows greater pectoralis major excitation than behind-the-neck pressing, and overhead-press mechanics describe the clavicular pectoralis major as assisting the initial shoulder-flexion phase. It is classified as secondary, not the intended target.",
+        "sourceIds": [
+          "coratella-2022",
+          "blazkiewicz-2022"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Scapular upward-rotation support during overhead pressing.",
+        "evidence": "Military-press EMG reports high serratus anterior involvement, and overhead-press/shoulder-elevation literature supports serratus anterior as a scapular upward-rotation and stabilization muscle rather than a primary pressing target.",
+        "sourceIds": [
+          "bull-2001",
+          "blazkiewicz-2022",
+          "escamilla-2009"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Biomechanical inference for glenohumeral stabilization.",
+        "evidence": "This support role is an explicit biomechanics inference: shoulder exercise review evidence describes the rotator cuff as stabilizing the glenohumeral joint and controlling humeral head translation during elevation, which is required in an unsupported overhead press.",
+        "sourceIds": [
+          "escamilla-2009"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Standing strict barbell overhead press: anterior deltoid primary; triceps brachii and pectoralis major secondary; serratus anterior and rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Direct exact evidence is limited; stance, grip, bar path, back support, load, range of motion, and press-from-front vs behind-neck variations change emphasis.",
+    "summary": "The standing barbell overhead press is classified as an unsupported free-weight vertical pressing exercise. Direct standing shoulder-press EMG supports deltoid and triceps involvement, while front barbell military press evidence supports a meaningful clavicular pectoralis major contribution. Serratus anterior is included as scapular support from military-press and overhead-press evidence. Rotator cuff inclusion is an explicit biomechanics inference from shoulder-elevation stability literature, not a direct standing barbell overhead-press EMG measurement.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation under a specific exercise setup. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, long-term adaptation, or injury risk.",
+    "limitations": "The best exact study for this entry measured standing and seated shoulder presses with barbells and dumbbells, but it did not measure pectoralis major, serratus anterior, trapezius, or rotator cuff. Some supporting evidence uses seated front barbell military press, light military-press variants, seated dumbbell/kettlebell overhead press, or general shoulder-elevation review evidence. Medial deltoid and upper trapezius are important in the literature but are not visible anatomy entries in this dataset.",
+    "studies": [
+      {
+        "id": "saeterbakken-2013",
+        "type": "Standing and seated shoulder press EMG and 1RM comparison",
+        "shortCitation": "Saeterbakken and Fimland, JSCR, 2013",
+        "finding": "Compared seated and standing barbell and dumbbell shoulder presses and measured anterior, medial, and posterior deltoids plus biceps and triceps brachii.",
+        "citation": "Saeterbakken AH, Fimland MS. Effects of Body Position and Loading Modality on Muscle Activity and Strength in Shoulder Presses. Journal of Strength and Conditioning Research. 2013;27(7):1824-1831. doi:10.1519/JSC.0b013e318276b873.",
+        "doi": "10.1519/JSC.0b013e318276b873",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23096062/",
+        "relevance": "Most direct evidence for the requested standing barbell shoulder press variant; supports anterior deltoid and triceps roles and informs stability/progression scoring.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "ease score",
+          "progression score",
+          "support score",
+          "hypertrophy score"
+        ]
+      },
+      {
+        "id": "coratella-2022",
+        "type": "Front/back barbell and machine overhead press EMG",
+        "shortCitation": "Coratella et al., Front Physiol, 2022",
+        "finding": "Front barbell military press from the upper chest measured anterior, medial, and posterior deltoid, upper trapezius, pectoralis major, and triceps brachii.",
+        "citation": "Coratella G, Tornatore G, Longo S, Esposito F, Ce E. Front vs Back and Barbell vs Machine Overhead Press: An Electromyographic Analysis and Implications For Resistance Training. Frontiers in Physiology. 2022;13:825880. doi:10.3389/fphys.2022.825880.",
+        "doi": "10.3389/fphys.2022.825880",
+        "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.825880/full",
+        "relevance": "Close barbell military press evidence from shoulder/chest height; useful for anterior deltoid, triceps, pectoralis major, barbell-vs-machine, and front-vs-behind-neck interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "bull-2001",
+        "type": "Military press serratus and trapezius EMG",
+        "shortCitation": "Bull et al., Electromyogr Clin Neurophysiol, 2001",
+        "finding": "Military press variants with open and middle grip showed high to very high trapezius and serratus anterior activity.",
+        "citation": "Bull ML, Vitti M, Freitas V, Rosa GJ. Electromyographic validation of the trapezius and serratus anterior muscles in military press exercises with open and middle grip. Electromyography and Clinical Neurophysiology. 2001;41(4):203-207. PMID:11441637.",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11441637/",
+        "relevance": "Direct military-press evidence for serratus anterior involvement, though the reported variants and loading differ from a modern loaded strict standing barbell press.",
+        "usedFor": [
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "blazkiewicz-2022",
+        "type": "Overhead press shoulder and back EMG",
+        "shortCitation": "Blazkiewicz and Hadamus, Sensors, 2022",
+        "finding": "Seated one-arm dumbbell and kettlebell overhead press measured anterior deltoid, posterior deltoid, trapezius, serratus anterior, and spinal erectors.",
+        "citation": "Blazkiewicz M, Hadamus A. The Effect of the Weight and Type of Equipment on Shoulder and Back Muscle Activity in Surface Electromyography during the Overhead Press-Preliminary Report. Sensors. 2022;22(24):9762. doi:10.3390/s22249762.",
+        "doi": "10.3390/s22249762",
+        "url": "https://www.mdpi.com/1424-8220/22/24/9762",
+        "relevance": "Close overhead-press evidence supporting serratus anterior and shoulder-girdle support demands; less direct because it used seated unilateral dumbbell/kettlebell pressing rather than standing barbell pressing.",
+        "usedFor": [
+          "secondary muscle role",
+          "support muscle role",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "escamilla-2009",
+        "type": "Shoulder muscle activity and function review",
+        "shortCitation": "Escamilla et al., Sports Med, 2009",
+        "finding": "Review describes rotator cuff functions in shoulder exercise and serratus anterior contribution to scapular upward rotation, posterior tilt, and stabilization.",
+        "citation": "Escamilla RF, Yamashiro K, Paulos L, Andrews JR. Shoulder muscle activity and function in common shoulder rehabilitation exercises. Sports Medicine. 2009;39(8):663-685. doi:10.2165/00007256-200939080-00004.",
+        "doi": "10.2165/00007256-200939080-00004",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19769415/",
+        "relevance": "Biomechanics and EMG review evidence for glenohumeral and scapulothoracic support roles during arm elevation; used as inference support rather than exact standing barbell press evidence.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "soriano-2019",
+        "type": "Weightlifting overhead pressing derivatives review",
+        "shortCitation": "Soriano et al., Sports Med, 2019",
+        "finding": "Review characterizes the standing press as a complex multi-joint movement using upper-body muscles while the trunk and lower body provide stability.",
+        "citation": "Soriano MA, Suchomel TJ, Comfort P. Weightlifting Overhead Pressing Derivatives: A Review of the Literature. Sports Medicine. 2019;49:867-885. doi:10.1007/s40279-019-01096-8.",
+        "doi": "10.1007/s40279-019-01096-8",
+        "url": "https://link.springer.com/article/10.1007/s40279-019-01096-8",
+        "relevance": "Supports rating judgments around coordination, balance, setup, progression, and limitations for standing overhead pressing derivatives.",
+        "usedFor": [
+          "ease score",
+          "progression score",
+          "support score",
+          "setup score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

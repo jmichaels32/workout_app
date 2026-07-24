@@ -1,0 +1,140 @@
+{
+  "movementId": "seated_machine_leg_extension",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-10",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "signorile-2014",
+    "stoutenberg-2005",
+    "ema-2016",
+    "larsen-2025",
+    "varovic-2021",
+    "earp-2023",
+    "escamilla-1998"
+  ],
+  "searchedQueries": [
+    "\"leg extension\" EMG quadriceps vastus medialis vastus lateralis rectus femoris study DOI",
+    "\"seated leg extension\" electromyography quadriceps PubMed",
+    "\"knee extension\" \"leg extension\" muscle activation quadriceps DOI",
+    "\"Range of motion and leg rotation\" leg extension EMG DOI",
+    "\"The impact of foot position\" \"superficial quadriceps\" DOI",
+    "\"Unique activation of the quadriceps femoris\" \"single- and multi-joint\" DOI",
+    "\"leg extension\" training quadriceps hypertrophy MRI ultrasound PubMed",
+    "\"The effects of hip flexion angle\" quadriceps femoris muscle hypertrophy leg extension DOI",
+    "\"Drop-Set Training Elicits Differential Increases\" quadriceps leg extension DOI",
+    "\"Differing hypertrophy patterns\" \"open and closed kinetic chain\" leg extension DOI",
+    "\"Biomechanics of the knee\" \"open kinetic chain\" \"knee extension\" DOI"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement agents own only the per-movement source and companion research JSON files, and that data/movements.json is generated."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Applied conservative visible-role rules, primary-source preference, sourceIds requirement, anatomy coverage rule, and current rating protocol using JSON key control for Motor Control."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-backlog.md",
+      "notes": "Confirmed canonical ID seated_machine_leg_extension, visible name Seated Machine Leg Extension, and variant assumption as a seated knee-extension machine with shin pad resistance."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/seated_machine_leg_curl.json",
+      "notes": "Structural example for machine isolation movement naming, ratings, muscle role wording, evidence register, and study IDs."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/research/seated_machine_leg_curl.json",
+      "notes": "Structural example for research status, search trail, reviewed sources, excluded sources, and notes."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed the visible muscle name Quadriceps resolves to an existing local anatomy entry with lower-body mesh files."
+    },
+    {
+      "type": "script",
+      "path": "scripts/validate-movements.js",
+      "notes": "Checked required movement fields, rating keys, evidence studies, research record requirements, and anatomy name resolution."
+    },
+    {
+      "type": "paper",
+      "id": "signorile-2014",
+      "url": "https://scholarship.miami.edu/esploro/outputs/journalArticle/Range-of-motion-and-leg-rotation/991031560972802976",
+      "notes": "Direct leg-extension EMG. Twenty-four participants performed eight 8RM leg-extension repetitions with neutral, medial, and lateral lower-limb rotation; VMO, RF, and VL EMG were averaged across range segments. Used for quadriceps primary role and range/position limitations."
+    },
+    {
+      "type": "paper",
+      "id": "stoutenberg-2005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16437818/",
+      "notes": "Direct leg-extension EMG source. PubMed/LWW metadata and discovery pages identify superficial quadriceps measurements during leg extension across foot positions. Used as supporting exact movement-family evidence for the quadriceps role and limb-position limitations."
+    },
+    {
+      "type": "paper",
+      "id": "ema-2016",
+      "url": "https://link.springer.com/article/10.1007/s00421-016-3363-5",
+      "notes": "Knee extension versus leg press EMG. Experiment 2 had 15 men perform knee extension and leg press at 20, 40, 60, and 80% 1RM; RF, VL, and VM surface EMG were measured. Used to support knee extension as a quadriceps exercise with distinctive RF activation."
+    },
+    {
+      "type": "paper",
+      "id": "larsen-2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39699974/",
+      "notes": "Direct leg-extension training study. Twenty-two untrained men trained unilateral leg extensions twice weekly for 10 weeks with lower limbs assigned to 90 degree or 40 degree hip-flexion conditions; ultrasound measured distal and proximal RF and VL thickness. Used for quadriceps hypertrophy evidence and hip-angle limitations."
+    },
+    {
+      "type": "paper",
+      "id": "varovic-2021",
+      "url": "https://www.mdpi.com/2075-4663/9/9/119",
+      "notes": "Direct seated leg-extension training study. Recreationally active young men performed unilateral seated leg extensions for eight weeks under drop-set and traditional conditions; RF and VL muscle thickness, estimated 1RM, and isokinetic knee-extension torque increased. Used for hypertrophy, strength, and fatigue-efficiency ratings."
+    },
+    {
+      "type": "paper",
+      "id": "earp-2023",
+      "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2023.1074705/full",
+      "notes": "Open-chain knee-extension training study. Twelve participants completed eight weeks of unilateral open-chain knee extension and contralateral closed-chain squat training; MRI measured quadriceps volume and regional shape changes. Used for quadriceps hypertrophy and limits on athletic transfer."
+    },
+    {
+      "type": "paper",
+      "id": "escamilla-1998",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9565938/",
+      "notes": "Open-chain knee-extension biomechanics source. Ten healthy men performed isotonic open-chain knee extension, leg press, and squat tasks while tibiofemoral forces and muscle activity were calculated. Used for joint-loading interpretation and joint-resilience scoring."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "SportRxiv preprint of Larsen et al. hip-flexion leg-extension study",
+      "url": "https://sportrxiv.org/index.php/server/preprint/view/407",
+      "reason": "Reviewed for discovery and methods context, but the peer-reviewed Journal of Sports Sciences/PubMed record was used in the evidence register."
+    },
+    {
+      "title": "ResearchGate copies of Stoutenberg 2005, Larsen 2025, Mitsuya 2023, and related leg-extension papers",
+      "reason": "Useful for discovery snippets and author-uploaded context, but DOI, PubMed, journal, publisher, and university repository pages were preferred."
+    },
+    {
+      "title": "Mitsuya et al. 2023 hip flexion angle affects longitudinal muscle activity of rectus femoris",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36795130/",
+      "reason": "Relevant direct leg-extension evidence, but not used in the final register because Larsen 2025 covered a longitudinal hip-angle training question and the final visible role did not require separate rectus femoris classification."
+    },
+    {
+      "title": "Pedrosa et al. 2022 partial range of motion training in leg extension",
+      "reason": "Relevant for range-of-motion programming, but not needed for the generic muscle map once direct EMG and multiple leg-extension hypertrophy studies were included."
+    },
+    {
+      "title": "Open-chain knee-extension ACL rehabilitation commentaries and clinical summaries",
+      "reason": "Useful context for knee-loading cautions, but not used as primary evidence because Escamilla 1998 supplied a direct biomechanics source."
+    },
+    {
+      "title": "Consumer exercise articles, social media posts, and coaching videos about leg extensions",
+      "reason": "Not used for visible muscle roles or ratings because primary studies, PubMed records, journal pages, and university repositories were available."
+    },
+    {
+      "title": "Wikipedia leg extension pages",
+      "reason": "Not used because they are secondary summaries and include generalized exercise claims rather than primary evidence."
+    }
+  ],
+  "notes": "Variant assumption: seated knee-extension machine with shin pad resistance, generic upright commercial setup unless a specific recumbent or hip-angle variant is assigned later. The visible muscle map is intentionally conservative: Quadriceps primary only, no secondary or support muscles. Direct studies measured superficial quadriceps heads, and several training studies measured rectus femoris, vastus lateralis, or whole quadriceps outcomes, but the current local anatomy registry supports the aggregate Quadriceps entry rather than requiring separate visible head-level entries. No anatomy blocker was found."
+}

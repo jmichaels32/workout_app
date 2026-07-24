@@ -1,0 +1,69 @@
+{
+  "movementId": "seated_cable_row",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-10",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "vasconcelos-2023",
+    "padovan-2025",
+    "lehman-2004",
+    "fujita-2019",
+    "wattanaprakornkul-2011",
+    "ronai-2019"
+  ],
+  "searchedQueries": [
+    "\"seated row\" electromyography latissimus dorsi trapezius biceps brachii",
+    "\"seated cable row\" EMG latissimus dorsi trapezius",
+    "\"row\" exercise electromyography latissimus dorsi middle trapezius rhomboid biceps",
+    "\"Direction-specific recruitment\" rotator cuff bench press row Wattanaprakornkul",
+    "\"High-Density Surface Electromyography Excitation of Prime Movers\" \"Journal of Human Kinetics\" Padovan DOI",
+    "\"High-Density Surface Electromyography Excitation\" seated row \"10.5114/jhk/209550\"",
+    "Ronai Do It Right The Seated Cable Row Exercise ACSM Health Fitness Journal 2019 DOI",
+    "\"Comparison of Different Rowing Exercises\" \"Trunk Muscle Activation\" lumbar spine motion load stiffness DOI",
+    "\"seated cable row\" \"trunk muscle activation\" lumbar spine load",
+    "Fujita seated row 70% 1RM latissimus dorsi EMG",
+    "\"Fujita\" \"seated row\" \"latissimus dorsi\" \"70% 1RM\"",
+    "\"Variations in muscle activation levels during traditional latissimus dorsi weight training exercises\" DOI Lehman Buchan Lundy Myers Nalborczyk Dynamic Medicine"
+  ],
+  "reviewedFiles": [
+    "docs/movement-research-protocol.md",
+    "docs/movement-data-workflow.md",
+    "data/movements/bar_bench_press.json",
+    "data/movements/dumbbell_bench_press.json",
+    "data/anatomy.json",
+    "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_parts_list_e.txt",
+    "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_parts_list_e.txt",
+    "https://raw.githubusercontent.com/LluisV/Z-Anatomy/PC-Version/Resources/Models/FBX/MuscularSystem100.fbx",
+    "https://www.ebi.ac.uk/ols4/api/search?q=latissimus%20dorsi&ontology=fma&exact=false",
+    "https://journal.iusca.org/index.php/Journal/article/download/190/271/1652",
+    "https://jhk.termedia.pl/High-Density-Surface-Electromyography-Excitation-of-Prime-Movers-in-the-Narrow-vs%2C209550%2C0%2C2.html",
+    "https://pubmed.ncbi.nlm.nih.gov/15228624/",
+    "https://pdfs.semanticscholar.org/2b55/6e63ba0d3019f5e2959b3ec165072f139c4b.pdf",
+    "https://journals.sagepub.com/doi/10.1177/0031512520926369",
+    "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+    "https://digitalcommons.sacredheart.edu/pthms_exscifac/36/"
+  ],
+  "excludedSources": [
+    {
+      "source": "Fenwick CMJ, Brown SHM, McGill SM. Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness. Journal of Strength and Conditioning Research. 2009;23(2):350-358. doi:10.1519/JSC.0b013e3181942019.",
+      "reason": "Reviewed for row-family fatigue and trunk-loading context, but excluded from the movement evidence register because the tested exercises were inverted row, standing bent-over row, and standing one-arm cable row rather than the bilateral foot-supported seated cable row."
+    },
+    {
+      "source": "Edelburg H. Electromyographic analysis of the back during various back exercises. University of Wisconsin-La Crosse thesis, 2017.",
+      "reason": "Reviewed as a broad back-exercise EMG source, but excluded because peer-reviewed seated-row evidence was available and this thesis was not needed for role classification."
+    },
+    {
+      "source": "Fujita RA, Silva NRS, Bedo BLS, Santiago PRP, Gentil PRV, Gomes MM. Mind-Muscle Connection: Limited Effect of Verbal Instructions on Muscle Activity in a Seated Row Exercise. Perceptual and Motor Skills. 2020;127(5). doi:10.1177/0031512520926369.",
+      "reason": "Reviewed as a related seated-row verbal-instruction EMG study, but excluded from the movement evidence register because it largely duplicates the included Fujita 2019 role evidence and focuses on cueing effects rather than variant classification."
+    },
+    {
+      "source": "ResearchGate duplicates of Lehman 2004, Vasconcelos 2023, Fujita 2019, and Padovan 2025.",
+      "reason": "Excluded duplicate aggregator pages when publisher, PubMed, DOI, or PDF sources were available."
+    },
+    {
+      "source": "Healthline, Men's Health, Breaking Muscle, Muscle & Strength, Instagram, Facebook, and similar consumer or social sources.",
+      "reason": "Excluded from evidence because the protocol prioritizes primary research, peer-reviewed technique sources, DOI pages, PubMed, and publisher pages."
+    }
+  ],
+  "notes": "Variant assumption is a bilateral foot-supported seated cable row with an upright torso and a close-to-shoulder-width or neutral handle path pulled toward the lower ribs or upper abdomen. The direct evidence shows meaningful shifts by grip width and shoulder abduction: close/narrow rows better emphasize latissimus dorsi, while wide or high-abduction rows increase trapezius and posterior deltoid involvement. Rhomboids are included only as an explicit inference from grouped middle trapezius/rhomboid surface EMG plus scapular retraction mechanics; no isolated rhomboid fine-wire evidence was found. Erector spinae is included as support because it stabilizes trunk position against the cable pull, not because seated cable row is a back-extension exercise. Local meshes now exist for all visible muscles: BodyParts3D covers teres major, middle trapezius, rhomboids, posterior deltoid, biceps brachii, rotator cuff, and erector spinae; Z-Anatomy MuscularSystem100.fbx supplies left and right latissimus dorsi because BodyParts3D 4.0 English ISA/PART-OF tables did not expose a latissimus dorsi muscle mesh. EMG findings are interpreted as acute excitation, not direct proof of hypertrophy or injury risk."
+}

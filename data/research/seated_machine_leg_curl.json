@@ -1,0 +1,124 @@
+{
+  "movementId": "seated_machine_leg_curl",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-09",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "maeo-2021",
+    "maeo-2024",
+    "wright-1999",
+    "onishi-2002",
+    "gallucci-2002"
+  ],
+  "searchedQueries": [
+    "\"seated leg curl\" EMG hamstrings biceps femoris semitendinosus gastrocnemius",
+    "\"seated leg curl\" \"Greater Hamstrings Muscle Hypertrophy\" DOI",
+    "\"seated leg curl\" \"Nordic\" \"lengthened state eccentric training\" DOI",
+    "\"leg curl\" electromyographic activity hamstrings stiff-leg deadlift back squat DOI",
+    "\"EMG-angle relationship\" hamstring muscles maximum knee flexion DOI",
+    "\"Examining the role of the gastrocnemius\" \"leg curl exercise\" DOI",
+    "\"leg curl machine\" gastrocnemius knee flexion biomechanics",
+    "\"hamstring curl machine\" electromyography seated",
+    "\"seated leg curl\" gastrocnemius ankle position muscle swelling",
+    "\"seated leg curl\" semimembranosus semitendinosus biceps femoris short head"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Protocol for conservative roles, evidence hierarchy, source IDs, study register fields, and rating dimensions."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement/research JSON contracts and validation workflow; confirmed generated bundle should not be hand-edited."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/bar_bench_press.json",
+      "notes": "Movement schema, ratings, evidence register, and sourceIds formatting."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/dumbbell_bench_press.json",
+      "notes": "Movement schema and conservative support-role wording."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/seated_machine_chest_press.json",
+      "notes": "Machine movement rating style and variant wording."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Current anatomy registry includes local BodyParts3D hamstrings and gastrocnemius mappings used by this movement."
+    },
+    {
+      "type": "script",
+      "path": "scripts/validate-movements.js",
+      "notes": "Validation requirements for movement/research fields, ratings, evidence studies, and sourceIds."
+    },
+    {
+      "type": "paper",
+      "id": "maeo-2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33009197/",
+      "notes": "Direct seated vs prone leg curl training study. Twenty healthy adults, no systematic resistance training in the prior 12 months, trained one leg seated and the other prone for 12 weeks at 70% 1RM after ramp-up, 10 reps x 5 sets twice weekly; MRI measured individual and whole hamstring volumes. Seated condition used a modified Life Fitness seated leg curl with hip around 90 degrees, knee ROM 0-90 degrees, pelvis strapped, and settings repeated."
+    },
+    {
+      "type": "paper",
+      "id": "maeo-2024",
+      "url": "https://pure.ul.ie/en/publications/hamstrings-hypertrophy-is-specific-to-the-training-exercise-nordi/",
+      "notes": "Close direct modified seated leg-curl evidence. Forty-two healthy young males completed 34 sessions over 12 weeks or served as controls. Lengthened-state eccentric training used isoinertial weight-stack resistance in an accentuated hip-flexed seated-curl setup; MRI measured seven knee-flexor volumes and biceps femoris long-head aponeurosis, and torque/EMG were measured during maximum knee-flexion contractions."
+    },
+    {
+      "type": "paper",
+      "id": "wright-1999",
+      "url": "https://journals.lww.com/nsca-jscr/abstract/1999/05000/electromyographic_activity_of_the_hamstrings.12.aspx",
+      "notes": "Leg-curl movement-family EMG. Eleven weight-trained men performed leg curl, stiff-leg deadlift, and back squat at 75% 1RM for hamstring EMG comparison. Used only to support hamstring involvement in loaded leg curls, not seated-machine specificity."
+    },
+    {
+      "type": "paper",
+      "id": "onishi-2002",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1050641102000330",
+      "notes": "Fine-wire EMG during maximum knee flexion. Ten healthy subjects performed isometric and isokinetic knee flexion; semitendinosus, semimembranosus, biceps femoris long head, and biceps femoris short head were measured. Used for individual hamstring knee-flexion role and joint-angle limitations."
+    },
+    {
+      "type": "paper",
+      "id": "gallucci-2002",
+      "url": "https://pure.psu.edu/en/publications/examining-the-role-of-the-gastrocnemius-during-the-leg-curl-exerc/",
+      "notes": "Gastrocnemius in leg-curl-like knee flexion. Nine healthy men performed maximum isokinetic knee flexion at 30, 75, and 150 degrees/s with ankle braced in dorsiflexion or plantar flexion; knee moment was higher with the ankle dorsiflexed. Used for gastrocnemius secondary role and ankle-position limitation."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Tsaklis et al. 2015 muscle and intensity based hamstring exercise classification",
+      "url": "https://www.dovepress.com/muscle-and-intensity-based-hamstring-exercise-classification-in-elite--peer-reviewed-fulltext-article-OAJSM",
+      "reason": "Reviewed as hamstring EMG context, but the described curl was a standing elastic-band knee-flexion/hip-extension task in elite female track athletes, not the assigned seated machine variant."
+    },
+    {
+      "title": "McAllister et al. 2014 Muscle Activation During Various Hamstring Exercises",
+      "reason": "Relevant prone leg-curl and hamstring-exercise EMG family evidence, but not used because direct seated MRI evidence plus older leg-curl EMG and knee-flexion fine-wire EMG were sufficient for the visible roles."
+    },
+    {
+      "title": "Zebis et al. 2013 kettlebell swing and supine leg curl EMG",
+      "reason": "Relevant to hamstring exercise selection but excluded from the final register because the leg curl was supine rather than seated machine."
+    },
+    {
+      "title": "ResearchGate copies of Maeo 2021, Maeo 2024, McAllister 2014, and related hamstring papers",
+      "reason": "Useful for discovery only; DOI, PubMed, university repository, publisher, and institutional pages were preferred."
+    },
+    {
+      "title": "Ankle position-dependent muscle swelling during seated leg curl",
+      "reason": "Identified in search results but not used because publisher/journal metadata and peer-reviewed status were not clear during this pass, and gastrocnemius role was already supported by Gallucci and Challis."
+    },
+    {
+      "title": "Consumer exercise articles and social media posts about seated versus prone leg curl",
+      "reason": "Not used for movement roles or ratings because they are not primary studies, systematic reviews, or biomechanics papers."
+    },
+    {
+      "title": "Wikipedia leg curl pages",
+      "reason": "Not used for evidence because they are secondary summaries and include unsourced or generalized claims about muscle targeting."
+    }
+  ],
+  "notes": "Variant assumption: a seated hamstring curl machine with the thighs restrained and resistance applied through a lower-leg pad during knee flexion. Direct exact-variant EMG for generic commercial seated leg curl machines was not found; the primary hamstring role is based on direct seated-machine MRI training evidence plus close loaded leg-curl and maximum knee-flexion EMG. Gastrocnemius is visible only as secondary because its contribution is ankle-position dependent and not the intended target. Sartorius, gracilis, popliteus, and individual hamstring heads were not shown separately because the evidence did not support clean app roles for a generic machine card. No support muscles were added because the machine supplies most external stability and reviewed sources did not identify a specific stabilizer role. Current shared anatomy assets include local BodyParts3D hamstrings and gastrocnemius meshes for this movement."
+}

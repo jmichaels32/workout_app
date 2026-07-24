@@ -1,0 +1,69 @@
+{
+  "movementId": "incline_bar_bench_press",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-09",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "rodriguez-ridao-2020",
+    "lauver-2016",
+    "cabral-2022",
+    "saeterbakken-2017",
+    "lopez-vivancos-2023",
+    "stastny-2017",
+    "wattanaprakornkul-2011",
+    "borges-2019"
+  ],
+  "searchedQueries": [
+    "\"incline bench press\" EMG pectoralis anterior deltoid triceps",
+    "\"incline bench press\" electromyography muscle activation",
+    "\"bench press\" systematic review electromyography pectoralis major incline",
+    "\"bench angle\" upper extremity muscular activation bench press",
+    "\"incline bench press\" biomechanics kinematics joint moment",
+    "\"incline bench press\" rotator cuff serratus anterior trapezius EMG",
+    "\"incline bench press\" grip width incline load tempo EMG",
+    "\"Influence of bench angle\" \"upper extremity muscular activation\" DOI",
+    "\"Non-uniform excitation of the pectoralis major muscle during flat and inclined bench press exercises\" DOI",
+    "\"Effects of Bench Press Variations in Competitive Athletes\" incline DOI"
+  ],
+  "reviewedFiles": [
+    "docs/movement-research-protocol.md",
+    "docs/movement-data-workflow.md",
+    "data/movements/bar_bench_press.json",
+    "data/movements/dumbbell_bench_press.json",
+    "data/research/bar_bench_press.json",
+    "data/research/dumbbell_bench_press.json",
+    "https://www.mdpi.com/1660-4601/17/19/7339",
+    "https://doi.org/10.1080/17461391.2015.1022605",
+    "https://doi.org/10.1111/sms.14082",
+    "https://doi.org/10.1515/hukin-2017-0047",
+    "https://www.mdpi.com/2076-3417/13/8/5203",
+    "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171632",
+    "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+    "https://efsupit.ro/images/stories/iunie2019/Art%20131.pdf",
+    "https://journal.iusca.org/index.php/Journal/article/download/39/124/",
+    "https://digitalcommons.wku.edu/ijes/vol13/iss6/12/"
+  ],
+  "excludedSources": [
+    {
+      "title": "Coratella et al. effect of 12 bench press variations",
+      "url": "https://journal.iusca.org/index.php/Journal/article/download/39/124/",
+      "reason": "Reviewed as a related barbell bench-press variation paper, but not used because the grip and pronation/supination matrix made it less directly applicable than the selected free-weight bench-angle studies."
+    },
+    {
+      "title": "Chaves et al. horizontal and incline bench press training adaptation study",
+      "url": "https://digitalcommons.wku.edu/ijes/vol13/iss6/12/",
+      "reason": "Reviewed for adaptation context, but not used in the movement evidence register because visible muscle roles were better supported by direct acute EMG studies and systematic reviews."
+    },
+    {
+      "title": "ResearchGate copies and author-uploaded PDFs of included studies",
+      "url": "https://www.researchgate.net/",
+      "reason": "Used only for discovery or bibliographic cross-checking when official DOI, journal, PubMed, or publisher pages were available."
+    },
+    {
+      "title": "Fitness blogs, social posts, and general exercise explainers",
+      "url": "multiple search results",
+      "reason": "Rejected as non-primary/non-scholarly sources for muscle-role classification."
+    }
+  ],
+  "notes": "Variant assumption recorded as a fixed incline bench with a free barbell. Direct evidence is strongest for pectoralis major, anterior deltoid, and triceps brachii at 25-45 degree incline conditions; the exact bench angle is unresolved because the movement ID does not specify one. Serratus anterior and rotator cuff support roles are explicitly marked as inference from close horizontal bench/chest-press evidence, not direct incline-only measurements. No visible biceps brachii role was added because incline-specific biceps evidence was not strong enough for a useful app classification."
+}

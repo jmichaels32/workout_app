@@ -1,0 +1,223 @@
+{
+  "id": "seated_machine_leg_extension",
+  "name": "Seated Machine Leg Extension",
+  "aliases": [
+    "seated_machine_leg_extension",
+    "seated_leg_extension",
+    "machine_leg_extension",
+    "leg_extension_machine",
+    "quad_extension",
+    "quadriceps_extension",
+    "selectorized_leg_extension"
+  ],
+  "family": "leg_extension",
+  "equipment": "machine",
+  "variantType": "seated_machine",
+  "variant": "Seated knee-extension machine with shin pad resistance, treated separately from cable, band, bodyweight, sissy squat, recumbent, and hip-angle-specific leg-extension variants.",
+  "description": "Sit with the knees aligned to the machine pivot, the back and hips fixed against the pads, and the shin pad set just above the ankles. Hold the handles or seat, straighten the knees to lift the pad without letting the hips rise, pause near full extension without slamming the stack, then lower under control until the knees are flexed again.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Knee extension",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 86,
+      "rationale": "Excellent direct quadriceps stimulus with strong isolation and repeatable loading, supported by leg-extension EMG and hypertrophy studies."
+    },
+    "strength": {
+      "score": 48,
+      "rationale": "Builds isolated knee-extension force well, but it does not express integrated lower-body strength through the hip, ankle, trunk, or ground contact."
+    },
+    "joint_resilience": {
+      "score": 60,
+      "rationale": "Useful controlled loading for the knee extensors and patellofemoral tolerance, with deductions because open-chain terminal extension can be sensitive to knee status, pad placement, and range selection."
+    },
+    "athletic_transfer": {
+      "score": 8,
+      "rationale": "Very low direct transfer because the task is seated, guided, bilateral by default, and lacks gait, landing, balance, hip extension, or whole-body force transfer."
+    },
+    "control": {
+      "score": 5,
+      "rationale": "Very low Motor Control demand beyond alignment, tempo, range control, and keeping the hips seated."
+    },
+    "fatigue_efficiency": {
+      "score": 86,
+      "rationale": "High local quad stimulus with low systemic fatigue and little unrelated recovery cost when knee tolerance is good."
+    },
+    "setup": {
+      "score": 72,
+      "rationale": "Requires a specific machine plus repeatable seat, pivot, pad, and range adjustments, but loading is quick once the machine is set."
+    },
+    "ease": {
+      "score": 88,
+      "rationale": "Simple guided single-joint movement with minimal balance or coordination demand, though pad and knee-pivot setup still matter."
+    },
+    "progression": {
+      "score": 82,
+      "rationale": "Load, reps, tempo, side-to-side work, and range are easy to track, with minor deductions for stack increments and machine geometry."
+    },
+    "support": {
+      "score": 95,
+      "rationale": "Very high external support from the seat, back pad, handles, shin pad, and guided lever path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Direct leg-extension EMG and hypertrophy studies support the quadriceps as the main target.",
+        "evidence": "Leg-extension studies directly measure high activity in superficial quadriceps heads, knee-extension comparisons show rectus femoris, vastus lateralis, and vastus medialis involvement, and longitudinal leg-extension training studies report hypertrophy in rectus femoris, vastus lateralis, or whole quadriceps measures.",
+        "sourceIds": [
+          "signorile-2014",
+          "stoutenberg-2005",
+          "ema-2016",
+          "larsen-2025",
+          "varovic-2021",
+          "earp-2023"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Seated machine leg extension: quadriceps primary; no visible secondary or support muscles added.",
+    "clinicalShort": "EMG estimates acute excitation; ultrasound or MRI hypertrophy studies reflect training adaptation, not single-session muscle growth or knee safety.",
+    "limitsShort": "Machine cam path, hip angle, knee-pivot alignment, shin-pad position, range of motion, load, tempo, terminal extension, and knee symptoms can all change the training stress.",
+    "summary": "The seated machine leg extension is classified as a supported open-chain knee-extension isolation exercise. Direct leg-extension EMG evidence supports the quadriceps as the visible primary role, and longitudinal knee-extension or leg-extension training studies show that the movement can increase quadriceps size and knee-extension strength. Secondary and support roles are intentionally empty because the reviewed evidence did not justify adding a specific non-quadriceps visible muscle to a generic seated machine card.",
+    "clinicalInterpretation": "Surface EMG and MRI T2 are useful for estimating acute excitation or regional use under specific joint angles, loads, and range conditions. Ultrasound and MRI training studies support longer-term quadriceps adaptation, but they do not directly predict pain, injury risk, or whether a specific knee should tolerate terminal open-chain loading.",
+    "limitations": "Exact commercial-machine geometry varies across selectorized, plate-loaded, unilateral, bilateral, upright, and recumbent designs. Most EMG studies measure superficial quadriceps heads rather than every quadriceps component, and most training studies use young healthy or trained participants. The available evidence supports the quadriceps aggregate, but not a separate visible role for rectus femoris, vastus lateralis, vastus medialis, vastus intermedius, hip flexors, hamstrings, calves, or trunk stabilizers in this generic card.",
+    "studies": [
+      {
+        "id": "signorile-2014",
+        "type": "Direct leg-extension EMG range and rotation study",
+        "shortCitation": "Signorile et al., JSCR, 2014",
+        "finding": "In 24 participants performing 8RM leg extensions, vastus medialis oblique, rectus femoris, and vastus lateralis EMG varied by repetition, range segment, and limb rotation.",
+        "citation": "Signorile JF, Lew KM, Stoutenberg M, Pluchino A, Lewis JE, Gao J. Range of motion and leg rotation affect electromyography activation levels of the superficial quadriceps muscles during leg extension. Journal of Strength and Conditioning Research. 2014;28(9):2536-2545. doi:10.1519/JSC.0000000000000582.",
+        "doi": "10.1519/JSC.0000000000000582",
+        "url": "https://scholarship.miami.edu/esploro/outputs/journalArticle/Range-of-motion-and-leg-rotation/991031560972802976",
+        "relevance": "Direct leg-extension EMG evidence for superficial quadriceps activation during loaded repetitions, with practical limitations for range of motion and limb rotation.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "ease score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "stoutenberg-2005",
+        "type": "Direct leg-extension foot-position EMG study",
+        "shortCitation": "Stoutenberg et al., JSCR, 2005",
+        "finding": "Leg-extension EMG showed quadriceps-head activation across foot positions, with medial rotation emphasizing vastus lateralis and vastus medialis and lateral rotation emphasizing rectus femoris.",
+        "citation": "Stoutenberg M, Pluchino AP, Ma F, Hoctor JE, Signorile JF. The impact of foot position on electromyographical activity of the superficial quadriceps muscles during leg extension. Journal of Strength and Conditioning Research. 2005;19(4):931-938. doi:10.1519/R-16364.1.",
+        "doi": "10.1519/R-16364.1",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16437818/",
+        "relevance": "Direct leg-extension movement-family EMG evidence measuring superficial quadriceps heads and showing that foot or limb position can shift emphasis.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "ema-2016",
+        "type": "Knee extension versus leg press quadriceps EMG study",
+        "shortCitation": "Ema et al., Eur J Appl Physiol, 2016",
+        "finding": "Rectus femoris activation was higher during knee extension than during leg press, while vasti activation did not differ between the exercises in the same way.",
+        "citation": "Ema R, Sakaguchi M, Akagi R, Kawakami Y. Unique activation of the quadriceps femoris during single- and multi-joint exercises. European Journal of Applied Physiology. 2016;116(5):1031-1041. doi:10.1007/s00421-016-3363-5.",
+        "doi": "10.1007/s00421-016-3363-5",
+        "url": "https://link.springer.com/article/10.1007/s00421-016-3363-5",
+        "relevance": "Supports knee extension as a quadriceps exercise with distinctive rectus femoris activation compared with a multi-joint lower-body press.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "athletic transfer score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "larsen-2025",
+        "type": "Leg-extension hip-angle hypertrophy study",
+        "shortCitation": "Larsen et al., J Sports Sci, 2025",
+        "finding": "Twenty-two untrained men completed 10 weeks of unilateral leg-extension training; both 90 degree and 40 degree hip-flexion conditions trained rectus femoris and vastus lateralis, with greater rectus femoris hypertrophy in the lower hip-flexion condition.",
+        "citation": "Larsen S, Sandvik Kristiansen BS, Swinton PA, Wolf M, Fredriksen AB, Falch HN, van den Tillaar R, Sandberg NO. The effects of hip flexion angle on quadriceps femoris muscle hypertrophy in the leg extension exercise. Journal of Sports Sciences. 2025;43(2):210-221. doi:10.1080/02640414.2024.2444713.",
+        "doi": "10.1080/02640414.2024.2444713",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39699974/",
+        "relevance": "Direct leg-extension training evidence including an upright seated 90 degree hip-flexion condition, with ultrasound outcomes for rectus femoris and vastus lateralis.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "progression score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "varovic-2021",
+        "type": "Unilateral seated leg-extension hypertrophy study",
+        "shortCitation": "Varovic et al., Sports, 2021",
+        "finding": "Eight weeks of unilateral seated leg-extension training increased rectus femoris and vastus lateralis muscle thickness and knee-extension strength in recreationally active young men.",
+        "citation": "Varovic D, Zganjer K, Vuk S, Schoenfeld BJ. Drop-Set Training Elicits Differential Increases in Non-Uniform Hypertrophy of the Quadriceps in Leg Extension Exercise. Sports. 2021;9(9):119. doi:10.3390/sports9090119.",
+        "doi": "10.3390/sports9090119",
+        "url": "https://www.mdpi.com/2075-4663/9/9/119",
+        "relevance": "Direct seated leg-extension training evidence for quadriceps hypertrophy and knee-extension strength adaptation.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "strength score",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "earp-2023",
+        "type": "Open-chain knee-extension versus squat hypertrophy study",
+        "shortCitation": "Earp et al., Front Physiol, 2023",
+        "finding": "Eight weeks of unilateral open-chain knee-extension training increased quadriceps volume similarly to closed-chain squat training but produced a different, more distal hypertrophy pattern.",
+        "citation": "Earp JE, Angelino D, Hatfield DL, Colantuono V, Jackson ER, Morgan KD, Adami A, Melanson KJ, Blazevich AJ. Differing hypertrophy patterns from open and closed kinetic chain training affect quadriceps femoris center of mass and moment of inertia. Frontiers in Physiology. 2023;14:1074705. doi:10.3389/fphys.2023.1074705.",
+        "doi": "10.3389/fphys.2023.1074705",
+        "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2023.1074705/full",
+        "relevance": "Direct open-chain knee-extension training evidence for quadriceps volume adaptation and regional hypertrophy pattern.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "athletic transfer score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "escamilla-1998",
+        "type": "Open-chain knee-extension biomechanics study",
+        "shortCitation": "Escamilla et al., Med Sci Sports Exerc, 1998",
+        "finding": "Open-chain knee extension produced distinct knee extensor torque, muscle activity, and knee joint force patterns compared with squat and leg press tasks.",
+        "citation": "Escamilla RF, Fleisig GS, Zheng N, Barrentine SW, Wilk KE, Andrews JR. Biomechanics of the knee during closed kinetic chain and open kinetic chain exercises. Medicine and Science in Sports and Exercise. 1998;30(4):556-569. doi:10.1097/00005768-199804000-00014.",
+        "doi": "10.1097/00005768-199804000-00014",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9565938/",
+        "relevance": "Biomechanics source for open-chain knee-extension joint loading, rehabilitation/training limits, and joint-resilience scoring.",
+        "usedFor": [
+          "joint resilience score",
+          "strength score",
+          "clinical interpretation",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "id": "dumbbell_bench_press",
+  "name": "Dumbbell Bench Press",
+  "aliases": [
+    "flat_dumbbell_bench_press",
+    "dumbbell_chest_press",
+    "db_bench_press"
+  ],
+  "family": "chest_press",
+  "equipment": "dumbbell",
+  "variantType": "flat_dumbbell",
+  "variant": "Flat dumbbell bench press, treated as an independent free-weight horizontal pressing pattern.",
+  "description": "Sit at the end of a flat bench with matching dumbbells on the thighs, lie back while guiding the weights to shoulder level, set the feet and shoulder blades, lower with wrists stacked over elbows until the chest is loaded without losing shoulder position, then press the dumbbells up and slightly together under control.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Chest",
+      "group": "region"
+    },
+    {
+      "label": "Dumbbell",
+      "group": "equipment"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 78,
+      "rationale": "High chest stimulus with independent arm paths and useful range of motion, making hypertrophy a main positive dimension."
+    },
+    "strength": {
+      "score": 68,
+      "rationale": "Builds pressing strength well, but absolute loading and measurement precision are lower than barbell bench because each dumbbell must be positioned and stabilized independently."
+    },
+    "joint_resilience": {
+      "score": 42,
+      "rationale": "Can train shoulder tolerance through a freer path, but it is not primarily a resilience drill and can become demanding at the bottom range."
+    },
+    "athletic_transfer": {
+      "score": 28,
+      "rationale": "Some transfer from independent limb control, but the supine supported position keeps sport-like coordination demand low."
+    },
+    "control": {
+      "score": 50,
+      "rationale": "Meaningful control demand from independent dumbbells, but the bench removes balance, locomotion, and most whole-body coordination."
+    },
+    "fatigue_efficiency": {
+      "score": 48,
+      "rationale": "Strong local stimulus, but setup, stabilizer demand, and heavy dumbbell handling reduce efficiency compared with guided chest work."
+    },
+    "setup": {
+      "score": 54,
+      "rationale": "Needs a bench and matched dumbbells, with extra friction as weights get heavy or crowded."
+    },
+    "ease": {
+      "score": 42,
+      "rationale": "Simple conceptually, but safe heavy reps require independent arm control, shoulder positioning, and getting dumbbells into and out of position."
+    },
+    "progression": {
+      "score": 70,
+      "rationale": "Load and reps are trackable, but dumbbell jumps are often coarse and heavy setup can limit progression before the target muscles do."
+    },
+    "support": {
+      "score": 32,
+      "rationale": "The torso is bench-supported, but each arm stabilizes a separate free load, so external support is modest."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Direct DBP and bench-press EMG support major chest involvement.",
+        "evidence": "Dumbbell bench press studies measure pectoralis major activity during the horizontal press, and bench-press EMG review evidence supports pectoralis major as a dominant mover in the movement family.",
+        "sourceIds": [
+          "rosa-2024",
+          "farias-2017",
+          "welsch-2005",
+          "stastny-2017"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Measured DBP contributor; path and depth sensitive.",
+        "evidence": "Anterior deltoid is directly measured during dumbbell bench press and close bench-press variants; its contribution is meaningful but generally secondary to the intended chest target.",
+        "sourceIds": [
+          "rosa-2024",
+          "farias-2017",
+          "welsch-2005",
+          "stastny-2017"
+        ]
+      },
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Elbow-extension contributor in DBP and bench press.",
+        "evidence": "Dumbbell bench press EMG studies record triceps brachii activity, and the bench-press EMG literature identifies triceps brachii as a major contributor to the elbow-extension component of pressing.",
+        "sourceIds": [
+          "rosa-2024",
+          "farias-2017",
+          "stastny-2017"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Independent dumbbells increase antagonist/stabilizer demand.",
+        "evidence": "Direct dumbbell bench press comparisons report biceps brachii activity consistent with antagonist and stabilizing demand when controlling two independent dumbbells.",
+        "sourceIds": [
+          "saeterbakken-2011",
+          "farias-2017",
+          "rosa-2024"
+        ]
+      },
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Scapulothoracic support during horizontal pressing.",
+        "evidence": "Bench and chest-press comparison evidence includes serratus anterior activity with scapular kinematics; for dumbbell pressing this is classified as scapulothoracic support rather than a primary hypertrophy target.",
+        "sourceIds": [
+          "borges-2019"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Glenohumeral stabilization during free pressing.",
+        "evidence": "Bench press research demonstrates direction-specific rotator cuff recruitment consistent with glenohumeral stabilization; independent dumbbell paths make this a support classification.",
+        "sourceIds": [
+          "wattanaprakornkul-2011"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Flat dumbbell horizontal press: pectoralis major primary; anterior deltoid and triceps secondary; biceps brachii, serratus anterior, and rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Dumbbell path, depth, grip angle, load, bench angle, shoulder range, and start/finish handling can shift emphasis; incline, neutral-grip, and machine versions should be separate movements.",
+    "summary": "The flat dumbbell bench press is classified as an independent free-weight horizontal pressing exercise. Direct dumbbell press evidence supports pectoralis major, anterior deltoid, triceps brachii, and biceps brachii involvement. Pectoralis major is the primary target, anterior deltoid and triceps brachii are secondary movers, and biceps brachii is included as support because independent dumbbells increase antagonist/stabilizer demand.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation during a specific exercise condition. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, long-term adaptation, or injury risk.",
+    "limitations": "Dumbbell bench press studies differ in load prescription, normalization method, range of motion, grip, participant training status, and whether the comparison condition is barbell, Smith machine, cable, or fly variation. Scapular and rotator cuff support roles are inferred from close pressing-family evidence rather than direct dumbbell-only measurements.",
+    "studies": [
+      {
+        "id": "rosa-2024",
+        "type": "Dumbbell bench press vs cable bench press EMG",
+        "shortCitation": "Rosa et al., Int J Strength Cond, 2024",
+        "finding": "DBP and cable bench press showed similar pectoralis major and anterior deltoid activity; DBP showed higher triceps activity.",
+        "citation": "Rosa M, Martins R, Loureiro N. The Effects of Different Types of External Load Equipment on Muscle Activation Comparing Two Bench Press Exercises Variations. International Journal of Strength and Conditioning. 2024;4(1). doi:10.47206/ijsc.v4i1.254.",
+        "doi": "10.47206/ijsc.v4i1.254",
+        "url": "https://journal.iusca.org/index.php/Journal/article/view/254",
+        "relevance": "Directly measured pectoralis major, anterior deltoid, biceps brachii, and triceps brachii during dumbbell bench press in resistance-trained participants.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score"
+        ]
+      },
+      {
+        "id": "farias-2017",
+        "type": "Dumbbell, barbell, and Smith machine bench press EMG",
+        "shortCitation": "Farias et al., JSCR, 2017",
+        "finding": "Compared DBP, barbell, and Smith machine bench press over multiple sets and measured pec, anterior deltoid, biceps, and triceps.",
+        "citation": "Farias D de A, Willardson JM, Paz GA, Bezerra E de S, Miranda H. Maximal Strength Performance and Muscle Activation for the Bench Press and Triceps Extension Exercises Adopting Dumbbell, Barbell, and Machine Modalities Over Multiple Sets. Journal of Strength and Conditioning Research. 2017;31(7):1879-1887. doi:10.1519/JSC.0000000000001651.",
+        "doi": "10.1519/JSC.0000000000001651",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27669189/",
+        "relevance": "Directly supports DBP muscle-role classification and the stabilizer demand distinction between dumbbell and bar/machine modalities.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "rating anchors"
+        ]
+      },
+      {
+        "id": "saeterbakken-2011",
+        "type": "Chest-press stability comparison",
+        "shortCitation": "Saeterbakken et al., J Sports Sci, 2011",
+        "finding": "Compared Smith machine, barbell, and dumbbell chest press 1RM and EMG under different stability requirements.",
+        "citation": "Saeterbakken AH, van den Tillaar R, Fimland MS. A comparison of muscle activity and 1-RM strength of three chest-press exercises with different stability requirements. Journal of Sports Sciences. 2011;29(5):533-538. doi:10.1080/02640414.2010.543916.",
+        "doi": "10.1080/02640414.2010.543916",
+        "url": "https://doi.org/10.1080/02640414.2010.543916",
+        "relevance": "Directly compares dumbbell pressing with more stable press modes and supports the support/stability scoring and biceps support classification.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "ease score",
+          "progression score"
+        ]
+      },
+      {
+        "id": "welsch-2005",
+        "type": "Upper-body lift EMG comparison",
+        "shortCitation": "Welsch et al., JSCR, 2005",
+        "finding": "Measured pectoralis major and anterior deltoid activity during barbell bench press, dumbbell bench press, and dumbbell fly.",
+        "citation": "Welsch EA, Bird M, Mayhew JL. Electromyographic Activity of the Pectoralis Major and Anterior Deltoid Muscles During Three Upper-Body Lifts. Journal of Strength and Conditioning Research. 2005;19(2):449-452. doi:10.1519/14513.1.",
+        "doi": "10.1519/14513.1",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15903389/",
+        "relevance": "Directly includes dumbbell bench press and supports pectoralis major and anterior deltoid classification.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score"
+        ]
+      },
+      {
+        "id": "stastny-2017",
+        "type": "Systematic review of bench press EMG",
+        "shortCitation": "Stastny et al., PLOS ONE, 2017",
+        "finding": "Bench press EMG literature supports pec/triceps dominance and highlights stability, intensity, phase, and technique limits.",
+        "citation": "Stastny P, Golas A, Blazek D, Maszczyk A, Wilk M, Pietraszewski P, Petr M, Uhlir P, Zajac A. A systematic review of surface electromyography analyses of the bench press movement task. PLOS ONE. 2017;12(2):e0171632. doi:10.1371/journal.pone.0171632.",
+        "doi": "10.1371/journal.pone.0171632",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171632",
+        "relevance": "Provides movement-family context for pectoralis major, triceps brachii, anterior deltoid, and stability-condition interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "rating anchors",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wattanaprakornkul-2011",
+        "type": "Rotator cuff recruitment study",
+        "shortCitation": "Wattanaprakornkul et al., J Electromyogr Kinesiol, 2011",
+        "finding": "Rotator cuff recruitment is direction-specific during bench press and row tasks.",
+        "citation": "Wattanaprakornkul D, Halaki M, Cathers I, Ginn KA. Direction-specific recruitment of rotator cuff muscles during bench press and row. Journal of Electromyography and Kinesiology. 2011;21(6):1041-1049. doi:10.1016/j.jelekin.2011.09.002.",
+        "doi": "10.1016/j.jelekin.2011.09.002",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+        "relevance": "Supports rotator cuff involvement as shoulder stabilization during pressing tasks.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "borges-2019",
+        "type": "Chest press lever machine EMG and scapular kinematics",
+        "shortCitation": "Borges et al., JPES, 2019",
+        "finding": "Chest press lever machine data includes pec, anterior deltoid, serratus, and scapular kinematics.",
+        "citation": "Borges E, Dalla H, Mastandrea L, Nunes S, Santarem J. Comparative evaluation of muscular activation and scapular kinematics in a chest press lever machine and a barbell bench press. Journal of Physical Education and Sport. 2019;19:912-916. doi:10.7752/jpes.2019.s3131.",
+        "doi": "10.7752/jpes.2019.s3131",
+        "url": "https://efsupit.ro/images/stories/iunie2019/Art%20131.pdf",
+        "relevance": "Supports serratus anterior as scapulothoracic support in the close horizontal pressing family.",
+        "usedFor": [
+          "support muscle role",
+          "support score"
+        ]
+      }
+    ]
+  }
+}

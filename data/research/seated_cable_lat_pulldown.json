@@ -1,0 +1,77 @@
+{
+  "movementId": "seated_cable_lat_pulldown",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-10",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "signorile-2002",
+    "sperandei-2009",
+    "snyder-2009",
+    "lusk-2010",
+    "lehman-2004",
+    "koyama-2010",
+    "doma-2013",
+    "park-2013",
+    "andersen-2014",
+    "padovan-2024",
+    "buonsenso-2025"
+  ],
+  "searchedQueries": [
+    "\"seated cable lat pulldown\" EMG latissimus dorsi biceps",
+    "\"lat pull-down\" electromyography muscle activation",
+    "\"lat pull-down\" grip width forearm orientation muscle activity DOI",
+    "\"A comparative electromyographical investigation\" \"lat pull-down\"",
+    "\"Electromyographic analysis of three different types of lat pull-down\"",
+    "\"Voluntary increase in latissimus dorsi muscle activity\" \"lat pull-down\"",
+    "\"Effects of grip width on muscle strength and activation in the lat pull-down\"",
+    "\"Kinematic and electromyographic comparisons between chin-ups and lat-pull down exercises\"",
+    "\"Selective activation of the latissimus dorsi\" \"isometric pull-down\"",
+    "\"High-Density Electromyography Excitation\" \"Front vs. Back Lat Pull-Down\"",
+    "\"Electromyographic Analysis of Back Muscle Activation During Lat Pulldown Exercise\"",
+    "\"lat pull-down\" biomechanics kinematics joint moment"
+  ],
+  "reviewedFiles": [
+    "docs/movement-research-protocol.md",
+    "docs/movement-data-workflow.md",
+    "data/movements/bar_bench_press.json",
+    "data/movements/dumbbell_bench_press.json",
+    "data/research/bar_bench_press.json",
+    "data/research/dumbbell_bench_press.json",
+    "data/anatomy.json",
+    "scripts/validate-movements.js",
+    "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_parts_list_e.txt",
+    "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_parts_list_e.txt",
+    "https://raw.githubusercontent.com/LluisV/Z-Anatomy/PC-Version/Resources/Models/FBX/MuscularSystem100.fbx",
+    "https://www.ebi.ac.uk/ols4/api/search?q=latissimus%20dorsi&ontology=fma&exact=false",
+    "https://www.paulogentil.com/pdf/S60.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/19855327/",
+    "https://pubmed.ncbi.nlm.nih.gov/19826307/",
+    "https://pubmed.ncbi.nlm.nih.gov/20543740/",
+    "https://link.springer.com/article/10.1186/1476-5918-3-4",
+    "https://link.springer.com/article/10.1007/s00421-010-1421-y",
+    "https://researchonline.jcu.edu.au/30154/",
+    "https://www.sciencedirect.com/science/article/pii/S1050641113002137",
+    "https://pubmed.ncbi.nlm.nih.gov/24662157/",
+    "https://jhk.termedia.pl/High-Density-Electromyography-Excitation-in-Front-vs-Back-Lat-Pull-Down-Prime-Movers%2C185211%2C0%2C2.html",
+    "https://www.mdpi.com/2411-5142/10/3/345"
+  ],
+  "excludedSources": [
+    {
+      "source": "NASM lat pulldown biomechanics blog",
+      "reason": "Reviewed only as a secondary overview and reference-finding aid; not used as primary evidence because peer-reviewed studies were available."
+    },
+    {
+      "source": "Fitness blogs, social posts, YouTube videos, Instagram posts, and Reddit results surfaced during search",
+      "reason": "Rejected for movement classification because they were not primary research or peer-reviewed technical sources."
+    },
+    {
+      "source": "Scribd and Academia mirrors of pulldown/chin-up papers",
+      "reason": "Rejected as citation sources because publisher, PubMed, DOI, repository, or open-access pages were available."
+    },
+    {
+      "source": "Fortune Journals shoulder EMG evaluation during latissimus dorsi pulldown variations PDF",
+      "reason": "Lower priority than direct peer-reviewed JSCR, Journal of Human Kinetics, JFMK, Sports Biomechanics, and J Electromyogr Kinesiol sources; not needed for role classification."
+    }
+  ],
+  "notes": "Variant treated as a front-to-chest seated overhead cable pulldown with thigh pad support, not a behind-the-neck pulldown. Grip is intentionally generic because the movement id does not specify wide, narrow, neutral, or supinated grip; direct evidence shows grip and forearm orientation can change activation, but recent multi-grip evidence still supports latissimus dorsi as the primary target. Rotator cuff support is marked as an anatomical inference from direct infraspinatus EMG rather than direct measurement of every cuff muscle. Local meshes now exist for all visible muscles: BodyParts3D covers teres major, biceps brachii, posterior deltoid, pectoralis major, rotator cuff, and middle/lower trapezius; Z-Anatomy MuscularSystem100.fbx supplies left and right latissimus dorsi because BodyParts3D 4.0 English ISA/PART-OF tables did not expose a latissimus dorsi muscle mesh. EMG evidence is acute and should not be read as direct hypertrophy or injury-risk evidence. Future work could split wide-pronated, narrow-neutral, reverse-grip, and behind-neck pulldowns into separate variants if the app needs grip-specific targeting."
+}

@@ -1,0 +1,61 @@
+{
+  "movementId": "parallel_bar_dip",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-10",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "mckenzie-2022-dip-variants",
+    "mckenzie-2022-dip-fatigue",
+    "mckenzie-2021-glenohumeral-dip",
+    "carek-1998"
+  ],
+  "searchedQueries": [
+    "\"parallel bar dip\" EMG pectoralis anterior deltoid triceps",
+    "\"parallel bar dip\" electromyography muscle activation",
+    "\"bodyweight dip\" muscle activation EMG pectoralis triceps DOI",
+    "\"dip exercise\" electromyographic analysis pectoralis triceps",
+    "\"Bench, Bar, and Ring Dips\" DOI",
+    "\"Fatigue Increases Muscle Activations\" \"bar dip\" DOI",
+    "\"Glenohumeral Extension and the Dip\" DOI",
+    "\"Rupture of pectoralis major during parallel bar dips\" DOI"
+  ],
+  "reviewedFiles": [
+    "docs/movement-data-workflow.md",
+    "docs/movement-research-protocol.md",
+    "docs/movement-backlog.md",
+    "data/movements/push_up.json",
+    "data/movements/bar_bench_press.json",
+    "data/research/push_up.json",
+    "data/research/bar_bench_press.json",
+    "data/anatomy.json",
+    "https://researchportal.scu.edu.au/esploro/outputs/graduate/A-Neuromechanical-Investigation-of-the-Dip/991013006998802368",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=doi:%2210.3390/ijerph192013211%22&format=json",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9603242/fullTextXML",
+    "https://api.crossref.org/works/10.3390/ijerph192013211",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=doi:%2210.3390/ijerph192114390%22&format=json",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9659300/fullTextXML",
+    "https://api.crossref.org/works/10.3390/ijerph192114390",
+    "https://api.crossref.org/works/10.1519/SSC.0000000000000579",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=doi:%2210.1097/00005768-199803000-00001%22&format=json",
+    "https://api.crossref.org/works/10.1097/00005768-199803000-00001"
+  ],
+  "excludedSources": [
+    {
+      "source": "ResearchGate and Academia mirrors of the 2022 dip EMG papers.",
+      "reason": "Not used because PMC, Europe PMC, DOI, and CrossRef records provided primary article text and metadata."
+    },
+    {
+      "source": "Lopez-Vivancos A, Gonzalez-Galvez N, Orquin-Castrillon FJ, et al. Electromyographic Activity of the Pectoralis Major Muscle during Traditional Bench Press and Other Variants of Pectoral Exercises: A Systematic Review and Meta-Analysis. Applied Sciences. 2023;13(8):5203. doi:10.3390/app13085203.",
+      "reason": "Reviewed for pressing-family context but excluded from the evidence register because direct bar-dip EMG and kinematic studies were available."
+    },
+    {
+      "source": "Boehler B. Electromyographic Analysis of the Triceps Brachii Muscle during a Variety of Triceps Exercises. University of Wisconsin master's thesis, 2011.",
+      "reason": "Mentioned in the dip article for bench-dip/triceps context, but excluded because it is not the bodyweight parallel-bar dip variant."
+    },
+    {
+      "source": "Exercise-library, encyclopedia, social media, forum, and consumer fitness pages found in broad web search results.",
+      "reason": "Not used as evidence because primary journal, DOI, PubMed/PMC, and university records were available."
+    }
+  ],
+  "notes": "Visible roles are intentionally conservative for the bodyweight parallel-bar/bar-dip variant. Pectoralis major and triceps brachii are primary because both direct bar-dip studies identify them as the clearest target agonists. Anterior deltoid is secondary because it was measured and higher in bar dips than bench dips, but the exact-variant conclusions emphasize pectoralis major and triceps brachii. Serratus anterior and latissimus dorsi are support because the studies measured them as scapular or glenohumeral stabilizers and reported meaningful bar-dip activation. Lower trapezius was measured and increased during fatigue, but it was not added as a visible role because the local anatomy label groups middle and lower fibers and the concise app classification is clearer without it. Infraspinatus, biceps brachii, and upper trapezius were excluded from visible roles because the direct bar-dip evidence did not support a concise primary, secondary, or support classification for this entry."
+}

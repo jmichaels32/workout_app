@@ -1,0 +1,197 @@
+{
+  "id": "seated_machine_leg_curl",
+  "name": "Seated Machine Hamstring Curl",
+  "aliases": [
+    "seated_machine_leg_curl",
+    "seated_leg_curl",
+    "seated_hamstring_curl",
+    "machine_leg_curl",
+    "hamstring_curl_machine",
+    "selectorized_leg_curl"
+  ],
+  "family": "leg_curl",
+  "equipment": "machine",
+  "variantType": "seated_machine",
+  "variant": "Seated hamstring curl machine with a thigh restraint and lower-leg pad resistance, treated separately from prone, standing, cable, band, slider, and Nordic curl variants.",
+  "description": "Sit with the knees aligned to the machine pivot, the thighs secured under the pad, and the lower-leg pad set just above the heels. Hold the handles or seat, keep the hips and thighs fixed, curl the pad down and back by flexing the knees, then return under control until the knees are nearly straight without letting the stack rest.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Hamstrings",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Knee flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 88,
+      "rationale": "Excellent direct hamstring hypertrophy movement, especially because the seated position loads biarticular hamstrings at longer muscle lengths."
+    },
+    "strength": {
+      "score": 42,
+      "rationale": "Builds isolated knee-flexion force, but does not represent integrated lower-body strength."
+    },
+    "joint_resilience": {
+      "score": 72,
+      "rationale": "Strong posterior-knee and hamstring-tendon capacity signal under controlled lengthened-position loading."
+    },
+    "athletic_transfer": {
+      "score": 4,
+      "rationale": "Very low transfer to athletic movement because the task is seated, supported, and isolated."
+    },
+    "control": {
+      "score": 6,
+      "rationale": "Very low control demand beyond machine setup, tempo, and avoiding hip movement."
+    },
+    "fatigue_efficiency": {
+      "score": 88,
+      "rationale": "High local hamstring stimulus with low systemic fatigue and minimal unrelated recovery cost."
+    },
+    "setup": {
+      "score": 70,
+      "rationale": "Requires machine availability and several repeatable pad or range adjustments, but no complex loading once set."
+    },
+    "ease": {
+      "score": 90,
+      "rationale": "Simple guided single-joint movement with low balance and coordination demand."
+    },
+    "progression": {
+      "score": 80,
+      "rationale": "Load, reps, and range are easy to track, with deductions for stack increments, friction, and machine geometry."
+    },
+    "support": {
+      "score": 96,
+      "rationale": "Very high external support from the seat, back pad, thigh restraint, handles, and guided lever path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Direct seated leg curl MRI and leg-curl EMG support the hamstrings as the main target.",
+        "evidence": "Seated leg curl training studies using MRI show increases in whole-hamstring and individual hamstring muscle volume, while leg-curl and knee-flexion EMG evidence supports the hamstrings as the dominant knee-flexion target.",
+        "sourceIds": [
+          "maeo-2021",
+          "maeo-2024",
+          "wright-1999",
+          "onishi-2002"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Gastrocnemius",
+        "evidenceShort": "Biarticular knee-flexion assistant; ankle-position dependent.",
+        "evidence": "Gastrocnemius crosses the knee and can contribute to knee-flexion torque during leg-curl-like tasks; experimental and modeling work shows a greater knee-flexion moment when the ankle is dorsiflexed than plantar-flexed.",
+        "sourceIds": [
+          "gallucci-2002"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Seated machine leg curl: hamstrings primary; gastrocnemius secondary; no visible support muscles added.",
+    "clinicalShort": "EMG estimates acute excitation; MRI muscle volume reflects training adaptation, not a direct single-session hypertrophy signal.",
+    "limitsShort": "Commercial machine geometry, hip angle, knee-pivot alignment, ankle position, pad placement, load, tempo, and range of motion can shift emphasis.",
+    "summary": "The seated machine leg curl is classified as a supported knee-flexion isolation exercise. Direct seated leg curl training evidence supports the hamstrings as the primary target, with particular relevance for the biarticular hamstrings because the seated hip-flexed position trains them at longer lengths. Gastrocnemius is included as a secondary visible role because it is a biarticular knee flexor and leg-curl biomechanics show ankle-position-dependent contribution to knee-flexion torque. No support muscles are shown because the reviewed evidence did not justify a specific stabilizer role for the card.",
+    "clinicalInterpretation": "Surface and fine-wire EMG are useful for estimating muscle excitation under specific joint angles, loads, and contraction modes. MRI volume studies support that repeated seated leg curl training can enlarge hamstring muscles, but they do not identify the exact acute stimulus from a single repetition. Neither EMG nor MRI adaptation evidence should be read as a direct injury-risk or pain prediction.",
+    "limitations": "Exact commercial seated leg curl EMG evidence is limited. The strongest exact evidence uses MRI training outcomes from seated or modified seated leg-curl machines, while supporting EMG and biomechanics sources include prone or generic leg curl, maximum knee flexion, and isokinetic knee-flexion tasks. Participants were mostly healthy young adults or weight-trained men, not all age groups or clinical populations. Sartorius, gracilis, popliteus, and individual hamstring heads were not added as separate visible roles because the available evidence was not strong enough to classify them clearly for a generic seated machine card.",
+    "studies": [
+      {
+        "id": "maeo-2021",
+        "type": "Direct seated versus prone leg curl MRI training study",
+        "shortCitation": "Maeo et al., Med Sci Sports Exerc, 2021",
+        "finding": "Seated leg curl training increased whole hamstrings and biarticular hamstring muscle volume more than prone leg curl training.",
+        "citation": "Maeo S, Huang M, Wu Y, Sakurai H, Kusagawa Y, Sugiyama T, Kanehisa H, Isaka T. Greater Hamstrings Muscle Hypertrophy but Similar Damage Protection after Training at Long versus Short Muscle Lengths. Medicine and Science in Sports and Exercise. 2021;53(4):825-837. doi:10.1249/MSS.0000000000002523.",
+        "doi": "10.1249/MSS.0000000000002523",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33009197/",
+        "relevance": "Directly studied seated leg curl training on a modified seated machine with hip flexion, knee-flexion pad resistance, fixed setup, MRI-measured individual hamstring volumes, and 1RM-based loading.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "maeo-2024",
+        "type": "Modified seated leg curl lengthened-state eccentric training",
+        "shortCitation": "Maeo et al., Med Sci Sports Exerc, 2024",
+        "finding": "Lengthened-state eccentric training using isoinertial weight-stack resistance in an accentuated hip-flexed seated-curl setup increased hamstrings and biceps femoris long head volume more than Nordic hamstring training.",
+        "citation": "Maeo S, Balshaw TG, Nin DZ, Mc Dermott EJ, Osborne T, Cooper NB, Massey GJ, Kong PUIW, Pain MTG, Folland JP. Hamstrings Hypertrophy Is Specific to the Training Exercise: Nordic Hamstring versus Lengthened State Eccentric Training. Medicine and Science in Sports and Exercise. 2024;56(10):1893-1905. doi:10.1249/MSS.0000000000003490.",
+        "doi": "10.1249/MSS.0000000000003490",
+        "url": "https://pure.ul.ie/en/publications/hamstrings-hypertrophy-is-specific-to-the-training-exercise-nordi/",
+        "relevance": "Close direct evidence for a seated leg-curl-style weight-stack setup in a hip-flexed lengthened hamstring position, with MRI muscle-volume outcomes and knee-flexion strength testing.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "progression score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wright-1999",
+        "type": "Leg curl hamstring EMG comparison",
+        "shortCitation": "Wright et al., JSCR, 1999",
+        "finding": "Weight-trained men performed leg curl, stiff-leg deadlift, and back squat at 75% 1RM; leg curl was used as a high hamstring-activation resistance exercise comparison.",
+        "citation": "Wright GA, Delong TH, Gehlsen G. Electromyographic Activity of the Hamstrings During Performance of the Leg Curl, Stiff-Leg Deadlift, and Back Squat Movements. Journal of Strength and Conditioning Research. 1999;13(2):168-174. doi:10.1519/00124278-199905000-00012.",
+        "doi": "10.1519/00124278-199905000-00012",
+        "url": "https://journals.lww.com/nsca-jscr/abstract/1999/05000/electromyographic_activity_of_the_hamstrings.12.aspx",
+        "relevance": "Leg-curl movement-family EMG evidence supporting hamstring involvement during loaded knee-flexion resistance exercise, though not specific to a seated machine.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "onishi-2002",
+        "type": "Fine-wire EMG of hamstrings during maximum knee flexion",
+        "shortCitation": "Onishi et al., J Electromyogr Kinesiol, 2002",
+        "finding": "Fine-wire EMG showed individual hamstring activity during maximum knee flexion and demonstrated that activation changes with knee angle and differs among hamstring muscles.",
+        "citation": "Onishi H, Yagi R, Oyama M, Akasaka K, Ihashi K, Handa Y. EMG-angle relationship of the hamstring muscles during maximum knee flexion. Journal of Electromyography and Kinesiology. 2002;12(5):399-406. doi:10.1016/S1050-6411(02)00033-0.",
+        "doi": "10.1016/S1050-6411(02)00033-0",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S1050641102000330",
+        "relevance": "Supports the knee-flexion role of individual hamstring muscles and the limitation that hamstring-head emphasis changes with joint angle rather than remaining uniform across the curl.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "gallucci-2002",
+        "type": "Gastrocnemius contribution during leg-curl-like knee flexion",
+        "shortCitation": "Gallucci and Challis, J Appl Biomech, 2002",
+        "finding": "Isokinetic knee-flexion torque was higher with the ankle dorsiflexed than plantar-flexed, supporting an ankle-position-dependent gastrocnemius contribution during leg curls.",
+        "citation": "Gallucci JG, Challis JH. Examining the role of the gastrocnemius during the leg curl exercise. Journal of Applied Biomechanics. 2002;18(1):15-27. doi:10.1123/jab.18.1.15.",
+        "doi": "10.1123/jab.18.1.15",
+        "url": "https://pure.psu.edu/en/publications/examining-the-role-of-the-gastrocnemius-during-the-leg-curl-exerc/",
+        "relevance": "Directly addresses gastrocnemius contribution to knee-flexion torque in leg-curl-relevant tasks and informs secondary-role and ankle-position limitations.",
+        "usedFor": [
+          "secondary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "movementId": "push_up",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-09",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "cogley-2005",
+    "gouvali-2005",
+    "freeman-2006",
+    "youdas-2010",
+    "lear-1998",
+    "suprak-2011",
+    "ebben-2011"
+  ],
+  "searchedQueries": [
+    "\"push-up\" EMG pectoralis anterior deltoid triceps",
+    "\"push-up\" electromyography muscle activation",
+    "\"push-up\" biomechanics kinematics joint moment",
+    "\"push-up\" rotator cuff serratus anterior trapezius EMG",
+    "\"push-up\" grip width incline load tempo EMG",
+    "standard push-up body weight supported percentage hands toes DOI",
+    "Cogley hand positions push-up EMG DOI",
+    "Gouvali Boudolos dynamic electromyographical analysis variants of push-up DOI",
+    "Freeman Karpowicz Gray McGill quantifying muscle patterns spine load push-up DOI",
+    "Youdas conventional push-up Perfect Pushup EMG serratus anterior pectoralis triceps DOI"
+  ],
+  "reviewedFiles": [
+    "docs/movement-research-protocol.md",
+    "docs/movement-data-workflow.md",
+    "data/movements/bar_bench_press.json",
+    "data/movements/dumbbell_bench_press.json",
+    "data/research/bar_bench_press.json",
+    "data/research/dumbbell_bench_press.json",
+    "https://pubmed.ncbi.nlm.nih.gov/16095413/",
+    "https://pubmed.ncbi.nlm.nih.gov/15705025/",
+    "https://pubmed.ncbi.nlm.nih.gov/16540847/",
+    "https://www.backfitpro.com/medical-scientific-articles/2006/%5B117%5DFreeman%2CS.%282006%29Quantifying-muscle-patterns-and-spine-load-during-various-forms-of-the-push-up%5BMed.Sci.Sports-and-Exercise%5D.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/20664364/",
+    "https://pubmed.ncbi.nlm.nih.gov/9742471/",
+    "https://pubmed.ncbi.nlm.nih.gov/20179649/",
+    "https://pubmed.ncbi.nlm.nih.gov/21873902/",
+    "https://api.crossref.org/works/10.1519/15094.1",
+    "https://api.crossref.org/works/10.1519/14733.1",
+    "https://api.crossref.org/works/10.2519/jospt.1998.28.3.146",
+    "https://api.crossref.org/works/10.1519/JSC.0b013e3181bde2cf",
+    "https://api.crossref.org/works/10.1519/JSC.0b013e31820c8587"
+  ],
+  "excludedSources": [
+    {
+      "source": "Ludewig PM, Hoff MS, Osowski EE, Meschke SA, Rundquist PJ. Relative Balance of Serratus Anterior and Upper Trapezius Muscle Activity during Push-Up Exercises. American Journal of Sports Medicine. 2004;32(2):484-493. doi:10.1177/0363546503258911.",
+      "reason": "Reviewed for serratus context but excluded from the movement evidence register because the tested emphasis was push-up plus and modified plus variants, not the standard floor push-up assumption."
+    },
+    {
+      "source": "Decker MJ, Hintermeister RA, Faber KJ, Hawkins RJ. Serratus anterior muscle activity during selected rehabilitation exercises. American Journal of Sports Medicine. 1999;27(6):784-791. doi:10.1177/03635465990270061601.",
+      "reason": "Useful rehabilitation context for serratus anterior but centered on push-up plus, knee push-up plus, and other scapulohumeral drills rather than the standard push-up."
+    },
+    {
+      "source": "Ho AJ, Cudlip AC, Ribeiro DC, Dickerson CR. Examining upper extremity muscle demand during selected push-up variants. Journal of Electromyography and Kinesiology. 2019;44:165-172. doi:10.1016/j.jelekin.2018.12.008.",
+      "reason": "Examined push-up plus variants with altered hand contact, humeral rotation, and hand location; not used for standard floor push-up muscle roles."
+    },
+    {
+      "source": "Consumer exercise-library and media pages from NASM, Healthline, Cooper Institute, Reddit, Instagram, Facebook, and YouTube search results.",
+      "reason": "Not used as movement evidence because primary PubMed, DOI, and full-text sources were available."
+    },
+    {
+      "source": "Bench press and push-up comparison papers by Calatayud et al. and Kikuchi/Nakazato.",
+      "reason": "Not used for visible muscle roles because they involve elastic-band push-ups, adjusted-load push-ups, or training comparisons rather than the standard floor variant."
+    }
+  ],
+  "notes": "Visible roles are intentionally conservative for the standard floor variant. Biceps brachii was excluded because the direct standard-push-up evidence reviewed here reports very low activation in that variant. Rotator cuff and trunk muscles were not added because available direct evidence for this exact entry was indirect, not represented cleanly in the current shared anatomy, or better treated as technique limitations. Most included studies used small samples of healthy young adults, and EMG normalization, hand-width definitions, depth, cadence, fatigue, and relative body mass can shift results."
+}

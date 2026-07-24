@@ -1,0 +1,139 @@
+{
+  "movementId": "lying_machine_leg_curl",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-09",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "schoenfeld-2015",
+    "hegyi-2019",
+    "veeck-2024",
+    "maeo-2021",
+    "krommes-2021",
+    "marchetti-2021"
+  ],
+  "searchedQueries": [
+    "\"lying leg curl\" electromyography hamstrings biceps femoris semitendinosus",
+    "\"prone leg curl\" electromyography hamstrings biceps femoris semitendinosus",
+    "\"leg curl\" EMG biceps femoris semitendinosus gastrocnemius DOI",
+    "\"hamstring exercises\" lying leg curl electromyographic activity DOI",
+    "\"Regional differences in muscle activation during hamstrings exercise\" DOI lying leg curl",
+    "\"Schoenfeld\" \"Regional differences\" hamstrings exercise lying leg curl",
+    "\"High-density electromyography activity in various hamstring exercises\" leg curl Hegyi 2019",
+    "\"High-density electromyography activity in various hamstring exercises\" DOI 10.1111/sms.13303",
+    "\"seated\" \"prone\" leg curl hamstring hypertrophy DOI Maeo",
+    "\"seated versus prone leg curl\" hamstring muscle hypertrophy doi",
+    "\"Hamstring-to-quadriceps activation ratio\" \"lying leg curl\" DOI",
+    "\"Filipe Veeck\" \"lying leg curl\"",
+    "\"leg curl\" gastrocnemius electromyography hamstring curl",
+    "\"Different Knee and Ankle Positions Affect Force and Muscle Activation During Prone Leg Curl\" DOI",
+    "\"Marchetti\" \"Prone Leg Curl\" gastrocnemius biceps femoris DOI",
+    "\"Myoelectric activity and improvements in strength and hypertrophy\" prone leg curl ankle position DOI",
+    "\"Electromyographic Activity of the Hamstrings During Performance of the Leg Curl\" Wright 1999",
+    "\"Comparison of Hamstring and Gluteus Muscles Electromyographic Activity\" prone hamstring curl DOI"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Protocol for conservative visible muscle roles, evidence priority, and ratings."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement and research JSON contracts plus validation workflow."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/bar_bench_press.json",
+      "notes": "Evidence register, ratings, tag, and sourceIds structure."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/dumbbell_bench_press.json",
+      "notes": "Companion schema example for conservative stabilizer wording."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/seated_machine_chest_press.json",
+      "notes": "Closest machine-equipment precedent for ratings and setup language."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Read to check current shared anatomy coverage; local BodyParts3D biceps femoris, semitendinosus, semimembranosus, and gastrocnemius mappings are now present."
+    },
+    {
+      "type": "paper",
+      "id": "schoenfeld-2015",
+      "url": "https://www.researchgate.net/publication/263548541_Regional_Differences_in_Muscle_Activation_During_Hamstrings_Exercise",
+      "notes": "Accessible abstract/full-text metadata for direct lying leg curl versus stiff-legged deadlift EMG; 10 resistance-trained men, 8RM to failure, surface EMG of upper/lower medial/lateral hamstring regions."
+    },
+    {
+      "type": "paper",
+      "id": "hegyi-2019",
+      "url": "https://eprints.glos.ac.uk/8862/",
+      "notes": "Repository page and accepted manuscript for high-density EMG study including prone leg curl; 19 amateur athletes, 12RM, BFlh and ST 15-channel EMG, eccentric and concentric phases."
+    },
+    {
+      "type": "paper",
+      "id": "veeck-2024",
+      "url": "https://ro.ecu.edu.au/ecuworks2022-2026/3461/",
+      "notes": "Repository page for lying leg curl among lower-body exercises; abstract reports greatest H:Q activation ratio and relatively homogeneous lateral-to-medial hamstring activation."
+    },
+    {
+      "type": "paper",
+      "id": "maeo-2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33009197/",
+      "notes": "PubMed abstract for seated versus prone leg curl training; 20 healthy adults, 70% 1RM, 12 weeks, MRI muscle volume of individual hamstrings and T2 after eccentric exercise."
+    },
+    {
+      "type": "paper",
+      "id": "krommes-2021",
+      "url": "https://ijspt.scholasticahq.com/article/25364-cross-sectional-study-of-emg-and-emg-rise-during-fast-and-slow-hamstring-exercises",
+      "notes": "Direct prone leg curl comparison with Nordic hamstring and hamstring catches; final sample 23 recreationally active men; leg curl at 8, 16, and 24RM; measured BFlh and ST nEMG and EMG rise."
+    },
+    {
+      "type": "paper",
+      "id": "marchetti-2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31469769/",
+      "notes": "PubMed/search metadata for prone leg-curl maximal isometric contractions; 15 resistance-trained men; measured biceps femoris, gastrocnemius lateralis, and soleus lateralis under knee and ankle position conditions."
+    },
+    {
+      "type": "paper-reviewed-not-used",
+      "id": "hirose-2021",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245838",
+      "notes": "Reviewed for prone isometric leg-curl EMG at 30 and 90 degrees knee flexion; useful background on BFlh/ST ratios but not included because the final register already had closer dynamic lying/prone leg-curl sources."
+    }
+  ],
+  "excludedSources": [
+    {
+      "source": "McAllister MJ, Hammond KG, Schilling BK, Ferreria LC, Reed JP, Weiss LW. Muscle activation during various hamstring exercises. Journal of Strength and Conditioning Research. 2014;28(6):1573-1580. doi:10.1519/JSC.0000000000000302.",
+      "reason": "Relevant leg-curl-family EMG source, but the accessible pass provided limited method detail and the final evidence set already included multiple closer lying/prone leg-curl sources."
+    },
+    {
+      "source": "Oliver GD, Dougherty CP. Comparison of Hamstring and Gluteus Muscles Electromyographic Activity while Performing the Razor Curl vs. the Traditional Prone Hamstring Curl. Journal of Strength and Conditioning Research. 2009;23(8):2250-2255. doi:10.1519/JSC.0b013e3181b8d34b.",
+      "reason": "Relevant traditional prone hamstring curl comparison, but focused on razor curl versus prone curl and did not add visible roles beyond the included direct lying/prone leg-curl evidence."
+    },
+    {
+      "source": "Cadeo GM, Fujita RA, Villalba MM, Silva NRS, Junior CI, Pearcey GEP, Gomes MM. Myoelectric activity and improvements in strength and hypertrophy are unaffected by the ankle position during prone leg curl exercise - a within person randomized trial. European Journal of Sport Science. 2023;23(11):2200-2209. doi:10.1080/17461391.2023.2214794.",
+      "reason": "Reviewed as ankle-position context, but excluded from the final evidence register to avoid redundancy because Marchetti 2021 and Maeo 2021 already covered ankle-position and adaptation limits relevant to this entry."
+    },
+    {
+      "source": "Schmitt KM. Electromyographic comparison of the hamstring muscles during various exercises. University of Wisconsin-La Crosse thesis, 2017.",
+      "reason": "Useful exploratory thesis with prone leg curl as comparator, but excluded because peer-reviewed direct studies were available."
+    },
+    {
+      "source": "Wikipedia and consumer exercise pages for leg curl, lying leg curl, and hamstring curl technique.",
+      "reason": "Reviewed only for common terminology; not used for evidence because the protocol prioritizes peer-reviewed EMG, MRI, biomechanics, and publisher/DOI sources."
+    },
+    {
+      "source": "NASM, Men's Health, GQ, blog posts, Instagram, Facebook, Reddit, and commercial equipment pages discussing lying or seated leg curls.",
+      "reason": "Excluded from muscle-role evidence because they are coaching, marketing, social, or consumer sources rather than primary research or systematic reviews."
+    },
+    {
+      "source": "Duplicate ResearchGate, Scribd, and social reposts of included leg-curl papers.",
+      "reason": "Excluded as duplicate or less reliable hosting when DOI, PubMed, publisher, university repository, or journal pages were available."
+    }
+  ],
+  "notes": "Variant assumption is a prone/lying hamstring curl machine with pad resistance at the lower leg and motion occurring primarily through knee flexion. Primary roles are intentionally limited to biceps femoris, semitendinosus, and semimembranosus. Biceps femoris and semitendinosus have direct EMG support from lying/prone leg-curl studies; semimembranosus is backed primarily by Maeo et al.'s MRI training data rather than isolated surface EMG. Gastrocnemius is included as a secondary role because Marchetti et al. directly measured gastrocnemius lateralis during prone leg-curl knee-flexion contractions; it is not treated as a main target. No support muscles were added because hip, pelvis, trunk, and grip stabilization claims were not backed strongly enough for a visible role. Main unresolved uncertainties are commercial machine geometry, prone bench hip angle, roller placement, cam/resistance curve, unilateral versus bilateral setup, ankle position, and whether users compare this entry with seated leg curls, which train the biarticular hamstrings at longer muscle lengths. The shared anatomy file now includes local BodyParts3D mappings for biceps femoris, semitendinosus, semimembranosus, and gastrocnemius."
+}

@@ -1,0 +1,228 @@
+{
+  "id": "seated_machine_chest_press",
+  "name": "Seated Machine Chest Press",
+  "aliases": [
+    "machine_chest_press",
+    "seated_chest_press",
+    "chest_press_machine",
+    "selectorized_chest_press"
+  ],
+  "family": "chest_press",
+  "equipment": "machine",
+  "variantType": "seated_machine",
+  "variant": "Seated machine chest press with guided handles or a guided lever path, treated separately from Smith machine, cable, dumbbell, and barbell pressing.",
+  "description": "Sit with the back against the pad, feet flat, and the handles set near mid-chest height. Brace lightly, keep the shoulders down and controlled against the pad, press the handles forward along the machine path until the elbows are nearly straight, then return under control until the chest and shoulders are loaded without losing position.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Chest",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 84,
+      "rationale": "Excellent chest hypertrophy option because the machine supplies a stable path and allows high local effort with low coordination cost."
+    },
+    "strength": {
+      "score": 52,
+      "rationale": "Builds pressing force in a constrained path, but it is less representative of free-weight strength expression."
+    },
+    "joint_resilience": {
+      "score": 24,
+      "rationale": "Can provide controlled exposure, but the fixed path is not a broad joint-resilience tool and may not match every shoulder."
+    },
+    "athletic_transfer": {
+      "score": 4,
+      "rationale": "Almost no athletic-transfer signal because the task is seated, guided, bilateral, and externally stabilized."
+    },
+    "control": {
+      "score": 6,
+      "rationale": "Very low control demand; the machine removes most balance, path, and stabilization requirements."
+    },
+    "fatigue_efficiency": {
+      "score": 86,
+      "rationale": "Very efficient local pressing stimulus with low systemic fatigue and little setup leakage once adjusted."
+    },
+    "setup": {
+      "score": 82,
+      "rationale": "Low-friction once the machine is available, with only seat, handle, and load adjustments."
+    },
+    "ease": {
+      "score": 94,
+      "rationale": "One of the easiest pressing patterns to learn and repeat because path and body position are highly constrained."
+    },
+    "progression": {
+      "score": 84,
+      "rationale": "Machine load and reps are easy to record, with deductions for stack increments and machine-specific path differences."
+    },
+    "support": {
+      "score": 96,
+      "rationale": "Extremely high external support from the seat, back pad, and guided pressing path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Direct seated machine EMG supports the pec as the main target.",
+        "evidence": "Seated chest press and chest press machine EMG studies measured multiple pectoralis major regions and found substantial activation during the guided press pattern; movement-family review evidence also identifies pectoralis major as a dominant horizontal-press contributor.",
+        "sourceIds": [
+          "muyor-2023",
+          "coratella-2020",
+          "borges-2019",
+          "stastny-2017"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Measured machine-press assistant; path and angle sensitive.",
+        "evidence": "Anterior deltoid activity was directly measured during seated chest press and chest press machine variants. It contributes meaningfully to pressing but is classified as secondary because the exercise is primarily a chest press and anterior-deltoid demand changes with path, grip, and press angle.",
+        "sourceIds": [
+          "muyor-2023",
+          "coratella-2020",
+          "borges-2019"
+        ]
+      },
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Measured elbow-extension contributor in chest press EMG.",
+        "evidence": "Direct seated chest press and chest press machine EMG studies measured triceps brachii activity, supporting its role as an elbow-extension contributor rather than the primary target of the movement.",
+        "sourceIds": [
+          "muyor-2023",
+          "coratella-2020",
+          "stastny-2017"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Measured scapulothoracic support in lever-machine pressing.",
+        "evidence": "A chest press lever-machine study measured serratus anterior activity alongside scapular kinematics. Because the movement is guided and the serratus role is scapulothoracic control, it is classified as support rather than a prime chest target.",
+        "sourceIds": [
+          "borges-2019"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Pressing-family inference for shoulder stabilization.",
+        "evidence": "This role is marked as an inference from close bench-press evidence: rotator cuff EMG during bench press shows direction-specific recruitment consistent with glenohumeral stabilization. Direct seated machine chest press rotator cuff data were not found in the reviewed sources.",
+        "sourceIds": [
+          "wattanaprakornkul-2011"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Guided seated chest press: pectoralis major primary; anterior deltoid and triceps brachii secondary; serratus anterior and rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Machine design, seat height, handle path, grip, load, range of motion, and training status can shift muscle emphasis.",
+    "summary": "The seated machine chest press is classified as a supported guided horizontal pressing movement. Direct seated chest press and chest press machine studies support pectoralis major as the primary visible target, with anterior deltoid and triceps brachii as meaningful secondary contributors. Serratus anterior is included as support from direct lever-machine EMG and scapular kinematic evidence. Rotator cuff support is included only as a clearly marked inference from close bench-press stabilization evidence.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation under a specific load, grip, and machine setup. It should not be treated as a direct measure of hypertrophy, mechanical tension, long-term adaptation, or injury risk.",
+    "limitations": "The reviewed evidence includes selectorized seated chest press, chest press machine, and lever-machine chest press variants rather than every commercial guided-handle design. Most direct samples were small and male or physically active/trained, and studies differed in load prescription, normalization, grip, range of motion, and whether concentric and eccentric phases were separated.",
+    "studies": [
+      {
+        "id": "muyor-2023",
+        "type": "Direct seated chest press EMG",
+        "shortCitation": "Muyor et al., J Hum Kinet, 2023",
+        "finding": "Seated chest press variants produced similar pectoralis, anterior deltoid, and triceps activity to common horizontal bench press conditions, with grip-specific differences.",
+        "citation": "Muyor JM, Rodriguez-Ridao D, Oliva-Lozano JM. Comparison of Muscle Activity between the Horizontal Bench Press and the Seated Chest Press Exercises Using Several Grips. Journal of Human Kinetics. 2023;87:23-34. doi:10.5114/jhk/161468.",
+        "doi": "10.5114/jhk/161468",
+        "url": "https://jhk.termedia.pl/Comparison-of-Muscle-Activity-between-the-Horizontal-Bench-Press-and-the-Seated-Chest%2C161468%2C0%2C2.html",
+        "relevance": "Directly studied seated machine chest press with prone and neutral grips in trained adults and measured pectoralis major regions, anterior deltoid, and triceps brachii.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "ease score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "coratella-2020",
+        "type": "Direct chest press machine EMG",
+        "shortCitation": "Coratella et al., Eur J Sport Sci, 2020",
+        "finding": "A selectorized seated chest press produced substantial sternocostal pectoralis and anterior deltoid excitation; free-weight press variations showed greater triceps and lateral deltoid excitation in competitive bodybuilders.",
+        "citation": "Coratella G, Tornatore G, Longo S, Esposito F, Ce E. Specific prime movers' excitation during free-weight bench press variations and chest press machine in competitive bodybuilders. European Journal of Sport Science. 2020;20(5):571-579. doi:10.1080/17461391.2019.1655101.",
+        "doi": "10.1080/17461391.2019.1655101",
+        "url": "https://air.unimi.it/bitstream/2434/670735/2/EJSS_Bench%20Press%20EMG_Coratella%202019_.pdf",
+        "relevance": "Directly tested a selectorized seated chest press machine at 80% 1RM and measured pectoralis major heads, anterior deltoid, lateral deltoid, and triceps brachii during concentric and eccentric phases.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support score",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "borges-2019",
+        "type": "Chest press lever machine EMG and scapular kinematics",
+        "shortCitation": "Borges et al., JPES, 2019",
+        "finding": "A chest press lever machine showed similar activation to barbell bench press at 10RM load and included serratus anterior and scapular motion data.",
+        "citation": "Borges E, Dalla H, Mastandrea L, Nunes S, Santarem J. Comparative evaluation of muscular activation and scapular kinematics in a chest press lever machine and a barbell bench press. Journal of Physical Education and Sport. 2019;19:912-916. doi:10.7752/jpes.2019.s3131.",
+        "doi": "10.7752/jpes.2019.s3131",
+        "url": "https://efsupit.ro/images/stories/iunie2019/Art%20131.pdf",
+        "relevance": "Directly compared a guided chest press lever machine with barbell bench press while measuring pectoralis major heads, anterior deltoid, serratus anterior, and scapular kinematics.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "support score",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "stastny-2017",
+        "type": "Systematic review of bench press EMG",
+        "shortCitation": "Stastny et al., PLOS ONE, 2017",
+        "finding": "Bench press EMG literature supports pectoralis major and triceps brachii as dominant contributors, with anterior deltoid also involved and stability conditions affecting interpretation.",
+        "citation": "Stastny P, Golas A, Blazek D, Maszczyk A, Wilk M, Pietraszewski P, Petr M, Uhlir P, Zajac A. A systematic review of surface electromyography analyses of the bench press movement task. PLOS ONE. 2017;12(2):e0171632. doi:10.1371/journal.pone.0171632.",
+        "doi": "10.1371/journal.pone.0171632",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171632",
+        "relevance": "Provides movement-family context for horizontal pressing and interpretation limits when direct seated-machine data are compared with free-weight evidence.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "rating anchors",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wattanaprakornkul-2011",
+        "type": "Rotator cuff recruitment study",
+        "shortCitation": "Wattanaprakornkul et al., J Electromyogr Kinesiol, 2011",
+        "finding": "Rotator cuff muscles were recruited in a direction-specific manner during bench press and row tasks, consistent with dynamic shoulder stabilization.",
+        "citation": "Wattanaprakornkul D, Halaki M, Cathers I, Ginn KA. Direction-specific recruitment of rotator cuff muscles during bench press and row. Journal of Electromyography and Kinesiology. 2011;21(6):1041-1049. doi:10.1016/j.jelekin.2011.09.002.",
+        "doi": "10.1016/j.jelekin.2011.09.002",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S1050641111001428",
+        "relevance": "Not a seated machine chest press study; used only to infer glenohumeral stabilization by the rotator cuff in close pressing tasks.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

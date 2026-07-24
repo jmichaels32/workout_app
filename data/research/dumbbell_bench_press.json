@@ -1,0 +1,19 @@
+{
+  "movementId": "dumbbell_bench_press",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-08",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "rosa-2024",
+    "farias-2017",
+    "saeterbakken-2011",
+    "welsch-2005",
+    "stastny-2017",
+    "wattanaprakornkul-2011",
+    "borges-2019"
+  ],
+  "searchedQueries": [],
+  "reviewedFiles": [],
+  "excludedSources": [],
+  "notes": "Initial research record created from the existing movement evidence register. Fill searchedQueries/reviewedFiles/excludedSources during the next dedicated research pass."
+}

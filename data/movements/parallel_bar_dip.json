@@ -1,0 +1,209 @@
+{
+  "id": "parallel_bar_dip",
+  "name": "Parallel Bar Dip",
+  "aliases": [
+    "dip",
+    "bar_dip",
+    "bodyweight_dip",
+    "parallel_dip"
+  ],
+  "family": "dip",
+  "equipment": "bodyweight",
+  "variantType": "parallel_bar_bodyweight",
+  "variant": "Bodyweight parallel-bar dip performed on fixed parallel or V-shaped dip bars without external load or machine assistance.",
+  "description": "Support the body on parallel bars with arms straight, shoulders controlled, and the torso slightly inclined as needed. Lower under control by bending the elbows and allowing the shoulders to extend until reaching a manageable depth, then press back up by extending the elbows and flexing the shoulders without collapsing into the bottom position or shrugging at the top.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Chest",
+      "group": "region"
+    },
+    {
+      "group": "equipment",
+      "label": "Calisthenics"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 68,
+      "rationale": "Strong bodyweight loading for pectoralis major and triceps brachii, but shoulder depth tolerance, relative strength, and technique can limit target-muscle volume."
+    },
+    "strength": {
+      "score": 60,
+      "rationale": "Useful upper-body pushing strength builder, especially once weighted, but bodyweight entry demands and loading setup make force expression less clean than barbell pressing."
+    },
+    "joint_resilience": {
+      "score": 30,
+      "rationale": "Can build controlled shoulder, elbow, and scapular tolerance, but loaded shoulder extension is a meaningful constraint and is not ideal for every shoulder."
+    },
+    "athletic_transfer": {
+      "score": 44,
+      "rationale": "Good upper-body support-strength transfer for calisthenics and obstacle-style tasks, though it remains bilateral and equipment-specific."
+    },
+    "control": {
+      "score": 60,
+      "rationale": "Requires meaningful scapular depression, shoulder position, elbow path, depth, and suspended-body control."
+    },
+    "fatigue_efficiency": {
+      "score": 52,
+      "rationale": "Delivers a lot of pressing stimulus with little setup, but high relative load, shoulder-range demands, and failure risk can leak fatigue."
+    },
+    "setup": {
+      "score": 74,
+      "rationale": "Needs only a stable dip station or parallel bars, but bar spacing, height, access, and weighted progression setup add friction."
+    },
+    "ease": {
+      "score": 34,
+      "rationale": "Simple to understand but hard to perform well because adequate relative strength, shoulder extension tolerance, and scapular control are required from the start."
+    },
+    "progression": {
+      "score": 52,
+      "rationale": "Progresses well with a belt, vest, bands, or assistance, but load changes are less granular and less standardized than a stack, dumbbells, or a barbell."
+    },
+    "support": {
+      "score": 16,
+      "rationale": "The bars are fixed, but the body is suspended and the user must stabilize the shoulders, scapulae, elbows, trunk, and depth."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Direct bar-dip EMG supports strong pectoralis loading.",
+        "evidence": "Direct dip-variation EMG measured pectoralis major during bar dips and found higher peak activation than the bench dip; a separate bar-dip fatigue study found pectoralis major peak activation increased under fatigue and concluded the bar dip effectively targets pectoralis major.",
+        "sourceIds": [
+          "mckenzie-2022-dip-variants",
+          "mckenzie-2022-dip-fatigue"
+        ]
+      },
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Direct bar-dip EMG supports high elbow-extension demand.",
+        "evidence": "Direct bar-dip EMG measured triceps brachii as a suspected elbow-extension agonist, with higher peak activation than the bench dip. The fatigue study reported increased triceps brachii peak activation when fatigued and concluded the bar dip effectively targets triceps brachii.",
+        "sourceIds": [
+          "mckenzie-2022-dip-variants",
+          "mckenzie-2022-dip-fatigue"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Measured shoulder-flexion assistant in bar dips.",
+        "evidence": "The dip-variation EMG study measured anterior deltoid as a suspected shoulder-flexion agonist and found higher peak activation in the bar dip than in the bench dip. It is secondary because the strongest exact-variant conclusions emphasize pectoralis major and triceps brachii as the main targets.",
+        "sourceIds": [
+          "mckenzie-2022-dip-variants"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Measured scapular support demand during bar dips.",
+        "evidence": "Direct dip EMG classified serratus anterior among active scapular stabilizers, with higher peak activation in the bar dip than the bench dip. In the fatigue study, serratus anterior peak activation increased, supporting a visible scapular-support role.",
+        "sourceIds": [
+          "mckenzie-2022-dip-variants",
+          "mckenzie-2022-dip-fatigue"
+        ]
+      },
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Measured stabilizer/depressor contribution in bar dips.",
+        "evidence": "The direct dip studies measured latissimus dorsi as a suspected glenohumeral stabilizer. Bar dips produced higher latissimus activation than bench dips, and the fatigue study reported increased latissimus dorsi peak amplitude among muscles associated with scapular depression.",
+        "sourceIds": [
+          "mckenzie-2022-dip-variants",
+          "mckenzie-2022-dip-fatigue"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Bodyweight parallel-bar dip: pectoralis major and triceps brachii primary; anterior deltoid secondary; serratus anterior and latissimus dorsi support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Torso lean, bar spacing, shoulder depth, fatigue, added load, assistance, ring instability, and bench-dip substitutions can materially change muscle contribution and shoulder loading.",
+    "summary": "The parallel bar dip is classified as a bodyweight upper-body pushing exercise using fixed bars. Direct dip EMG and kinematic evidence supports pectoralis major and triceps brachii as the clearest main targets for a neutral bar-dip entry. Anterior deltoid is included as a measured shoulder-flexion assistant. Serratus anterior and latissimus dorsi are included as support because the direct studies measured them as scapular or glenohumeral stabilizers and reported meaningful activation in the bar-dip condition, especially with fatigue.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation under a specific technique, load, and normalization method. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, long-term adaptation, or injury risk. The main direct studies used experienced healthy males and self-selected bar-dip technique.",
+    "limitations": "The closest direct studies used a V-shaped bar and self-moderated depth rather than enforcing a single parallel-bar spacing or torso angle. Lower trapezius was measured and increased under fatigue, but it is not shown as a visible role because the local anatomy label groups middle and lower fibers and the concise app classification is clearer with serratus anterior and latissimus dorsi as support. Infraspinatus, biceps brachii, and upper trapezius were not included because their bar-dip evidence is weaker or less directly tied to the main classification. Weighted dips, assisted dips, ring dips, bench dips, and straight-bar dips should be separate movements.",
+    "studies": [
+      {
+        "id": "mckenzie-2022-dip-variants",
+        "type": "Bench, bar, and ring dip EMG and kinematics",
+        "shortCitation": "McKenzie et al., IJERPH, 2022",
+        "finding": "Experienced males performed bench, bar, and ring dips; bar dips showed higher peak activation than bench dips for pectoralis major, anterior deltoid, triceps brachii, serratus anterior, and latissimus dorsi.",
+        "citation": "McKenzie A, Crowley-McHattan Z, Meir R, Whitting J, Volschenk W. Bench, Bar, and Ring Dips: Do Kinematics and Muscle Activity Differ? International Journal of Environmental Research and Public Health. 2022;19(20):13211. doi:10.3390/ijerph192013211.",
+        "doi": "10.3390/ijerph192013211",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9603242/",
+        "relevance": "Directly studied the closest variant: bodyweight bar dips on a fixed V-shaped dip bar, with 3D kinematics and surface EMG of nine upper-limb and trunk muscles.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "control score",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "mckenzie-2022-dip-fatigue",
+        "type": "Bar dip fatigue EMG and kinematics",
+        "shortCitation": "McKenzie et al., IJERPH, 2022",
+        "finding": "During one set of bar dips to exhaustion, fatigue increased peak pectoralis major, triceps brachii, serratus anterior, lower trapezius, and latissimus dorsi activation while peak joint angles did not materially change.",
+        "citation": "McKenzie A, Crowley-McHattan Z, Meir R, Whitting J, Volschenk W. Fatigue Increases Muscle Activations but Does Not Change Maximal Joint Angles during the Bar Dip. International Journal of Environmental Research and Public Health. 2022;19(21):14390. doi:10.3390/ijerph192114390.",
+        "doi": "10.3390/ijerph192114390",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9659300/",
+        "relevance": "Direct bar-dip study using experienced males, 3D kinematics, and surface EMG across non-fatigued and fatigued repetitions.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "fatigue efficiency score",
+          "control score",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "mckenzie-2021-glenohumeral-dip",
+        "type": "Dip shoulder-extension biomechanics review",
+        "shortCitation": "McKenzie et al., Strength Cond J, 2021",
+        "finding": "Discussed loaded glenohumeral extension in the dip and practical constraints for managing shoulder range, load, and progression.",
+        "citation": "McKenzie AK, Crowley-McHattan ZJ, Meir R, Whitting JW, Volschenk W. Glenohumeral Extension and the Dip: Considerations for the Strength and Conditioning Professional. Strength and Conditioning Journal. 2021;43(1):93-100. doi:10.1519/SSC.0000000000000579.",
+        "doi": "10.1519/SSC.0000000000000579",
+        "url": "https://doi.org/10.1519/SSC.0000000000000579",
+        "relevance": "Close shoulder-extension and prescription context for the dip; used for interpretation of depth, progression, and joint-resilience constraints rather than for assigning prime movers.",
+        "usedFor": [
+          "joint resilience score",
+          "ease score",
+          "progression score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "carek-1998",
+        "type": "Parallel bar dip pectoralis major rupture case report",
+        "shortCitation": "Carek and Hawkins, MSSE, 1998",
+        "finding": "Case report and review describing pectoralis major rupture during parallel bar dips.",
+        "citation": "Carek PJ, Hawkins A. Rupture of pectoralis major during parallel bar dips: case report and review. Medicine and Science in Sports and Exercise. 1998;30(3):335-338. doi:10.1097/00005768-199803000-00001.",
+        "doi": "10.1097/00005768-199803000-00001",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9526877/",
+        "relevance": "Directly involves the parallel bar dip and informs caution around loaded shoulder extension and pectoralis major stress, but it is not used to infer normal activation magnitude.",
+        "usedFor": [
+          "joint resilience score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

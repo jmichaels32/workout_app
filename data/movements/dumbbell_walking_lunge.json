@@ -1,0 +1,325 @@
+{
+  "id": "dumbbell_walking_lunge",
+  "name": "Dumbbell Walking Lunge",
+  "aliases": [
+    "db_walking_lunge",
+    "walking_lunge",
+    "dumbbell_lunge",
+    "alternating_dumbbell_lunge"
+  ],
+  "family": "lunge",
+  "equipment": "dumbbell",
+  "variantType": "walking_dumbbell",
+  "variant": "Alternating dumbbell walking lunge with two free weights held at the sides.",
+  "description": "Stand tall holding matching dumbbells at the sides, step forward into a long enough stride to lower under control without the front heel lifting, descend until the rear knee approaches the floor, then drive through the lead foot and bring the trailing leg forward into the next step. Alternate legs while keeping the torso controlled, the front knee tracking over the foot, and each step length consistent.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "group": "region",
+      "label": "Core"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Dumbbell",
+      "group": "equipment"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 58,
+      "rationale": "Meaningful lower-body hypertrophy stimulus, especially for quads and glutes, but balance, breathing, and locomotion can limit target-muscle loading."
+    },
+    "strength": {
+      "score": 52,
+      "rationale": "Builds unilateral force capacity, but load expression is less clean than bilateral barbell or machine patterns."
+    },
+    "joint_resilience": {
+      "score": 86,
+      "rationale": "Excellent knee, hip, ankle, and connective-tissue capacity builder when progressed well because it loads long ranges, single-leg support, and repeated deceleration."
+    },
+    "athletic_transfer": {
+      "score": 94,
+      "rationale": "Elite transfer dimension because it combines loaded gait, unilateral support, hip-knee-ankle coordination, trunk control, and forward force transfer."
+    },
+    "control": {
+      "score": 92,
+      "rationale": "Very high control demand from dynamic balance, step length, pelvis control, trunk position, grip, and repeated single-leg transitions."
+    },
+    "fatigue_efficiency": {
+      "score": 18,
+      "rationale": "Low efficiency for isolated stimulus because breathing, grip, balance, locomotion, and large-muscle systemic fatigue accumulate quickly."
+    },
+    "setup": {
+      "score": 58,
+      "rationale": "Requires only dumbbells and floor space, but usable lane length, turning, matched loads, and heavy dumbbell pickup add friction."
+    },
+    "ease": {
+      "score": 22,
+      "rationale": "Technically and physically demanding: stride length, knee tracking, balance, depth, torso angle, and continuous stepping are all easy to vary unintentionally."
+    },
+    "progression": {
+      "score": 42,
+      "rationale": "Progression is possible through load, steps, and reps, but measurement is noisy because stride length, lane length, balance, and fatigue alter difficulty."
+    },
+    "support": {
+      "score": 8,
+      "rationale": "Almost no external support: the user stabilizes each step through the foot, ankle, knee, hip, pelvis, trunk, and grip."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "High VM/VL/RF activity in loaded forward and walking lunges.",
+        "evidence": "Direct dumbbell forward-lunge-with-stride and walking-lunge studies report high vastus medialis and vastus lateralis activation, with rectus femoris also measured; lunge studies consistently place quadriceps among the main knee-extension contributors.",
+        "sourceIds": [
+          "escamilla-2025",
+          "stastny-2015-jscr",
+          "stastny-2015-acta",
+          "muyor-2020",
+          "wu-2020"
+        ]
+      },
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "High hip-extension demand in loaded lunge evidence.",
+        "evidence": "The closest two-dumbbell forward-lunge-with-stride study reported high gluteus maximus activity during ascent, and loaded anterior-lunge biomechanics identify the lunge as hip-extensor dominant. This supports gluteus maximus as a primary hip-extension target, while recognizing that step length and trunk angle shift emphasis.",
+        "sourceIds": [
+          "escamilla-2025",
+          "muyor-2020",
+          "riemann-2012",
+          "jakobsen-2013"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Measured moderate posterior-chain contribution.",
+        "evidence": "Walking-lunge and dumbbell forward-lunge studies measure biceps femoris and semitendinosus activity; activation is meaningful but generally below the strongest quadriceps and gluteal signals, so hamstrings are classified as secondary rather than primary.",
+        "sourceIds": [
+          "escamilla-2025",
+          "stastny-2015-jscr",
+          "stastny-2015-acta",
+          "muyor-2020",
+          "wu-2020"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Gluteus medius",
+        "evidenceShort": "High frontal-plane and pelvic-control demand in walking lunges.",
+        "evidence": "Walking-lunge evidence reports substantial gluteus medius activity, and the dynamic walking or with-stride component increases demand compared with more static lunge patterns. It is listed as support because its main role is pelvic, hip, and frontal-plane control rather than sagittal-plane propulsion.",
+        "sourceIds": [
+          "escamilla-2025",
+          "stastny-2015-jscr",
+          "stastny-2015-acta",
+          "muyor-2020"
+        ]
+      },
+      {
+        "name": "Adductor longus",
+        "evidenceShort": "Moderate activation in dumbbell forward-lunge variants.",
+        "evidence": "The closest bilateral-dumbbell forward-lunge study measured moderate adductor longus activity, especially with longer step conditions, supporting a visible support role for hip and stance control.",
+        "sourceIds": [
+          "escamilla-2025"
+        ]
+      },
+      {
+        "name": "Gastrocnemius",
+        "evidenceShort": "Measured ankle/stance contribution during loaded lunges.",
+        "evidence": "Dumbbell forward-lunge evidence measured moderate gastrocnemius activation, and external-load biomechanics show ankle work rising with load. This supports a calf support role for ankle control and forward stepping rather than a primary hypertrophy target.",
+        "sourceIds": [
+          "escamilla-2025",
+          "riemann-2012",
+          "wu-2020"
+        ]
+      },
+      {
+        "name": "Trunk stabilizers",
+        "evidenceShort": "Dumbbell lunge loading changes trunk muscle activation.",
+        "evidence": "A lunge load-distribution EMG study measured erector spinae, external oblique, rectus abdominis, and latissimus dorsi responses to dumbbell loading positions; this supports a trunk stabilization role, especially when dumbbells challenge posture and anti-rotation.",
+        "sourceIds": [
+          "lopez-de-celis-2023"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Alternating dumbbell walking lunge: quadriceps and gluteus maximus primary; hamstrings secondary; gluteus medius, adductor longus, gastrocnemius, and trunk stabilizers support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, long-term adaptation, or injury risk.",
+    "limitsShort": "Continuous walking, push-back forward lunges, step length, trunk angle, dumbbell load, and dumbbell carrying position all change emphasis.",
+    "summary": "The dumbbell walking lunge is classified as a dynamic unilateral lower-body compound exercise. The best evidence includes a direct dumbbell forward-lunge-with-stride EMG study using two dumbbells, walking-lunge EMG studies using load-carrying variants, forward-lunge EMG studies, and loaded lunge biomechanics. These sources support quadriceps and gluteus maximus as the main prime movers, hamstrings as meaningful assistants, and gluteus medius, adductor longus, gastrocnemius, and trunk stabilizers as control or support contributors.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation in a given technique and load condition. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, training adaptation, soreness, joint safety, or injury risk.",
+    "limitations": "Exact evidence for a continuous alternating two-dumbbell walking lunge is limited. The strongest exact walking-lunge studies used walking lunges with dumbbell carrying-position variations or examined associations with strength ratios, while the strongest bilateral-dumbbell source used forward lunges with a stride and a push back to the start. Step length, trunk lean, stride continuity, load, fatigue, footwear, and participant training status can materially alter muscle activity and joint loading.",
+    "studies": [
+      {
+        "id": "escamilla-2025",
+        "type": "Dumbbell forward-lunge stride and step-length EMG",
+        "shortCitation": "Escamilla et al., JFMK, 2025",
+        "finding": "With two dumbbells and 12RM loads, forward lunges with stride showed high to very high quadriceps, gluteus maximus, and gluteus medius activity, with moderate hamstrings, gastrocnemius, and adductor longus activity.",
+        "citation": "Escamilla RF, Thompson IS, Asuncion R, Bravo J, Chang T, Fournier T, Garcia H, Hockenbery E, Nagasawa K, Ozor J, Snoeberger H, Wilk KE, Bizzini M. Effects of Step Length and Stride Variation During Forward Lunges on Lower-Extremity Muscle Activity. Journal of Functional Morphology and Kinesiology. 2025;10(1):42. doi:10.3390/jfmk10010042.",
+        "doi": "10.3390/jfmk10010042",
+        "url": "https://www.mdpi.com/2411-5142/10/1/42",
+        "relevance": "Closest bilateral-dumbbell source: participants held one dumbbell in each hand and performed forward lunge variations with and without a stride while lower-extremity EMG was recorded.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "stastny-2015-jscr",
+        "type": "Walking-lunge dumbbell carrying-position EMG",
+        "shortCitation": "Stastny et al., JSCR, 2015",
+        "finding": "Compared dumbbell carrying positions during split squats and walking lunges, measuring gluteus medius, vastus medialis, vastus lateralis, and biceps femoris.",
+        "citation": "Stastny P, Lehnert M, Zaatar AMZ, Svoboda Z, Xaverova Z. Does the Dumbbell-Carrying Position Change the Muscle Activity in Split Squats and Walking Lunges? Journal of Strength and Conditioning Research. 2015;29(11):3177-3187. doi:10.1519/JSC.0000000000000976.",
+        "doi": "10.1519/JSC.0000000000000976",
+        "url": "https://doi.org/10.1519/JSC.0000000000000976",
+        "relevance": "Directly includes walking lunges and dumbbell loading, but the loading arrangement studied carrying position rather than the exact bilateral-at-sides assumption.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "stastny-2015-acta",
+        "type": "Walking-lunge and split-squat EMG",
+        "shortCitation": "Stastny et al., Acta Gymnica, 2015",
+        "finding": "Resistance-trained men performed walking lunges and split squats at 5RM; walking lunges produced higher gluteus medius activity than split squats and were recommended when gluteus medius or vastus medialis strengthening is the aim.",
+        "citation": "Stastny P, Tufano JJ, Lehnert M, Golas A, Zaatar A, Xaverova Z, Maszczyk A. Hip abductors and thigh muscles strength ratios and their relation to electromyography amplitude during split squat and walking lunge exercises. Acta Gymnica. 2015;45(2):51-59. doi:10.5507/ag.2015.011.",
+        "doi": "10.5507/ag.2015.011",
+        "url": "https://gymnica.upol.cz/artkey/gym-201502-0001_hip_abductors_and_thigh_muscles_strength_ratios_and_their_relation_to_electromyography_amplitude_during_split_s.php",
+        "relevance": "Direct walking-lunge EMG evidence for vastus medialis, vastus lateralis, biceps femoris, and gluteus medius in trained men.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "muyor-2020",
+        "type": "Forward-lunge EMG comparison",
+        "shortCitation": "Muyor et al., PLOS ONE, 2020",
+        "finding": "In forward lunges, vastus lateralis and vastus medialis showed the highest activation, followed by gluteus medius and gluteus maximus, then rectus femoris and biceps femoris.",
+        "citation": "Muyor JM, Martin-Fuentes I, Rodriguez-Ridao D, Antequera-Vique JA. Electromyographic activity in the gluteus medius, gluteus maximus, biceps femoris, vastus lateralis, vastus medialis and rectus femoris during the Monopodal Squat, Forward Lunge and Lateral Step-Up exercises. PLOS ONE. 2020;15(4):e0230841. doi:10.1371/journal.pone.0230841.",
+        "doi": "10.1371/journal.pone.0230841",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0230841",
+        "relevance": "Close lunge-family EMG evidence measuring key quadriceps, gluteal, and hamstring muscles during forward lunges at 60% of 5RM.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "clinical interpretation",
+          "limitations"
+        ]
+      },
+      {
+        "id": "riemann-2012",
+        "type": "Loaded anterior-lunge biomechanics",
+        "shortCitation": "Riemann et al., J Athl Train, 2012",
+        "finding": "Anterior lunges with added external load were hip-extensor dominant kinetically; adding load increased mechanical work mainly at the hip and ankle.",
+        "citation": "Riemann BL, Lapinski S, Smith L, Davies G. Biomechanical Analysis of the Anterior Lunge During 4 External-Load Conditions. Journal of Athletic Training. 2012;47(4):372-378. doi:10.4085/1062-6050-47.4.16.",
+        "doi": "10.4085/1062-6050-47.4.16",
+        "url": "https://doi.org/10.4085/1062-6050-47.4.16",
+        "relevance": "Biomechanical evidence for hip and ankle joint demand under external loading in a close anterior-lunge pattern.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "support score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wu-2020",
+        "type": "Squat and lunge loading-device EMG",
+        "shortCitation": "Wu et al., J Sport Rehabil, 2020",
+        "finding": "Loaded lunges showed higher activation than unloaded lunges; quadriceps and hamstring activities were higher in lunge than squat, and lunge muscle activation did not differ meaningfully among the tested loading devices.",
+        "citation": "Wu HW, Tsai CF, Liang KH, Chang YW. Effect of Loading Devices on Muscle Activation in Squat and Lunge. Journal of Sport Rehabilitation. 2020;29(2):200-205. doi:10.1123/jsr.2018-0182.",
+        "doi": "10.1123/jsr.2018-0182",
+        "url": "https://doi.org/10.1123/jsr.2018-0182",
+        "relevance": "Supports the interpretation that loading increases lunge muscle activity and that dumbbell loading is a reasonable free-weight lunge condition.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "progression score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "jakobsen-2013",
+        "type": "Dumbbell forward-lunge EMG load and contraction comparison",
+        "shortCitation": "Jakobsen et al., Hum Mov Sci, 2013",
+        "finding": "Standardized forward lunges performed with dumbbells and elastic resistance showed load-dependent EMG increases; quadriceps and gluteus EMG increased at flexed knee positions.",
+        "citation": "Jakobsen MD, Sundstrup E, Andersen CH, Aagaard P, Andersen LL. Muscle activity during leg strengthening exercise using free weights and elastic resistance: Effects of ballistic vs controlled contractions. Human Movement Science. 2013;32(1):65-78. doi:10.1016/j.humov.2012.07.002.",
+        "doi": "10.1016/j.humov.2012.07.002",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0167945712000917",
+        "relevance": "Directly includes dumbbell forward lunges and supports load-dependent quadriceps and gluteal activation in a close free-weight lunge pattern.",
+        "usedFor": [
+          "primary muscle role",
+          "progression score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lopez-de-celis-2023",
+        "type": "Lunge load-distribution trunk EMG",
+        "shortCitation": "Lopez-de-Celis et al., Healthcare, 2023",
+        "finding": "Dumbbell lunge load placement changed erector spinae, external oblique, rectus abdominis, and latissimus dorsi activation, supporting trunk stabilization demands.",
+        "citation": "Lopez-de-Celis C, Labata-Lezaun N, Romani-Sanchez S, Gasso-Villarejo S, Garcia-Ribell E, Rodriguez-Sanz J, Perez-Bellmunt A. Effect of Load Distribution on Trunk Muscle Activity with Lunge Exercises in Amateur Athletes: Cross-Sectional Study. Healthcare. 2023;11(6):916. doi:10.3390/healthcare11060916.",
+        "doi": "10.3390/healthcare11060916",
+        "url": "https://www.mdpi.com/2227-9032/11/6/916",
+        "relevance": "Direct lunge evidence for trunk muscle support under dumbbell loading arrangements.",
+        "usedFor": [
+          "support muscle role",
+          "ease score",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "gao-2022",
+        "type": "Dumbbell lunge-squat biomechanics",
+        "shortCitation": "Gao et al., Bioengineering, 2022",
+        "finding": "In novice men, dumbbell-loaded lunge squats showed smaller center-of-pressure displacement and high hip-joint moment changes compared with other loading conditions.",
+        "citation": "Gao L, Lu Z, Liang M, Baker JS, Gu Y. Influence of Different Load Conditions on Lower Extremity Biomechanics during the Lunge Squat in Novice Men. Bioengineering. 2022;9(7):272. doi:10.3390/bioengineering9070272.",
+        "doi": "10.3390/bioengineering9070272",
+        "url": "https://www.mdpi.com/2306-5354/9/7/272",
+        "relevance": "Supports dumbbell-loading rating interpretation for stability, hip demand, and load-condition limitations in a close lunge-squat task.",
+        "usedFor": [
+          "ease score",
+          "support score",
+          "progression score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

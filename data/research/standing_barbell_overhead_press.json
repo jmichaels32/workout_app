@@ -1,0 +1,100 @@
+{
+  "movementId": "standing_barbell_overhead_press",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-09",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "saeterbakken-2013",
+    "coratella-2022",
+    "bull-2001",
+    "blazkiewicz-2022",
+    "escamilla-2009",
+    "soriano-2019"
+  ],
+  "searchedQueries": [
+    "standing barbell overhead press electromyography anterior deltoid triceps trapezius serratus EMG",
+    "standing barbell shoulder press EMG anterior deltoid triceps trapezius",
+    "military press electromyography anterior deltoid triceps trapezius serratus",
+    "Saeterbakken 2013 Effects of body position and loading modality on muscle activity and strength in shoulder presses DOI",
+    "Effects of body position and loading modality on muscle activity and strength in shoulder presses PubMed",
+    "Effects of Body Position and Loading Modality on Muscle Activity and Strength in Shoulder Presses 2013 Journal Strength Conditioning Research",
+    "shoulder press rotator cuff electromyography supraspinatus infraspinatus EMG",
+    "overhead press rotator cuff EMG supraspinatus infraspinatus",
+    "rotator cuff force couple glenohumeral stability arm elevation biomechanics review DOI",
+    "Electromyographic validation of the trapezius and serratus anterior muscles in military press exercises with open and middle grip",
+    "Buell Vitti Freitas Rosa military press Electromyogr Clin Neurophysiol",
+    "Electromyographic validation of the deltoid anterior portion and pectoralis major clavicular portion military press",
+    "Paoli Marcolin Petrone Influence different ranges of motion selective recruitment shoulder muscles sitting military press electromyographic DOI",
+    "Stability of Resistance Training Implement alters EMG Activity during the Overhead Press Dicus Holmstrup Shuler Rice Raybuck Siddons 2018 full text",
+    "standing overhead press kinematics biomechanics barbell military press",
+    "Weightlifting Overhead Pressing Derivatives review standing press"
+  ],
+  "reviewedFiles": [
+    "docs/movement-research-protocol.md",
+    "docs/movement-data-workflow.md",
+    "data/movements/bar_bench_press.json",
+    "data/movements/dumbbell_bench_press.json",
+    "data/research/bar_bench_press.json",
+    "data/research/dumbbell_bench_press.json",
+    "data/anatomy.json",
+    "scripts/validate-movements.js",
+    "https://pubmed.ncbi.nlm.nih.gov/23096062/",
+    "https://www.semanticscholar.org/paper/Effects-of-Body-Position-and-Loading-Modality-on-in-Saeterbakken-Fimland/dfb9cf1da045b1295dfdb72706488dec5f707620",
+    "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.825880/full",
+    "https://pubmed.ncbi.nlm.nih.gov/11441637/",
+    "https://www.mdpi.com/1424-8220/22/24/9762",
+    "https://pubmed.ncbi.nlm.nih.gov/19769415/",
+    "https://link.springer.com/article/10.1007/s40279-019-01096-8",
+    "https://www.research.unipd.it/retrieve/e14fb267-865a-3de1-e053-1705fe0ac030/Influence_of_Different_Ranges_of_Motion_on.21.pdf",
+    "https://www.jshoulderelbow.org/article/S1058-2746(13)00574-0/abstract",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6033506/"
+  ],
+  "excludedSources": [
+    {
+      "title": "Healthline: Overhead Press Muscles",
+      "url": "https://www.healthline.com/health/overhead-press-muscles",
+      "reason": "Consumer health article; useful for common terminology only, not used for muscle-role evidence."
+    },
+    {
+      "title": "Garage Gym Reviews: Overhead Press",
+      "url": "https://www.garagegymreviews.com/overhead-press",
+      "reason": "Coaching article rather than primary, secondary, or peer-reviewed biomechanics evidence."
+    },
+    {
+      "title": "Muscle & Strength: Military Press exercise guide",
+      "url": "https://www.muscleandstrength.com/exercises/military-press.html",
+      "reason": "Exercise guide; not used because peer-reviewed EMG and review sources were available."
+    },
+    {
+      "title": "StrengthLog: How to Overhead Press",
+      "url": "https://www.strengthlog.com/overhead-press/",
+      "reason": "Coaching guide; not needed for evidence classification."
+    },
+    {
+      "title": "Instagram, YouTube, and social video results for standing shoulder press",
+      "url": "multiple social/video results from search",
+      "reason": "Excluded under protocol preference against social/video explanations as evidence sources."
+    },
+    {
+      "title": "ResearchGate and Academia.edu mirrors of cited studies",
+      "url": "multiple ResearchGate/Academia pages",
+      "reason": "Used only to identify or cross-check citations and abstracts when indexed; movement evidence cites publisher, PubMed, DOI, or journal pages instead."
+    },
+    {
+      "title": "Paoli et al. sitting military press ROM study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20508462/",
+      "reason": "Relevant seated dumbbell military press ROM evidence, but omitted from the final movement register because the standing barbell and shoulder-elevation review sources covered the required visible roles more directly."
+    },
+    {
+      "title": "Dicus et al. overhead press implement stability study",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6033506/",
+      "reason": "Relevant dumbbell/kettlebell overhead-press EMG, but not selected for the final register because Coratella et al. and Blazkiewicz and Hadamus provided closer role coverage for this entry."
+    },
+    {
+      "title": "McKean and Burkett overhead shoulder press kinematics study",
+      "url": "https://www.jshoulderelbow.org/article/S1058-2746(13)00574-0/abstract",
+      "reason": "Relevant seated front-vs-behind-neck kinematics, but not required for the final strict standing front-barbell classification."
+    }
+  ],
+  "notes": "Variant assumption: strict standing free-weight barbell overhead press from shoulder or clavicle height with no leg drive. Direct exact evidence is strongest for anterior deltoid and triceps brachii from Saeterbakken and Fimland's standing barbell shoulder press comparison. Pectoralis major is included as a secondary role from front barbell military press and overhead-press mechanics, not as the intended target. Serratus anterior support is backed by military-press and overhead-press evidence. Rotator cuff support is explicitly marked as a biomechanics inference from shoulder-elevation stability literature. Medial deltoid and upper trapezius appear important in the literature but are not shared anatomy entries in this project, so they were not added as visible roles. The generated data/movements.json bundle was intentionally not edited because this worker's write scope is limited to the two per-movement source files."
+}

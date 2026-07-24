@@ -1,0 +1,274 @@
+{
+  "id": "seated_cable_row",
+  "name": "Seated Cable Row",
+  "aliases": [
+    "cable_seated_row",
+    "low_cable_row",
+    "seated_row"
+  ],
+  "family": "row",
+  "equipment": "cable",
+  "variantType": "seated_cable",
+  "variant": "Bilateral seated cable row with feet braced on foot plates, torso upright, and a cable handle pulled toward the lower ribs or upper abdomen.",
+  "description": "Sit facing a low cable with the feet pressed into the foot plates, knees slightly bent, torso tall, and arms extended without rounding the low back; pull the handle toward the lower ribs or upper abdomen by driving the elbows back, keep the cable path controlled, pause briefly with the shoulder blades drawn back, then return until the arms are long without letting the weight stack pull the torso out of position.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 72,
+      "rationale": "Strong horizontal-pull hypertrophy stimulus for lats, mid-back, posterior shoulder, and elbow flexors, but path and torso movement shift emphasis."
+    },
+    "strength": {
+      "score": 56,
+      "rationale": "Builds pulling strength, but cable friction, handle choice, and torso motion make force expression less clean than stricter anchors."
+    },
+    "joint_resilience": {
+      "score": 38,
+      "rationale": "Some shoulder, scapular, and elbow tolerance benefit, but it is not mainly a resilience exercise."
+    },
+    "athletic_transfer": {
+      "score": 36,
+      "rationale": "More transferable than a fixed machine row, but seated support and a cable path still constrain whole-body transfer."
+    },
+    "control": {
+      "score": 44,
+      "rationale": "Meaningful scapular, torso, elbow-path, and grip control, though external support keeps balance demands moderate-low."
+    },
+    "fatigue_efficiency": {
+      "score": 66,
+      "rationale": "Good upper-back stimulus with moderate fatigue and low axial loading, but grip and biceps fatigue can limit the target stimulus."
+    },
+    "setup": {
+      "score": 72,
+      "rationale": "Cable row setup is usually manageable but depends on station, handle, stack increments, foot position, and seat distance."
+    },
+    "ease": {
+      "score": 68,
+      "rationale": "Relatively learnable, but consistent torso angle, scapular timing, elbow path, and avoiding momentum require attention."
+    },
+    "progression": {
+      "score": 78,
+      "rationale": "Progresses well on a cable stack, with deductions for cable friction, handle changes, torso movement, and station geometry."
+    },
+    "support": {
+      "score": 64,
+      "rationale": "Feet and pelvis are supported, but the cable path is not fixed and the trunk and shoulders must stabilize the pull."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Direct seated cable row EMG supports highest emphasis with close elbow paths.",
+        "evidence": "Seated cable row studies measuring upper and lower latissimus dorsi show greater lat activation when shoulder abduction is closer to 0 degrees, and high-density EMG found the narrow seated row better suited to prioritizing latissimus dorsi.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "padovan-2025",
+          "lehman-2004",
+          "fujita-2019"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Teres major",
+        "evidenceShort": "Measured shoulder-extension assistant in seated row.",
+        "evidence": "Fujita et al. measured teres major during the seated row at 70% 1RM and treated it with latissimus dorsi as a shoulder-extension target, supporting a meaningful assistant role rather than the primary visible target.",
+        "sourceIds": [
+          "fujita-2019"
+        ]
+      },
+      {
+        "name": "Middle trapezius",
+        "evidenceShort": "Direct row EMG supports scapular-retraction contribution.",
+        "evidence": "Lehman et al. reported the highest middle trapezius/rhomboid activity during seated row conditions, while seated cable row EMG shows middle trapezius activation rises as shoulder abduction increases.",
+        "sourceIds": [
+          "lehman-2004",
+          "vasconcelos-2023",
+          "padovan-2025"
+        ]
+      },
+      {
+        "name": "Rhomboids",
+        "evidenceShort": "Inferred from grouped middle trapezius/rhomboid EMG and scapular retraction.",
+        "evidence": "This role is marked as inference: direct surface EMG in Lehman et al. grouped the middle trapezius and rhomboids rather than isolating rhomboid activity, and the row variant requires scapular retraction as the handle is pulled toward the torso.",
+        "sourceIds": [
+          "lehman-2004",
+          "ronai-2019"
+        ]
+      },
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Measured row contributor; increases with wider or higher-abduction paths.",
+        "evidence": "Seated row studies record posterior deltoid activation, with greater posterior deltoid and upper-back activation as shoulder abduction approaches wider row positions; this makes it a meaningful but path-sensitive secondary mover.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fujita-2019",
+          "padovan-2025"
+        ]
+      },
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Measured elbow-flexion assistant, lower than curl-specific work.",
+        "evidence": "Multiple seated row EMG studies measured biceps brachii during rowing; Vasconcelos et al. found cable preacher curl produced greater biceps activation than all row conditions, supporting biceps as a secondary elbow-flexion assistant rather than a primary target.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "lehman-2004",
+          "fujita-2019",
+          "padovan-2025"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Direction-specific shoulder stabilization during row.",
+        "evidence": "Wattanaprakornkul et al. directly studied rotator cuff recruitment during bench press and row tasks, supporting a glenohumeral stabilization role during loaded shoulder extension rather than a primary hypertrophy role.",
+        "sourceIds": [
+          "wattanaprakornkul-2011"
+        ]
+      },
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Trunk-position support, not the intended target.",
+        "evidence": "High-density seated row EMG recorded erector spinae activity, and the foot-supported seated cable row still requires the trunk to resist the cable pull; this is classified as support rather than a back-extension target.",
+        "sourceIds": [
+          "padovan-2025",
+          "ronai-2019"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Seated cable row: latissimus dorsi primary; teres major, middle trapezius, rhomboids, posterior deltoid, and biceps brachii secondary; rotator cuff and erector spinae support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Grip, handle width, shoulder abduction, torso lean, chest support, and pull target can shift emphasis between lats, trapezius, posterior deltoid, and elbow flexors.",
+    "summary": "The seated cable row is classified as a supported horizontal pulling exercise. Direct seated cable row evidence supports latissimus dorsi as the primary target when the elbows stay close to the torso. Teres major assists shoulder extension, middle trapezius and rhomboids contribute to scapular retraction, posterior deltoid assists shoulder extension or horizontal abduction depending on path, and biceps brachii assists elbow flexion. Rotator cuff and erector spinae roles are included as support because they stabilize the shoulder and trunk rather than define the intended training target.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation under a specific setup. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, long-term adaptation, or injury risk.",
+    "limitations": "The strongest exact evidence compares seated cable row grip and shoulder-abduction variants rather than every commercial cable station and handle. Rhomboids are not isolated by fine-wire EMG here and are included by explicit inference from grouped middle trapezius/rhomboid EMG plus the scapular retraction demand. Chest-supported seated row, machine row, inverted row, bent-over row, and unilateral cable row should be treated as separate variants.",
+    "studies": [
+      {
+        "id": "vasconcelos-2023",
+        "type": "Seated cable row EMG and force study",
+        "shortCitation": "Vasconcelos et al., Int J Strength Cond, 2023",
+        "finding": "Close-to-0-degree shoulder-abduction rows increased upper/lower latissimus activity and peak force, while wider/higher-abduction rows increased upper trapezius, middle trapezius, and posterior deltoid activity.",
+        "citation": "Vasconcelos CMWA, Lopes CR, Almeida VM, Neto WK, Soares EG. Effect Of Different Grip Position And Shoulder-Abduction Angle On Muscle Strength And Activation During The Seated Cable Row. International Journal of Strength and Conditioning. 2023;3(1):1-13. doi:10.47206/ijsc.v3i1.190.",
+        "doi": "10.47206/ijsc.v3i1.190",
+        "url": "https://journal.iusca.org/index.php/Journal/article/download/190/271/1652",
+        "relevance": "Directly studied seated cable row variations with surface EMG of upper trapezius, middle trapezius, upper latissimus, lower latissimus, posterior deltoid, and biceps brachii in recreationally trained participants.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "progression score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "padovan-2025",
+        "type": "High-density seated row EMG study",
+        "shortCitation": "Padovan et al., J Hum Kinet, 2025",
+        "finding": "Narrow seated row showed greater latissimus dorsi EMG amplitude, while wide seated row emphasized trapezius, lateral deltoid, and erector spinae in specific phases.",
+        "citation": "Padovan R, Ce E, Longo S, Tornatore G, Trentin C, Esposito F, Coratella G. High-Density Surface Electromyography Excitation of Prime Movers in the Narrow vs. Wide Grip Seated Row Exercise. Journal of Human Kinetics. 2025;Advanced Online Publication:1-16. doi:10.5114/jhk/209550.",
+        "doi": "10.5114/jhk/209550",
+        "url": "https://jhk.termedia.pl/High-Density-Surface-Electromyography-Excitation-of-Prime-Movers-in-the-Narrow-vs%2C209550%2C0%2C2.html",
+        "relevance": "Directly compared narrow and wide seated row using high-density EMG of latissimus dorsi, trapezius regions, deltoids, biceps brachii, triceps brachii, and erector spinae in resistance-trained men.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lehman-2004",
+        "type": "Latissimus dorsi exercise EMG study",
+        "shortCitation": "Lehman et al., Dynamic Medicine, 2004",
+        "finding": "Seated row produced a high latissimus-to-biceps activation ratio and the highest middle trapezius/rhomboid activity among the tested latissimus dorsi exercises.",
+        "citation": "Lehman GJ, Buchan DD, Lundy A, Myers N, Nalborczyk A. Variations in muscle activation levels during traditional latissimus dorsi weight training exercises: An experimental study. Dynamic Medicine. 2004;3:4. doi:10.1186/1476-5918-3-4.",
+        "doi": "10.1186/1476-5918-3-4",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15228624/",
+        "relevance": "Includes seated row with retracted and non-retracted scapulae and measured latissimus dorsi, biceps brachii, and a grouped middle trapezius/rhomboid signal.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "fujita-2019",
+        "type": "Seated row EMG and verbal-instruction study",
+        "shortCitation": "Fujita et al., Motriz, 2019",
+        "finding": "At 70% 1RM, seated row produced substantial latissimus dorsi, teres major, posterior deltoid, and biceps brachii activity, and verbal instruction did not materially change the average EMG response.",
+        "citation": "Fujita RA, De Marchi PU, Silva NRS, Gomes MM. Verbal instruction does not change myoelectric activity during seated row exercise in trained and untrained men. Motriz: Revista de Educacao Fisica. 2019;25(4):e10190100. doi:10.1590/s1980-6574201900040100.",
+        "doi": "10.1590/s1980-6574201900040100",
+        "url": "https://pdfs.semanticscholar.org/2b55/6e63ba0d3019f5e2959b3ec165072f139c4b.pdf",
+        "relevance": "Direct seated row EMG study measuring latissimus dorsi, teres major, posterior deltoid, triceps brachii long head, and biceps brachii in trained and untrained men.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "ease score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wattanaprakornkul-2011",
+        "type": "Rotator cuff recruitment study",
+        "shortCitation": "Wattanaprakornkul et al., J Electromyogr Kinesiol, 2011",
+        "finding": "Rotator cuff recruitment during bench press and row was direction-specific, consistent with dynamic shoulder stabilization.",
+        "citation": "Wattanaprakornkul D, Halaki M, Cathers I, Ginn KA. Direction-specific recruitment of rotator cuff muscles during bench press and row. Journal of Electromyography and Kinesiology. 2011;21(6):1041-1049. doi:10.1016/j.jelekin.2011.09.002.",
+        "doi": "10.1016/j.jelekin.2011.09.002",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+        "relevance": "Directly supports rotator cuff involvement as shoulder stabilization during row tasks.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "ronai-2019",
+        "type": "Seated cable row technique review",
+        "shortCitation": "Ronai, ACSM Health Fit J, 2019",
+        "finding": "Describes the seated cable row setup, coaching constraints, and three-point base of support from both feet on plates plus the pelvis on the bench.",
+        "citation": "Ronai P. Do it right: The seated cable row exercise. ACSM's Health & Fitness Journal. 2019;23(4):32-37. doi:10.1249/FIT.0000000000000492.",
+        "doi": "10.1249/FIT.0000000000000492",
+        "url": "https://digitalcommons.sacredheart.edu/pthms_exscifac/36/",
+        "relevance": "Provides peer-reviewed technique and setup context for the exact foot-supported seated cable row variant.",
+        "usedFor": [
+          "secondary muscle role inference",
+          "support muscle role",
+          "ease score",
+          "support score",
+          "setup score",
+          "fatigue efficiency score"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "movementId": "seated_machine_chest_fly",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-10",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "rocha-junior-2007",
+    "schanke-2012",
+    "botton-2013",
+    "solstad-2020",
+    "stastny-2017"
+  ],
+  "searchedQueries": [
+    "\"pec deck\" electromyography pectoralis major anterior deltoid PubMed",
+    "\"machine chest fly\" EMG pectoralis major anterior deltoid",
+    "\"Comparison among the EMG activity\" \"peck deck\" DOI",
+    "\"Valdinar\" \"Rocha\" \"peck deck\" DOI",
+    "\"Electromyographical analysis of the pectoralis major muscle during various chest exercises\" thesis pec deck",
+    "\"Whitnee Schanke\" \"pectoralis major\" pec deck EMG",
+    "\"Botton\" \"Electromyographical analysis of the deltoid\" pec deck DOI",
+    "\"Electromyographical analysis of the deltoid between different strength training exercises\"",
+    "\"dumbbell fly\" \"pectoralis major\" \"anterior deltoid\" \"Welsch\"",
+    "\"A Comparison of Muscle Activation between Barbell Bench Press and Dumbbell Flyes\" DOI",
+    "\"pec deck\" \"rotator cuff\" EMG",
+    "\"pec deck\" \"serratus anterior\" EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement and research JSON ownership, contract, and validation workflow."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Protocol for evidence priority, conservative visible roles, anatomy coverage, and current rating definitions."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-backlog.md",
+      "notes": "Canonical ID, visible name, and variant assumption for seated_machine_chest_fly."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/seated_machine_chest_press.json",
+      "notes": "Structural example for a seated machine chest movement, including ratings, visible muscle roles, and evidence register format."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/research/seated_machine_chest_press.json",
+      "notes": "Structural example for research record fields and source-review notes."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Checked that visible muscles Pectoralis major and Anterior deltoid have local anatomy mesh mappings."
+    },
+    {
+      "type": "paper",
+      "id": "rocha-junior-2007",
+      "url": "https://www.scielo.br/j/rbme/a/wZB7qVqH98pXGzH9p4kyg5Q/?format=pdf&lang=en",
+      "notes": "Direct machine pec-deck EMG in 13 trained men at 10RM; measured pectoralis major, anterior deltoid, and triceps brachii during bench press and pec deck. Used for pectoralis primary, anterior deltoid secondary, and triceps exclusion."
+    },
+    {
+      "type": "thesis-record",
+      "id": "schanke-2012",
+      "url": "https://minds.wisc.edu/items/48f80f8d-09fb-4290-b552-3fc15d3a5f64",
+      "notes": "University of Wisconsin-La Crosse thesis record and abstract; included pec-deck machine pectoralis major EMG in 14 males at 80% 1RM. The large PDF timed out in the browser, so the repository record was used rather than a full PDF review."
+    },
+    {
+      "type": "paper",
+      "id": "botton-2013",
+      "url": "https://exercisesforfree.com/pdf/386.pdf",
+      "notes": "Direct peck-deck deltoid EMG in 8 trained men at 10RM with MVIC normalization; used for anterior deltoid secondary role."
+    },
+    {
+      "type": "paper",
+      "id": "solstad-2020",
+      "url": "https://www.jssm.org/jssm-19-645.xml-Fulltext",
+      "notes": "Close dumbbell fly evidence in 17 resistance-trained men at 6RM; measured pectoralis major, anterior deltoid, triceps brachii, and biceps brachii. Used for fly-pattern limits, biceps exclusion boundary, and ratings."
+    },
+    {
+      "type": "paper",
+      "id": "stastny-2017",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171632",
+      "notes": "Systematic review of bench-press EMG with a pec-deck comparison section; used for EMG interpretation limits and horizontal pressing/fly context."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "ACE Fitness press release and certified article on the University of Wisconsin chest exercise study",
+      "reason": "Secondary summary of Schanke 2012; useful for discovery but not used in evidence because the university repository record was closer to the primary source."
+    },
+    {
+      "title": "Consumer pec deck, machine chest fly, and bodybuilding articles",
+      "reason": "Not used for visible muscle roles because they were not primary studies, systematic reviews, DOI pages, or university source records."
+    },
+    {
+      "title": "ResearchGate, Academia, and other reposted copies of pec deck and fly papers",
+      "reason": "Duplicate or secondary hosting; journal, university, SciELO, and JSSM pages were preferred."
+    },
+    {
+      "title": "Welsch et al. 2005 three upper-body lifts",
+      "reason": "Relevant close dumbbell-fly evidence, but Solstad et al. 2020 provided newer full-text fly evidence with more measured muscles and phase analysis."
+    },
+    {
+      "title": "Gentil et al. 2007 exercise-order paper",
+      "reason": "Exact peck-deck/chest-press EMG was identified, but it mainly tested exercise order and did not add enough muscle-role information beyond Rocha Junior 2007 and Botton 2013."
+    },
+    {
+      "title": "Rotator cuff, serratus anterior, and general shoulder-stability search results for pec deck",
+      "reason": "No direct machine chest fly evidence was found that justified adding a specific visible support role under the current app rule."
+    }
+  ],
+  "notes": "Variant assumption is a seated pec-deck or machine chest fly with guided arms, pads, or handles. Visible roles are intentionally conservative: pectoralis major primary and anterior deltoid secondary. Triceps brachii was not included because the direct pec-deck evidence describes it as much less relevant than in pressing. Biceps brachii was not included because the strongest evidence for high biceps activation comes from dumbbell flyes with independent free weights, not a guided machine. Serratus anterior and rotator cuff were not included because exact machine fly evidence did not support a concise visible support classification. Local anatomy already maps Pectoralis major and Anterior deltoid, so no shared anatomy edit was needed. Main unresolved uncertainty is commercial machine geometry: forearm-pad pec deck versus handle fly, start-range stop, seat height, elbow angle, humeral rotation, and cam/resistance profile can shift pectoralis and anterior-deltoid emphasis."
+}

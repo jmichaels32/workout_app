@@ -1,0 +1,77 @@
+{
+  "movementId": "dumbbell_walking_lunge",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-09",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "escamilla-2025",
+    "stastny-2015-jscr",
+    "stastny-2015-acta",
+    "muyor-2020",
+    "riemann-2012",
+    "wu-2020",
+    "jakobsen-2013",
+    "lopez-de-celis-2023",
+    "gao-2022"
+  ],
+  "searchedQueries": [
+    "walking lunge electromyography quadriceps gluteus maximus hamstrings dumbbell",
+    "walking lunge EMG vastus lateralis gluteus maximus biceps femoris study",
+    "forward lunge electromyography gluteus maximus vastus medialis biceps femoris PubMed",
+    "lunge exercise electromyography hip knee extensors biomechanics study DOI",
+    "Stastny 2015 walking lunge split squat EMG gluteus medius vastus medialis DOI",
+    "\"Walking lunge\" \"Split squat\" electromyography \"Stastny\"",
+    "\"Effects of Step Length and Stride Variation During Forward Lunges\" dumbbell EMG",
+    "\"Effect of Loading Devices on Muscle Activation in Squat and Lunge\" DOI",
+    "\"Effect of Load Distribution on Trunk Muscle Activity with Lunge Exercise\" DOI",
+    "\"Biomechanical Analysis of the Anterior Lunge During 4 External-Load Conditions\" DOI"
+  ],
+  "reviewedFiles": [
+    "docs/movement-research-protocol.md",
+    "docs/movement-data-workflow.md",
+    "data/movements/bar_bench_press.json",
+    "data/movements/dumbbell_bench_press.json",
+    "data/movements/push_up.json",
+    "data/research/dumbbell_bench_press.json",
+    "data/anatomy.json",
+    "https://www.mdpi.com/2411-5142/10/1/42",
+    "https://doi.org/10.3390/jfmk10010042",
+    "https://doi.org/10.1519/JSC.0000000000000976",
+    "https://gymnica.upol.cz/artkey/gym-201502-0001_hip_abductors_and_thigh_muscles_strength_ratios_and_their_relation_to_electromyography_amplitude_during_split_s.php",
+    "https://pdfs.semanticscholar.org/800e/ba54b5fbf66ce031721f997898bb72c3965d.pdf",
+    "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0230841",
+    "https://doi.org/10.4085/1062-6050-47.4.16",
+    "https://doi.org/10.1123/jsr.2018-0182",
+    "https://www.sciencedirect.com/science/article/pii/S0167945712000917",
+    "https://www.mdpi.com/2227-9032/11/6/916",
+    "https://www.mdpi.com/2306-5354/9/7/272"
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer dumbbell walking lunge guides and muscle-worked pages",
+      "url": "https://www.nike.com/a/what-do-lunges-work",
+      "reason": "Consumer coaching article; not used for evidence because primary and peer-reviewed lunge EMG/biomechanics sources were available."
+    },
+    {
+      "title": "Endomondo dumbbell walking lunge exercise guide",
+      "url": "https://www.endomondo.com/exercise/dumbbell-walking-lunge",
+      "reason": "Exercise guide rather than primary research; excluded from muscle role evidence."
+    },
+    {
+      "title": "YouTube and Instagram walking lunge demonstrations",
+      "url": "https://www.youtube.com/results?search_query=dumbbell+walking+lunge",
+      "reason": "Technique demonstrations and social posts were not used as evidence for muscle classification."
+    },
+    {
+      "title": "ResearchGate and Scribd mirrors of Stastny walking-lunge papers",
+      "url": "https://www.researchgate.net/publication/276362670_DOES_THE_DUMBBELL_CARRYING_POSITION_CHANGE_THE_MUSCLE_ACTIVITY_DURING_SPLIT_SQUATS_AND_WALKING_LUNGES",
+      "reason": "Mirrors were useful only for discovery; publisher, DOI, Crossref, and open PDF sources were preferred for citation data."
+    },
+    {
+      "title": "Verywell Health lunge muscles article",
+      "url": "https://www.verywellhealth.com/lunges-muscles-worked-8677824",
+      "reason": "Secondary consumer summary; not used because direct EMG and biomechanics studies were available."
+    }
+  ],
+  "notes": "Variant assumption entered as alternating walking lunges with two dumbbells held at the sides. Exact continuous alternating two-dumbbell walking-lunge evidence remains limited: the most exact walking-lunge papers used dumbbell carrying-position variations and 5RM conditions, while the strongest bilateral-dumbbell EMG study used forward lunges with a stride and push-back reset. Gluteus medius is classified as support, not primary, because high activation is interpreted mainly as pelvic/frontal-plane control. Shared data/anatomy.json contains local mesh mappings for every visible role in this movement, including trunk stabilizers mapped to the erector-spinae mesh set."
+}

@@ -1,0 +1,82 @@
+{
+  "movementId": "pull_up",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-10",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "youdas-2010",
+    "dickie-2017",
+    "snarr-2017",
+    "ronai-2014",
+    "urbanczyk-2020",
+    "garavaglia-2023",
+    "sanchez-moreno-2020"
+  ],
+  "searchedQueries": [
+    "\"pull-up\" EMG latissimus dorsi biceps brachii",
+    "\"pull-up\" electromyography muscle activation",
+    "\"pull-up\" \"chin-up\" electromyography PubMed",
+    "\"Surface electromyographic activation patterns\" pull-up chin-up",
+    "\"Electromyographic analysis of muscle activation during pull-up variations\"",
+    "\"Electromyographical Comparison of a Traditional Suspension Device and Towel Pull-Up\"",
+    "\"traditional pull-up\" \"middle trapezius\" EMG",
+    "\"The Pull-up\" \"Strength and Conditioning Journal\" DOI",
+    "\"pull-up\" biomechanics kinematics joint moment",
+    "\"Avoiding high-risk rotator cuff loading\" pull-up",
+    "\"body mass prone-grip pull-up training\" velocity loss"
+  ],
+  "reviewedFiles": [
+    "docs/movement-data-workflow.md",
+    "docs/movement-research-protocol.md",
+    "docs/movement-backlog.md",
+    "data/movements/seated_cable_lat_pulldown.json",
+    "data/movements/seated_cable_row.json",
+    "data/research/seated_cable_lat_pulldown.json",
+    "data/research/seated_cable_row.json",
+    "data/movements/push_up.json",
+    "data/research/push_up.json",
+    "data/anatomy.json",
+    "scripts/validate-movements.js",
+    "https://pubmed.ncbi.nlm.nih.gov/21068680/",
+    "https://pubmed.ncbi.nlm.nih.gov/28011412/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5548150/",
+    "https://digitalcommons.sacredheart.edu/pthms_fac/129/",
+    "https://onlinelibrary.wiley.com/doi/full/10.1111/sms.13780",
+    "https://link.springer.com/article/10.1007/s11332-023-01097-1",
+    "https://pubmed.ncbi.nlm.nih.gov/32213783/",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:21068680%20AND%20SRC:MED&format=json",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:28011412%20AND%20SRC:MED&format=json",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:28828073%20AND%20SRC:MED&format=json",
+    "https://api.crossref.org/works/10.1519/SSC.0000000000000052",
+    "https://api.crossref.org/works/10.1111/sms.13780",
+    "https://api.crossref.org/works/10.1007/s11332-023-01097-1",
+    "https://api.crossref.org/works/10.1519/JSC.0000000000003500",
+    "https://juniperpublishers.com/jpfmts/pdf/JPFMTS.MS.ID.555669.pdf",
+    "https://strengthandconditioning.org/jasc-26-2/1856-original-scientific-research-study-electromyographical-comparison-of-a-traditional-and-kipping-pull-up",
+    "https://sciendo.com/pdf/10.2478/bhk-2023-0032",
+    "https://www.revistaretos.org/index.php/retos/article/download/107771/79975/440643"
+  ],
+  "excludedSources": [
+    {
+      "source": "Hewit JK, Jaffe DA, Crowder T. A Comparison of Muscle Activation during the Pull-up and Three Alternative Pulling Exercises. Journal of Physical Fitness, Medicine & Treatment in Sports. 2018;5(4):555669. doi:10.19080/JPFMTS.2018.05.555669.",
+      "reason": "Reviewed as a pull-up comparison paper, but excluded from the evidence register because higher-priority exact pull-up EMG and biomechanics sources were sufficient for the visible roles and ratings."
+    },
+    {
+      "source": "Snarr RL, Casey J, Hallmark A, Esco M. Electromyographical Comparison of a Traditional and Kipping Pull-up. Journal of Australian Strength and Conditioning. 2018;26(2):28-34.",
+      "reason": "Reviewed through the publisher abstract only; excluded because the task variant is strict pronated pull-up and the included Snarr 2017 full-text traditional pull-up paper already supports the relevant muscle roles."
+    },
+    {
+      "source": "Di Bartolo et al. The influence of closed or open grip type during a pull-up test to exhaustion. Biomedical Human Kinetics. 2023.",
+      "reason": "Reviewed for grip-test context, but excluded from the evidence register because it did not perform EMG and focused on open-vs-closed grip repetition performance rather than muscle role classification."
+    },
+    {
+      "source": "Raizada and Bagchi pull-up hand-position EMG articles and ResearchGate/Academia mirrors.",
+      "reason": "Search results were inspected, but publisher/PubMed/PMC/DOI sources with clearer provenance were available."
+    },
+    {
+      "source": "Consumer exercise pages, blogs, Wikipedia, YouTube, Instagram, Facebook, Reddit, and forum results surfaced during search.",
+      "reason": "Rejected for movement classification because primary research, peer-reviewed technique sources, PubMed records, and DOI pages were available."
+    }
+  ],
+  "notes": "Variant treated as a strict pronated bodyweight pull-up from a fixed overhead bar, not a chin-up, neutral-grip pull-up, towel pull-up, suspension pull-up, assisted pull-up, kipping pull-up, or weighted pull-up. Visible roles are intentionally conservative and use only local anatomy labels that already resolve to mesh files. Direct evidence also discusses brachioradialis and likely elbow-flexor contributions from brachialis during pull-up variations, but the current local anatomy map does not expose brachioradialis or brachialis; they were not added as visible roles. Teres major was also excluded because the reviewed exact pull-up EMG sources did not isolate it, even though vertical-pull anatomy suggests an assisting role. EMG findings are acute excitation estimates and should not be read as direct hypertrophy, mechanical tension, adaptation, or injury-risk proof."
+}

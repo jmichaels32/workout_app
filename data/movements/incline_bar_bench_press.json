@@ -1,0 +1,276 @@
+{
+  "id": "incline_bar_bench_press",
+  "name": "Incline Bar Bench Press",
+  "aliases": [
+    "incline_bench_press",
+    "incline_barbell_bench_press",
+    "barbell_incline_bench_press",
+    "incline_chest_press"
+  ],
+  "family": "chest_press",
+  "equipment": "barbell",
+  "variantType": "incline_barbell",
+  "variant": "Incline barbell bench press using a fixed incline bench and a free barbell, treated as an upward-angled free-weight chest press.",
+  "description": "Lie back on a fixed incline bench with the eyes slightly behind the racked bar, feet planted, shoulder blades set against the pad, and hands slightly wider than shoulder width; unrack to a stacked wrist-over-elbow position, lower the bar under control toward the upper chest without letting the elbows flare excessively, then press up and slightly back toward the rack line while keeping the torso and shoulder position stable.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Chest",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 76,
+      "rationale": "Strong upper-chest and anterior-shoulder hypertrophy stimulus, with useful overload but less flat-pec emphasis than the flat press."
+    },
+    "strength": {
+      "score": 88,
+      "rationale": "Strong barbell strength movement with clear loading, though absolute force is usually lower and setup is more angle-specific than flat bench."
+    },
+    "joint_resilience": {
+      "score": 26,
+      "rationale": "Provides controlled shoulder exposure but is not a resilience-focused drill and can be shoulder-demanding for some users."
+    },
+    "athletic_transfer": {
+      "score": 16,
+      "rationale": "Low athletic-transfer score because the task is bilateral, supine, braced, and not coordination-rich."
+    },
+    "control": {
+      "score": 22,
+      "rationale": "Requires bar path and upper-body position control, but balance and whole-body coordination demands remain low."
+    },
+    "fatigue_efficiency": {
+      "score": 42,
+      "rationale": "Useful pressing stimulus but heavy setup, shoulder/triceps overlap, and warm-up demands keep efficiency moderate-low."
+    },
+    "setup": {
+      "score": 40,
+      "rationale": "Needs rack, bench-angle setup, bar, plates, safeties or spotter judgment, and consistent bench placement."
+    },
+    "ease": {
+      "score": 40,
+      "rationale": "Less automatic than flat bench because angle, touch point, shoulder position, and unrack path are harder to standardize."
+    },
+    "progression": {
+      "score": 90,
+      "rationale": "Excellent overload tracking because barbell load and reps are precise, with small deductions for bench-angle and rack-position variability."
+    },
+    "support": {
+      "score": 42,
+      "rationale": "The bench supports the torso, but the bar is still a free path and shoulder stabilization remains meaningful."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Incline barbell EMG supports major chest involvement, especially upper pec at moderate inclines.",
+        "evidence": "Free-weight bench-angle EMG studies show substantial pectoralis major activity during incline bench pressing; the upper/clavicular region is emphasized around moderate incline angles, while very high inclines shift more activity toward the anterior deltoid.",
+        "sourceIds": [
+          "rodriguez-ridao-2020",
+          "lauver-2016",
+          "cabral-2022",
+          "lopez-vivancos-2023"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Incline angle increases anterior deltoid contribution.",
+        "evidence": "Bench-angle EMG studies repeatedly show anterior deltoid activity during incline pressing, with greater contribution as the bench angle rises; it is classified as secondary for a chest-focused incline press because it assists shoulder flexion and can become dominant at steeper inclines.",
+        "sourceIds": [
+          "rodriguez-ridao-2020",
+          "lauver-2016",
+          "saeterbakken-2017",
+          "lopez-vivancos-2023"
+        ]
+      },
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Measured elbow-extension contributor during incline pressing.",
+        "evidence": "Incline and bench-press EMG studies measure triceps brachii activity during the press; its role is meaningful for elbow extension, though incline-angle studies report it as similar across angles or lower than chest and anterior deltoid activation.",
+        "sourceIds": [
+          "rodriguez-ridao-2020",
+          "lauver-2016",
+          "saeterbakken-2017",
+          "stastny-2017"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Inference from close bench/chest-press scapular evidence.",
+        "evidence": "This support role is inferred from chest-press and bench-press evidence showing serratus anterior activity with scapular kinematics; it is included as scapulothoracic support, not as a direct incline-specific hypertrophy target.",
+        "sourceIds": [
+          "borges-2019"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Inference from bench-press shoulder-stabilization evidence.",
+        "evidence": "This support role is inferred from bench-press research showing direction-specific rotator cuff recruitment consistent with glenohumeral stabilization under pressing loads; direct incline-only rotator cuff EMG was not found.",
+        "sourceIds": [
+          "wattanaprakornkul-2011"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Incline free-bar chest press: pectoralis major primary; anterior deltoid and triceps brachii secondary; serratus anterior and rotator cuff support by marked inference from close bench-press evidence.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, pain risk, or long-term training outcome.",
+    "limitsShort": "Bench angle is the main modifier: moderate inclines emphasize upper pectoralis, while steeper inclines increase anterior deltoid demand and may reduce pectoralis performance.",
+    "summary": "The incline bar bench press is classified as a free-weight upward-angled chest press performed on a fixed incline bench. Direct bench-angle studies support pectoralis major as the primary target, especially the upper/clavicular region at moderate inclines. Anterior deltoid and triceps brachii are visible secondary movers because shoulder flexion and elbow extension are both required, and their activity is directly measured in incline bench research.",
+    "clinicalInterpretation": "Surface electromyography should be interpreted as exercise-condition-specific muscle excitation. It does not directly measure hypertrophy, mechanical tension, joint loading, tissue tolerance, or injury probability. Ratings combine direct bench-angle evidence with explicit product judgment about setup, progression, support, and fatigue.",
+    "limitations": "The exact fixed bench angle is not specified in the movement ID. Most direct evidence uses 25-45 degree incline conditions, but studies also test 60 degrees, where anterior deltoid activity becomes much more prominent. Grip width, bar touch point, load prescription, arch, rack height, spotter/safeties, tempo, and participant training status can all change the observed stimulus.",
+    "studies": [
+      {
+        "id": "rodriguez-ridao-2020",
+        "type": "Free-weight bench inclination EMG study",
+        "shortCitation": "Rodriguez-Ridao et al., IJERPH, 2020",
+        "finding": "At 30 degrees, upper pectoralis major and anterior deltoid were among the highest measured activations; above 45 degrees, anterior deltoid increased and pectoralis performance decreased, while triceps activity was similar across inclines.",
+        "citation": "Rodriguez-Ridao D, Antequera-Vique JA, Martin-Fuentes I, Muyor JM. Effect of Five Bench Inclinations on the Electromyographic Activity of the Pectoralis Major, Anterior Deltoid, and Triceps Brachii during the Bench Press Exercise. International Journal of Environmental Research and Public Health. 2020;17(19):7339. doi:10.3390/ijerph17197339.",
+        "doi": "10.3390/ijerph17197339",
+        "url": "https://www.mdpi.com/1660-4601/17/19/7339",
+        "relevance": "Directly tested free-weight bench press at 0, 15, 30, 45, and 60 degrees and measured upper, middle, and lower pectoralis major, anterior deltoid, and triceps brachii.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lauver-2016",
+        "type": "Free-weight bench angle EMG study",
+        "shortCitation": "Lauver et al., Eur J Sport Sci, 2016",
+        "finding": "Free-weight barbell bench pressing at different angles changed upper-extremity activation patterns, supporting the angle-sensitive classification of pectoralis major, anterior deltoid, and triceps brachii.",
+        "citation": "Lauver JD, Cayot TE, Scheuermann BW. Influence of bench angle on upper extremity muscular activation during bench press exercise. European Journal of Sport Science. 2016;16(3):309-316. doi:10.1080/17461391.2015.1022605.",
+        "doi": "10.1080/17461391.2015.1022605",
+        "url": "https://doi.org/10.1080/17461391.2015.1022605",
+        "relevance": "Direct incline/flat/decline free-weight barbell bench-angle evidence measuring pectoralis major regions, anterior deltoid, and triceps brachii.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "cabral-2022",
+        "type": "High-density pectoralis EMG during flat and incline bench press",
+        "shortCitation": "Cabral et al., Scand J Med Sci Sports, 2022",
+        "finding": "High-density EMG showed pectoralis major excitation shifted toward the clavicular region during a 45-degree incline bench press compared with the flat press.",
+        "citation": "Cabral HV, de Souza LML, de Oliveira LF, Vieira TM. Non-uniform excitation of the pectoralis major muscle during flat and inclined bench press exercises. Scandinavian Journal of Medicine & Science in Sports. 2022;32(2):381-390. doi:10.1111/sms.14082.",
+        "doi": "10.1111/sms.14082",
+        "url": "https://doi.org/10.1111/sms.14082",
+        "relevance": "Directly supports pectoralis major as the main target and clarifies regional pectoralis excitation in a 45-degree incline bench press.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "saeterbakken-2017",
+        "type": "Competitive-athlete bench press variation EMG",
+        "shortCitation": "Saeterbakken et al., J Hum Kinet, 2017",
+        "finding": "In competitive bench press athletes, incline and decline wide-grip variations changed some arm-muscle activation and performance outcomes compared with competition-style flat pressing.",
+        "citation": "Saeterbakken AH, Mo DA, Scott S, Andersen V. The Effects of Bench Press Variations in Competitive Athletes on Muscle Activity and Performance. Journal of Human Kinetics. 2017;57(1):61-71. doi:10.1515/hukin-2017-0047.",
+        "doi": "10.1515/hukin-2017-0047",
+        "url": "https://doi.org/10.1515/hukin-2017-0047",
+        "relevance": "Close direct evidence in trained bench press athletes comparing incline, decline, and grip-width variations while measuring pectoralis major, deltoids, biceps, triceps, and latissimus dorsi.",
+        "usedFor": [
+          "secondary muscle role",
+          "ease score",
+          "progression score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lopez-vivancos-2023",
+        "type": "Systematic review and meta-analysis of pectoralis EMG in bench press variants",
+        "shortCitation": "Lopez-Vivancos et al., Appl Sci, 2023",
+        "finding": "The review found pectoralis major activation differs across bench-press variants and that incline benching tends to increase clavicular emphasis while reducing sternal emphasis compared with the horizontal bench press.",
+        "citation": "Lopez-Vivancos A, Gonzalez-Galvez N, Orquin-Castrillon FJ, de Souza Vale RG, Marcos-Pardo PJ. Electromyographic Activity of the Pectoralis Major Muscle during Traditional Bench Press and Other Variants of Pectoral Exercises: A Systematic Review and Meta-Analysis. Applied Sciences. 2023;13(8):5203. doi:10.3390/app13085203.",
+        "doi": "10.3390/app13085203",
+        "url": "https://www.mdpi.com/2076-3417/13/8/5203",
+        "relevance": "Provides synthesis-level context for pectoralis major activation across bench-press variants, including bench inclination.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "stastny-2017",
+        "type": "Systematic review of bench press EMG",
+        "shortCitation": "Stastny et al., PLOS ONE, 2017",
+        "finding": "Bench press EMG literature supports pectoralis major and triceps brachii as major contributors and highlights technique, intensity, and phase-specific interpretation limits.",
+        "citation": "Stastny P, Golas A, Blazek D, Maszczyk A, Wilk M, Pietraszewski P, Petr M, Uhlir P, Zajac A. A systematic review of surface electromyography analyses of the bench press movement task. PLOS ONE. 2017;12(2):e0171632. doi:10.1371/journal.pone.0171632.",
+        "doi": "10.1371/journal.pone.0171632",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171632",
+        "relevance": "Movement-family synthesis used to support triceps classification and general EMG interpretation limits for barbell bench pressing.",
+        "usedFor": [
+          "secondary muscle role",
+          "rating anchors",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wattanaprakornkul-2011",
+        "type": "Rotator cuff recruitment study",
+        "shortCitation": "Wattanaprakornkul et al., J Electromyogr Kinesiol, 2011",
+        "finding": "Rotator cuff recruitment during bench press and row tasks was direction-specific, supporting a stabilizing shoulder role during pressing.",
+        "citation": "Wattanaprakornkul D, Halaki M, Cathers I, Ginn KA. Direction-specific recruitment of rotator cuff muscles during bench press and row. Journal of Electromyography and Kinesiology. 2011;21(6):1041-1049. doi:10.1016/j.jelekin.2011.09.002.",
+        "doi": "10.1016/j.jelekin.2011.09.002",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+        "relevance": "Close bench-press evidence used as an explicit inference for glenohumeral stabilization in the free-weight incline press.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "borges-2019",
+        "type": "Chest press and barbell bench press EMG with scapular kinematics",
+        "shortCitation": "Borges et al., JPES, 2019",
+        "finding": "Chest press lever machine and barbell bench press comparisons included serratus anterior activity and scapular kinematics.",
+        "citation": "Borges E, Dalla H, Mastandrea L, Nunes S, Santarem J. Comparative evaluation of muscular activation and scapular kinematics in a chest press lever machine and a barbell bench press. Journal of Physical Education and Sport. 2019;19:912-916. doi:10.7752/jpes.2019.s3131.",
+        "doi": "10.7752/jpes.2019.s3131",
+        "url": "https://efsupit.ro/images/stories/iunie2019/Art%20131.pdf",
+        "relevance": "Close horizontal pressing evidence used as an explicit inference for serratus anterior scapulothoracic support during incline pressing.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

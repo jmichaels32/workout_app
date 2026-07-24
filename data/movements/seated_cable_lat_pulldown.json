@@ -1,0 +1,355 @@
+{
+  "id": "seated_cable_lat_pulldown",
+  "name": "Seated Cable Lat Pulldown",
+  "aliases": [
+    "lat_pulldown",
+    "cable_lat_pulldown",
+    "front_lat_pulldown",
+    "seated_lat_pulldown",
+    "lat_pull_down"
+  ],
+  "family": "vertical_pull",
+  "equipment": "cable",
+  "variantType": "seated_overhead_cable_thigh_pad",
+  "variant": "Seated overhead cable lat pulldown with thigh pad support, pulled in front of the head toward the upper to mid chest.",
+  "description": "Sit at a lat pulldown station with the thighs secured under the pad, take the handle overhead with arms long, and set a tall torso with the ribs and pelvis controlled. Pull the elbows down and slightly back until the handle reaches the upper to mid chest, then return the handle overhead under control without shrugging or losing the seated position.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 76,
+      "rationale": "Strong vertical-pull hypertrophy stimulus for lats and elbow flexors, with grip and path changing emphasis."
+    },
+    "strength": {
+      "score": 58,
+      "rationale": "Builds vertical pulling force, but the seated cable setup transfers imperfectly to bodyweight pulling strength."
+    },
+    "joint_resilience": {
+      "score": 32,
+      "rationale": "Some controlled shoulder and elbow exposure, but it is not primarily a joint-resilience movement."
+    },
+    "athletic_transfer": {
+      "score": 28,
+      "rationale": "Limited transfer because the seated thigh-padded setup removes most whole-body pulling and bodyweight coordination."
+    },
+    "control": {
+      "score": 28,
+      "rationale": "Requires scapular timing and torso discipline, but the seat and thigh pad remove most balance and whole-body control demand."
+    },
+    "fatigue_efficiency": {
+      "score": 66,
+      "rationale": "Good back stimulus with manageable systemic cost, though grip, elbow flexors, and shoulder irritation can leak fatigue."
+    },
+    "setup": {
+      "score": 70,
+      "rationale": "Usually available and repeatable, but handle choice, thigh-pad height, seat position, and station geometry add setup friction."
+    },
+    "ease": {
+      "score": 72,
+      "rationale": "Approachable guided pattern, with technique limits from grip, torso lean, scapular control, and bottom-position consistency."
+    },
+    "progression": {
+      "score": 82,
+      "rationale": "Cable stacks make load and reps easy to track, with deductions for pulley friction, attachments, and machine geometry."
+    },
+    "support": {
+      "score": 78,
+      "rationale": "The seated base and thigh pad provide substantial support, though the arms and scapulae still guide a free cable path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Direct front pulldown EMG supports primary lat role.",
+        "evidence": "Seated lat pulldown EMG studies consistently measure latissimus dorsi activity during front-to-chest pulldowns; newer multi-grip and high-density EMG work supports latissimus dorsi as the stable primary target across common front pulldown variations.",
+        "sourceIds": [
+          "signorile-2002",
+          "sperandei-2009",
+          "lusk-2010",
+          "andersen-2014",
+          "padovan-2024",
+          "buonsenso-2025"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Teres major",
+        "evidenceShort": "Measured shoulder-adduction assistant.",
+        "evidence": "Direct lat pulldown EMG measured teres major during common hand positions, and instruction research grouped teres major with latissimus dorsi as a back-muscle target that can increase with cueing; it is classified as secondary because the latissimus dorsi remains the intended main target.",
+        "sourceIds": [
+          "signorile-2002",
+          "snyder-2009"
+        ]
+      },
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Directly measured elbow-flexion contributor.",
+        "evidence": "Lat pulldown EMG studies repeatedly measure biceps brachii activity, with activation changing by grip and phase; it assists the vertical pull through elbow flexion but is not the intended main back target.",
+        "sourceIds": [
+          "lusk-2010",
+          "lehman-2004",
+          "sperandei-2009",
+          "doma-2013",
+          "padovan-2024",
+          "buonsenso-2025"
+        ]
+      },
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Measured shoulder-extension/adduction assistant.",
+        "evidence": "Posterior deltoid activity is directly recorded in front, behind-neck, and multi-grip lat pulldown studies; its role varies with trunk angle and bar path, making it a secondary shoulder contributor rather than the main target.",
+        "sourceIds": [
+          "signorile-2002",
+          "sperandei-2009",
+          "padovan-2024",
+          "buonsenso-2025"
+        ]
+      },
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Directly measured shoulder-adduction assistant.",
+        "evidence": "Pectoralis major is measured during front lat pulldown variants and can assist shoulder adduction, especially with anterior/front trajectories and closer grips; it is included as a secondary contributor, not as a chest-focused target.",
+        "sourceIds": [
+          "signorile-2002",
+          "sperandei-2009",
+          "padovan-2024"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Trapezius (middle and lower fibers)",
+        "evidenceShort": "Scapular control role measured in pulldown studies.",
+        "evidence": "Middle and lower trapezius activity has been measured during lat pulldown and isometric pulldown tasks; these fibers are best classified as scapular support because rows and angle-specific conditions can emphasize them more than the standard seated pulldown.",
+        "sourceIds": [
+          "lehman-2004",
+          "park-2013",
+          "padovan-2024",
+          "buonsenso-2025"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Infraspinatus measured as shoulder stabilizer.",
+        "evidence": "A recent multi-grip lat pulldown EMG study directly measured infraspinatus, a rotator cuff muscle, and interpreted it as a stabilizing and accessory contributor affected by grip and trunk position; the broader rotator cuff support role is an anatomical inference from that direct infraspinatus evidence.",
+        "sourceIds": [
+          "buonsenso-2025"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Front seated cable lat pulldown: latissimus dorsi primary; teres major, biceps brachii, posterior deltoid, and pectoralis major secondary; middle/lower trapezius and rotator cuff support.",
+    "clinicalShort": "EMG estimates acute muscle excitation, not hypertrophy, mechanical tension, long-term adaptation, or injury risk.",
+    "limitsShort": "Grip width, forearm orientation, handle type, torso lean, front vs behind-neck path, load, and cueing can shift activation; separate grip-specific pulldowns should be separate movements.",
+    "summary": "The seated cable lat pulldown is classified as a supported vertical pulling exercise performed from an overhead cable with thigh pad support and a front-to-chest bar path. Direct EMG evidence supports latissimus dorsi as the main target across common front pulldown variations. Teres major, biceps brachii, posterior deltoid, and pectoralis major have direct activation evidence and are classified as secondary contributors. Middle/lower trapezius and rotator cuff involvement is classified as support for scapular and glenohumeral control.",
+    "clinicalInterpretation": "Surface and high-density EMG are useful for estimating acute excitation in the tested setup, but they should not be treated as direct measures of hypertrophy, mechanical tension, adaptation, or safety. Technique, load prescription, normalization method, and participant training status affect interpretation.",
+    "limitations": "The evidence base includes front pulldowns, behind-neck pulldowns, V-bar pulldowns, wide and narrow grips, neutral and supinated grips, isometric pulldowns, and machine-constraint comparisons. This entry applies those data only to a generic seated front cable pulldown with thigh pad support. Deep scapular muscles, grip/forearm muscles, and individual latissimus dorsi regions remain under-described for this app classification.",
+    "studies": [
+      {
+        "id": "signorile-2002",
+        "type": "Lat pulldown hand-position EMG",
+        "shortCitation": "Signorile et al., JSCR, 2002",
+        "finding": "Wide-grip anterior pulldown produced the greatest latissimus dorsi activity among tested hand positions.",
+        "citation": "Signorile JF, Zink AJ, Szwed SP. A comparative electromyographical investigation of muscle utilization patterns using various hand positions during the lat pull-down. Journal of Strength and Conditioning Research. 2002;16(4):539-546. doi:10.1519/1533-4287(2002)016<0539:ACEIOM>2.0.CO;2.",
+        "doi": "10.1519/1533-4287(2002)016<0539:ACEIOM>2.0.CO;2",
+        "url": "https://www.paulogentil.com/pdf/S60.pdf",
+        "relevance": "Direct seated lat pulldown EMG on a cable system using close, supinated, wide-grip anterior, and wide-grip posterior conditions; measured latissimus dorsi, teres major, posterior deltoid, pectoralis major, and long head of triceps.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "sperandei-2009",
+        "type": "Front, behind-neck, and V-bar pulldown EMG",
+        "shortCitation": "Sperandei et al., JSCR, 2009",
+        "finding": "Compared front-of-neck, behind-neck, and V-bar pulldowns at 80% 1RM and supported front pulldown as the preferred general technique.",
+        "citation": "Sperandei S, Barros MAP, Silveira-Junior PCS, Oliveira CG. Electromyographic analysis of three different types of lat pull-down. Journal of Strength and Conditioning Research. 2009;23(7):2033-2038. doi:10.1519/JSC.0b013e3181b8d30a.",
+        "doi": "10.1519/JSC.0b013e3181b8d30a",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19855327/",
+        "relevance": "Directly tested the front pulldown family and measured pectoralis major, latissimus dorsi, posterior deltoid, and biceps brachii in trained adult men.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "snyder-2009",
+        "type": "Lat pulldown instruction EMG",
+        "shortCitation": "Snyder and Leech, JSCR, 2009",
+        "finding": "Specific instruction could increase latissimus dorsi and teres major activity during front wide-grip lat pulldown in novices.",
+        "citation": "Snyder BJ, Leech JR. Voluntary increase in latissimus dorsi muscle activity during the lat pull-down following expert instruction. Journal of Strength and Conditioning Research. 2009;23(8):2204-2209. doi:10.1519/JSC.0b013e3181bb7213.",
+        "doi": "10.1519/JSC.0b013e3181bb7213",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19826307/",
+        "relevance": "Direct lat pulldown EMG evidence for cue-sensitive latissimus dorsi and teres major recruitment; useful for technique and targeting interpretation.",
+        "usedFor": [
+          "secondary muscle role",
+          "ease score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lusk-2010",
+        "type": "Grip width and forearm orientation pulldown EMG",
+        "shortCitation": "Lusk et al., JSCR, 2010",
+        "finding": "Pronated grips elicited greater latissimus dorsi activity than supinated grips, while middle trapezius and biceps brachii were not affected by grip type.",
+        "citation": "Lusk SJ, Hale BD, Russell DM. Grip width and forearm orientation effects on muscle activity during the lat pull-down. Journal of Strength and Conditioning Research. 2010;24(7):1895-1900. doi:10.1519/JSC.0b013e3181ddb0ab.",
+        "doi": "10.1519/JSC.0b013e3181ddb0ab",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20543740/",
+        "relevance": "Directly tested lat pulldown grip width and forearm orientation with EMG of latissimus dorsi, middle trapezius, and biceps brachii.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lehman-2004",
+        "type": "Lat pulldown and row EMG",
+        "shortCitation": "Lehman et al., Dynamic Medicine, 2004",
+        "finding": "Wide and reverse-grip pulldowns produced similar latissimus dorsi and biceps patterns, while rows emphasized middle trapezius/rhomboids more.",
+        "citation": "Lehman GJ, Buchan DD, Lundy A, Myers N, Nalborczyk A. Variations in muscle activation levels during traditional latissimus dorsi weight training exercises: an experimental study. Dynamic Medicine. 2004;3:4. doi:10.1186/1476-5918-3-4.",
+        "doi": "10.1186/1476-5918-3-4",
+        "url": "https://link.springer.com/article/10.1186/1476-5918-3-4",
+        "relevance": "Pulldown-family EMG evidence for latissimus dorsi, biceps brachii, and middle trapezius/rhomboid contribution, with limitations around grip-specific claims.",
+        "usedFor": [
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "koyama-2010",
+        "type": "Lat pulldown machine-constraint kinematics and EMG",
+        "shortCitation": "Koyama et al., Eur J Appl Physiol, 2010",
+        "finding": "Lat pulldown kinematics and EMG changed across machines with different movement constraints.",
+        "citation": "Koyama Y, Kobayashi H, Suzuki S, Enoka RM. Enhancing the weight training experience: a comparison of limb kinematics and EMG activity on three machines. European Journal of Applied Physiology. 2010;109(5):789-801. doi:10.1007/s00421-010-1421-y.",
+        "doi": "10.1007/s00421-010-1421-y",
+        "url": "https://link.springer.com/article/10.1007/s00421-010-1421-y",
+        "relevance": "Supports rating interpretation that machine/cable constraints affect repeatability, stability, and muscle activation during lat pulldown tasks.",
+        "usedFor": [
+          "ease score",
+          "support score",
+          "setup score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "doma-2013",
+        "type": "Chin-up vs lat pulldown kinematics and EMG",
+        "shortCitation": "Doma et al., Sports Biomechanics, 2013",
+        "finding": "Lat pulldown and chin-up both engaged latissimus dorsi and biceps brachii; chin-up produced greater biceps and erector spinae activity in the concentric phase.",
+        "citation": "Doma K, Deakin GB, Ness KF. Kinematic and electromyographic comparisons between chin-ups and lat-pull down exercises. Sports Biomechanics. 2013;12(3):302-313. doi:10.1080/14763141.2012.760204.",
+        "doi": "10.1080/14763141.2012.760204",
+        "url": "https://researchonline.jcu.edu.au/30154/",
+        "relevance": "Close vertical-pull comparison with a lat pulldown condition; helps distinguish supported cable pulldown demands from bodyweight vertical pulling.",
+        "usedFor": [
+          "secondary muscle role",
+          "ease score",
+          "support score",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "park-2013",
+        "type": "Isometric pulldown latissimus and lower trapezius EMG",
+        "shortCitation": "Park and Yoo, J Electromyogr Kinesiol, 2013",
+        "finding": "Latissimus dorsi activity decreased and inferior trapezius activity increased as shoulder elevation angle increased during isometric pulldown exertions.",
+        "citation": "Park SY, Yoo WG. Selective activation of the latissimus dorsi and the inferior fibers of trapezius at various shoulder angles during isometric pull-down exertion. Journal of Electromyography and Kinesiology. 2013;23(6):1350-1355. doi:10.1016/j.jelekin.2013.08.006.",
+        "doi": "10.1016/j.jelekin.2013.08.006",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1050641113002137",
+        "relevance": "Isometric pulldown evidence supporting lower trapezius as an angle-sensitive scapular support contributor rather than the primary target in standard pulldowns.",
+        "usedFor": [
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "andersen-2014",
+        "type": "Pronated grip-width pulldown EMG and strength",
+        "shortCitation": "Andersen et al., JSCR, 2014",
+        "finding": "Narrow and medium pronated grips allowed slightly greater 6RM load than wide grip, while grip width produced broadly similar activation across 1-2 times biacromial distance.",
+        "citation": "Andersen V, Fimland MS, Wiik E, Skoglund A, Saeterbakken AH. Effects of grip width on muscle strength and activation in the lat pull-down. Journal of Strength and Conditioning Research. 2014;28(4):1135-1142. doi:10.1097/JSC.0000000000000232.",
+        "doi": "10.1097/JSC.0000000000000232",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24662157/",
+        "relevance": "Direct lat pulldown evidence for grip-width effects on load and activation in the common pronated front-pulldown family.",
+        "usedFor": [
+          "primary muscle role",
+          "progression score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "padovan-2024",
+        "type": "High-density front vs back lat pulldown EMG",
+        "shortCitation": "Padovan et al., J Hum Kinet, 2024",
+        "finding": "Front lat pulldown with thighs blocked showed greater prime-mover excitation than behind-neck pulldown in several muscles and distinct spatial excitation patterns.",
+        "citation": "Padovan R, Toninelli N, Longo S, Tornatore G, Esposito F, Ce E, Coratella G. High-Density Electromyography Excitation in Front vs. Back Lat Pull-Down Prime Movers. Journal of Human Kinetics. 2024;91:47-60. doi:10.5114/jhk/185211.",
+        "doi": "10.5114/jhk/185211",
+        "url": "https://jhk.termedia.pl/High-Density-Electromyography-Excitation-in-Front-vs-Back-Lat-Pull-Down-Prime-Movers%2C185211%2C0%2C2.html",
+        "relevance": "Very close to the chosen variant: seated front lat pulldown on a machine with thighs blocked by padding, pronated grip at 1.5 times inter-acromion distance, and pull to the middle chest.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "ease score",
+          "support score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "buonsenso-2025",
+        "type": "Multi-grip lat pulldown EMG",
+        "shortCitation": "Buonsenso et al., JFMK, 2025",
+        "finding": "Across seven pulldown variations, latissimus dorsi remained the primary target and grip variations did not significantly change activation of the main muscles.",
+        "citation": "Buonsenso A, Di Fonza D, Di Claudio G, Carangelo M, Centorbi M, di Cagno A, Calcagno G, Fiorilli G. Electromyographic Analysis of Back Muscle Activation During Lat Pulldown Exercise: Effects of Grip Variations and Forearm Orientation. Journal of Functional Morphology and Kinesiology. 2025;10(3):345. doi:10.3390/jfmk10030345.",
+        "doi": "10.3390/jfmk10030345",
+        "url": "https://www.mdpi.com/2411-5142/10/3/345",
+        "relevance": "Recent direct lat pulldown EMG with trained men, 70% repetition maximum, seven grip/trunk variants, and measurements of latissimus dorsi, posterior deltoid, biceps brachii, middle and lower trapezius, and infraspinatus.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

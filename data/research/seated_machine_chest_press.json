@@ -1,0 +1,98 @@
+{
+  "movementId": "seated_machine_chest_press",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-09",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "muyor-2023",
+    "coratella-2020",
+    "borges-2019",
+    "stastny-2017",
+    "wattanaprakornkul-2011"
+  ],
+  "searchedQueries": [
+    "\"seated machine chest press\" EMG pectoralis anterior deltoid triceps",
+    "\"seated chest press\" electromyography muscle activation",
+    "\"chest press machine\" competitive bodybuilders EMG pectoralis triceps deltoid",
+    "\"chest press lever machine\" scapular kinematics EMG Borges 2019 DOI",
+    "\"bench press\" systematic review electromyography pectoralis triceps anterior deltoid",
+    "\"rotator cuff\" bench press row direction-specific recruitment DOI",
+    "\"Smith machine\" free weight bench press muscle activation stability",
+    "\"traditional fitness machines\" \"seated chest press\" EMG Sensors 2024 DOI"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Protocol for conservative muscle roles, evidence hierarchy, and ratings."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement and research JSON contracts plus validation workflow."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/bar_bench_press.json",
+      "notes": "Chest press family structure, evidence format, ratings, and sourceIds."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/dumbbell_bench_press.json",
+      "notes": "Chest press family structure and stabilizer-inference wording."
+    },
+    {
+      "type": "paper",
+      "id": "muyor-2023",
+      "url": "https://jhk.termedia.pl/Comparison-of-Muscle-Activity-between-the-Horizontal-Bench-Press-and-the-Seated-Chest%2C161468%2C0%2C2.html",
+      "notes": "Direct seated chest press EMG; participants were 20 physically active trained adults; load was 60% 1RM; muscles measured were pectoralis major regions, anterior deltoid, and long-head triceps."
+    },
+    {
+      "type": "paper",
+      "id": "coratella-2020",
+      "url": "https://air.unimi.it/bitstream/2434/670735/2/EJSS_Bench%20Press%20EMG_Coratella%202019_.pdf",
+      "notes": "Direct selectorized seated chest press machine EMG in 10 competitive male bodybuilders at 80% 1RM; measured pectoralis major heads, anterior/lateral deltoid, and long-head triceps across concentric and eccentric phases."
+    },
+    {
+      "type": "paper",
+      "id": "borges-2019",
+      "url": "https://efsupit.ro/images/stories/iunie2019/Art%20131.pdf",
+      "notes": "Direct chest press lever-machine comparison with barbell bench press; measured pectoralis major heads, anterior deltoid, serratus anterior, and scapular kinematics."
+    },
+    {
+      "type": "paper",
+      "id": "stastny-2017",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171632",
+      "notes": "Systematic review used for horizontal pressing family context and EMG interpretation limits."
+    },
+    {
+      "type": "paper",
+      "id": "wattanaprakornkul-2011",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1050641111001428",
+      "notes": "Bench press and row rotator cuff recruitment study; used only as an inference source for glenohumeral stabilization."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "ResearchGate copies of seated chest press and chest press machine papers",
+      "reason": "Duplicate secondary hosting; publisher, repository PDF, and journal pages were preferred for the evidence register."
+    },
+    {
+      "title": "PubMed pages for Muyor 2023, Coratella 2020, Saeterbakken 2011, and Wattanaprakornkul 2011",
+      "reason": "Search results helped discovery, but pages were not used as reviewed files because the browser hit reCAPTCHA for several PubMed opens."
+    },
+    {
+      "title": "Consumer exercise articles and social results for machine chest press",
+      "reason": "Not used for muscle-role evidence because they are not primary studies, systematic reviews, or biomechanics sources."
+    },
+    {
+      "title": "Saeterbakken et al. 2011 Smith/barbell/dumbbell stability comparison",
+      "reason": "Relevant to general stability but not included in the final movement evidence because the selected direct seated machine and lever-machine studies were closer to the assigned variant."
+    },
+    {
+      "title": "Abelleira-Lamela et al. 2024 seated chest press equipment comparison",
+      "reason": "Identified as a potentially relevant newer direct seated chest press EMG study, but the accessible full text was blocked during this pass; not used for visible roles."
+    }
+  ],
+  "notes": "Variant assumption is a seated machine chest press with guided handles or a guided lever path. Pectoralis major primary, anterior deltoid secondary, and triceps brachii secondary are based on direct seated chest press/chest press machine EMG plus horizontal pressing review context. Serratus anterior support is based on direct lever-machine EMG and scapular kinematics. Rotator cuff support is explicitly an inference from close bench-press rotator cuff EMG, not direct seated machine evidence. Biceps brachii and lateral deltoid were not added as visible roles because direct evidence either did not measure them for this variant or suggested stabilizer differences without enough app-relevant contribution for this guided machine. Main unresolved uncertainty is commercial machine geometry: seat angle, handle path, neutral versus pronated grip, lever versus cable stack, and range-of-motion stops can alter emphasis."
+}

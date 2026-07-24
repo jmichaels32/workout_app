@@ -1,0 +1,228 @@
+{
+  "id": "bar_bench_press",
+  "name": "Bar Bench Press",
+  "aliases": [
+    "chest_press",
+    "barbell_bench_press",
+    "flat_bench_press"
+  ],
+  "family": "chest_press",
+  "equipment": "barbell",
+  "variantType": "flat_barbell",
+  "variant": "Flat barbell bench press, treated as a free-weight horizontal pressing pattern.",
+  "description": "Lie flat with eyes under the racked bar, feet planted, shoulder blades set against the bench, and hands slightly wider than shoulder width; unrack by moving the bar over the shoulder joints with wrists stacked over elbows, lower under control toward the lower chest or sternum with elbows roughly 45-70 degrees from the torso, then press back up without losing shoulder position.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Chest",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 72,
+      "rationale": "Strong pectoralis and triceps loading, but the fixed bar path and powerlifting-style setup make it less purely hypertrophy-biased than freer or more targeted press options."
+    },
+    "strength": {
+      "score": 94,
+      "rationale": "Elite upper-body strength anchor because heavy bilateral loading, stable setup, and precise barbell increments map cleanly to force expression."
+    },
+    "joint_resilience": {
+      "score": 28,
+      "rationale": "Provides some shoulder and elbow exposure, but it is not primarily a joint-resilience drill and can be limiting for irritated shoulders when technique, range, or volume are poorly matched."
+    },
+    "athletic_transfer": {
+      "score": 18,
+      "rationale": "Low transfer to athletic coordination because the body is supine, bilateral, externally braced, and the movement path is narrow."
+    },
+    "control": {
+      "score": 22,
+      "rationale": "Requires bar path and bracing control, but balance, unilateral control, locomotion, and whole-body coordination demands are limited."
+    },
+    "fatigue_efficiency": {
+      "score": 45,
+      "rationale": "Useful pressing stimulus, but heavy barbell loading, warm-up sets, spotter/rack demands, and shoulder/triceps fatigue reduce stimulus-per-recovery efficiency."
+    },
+    "setup": {
+      "score": 45,
+      "rationale": "Requires a bench, rack, bar, plates, safety setup or spotter judgment, and repeatable rack height. It is common but not low-friction."
+    },
+    "ease": {
+      "score": 48,
+      "rationale": "The pattern is familiar, but safe repeatable execution requires bar path, scapular position, grip, arch, touch point, and unrack control."
+    },
+    "progression": {
+      "score": 94,
+      "rationale": "One of the cleanest progressive-overload movements because load, reps, range, and barbell increments are directly trackable."
+    },
+    "support": {
+      "score": 42,
+      "rationale": "The bench supports the torso, but the bar path is free and the lifter must stabilize shoulders, elbows, wrists, and trunk tension under heavy load."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "High activation in seated/horizontal press EMG.",
+        "evidence": "Surface electromyography studies of seated chest press and horizontal bench press variants consistently measure substantial pectoralis major activation during horizontal pressing.",
+        "sourceIds": [
+          "muyor-2023",
+          "stastny-2017",
+          "rodriguez-ridao-2020",
+          "borges-2019"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Meaningful press assist; angle/path sensitive.",
+        "evidence": "Anterior deltoid activity is repeatedly measured during horizontal pressing; its contribution varies with bench angle, grip, and handle path.",
+        "sourceIds": [
+          "muyor-2023",
+          "stastny-2017",
+          "rodriguez-ridao-2020",
+          "borges-2019"
+        ]
+      },
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Elbow-extension contributor; grip/path sensitive.",
+        "evidence": "Triceps brachii contributes to elbow extension during pressing, with activation influenced by grip width and movement variant.",
+        "sourceIds": [
+          "muyor-2023",
+          "stastny-2017",
+          "rodriguez-ridao-2020"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Scapulothoracic support; not primary chest target.",
+        "evidence": "Serratus anterior activity has been reported in bench press and chest press comparisons and is best classified here as scapulothoracic support rather than a primary hypertrophy target.",
+        "sourceIds": [
+          "borges-2019"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Glenohumeral stabilization during pressing.",
+        "evidence": "Bench press research demonstrates direction-specific rotator cuff recruitment consistent with glenohumeral stabilization during pressing.",
+        "sourceIds": [
+          "wattanaprakornkul-2011"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Flat barbell horizontal press: pectoralis major primary; anterior deltoid and triceps secondary; serratus anterior and rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Grip width, bar path, arch, bench angle, and equipment change emphasis; dumbbell and machine versions should be separate movements.",
+    "summary": "The flat bar bench press is classified as a free-weight horizontal pressing exercise. The best available evidence supports pectoralis major as the primary target, with clinically meaningful anterior deltoid and triceps brachii contribution. Serratus anterior and rotator cuff involvement is classified as shoulder and scapulothoracic support rather than as a primary hypertrophy target.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation during a specific exercise condition. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, long-term adaptation, or injury risk.",
+    "limitations": "Bar bench press mechanics differ by grip width, touch point, arch, range of motion, tempo, load, and bench angle. Machine and dumbbell pressing evidence is used only when it is biomechanically close to the flat barbell horizontal press pattern.",
+    "studies": [
+      {
+        "id": "muyor-2023",
+        "type": "Horizontal bench/chest press EMG",
+        "shortCitation": "Muyor et al., J Hum Kinet, 2023",
+        "finding": "Seated chest press/bench variants measured pec regions, anterior deltoid, and triceps.",
+        "citation": "Muyor JM, Rodriguez-Ridao D, Oliva-Lozano JM. Comparison of Muscle Activity between the Horizontal Bench Press and the Seated Chest Press Exercises Using Several Grips. Journal of Human Kinetics. 2023;87:23-34. doi:10.5114/jhk/161468.",
+        "doi": "10.5114/jhk/161468",
+        "url": "https://jhk.termedia.pl/Comparison-of-Muscle-Activity-between-the-Horizontal-Bench-Press-and-the-Seated-Chest%2C161468%2C0%2C2.html",
+        "relevance": "Directly compared seated chest press grips with horizontal bench press grips and measured pectoralis major regions, anterior deltoid, and triceps brachii.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "support score"
+        ]
+      },
+      {
+        "id": "stastny-2017",
+        "type": "Systematic review of bench press EMG",
+        "shortCitation": "Stastny et al., PLOS ONE, 2017",
+        "finding": "Bench press EMG literature supports pec/triceps dominance and key interpretation limits.",
+        "citation": "Stastny P, Golas A, Blazek D, Maszczyk A, Wilk M, Pietraszewski P, Petr M, Uhlir P, Zajac A. A systematic review of surface electromyography analyses of the bench press movement task. PLOS ONE. 2017;12(2):e0171632. doi:10.1371/journal.pone.0171632.",
+        "doi": "10.1371/journal.pone.0171632",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171632",
+        "relevance": "Summarizes bench press EMG evidence and supports pectoralis major and triceps brachii as dominant contributors in the movement family.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "rating anchors",
+          "limitations"
+        ]
+      },
+      {
+        "id": "rodriguez-ridao-2020",
+        "type": "Bench inclination EMG study",
+        "shortCitation": "Rodriguez-Ridao et al., IJERPH, 2020",
+        "finding": "Bench angle shifts pec, anterior deltoid, and triceps activation.",
+        "citation": "Rodriguez-Ridao D, Antequera-Vique JA, Martin-Fuentes I, Muyor JM. Effect of Five Bench Inclinations on the Electromyographic Activity of the Pectoralis Major, Anterior Deltoid, and Triceps Brachii during the Bench Press Exercise. International Journal of Environmental Research and Public Health. 2020;17(19):7339. doi:10.3390/ijerph17197339.",
+        "doi": "10.3390/ijerph17197339",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33049982/",
+        "relevance": "Shows how bench angle changes pectoralis major, anterior deltoid, and triceps brachii activation in the close horizontal/incline pressing family.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wattanaprakornkul-2011",
+        "type": "Rotator cuff recruitment study",
+        "shortCitation": "Wattanaprakornkul et al., J Electromyogr Kinesiol, 2011",
+        "finding": "Rotator cuff recruitment is direction-specific during bench press and row tasks.",
+        "citation": "Wattanaprakornkul D, Halaki M, Cathers I, Ginn KA. Direction-specific recruitment of rotator cuff muscles during bench press and row. Journal of Electromyography and Kinesiology. 2011;21(6):1041-1049. doi:10.1016/j.jelekin.2011.09.002.",
+        "doi": "10.1016/j.jelekin.2011.09.002",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+        "relevance": "Supports rotator cuff involvement as direction-specific shoulder stabilization during bench press tasks.",
+        "usedFor": [
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "borges-2019",
+        "type": "Chest press lever machine EMG and scapular kinematics",
+        "shortCitation": "Borges et al., JPES, 2019",
+        "finding": "Chest press lever machine data includes pec, anterior deltoid, serratus, and scapular kinematics.",
+        "citation": "Borges E, Dalla H, Mastandrea L, Nunes S, Santarem J. Comparative evaluation of muscular activation and scapular kinematics in a chest press lever machine and a barbell bench press. Journal of Physical Education and Sport. 2019;19:912-916. doi:10.7752/jpes.2019.s3131.",
+        "doi": "10.7752/jpes.2019.s3131",
+        "url": "https://efsupit.ro/images/stories/iunie2019/Art%20131.pdf",
+        "relevance": "Compared a chest press lever machine with barbell bench press and measured pectoralis major, anterior deltoid, and serratus anterior with scapular kinematics.",
+        "usedFor": [
+          "support muscle role",
+          "primary muscle role",
+          "secondary muscle role",
+          "support score"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "id": "seated_machine_chest_fly",
+  "name": "Seated Machine Chest Fly",
+  "aliases": [
+    "machine_chest_fly",
+    "pec_deck",
+    "pec_deck_fly",
+    "machine_pec_fly",
+    "seated_pec_deck",
+    "seated_machine_pec_fly",
+    "butterfly_machine"
+  ],
+  "family": "chest_fly",
+  "equipment": "machine",
+  "variantType": "seated_machine",
+  "variant": "Seated pec-deck or machine chest fly with guided arms, pads, or handles, treated separately from dumbbell fly, cable fly, and chest press variations.",
+  "description": "Sit with the back against the pad, feet flat, and the seat adjusted so the handles or pads travel around mid-chest height. Set the start position so the chest is stretched without forcing the shoulders forward, keep a small consistent elbow bend, bring the arms together along the guided path, then return slowly until the chest is loaded again.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Chest",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 82,
+      "rationale": "Strong chest hypertrophy option because direct pec-deck evidence shows high pectoralis activation and the guided path lets most effort stay local to the chest."
+    },
+    "strength": {
+      "score": 26,
+      "rationale": "Useful for shoulder-adduction force in a narrow pattern, but it is a single-joint isolation movement with lower absolute loading and little transfer to pressing strength."
+    },
+    "joint_resilience": {
+      "score": 18,
+      "rationale": "Can provide controlled shoulder horizontal-adduction exposure, but the long-arm stretched position and fixed path make it a limited general joint-resilience tool."
+    },
+    "athletic_transfer": {
+      "score": 2,
+      "rationale": "Very little athletic-transfer signal because the task is seated, bilateral, guided, and isolated from whole-body force production."
+    },
+    "control": {
+      "score": 5,
+      "rationale": "Very low motor-control demand because the machine constrains the path and removes most balance and free-arm stabilization."
+    },
+    "fatigue_efficiency": {
+      "score": 88,
+      "rationale": "High local chest stimulus with low systemic cost and little triceps fatigue leakage compared with pressing."
+    },
+    "setup": {
+      "score": 78,
+      "rationale": "Low-friction once the machine is available, with deductions for seat height, start-range, arm-pad or handle, and load-stack adjustments."
+    },
+    "ease": {
+      "score": 88,
+      "rationale": "Easy to learn and repeat because the path is guided, though shoulder range and start position still need sensible adjustment."
+    },
+    "progression": {
+      "score": 76,
+      "rationale": "Load, reps, and range are simple to record, with deductions for coarse stack jumps, machine-specific friction, and differing cam paths."
+    },
+    "support": {
+      "score": 94,
+      "rationale": "Very high external support from the seat, back pad, guided arms, and constrained path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Direct pec-deck EMG supports the pec as the main target.",
+        "evidence": "Machine pec-deck and chest-exercise EMG studies measured pectoralis major activity directly and found pec-deck activation similar to bench press or among the highest tested chest exercises. The movement is a guided horizontal shoulder-adduction pattern, matching the intended pectoralis major target.",
+        "sourceIds": [
+          "rocha-junior-2007",
+          "schanke-2012",
+          "stastny-2017"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Direct pec-deck EMG shows meaningful shoulder-flexion/adduction assistance.",
+        "evidence": "Pec-deck studies directly measured anterior deltoid activity and found meaningful recruitment during the exercise. It is classified as secondary because the movement is programmed as a chest fly, machine geometry and arm rotation can shift deltoid contribution, and pectoralis major remains the intended target.",
+        "sourceIds": [
+          "rocha-junior-2007",
+          "botton-2013",
+          "solstad-2020",
+          "stastny-2017"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Seated machine chest fly: pectoralis major primary; anterior deltoid secondary; no visible support muscles added.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, pain, or injury risk.",
+    "limitsShort": "Pec-deck pad versus handle design, seat height, arm path, start range, elbow angle, load, tempo, and shoulder rotation can shift emphasis.",
+    "summary": "The seated machine chest fly is classified as a guided horizontal shoulder-adduction isolation movement. Direct pec-deck EMG supports pectoralis major as the primary visible target and anterior deltoid as a meaningful secondary contributor. Triceps brachii is not shown because direct pec-deck evidence reports it as much less relevant than in pressing. Biceps brachii is not shown because stronger biceps evidence comes from free-weight dumbbell flyes, where independent dumbbells and elbow-angle stabilization are not the same demand as a guided machine.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating muscle excitation in a specific machine setup, load, and range of motion. It should not be treated as a direct measure of long-term hypertrophy, mechanical tension, joint stress, pain risk, or injury risk.",
+    "limitations": "The evidence base mixes exact machine pec-deck studies, a university thesis on multiple chest exercises, and close dumbbell-fly or bench-press-family evidence. Direct studies used small samples, mostly young trained men, and differed in load prescription, cadence, normalization, exercise order, and whether the pec deck used forearm pads or handles. Commercial machines differ in cam design, seat geometry, start-range stops, handle height, and whether the elbows are flexed near 90 degrees or held slightly bent.",
+    "studies": [
+      {
+        "id": "rocha-junior-2007",
+        "type": "Direct machine pec-deck EMG",
+        "shortCitation": "Rocha Junior et al., Rev Bras Med Esporte, 2007",
+        "finding": "Machine pec deck and bench press showed similar pectoralis major and anterior deltoid RMS activity, while triceps brachii was much less relevant in the pec deck.",
+        "citation": "Rocha Junior VA, Gentil P, Oliveira E, do Carmo J. Comparison among the EMG activity of the pectoralis major, anterior deltoidis and triceps brachii during the bench press and peck deck exercises. Revista Brasileira de Medicina do Esporte. 2007;13(1):43e-46e. doi:10.1590/S1517-86922007000100012.",
+        "doi": "10.1590/S1517-86922007000100012",
+        "url": "https://www.scielo.br/j/rbme/a/wZB7qVqH98pXGzH9p4kyg5Q/?format=pdf&lang=en",
+        "relevance": "Directly studied a machine pec deck in 13 trained men at 10RM load and measured pectoralis major, anterior deltoid, and triceps brachii.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "triceps exclusion",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "schanke-2012",
+        "type": "Direct pec-deck pectoralis major EMG thesis",
+        "shortCitation": "Schanke, University of Wisconsin-La Crosse thesis, 2012",
+        "finding": "The pec-deck machine was not significantly different from barbell bench press for pectoralis major activation and was among the highest tested chest exercises.",
+        "citation": "Schanke W. Electromyographical analysis of the pectoralis major muscle during various chest exercises. Master's thesis. University of Wisconsin-La Crosse; 2012.",
+        "url": "https://minds.wisc.edu/items/48f80f8d-09fb-4290-b552-3fc15d3a5f64",
+        "relevance": "Directly included the pec-deck machine and pectoralis major EMG in healthy resistance-trained men; useful for the primary chest-target classification, with lower evidentiary weight than peer-reviewed journal studies.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "botton-2013",
+        "type": "Direct pec-deck deltoid EMG",
+        "shortCitation": "Botton et al., Medicina Sportiva, 2013",
+        "finding": "Anterior deltoid activation during peck deck was about 50% MVIC and similar to bench press in trained men.",
+        "citation": "Botton CE, Wilhelm EN, Ughini CC, Pinto RS, Lima CS. Electromyographical analysis of the deltoid between different strength training exercises. Medicina Sportiva. 2013;17(2):67-71. doi:10.5604/17342260.1055261.",
+        "doi": "10.5604/17342260.1055261",
+        "url": "https://exercisesforfree.com/pdf/386.pdf",
+        "relevance": "Directly measured anterior, medial, and posterior deltoid activity during a peck-deck exercise at 10RM load; used to classify anterior deltoid as a visible secondary contributor.",
+        "usedFor": [
+          "secondary muscle role",
+          "ease score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "solstad-2020",
+        "type": "Close dumbbell fly EMG comparison",
+        "shortCitation": "Solstad et al., J Sports Sci Med, 2020",
+        "finding": "Dumbbell flyes involved pectoralis major and anterior deltoid but showed lower agonist activation than barbell bench press overall; biceps brachii was higher in flyes, likely from elbow and arm stabilization.",
+        "citation": "Solstad TE, Andersen V, Shaw M, Hoel EM, Vonheim A, Saeterbakken AH. A Comparison of Muscle Activation between Barbell Bench Press and Dumbbell Flyes in Resistance-Trained Males. Journal of Sports Science and Medicine. 2020;19(4):645-651.",
+        "url": "https://www.jssm.org/jssm-19-645.xml-Fulltext",
+        "relevance": "Not a machine pec-deck study; used as close fly-pattern evidence for free-weight fly mechanics, biceps exclusion boundaries, and rating limits.",
+        "usedFor": [
+          "secondary muscle role",
+          "biceps exclusion",
+          "strength score",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "stastny-2017",
+        "type": "Systematic review of bench-press EMG with pec-deck context",
+        "shortCitation": "Stastny et al., PLOS ONE, 2017",
+        "finding": "Bench-press EMG literature supports pectoralis major as a dominant horizontal-press muscle and notes that pec deck preferentially stimulates pectoralis major and anterior deltoid over triceps brachii.",
+        "citation": "Stastny P, Golas A, Blazek D, Maszczyk A, Wilk M, Pietraszewski P, Petr M, Uhlir P, Zajac A. A systematic review of surface electromyography analyses of the bench press movement task. PLOS ONE. 2017;12(2):e0171632. doi:10.1371/journal.pone.0171632.",
+        "doi": "10.1371/journal.pone.0171632",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171632",
+        "relevance": "Provides review context for horizontal pressing and pec-deck comparisons, plus interpretation limits for EMG-based classifications.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "rating anchors",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}
