@@ -4,6 +4,8 @@ This app is static. GitHub Pages hosts the app files; workout data stays in the 
 
 ## One-Time GitHub Setup
 
+This folder is already initialized as a git repo and committed on `main`.
+
 1. Log in to GitHub CLI:
 
 ```bash
@@ -14,11 +16,10 @@ gh auth login
 
 ```bash
 cd /Users/jackmichaels/workout_app
-git init
-git add .
-git commit -m "Initial workout PWA"
 gh repo create workout_app --public --source=. --remote=origin --push
 ```
+
+Use `--private` instead of `--public` if you do not want the source repo public. Public is the simplest path for GitHub Pages.
 
 3. In GitHub, open the repo settings:
 
@@ -63,4 +64,3 @@ git push
 ```
 
 If the phone keeps showing an old version, hard refresh Safari or remove and re-add the home-screen app. The service worker cache version in `sw.js` should be bumped for app changes.
-
