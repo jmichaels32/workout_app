@@ -1,4 +1,4 @@
-const CACHE_NAME = "movement-library-mvp-v85";
+const CACHE_NAME = "movement-library-mvp-v86";
 const ASSETS = ["./", "index.html", "manifest.webmanifest", "icon.svg", "data/movements.json"];
 
 self.addEventListener("install", event => {
@@ -19,6 +19,7 @@ self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
   event.respondWith(
     fetch(event.request).then(response => {
+        if (!response.ok) return response;
         const copy = response.clone();
         caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
         return response;

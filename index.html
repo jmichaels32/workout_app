@@ -1254,11 +1254,15 @@
     }
 
     .collection-header {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 12px;
-      align-items: end;
+      display: block;
       margin-bottom: 10px;
+    }
+
+    .collection-title h1 { margin-bottom: 4px; }
+
+    .collection-title p {
+      margin-bottom: 0;
+      color: var(--muted);
     }
 
     .collection-rack,
@@ -1271,13 +1275,67 @@
       max-width: 100%;
     }
 
-    .collection-picker {
+    .collection-controls {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 8px;
       margin-bottom: 10px;
+    }
+
+    .collection-menu-button {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      gap: 1px 8px;
+      min-height: 44px;
+      text-align: left;
+    }
+
+    .collection-menu-button::after {
+      content: "+";
+      grid-column: 2;
+      grid-row: 1 / 3;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .collection-menu-button.active::after {
+      content: "-";
+      color: var(--accent-ink);
+    }
+
+    .collection-menu-button span {
+      grid-column: 1;
+      grid-row: 2;
+      min-width: 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .collection-menu-button.active {
+      border-color: var(--accent-line);
+      background: var(--accent-soft);
+    }
+
+    .collection-dropdown-panel {
+      display: grid;
+      grid-column: 1 / -1;
+      gap: 8px;
       padding: 10px;
       border: 1px solid var(--soft-line);
       background: var(--panel);
+      animation: subtype-open 170ms ease-out;
+    }
+
+    .collection-picker {
+      display: grid;
+      gap: 8px;
     }
 
     .collection-rack {
@@ -1348,8 +1406,6 @@
     .collection-sort {
       display: grid;
       gap: 6px;
-      padding-top: 8px;
-      border-top: 1px solid var(--ink-12);
     }
 
     .collection-sort-row {
@@ -1488,6 +1544,7 @@
       justify-self: start;
       gap: 2px;
       width: 96px;
+      min-width: 0;
       min-height: 64px;
       padding: 6px 7px;
       border: 1px solid color-mix(in srgb, var(--score-color, var(--soft-line)) 46%, var(--soft-line));
@@ -1500,6 +1557,13 @@
     .movement-total span { color: var(--muted); font-size: 10px; }
     .movement-total strong { font-size: 18px; }
     .movement-total.compact strong { font-size: 13px; }
+    .movement-total span,
+    .movement-total.compact em {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
     .movement-total.compact em {
       color: var(--muted);
       font-size: 10px;
@@ -1511,6 +1575,7 @@
       display: grid;
       gap: 6px;
       align-content: start;
+      min-width: 0;
     }
 
     .community-rating { display: flex; align-items: center; gap: 8px; margin: 4px 0 8px; }
@@ -1852,14 +1917,20 @@
       .collection-header,
       .detail-header-grid,
       .movement-card-body { grid-template-columns: minmax(0, 1fr); }
-      .movement-listing { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "score arrow" "copy copy"; overflow: hidden; }
+      .movement-listing { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "copy arrow" "score score"; overflow: hidden; }
       .movement-listing > .movement-score-stack { grid-area: score; }
-      .movement-total { width: 94px; }
+      .movement-score-stack { grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
+      .movement-total { width: 100%; min-height: 58px; }
       .listing-copy { grid-area: copy; }
       .movement-arrow { grid-area: arrow; justify-self: end; }
       .detail-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
       .detail-evidence-button { width: 100%; }
+      .collection-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .collection-menu-button { padding: 8px; }
+      .collection-menu-button span { font-size: 11px; }
       .collection-sort-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sort-subtype-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sort-subtype-grid { grid-column: 1 / -1; }
       .region-macro-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .home-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .home-stat { min-height: 54px; padding: 8px; }
@@ -2028,6 +2099,8 @@
     let activeCollectionGroup = null;
     let activeRegionMacro = null;
     let selectedCollectionTags = [];
+    let collectionFiltersOpen = false;
+    let collectionSortOpen = false;
     let collectionSortMetric = "composite";
     let collectionSortSubtype = null;
     let collectionSortDirection = "none";
@@ -4085,13 +4158,7 @@
 
     function renderMovementCollection() {
       const movements = collectionMovements();
-      const selectedTags = selectedCollectionTagObjects();
-      const title = selectedTags.length
-        ? selectedTags.map(tag => tag.label).join(" + ")
-        : activeCollectionGroup
-          ? tagGroupLabel(activeCollectionGroup)
-          : "Movements";
-      const kicker = selectedTags.length ? "Selected filters" : "Browse";
+      const scope = collectionSummaryLabel();
       movementCollection.innerHTML = `
         <div class="screen-topbar">
           <button type="button" class="back-button" onclick="${activeWorkout() ? "finishWorkoutMovementPicker()" : "openMovementHome()"}">Back</button>
@@ -4099,14 +4166,12 @@
         </div>
         <section class="collection-header">
           <div class="collection-title">
-            <p class="eyebrow">${escapeHTML(kicker)}</p>
-            <h1>${escapeHTML(title)}</h1>
-            <p>${movements.length} movement${movements.length === 1 ? "" : "s"} in this scope.</p>
+            <h1>Movements</h1>
+            <p>${escapeHTML(scope)} · ${movements.length} movement${movements.length === 1 ? "" : "s"}</p>
           </div>
-          <span class="tag tag-library">${selectedTags.length ? `${selectedTags.length} selected` : "No filters"}</span>
         </section>
         ${renderCompareTray()}
-        ${renderCollectionPicker()}
+        ${renderCollectionControls()}
         <div class="movement-list">
           ${movements.map(renderMovementListing).join("") || `<p class="empty-state">No movements in this collection yet.</p>`}
         </div>
@@ -4350,9 +4415,30 @@
       `;
     }
 
-    function renderCollectionPicker() {
+    function renderCollectionControls() {
       return `
-        <section class="collection-picker" aria-label="Movement filters">
+        <section class="collection-controls" aria-label="Movement library controls">
+          <button
+            type="button"
+            class="collection-menu-button${collectionFiltersOpen ? " active" : ""}"
+            onclick="toggleCollectionFilters()"
+            aria-expanded="${collectionFiltersOpen ? "true" : "false"}"
+          >Filters <span>${escapeHTML(filterControlLabel())}</span></button>
+          <button
+            type="button"
+            class="collection-menu-button${collectionSortOpen ? " active" : ""}"
+            onclick="toggleCollectionSortPanel()"
+            aria-expanded="${collectionSortOpen ? "true" : "false"}"
+          >Sort <span>${escapeHTML(sortControlLabel())}</span></button>
+          ${collectionFiltersOpen ? renderCollectionFilterPanel() : ""}
+          ${collectionSortOpen ? renderCollectionSortPanel() : ""}
+        </section>
+      `;
+    }
+
+    function renderCollectionFilterPanel() {
+      return `
+        <div class="collection-dropdown-panel collection-picker" aria-label="Movement filters">
           <div class="collection-rack">
             ${movementCollections().map(renderCollectionRackButton).join("")}
           </div>
@@ -4361,13 +4447,20 @@
               ${renderCollectionOptions()}
             </div>
           ` : ""}
-          ${renderCollectionSort()}
           ${selectedCollectionTags.length ? `
             <div class="selected-tags">
               ${selectedCollectionTagObjects().map(renderSelectedCollectionTag).join("")}
             </div>
           ` : ""}
-        </section>
+        </div>
+      `;
+    }
+
+    function renderCollectionSortPanel() {
+      return `
+        <div class="collection-dropdown-panel">
+          ${renderCollectionSort()}
+        </div>
       `;
     }
 
@@ -4376,7 +4469,6 @@
       const directionStyle = isSortingActive() ? ratingStyle(collectionSortMetric) : "";
       return `
         <div class="collection-sort" aria-label="Movement sorting">
-          <p class="eyebrow">Sort</p>
           <div class="collection-sort-row">
             ${Object.entries(SORT_LABELS).map(([key, label]) => renderSortButton(key, label)).join("")}
             <button
@@ -4430,6 +4522,21 @@
       if (!isSortingActive() || collectionSortMetric !== key || collectionSortMenuOpen) return fallback;
       const ratings = sortSubtypeRatings(key);
       return ratings?.[activeSortSubtype()] || fallback;
+    }
+
+    function filterControlLabel() {
+      const selectedTags = selectedCollectionTagObjects();
+      if (selectedTags.length) return `${selectedTags.length} selected`;
+      return activeCollectionGroup ? tagGroupLabel(activeCollectionGroup) : "Any";
+    }
+
+    function sortControlLabel() {
+      if (!isSortingActive()) return "None";
+      const direction = collectionSortDirection === "asc" ? "low first" : "high first";
+      const metric = collectionSortMetric === "composite"
+        ? "Composite"
+        : sortSubtypeRatings(collectionSortMetric)?.[activeSortSubtype()] || SORT_LABELS[collectionSortMetric];
+      return `${metric}, ${direction}`;
     }
 
     function renderCompareTray() {
@@ -4649,6 +4756,22 @@
       renderMovementApp(options);
     }
 
+    function toggleCollectionFilters(options = {}) {
+      collectionFiltersOpen = !collectionFiltersOpen;
+      if (collectionFiltersOpen) collectionSortOpen = false;
+      movementView = "collection";
+      activeMovementId = null;
+      renderMovementApp(options);
+    }
+
+    function toggleCollectionSortPanel(options = {}) {
+      collectionSortOpen = !collectionSortOpen;
+      if (collectionSortOpen) collectionFiltersOpen = false;
+      movementView = "collection";
+      activeMovementId = null;
+      renderMovementApp(options);
+    }
+
     function toggleCollectionTag(label, group, options = {}) {
       const key = collectionTagKey(label, group);
       selectedCollectionTags = isCollectionTagSelected(label, group)
@@ -4656,6 +4779,7 @@
         : [...selectedCollectionTags, key];
       activeCollectionGroup = group;
       if (group === "region") activeRegionMacro = regionMacroForLabel(label);
+      collectionFiltersOpen = true;
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -4667,6 +4791,8 @@
       collectionSortMetric = nextMetric;
       collectionSortSubtype = defaultSortSubtype(collectionSortMetric, collectionSortSubtype);
       collectionSortDirection = collectionSortDirection === "none" ? "desc" : collectionSortDirection;
+      collectionSortOpen = true;
+      collectionFiltersOpen = false;
       collectionSortMenuOpen = Boolean(sortSubtypeRatings(collectionSortMetric)) &&
         (!sameActiveMetric || !collectionSortMenuOpen);
       movementView = "collection";
@@ -4677,6 +4803,7 @@
     function setCollectionSortSubtype(subtype, options = {}) {
       collectionSortSubtype = normalizeSortSubtype(collectionSortMetric, subtype);
       collectionSortMenuOpen = false;
+      collectionSortOpen = false;
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -4685,6 +4812,8 @@
     function toggleSortDirection(options = {}) {
       collectionSortDirection = nextSortDirection(collectionSortDirection);
       if (!isSortingActive()) collectionSortMenuOpen = false;
+      collectionSortOpen = true;
+      collectionFiltersOpen = false;
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -4694,6 +4823,8 @@
       activeCollectionGroup = group;
       if (group !== "region") activeRegionMacro = null;
       if (group === "region" && !activeRegionMacro) activeRegionMacro = firstRegionMacro();
+      collectionFiltersOpen = true;
+      collectionSortOpen = false;
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -5008,6 +5139,8 @@
         collectionSortMetric = normalizeSortMetric(event.state.collectionSortMetric);
         collectionSortSubtype = normalizeSortSubtype(collectionSortMetric, event.state.collectionSortSubtype);
         collectionSortDirection = normalizeSortDirection(event.state.collectionSortDirection);
+        collectionFiltersOpen = false;
+        collectionSortOpen = false;
         collectionSortMenuOpen = false;
         activeMovementId = event.state.activeMovementId || null;
         compareAnchorId = event.state.compareAnchorId || null;
@@ -5821,11 +5954,13 @@
 
       Promise.allSettled(loadJobs).then(results => {
         const failed = results.filter(result => result.status === "rejected");
-        if (failed.length) {
-          showViewerMessage(container, `Could not load ${failed.length} local mesh file${failed.length === 1 ? "" : "s"}`);
-          console.error("BodyParts3D mesh load failures", failed);
+        const loadedMeshCount = [...meshesByMuscleId.values()].reduce((sum, meshes) => sum + meshes.length, 0);
+        if (!loadedMeshCount) {
+          if (failed.length) console.warn("BodyParts3D mesh load failures", failed);
+          showViewerMessage(container, "3D mesh unavailable");
           return;
         }
+        if (failed.length) console.warn("BodyParts3D partial mesh load failures", failed);
 
         frameObject(root, camera, controls, movement);
         const selectedMuscle = window.workoutApp?.selectedMuscles?.[movement.id];
