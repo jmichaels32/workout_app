@@ -422,6 +422,8 @@
       margin: 0 0 2px;
       color: var(--muted);
       font-size: 12px;
+      font-weight: 800;
+      text-align: center;
     }
 
     .mobile-week-days {
@@ -431,11 +433,10 @@
 
     .mobile-calendar-day {
       display: grid;
-      grid-template-columns: minmax(86px, 0.72fr) minmax(0, 1fr);
-      align-items: center;
-      gap: 8px;
-      min-height: 52px;
-      padding: 8px;
+      align-content: space-between;
+      gap: 5px;
+      min-height: 58px;
+      padding: 6px;
       border: 1px solid var(--soft-line);
       background: var(--panel);
     }
@@ -454,38 +455,44 @@
       display: grid;
       gap: 1px;
       min-width: 0;
+      text-align: left;
     }
 
     .mobile-calendar-date span {
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
     }
 
     .mobile-calendar-date strong {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 1.1;
     }
 
     .mobile-calendar-day .calendar-day-actions {
       position: static;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       gap: 4px;
       min-height: 22px;
       pointer-events: auto;
     }
 
     .mobile-calendar-day .calendar-add-button {
-      width: 24px;
-      min-width: 24px;
+      width: 20px;
+      min-width: 20px;
+      min-height: 20px;
+      height: 20px;
       opacity: 1;
       pointer-events: auto;
+      font-size: 15px;
     }
 
     .mobile-calendar-day .calendar-workout-button {
-      width: 18px;
-      min-width: 18px;
+      width: 14px;
+      min-width: 14px;
+      min-height: 20px;
+      height: 20px;
     }
 
     .mobile-calendar-day .calendar-workout-button:hover,
@@ -1661,8 +1668,13 @@
     }
 
     .movement-total span { color: var(--muted); font-size: 10px; }
-    .movement-total strong { font-size: 18px; }
-    .movement-total.compact strong { font-size: 13px; }
+    .movement-total strong { font-size: 18px; line-height: 1; }
+    .movement-total-value {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      min-width: 0;
+    }
     .movement-total span,
     .movement-total.compact em {
       min-width: 0;
@@ -1674,6 +1686,7 @@
       color: var(--muted);
       font-size: 10px;
       font-style: normal;
+      font-weight: 700;
       overflow-wrap: anywhere;
     }
 
@@ -1746,8 +1759,12 @@
 
     .muscle-box .role-label {
       display: block;
-      padding-bottom: 7px;
-      border-bottom: 1px solid var(--soft-line);
+      padding-bottom: 8px;
+      border-bottom: 2px solid currentColor;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
     }
 
     .muscle-role {
@@ -1771,10 +1788,13 @@
     }
 
     .muscle-chip.active {
-      border-color: var(--accent-line);
-      background: linear-gradient(90deg, var(--accent-soft), transparent 76%);
+      border-bottom-color: var(--accent-line);
+      background-color: var(--accent);
+      background-image: none;
+      box-shadow: inset 0 0 0 1px var(--accent-line);
       color: var(--accent-ink);
-      font-weight: 700;
+      font-weight: 800;
+      padding-left: 5px;
     }
 
     .movement-card-body {
@@ -2129,7 +2149,19 @@
       .workout-library-header h2 { text-align: left; }
       .calendar-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .month-calendar { display: none; }
-      .mobile-week-calendar { display: grid; gap: 12px; }
+      .mobile-week-calendar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        align-items: start;
+      }
+      .mobile-week-block {
+        padding-top: 0;
+        border-top: 0;
+      }
+      .mobile-week-days {
+        gap: 5px;
+      }
       .calendar-day { min-height: 54px; padding: 6px; }
       .calendar-day-number { font-size: 12px; }
       .calendar-day-actions { left: 4px; right: 4px; bottom: 4px; gap: 2px; }
@@ -2183,8 +2215,10 @@
       }
       .muscle-box .role-label {
         display: block;
-        font-size: 10px;
-        line-height: 1.1;
+        font-size: 11px;
+        font-weight: 900;
+        line-height: 1.15;
+        text-transform: uppercase;
       }
       .muscle-role {
         gap: 5px;
@@ -2193,6 +2227,13 @@
         padding: 7px 0;
         font-size: 10px;
         line-height: 1.15;
+      }
+      .muscle-chip.active,
+      .muscle-chip.active:hover {
+        border-bottom-color: var(--accent-line);
+        background-color: var(--accent);
+        background-image: none;
+        color: var(--accent-ink);
       }
       .compare-grid, .evidence-readout, .role-evidence-card { grid-template-columns: 1fr; }
       .local-anatomy-viewer { min-height: 360px; }
@@ -4406,9 +4447,9 @@
       const centerDate = parseDateKey(selectedCalendarDate);
       const centerStart = weekStart(centerDate);
       return [
-        { label: "Previous Week", start: addDays(centerStart, -7) },
-        { label: "This Week", start: centerStart },
-        { label: "Next Week", start: addDays(centerStart, 7) }
+        { label: "Past", start: addDays(centerStart, -7) },
+        { label: "Current", start: centerStart },
+        { label: "Next", start: addDays(centerStart, 7) }
       ].map(week => ({
         ...week,
         days: Array.from({ length: 7 }, (_, index) => addDays(week.start, index))
@@ -4459,7 +4500,6 @@
       movementCollection.innerHTML = `
         <div class="screen-topbar">
           <button type="button" class="back-button" onclick="${activeWorkout() ? "finishWorkoutMovementPicker()" : "openMovementHome()"}">Back</button>
-          <span class="movement-count">${movements.length} shown</span>
         </div>
         <section class="collection-header">
           <div class="collection-title">
@@ -5705,20 +5745,24 @@
         <div class="movement-score-stack">
           <div class="movement-total composite" style="${ratingStyle("composite", scorePercent(score, allRatingKeys().length * 100), "composite")}" title="Raw sum of all training and metadata dimensions">
             <span>Composite</span>
-            <strong>${score}</strong>
+            <div class="movement-total-value"><strong>${score}</strong></div>
           </div>
           ${trainingScore ? `
             <div class="movement-total compact training" style="${ratingStyle(trainingScore.key, trainingScore.score, "training")}" title="${escapeHTML(trainingScore.title)}">
               <span>Training</span>
-              <strong>${trainingScore.score}</strong>
-              <em>${escapeHTML(trainingScore.label)}</em>
+              <div class="movement-total-value">
+                <strong>${trainingScore.score}</strong>
+                <em>${escapeHTML(trainingScore.label)}</em>
+              </div>
             </div>
           ` : ""}
           ${metadataScore ? `
             <div class="movement-total compact metadata" style="${ratingStyle(metadataScore.key, metadataScore.score, "metadata")}" title="${escapeHTML(metadataScore.title)}">
               <span>Setup</span>
-              <strong>${metadataScore.score}</strong>
-              <em>${escapeHTML(metadataScore.label)}</em>
+              <div class="movement-total-value">
+                <strong>${metadataScore.score}</strong>
+                <em>${escapeHTML(metadataScore.label)}</em>
+              </div>
             </div>
           ` : ""}
         </div>
