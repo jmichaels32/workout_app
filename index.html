@@ -4857,7 +4857,7 @@
         <section class="compare-row">
           <p class="section-label">Scores</p>
           <div class="compare-scoreboard">
-            ${renderCompareScoreRow("Composite", compositeMovementScore(anchor), compositeMovementScore(target), true, allRatingKeys().length * 100, "composite")}
+            ${renderCompareScoreRow("Composite", compositeMovementScore(anchor), compositeMovementScore(target), true, compositeRatingKeys().length * 100, "composite")}
             ${Object.entries(TRAINING_RATINGS).map(([key, label]) => renderCompareScoreRow(label, ratingScore(anchor, key), ratingScore(target, key), false, 100, key)).join("")}
             ${Object.entries(METADATA_RATINGS).map(([key, label]) => renderCompareScoreRow(label, ratingScore(anchor, key), ratingScore(target, key), false, 100, key)).join("")}
           </div>
@@ -5933,7 +5933,7 @@
       if (!Number.isFinite(score)) return "";
       return `
         <div class="movement-score-stack">
-          <div class="movement-total composite" style="${ratingStyle("composite", scorePercent(score, allRatingKeys().length * 100), "composite")}" title="Raw sum of all training and metadata dimensions">
+          <div class="movement-total composite" style="${ratingStyle("composite", scorePercent(score, compositeRatingKeys().length * 100), "composite")}" title="Raw sum of training dimensions">
             <span>Composite</span>
             <div class="movement-total-value"><strong>${score}</strong></div>
           </div>
@@ -6263,7 +6263,7 @@
     }
 
     function compositeMovementScore(movement) {
-      const scores = allRatingKeys()
+      const scores = compositeRatingKeys()
         .map(key => movement.ratings?.[key] === undefined ? NaN : ratingScore(movement, key))
         .filter(Number.isFinite);
       return scores.length ? scores.reduce((sum, score) => sum + score, 0) : NaN;
@@ -6291,8 +6291,8 @@
       return best ? { ...best, title: `Highest ${group === "training" ? "training" : "setup"} dimension` } : null;
     }
 
-    function allRatingKeys() {
-      return [...Object.keys(TRAINING_RATINGS), ...Object.keys(METADATA_RATINGS)];
+    function compositeRatingKeys() {
+      return Object.keys(TRAINING_RATINGS);
     }
 
     function scorePercent(score, maxScore = 100) {

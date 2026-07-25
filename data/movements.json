@@ -21,7 +21,7 @@
       "progression",
       "support"
     ],
-    "composite": "Raw sum of all training and metadata scores."
+    "composite": "Raw sum of training scores only. Setup metadata is displayed separately and does not contribute."
   },
   "communityRatingScale": {
     "minimum": 1,

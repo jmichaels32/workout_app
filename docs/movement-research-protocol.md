@@ -169,7 +169,7 @@ Metadata dimensions describe usability and constraint quality:
 - Progression: 100 means easiest to progressively overload. Score from load increment granularity, safe load addition, setup repeatability, and how well performance maps to a trackable number.
 - Support: 100 means most externally supported/stable. Score from machine guidance, body bracing, fixed path, balance demand, and how much stabilizing skill is required.
 
-The app's composite score is the raw sum of all training and metadata dimensions. It is not weighted.
+The app's composite score is the raw sum of training dimensions only. Setup metadata is displayed separately and does not contribute to the composite. It is not weighted.
 
 Global anchors:
 
