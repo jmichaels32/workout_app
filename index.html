@@ -1640,6 +1640,10 @@
       grid-template-columns: minmax(128px, 0.8fr) minmax(150px, 1fr) minmax(116px, 0.75fr);
     }
 
+    .sort-direction-tree {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .collection-tree-column,
     .sort-tree-column {
       display: grid;
@@ -1723,6 +1727,12 @@
       min-width: 0;
       gap: 0;
       animation: tree-branch-open 160ms ease-out;
+    }
+
+    .sort-direction-tree .sort-direction-cell {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-left: 0;
     }
 
     @keyframes tree-branch-open {
@@ -5255,6 +5265,16 @@
     }
 
     function renderCollectionSortPanel() {
+      if (collectionSortDirectionOpen) {
+        return `
+          <div class="collection-dropdown-panel">
+            <div class="collection-sort-tree sort-direction-tree" aria-label="Sort direction">
+              ${renderSortDirectionPanel()}
+            </div>
+          </div>
+        `;
+      }
+
       return `
         <div class="collection-dropdown-panel">
           <div class="collection-sort-tree" aria-label="Movement sorting">
@@ -5262,7 +5282,6 @@
               ${Object.entries(SORT_LABELS).map(([key, label]) => renderSortMetricButton(key, label)).join("")}
             </div>
             ${renderSortBranchColumn()}
-            ${collectionSortDirectionOpen ? renderSortDirectionPanel() : ""}
           </div>
         </div>
       `;
@@ -5565,6 +5584,7 @@
       collectionSortOpen = !collectionSortOpen;
       if (collectionSortOpen) {
         collectionFiltersOpen = false;
+        collectionSortDirectionOpen = false;
         collectionSortMenuOpen = Boolean(sortSubtypeRatings(collectionSortMetric));
       } else {
         collectionSortDirectionOpen = false;
@@ -5637,6 +5657,7 @@
       collectionSortDirectionOpen = !collectionSortDirectionOpen;
       collectionSortOpen = true;
       collectionFiltersOpen = false;
+      collectionSortMenuOpen = false;
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -6054,15 +6075,9 @@
     }
 
     function regionMacroCount(label) {
-      if (label === "Misc") {
-        return movementLibrary.filter(movement =>
-          (movement.tags || []).some(tag => tag.group === "region" && regionMacroForLabel(tag.label) === "Misc")
-        ).length;
-      }
+      const labels = regionMacroFilterLabels(label);
       return movementLibrary.filter(movement =>
-        (movement.tags || []).some(tag =>
-          tag.group === "region" && (tag.label === label || regionMacroForLabel(tag.label) === label)
-        )
+        movementMatchesAnyTagLabels(movement, labels, "region")
       ).length;
     }
 
@@ -6085,8 +6100,13 @@
       return Object.values(REGION_HIERARCHY).some(labels => labels.includes(label));
     }
 
+    function regionMacroFilterLabels(label) {
+      const childLabels = regionSubFilters(label).map(filter => filter.label);
+      return childLabels.length ? childLabels : [label];
+    }
+
     function regionMacroSelectionLabels(label) {
-      const labels = [label, ...regionSubFilters(label).map(filter => filter.label)];
+      const labels = regionMacroFilterLabels(label);
       return labels
         .filter((item, index) => labels.indexOf(item) === index)
         .filter(item => collectionCount(item, "region") > 0);
@@ -6113,6 +6133,12 @@
       if (!selectedTags.length && !label) return sortedMovements(movementLibrary);
       if (!label) {
         return sortedMovements(movementLibrary.filter(movement => movementMatchesSelectedTags(movement, selectedTags)));
+      }
+      if (group === "region" && REGION_MACRO_ORDER.includes(label)) {
+        const labels = regionMacroFilterLabels(label);
+        return sortedMovements(movementLibrary.filter(movement =>
+          movementMatchesAnyTagLabels(movement, labels, group)
+        ));
       }
       return sortedMovements(movementLibrary.filter(movement =>
         movement.tags?.some(tag => tag.label === label && (!group || tag.group === group))
@@ -6247,7 +6273,26 @@
     }
 
     function effectiveSelectedTags(selectedTags) {
-      return selectedTags;
+      const expanded = selectedTags.flatMap(tag => {
+        if (tag.group === "region" && REGION_MACRO_ORDER.includes(tag.label)) {
+          return regionMacroFilterLabels(tag.label).map(label => collectionTagFor(label, "region"));
+        }
+        return [tag];
+      });
+      const seen = new Set();
+      return expanded.filter(tag => {
+        const key = collectionTagKey(tag.label, tag.group);
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+
+    function movementMatchesAnyTagLabels(movement, labels, group) {
+      const accepted = new Set(labels);
+      return movement.tags?.some(tag =>
+        (!group || tag.group === group) && accepted.has(tag.label)
+      );
     }
 
     function collectionTagFor(label, group) {
