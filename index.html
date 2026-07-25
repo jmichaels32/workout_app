@@ -654,6 +654,12 @@
       min-height: 460px;
     }
 
+    .workout-map-gradient {
+      height: 8px;
+      border: 1px solid var(--soft-line);
+      background: linear-gradient(90deg, #dfe8e1, var(--workout-color));
+    }
+
     .workout-color-picker {
       display: flex;
       flex-wrap: wrap;
@@ -2778,21 +2784,23 @@
     function workoutMuscleHeatmap(workout) {
       const totals = new Map();
       workoutMovements(workout).forEach(movement => {
-        const roleItems = ROLE_GROUPS.flatMap(group =>
-          movementMuscles(movement, group.key).map(muscle => ({
-            name: muscle.name,
-            role: group.key,
+        const roleBuckets = ROLE_GROUPS
+          .map(group => ({
+            muscles: movementMuscles(movement, group.key).filter(muscle => muscle.name),
             points: WORKOUT_HEATMAP_ROLE_POINTS[group.key] || 0
           }))
-        ).filter(item => item.name && item.points);
-        const movementPointTotal = roleItems.reduce((sum, item) => sum + item.points, 0);
-        if (!movementPointTotal) return;
-        const scale = WORKOUT_HEATMAP_POINTS_PER_MOVEMENT / movementPointTotal;
-        roleItems.forEach(item => {
-          const key = normalizeMuscleName(item.name);
-          const existing = totals.get(key) || { name: item.name, score: 0 };
-          existing.score += item.points * scale;
-          totals.set(key, existing);
+          .filter(bucket => bucket.muscles.length && bucket.points);
+        const rolePointTotal = roleBuckets.reduce((sum, bucket) => sum + bucket.points, 0);
+        if (!rolePointTotal) return;
+        const scale = WORKOUT_HEATMAP_POINTS_PER_MOVEMENT / rolePointTotal;
+        roleBuckets.forEach(bucket => {
+          const pointsPerMuscle = (bucket.points * scale) / bucket.muscles.length;
+          bucket.muscles.forEach(muscle => {
+            const key = normalizeMuscleName(muscle.name);
+            const existing = totals.get(key) || { name: muscle.name, score: 0 };
+            existing.score += pointsPerMuscle;
+            totals.set(key, existing);
+          });
         });
       });
       return [...totals.values()]
@@ -2816,6 +2824,7 @@
             >
               <div class="anatomy-loading">Loading workout muscle map</div>
             </div>
+            <span class="workout-map-gradient" aria-hidden="true"></span>
           </div>
         </section>
       `;
@@ -6566,12 +6575,12 @@
     }
 
     function materialForPart(part, state) {
-      if (part.role === "workout") return materialForWorkoutColor(part.color, state);
+      if (part.role === "workout") return materialForWorkoutIntensity(part.color, part.intensity, state);
       return materialForRole(part.role, state);
     }
 
     function materialForMeshState(mesh, state) {
-      if (mesh.userData.role === "workout") return materialForWorkoutColor(mesh.userData.workoutColor, state);
+      if (mesh.userData.role === "workout") return materialForWorkoutIntensity(mesh.userData.workoutColor, mesh.userData.intensity, state);
       return materialForRole(mesh.userData.role, state);
     }
 
@@ -6596,18 +6605,20 @@
       return roleMaterials.get(key);
     }
 
-    function materialForWorkoutColor(colorValue, state) {
+    function materialForWorkoutIntensity(colorValue, intensity, state) {
       const colorHex = /^#[0-9a-f]{6}$/i.test(String(colorValue || "")) ? String(colorValue) : "#c8ff00";
-      const key = `workout:${state}:${colorHex}`;
+      const clamped = Math.max(0, Math.min(1, Number(intensity) || 0));
+      const bucket = Math.round(clamped * 12);
+      const key = `workout:${state}:${colorHex}:${bucket}`;
       if (!roleMaterials.has(key)) {
         const color = state === "selected"
           ? new THREE.Color(selectedMuscleColor)
-          : new THREE.Color(colorHex);
-        const opacity = state === "dimmed" ? 0.22 : 0.94;
+          : workoutGradientColor(colorHex, bucket / 12);
+        const opacity = state === "dimmed" ? 0.22 : 0.5 + (bucket / 12) * 0.48;
         roleMaterials.set(key, new THREE.MeshStandardMaterial({
           color,
           emissive: color,
-          emissiveIntensity: state === "selected" ? 0.36 : 0.14,
+          emissiveIntensity: state === "selected" ? 0.36 : 0.08 + (bucket / 12) * 0.18,
           opacity,
           roughness: 0.72,
           metalness: 0,
@@ -6618,6 +6629,12 @@
       }
 
       return roleMaterials.get(key);
+    }
+
+    function workoutGradientColor(colorHex, intensity) {
+      const low = new THREE.Color(0xdfe8e1);
+      const high = new THREE.Color(colorHex);
+      return low.lerp(high, Math.max(0, Math.min(1, Number(intensity) || 0)));
     }
 
     function materialOpacity(role, state) {
