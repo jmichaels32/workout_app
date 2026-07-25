@@ -1,0 +1,153 @@
+{
+  "id": "ground_oblique_crunch",
+  "name": "Ground Oblique Crunch",
+  "aliases": [
+    "oblique_crunch",
+    "floor_oblique_crunch",
+    "side_crunch"
+  ],
+  "family": "crunch",
+  "equipment": "bodyweight",
+  "variantType": "ground_oblique",
+  "variant": "Bodyweight floor crunch biased toward trunk rotation or lateral flexion for the obliques.",
+  "description": "Lie on the floor with the knees bent, brace lightly, curl the ribs toward the opposite hip or side-crunch toward one hip without yanking the neck, pause with the trunk shortened, then lower under control before repeating on the same side or alternating.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Obliques",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Trunk flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 24,
+      "rationale": "Can train the obliques locally, but load is light and progression is limited."
+    },
+    "strength": {
+      "score": 16,
+      "rationale": "Low strength signal because it is mostly bodyweight trunk flexion with poor external loading."
+    },
+    "joint_resilience": {
+      "score": 12,
+      "rationale": "Low joint-resilience value; repeated spinal flexion/rotation is not broadly useful as a resilience anchor."
+    },
+    "athletic_transfer": {
+      "score": 10,
+      "rationale": "Low transfer because it lacks standing force transfer, anti-rotation demand, or integrated limb coordination."
+    },
+    "control": {
+      "score": 22,
+      "rationale": "Some trunk-position control is required, but the floor and short range make coordination demands low."
+    },
+    "fatigue_efficiency": {
+      "score": 70,
+      "rationale": "Low systemic fatigue and quick local abdominal stimulus, though the stimulus ceiling is low."
+    },
+    "setup": {
+      "score": 94,
+      "rationale": "Almost no setup: floor space only."
+    },
+    "ease": {
+      "score": 74,
+      "rationale": "Easy to understand, though users can compensate with neck pulling or hip flexion."
+    },
+    "progression": {
+      "score": 12,
+      "rationale": "Difficult to progressively overload precisely without changing to a cable, machine, or loaded variation."
+    },
+    "support": {
+      "score": 82,
+      "rationale": "The floor supports the body and removes balance demand."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "External oblique",
+        "evidenceShort": "Crunch/side-bridge EMG supports oblique activation.",
+        "evidence": "Crunch and side-bridge EMG evidence measures external oblique activity; the oblique-biased crunch is classified as targeting this role directly.",
+        "sourceIds": [
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      },
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Crunch/side-bridge EMG supports internal-oblique activation.",
+        "evidence": "Abdominal crunch, side bridge, and related abdominal EMG evidence measure internal oblique activity, supporting a primary oblique role for this variant.",
+        "sourceIds": [
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Crunch evidence shows rectus activity, but this variant is oblique-biased.",
+        "evidence": "Crunch EMG evidence reports substantial rectus abdominis activity; it is secondary here because the movement is intentionally oblique-biased.",
+        "sourceIds": [
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Ground oblique crunch: external and internal oblique primary; rectus abdominis secondary; no separate support muscles listed.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Side-lying versus supine rotation, hand position, range, tempo, neck compensation, and hip flexion change emphasis.",
+    "summary": "The ground oblique crunch is classified as a low-setup trunk flexion or rotation movement. Evidence is from the abdominal crunch and side-bridge family rather than a single standardized oblique-crunch protocol, so classification is conservative.",
+    "clinicalInterpretation": "This is a low-friction accessory movement, not a high-load core progression anchor.",
+    "limitations": "The exact phrase 'oblique crunch' covers several setups. Cable wood chops, cable crunches, side planks, and weighted oblique crunches should be separate entries.",
+    "studies": [
+      {
+        "id": "escamilla-2006-jospt",
+        "type": "Commercial and common abdominal exercise EMG",
+        "shortCitation": "Escamilla et al., JOSPT, 2006",
+        "finding": "Crunch and abdominal-device exercises activated rectus abdominis plus external and internal obliques.",
+        "citation": "Escamilla RF, McTaggart MSC, Fricklas EJ, et al. An electromyographic analysis of commercial and common abdominal exercises: implications for rehabilitation and training. Journal of Orthopaedic and Sports Physical Therapy. 2006;36(2):45-57. doi:10.2519/jospt.2006.36.2.45.",
+        "doi": "10.2519/jospt.2006.36.2.45",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+        "relevance": "Common abdominal exercise EMG source for rectus abdominis and oblique activation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "youdas-2008",
+        "type": "Crunch and side-bridge abdominal EMG",
+        "shortCitation": "Youdas et al., JSCR, 2008",
+        "finding": "Compared Ab-Slide, abdominal crunch, supine double leg thrust, and side bridge using rectus abdominis and oblique EMG.",
+        "citation": "Youdas JW, Guck BR, Hebrink RC, Rugotzke JD, Madson TJ, Hollman JH. An electromyographic analysis of the Ab-Slide exercise, abdominal crunch, supine double leg thrust, and side bridge in healthy young adults. Journal of Strength and Conditioning Research. 2008;22(6):1939-1946. doi:10.1519/JSC.0b013e31818745bf.",
+        "doi": "10.1519/JSC.0b013e31818745bf",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+        "relevance": "Close evidence for external oblique, internal oblique, and rectus abdominis activation during accessible floor core exercises.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

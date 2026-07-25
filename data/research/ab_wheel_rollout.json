@@ -1,0 +1,31 @@
+{
+  "movementId": "ab_wheel_rollout",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "escamilla-2006-pt",
+    "youdas-2008"
+  ],
+  "searchedQueries": [
+    "ab wheel rollout electromyography rectus abdominis external oblique",
+    "Power Wheel roll-out abdominal exercise EMG",
+    "Ab-Slide abdominal crunch side bridge EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16649890/",
+      "notes": "Power Wheel rollout-family EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+      "notes": "Ab-Slide and abdominal exercise EMG source."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Added rectus abdominis, external oblique, and internal oblique BodyParts3D meshes; latissimus dorsi was already mapped."
+    }
+  ],
+  "excludedSources": [],
+  "notes": "Variant is a kneeling rollout. Standing rollout and long-lever plank-wheel variants should be separate future entries."
+}

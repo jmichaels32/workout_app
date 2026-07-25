@@ -456,6 +456,96 @@
       ]
     },
     {
+      "id": "rectus_abdominis",
+      "name": "Rectus abdominis",
+      "aliases": [
+        "Abs",
+        "Abdominals"
+      ],
+      "region": "Core",
+      "source": "BodyParts3D obj_99",
+      "fmaIds": [
+        "FMA9628",
+        "FMA13377",
+        "FMA13378"
+      ],
+      "meshFiles": [
+        "core/FMA13377.obj",
+        "core/FMA13378.obj"
+      ]
+    },
+    {
+      "id": "external_oblique",
+      "name": "External oblique",
+      "region": "Core",
+      "source": "BodyParts3D obj_99",
+      "fmaIds": [
+        "FMA13335",
+        "FMA13336",
+        "FMA13337"
+      ],
+      "meshFiles": [
+        "core/FMA13336.obj",
+        "core/FMA13337.obj"
+      ]
+    },
+    {
+      "id": "internal_oblique",
+      "name": "Internal oblique",
+      "region": "Core",
+      "source": "BodyParts3D obj_99",
+      "fmaIds": [
+        "FMA13891",
+        "FMA13892",
+        "FMA13893"
+      ],
+      "meshFiles": [
+        "core/FMA13892.obj",
+        "core/FMA13893.obj"
+      ]
+    },
+    {
+      "id": "iliopsoas",
+      "name": "Iliopsoas",
+      "aliases": [
+        "Hip flexors",
+        "Psoas major",
+        "Iliacus"
+      ],
+      "region": "Hip",
+      "source": "BodyParts3D obj_99",
+      "fmaIds": [
+        "FMA64918",
+        "FMA18060",
+        "FMA22310",
+        "FMA22322",
+        "FMA22323",
+        "FMA22342",
+        "FMA22343"
+      ],
+      "meshFiles": [
+        "core/FMA22322.obj",
+        "core/FMA22323.obj",
+        "core/FMA22342.obj",
+        "core/FMA22343.obj"
+      ]
+    },
+    {
+      "id": "soleus",
+      "name": "Soleus",
+      "region": "Leg",
+      "source": "BodyParts3D obj_99",
+      "fmaIds": [
+        "FMA22542",
+        "FMA22558",
+        "FMA22559"
+      ],
+      "meshFiles": [
+        "calf/FMA22558.obj",
+        "calf/FMA22559.obj"
+      ]
+    },
+    {
       "id": "trunk_stabilizers",
       "name": "Trunk stabilizers",
       "displayName": "Trunk stabilizers (erector spinae)",

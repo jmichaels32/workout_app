@@ -1,0 +1,164 @@
+{
+  "id": "ab_wheel_rollout",
+  "name": "Ab Wheel Rollout",
+  "aliases": [
+    "ab_wheel",
+    "wheel_rollout",
+    "power_wheel_rollout"
+  ],
+  "family": "rollout",
+  "equipment": "ab_wheel",
+  "variantType": "kneeling_rollout",
+  "variant": "Kneeling ab-wheel rollout emphasizing trunk anti-extension while the shoulders flex overhead.",
+  "description": "Start kneeling with the wheel under the shoulders, brace the ribs down toward the pelvis, roll forward only as far as the trunk can stay controlled without sagging, then pull the wheel back under the shoulders while keeping the hips and ribs connected.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Abs",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Anti-extension",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 34,
+      "rationale": "Good abdominal loading, but the movement is usually limited by bracing skill and shoulder position more than simple local hypertrophy progression."
+    },
+    "strength": {
+      "score": 42,
+      "rationale": "Strong trunk anti-extension strength signal, but not a high-load whole-body strength anchor."
+    },
+    "joint_resilience": {
+      "score": 38,
+      "rationale": "Can build trunk and shoulder tolerance when range is controlled, but poor scaling can irritate the low back or shoulders."
+    },
+    "athletic_transfer": {
+      "score": 34,
+      "rationale": "Useful bracing transfer, but the kneeling rollout is not a gait, sprint, throw, or loaded carry pattern."
+    },
+    "control": {
+      "score": 86,
+      "rationale": "Very high motor-control demand from anti-extension, pelvic/rib position, shoulder flexion, and eccentric range control."
+    },
+    "fatigue_efficiency": {
+      "score": 52,
+      "rationale": "Efficient trunk stimulus when scaled well, but shoulder and low-back compensation can add unrelated fatigue."
+    },
+    "setup": {
+      "score": 78,
+      "rationale": "Requires only an ab wheel and floor space, with little adjustment."
+    },
+    "ease": {
+      "score": 18,
+      "rationale": "Hard to perform well because range, spinal position, shoulder control, and return mechanics are easy to lose."
+    },
+    "progression": {
+      "score": 18,
+      "rationale": "Progression is possible through range and reps, but load is indirect and hard to quantify."
+    },
+    "support": {
+      "score": 8,
+      "rationale": "Minimal external support; the user self-stabilizes trunk and shoulders throughout."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Power Wheel rollout studies show high rectus activation.",
+        "evidence": "Power Wheel rollout and similar abdominal-device EMG studies report high upper and lower rectus abdominis activation.",
+        "sourceIds": [
+          "escamilla-2006-pt",
+          "youdas-2008"
+        ]
+      },
+      {
+        "name": "External oblique",
+        "evidenceShort": "Rollout/Ab-Slide evidence shows high external-oblique activation.",
+        "evidence": "Abdominal rollout and Ab-Slide evidence supports external oblique as a high-activation trunk-control target.",
+        "sourceIds": [
+          "escamilla-2006-pt",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Measured abdominal-device activation supports a meaningful role.",
+        "evidence": "Power Wheel and Ab-Slide evidence reports high internal oblique activation across nontraditional abdominal exercises, supporting a secondary trunk-stability role.",
+        "sourceIds": [
+          "escamilla-2006-pt",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Shoulder-extension support measured in Power Wheel exercise family.",
+        "evidence": "Power Wheel abdominal exercise evidence measured latissimus dorsi activity, consistent with shoulder and trunk support during rollouts.",
+        "sourceIds": [
+          "escamilla-2006-pt"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Kneeling ab wheel rollout: rectus abdominis and external oblique primary; internal oblique secondary; latissimus dorsi support.",
+    "clinicalShort": "EMG estimates acute excitation; it does not prove hypertrophy, mechanical tension, or injury risk.",
+    "limitsShort": "Kneeling versus standing, rollout distance, spinal position, shoulder range, wheel design, and tempo change difficulty and emphasis.",
+    "summary": "The ab wheel rollout is classified as a trunk anti-extension movement with high abdominal activation and meaningful shoulder-girdle support demand.",
+    "clinicalInterpretation": "The movement should be scaled by range of motion because compensation can shift load from the abdominal wall to the lumbar spine or shoulders.",
+    "limitations": "The strongest direct evidence uses Power Wheel or Ab-Slide equipment rather than every commercial wheel design. Standing rollouts should be a separate, harder variant.",
+    "studies": [
+      {
+        "id": "escamilla-2006-pt",
+        "type": "Traditional and nontraditional abdominal exercise EMG",
+        "shortCitation": "Escamilla et al., Phys Ther, 2006",
+        "finding": "Power Wheel roll-out, pike, and knee-up were among the highest abdominal-activation exercises and also activated extraneous musculature.",
+        "citation": "Escamilla RF, Babb E, DeWitt R, et al. Electromyographic analysis of traditional and nontraditional abdominal exercises: implications for rehabilitation and training. Physical Therapy. 2006;86(5):656-671.",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16649890/",
+        "relevance": "Direct Power Wheel rollout-family EMG evidence for rectus abdominis, obliques, latissimus dorsi, and interpretation limits.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "control score"
+        ]
+      },
+      {
+        "id": "youdas-2008",
+        "type": "Ab-Slide and abdominal exercise EMG",
+        "shortCitation": "Youdas et al., JSCR, 2008",
+        "finding": "Ab-Slide produced high rectus abdominis, external oblique, and internal oblique activation.",
+        "citation": "Youdas JW, Guck BR, Hebrink RC, Rugotzke JD, Madson TJ, Hollman JH. An electromyographic analysis of the Ab-Slide exercise, abdominal crunch, supine double leg thrust, and side bridge in healthy young adults. Journal of Strength and Conditioning Research. 2008;22(6):1939-1946. doi:10.1519/JSC.0b013e31818745bf.",
+        "doi": "10.1519/JSC.0b013e31818745bf",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+        "relevance": "Close rollout-style abdominal-device evidence for abdominal wall activation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

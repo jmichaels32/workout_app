@@ -1,0 +1,31 @@
+{
+  "movementId": "ground_oblique_crunch",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "escamilla-2006-jospt",
+    "youdas-2008"
+  ],
+  "searchedQueries": [
+    "oblique crunch electromyography",
+    "external oblique internal oblique crunch electromyography",
+    "abdominal crunch side bridge oblique EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+      "notes": "Common abdominal exercise EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+      "notes": "Crunch and side-bridge abdominal EMG source."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Added local BodyParts3D external oblique, internal oblique, and rectus abdominis meshes."
+    }
+  ],
+  "excludedSources": [],
+  "notes": "Exact oblique-crunch setup is not standardized. This MVP entry is a floor bodyweight oblique crunch; cable, weighted, side-plank, and machine variants should be separate movements."
+}

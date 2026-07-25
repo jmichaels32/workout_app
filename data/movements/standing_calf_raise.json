@@ -1,0 +1,161 @@
+{
+  "id": "standing_calf_raise",
+  "name": "Standing Calf Raise",
+  "aliases": [
+    "standing_calf_raises",
+    "calf_raise",
+    "standing_heel_raise"
+  ],
+  "family": "calf_raise",
+  "equipment": "bodyweight",
+  "variantType": "standing",
+  "variant": "Standing heel raise or plantar-flexion pattern with the knees mostly extended; not the guided standing calf-raise machine.",
+  "description": "Stand tall with the balls of the feet on the floor or a small edge, keep the knees mostly straight without locking them, rise onto the toes as high as controlled, pause briefly, then lower slowly until the calves are stretched before the next rep.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Calves",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Plantar flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 68,
+      "rationale": "Good direct calf stimulus, especially for gastrocnemius in the standing knee-extended position, but load can be limited without machine or external weight."
+    },
+    "strength": {
+      "score": 34,
+      "rationale": "Builds plantar-flexion force, but the bodyweight version is not a high-force global strength anchor."
+    },
+    "joint_resilience": {
+      "score": 54,
+      "rationale": "Useful ankle and Achilles tendon exposure when loaded through controlled range, but narrower than full lower-body resilience movements."
+    },
+    "athletic_transfer": {
+      "score": 18,
+      "rationale": "The ankle action is relevant to gait and jumping, but the slow bilateral standing raise has low coordination and sport-transfer breadth."
+    },
+    "control": {
+      "score": 14,
+      "rationale": "Low motor-control demand unless performed single-leg or without hand support."
+    },
+    "fatigue_efficiency": {
+      "score": 78,
+      "rationale": "High local calf stimulus with low systemic fatigue and low unrelated recovery cost."
+    },
+    "setup": {
+      "score": 86,
+      "rationale": "Very low setup friction because it requires only standing space, optionally an edge or stable support."
+    },
+    "ease": {
+      "score": 84,
+      "rationale": "Simple movement pattern with low skill demand, limited mainly by range control and avoiding bouncing."
+    },
+    "progression": {
+      "score": 45,
+      "rationale": "Reps are easy to progress, but load progression is limited unless external weight or a machine is introduced."
+    },
+    "support": {
+      "score": 20,
+      "rationale": "External support is optional and minimal; the user usually controls balance and ankle path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Gastrocnemius",
+        "evidenceShort": "Standing calf-raise training preferentially grows gastrocnemius.",
+        "evidence": "Standing calf-raise training evidence supports greater gastrocnemius hypertrophy than seated calf raises, consistent with the knee-extended plantar-flexion role.",
+        "sourceIds": [
+          "nunes-2023",
+          "multi-single-2020",
+          "kinugasa-2005"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Soleus",
+        "evidenceShort": "Soleus contributes to plantar flexion but is less standing-biased than gastrocnemius.",
+        "evidence": "Plantar-flexor activation evidence supports soleus contribution during calf-raise tasks, but the standing knee-extended setup is classified here as gastrocnemius-biased.",
+        "sourceIds": [
+          "nunes-2023",
+          "multi-single-2020",
+          "kinugasa-2005"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Standing calf raise: gastrocnemius primary; soleus secondary; no separate visible support muscles listed.",
+    "clinicalShort": "EMG and hypertrophy studies answer different questions; neither directly determines long-term programming by itself.",
+    "limitsShort": "Knee angle, single-leg versus double-leg execution, heel deficit, tempo, external load, and machine support change emphasis.",
+    "summary": "The standing calf raise is classified as a simple plantar-flexion exercise. The knee-extended standing position supports a gastrocnemius-biased classification with soleus as a meaningful secondary plantar flexor.",
+    "clinicalInterpretation": "Muscle activation and hypertrophy evidence should be interpreted with setup details, especially knee angle and loading method.",
+    "limitations": "This entry is not the standing calf-raise machine. A guided machine version would score higher for progression and support and should be a separate movement.",
+    "studies": [
+      {
+        "id": "nunes-2023",
+        "type": "Standing versus seated calf-raise hypertrophy study",
+        "shortCitation": "Nunes et al., Front Physiol, 2023",
+        "finding": "Triceps surae hypertrophy was greater after standing versus seated calf-raise training.",
+        "citation": "Nunes JP, et al. Triceps surae muscle hypertrophy is greater after standing versus seated calf-raise training. Frontiers in Physiology. 2023;14:1272106. doi:10.3389/fphys.2023.1272106.",
+        "doi": "10.3389/fphys.2023.1272106",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38156065/",
+        "relevance": "Direct standing/seated calf-raise training comparison for calf muscle emphasis.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "multi-single-2020",
+        "type": "Plantar-flexor activation comparison",
+        "shortCitation": "IJERPH plantar-flexor activation study, 2020",
+        "finding": "Multi- and single-joint resistance exercises promoted similar plantar-flexor activation in resistance-trained men.",
+        "citation": "Multi- and Single-Joint Resistance Exercises Promote Similar Plantar Flexor Activation in Resistance Trained Men. International Journal of Environmental Research and Public Health. 2020;17(24):9487. doi:10.3390/ijerph17249487.",
+        "doi": "10.3390/ijerph17249487",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33352879/",
+        "relevance": "Supports gastrocnemius and soleus activation in plantar-flexor resistance exercise.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "kinugasa-2005",
+        "type": "Triceps surae fMRI and EMG",
+        "shortCitation": "Kinugasa et al., MSSE, 2005",
+        "finding": "Combined functional MRI and EMG characterized neuromuscular activation of the triceps surae.",
+        "citation": "Kinugasa R, Kawakami Y, Fukunaga T. Neuromuscular activation of triceps surae using muscle functional MRI and EMG. Medicine and Science in Sports and Exercise. 2005;37(4):593-598. doi:10.1249/01.mss.0000159026.99792.76.",
+        "doi": "10.1249/01.mss.0000159026.99792.76",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15809557/",
+        "relevance": "Supports treating gastrocnemius and soleus as triceps-surae contributors rather than one generic calf label.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role"
+        ]
+      }
+    ]
+  }
+}

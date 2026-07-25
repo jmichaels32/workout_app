@@ -487,6 +487,96 @@
         ]
       },
       {
+        "id": "rectus_abdominis",
+        "name": "Rectus abdominis",
+        "aliases": [
+          "Abs",
+          "Abdominals"
+        ],
+        "region": "Core",
+        "source": "BodyParts3D obj_99",
+        "fmaIds": [
+          "FMA9628",
+          "FMA13377",
+          "FMA13378"
+        ],
+        "meshFiles": [
+          "core/FMA13377.obj",
+          "core/FMA13378.obj"
+        ]
+      },
+      {
+        "id": "external_oblique",
+        "name": "External oblique",
+        "region": "Core",
+        "source": "BodyParts3D obj_99",
+        "fmaIds": [
+          "FMA13335",
+          "FMA13336",
+          "FMA13337"
+        ],
+        "meshFiles": [
+          "core/FMA13336.obj",
+          "core/FMA13337.obj"
+        ]
+      },
+      {
+        "id": "internal_oblique",
+        "name": "Internal oblique",
+        "region": "Core",
+        "source": "BodyParts3D obj_99",
+        "fmaIds": [
+          "FMA13891",
+          "FMA13892",
+          "FMA13893"
+        ],
+        "meshFiles": [
+          "core/FMA13892.obj",
+          "core/FMA13893.obj"
+        ]
+      },
+      {
+        "id": "iliopsoas",
+        "name": "Iliopsoas",
+        "aliases": [
+          "Hip flexors",
+          "Psoas major",
+          "Iliacus"
+        ],
+        "region": "Hip",
+        "source": "BodyParts3D obj_99",
+        "fmaIds": [
+          "FMA64918",
+          "FMA18060",
+          "FMA22310",
+          "FMA22322",
+          "FMA22323",
+          "FMA22342",
+          "FMA22343"
+        ],
+        "meshFiles": [
+          "core/FMA22322.obj",
+          "core/FMA22323.obj",
+          "core/FMA22342.obj",
+          "core/FMA22343.obj"
+        ]
+      },
+      {
+        "id": "soleus",
+        "name": "Soleus",
+        "region": "Leg",
+        "source": "BodyParts3D obj_99",
+        "fmaIds": [
+          "FMA22542",
+          "FMA22558",
+          "FMA22559"
+        ],
+        "meshFiles": [
+          "calf/FMA22558.obj",
+          "calf/FMA22559.obj"
+        ]
+      },
+      {
         "id": "trunk_stabilizers",
         "name": "Trunk stabilizers",
         "displayName": "Trunk stabilizers (erector spinae)",
@@ -523,6 +613,170 @@
     ]
   },
   "movements": [
+    {
+      "id": "ab_wheel_rollout",
+      "name": "Ab Wheel Rollout",
+      "aliases": [
+        "ab_wheel",
+        "wheel_rollout",
+        "power_wheel_rollout"
+      ],
+      "family": "rollout",
+      "equipment": "ab_wheel",
+      "variantType": "kneeling_rollout",
+      "variant": "Kneeling ab-wheel rollout emphasizing trunk anti-extension while the shoulders flex overhead.",
+      "description": "Start kneeling with the wheel under the shoulders, brace the ribs down toward the pelvis, roll forward only as far as the trunk can stay controlled without sagging, then pull the wheel back under the shoulders while keeping the hips and ribs connected.",
+      "communityRating": {
+        "averageStars": null,
+        "reviewCount": 0,
+        "scale": 5
+      },
+      "tags": [
+        {
+          "label": "Core",
+          "group": "region"
+        },
+        {
+          "label": "Abs",
+          "group": "region"
+        },
+        {
+          "label": "Calisthenics",
+          "group": "equipment"
+        },
+        {
+          "label": "Anti-extension",
+          "group": "pattern"
+        }
+      ],
+      "ratings": {
+        "hypertrophy": {
+          "score": 34,
+          "rationale": "Good abdominal loading, but the movement is usually limited by bracing skill and shoulder position more than simple local hypertrophy progression."
+        },
+        "strength": {
+          "score": 42,
+          "rationale": "Strong trunk anti-extension strength signal, but not a high-load whole-body strength anchor."
+        },
+        "joint_resilience": {
+          "score": 38,
+          "rationale": "Can build trunk and shoulder tolerance when range is controlled, but poor scaling can irritate the low back or shoulders."
+        },
+        "athletic_transfer": {
+          "score": 34,
+          "rationale": "Useful bracing transfer, but the kneeling rollout is not a gait, sprint, throw, or loaded carry pattern."
+        },
+        "control": {
+          "score": 86,
+          "rationale": "Very high motor-control demand from anti-extension, pelvic/rib position, shoulder flexion, and eccentric range control."
+        },
+        "fatigue_efficiency": {
+          "score": 52,
+          "rationale": "Efficient trunk stimulus when scaled well, but shoulder and low-back compensation can add unrelated fatigue."
+        },
+        "setup": {
+          "score": 78,
+          "rationale": "Requires only an ab wheel and floor space, with little adjustment."
+        },
+        "ease": {
+          "score": 18,
+          "rationale": "Hard to perform well because range, spinal position, shoulder control, and return mechanics are easy to lose."
+        },
+        "progression": {
+          "score": 18,
+          "rationale": "Progression is possible through range and reps, but load is indirect and hard to quantify."
+        },
+        "support": {
+          "score": 8,
+          "rationale": "Minimal external support; the user self-stabilizes trunk and shoulders throughout."
+        }
+      },
+      "muscles": {
+        "primary": [
+          {
+            "name": "Rectus abdominis",
+            "evidenceShort": "Power Wheel rollout studies show high rectus activation.",
+            "evidence": "Power Wheel rollout and similar abdominal-device EMG studies report high upper and lower rectus abdominis activation.",
+            "sourceIds": [
+              "escamilla-2006-pt",
+              "youdas-2008"
+            ]
+          },
+          {
+            "name": "External oblique",
+            "evidenceShort": "Rollout/Ab-Slide evidence shows high external-oblique activation.",
+            "evidence": "Abdominal rollout and Ab-Slide evidence supports external oblique as a high-activation trunk-control target.",
+            "sourceIds": [
+              "escamilla-2006-pt",
+              "youdas-2008"
+            ]
+          }
+        ],
+        "secondary": [
+          {
+            "name": "Internal oblique",
+            "evidenceShort": "Measured abdominal-device activation supports a meaningful role.",
+            "evidence": "Power Wheel and Ab-Slide evidence reports high internal oblique activation across nontraditional abdominal exercises, supporting a secondary trunk-stability role.",
+            "sourceIds": [
+              "escamilla-2006-pt",
+              "youdas-2008"
+            ]
+          }
+        ],
+        "support": [
+          {
+            "name": "Latissimus dorsi",
+            "evidenceShort": "Shoulder-extension support measured in Power Wheel exercise family.",
+            "evidence": "Power Wheel abdominal exercise evidence measured latissimus dorsi activity, consistent with shoulder and trunk support during rollouts.",
+            "sourceIds": [
+              "escamilla-2006-pt"
+            ]
+          }
+        ]
+      },
+      "evidence": {
+        "verdict": "Kneeling ab wheel rollout: rectus abdominis and external oblique primary; internal oblique secondary; latissimus dorsi support.",
+        "clinicalShort": "EMG estimates acute excitation; it does not prove hypertrophy, mechanical tension, or injury risk.",
+        "limitsShort": "Kneeling versus standing, rollout distance, spinal position, shoulder range, wheel design, and tempo change difficulty and emphasis.",
+        "summary": "The ab wheel rollout is classified as a trunk anti-extension movement with high abdominal activation and meaningful shoulder-girdle support demand.",
+        "clinicalInterpretation": "The movement should be scaled by range of motion because compensation can shift load from the abdominal wall to the lumbar spine or shoulders.",
+        "limitations": "The strongest direct evidence uses Power Wheel or Ab-Slide equipment rather than every commercial wheel design. Standing rollouts should be a separate, harder variant.",
+        "studies": [
+          {
+            "id": "escamilla-2006-pt",
+            "type": "Traditional and nontraditional abdominal exercise EMG",
+            "shortCitation": "Escamilla et al., Phys Ther, 2006",
+            "finding": "Power Wheel roll-out, pike, and knee-up were among the highest abdominal-activation exercises and also activated extraneous musculature.",
+            "citation": "Escamilla RF, Babb E, DeWitt R, et al. Electromyographic analysis of traditional and nontraditional abdominal exercises: implications for rehabilitation and training. Physical Therapy. 2006;86(5):656-671.",
+            "doi": null,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/16649890/",
+            "relevance": "Direct Power Wheel rollout-family EMG evidence for rectus abdominis, obliques, latissimus dorsi, and interpretation limits.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role",
+              "support muscle role",
+              "control score"
+            ]
+          },
+          {
+            "id": "youdas-2008",
+            "type": "Ab-Slide and abdominal exercise EMG",
+            "shortCitation": "Youdas et al., JSCR, 2008",
+            "finding": "Ab-Slide produced high rectus abdominis, external oblique, and internal oblique activation.",
+            "citation": "Youdas JW, Guck BR, Hebrink RC, Rugotzke JD, Madson TJ, Hollman JH. An electromyographic analysis of the Ab-Slide exercise, abdominal crunch, supine double leg thrust, and side bridge in healthy young adults. Journal of Strength and Conditioning Research. 2008;22(6):1939-1946. doi:10.1519/JSC.0b013e31818745bf.",
+            "doi": "10.1519/JSC.0b013e31818745bf",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+            "relevance": "Close rollout-style abdominal-device evidence for abdominal wall activation.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role",
+              "hypertrophy score",
+              "limitations"
+            ]
+          }
+        ]
+      }
+    },
     {
       "id": "bar_bench_press",
       "name": "Bar Bench Press",
@@ -746,6 +1000,211 @@
               "primary muscle role",
               "secondary muscle role",
               "support score"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bulgarian_split_squat",
+      "name": "Bulgarian Split Squat",
+      "aliases": [
+        "rear_foot_elevated_split_squat",
+        "rfess",
+        "bulgarian_squat"
+      ],
+      "family": "split_squat",
+      "equipment": "bodyweight",
+      "variantType": "rear_foot_elevated",
+      "variant": "Rear-foot-elevated split squat with the front leg doing most of the work; external load may be held at the sides but the movement is not machine-guided.",
+      "description": "Stand in a split stance with the rear foot elevated on a bench, keep most pressure through the front foot, lower under control until the front knee and hip are deeply flexed, then drive through the front foot to stand while keeping the knee tracking over the toes and the pelvis steady.",
+      "communityRating": {
+        "averageStars": null,
+        "reviewCount": 0,
+        "scale": 5
+      },
+      "tags": [
+        {
+          "label": "Lower body",
+          "group": "region"
+        },
+        {
+          "label": "Quads",
+          "group": "region"
+        },
+        {
+          "label": "Glutes",
+          "group": "region"
+        },
+        {
+          "label": "Bench",
+          "group": "equipment"
+        },
+        {
+          "label": "Squat",
+          "group": "pattern"
+        }
+      ],
+      "ratings": {
+        "hypertrophy": {
+          "score": 70,
+          "rationale": "Strong quad and glute stimulus through long range, but balance and discomfort can limit loading before target muscles are fully exhausted."
+        },
+        "strength": {
+          "score": 56,
+          "rationale": "Builds unilateral leg force well, but absolute loading and force expression are less clean than bilateral barbell or machine patterns."
+        },
+        "joint_resilience": {
+          "score": 78,
+          "rationale": "Useful knee, hip, ankle, and tendon tolerance stimulus through deep single-leg ranges when progressed gradually."
+        },
+        "athletic_transfer": {
+          "score": 76,
+          "rationale": "High carryover potential from unilateral support, hip-knee-ankle coordination, pelvic control, and force production from one leg."
+        },
+        "control": {
+          "score": 82,
+          "rationale": "High motor-control demand from front-foot balance, pelvis control, knee tracking, trunk position, and rear-foot constraint."
+        },
+        "fatigue_efficiency": {
+          "score": 34,
+          "rationale": "Good local stimulus, but balance, breathing, discomfort, and unilateral set volume create meaningful systemic and coordination fatigue."
+        },
+        "setup": {
+          "score": 52,
+          "rationale": "Requires a bench or platform, reproducible stance distance, and sometimes dumbbell setup; friction is moderate."
+        },
+        "ease": {
+          "score": 24,
+          "rationale": "Technically demanding because stance length, rear-foot height, depth, balance, pelvis position, and knee path are easy to vary."
+        },
+        "progression": {
+          "score": 42,
+          "rationale": "Progression is possible with reps and load, but measurement is noisy because stance length, depth, balance, and rear-foot placement change difficulty."
+        },
+        "support": {
+          "score": 10,
+          "rationale": "Very little external support; the bench constrains the rear foot but the working leg and trunk self-stabilize the movement."
+        }
+      },
+      "muscles": {
+        "primary": [
+          {
+            "name": "Quadriceps",
+            "evidenceShort": "RFESS EMG shows high vastus lateralis activity.",
+            "evidence": "Rear-foot-elevated split squat evidence reports substantial vastus lateralis activation, especially in the bottom portion of the repetition, supporting quadriceps as a primary target.",
+            "sourceIds": [
+              "mccurdy-2021",
+              "aguilera-2019"
+            ]
+          },
+          {
+            "name": "Gluteus maximus",
+            "evidenceShort": "RFESS and Bulgarian squat studies measure meaningful gluteal activation.",
+            "evidence": "Rear-foot-elevated split squat and Bulgarian squat studies measure gluteus maximus activation and support a primary hip-extension role, with emphasis changing by depth and trunk position.",
+            "sourceIds": [
+              "mccurdy-2021",
+              "aguilera-2019",
+              "bezerra-2021"
+            ]
+          }
+        ],
+        "secondary": [
+          {
+            "name": "Hamstrings",
+            "evidenceShort": "Measured posterior-chain assistant in RFESS.",
+            "evidence": "RFESS evidence measured medial and lateral hamstring activation; the role is meaningful but secondary to the stronger knee-extension and hip-extension targets.",
+            "sourceIds": [
+              "mccurdy-2021"
+            ]
+          }
+        ],
+        "support": [
+          {
+            "name": "Gluteus medius",
+            "evidenceShort": "Hip-abductor control demand in lunge/single-leg patterns.",
+            "evidence": "Bulgarian squat and related single-leg/lunge EMG evidence supports gluteus medius involvement for frontal-plane hip and pelvic control.",
+            "sourceIds": [
+              "aguilera-2019",
+              "boudreau-2009"
+            ]
+          },
+          {
+            "name": "Trunk stabilizers",
+            "evidenceShort": "Trunk position changes lunge-family muscle activation.",
+            "evidence": "Lunge-family evidence shows trunk position changes muscular activation; trunk stabilizers are listed as support because the unsupported split stance requires bracing and postural control.",
+            "sourceIds": [
+              "bezerra-2021"
+            ]
+          }
+        ]
+      },
+      "evidence": {
+        "verdict": "Rear-foot-elevated split squat: quadriceps and gluteus maximus primary; hamstrings secondary; gluteus medius and trunk stabilizers support.",
+        "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+        "limitsShort": "Rear-foot height, stance length, trunk angle, load position, depth, balance, and suspension or instability devices materially change emphasis.",
+        "summary": "The Bulgarian split squat is classified as an unsupported unilateral lower-body compound movement. Current evidence supports quadriceps and gluteus maximus as the main visible targets, with hamstrings contributing as assistants and gluteus medius/trunk stabilizers supporting single-leg control.",
+        "clinicalInterpretation": "Surface electromyography is condition-specific and should be interpreted alongside joint action, range of motion, load, and technique.",
+        "limitations": "The entry assumes a stable rear-foot-elevated split squat. Suspended, vibration, unstable-surface, Smith-machine, barbell, and heavy dumbbell variants should be split later if the app needs variant-specific scoring.",
+        "studies": [
+          {
+            "id": "mccurdy-2021",
+            "type": "Rear-foot-elevated split squat EMG",
+            "shortCitation": "McCurdy et al., JSCR, 2021",
+            "finding": "RFESS produced high vastus lateralis activation and measured gluteus maximus plus medial and lateral hamstrings.",
+            "citation": "McCurdy K, Walker J, Kelly C, Polinski M. Hip and Knee Extensor Activation During the Hip Thrust and Rear-Foot-Elevated Split Squat in Trained Females. Journal of Strength and Conditioning Research. 2021;35(5):1201-1207. doi:10.1519/JSC.0000000000004035.",
+            "doi": "10.1519/JSC.0000000000004035",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33900255/",
+            "relevance": "Direct RFESS EMG source for quadriceps, gluteus maximus, and hamstrings.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role",
+              "hypertrophy score",
+              "strength score"
+            ]
+          },
+          {
+            "id": "aguilera-2019",
+            "type": "Bulgarian squat EMG variation study",
+            "shortCitation": "Aguilera-Castells et al., PLOS ONE, 2019",
+            "finding": "Bulgarian squat variants changed lower-limb muscle activity under vibration, suspension, and unstable-surface conditions.",
+            "citation": "Aguilera-Castells J, Buscà B, Arboix-Alió J, et al. Muscle activity of Bulgarian squat. Effects of additional vibration, suspension and unstable surface. PLOS ONE. 2019;14(8):e0221710. doi:10.1371/journal.pone.0221710.",
+            "doi": "10.1371/journal.pone.0221710",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6709890/",
+            "relevance": "Direct Bulgarian squat evidence for muscle activation and instability-sensitive control demand.",
+            "usedFor": [
+              "primary muscle role",
+              "support muscle role",
+              "control score",
+              "limitations"
+            ]
+          },
+          {
+            "id": "boudreau-2009",
+            "type": "Hip muscle activation in lunge and single-leg tasks",
+            "shortCitation": "Boudreau et al., J Sport Rehabil, 2009",
+            "finding": "Lunge, single-leg squat, and step-up tasks produced meaningful hip-muscle activation.",
+            "citation": "Boudreau SN, Dwyer MK, Mattacola CG, Lattermann C, Uhl TL, McKeon JM. Hip-muscle activation during the lunge, single-leg squat, and step-up-and-over exercises. Journal of Sport Rehabilitation. 2009;18(1):91-103. doi:10.1123/jsr.18.1.91.",
+            "doi": "10.1123/jsr.18.1.91",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/19321909/",
+            "relevance": "Close single-leg/lunge-family source supporting gluteus medius support classification.",
+            "usedFor": [
+              "support muscle role",
+              "joint resilience score"
+            ]
+          },
+          {
+            "id": "bezerra-2021",
+            "type": "Lunge trunk-position EMG",
+            "shortCitation": "Bezerra et al., IJES, 2021",
+            "finding": "Trunk position during lunge exercises changed muscular activation in trained women.",
+            "citation": "Bezerra ES, et al. Influence of Trunk Position during Three Lunge Exercises on Muscular Activation in Trained Women. International Journal of Exercise Science. 2021;14(1):202-214. doi:10.70252/IGJM9937.",
+            "doi": "10.70252/IGJM9937",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8136561/",
+            "relevance": "Close lunge-family evidence for trunk-position sensitivity and support-role limitations.",
+            "usedFor": [
+              "support muscle role",
+              "limitations"
             ]
           }
         ]
@@ -1338,6 +1797,343 @@
               "support score",
               "progression score",
               "limitations"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ground_oblique_crunch",
+      "name": "Ground Oblique Crunch",
+      "aliases": [
+        "oblique_crunch",
+        "floor_oblique_crunch",
+        "side_crunch"
+      ],
+      "family": "crunch",
+      "equipment": "bodyweight",
+      "variantType": "ground_oblique",
+      "variant": "Bodyweight floor crunch biased toward trunk rotation or lateral flexion for the obliques.",
+      "description": "Lie on the floor with the knees bent, brace lightly, curl the ribs toward the opposite hip or side-crunch toward one hip without yanking the neck, pause with the trunk shortened, then lower under control before repeating on the same side or alternating.",
+      "communityRating": {
+        "averageStars": null,
+        "reviewCount": 0,
+        "scale": 5
+      },
+      "tags": [
+        {
+          "label": "Core",
+          "group": "region"
+        },
+        {
+          "label": "Obliques",
+          "group": "region"
+        },
+        {
+          "label": "Calisthenics",
+          "group": "equipment"
+        },
+        {
+          "label": "Trunk flexion",
+          "group": "pattern"
+        }
+      ],
+      "ratings": {
+        "hypertrophy": {
+          "score": 24,
+          "rationale": "Can train the obliques locally, but load is light and progression is limited."
+        },
+        "strength": {
+          "score": 16,
+          "rationale": "Low strength signal because it is mostly bodyweight trunk flexion with poor external loading."
+        },
+        "joint_resilience": {
+          "score": 12,
+          "rationale": "Low joint-resilience value; repeated spinal flexion/rotation is not broadly useful as a resilience anchor."
+        },
+        "athletic_transfer": {
+          "score": 10,
+          "rationale": "Low transfer because it lacks standing force transfer, anti-rotation demand, or integrated limb coordination."
+        },
+        "control": {
+          "score": 22,
+          "rationale": "Some trunk-position control is required, but the floor and short range make coordination demands low."
+        },
+        "fatigue_efficiency": {
+          "score": 70,
+          "rationale": "Low systemic fatigue and quick local abdominal stimulus, though the stimulus ceiling is low."
+        },
+        "setup": {
+          "score": 94,
+          "rationale": "Almost no setup: floor space only."
+        },
+        "ease": {
+          "score": 74,
+          "rationale": "Easy to understand, though users can compensate with neck pulling or hip flexion."
+        },
+        "progression": {
+          "score": 12,
+          "rationale": "Difficult to progressively overload precisely without changing to a cable, machine, or loaded variation."
+        },
+        "support": {
+          "score": 82,
+          "rationale": "The floor supports the body and removes balance demand."
+        }
+      },
+      "muscles": {
+        "primary": [
+          {
+            "name": "External oblique",
+            "evidenceShort": "Crunch/side-bridge EMG supports oblique activation.",
+            "evidence": "Crunch and side-bridge EMG evidence measures external oblique activity; the oblique-biased crunch is classified as targeting this role directly.",
+            "sourceIds": [
+              "escamilla-2006-jospt",
+              "youdas-2008"
+            ]
+          },
+          {
+            "name": "Internal oblique",
+            "evidenceShort": "Crunch/side-bridge EMG supports internal-oblique activation.",
+            "evidence": "Abdominal crunch, side bridge, and related abdominal EMG evidence measure internal oblique activity, supporting a primary oblique role for this variant.",
+            "sourceIds": [
+              "escamilla-2006-jospt",
+              "youdas-2008"
+            ]
+          }
+        ],
+        "secondary": [
+          {
+            "name": "Rectus abdominis",
+            "evidenceShort": "Crunch evidence shows rectus activity, but this variant is oblique-biased.",
+            "evidence": "Crunch EMG evidence reports substantial rectus abdominis activity; it is secondary here because the movement is intentionally oblique-biased.",
+            "sourceIds": [
+              "escamilla-2006-jospt",
+              "youdas-2008"
+            ]
+          }
+        ],
+        "support": []
+      },
+      "evidence": {
+        "verdict": "Ground oblique crunch: external and internal oblique primary; rectus abdominis secondary; no separate support muscles listed.",
+        "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+        "limitsShort": "Side-lying versus supine rotation, hand position, range, tempo, neck compensation, and hip flexion change emphasis.",
+        "summary": "The ground oblique crunch is classified as a low-setup trunk flexion or rotation movement. Evidence is from the abdominal crunch and side-bridge family rather than a single standardized oblique-crunch protocol, so classification is conservative.",
+        "clinicalInterpretation": "This is a low-friction accessory movement, not a high-load core progression anchor.",
+        "limitations": "The exact phrase 'oblique crunch' covers several setups. Cable wood chops, cable crunches, side planks, and weighted oblique crunches should be separate entries.",
+        "studies": [
+          {
+            "id": "escamilla-2006-jospt",
+            "type": "Commercial and common abdominal exercise EMG",
+            "shortCitation": "Escamilla et al., JOSPT, 2006",
+            "finding": "Crunch and abdominal-device exercises activated rectus abdominis plus external and internal obliques.",
+            "citation": "Escamilla RF, McTaggart MSC, Fricklas EJ, et al. An electromyographic analysis of commercial and common abdominal exercises: implications for rehabilitation and training. Journal of Orthopaedic and Sports Physical Therapy. 2006;36(2):45-57. doi:10.2519/jospt.2006.36.2.45.",
+            "doi": "10.2519/jospt.2006.36.2.45",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+            "relevance": "Common abdominal exercise EMG source for rectus abdominis and oblique activation.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role",
+              "fatigue efficiency score"
+            ]
+          },
+          {
+            "id": "youdas-2008",
+            "type": "Crunch and side-bridge abdominal EMG",
+            "shortCitation": "Youdas et al., JSCR, 2008",
+            "finding": "Compared Ab-Slide, abdominal crunch, supine double leg thrust, and side bridge using rectus abdominis and oblique EMG.",
+            "citation": "Youdas JW, Guck BR, Hebrink RC, Rugotzke JD, Madson TJ, Hollman JH. An electromyographic analysis of the Ab-Slide exercise, abdominal crunch, supine double leg thrust, and side bridge in healthy young adults. Journal of Strength and Conditioning Research. 2008;22(6):1939-1946. doi:10.1519/JSC.0b013e31818745bf.",
+            "doi": "10.1519/JSC.0b013e31818745bf",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+            "relevance": "Close evidence for external oblique, internal oblique, and rectus abdominis activation during accessible floor core exercises.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role",
+              "limitations"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "hanging_leg_raise",
+      "name": "Hanging Leg Raise",
+      "aliases": [
+        "hanging_ab_leg_raise",
+        "hanging_knee_raise",
+        "hanging_knee_up"
+      ],
+      "family": "leg_raise",
+      "equipment": "bar",
+      "variantType": "hanging",
+      "variant": "Hanging leg or knee raise from a pull-up bar or straps, emphasizing controlled hip flexion and posterior pelvic tilt.",
+      "description": "Hang from a bar or straps with the shoulders controlled, brace the ribs down, raise the knees or legs by flexing the hips and curling the pelvis upward, pause without swinging, then lower under control until the trunk is stable again.",
+      "communityRating": {
+        "averageStars": null,
+        "reviewCount": 0,
+        "scale": 5
+      },
+      "tags": [
+        {
+          "label": "Core",
+          "group": "region"
+        },
+        {
+          "label": "Abs",
+          "group": "region"
+        },
+        {
+          "label": "Bar",
+          "group": "equipment"
+        },
+        {
+          "label": "Hip flexion",
+          "group": "pattern"
+        }
+      ],
+      "ratings": {
+        "hypertrophy": {
+          "score": 42,
+          "rationale": "Useful abdominal and hip-flexor loading, but grip, swing control, and hip flexion often limit local hypertrophy progression."
+        },
+        "strength": {
+          "score": 46,
+          "rationale": "Good trunk and hip-flexion strength signal, especially when done with posterior pelvic tilt and long lever control."
+        },
+        "joint_resilience": {
+          "score": 28,
+          "rationale": "Can build shoulder hanging tolerance and anterior-core control, but it is not a broad joint-resilience anchor."
+        },
+        "athletic_transfer": {
+          "score": 32,
+          "rationale": "Moderate transfer to hanging, climbing, and trunk-control tasks, but low direct transfer to loaded lower-body or gait patterns."
+        },
+        "control": {
+          "score": 82,
+          "rationale": "High motor-control demand from grip/hang stability, swing suppression, hip flexion, pelvic curl, and eccentric lowering."
+        },
+        "fatigue_efficiency": {
+          "score": 38,
+          "rationale": "Can be effective, but grip, shoulder, and hip-flexor fatigue often leak into the stimulus."
+        },
+        "setup": {
+          "score": 64,
+          "rationale": "Requires a bar or straps and enough clearance, but little loading setup."
+        },
+        "ease": {
+          "score": 20,
+          "rationale": "Difficult to repeat cleanly because swinging and hip-flexor dominance can hide poor trunk control."
+        },
+        "progression": {
+          "score": 24,
+          "rationale": "Progression can use reps, knee-to-leg leverage, tempo, or load, but the main difficulty variable is hard to quantify."
+        },
+        "support": {
+          "score": 6,
+          "rationale": "Almost no external support; the body hangs freely and self-stabilizes."
+        }
+      },
+      "muscles": {
+        "primary": [
+          {
+            "name": "Rectus abdominis",
+            "evidenceShort": "Hanging knee-up evidence shows high rectus activation.",
+            "evidence": "Hanging knee-up EMG evidence reports high upper and lower rectus abdominis activation, supporting a primary abdominal role.",
+            "sourceIds": [
+              "escamilla-2006-pt",
+              "lee-2016"
+            ]
+          },
+          {
+            "name": "Iliopsoas",
+            "evidenceShort": "Hip-flexor EMG supports primary hip-flexion role.",
+            "evidence": "Hanging leg raises require resisted hip flexion, and hip-flexor EMG evidence supports iliopsoas involvement in leg-raise and hip-flexion tasks.",
+            "sourceIds": [
+              "lee-2016",
+              "czuppon-2024"
+            ]
+          }
+        ],
+        "secondary": [
+          {
+            "name": "External oblique",
+            "evidenceShort": "Hanging knee-up evidence shows high external-oblique activity.",
+            "evidence": "Hanging knee-up EMG evidence reports high external oblique activity, supporting a secondary trunk-control role.",
+            "sourceIds": [
+              "escamilla-2006-pt",
+              "lee-2016"
+            ]
+          },
+          {
+            "name": "Internal oblique",
+            "evidenceShort": "Abdominal EMG supports oblique contribution.",
+            "evidence": "Traditional and nontraditional abdominal exercise EMG supports internal oblique contribution during high-demand leg-raise and knee-up patterns.",
+            "sourceIds": [
+              "escamilla-2006-pt",
+              "lee-2016"
+            ]
+          }
+        ],
+        "support": [
+          {
+            "name": "Latissimus dorsi",
+            "evidenceShort": "Hanging setup requires shoulder-girdle support.",
+            "evidence": "Latissimus dorsi is included as support because hanging from a bar requires shoulder-girdle control while the trunk and hips move; abdominal-device evidence also measured latissimus involvement in related high-demand abdominal tasks.",
+            "sourceIds": [
+              "escamilla-2006-pt"
+            ]
+          }
+        ]
+      },
+      "evidence": {
+        "verdict": "Hanging leg raise: rectus abdominis and iliopsoas primary; external and internal oblique secondary; latissimus dorsi support.",
+        "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+        "limitsShort": "Knee bend, straight-leg lever length, pelvic curl, straps versus bar, swing, grip fatigue, and load change emphasis.",
+        "summary": "The hanging leg raise is classified as a hanging trunk and hip-flexion exercise. Evidence supports high abdominal activation in hanging knee-up variants, with iliopsoas included from hip-flexor EMG and the movement's primary hip-flexion mechanics.",
+        "clinicalInterpretation": "A clean posterior pelvic tilt makes this more abdominal; a pure hip-flexion swing makes it more hip-flexor dominant.",
+        "limitations": "Most direct evidence uses hanging knee-ups with straps rather than every straight-leg bar-hanging variant. Straight-leg raises, captain's-chair raises, toes-to-bar, and weighted raises should be split later if precision matters.",
+        "studies": [
+          {
+            "id": "escamilla-2006-pt",
+            "type": "Traditional and nontraditional abdominal exercise EMG",
+            "shortCitation": "Escamilla et al., Phys Ther, 2006",
+            "finding": "Hanging knee-up with straps was among the highest abdominal activation exercises for rectus abdominis and obliques.",
+            "citation": "Escamilla RF, Babb E, DeWitt R, et al. Electromyographic analysis of traditional and nontraditional abdominal exercises: implications for rehabilitation and training. Physical Therapy. 2006;86(5):656-671.",
+            "doi": null,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/16649890/",
+            "relevance": "Direct hanging knee-up abdominal EMG source for rectus abdominis and obliques.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role",
+              "support muscle role",
+              "control score"
+            ]
+          },
+          {
+            "id": "lee-2016",
+            "type": "Sit-up and leg-raise abdominal/lower-limb EMG",
+            "shortCitation": "Lee et al., J Phys Ther Sci, 2016",
+            "finding": "Compared abdominal and lower-limb muscle activity during sit-up and leg-raise tasks.",
+            "citation": "Lee DK, Kang MH, Lee TS, Oh JS. Comparison of muscular activities in the abdomen and lower limbs while performing sit-up and leg-raise. Journal of Physical Therapy Science. 2016;28(2):491-494. doi:10.1589/jpts.28.491.",
+            "doi": "10.1589/jpts.28.491",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27065536/",
+            "relevance": "Close leg-raise source supporting abdominal and hip-flexion interpretation.",
+            "usedFor": [
+              "primary muscle role",
+              "limitations"
+            ]
+          },
+          {
+            "id": "czuppon-2024",
+            "type": "Hip flexor EMG",
+            "shortCitation": "Czuppon et al., J Clin Med, 2024",
+            "finding": "Measured hip-flexor muscle activation during common rehabilitation and strength exercises.",
+            "citation": "Czuppon S, et al. Hip Flexor Muscle Activation During Common Rehabilitation and Strength Exercises. Journal of Clinical Medicine. 2024;13(21):6617. doi:10.3390/jcm13216617.",
+            "doi": "10.3390/jcm13216617",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39518756/",
+            "relevance": "Supports iliopsoas inclusion for the hip-flexion component.",
+            "usedFor": [
+              "primary muscle role"
             ]
           }
         ]
@@ -4303,6 +5099,167 @@
               "setup score",
               "fatigue efficiency score",
               "limitations"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "standing_calf_raise",
+      "name": "Standing Calf Raise",
+      "aliases": [
+        "standing_calf_raises",
+        "calf_raise",
+        "standing_heel_raise"
+      ],
+      "family": "calf_raise",
+      "equipment": "bodyweight",
+      "variantType": "standing",
+      "variant": "Standing heel raise or plantar-flexion pattern with the knees mostly extended; not the guided standing calf-raise machine.",
+      "description": "Stand tall with the balls of the feet on the floor or a small edge, keep the knees mostly straight without locking them, rise onto the toes as high as controlled, pause briefly, then lower slowly until the calves are stretched before the next rep.",
+      "communityRating": {
+        "averageStars": null,
+        "reviewCount": 0,
+        "scale": 5
+      },
+      "tags": [
+        {
+          "label": "Lower body",
+          "group": "region"
+        },
+        {
+          "label": "Calves",
+          "group": "region"
+        },
+        {
+          "label": "Calisthenics",
+          "group": "equipment"
+        },
+        {
+          "label": "Plantar flexion",
+          "group": "pattern"
+        }
+      ],
+      "ratings": {
+        "hypertrophy": {
+          "score": 68,
+          "rationale": "Good direct calf stimulus, especially for gastrocnemius in the standing knee-extended position, but load can be limited without machine or external weight."
+        },
+        "strength": {
+          "score": 34,
+          "rationale": "Builds plantar-flexion force, but the bodyweight version is not a high-force global strength anchor."
+        },
+        "joint_resilience": {
+          "score": 54,
+          "rationale": "Useful ankle and Achilles tendon exposure when loaded through controlled range, but narrower than full lower-body resilience movements."
+        },
+        "athletic_transfer": {
+          "score": 18,
+          "rationale": "The ankle action is relevant to gait and jumping, but the slow bilateral standing raise has low coordination and sport-transfer breadth."
+        },
+        "control": {
+          "score": 14,
+          "rationale": "Low motor-control demand unless performed single-leg or without hand support."
+        },
+        "fatigue_efficiency": {
+          "score": 78,
+          "rationale": "High local calf stimulus with low systemic fatigue and low unrelated recovery cost."
+        },
+        "setup": {
+          "score": 86,
+          "rationale": "Very low setup friction because it requires only standing space, optionally an edge or stable support."
+        },
+        "ease": {
+          "score": 84,
+          "rationale": "Simple movement pattern with low skill demand, limited mainly by range control and avoiding bouncing."
+        },
+        "progression": {
+          "score": 45,
+          "rationale": "Reps are easy to progress, but load progression is limited unless external weight or a machine is introduced."
+        },
+        "support": {
+          "score": 20,
+          "rationale": "External support is optional and minimal; the user usually controls balance and ankle path."
+        }
+      },
+      "muscles": {
+        "primary": [
+          {
+            "name": "Gastrocnemius",
+            "evidenceShort": "Standing calf-raise training preferentially grows gastrocnemius.",
+            "evidence": "Standing calf-raise training evidence supports greater gastrocnemius hypertrophy than seated calf raises, consistent with the knee-extended plantar-flexion role.",
+            "sourceIds": [
+              "nunes-2023",
+              "multi-single-2020",
+              "kinugasa-2005"
+            ]
+          }
+        ],
+        "secondary": [
+          {
+            "name": "Soleus",
+            "evidenceShort": "Soleus contributes to plantar flexion but is less standing-biased than gastrocnemius.",
+            "evidence": "Plantar-flexor activation evidence supports soleus contribution during calf-raise tasks, but the standing knee-extended setup is classified here as gastrocnemius-biased.",
+            "sourceIds": [
+              "nunes-2023",
+              "multi-single-2020",
+              "kinugasa-2005"
+            ]
+          }
+        ],
+        "support": []
+      },
+      "evidence": {
+        "verdict": "Standing calf raise: gastrocnemius primary; soleus secondary; no separate visible support muscles listed.",
+        "clinicalShort": "EMG and hypertrophy studies answer different questions; neither directly determines long-term programming by itself.",
+        "limitsShort": "Knee angle, single-leg versus double-leg execution, heel deficit, tempo, external load, and machine support change emphasis.",
+        "summary": "The standing calf raise is classified as a simple plantar-flexion exercise. The knee-extended standing position supports a gastrocnemius-biased classification with soleus as a meaningful secondary plantar flexor.",
+        "clinicalInterpretation": "Muscle activation and hypertrophy evidence should be interpreted with setup details, especially knee angle and loading method.",
+        "limitations": "This entry is not the standing calf-raise machine. A guided machine version would score higher for progression and support and should be a separate movement.",
+        "studies": [
+          {
+            "id": "nunes-2023",
+            "type": "Standing versus seated calf-raise hypertrophy study",
+            "shortCitation": "Nunes et al., Front Physiol, 2023",
+            "finding": "Triceps surae hypertrophy was greater after standing versus seated calf-raise training.",
+            "citation": "Nunes JP, et al. Triceps surae muscle hypertrophy is greater after standing versus seated calf-raise training. Frontiers in Physiology. 2023;14:1272106. doi:10.3389/fphys.2023.1272106.",
+            "doi": "10.3389/fphys.2023.1272106",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38156065/",
+            "relevance": "Direct standing/seated calf-raise training comparison for calf muscle emphasis.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role",
+              "hypertrophy score",
+              "limitations"
+            ]
+          },
+          {
+            "id": "multi-single-2020",
+            "type": "Plantar-flexor activation comparison",
+            "shortCitation": "IJERPH plantar-flexor activation study, 2020",
+            "finding": "Multi- and single-joint resistance exercises promoted similar plantar-flexor activation in resistance-trained men.",
+            "citation": "Multi- and Single-Joint Resistance Exercises Promote Similar Plantar Flexor Activation in Resistance Trained Men. International Journal of Environmental Research and Public Health. 2020;17(24):9487. doi:10.3390/ijerph17249487.",
+            "doi": "10.3390/ijerph17249487",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33352879/",
+            "relevance": "Supports gastrocnemius and soleus activation in plantar-flexor resistance exercise.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role",
+              "fatigue efficiency score"
+            ]
+          },
+          {
+            "id": "kinugasa-2005",
+            "type": "Triceps surae fMRI and EMG",
+            "shortCitation": "Kinugasa et al., MSSE, 2005",
+            "finding": "Combined functional MRI and EMG characterized neuromuscular activation of the triceps surae.",
+            "citation": "Kinugasa R, Kawakami Y, Fukunaga T. Neuromuscular activation of triceps surae using muscle functional MRI and EMG. Medicine and Science in Sports and Exercise. 2005;37(4):593-598. doi:10.1249/01.mss.0000159026.99792.76.",
+            "doi": "10.1249/01.mss.0000159026.99792.76",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/15809557/",
+            "relevance": "Supports treating gastrocnemius and soleus as triceps-surae contributors rather than one generic calf label.",
+            "usedFor": [
+              "primary muscle role",
+              "secondary muscle role"
             ]
           }
         ]

@@ -439,12 +439,18 @@
       padding: 6px;
       border: 1px solid var(--soft-line);
       background: var(--panel);
+      cursor: pointer;
     }
 
     .mobile-calendar-day.today {
       border-color: var(--accent-line);
       background: var(--accent-soft);
       box-shadow: inset 0 0 0 1px var(--accent-line);
+    }
+
+    .mobile-calendar-day.calendar-day-selected {
+      border-color: var(--line);
+      box-shadow: inset 0 0 0 1px var(--line);
     }
 
     .mobile-calendar-day.has-workout {
@@ -483,9 +489,12 @@
       min-width: 20px;
       min-height: 20px;
       height: 20px;
+      font-size: 15px;
+    }
+
+    .mobile-calendar-day.calendar-day-selected .calendar-add-button {
       opacity: 1;
       pointer-events: auto;
-      font-size: 15px;
     }
 
     .mobile-calendar-day .calendar-workout-button {
@@ -615,6 +624,97 @@
       border: 1px solid var(--soft-line);
       background: color-mix(in srgb, var(--workout-color) 12%, var(--panel));
       color: var(--ink);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .workout-heatmap {
+      display: grid;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .workout-heatmap-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .workout-heatmap-header strong {
+      color: var(--ink);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .workout-heatmap-list {
+      display: grid;
+      gap: 5px;
+    }
+
+    .heatmap-row {
+      display: grid;
+      grid-template-columns: minmax(76px, 0.72fr) minmax(0, 1fr) 32px;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+      font-size: 11px;
+      font-weight: 750;
+    }
+
+    .heatmap-row span:first-child {
+      min-width: 0;
+      overflow: hidden;
+      color: var(--muted);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .heatmap-track {
+      display: block;
+      height: 8px;
+      border: 1px solid var(--ink-12);
+      background: var(--panel-2);
+    }
+
+    .heatmap-fill {
+      display: block;
+      height: 100%;
+      width: var(--heatmap-width, 0%);
+      background: var(--accent);
+    }
+
+    .heatmap-score {
+      color: var(--ink);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .workout-heatmap.compact {
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .workout-heatmap.compact .workout-heatmap-header,
+    .workout-heatmap.compact .workout-heatmap-header strong {
+      font-size: 10px;
+      line-height: 1.1;
+    }
+
+    .workout-heatmap.compact .heatmap-row {
+      grid-template-columns: minmax(64px, 0.66fr) minmax(0, 1fr) 26px;
+      gap: 5px;
+      font-size: 10px;
+    }
+
+    .workout-heatmap-empty {
+      margin-top: 10px;
+      color: var(--muted);
       font-size: 12px;
       font-weight: 700;
     }
@@ -2275,6 +2375,8 @@
       { key: "secondary", label: "Secondary", className: "secondary", viewerRole: "secondary" },
       { key: "support", label: "Support", className: "support", viewerRole: "support" }
     ];
+    const WORKOUT_HEATMAP_ROLE_POINTS = { primary: 3, secondary: 2, support: 1 };
+    const WORKOUT_HEATMAP_POINTS_PER_MOVEMENT = 6;
     const TRAINING_RATINGS = {
       hypertrophy: "Hypertrophy",
       strength: "Strength",
@@ -2314,8 +2416,8 @@
     const REGION_MACRO_ORDER = ["Upper body", "Core", "Lower body", "Misc"];
     const REGION_HIERARCHY = {
       "Upper body": ["Chest", "Back", "Shoulders"],
-      "Core": [],
-      "Lower body": ["Quads", "Hamstrings", "Glutes"],
+      "Core": ["Abs", "Obliques"],
+      "Lower body": ["Quads", "Hamstrings", "Glutes", "Calves"],
       "Misc": []
     };
     const WRAP_HINTS = {
@@ -2392,6 +2494,7 @@
     let workouts = loadStoredWorkouts();
     let workoutTemplates = loadStoredWorkoutTemplates();
     let selectedCalendarDate = todayKey();
+    let activeMobileCalendarDate = null;
     let visibleCalendarMonth = monthStart(parseDateKey(selectedCalendarDate));
     let pendingConfirmAction = null;
     const selectedMuscles = {};
@@ -2558,20 +2661,26 @@
         isMobile ? "mobile-calendar-day" : "calendar-day",
         !isMobile && !sameMonth(date, visibleCalendarMonth) ? "outside-month" : "",
         key === todayKey() ? "today" : "",
+        isMobile && key === activeMobileCalendarDate ? "calendar-day-selected" : "",
         dayWorkouts.length ? "has-workout" : "",
         status
       ].filter(Boolean).join(" ");
 
       if (isMobile) {
+        const showMobileAdd = key === activeMobileCalendarDate;
         return `
-          <div class="${classes}" aria-label="${escapeHTML(calendarDayLabel(date, dayWorkouts))}">
+          <div
+            class="${classes}"
+            onclick="selectMobileCalendarDay('${escapeJS(key)}', event)"
+            aria-label="${escapeHTML(calendarDayLabel(date, dayWorkouts))}"
+          >
             <div class="mobile-calendar-date">
               <span>${escapeHTML(WEEKDAY_LABELS[date.getDay()])}</span>
               <strong>${escapeHTML(MONTH_DAY_FORMATTER.format(date))}</strong>
             </div>
             <div class="calendar-day-actions">
               ${renderCalendarWorkoutActions(dayWorkouts)}
-              ${dayWorkouts.length < MAX_WORKOUTS_PER_DAY ? renderCalendarAddAction(key, dayWorkouts.length) : ""}
+              ${showMobileAdd && dayWorkouts.length < MAX_WORKOUTS_PER_DAY ? renderCalendarAddAction(key, dayWorkouts.length) : ""}
             </div>
           </div>
         `;
@@ -2605,7 +2714,7 @@
           type="button"
           class="calendar-workout-button"
           style="${workoutColorStyle(workout)}"
-          onclick="openLiveWorkout('${escapeJS(workout.id)}')"
+          onclick="event.stopPropagation(); openLiveWorkout('${escapeJS(workout.id)}')"
           aria-label="Open ${escapeHTML(workoutTitle(workout))}"
           title="${escapeHTML(workoutTitle(workout))}"
         ><span class="calendar-workout-title">${escapeHTML(workoutTitle(workout))}</span></button>
@@ -2686,6 +2795,7 @@
             <h3>${escapeHTML(workoutTitle(template))}</h3>
             <p class="listing-summary">${escapeHTML(workoutSummary(template, movements))}</p>
           </div>
+          ${renderWorkoutHeatmap(template, { compact: true, limit: 5 })}
         </button>
       `;
     }
@@ -2725,6 +2835,69 @@
       if (movements.length) return `${movements.length} movement${movements.length === 1 ? "" : "s"} selected.`;
       if (workout.status === "completed") return "Completed workout saved without movement details.";
       return "No movements selected.";
+    }
+
+    function workoutMuscleHeatmap(workout) {
+      const totals = new Map();
+      workoutMovements(workout).forEach(movement => {
+        const roleItems = ROLE_GROUPS.flatMap(group =>
+          movementMuscles(movement, group.key).map(muscle => ({
+            name: muscle.name,
+            role: group.key,
+            points: WORKOUT_HEATMAP_ROLE_POINTS[group.key] || 0
+          }))
+        ).filter(item => item.name && item.points);
+        const movementPointTotal = roleItems.reduce((sum, item) => sum + item.points, 0);
+        if (!movementPointTotal) return;
+        const scale = WORKOUT_HEATMAP_POINTS_PER_MOVEMENT / movementPointTotal;
+        roleItems.forEach(item => {
+          const key = normalizeMuscleName(item.name);
+          const existing = totals.get(key) || { name: item.name, score: 0 };
+          existing.score += item.points * scale;
+          totals.set(key, existing);
+        });
+      });
+      return [...totals.values()]
+        .map(item => ({ ...item, score: Math.round(item.score * 10) / 10 }))
+        .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+    }
+
+    function renderWorkoutHeatmap(workout, options = {}) {
+      const heatmap = workoutMuscleHeatmap(workout);
+      if (!heatmap.length) {
+        return options.showEmpty ? `<p class="workout-heatmap-empty">Muscle heatmap appears after movements are added.</p>` : "";
+      }
+      const visibleItems = Number.isFinite(options.limit) ? heatmap.slice(0, options.limit) : heatmap;
+      const maxScore = Math.max(...heatmap.map(item => item.score), 1);
+      const totalPoints = workoutMovements(workout).length * WORKOUT_HEATMAP_POINTS_PER_MOVEMENT;
+      const shownSuffix = visibleItems.length < heatmap.length ? ` +${heatmap.length - visibleItems.length}` : "";
+      return `
+        <div class="workout-heatmap${options.compact ? " compact" : ""}" aria-label="Workout muscle activation heatmap">
+          <div class="workout-heatmap-header">
+            <span>Muscle Heatmap${escapeHTML(shownSuffix)}</span>
+            <strong>${escapeHTML(formatHeatmapScore(totalPoints))} pts</strong>
+          </div>
+          <div class="workout-heatmap-list">
+            ${visibleItems.map(item => renderWorkoutHeatmapRow(item, maxScore)).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderWorkoutHeatmapRow(item, maxScore) {
+      const width = Math.max(3, Math.round((item.score / Math.max(maxScore, 1)) * 100));
+      return `
+        <div class="heatmap-row">
+          <span title="${escapeHTML(item.name)}">${escapeHTML(item.name)}</span>
+          <span class="heatmap-track" aria-hidden="true"><span class="heatmap-fill" style="--heatmap-width: ${width}%"></span></span>
+          <span class="heatmap-score">${escapeHTML(formatHeatmapScore(item.score))}</span>
+        </div>
+      `;
+    }
+
+    function formatHeatmapScore(value) {
+      const number = Number(value) || 0;
+      return Number.isInteger(number) ? String(number) : number.toFixed(1);
     }
 
     function renderWorkoutColorPicker(workout) {
@@ -2786,6 +2959,7 @@
               <button type="button" class="detail-evidence-button" onclick="addWorkoutBlock('${escapeJS(workout.id)}')">Add Block</button>
               <button type="button" class="delete-button" onclick="deleteWorkout('${escapeJS(workout.id)}')">${isTemplate ? "Delete Template" : "Delete Workout"}</button>
             </div>
+            ${renderWorkoutHeatmap(workout)}
           </section>
           <section class="workout-block-list" aria-label="Workout flow">
             ${blocks.map((block, index) => renderWorkoutBlock(workout, block, index)).join("")}
@@ -2833,6 +3007,7 @@
               <span class="workout-color-chip" aria-hidden="true"></span>
             </div>
             <span class="movement-count">${escapeHTML(shortDateLabel(workout.date))}</span>
+            ${renderWorkoutHeatmap(workout)}
           </section>
           <section class="live-workout-list" aria-label="Live workout movements">
             ${blocks.map((block, index) => renderLiveWorkoutBlock(workout, block, index)).join("")}
@@ -3359,6 +3534,7 @@
         visibleCalendarMonth.getMonth() + delta,
         1
       ));
+      activeMobileCalendarDate = null;
       renderMovementApp({ skipHistory: true });
     }
 
@@ -3367,6 +3543,7 @@
         const nextDate = addDays(parseDateKey(selectedCalendarDate), delta * 7);
         selectedCalendarDate = formatDateKey(nextDate);
         visibleCalendarMonth = monthStart(nextDate);
+        activeMobileCalendarDate = null;
         schedulePickerOpen = false;
         renderMovementApp({ skipHistory: true });
         return;
@@ -3380,6 +3557,7 @@
 
     function goToToday() {
       selectedCalendarDate = todayKey();
+      activeMobileCalendarDate = null;
       visibleCalendarMonth = monthStart(parseDateKey(selectedCalendarDate));
       schedulePickerOpen = false;
       renderMovementApp({ skipHistory: true });
@@ -3391,6 +3569,17 @@
       if (!sameMonth(parsed, visibleCalendarMonth)) {
         visibleCalendarMonth = monthStart(parsed);
       }
+      activeMobileCalendarDate = null;
+      schedulePickerOpen = false;
+      renderMovementApp({ skipHistory: true });
+    }
+
+    function selectMobileCalendarDay(dateKey, event) {
+      event?.preventDefault();
+      const normalizedDate = formatDateKey(parseDateKey(dateKey));
+      selectedCalendarDate = normalizedDate;
+      activeMobileCalendarDate = activeMobileCalendarDate === normalizedDate ? null : normalizedDate;
+      visibleCalendarMonth = monthStart(parseDateKey(normalizedDate));
       schedulePickerOpen = false;
       renderMovementApp({ skipHistory: true });
     }
@@ -3399,6 +3588,7 @@
       event?.preventDefault();
       event?.stopPropagation();
       selectedCalendarDate = formatDateKey(parseDateKey(dateKey));
+      activeMobileCalendarDate = selectedCalendarDate;
       schedulePickerOpen = true;
       renderMovementApp({ skipHistory: true });
     }

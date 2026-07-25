@@ -1,0 +1,184 @@
+{
+  "id": "hanging_leg_raise",
+  "name": "Hanging Leg Raise",
+  "aliases": [
+    "hanging_ab_leg_raise",
+    "hanging_knee_raise",
+    "hanging_knee_up"
+  ],
+  "family": "leg_raise",
+  "equipment": "bar",
+  "variantType": "hanging",
+  "variant": "Hanging leg or knee raise from a pull-up bar or straps, emphasizing controlled hip flexion and posterior pelvic tilt.",
+  "description": "Hang from a bar or straps with the shoulders controlled, brace the ribs down, raise the knees or legs by flexing the hips and curling the pelvis upward, pause without swinging, then lower under control until the trunk is stable again.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Abs",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 42,
+      "rationale": "Useful abdominal and hip-flexor loading, but grip, swing control, and hip flexion often limit local hypertrophy progression."
+    },
+    "strength": {
+      "score": 46,
+      "rationale": "Good trunk and hip-flexion strength signal, especially when done with posterior pelvic tilt and long lever control."
+    },
+    "joint_resilience": {
+      "score": 28,
+      "rationale": "Can build shoulder hanging tolerance and anterior-core control, but it is not a broad joint-resilience anchor."
+    },
+    "athletic_transfer": {
+      "score": 32,
+      "rationale": "Moderate transfer to hanging, climbing, and trunk-control tasks, but low direct transfer to loaded lower-body or gait patterns."
+    },
+    "control": {
+      "score": 82,
+      "rationale": "High motor-control demand from grip/hang stability, swing suppression, hip flexion, pelvic curl, and eccentric lowering."
+    },
+    "fatigue_efficiency": {
+      "score": 38,
+      "rationale": "Can be effective, but grip, shoulder, and hip-flexor fatigue often leak into the stimulus."
+    },
+    "setup": {
+      "score": 64,
+      "rationale": "Requires a bar or straps and enough clearance, but little loading setup."
+    },
+    "ease": {
+      "score": 20,
+      "rationale": "Difficult to repeat cleanly because swinging and hip-flexor dominance can hide poor trunk control."
+    },
+    "progression": {
+      "score": 24,
+      "rationale": "Progression can use reps, knee-to-leg leverage, tempo, or load, but the main difficulty variable is hard to quantify."
+    },
+    "support": {
+      "score": 6,
+      "rationale": "Almost no external support; the body hangs freely and self-stabilizes."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Hanging knee-up evidence shows high rectus activation.",
+        "evidence": "Hanging knee-up EMG evidence reports high upper and lower rectus abdominis activation, supporting a primary abdominal role.",
+        "sourceIds": [
+          "escamilla-2006-pt",
+          "lee-2016"
+        ]
+      },
+      {
+        "name": "Iliopsoas",
+        "evidenceShort": "Hip-flexor EMG supports primary hip-flexion role.",
+        "evidence": "Hanging leg raises require resisted hip flexion, and hip-flexor EMG evidence supports iliopsoas involvement in leg-raise and hip-flexion tasks.",
+        "sourceIds": [
+          "lee-2016",
+          "czuppon-2024"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "External oblique",
+        "evidenceShort": "Hanging knee-up evidence shows high external-oblique activity.",
+        "evidence": "Hanging knee-up EMG evidence reports high external oblique activity, supporting a secondary trunk-control role.",
+        "sourceIds": [
+          "escamilla-2006-pt",
+          "lee-2016"
+        ]
+      },
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Abdominal EMG supports oblique contribution.",
+        "evidence": "Traditional and nontraditional abdominal exercise EMG supports internal oblique contribution during high-demand leg-raise and knee-up patterns.",
+        "sourceIds": [
+          "escamilla-2006-pt",
+          "lee-2016"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Hanging setup requires shoulder-girdle support.",
+        "evidence": "Latissimus dorsi is included as support because hanging from a bar requires shoulder-girdle control while the trunk and hips move; abdominal-device evidence also measured latissimus involvement in related high-demand abdominal tasks.",
+        "sourceIds": [
+          "escamilla-2006-pt"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Hanging leg raise: rectus abdominis and iliopsoas primary; external and internal oblique secondary; latissimus dorsi support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Knee bend, straight-leg lever length, pelvic curl, straps versus bar, swing, grip fatigue, and load change emphasis.",
+    "summary": "The hanging leg raise is classified as a hanging trunk and hip-flexion exercise. Evidence supports high abdominal activation in hanging knee-up variants, with iliopsoas included from hip-flexor EMG and the movement's primary hip-flexion mechanics.",
+    "clinicalInterpretation": "A clean posterior pelvic tilt makes this more abdominal; a pure hip-flexion swing makes it more hip-flexor dominant.",
+    "limitations": "Most direct evidence uses hanging knee-ups with straps rather than every straight-leg bar-hanging variant. Straight-leg raises, captain's-chair raises, toes-to-bar, and weighted raises should be split later if precision matters.",
+    "studies": [
+      {
+        "id": "escamilla-2006-pt",
+        "type": "Traditional and nontraditional abdominal exercise EMG",
+        "shortCitation": "Escamilla et al., Phys Ther, 2006",
+        "finding": "Hanging knee-up with straps was among the highest abdominal activation exercises for rectus abdominis and obliques.",
+        "citation": "Escamilla RF, Babb E, DeWitt R, et al. Electromyographic analysis of traditional and nontraditional abdominal exercises: implications for rehabilitation and training. Physical Therapy. 2006;86(5):656-671.",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16649890/",
+        "relevance": "Direct hanging knee-up abdominal EMG source for rectus abdominis and obliques.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "control score"
+        ]
+      },
+      {
+        "id": "lee-2016",
+        "type": "Sit-up and leg-raise abdominal/lower-limb EMG",
+        "shortCitation": "Lee et al., J Phys Ther Sci, 2016",
+        "finding": "Compared abdominal and lower-limb muscle activity during sit-up and leg-raise tasks.",
+        "citation": "Lee DK, Kang MH, Lee TS, Oh JS. Comparison of muscular activities in the abdomen and lower limbs while performing sit-up and leg-raise. Journal of Physical Therapy Science. 2016;28(2):491-494. doi:10.1589/jpts.28.491.",
+        "doi": "10.1589/jpts.28.491",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27065536/",
+        "relevance": "Close leg-raise source supporting abdominal and hip-flexion interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "czuppon-2024",
+        "type": "Hip flexor EMG",
+        "shortCitation": "Czuppon et al., J Clin Med, 2024",
+        "finding": "Measured hip-flexor muscle activation during common rehabilitation and strength exercises.",
+        "citation": "Czuppon S, et al. Hip Flexor Muscle Activation During Common Rehabilitation and Strength Exercises. Journal of Clinical Medicine. 2024;13(21):6617. doi:10.3390/jcm13216617.",
+        "doi": "10.3390/jcm13216617",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39518756/",
+        "relevance": "Supports iliopsoas inclusion for the hip-flexion component.",
+        "usedFor": [
+          "primary muscle role"
+        ]
+      }
+    ]
+  }
+}

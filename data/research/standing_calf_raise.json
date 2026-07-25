@@ -1,0 +1,36 @@
+{
+  "movementId": "standing_calf_raise",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "nunes-2023",
+    "multi-single-2020",
+    "kinugasa-2005"
+  ],
+  "searchedQueries": [
+    "standing calf raise EMG gastrocnemius soleus PubMed",
+    "calf raise soleus electromyography",
+    "triceps surae hypertrophy standing seated calf raise"
+  ],
+  "reviewedFiles": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38156065/",
+      "notes": "Standing versus seated calf-raise hypertrophy study."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33352879/",
+      "notes": "Plantar-flexor activation comparison."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15809557/",
+      "notes": "Triceps surae fMRI and EMG source."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Added local BodyParts3D soleus meshes and confirmed gastrocnemius mapping."
+    }
+  ],
+  "excludedSources": [],
+  "notes": "Variant is the bodyweight or externally loaded standing heel raise, not the guided standing calf-raise machine. Machine version should remain a separate future movement."
+}

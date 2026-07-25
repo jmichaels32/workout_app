@@ -1,0 +1,36 @@
+{
+  "movementId": "hanging_leg_raise",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "escamilla-2006-pt",
+    "lee-2016",
+    "czuppon-2024"
+  ],
+  "searchedQueries": [
+    "hanging leg raise electromyography rectus abdominis iliopsoas",
+    "hanging knee-up Power Wheel rectus abdominis external oblique",
+    "leg raise iliopsoas electromyography"
+  ],
+  "reviewedFiles": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16649890/",
+      "notes": "Direct hanging knee-up abdominal EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27065536/",
+      "notes": "Leg-raise abdominal/lower-limb activity source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39518756/",
+      "notes": "Hip-flexor EMG source supporting iliopsoas role."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Added local BodyParts3D meshes for rectus abdominis, external oblique, internal oblique, and iliopsoas."
+    }
+  ],
+  "excludedSources": [],
+  "notes": "Variant accepts knee or leg raise in the MVP because users commonly regress and progress along that lever. A later pass should split hanging knee raise, strict hanging leg raise, captain's-chair raise, and toes-to-bar."
+}

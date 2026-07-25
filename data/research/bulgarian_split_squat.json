@@ -1,0 +1,41 @@
+{
+  "movementId": "bulgarian_split_squat",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "mccurdy-2021",
+    "aguilera-2019",
+    "boudreau-2009",
+    "bezerra-2021"
+  ],
+  "searchedQueries": [
+    "Bulgarian split squat EMG gluteus medius",
+    "rear foot elevated split squat muscle activation PubMed",
+    "lunge trunk position muscular activation trained women"
+  ],
+  "reviewedFiles": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33900255/",
+      "notes": "Direct RFESS EMG source measuring gluteus maximus, vastus lateralis, and hamstrings."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6709890/",
+      "notes": "Direct Bulgarian squat variation source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19321909/",
+      "notes": "Related lunge/single-leg hip-muscle activation source."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8136561/",
+      "notes": "Related lunge trunk-position source."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Confirmed all visible muscles resolve to existing local anatomy mesh mappings."
+    }
+  ],
+  "excludedSources": [],
+  "notes": "Variant assumption is a stable rear-foot-elevated split squat with the rear foot on a bench. External load position is not fixed in this MVP entry, so future dumbbell, Smith-machine, and barbell variants may need separate entries."
+}

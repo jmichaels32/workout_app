@@ -1,0 +1,205 @@
+{
+  "id": "bulgarian_split_squat",
+  "name": "Bulgarian Split Squat",
+  "aliases": [
+    "rear_foot_elevated_split_squat",
+    "rfess",
+    "bulgarian_squat"
+  ],
+  "family": "split_squat",
+  "equipment": "bodyweight",
+  "variantType": "rear_foot_elevated",
+  "variant": "Rear-foot-elevated split squat with the front leg doing most of the work; external load may be held at the sides but the movement is not machine-guided.",
+  "description": "Stand in a split stance with the rear foot elevated on a bench, keep most pressure through the front foot, lower under control until the front knee and hip are deeply flexed, then drive through the front foot to stand while keeping the knee tracking over the toes and the pelvis steady.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Squat",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 70,
+      "rationale": "Strong quad and glute stimulus through long range, but balance and discomfort can limit loading before target muscles are fully exhausted."
+    },
+    "strength": {
+      "score": 56,
+      "rationale": "Builds unilateral leg force well, but absolute loading and force expression are less clean than bilateral barbell or machine patterns."
+    },
+    "joint_resilience": {
+      "score": 78,
+      "rationale": "Useful knee, hip, ankle, and tendon tolerance stimulus through deep single-leg ranges when progressed gradually."
+    },
+    "athletic_transfer": {
+      "score": 76,
+      "rationale": "High carryover potential from unilateral support, hip-knee-ankle coordination, pelvic control, and force production from one leg."
+    },
+    "control": {
+      "score": 82,
+      "rationale": "High motor-control demand from front-foot balance, pelvis control, knee tracking, trunk position, and rear-foot constraint."
+    },
+    "fatigue_efficiency": {
+      "score": 34,
+      "rationale": "Good local stimulus, but balance, breathing, discomfort, and unilateral set volume create meaningful systemic and coordination fatigue."
+    },
+    "setup": {
+      "score": 52,
+      "rationale": "Requires a bench or platform, reproducible stance distance, and sometimes dumbbell setup; friction is moderate."
+    },
+    "ease": {
+      "score": 24,
+      "rationale": "Technically demanding because stance length, rear-foot height, depth, balance, pelvis position, and knee path are easy to vary."
+    },
+    "progression": {
+      "score": 42,
+      "rationale": "Progression is possible with reps and load, but measurement is noisy because stance length, depth, balance, and rear-foot placement change difficulty."
+    },
+    "support": {
+      "score": 10,
+      "rationale": "Very little external support; the bench constrains the rear foot but the working leg and trunk self-stabilize the movement."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "RFESS EMG shows high vastus lateralis activity.",
+        "evidence": "Rear-foot-elevated split squat evidence reports substantial vastus lateralis activation, especially in the bottom portion of the repetition, supporting quadriceps as a primary target.",
+        "sourceIds": [
+          "mccurdy-2021",
+          "aguilera-2019"
+        ]
+      },
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "RFESS and Bulgarian squat studies measure meaningful gluteal activation.",
+        "evidence": "Rear-foot-elevated split squat and Bulgarian squat studies measure gluteus maximus activation and support a primary hip-extension role, with emphasis changing by depth and trunk position.",
+        "sourceIds": [
+          "mccurdy-2021",
+          "aguilera-2019",
+          "bezerra-2021"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Measured posterior-chain assistant in RFESS.",
+        "evidence": "RFESS evidence measured medial and lateral hamstring activation; the role is meaningful but secondary to the stronger knee-extension and hip-extension targets.",
+        "sourceIds": [
+          "mccurdy-2021"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Gluteus medius",
+        "evidenceShort": "Hip-abductor control demand in lunge/single-leg patterns.",
+        "evidence": "Bulgarian squat and related single-leg/lunge EMG evidence supports gluteus medius involvement for frontal-plane hip and pelvic control.",
+        "sourceIds": [
+          "aguilera-2019",
+          "boudreau-2009"
+        ]
+      },
+      {
+        "name": "Trunk stabilizers",
+        "evidenceShort": "Trunk position changes lunge-family muscle activation.",
+        "evidence": "Lunge-family evidence shows trunk position changes muscular activation; trunk stabilizers are listed as support because the unsupported split stance requires bracing and postural control.",
+        "sourceIds": [
+          "bezerra-2021"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Rear-foot-elevated split squat: quadriceps and gluteus maximus primary; hamstrings secondary; gluteus medius and trunk stabilizers support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Rear-foot height, stance length, trunk angle, load position, depth, balance, and suspension or instability devices materially change emphasis.",
+    "summary": "The Bulgarian split squat is classified as an unsupported unilateral lower-body compound movement. Current evidence supports quadriceps and gluteus maximus as the main visible targets, with hamstrings contributing as assistants and gluteus medius/trunk stabilizers supporting single-leg control.",
+    "clinicalInterpretation": "Surface electromyography is condition-specific and should be interpreted alongside joint action, range of motion, load, and technique.",
+    "limitations": "The entry assumes a stable rear-foot-elevated split squat. Suspended, vibration, unstable-surface, Smith-machine, barbell, and heavy dumbbell variants should be split later if the app needs variant-specific scoring.",
+    "studies": [
+      {
+        "id": "mccurdy-2021",
+        "type": "Rear-foot-elevated split squat EMG",
+        "shortCitation": "McCurdy et al., JSCR, 2021",
+        "finding": "RFESS produced high vastus lateralis activation and measured gluteus maximus plus medial and lateral hamstrings.",
+        "citation": "McCurdy K, Walker J, Kelly C, Polinski M. Hip and Knee Extensor Activation During the Hip Thrust and Rear-Foot-Elevated Split Squat in Trained Females. Journal of Strength and Conditioning Research. 2021;35(5):1201-1207. doi:10.1519/JSC.0000000000004035.",
+        "doi": "10.1519/JSC.0000000000004035",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33900255/",
+        "relevance": "Direct RFESS EMG source for quadriceps, gluteus maximus, and hamstrings.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "strength score"
+        ]
+      },
+      {
+        "id": "aguilera-2019",
+        "type": "Bulgarian squat EMG variation study",
+        "shortCitation": "Aguilera-Castells et al., PLOS ONE, 2019",
+        "finding": "Bulgarian squat variants changed lower-limb muscle activity under vibration, suspension, and unstable-surface conditions.",
+        "citation": "Aguilera-Castells J, Buscà B, Arboix-Alió J, et al. Muscle activity of Bulgarian squat. Effects of additional vibration, suspension and unstable surface. PLOS ONE. 2019;14(8):e0221710. doi:10.1371/journal.pone.0221710.",
+        "doi": "10.1371/journal.pone.0221710",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6709890/",
+        "relevance": "Direct Bulgarian squat evidence for muscle activation and instability-sensitive control demand.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "boudreau-2009",
+        "type": "Hip muscle activation in lunge and single-leg tasks",
+        "shortCitation": "Boudreau et al., J Sport Rehabil, 2009",
+        "finding": "Lunge, single-leg squat, and step-up tasks produced meaningful hip-muscle activation.",
+        "citation": "Boudreau SN, Dwyer MK, Mattacola CG, Lattermann C, Uhl TL, McKeon JM. Hip-muscle activation during the lunge, single-leg squat, and step-up-and-over exercises. Journal of Sport Rehabilitation. 2009;18(1):91-103. doi:10.1123/jsr.18.1.91.",
+        "doi": "10.1123/jsr.18.1.91",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19321909/",
+        "relevance": "Close single-leg/lunge-family source supporting gluteus medius support classification.",
+        "usedFor": [
+          "support muscle role",
+          "joint resilience score"
+        ]
+      },
+      {
+        "id": "bezerra-2021",
+        "type": "Lunge trunk-position EMG",
+        "shortCitation": "Bezerra et al., IJES, 2021",
+        "finding": "Trunk position during lunge exercises changed muscular activation in trained women.",
+        "citation": "Bezerra ES, et al. Influence of Trunk Position during Three Lunge Exercises on Muscular Activation in Trained Women. International Journal of Exercise Science. 2021;14(1):202-214. doi:10.70252/IGJM9937.",
+        "doi": "10.70252/IGJM9937",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8136561/",
+        "relevance": "Close lunge-family evidence for trunk-position sensitivity and support-role limitations.",
+        "usedFor": [
+          "support muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}
