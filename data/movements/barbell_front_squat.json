@@ -1,0 +1,209 @@
+{
+  "id": "barbell_front_squat",
+  "name": "Barbell Front Squat",
+  "aliases": [
+    "front_squat",
+    "barbell_front_squat",
+    "clean_grip_front_squat",
+    "cross_arm_front_squat"
+  ],
+  "family": "squat",
+  "equipment": "barbell",
+  "variantType": "front_barbell",
+  "variant": "Free-weight bilateral front squat with the bar supported across the anterior shoulders; treated separately from back squat, goblet squat, zercher squat, Smith machine, and machine hack squat variants.",
+  "description": "Support the bar across the front of the shoulders with elbows lifted, brace the trunk, and stand with the feet rooted. Descend by bending the knees, hips, and ankles while keeping the torso tall and the bar over the midfoot, then drive up from the bottom without letting the elbows drop or the knees collapse inward.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Squat",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 72,
+      "rationale": "Strong quad-biased squat stimulus with meaningful glute loading, but front-rack position and breathing can limit load and volume before target muscles fail."
+    },
+    "strength": {
+      "score": 84,
+      "rationale": "Major lower-body strength movement, though absolute loading is usually lower and more position-limited than the back squat."
+    },
+    "joint_resilience": {
+      "score": 70,
+      "rationale": "Useful controlled knee, hip, ankle, and trunk exposure, with evidence suggesting lower knee compressive forces than back squats under tested conditions; wrist, shoulder, and thoracic mobility can be limiting."
+    },
+    "athletic_transfer": {
+      "score": 78,
+      "rationale": "High transfer potential from upright loaded squatting, bracing, clean-receiving carryover, and ground force production, with less maximal loading than back squat."
+    },
+    "control": {
+      "score": 80,
+      "rationale": "High Motor Control demand from front-rack position, upright torso, bar-over-midfoot control, depth, bracing, and knee tracking."
+    },
+    "fatigue_efficiency": {
+      "score": 34,
+      "rationale": "Strong lower-body stimulus, but front-rack breathing, trunk bracing, mobility limits, and systemic fatigue reduce local stimulus efficiency."
+    },
+    "setup": {
+      "score": 34,
+      "rationale": "Requires a rack, bar, plates, safeties or spotter judgment, and a repeatable front-rack setup."
+    },
+    "ease": {
+      "score": 20,
+      "rationale": "Harder to learn than many lower-body options because front-rack mobility, elbow position, upright torso, depth, and bracing all constrain execution."
+    },
+    "progression": {
+      "score": 76,
+      "rationale": "Barbell increments make load progression clear, but front-rack tolerance, thoracic position, and depth consistency can limit clean tracking."
+    },
+    "support": {
+      "score": 14,
+      "rationale": "Very little external support during the lift; the bar position increases self-stabilization demands through the torso and upper back."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Front squat EMG supports high knee-extensor involvement.",
+        "evidence": "Front/back squat comparisons show front squats maintain comparable overall recruitment to back squats and can produce higher vastus medialis activity, supporting quadriceps as the primary visible target.",
+        "sourceIds": [
+          "gullett-2009",
+          "yavuz-2015",
+          "erdag-2019",
+          "contreras-2016"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Measured hip-extension contributor, but less front-squat dominant than quads.",
+        "evidence": "Front squat studies measure gluteus maximus activity during loaded squatting, but the upright torso and front-loaded position make it a meaningful secondary role rather than the main generic target.",
+        "sourceIds": [
+          "yavuz-2015",
+          "contreras-2016",
+          "erdag-2019"
+        ]
+      },
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Measured assistant with less emphasis than back squat in maximal-load data.",
+        "evidence": "Front/back squat EMG data measure biceps femoris and semitendinosus; semitendinosus activity was greater in the back squat in one maximal-load comparison, so hamstrings are secondary in the front squat.",
+        "sourceIds": [
+          "yavuz-2015",
+          "contreras-2016"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Trunk stabilizers",
+        "evidenceShort": "Front rack and upright squatting require trunk support.",
+        "evidence": "Front/back squat studies measured erector spinae and trunk-related demands; the front-rack position requires bracing and torso control even when lower-body EMG is comparable to back squat variants.",
+        "sourceIds": [
+          "gullett-2009",
+          "yavuz-2015",
+          "erdag-2019"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Barbell front squat: quadriceps primary; gluteus maximus and hamstrings secondary; trunk stabilizers support.",
+    "clinicalShort": "Surface EMG is not a direct measure of hypertrophy, joint safety, or transfer; front-rack mobility and technique can dominate real-world execution.",
+    "limitsShort": "Grip style, elbow position, depth, stance, heel elevation, load, tempo, torso angle, and mobility constraints change emphasis.",
+    "summary": "The barbell front squat is classified as an unsupported anterior-loaded squat. Current evidence supports a quadriceps-primary classification, with gluteus maximus and hamstrings as secondary contributors and trunk stabilizers as support for bracing and maintaining the upright front-rack posture.",
+    "clinicalInterpretation": "EMG comparisons across squat variants are useful for identifying measured muscle excitation, but differences are sensitive to load prescription, normalization, squat depth, and participant skill. Kinetic findings should be interpreted as condition-specific joint loading rather than a universal claim that one squat is always safer.",
+    "limitations": "This entry assumes a conventional barbell front squat and does not split clean grip versus cross-arm, heel-elevated, pause, Olympic-style, or maximal powerlifting-style variants. No separate visible upper-back or adductor role was added because the current evidence and local anatomy registry did not support a precise, useful app classification for those names.",
+    "studies": [
+      {
+        "id": "gullett-2009",
+        "type": "Back versus front squat biomechanics and EMG",
+        "shortCitation": "Gullett et al., JSCR, 2009",
+        "finding": "Front squats were comparable to back squats in overall muscle recruitment and produced lower knee compressive forces and extensor moments under the tested conditions.",
+        "citation": "Gullett JC, Tillman MD, Gutierrez GM, Chow JW. A biomechanical comparison of back and front squats in healthy trained individuals. Journal of Strength and Conditioning Research. 2009;23(1):284-292. doi:10.1519/JSC.0b013e31818546bb.",
+        "doi": "10.1519/JSC.0b013e31818546bb",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19002072/",
+        "relevance": "Direct front/back squat comparison with kinetics and muscle activity in trained participants.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "yavuz-2015",
+        "type": "Maximal front and back squat EMG and kinematics",
+        "shortCitation": "Yavuz et al., J Sports Sci, 2015",
+        "finding": "Front squats showed greater vastus medialis activity, while back squats showed greater semitendinosus activity and more trunk lean.",
+        "citation": "Yavuz HU, Erdag D, Amca AM, Aritan S. Kinematic and EMG activities during front and back squat variations in maximum loads. Journal of Sports Sciences. 2015;33(10):1058-1066. doi:10.1080/02640414.2014.984240.",
+        "doi": "10.1080/02640414.2014.984240",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25630691/",
+        "relevance": "Direct maximal-load front/back squat EMG source measuring quadriceps, hamstrings, gluteus maximus, and erector spinae.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "control score"
+        ]
+      },
+      {
+        "id": "erdag-2019",
+        "type": "Squat variation EMG",
+        "shortCitation": "Erdag and Yavuz, AISC, 2019",
+        "finding": "Front, hack, and other squat variations were compared with EMG signals from thigh, hip, and trunk muscles.",
+        "citation": "Erdag D, Yavuz HU. Evaluation of Muscle Activities During Different Squat Variations Using Electromyography Signals. In: Ahram T, Karwowski W, Pickl S, Taiar R, editors. Human Systems Engineering and Design II. Advances in Intelligent Systems and Computing. 2019;1026:859-865. doi:10.1007/978-3-030-35249-3_114.",
+        "doi": "10.1007/978-3-030-35249-3_114",
+        "url": "https://doi.org/10.1007/978-3-030-35249-3_114",
+        "relevance": "Close direct squat-variant EMG source that includes front squat and hack squat patterns.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "contreras-2016",
+        "type": "Parallel, full, and front squat EMG",
+        "shortCitation": "Contreras et al., J Appl Biomech, 2016",
+        "finding": "Parallel, full, and front squat variations measured gluteus maximus, biceps femoris, and vastus lateralis EMG amplitudes.",
+        "citation": "Contreras B, Vigotsky AD, Schoenfeld BJ, Beardsley C, McMaster DT, Reyneke JHT, Cronin JB. A Comparison of Gluteus Maximus, Biceps Femoris, and Vastus Lateralis Electromyography Amplitude in Parallel, Full, and Front Squat Variations in Resistance-Trained Females. Journal of Applied Biomechanics. 2016;32(1):16-22. doi:10.1123/jab.2015-0113.",
+        "doi": "10.1123/jab.2015-0113",
+        "url": "https://doi.org/10.1123/jab.2015-0113",
+        "relevance": "Direct front squat variation EMG source for quadriceps, gluteus maximus, and biceps femoris.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score"
+        ]
+      }
+    ]
+  }
+}

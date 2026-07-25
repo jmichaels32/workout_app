@@ -1,0 +1,196 @@
+{
+  "id": "face_pull",
+  "name": "Face Pull",
+  "aliases": [
+    "cable_face_pull",
+    "rope_face_pull",
+    "face_pull_with_external_rotation"
+  ],
+  "family": "face_pull",
+  "equipment": "cable",
+  "variantType": "standing_cable_rope",
+  "variant": "Standing cable rope face pull to eye or forehead height, finished with shoulder horizontal abduction, scapular retraction, and mild external rotation.",
+  "description": "Set a cable near face height with a rope handle, stand tall with the arms long, and pull the rope toward the eyes or forehead by driving the elbows out and back. Let the hands separate beside the face, pause with the shoulder blades pulled together without shrugging hard, then return under control until the arms are long again.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Shoulders",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 46,
+      "rationale": "Useful rear-shoulder and upper-back hypertrophy accessory, but loading is usually limited by shoulder position and external-rotation control."
+    },
+    "strength": {
+      "score": 24,
+      "rationale": "Builds local pulling strength, but it is not a high-force strength anchor and heavy loading often turns it into a row."
+    },
+    "joint_resilience": {
+      "score": 56,
+      "rationale": "Good shoulder-girdle tolerance signal from controlled scapular retraction and external rotation, although it is still an accessory exercise."
+    },
+    "athletic_transfer": {
+      "score": 22,
+      "rationale": "Some carryover to shoulder positioning and throwing/postural control, but little whole-body force transfer."
+    },
+    "control": {
+      "score": 54,
+      "rationale": "Requires elbow path, scapular timing, external-rotation finish, and load selection discipline."
+    },
+    "fatigue_efficiency": {
+      "score": 78,
+      "rationale": "Low systemic fatigue and focused local stimulus when performed with moderate load and strict control."
+    },
+    "setup": {
+      "score": 68,
+      "rationale": "Requires a cable station and rope attachment, but height and load changes are quick once the station is available."
+    },
+    "ease": {
+      "score": 58,
+      "rationale": "Simple to start, but easy to compensate with lumbar extension, elbow drop, biceps pulling, or excessive shrugging."
+    },
+    "progression": {
+      "score": 42,
+      "rationale": "Cable stacks progress measurably, but useful overload is constrained by technique quality and small target muscles."
+    },
+    "support": {
+      "score": 28,
+      "rationale": "The cable provides a consistent line of pull, but the user must stabilize the trunk, shoulder blades, and free arm path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "High-abduction row and rear-delt EMG support the main role.",
+        "evidence": "A face pull combines a high horizontal pulling path with shoulder horizontal abduction; seated cable row evidence shows posterior deltoid activity rises as shoulder abduction approaches 60-90 degrees, and rear-delt EMG studies identify rear-lateral-raise and incline-row patterns as strong posterior-deltoid tasks.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "sweeney-2014"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Middle trapezius",
+        "evidenceShort": "Measured high-abduction row and horizontal-abduction contributor.",
+        "evidence": "Cable row evidence shows middle trapezius activity increases at larger shoulder-abduction angles, and trapezius exercise EMG identifies shoulder horizontal extension with external rotation as a high middle-trapezius task.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "ekstrom-2003"
+        ]
+      },
+      {
+        "name": "Rhomboids",
+        "evidenceShort": "Included by scapular-retraction inference from row-family evidence.",
+        "evidence": "This is an explicit anatomy and movement-pattern inference: the face pull requires scapular retraction, and row-family EMG plus technique evidence supports rhomboid involvement alongside middle trapezius during retraction-dominant pulling.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "ekstrom-2003"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "External-rotation evidence supports cuff contribution.",
+        "evidence": "The face-pull finish adds shoulder external rotation; pulley external-rotation EMG shows increasing rotator-cuff recruitment with rotation resistance, supporting a meaningful cuff role when the exercise is not performed as a plain row.",
+        "sourceIds": [
+          "dark-2007"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Standing cable face pull: posterior deltoid primary; middle trapezius, rhomboids, and rotator cuff secondary; no separate support muscles listed.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "No peer-reviewed exact face-pull EMG study was found; this entry uses high-abduction row, posterior-deltoid, scapular, and external-rotation evidence.",
+    "summary": "The face pull is classified as a light-to-moderate cable upper-back and rear-shoulder accessory. The best available evidence supports posterior deltoid as the main visible target because high-abduction cable rows and rear-delt exercise studies load similar shoulder horizontal-abduction demands. Middle trapezius and rhomboids are included for scapular retraction, and rotator cuff is included because the chosen variant finishes with shoulder external rotation.",
+    "clinicalInterpretation": "The exercise is most useful when the load is light enough to preserve the face-height pull and external-rotation finish. Heavy loading shifts the pattern toward a high row and reduces the specificity of the cuff and posterior-shoulder stimulus.",
+    "limitations": "Direct exact-variant face-pull EMG evidence was not found in the reviewed peer-reviewed sources. Infraspinatus, teres minor, and upper trapezius are important in the literature, but this project exposes only a rotator cuff aggregate and a full trapezius or middle/lower trapezius mapping, so the visible roles stay within the available anatomy. Band face pulls, chest-supported face pulls, no-external-rotation high rows, and rear-delt cable flyes should be separate variants if added later.",
+    "studies": [
+      {
+        "id": "vasconcelos-2023",
+        "type": "Seated cable row EMG and force study",
+        "shortCitation": "Vasconcelos et al., Int J Strength Cond, 2023",
+        "finding": "Upper-back activation, including middle trapezius and posterior deltoid, increased as seated cable row shoulder abduction moved toward 60-90 degrees.",
+        "citation": "Vasconcelos CMWA, Lopes CR, Almeida VM, Neto WK, Soares EG. Effect Of Different Grip Position And Shoulder-Abduction Angle On Muscle Strength And Activation During The Seated Cable Row. International Journal of Strength and Conditioning. 2023;3(1):1-13. doi:10.47206/ijsc.v3i1.190.",
+        "doi": "10.47206/ijsc.v3i1.190",
+        "url": "https://journal.iusca.org/index.php/Journal/article/download/190/271/1652",
+        "relevance": "Closest cable-pull evidence for the high-abduction pulling component of a face pull.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "sweeney-2014",
+        "type": "Deltoid exercise EMG thesis",
+        "shortCitation": "Sweeney, University of Wisconsin-La Crosse thesis, 2014",
+        "finding": "Seated rear lateral raise and 45-degree incline row produced the greatest posterior-deltoid activation among the tested shoulder exercises.",
+        "citation": "Sweeney SP. Electromyographic analysis of the deltoid muscle during various shoulder exercises. Master's thesis, University of Wisconsin-La Crosse. 2014.",
+        "doi": null,
+        "url": "https://minds.wisc.edu/items/ce6971e9-b01f-4c23-818c-4b432be66b11",
+        "relevance": "Primary EMG source for posterior-deltoid loading in close rear-shoulder and high-row patterns.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "ekstrom-2003",
+        "type": "Trapezius and serratus anterior exercise EMG",
+        "shortCitation": "Ekstrom et al., JOSPT, 2003",
+        "finding": "Shoulder horizontal extension with external rotation generated high middle-trapezius activity, and prone overhead arm raise strongly activated lower trapezius.",
+        "citation": "Ekstrom RA, Donatelli RA, Soderberg GL. Surface electromyographic analysis of exercises for the trapezius and serratus anterior muscles. Journal of Orthopaedic and Sports Physical Therapy. 2003;33(5):247-258. doi:10.2519/jospt.2003.33.5.247.",
+        "doi": "10.2519/jospt.2003.33.5.247",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12774999/",
+        "relevance": "Close shoulder horizontal-abduction and scapular-control EMG evidence for middle trapezius and retraction mechanics.",
+        "usedFor": [
+          "secondary muscle role",
+          "joint resilience score",
+          "control score"
+        ]
+      },
+      {
+        "id": "dark-2007",
+        "type": "Rotator cuff pulley external-rotation EMG",
+        "shortCitation": "Dark et al., Phys Ther, 2007",
+        "finding": "Pulley shoulder external-rotation tasks increased recruitment of rotator-cuff and other shoulder rotation torque-generating muscles as resistance increased.",
+        "citation": "Dark A, Ginn KA, Halaki M. Shoulder muscle recruitment patterns during commonly used rotator cuff exercises: an electromyographic study. Physical Therapy. 2007;87(8):1039-1046. doi:10.2522/ptj.20060068.",
+        "doi": "10.2522/ptj.20060068",
+        "url": "https://academic.oup.com/ptj/article-abstract/87/8/1039/2742269",
+        "relevance": "Supports the external-rotation component of a face pull as a rotator-cuff contribution.",
+        "usedFor": [
+          "secondary muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

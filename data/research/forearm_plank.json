@@ -1,0 +1,82 @@
+{
+  "movementId": "forearm_plank",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-6",
+  "evidenceStudyIds": [
+    "snarr-esco-2014",
+    "schoenfeld-2014",
+    "kim-kang-2016",
+    "ekstrom-2007"
+  ],
+  "searchedQueries": [
+    "forearm plank electromyography rectus abdominis external oblique",
+    "prone bridge elbows toes EMG rectus abdominis external oblique erector spinae",
+    "traditional prone plank long lever posterior tilt EMG",
+    "plank exercise isometric hip adduction EMG internal oblique",
+    "plank variations instability devices EMG erector spinae"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement file ownership, schema contract, generated bundle rule, and anatomy mesh coverage rule."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Evidence priority, conservative muscle-role classification, tag taxonomy, and ratings guidance."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/ab_wheel_rollout.json",
+      "notes": "Core anti-extension structure, tags, abdominal roles, evidence register style, and ratings scale."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/hanging_leg_raise.json",
+      "notes": "Core movement schema and abdominal/hip-flexion evidence wording."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed visible roles resolve locally: Rectus abdominis, External oblique, Internal oblique, and Erector spinae."
+    },
+    {
+      "type": "paper",
+      "id": "snarr-esco-2014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25264667/",
+      "notes": "Direct plank-variation EMG; measured rectus abdominis, external oblique, and erector spinae in stable and unstable plank variations."
+    },
+    {
+      "type": "paper",
+      "id": "schoenfeld-2014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25325773/",
+      "notes": "Direct traditional prone plank comparison with long-lever and posterior-tilt variants; used for rectus/external-oblique emphasis and modified-plank limits."
+    },
+    {
+      "type": "paper",
+      "id": "kim-kang-2016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27213781/",
+      "notes": "Direct standard plank and plank-with-hip-adduction EMG; measured rectus abdominis, internal oblique, and external oblique."
+    },
+    {
+      "type": "paper",
+      "id": "ekstrom-2007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18560185/",
+      "notes": "Direct prone-bridge-on-elbows-and-toes EMG within a core rehabilitation exercise comparison; used for stabilizer and rating boundaries."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Core Muscle Activity During Physical Fitness Exercises: A Systematic Review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7345922/",
+      "reason": "Reviewed for context, but not used in the evidence register because direct plank EMG studies were available and the user requested primary studies."
+    },
+    {
+      "title": "Consumer exercise pages and social/video results for planks",
+      "reason": "Not used for muscle-role evidence because they are not primary EMG, biomechanics, or systematic research sources."
+    }
+  ],
+  "notes": "Variant is the standard forearm plank from elbows and toes. Rectus abdominis and external oblique are primary because direct plank EMG repeatedly measured them and modified-plank evidence shows clear abdominal response to increased anti-extension demand. Internal oblique is secondary from direct standard plank EMG. Erector spinae is support only because direct sources measured spinal-extensor activity but the stable plank is not primarily a back-extension exercise. Transversus abdominis and quadratus lumborum were intentionally not listed as visible roles because data/anatomy.json does not expose those muscles as local display targets."
+}

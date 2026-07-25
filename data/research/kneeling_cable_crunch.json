@@ -1,0 +1,79 @@
+{
+  "movementId": "kneeling_cable_crunch",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-6",
+  "evidenceStudyIds": [
+    "moraes-2009",
+    "escamilla-2006-jospt",
+    "youdas-2008"
+  ],
+  "searchedQueries": [
+    "kneeling cable crunch EMG rectus abdominis external oblique PubMed",
+    "cable crunch electromyography rectus abdominis external oblique",
+    "weighted crunch electromyography external load rectus abdominis",
+    "abdominal crunch pulley electromyography study",
+    "abdominal crunch internal oblique EMG Youdas"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement and research file contracts and generated data boundary."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Evidence hierarchy, role classification, and rating rules."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/ground_oblique_crunch.json",
+      "notes": "Crunch-family schema, abdominal role wording, tags, and ratings."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed visible roles resolve locally: Rectus abdominis, External oblique, and Internal oblique."
+    },
+    {
+      "type": "paper",
+      "id": "moraes-2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19376473/",
+      "notes": "Closest loaded crunch EMG source; tested crunches at multiple external-load percentages and measured rectus abdominis, external oblique, and rectus femoris."
+    },
+    {
+      "type": "paper",
+      "id": "escamilla-2006-jospt",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+      "notes": "Common abdominal crunch and abdominal-device EMG source; measured upper/lower rectus abdominis plus external and internal oblique."
+    },
+    {
+      "type": "paper",
+      "id": "youdas-2008",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+      "notes": "Common abdominal exercise EMG including abdominal crunch, side bridge, Ab-Slide, and supine double leg thrust; used for internal-oblique support and rectus femoris boundary."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Athlean-X cable crunch article",
+      "url": "https://learn.athleanx.com/articles/abs-for-men/cable-cruches",
+      "reason": "Consumer coaching source; inspected only to confirm common setup language, not used for evidence."
+    },
+    {
+      "title": "Muscle and Strength cable crunch exercise page",
+      "url": "https://www.muscleandstrength.com/exercises/cable-crunch.html",
+      "reason": "Consumer exercise page; not a primary study."
+    },
+    {
+      "title": "Social/video results for cable crunch and oblique cable crunch",
+      "reason": "Not used because they are not primary EMG, biomechanics, or systematic research sources."
+    },
+    {
+      "title": "Exact kneeling cable crunch EMG",
+      "reason": "No exact peer-reviewed muscle-specific EMG source was found during this pass; final evidence uses loaded crunch and common crunch studies as close evidence and states the limitation."
+    }
+  ],
+  "notes": "Variant is a kneeling high-pulley cable crunch using a rope or handle. Rectus abdominis is primary because loaded and common crunch EMG support strong rectus activity during trunk flexion. External and internal oblique are secondary abdominal-wall contributors. Rectus femoris and iliopsoas were not listed because the target technique keeps hip motion limited; if the movement is performed as a hip hinge, that is a form error or a separate variant."
+}

@@ -1,0 +1,257 @@
+{
+  "id": "chest_supported_dumbbell_row",
+  "name": "Chest-Supported Dumbbell Row",
+  "aliases": [
+    "dumbbell_chest_supported_row",
+    "incline_dumbbell_row",
+    "prone_dumbbell_row",
+    "chest_supported_db_row"
+  ],
+  "family": "row",
+  "equipment": "dumbbell",
+  "variantType": "chest_supported_dumbbell_incline_bench",
+  "variant": "Bilateral dumbbell row performed prone or chest-supported on an incline bench, with both dumbbells pulled toward the lower ribs or torso.",
+  "description": "Lie chest-down on an incline bench with the feet planted, let the dumbbells hang under the shoulders, and keep the chest in contact with the pad. Pull both elbows back toward the lower ribs, pause with the shoulder blades drawn back without lifting the torso, then lower the dumbbells until the arms are long and the shoulder blades can reach forward under control.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Dumbbell",
+      "group": "equipment"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 78,
+      "rationale": "Strong back hypertrophy option because chest support reduces trunk fatigue and lets the row focus on lats, mid-back, posterior deltoid, and elbow flexors."
+    },
+    "strength": {
+      "score": 54,
+      "rationale": "Builds upper-body pulling force, but dumbbell setup and chest support make it less useful as a maximal strength expression than heavy barbell rows."
+    },
+    "joint_resilience": {
+      "score": 34,
+      "rationale": "Useful controlled shoulder and scapular loading, but it is not a broad joint-resilience movement."
+    },
+    "athletic_transfer": {
+      "score": 20,
+      "rationale": "Limited transfer because the torso is externally supported and the movement is bilateral and constrained by the bench."
+    },
+    "control": {
+      "score": 30,
+      "rationale": "Requires scapular and elbow-path control with independent dumbbells, but the bench removes most trunk and balance demands."
+    },
+    "fatigue_efficiency": {
+      "score": 74,
+      "rationale": "Efficient upper-back stimulus with lower axial and trunk fatigue than unsupported rows, though grip and biceps can still limit sets."
+    },
+    "setup": {
+      "score": 50,
+      "rationale": "Requires an adjustable bench, enough floor space, and matched dumbbells, with some friction from bench angle and heavy dumbbell handling."
+    },
+    "ease": {
+      "score": 74,
+      "rationale": "The chest pad makes the row repeatable and easy to learn, though elbow flare and shoulder range still affect execution."
+    },
+    "progression": {
+      "score": 68,
+      "rationale": "Load and reps are straightforward to track, but dumbbell increments are often coarse and bench angle changes can alter performance."
+    },
+    "support": {
+      "score": 76,
+      "rationale": "The bench strongly supports the torso, while the shoulders, elbows, and wrists still control two free dumbbells."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Supported row EMG includes latissimus as a prime mover.",
+        "evidence": "Prone row EMG directly measured latissimus dorsi as a prime mover, and seated cable row data show greater latissimus activation with lower-abduction, tucked-elbow rowing. The chest-supported dumbbell row uses that same shoulder-extension and adduction bias when pulled toward the lower ribs.",
+        "sourceIds": [
+          "fischer-2025",
+          "vasconcelos-2023",
+          "lehman-2004"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Teres major",
+        "evidenceShort": "Measured shoulder-extension assistant in row-family EMG.",
+        "evidence": "Fujita et al. measured teres major during the seated row and treated it with latissimus dorsi as a back-muscle target; for the chest-supported dumbbell row it is classified as a secondary shoulder-extension assistant.",
+        "sourceIds": [
+          "fujita-2019"
+        ]
+      },
+      {
+        "name": "Middle trapezius",
+        "evidenceShort": "Measured scapular retractor in supported and seated rows.",
+        "evidence": "Prone barbell row EMG measured transverse trapezius, and seated row studies measured middle trapezius activity that rises with more abducted row paths. Chest support preserves the scapular-retraction demand while reducing trunk contribution.",
+        "sourceIds": [
+          "fischer-2025",
+          "vasconcelos-2023",
+          "garcia-jaen-2021",
+          "lehman-2004"
+        ]
+      },
+      {
+        "name": "Rhomboids",
+        "evidenceShort": "Inferred from grouped row EMG and scapular retraction.",
+        "evidence": "This role is marked as inference: row EMG has grouped middle trapezius/rhomboid signals, and the chest-supported row requires scapular retraction as the dumbbells are pulled toward the torso.",
+        "sourceIds": [
+          "lehman-2004",
+          "garcia-jaen-2021"
+        ]
+      },
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Measured row contributor in prone and seated rows.",
+        "evidence": "Rear or posterior deltoid activity is directly measured in prone row and seated row EMG studies. It assists shoulder extension and horizontal abduction, especially if the elbows travel wider.",
+        "sourceIds": [
+          "fischer-2025",
+          "vasconcelos-2023",
+          "fujita-2019"
+        ]
+      },
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Measured elbow-flexion assistant in rows.",
+        "evidence": "Prone and seated row EMG studies measured biceps brachii activity; it assists elbow flexion during the row but is not the primary back target.",
+        "sourceIds": [
+          "fischer-2025",
+          "vasconcelos-2023",
+          "lehman-2004"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Shoulder stabilization role during row tasks.",
+        "evidence": "Row tasks recruit the rotator cuff in a direction-specific way consistent with stabilizing the glenohumeral joint during loaded shoulder extension and retraction.",
+        "sourceIds": [
+          "wattanaprakornkul-2011"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Chest-supported dumbbell row: latissimus dorsi primary; teres major, middle trapezius, rhomboids, posterior deltoid, and biceps brachii secondary; rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Bench angle, elbow flare, grip, pull target, dumbbell size, and whether the chest stays fully supported can shift emphasis between lats, middle trapezius, rhomboids, posterior deltoid, and elbow flexors.",
+    "summary": "The chest-supported dumbbell row is classified as a supported horizontal pull. Chest support reduces trunk and lumbar demand, so no visible trunk support muscles are added. Supported and seated row-family EMG support latissimus dorsi as the main back target for tucked-elbow rows, with teres major, middle trapezius, rhomboids, posterior deltoid, and biceps brachii assisting. Rotator cuff involvement is included as support because it stabilizes the shoulder during loaded rowing.",
+    "clinicalInterpretation": "The evidence mixes exact bench-supported bent-over row work, prone barbell row EMG, seated cable row EMG, and shoulder-stability evidence. These data support a conservative role classification but do not prove identical activation for every incline bench angle or dumbbell handle path.",
+    "limitations": "A chest-supported dumbbell row can become an upper-back row if the elbows flare high, or a lat-biased row if the elbows track close toward the hips. The local anatomy map has biceps brachii but not brachialis or brachioradialis, so those elbow flexors are not shown.",
+    "studies": [
+      {
+        "id": "fischer-2025",
+        "type": "Prone row range-of-motion EMG study",
+        "shortCitation": "Fischer et al., J Electromyogr Kinesiol, 2025",
+        "finding": "Prone barbell row EMG measured latissimus dorsi, transverse trapezius, rear deltoid, and biceps brachii across full and partial ranges of motion.",
+        "citation": "Fischer J, Burger C, Seguel JM, Rodoplu C, Paternoster FK, Tilp M, Konrad A. Impact of different ranges of motion in the prone barbell row on muscle excitation. Journal of Electromyography and Kinesiology. 2025;83:103025. doi:10.1016/j.jelekin.2025.103025.",
+        "doi": "10.1016/j.jelekin.2025.103025",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40513198/",
+        "relevance": "Very close supported-row evidence because the prone row fixes the torso while measuring the main visible row muscles.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "garcia-jaen-2021",
+        "type": "Standing vs bench-supported bent-over row EMG",
+        "shortCitation": "Garcia-Jaen et al., JPES, 2021",
+        "finding": "Compared lumbar, dorsal, and shoulder muscle responses during standing and bench-supported bent-over row postures.",
+        "citation": "Garcia-Jaen M, Sanchis-Soler G, Carrion-Adan A, Cortell-Tormo JM. Electromyographical responses of the lumbar, dorsal and shoulder musculature during the bent-over row exercise: A comparison between standing and bench postures (a preliminary study). Journal of Physical Education and Sport. 2021;21(4):1871-1877. doi:10.7752/jpes.2021.04236.",
+        "doi": "10.7752/jpes.2021.04236",
+        "url": "https://efsupit.ro/images/stories/iunie2021/Art%20236.pdf",
+        "relevance": "Directly addresses the effect of bench support during bent-over rowing and supports the reduced-trunk-demand interpretation.",
+        "usedFor": [
+          "secondary muscle role inference",
+          "support score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "vasconcelos-2023",
+        "type": "Seated cable row EMG and force study",
+        "shortCitation": "Vasconcelos et al., Int J Strength Cond, 2023",
+        "finding": "Lower-abduction row paths emphasized latissimus dorsi, while higher-abduction paths emphasized trapezius and posterior deltoid.",
+        "citation": "Vasconcelos CMWA, Lopes CR, Almeida VM, Neto WK, Soares EG. Effect Of Different Grip Position And Shoulder-Abduction Angle On Muscle Strength And Activation During The Seated Cable Row. International Journal of Strength and Conditioning. 2023;3(1):1-13. doi:10.47206/ijsc.v3i1.190.",
+        "doi": "10.47206/ijsc.v3i1.190",
+        "url": "https://journal.iusca.org/index.php/Journal/article/view/190",
+        "relevance": "Direct row-family EMG for latissimus dorsi, middle trapezius, posterior deltoid, and biceps brachii by elbow path.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lehman-2004",
+        "type": "Latissimus dorsi exercise EMG study",
+        "shortCitation": "Lehman et al., Dynamic Medicine, 2004",
+        "finding": "Seated row produced high latissimus and grouped middle trapezius/rhomboid activity among traditional back exercises.",
+        "citation": "Lehman GJ, Buchan DD, Lundy A, Myers N, Nalborczyk A. Variations in muscle activation levels during traditional latissimus dorsi weight training exercises: An experimental study. Dynamic Medicine. 2004;3:4. doi:10.1186/1476-5918-3-4.",
+        "doi": "10.1186/1476-5918-3-4",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15228624/",
+        "relevance": "Row-family EMG evidence for lats and grouped middle trapezius/rhomboids.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role inference"
+        ]
+      },
+      {
+        "id": "fujita-2019",
+        "type": "Seated row EMG and verbal-instruction study",
+        "shortCitation": "Fujita et al., Motriz, 2019",
+        "finding": "At 70% 1RM, seated row produced substantial latissimus dorsi, teres major, posterior deltoid, and biceps brachii activity.",
+        "citation": "Fujita RA, De Marchi PU, Silva NRS, Gomes MM. Verbal instruction does not change myoelectric activity during seated row exercise in trained and untrained men. Motriz: Revista de Educacao Fisica. 2019;25(4):e10190100. doi:10.1590/s1980-6574201900040100.",
+        "doi": "10.1590/s1980-6574201900040100",
+        "url": "https://pdfs.semanticscholar.org/2b55/6e63ba0d3019f5e2959b3ec165072f139c4b.pdf",
+        "relevance": "Close row-family EMG for teres major, posterior deltoid, and biceps brachii roles.",
+        "usedFor": [
+          "secondary muscle role",
+          "ease score"
+        ]
+      },
+      {
+        "id": "wattanaprakornkul-2011",
+        "type": "Rotator cuff recruitment study",
+        "shortCitation": "Wattanaprakornkul et al., J Electromyogr Kinesiol, 2011",
+        "finding": "Rotator cuff recruitment during bench press and row was direction-specific, consistent with dynamic shoulder stabilization.",
+        "citation": "Wattanaprakornkul D, Halaki M, Cathers I, Ginn KA. Direction-specific recruitment of rotator cuff muscles during bench press and row. Journal of Electromyography and Kinesiology. 2011;21(6):1041-1049. doi:10.1016/j.jelekin.2011.09.002.",
+        "doi": "10.1016/j.jelekin.2011.09.002",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+        "relevance": "Supports rotator cuff stabilization during rowing.",
+        "usedFor": [
+          "support muscle role",
+          "support score"
+        ]
+      }
+    ]
+  }
+}

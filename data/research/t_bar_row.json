@@ -1,0 +1,59 @@
+{
+  "movementId": "t_bar_row",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-4",
+  "evidenceStudyIds": [
+    "lincoln-2023",
+    "vasconcelos-2023",
+    "fischer-2025",
+    "lehman-2004",
+    "fujita-2019",
+    "wattanaprakornkul-2011",
+    "fenwick-2009",
+    "saeterbakken-2015"
+  ],
+  "searchedQueries": [
+    "\"T-bar row\" electromyography latissimus dorsi trapezius",
+    "\"t bar row\" EMG latissimus dorsi",
+    "\"rowing exercises\" \"T-bar row\" electromyography",
+    "\"T-Bar Row\" \"Strength and Conditioning Journal\"",
+    "\"landmine row\" \"Strength and Conditioning Journal\" DOI",
+    "\"Exercise Technique: The Landmine Row\"",
+    "\"free-weight row\" erector spinae EMG",
+    "\"rowing exercises\" trunk muscle activation lumbar spine load"
+  ],
+  "reviewedFiles": [
+    "docs/movement-data-workflow.md",
+    "docs/movement-research-protocol.md",
+    "data/movements/seated_cable_row.json",
+    "data/research/seated_cable_row.json",
+    "data/anatomy.json",
+    "scripts/validate-movements.js",
+    "https://doi.org/10.1519/SSC.0000000000000751",
+    "https://journal.iusca.org/index.php/Journal/article/view/190",
+    "https://pubmed.ncbi.nlm.nih.gov/40513198/",
+    "https://pubmed.ncbi.nlm.nih.gov/15228624/",
+    "https://pdfs.semanticscholar.org/2b55/6e63ba0d3019f5e2959b3ec165072f139c4b.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+    "https://pubmed.ncbi.nlm.nih.gov/19197209/",
+    "https://pubmed.ncbi.nlm.nih.gov/26134664/",
+    "https://api.crossref.org/works/10.1519/SSC.0000000000000751",
+    "https://api.crossref.org/works/10.1016/j.jelekin.2025.103025"
+  ],
+  "excludedSources": [
+    {
+      "source": "Inspire US, Breaking Muscle, Trainer Academy, social posts, and other consumer T-bar row descriptions",
+      "reason": "Rejected as primary evidence; only used indirectly for discovering the landmine row DOI."
+    },
+    {
+      "source": "Chest-supported T-bar machine descriptions",
+      "reason": "Excluded from the classification because this entry is explicitly an unsupported landmine or barbell T-bar row."
+    },
+    {
+      "source": "Cluster-set, creatine, and bodybuilding intervention papers that listed T-bar row as a program exercise",
+      "reason": "Excluded because they did not measure T-bar row muscle activation or biomechanics relevant to this movement card."
+    }
+  ],
+  "notes": "Variant assumption: standing landmine or barbell T-bar row with no chest pad, a close neutral handle, and a hip-hinged torso. No direct EMG study of a landmine T-bar row was found. The visible muscle map therefore uses row-family EMG from seated cable rows and prone rows, trunk EMG from free-weight rows, rotator cuff row evidence, and the peer-reviewed landmine row technique source. Erector spinae is visible support because the unsupported hinge is part of the chosen variant. Local anatomy mesh mappings resolve for all visible muscles."
+}

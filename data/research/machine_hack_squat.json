@@ -1,0 +1,110 @@
+{
+  "movementId": "machine_hack_squat",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-1",
+  "evidenceStudyIds": [
+    "erdag-2019",
+    "clark-2019",
+    "da-silva-2008",
+    "escamilla-2001",
+    "gullett-2009",
+    "contreras-2016"
+  ],
+  "searchedQueries": [
+    "\"hack squat\" electromyography quadriceps gluteus hamstrings",
+    "\"Trunk Muscle Activation in the Back and Hack Squat\" DOI",
+    "\"Evaluation of Muscle Activities During Different Squat Variations\" hack squat DOI",
+    "\"hack squat\" \"same relative loads\" \"Journal of Strength and Conditioning Research\"",
+    "\"leg press\" EMG quadriceps gluteus hamstrings DOI",
+    "\"squat\" \"leg press\" biomechanics EMG PubMed"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed exclusive file scope, source/research file contract, generated bundle rule, and anatomy mesh coverage requirement."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Applied evidence priority, conservative role assignment, tag taxonomy, and rating anchors."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/seated_machine_leg_extension.json",
+      "notes": "Used as a guided machine lower-body style reference for setup, support, and progression scoring."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/barbell_back_squat.json",
+      "notes": "Companion entry drafted in the same batch; used to keep free-weight and guided squat assumptions distinct."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/forty_five_degree_leg_press.json",
+      "notes": "Companion guided-machine lower-body press entry used to keep foot-placement and support limitations consistent."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Quadriceps, Gluteus maximus, Hamstrings, and Trunk stabilizers resolve to existing local anatomy entries and mesh files."
+    },
+    {
+      "type": "script",
+      "path": "scripts/validate-movements.js",
+      "notes": "Checked required fields, evidence source IDs, research record requirements, and anatomy name matching."
+    },
+    {
+      "type": "paper",
+      "id": "erdag-2019",
+      "url": "https://doi.org/10.1007/978-3-030-35249-3_114",
+      "notes": "Squat-variant EMG chapter including hack squat. Used as the closest exact hack squat evidence for quadriceps, gluteus maximus, hamstrings, and trunk-related classification."
+    },
+    {
+      "type": "paper",
+      "id": "clark-2019",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28704312/",
+      "notes": "Direct back and hack squat trunk muscle activation comparison at matched relative loads. Used for trunk support role and high machine support score."
+    },
+    {
+      "type": "paper",
+      "id": "da-silva-2008",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18545207/",
+      "notes": "Direct 45 degree leg press EMG study used as close guided-machine lower-body press evidence for quadriceps, gluteus maximus, and hamstrings."
+    },
+    {
+      "type": "paper",
+      "id": "escamilla-2001",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11528346/",
+      "notes": "Direct squat and leg press biomechanics/EMG source used for guided-press versus free-squat interpretation and knee-loading limitations."
+    },
+    {
+      "type": "paper",
+      "id": "gullett-2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19002072/",
+      "notes": "Direct front/back squat comparison used only as close squat-family evidence for lower-body extensor demand and limitations."
+    },
+    {
+      "type": "paper",
+      "id": "contreras-2016",
+      "url": "https://doi.org/10.1123/jab.2015-0113",
+      "notes": "Direct squat-variation EMG source measuring gluteus maximus, biceps femoris, and vastus lateralis. Used as close squat-family evidence for secondary roles."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Machine hack squat coaching guides and equipment pages",
+      "reason": "Not used because they did not provide primary muscle activation or biomechanics evidence."
+    },
+    {
+      "title": "Barbell hack squat articles",
+      "reason": "Excluded because the movement assigned here is a supported sled hack squat machine, not a free-weight barbell hack squat."
+    },
+    {
+      "title": "Broad adductor claims from squat summaries",
+      "reason": "Not used as a visible role because local anatomy does not contain a broad adductor or adductor magnus mapping, and the final conservative card did not require mapping that role to Adductor longus."
+    }
+  ],
+  "notes": "Variant assumption: angled machine hack squat with back/shoulder pad support. Direct exact hack squat evidence was thinner than free squat and leg press evidence, so exact hack studies were prioritized and close guided-machine lower-body press and squat studies were used conservatively. No included visible muscle lacks a local mesh mapping."
+}

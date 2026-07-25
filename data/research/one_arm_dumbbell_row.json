@@ -1,0 +1,61 @@
+{
+  "movementId": "one_arm_dumbbell_row",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-4",
+  "evidenceStudyIds": [
+    "vasconcelos-2023",
+    "fischer-2025",
+    "lehman-2004",
+    "fujita-2019",
+    "mannarino-2021",
+    "wattanaprakornkul-2011",
+    "fenwick-2009",
+    "saeterbakken-2015",
+    "graham-2001"
+  ],
+  "searchedQueries": [
+    "\"one-arm dumbbell row\" EMG latissimus dorsi biceps trapezius",
+    "\"dumbbell row\" electromyographic latissimus dorsi posterior deltoid",
+    "\"one arm dumbbell row\" \"Lehman\" latissimus dorsi",
+    "\"Comparison of different rowing exercises\" trunk muscle activation lumbar spine motion load stiffness one-arm row",
+    "\"The Effect of Performing Bi- and Unilateral Row Exercises on Core Muscle Activation\"",
+    "\"Single-Joint Exercise Results in Higher Hypertrophy\" dumbbell row DOI",
+    "\"Dumbbell One-Arm Row\" Strength and Conditioning Journal DOI"
+  ],
+  "reviewedFiles": [
+    "docs/movement-data-workflow.md",
+    "docs/movement-research-protocol.md",
+    "data/movements/seated_cable_row.json",
+    "data/research/seated_cable_row.json",
+    "data/movements/pull_up.json",
+    "data/anatomy.json",
+    "scripts/validate-movements.js",
+    "https://journal.iusca.org/index.php/Journal/article/view/190",
+    "https://pubmed.ncbi.nlm.nih.gov/40513198/",
+    "https://pubmed.ncbi.nlm.nih.gov/15228624/",
+    "https://pdfs.semanticscholar.org/2b55/6e63ba0d3019f5e2959b3ec165072f139c4b.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/31268995/",
+    "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+    "https://pubmed.ncbi.nlm.nih.gov/19197209/",
+    "https://pubmed.ncbi.nlm.nih.gov/26134664/",
+    "https://doi.org/10.1519/00126548-200104000-00014",
+    "https://api.crossref.org/works/10.1519/JSC.0000000000003234",
+    "https://api.crossref.org/works/10.1519/00126548-200104000-00014"
+  ],
+  "excludedSources": [
+    {
+      "source": "Consumer exercise pages and video pages for one-arm dumbbell rows",
+      "reason": "Rejected as primary evidence because peer-reviewed row EMG, row trunk EMG, and exact technique sources were available."
+    },
+    {
+      "source": "ResearchGate, Scribd, and other duplicate mirrors of included row studies",
+      "reason": "Rejected as citation targets when PubMed, DOI, publisher, or original PDF links were available."
+    },
+    {
+      "source": "Forearm and grip-muscle discussion sources",
+      "reason": "Not used because brachialis, brachioradialis, and forearm flexor groups are not currently exposed as local visible anatomy entries in data/anatomy.json."
+    }
+  ],
+  "notes": "Variant assumption: unilateral dumbbell row with at least partial bench support and a hip/lower-rib pull target, not an unsupported Kroc row or chest-supported bilateral dumbbell row. Direct exact one-arm dumbbell row EMG for all visible back muscles was not found; primary and secondary back roles transfer from seated cable row, prone row, and row-family EMG. Biceps brachii is supported by exact unilateral dumbbell row training evidence but kept secondary because curls produced greater elbow-flexor hypertrophy. External oblique support is included because unilateral row evidence showed higher external oblique activity than bilateral rows; erector spinae is included as support, with the bench-support caveat. Local anatomy mesh mappings resolve for Latissimus dorsi, Teres major, Middle trapezius, Rhomboids, Posterior deltoid, Biceps brachii, Rotator cuff, Erector spinae, and External oblique."
+}

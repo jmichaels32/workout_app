@@ -1,0 +1,297 @@
+{
+  "id": "barbell_back_squat",
+  "name": "Barbell Back Squat",
+  "aliases": [
+    "back_squat",
+    "barbell_squat",
+    "high_bar_back_squat",
+    "low_bar_back_squat"
+  ],
+  "family": "squat",
+  "equipment": "barbell",
+  "variantType": "back_barbell",
+  "variant": "Free-weight bilateral barbell back squat with the bar supported on the upper back; treated separately from front squat, Smith machine, hack squat, safety-bar, goblet, and bodyweight squat variants.",
+  "description": "Set the bar securely across the upper back, brace the trunk, unrack with a stable stance, and descend by bending the hips, knees, and ankles while keeping the feet rooted and the knees tracking over the toes. Reach a controlled depth that preserves position, then drive the floor away and stand tall without losing the bar path or trunk brace.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Squat",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 78,
+      "rationale": "Strong quad and glute loading through large ranges, but systemic fatigue, technique limits, and bracing demands can cap target-muscle volume before local failure."
+    },
+    "strength": {
+      "score": 96,
+      "rationale": "Elite lower-body strength anchor because heavy bilateral free-weight loading, full-body bracing, and small barbell increments map cleanly to force expression."
+    },
+    "joint_resilience": {
+      "score": 68,
+      "rationale": "Useful progressive exposure for hips, knees, ankles, trunk, and connective tissue, but high joint forces and technique sensitivity require appropriate loading and depth selection."
+    },
+    "athletic_transfer": {
+      "score": 82,
+      "rationale": "High transfer potential from loaded triple extension, ground force production, trunk stiffness, and evidence showing stronger jump transfer than 45 degree leg press training."
+    },
+    "control": {
+      "score": 72,
+      "rationale": "High Motor Control demand from free bar path, bracing, depth, balance, knee tracking, hip motion, and maintaining the center of mass over the feet."
+    },
+    "fatigue_efficiency": {
+      "score": 28,
+      "rationale": "Excellent global stimulus but low isolation efficiency because heavy loading creates large systemic, spinal, bracing, and warm-up costs."
+    },
+    "setup": {
+      "score": 34,
+      "rationale": "Requires a rack, bar, plates, safeties or spotter judgment, space, warm-up sets, and repeatable rack height."
+    },
+    "ease": {
+      "score": 28,
+      "rationale": "Demanding to learn and repeat well because stance, depth, bracing, bar position, ankle mobility, hip motion, and bar path all matter."
+    },
+    "progression": {
+      "score": 88,
+      "rationale": "Load and reps are highly trackable with precise barbell increments, with deductions because depth and technique consistency affect comparability."
+    },
+    "support": {
+      "score": 18,
+      "rationale": "The rack only supports setup and rerack; during the lift the lifter stabilizes the bar, trunk, hips, knees, ankles, and balance."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Direct squat EMG and biomechanics support high knee-extensor demand.",
+        "evidence": "Back squat studies consistently measure substantial vastus lateralis, vastus medialis, and rectus femoris involvement, while biomechanical comparisons show large knee-extensor moments that increase with load and depth.",
+        "sourceIds": [
+          "gullett-2009",
+          "yavuz-2015",
+          "caterisano-2002",
+          "bryanton-2012",
+          "aspe-2014"
+        ]
+      },
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Depth-sensitive hip-extension target in back squats.",
+        "evidence": "Back squat EMG and modeling evidence show meaningful gluteus maximus involvement, with gluteal contribution increasing as squat depth and hip-extension demand increase.",
+        "sourceIds": [
+          "caterisano-2002",
+          "yavuz-2015",
+          "contreras-2016",
+          "bryanton-2012",
+          "aspe-2014"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Measured posterior-chain assistant, not the dominant squat target.",
+        "evidence": "Back squat studies measure biceps femoris and semitendinosus activity, including greater semitendinosus activity than front squats in one maximal-load comparison, but hamstrings remain secondary because knee and hip actions partly oppose each other during squatting.",
+        "sourceIds": [
+          "yavuz-2015",
+          "contreras-2016",
+          "escamilla-2001",
+          "aspe-2014"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Trunk stabilizers",
+        "evidenceShort": "Back squat trunk activation is load sensitive and higher than hack squat.",
+        "evidence": "Back squat studies measure erector spinae and anterior trunk activation during squatting, and a back-versus-hack squat study showed higher trunk activation in the unsupported back squat despite lower absolute loads.",
+        "sourceIds": [
+          "aspe-2014",
+          "clark-2019",
+          "yavuz-2015"
+        ]
+      },
+      {
+        "name": "Gastrocnemius",
+        "evidenceShort": "Ankle and knee support contributor during squat ascent.",
+        "evidence": "Back squat EMG studies measure gastrocnemius activity and technique-sensitive changes, supporting a support role for ankle control and lower-limb coordination rather than a primary hypertrophy target.",
+        "sourceIds": [
+          "aspe-2014",
+          "escamilla-2001"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Barbell back squat: quadriceps and gluteus maximus primary; hamstrings secondary; trunk stabilizers and gastrocnemius support.",
+    "clinicalShort": "Surface EMG and inverse-dynamics estimates are condition-specific and do not directly measure hypertrophy, injury risk, or long-term programming value.",
+    "limitsShort": "High-bar versus low-bar position, stance, depth, load, heel elevation, tempo, fatigue, mobility, and bracing strategy all change emphasis.",
+    "summary": "The barbell back squat is classified as an unsupported free-weight lower-body compound lift. The evidence supports quadriceps and gluteus maximus as the main visible targets, hamstrings as meaningful secondary contributors, and trunk stabilizers plus gastrocnemius as support muscles for posture, bracing, ankle control, and force transfer.",
+    "clinicalInterpretation": "EMG amplitude helps identify acute excitation in measured superficial muscles, while biomechanics studies estimate joint moments and relative effort from model assumptions. These sources support muscle roles but should not be read as direct hypertrophy rankings or injury predictions.",
+    "limitations": "This entry covers a generic back squat rather than a separate high-bar, low-bar, powerlifting, Olympic-style, box, pause, or heel-elevated variant. The local anatomy registry does not currently include an adductor magnus or broad adductor-group mesh, so no visible adductor role was added despite evidence that deep squats can load hip adductors.",
+    "studies": [
+      {
+        "id": "gullett-2009",
+        "type": "Back versus front squat biomechanics and EMG",
+        "shortCitation": "Gullett et al., JSCR, 2009",
+        "finding": "Back and front squats produced similar overall muscle recruitment, while back squats produced higher knee compressive forces and knee extensor moments.",
+        "citation": "Gullett JC, Tillman MD, Gutierrez GM, Chow JW. A biomechanical comparison of back and front squats in healthy trained individuals. Journal of Strength and Conditioning Research. 2009;23(1):284-292. doi:10.1519/JSC.0b013e31818546bb.",
+        "doi": "10.1519/JSC.0b013e31818546bb",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19002072/",
+        "relevance": "Direct free-weight back and front squat comparison with force, motion, and surface EMG data in trained participants.",
+        "usedFor": [
+          "primary muscle role",
+          "strength score",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "yavuz-2015",
+        "type": "Maximal front and back squat EMG and kinematics",
+        "shortCitation": "Yavuz et al., J Sports Sci, 2015",
+        "finding": "Back squats used more trunk lean and greater semitendinosus activity than front squats, while front squats showed greater vastus medialis activity.",
+        "citation": "Yavuz HU, Erdag D, Amca AM, Aritan S. Kinematic and EMG activities during front and back squat variations in maximum loads. Journal of Sports Sciences. 2015;33(10):1058-1066. doi:10.1080/02640414.2014.984240.",
+        "doi": "10.1080/02640414.2014.984240",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25630691/",
+        "relevance": "Direct maximal-load front/back squat comparison measuring vasti, rectus femoris, semitendinosus, biceps femoris, gluteus maximus, and erector spinae.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "control score"
+        ]
+      },
+      {
+        "id": "caterisano-2002",
+        "type": "Back squat depth EMG",
+        "shortCitation": "Caterisano et al., JSCR, 2002",
+        "finding": "Gluteus maximus contribution increased from partial to parallel and full-depth back squats, while vasti and biceps femoris contributions did not change significantly across depths.",
+        "citation": "Caterisano A, Moss RF, Pellinger TK, Woodruff K, Lewis VC, Booth W, Khadra T. The effect of back squat depth on the EMG activity of 4 superficial hip and thigh muscles. Journal of Strength and Conditioning Research. 2002;16(3):428-432.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12173958/",
+        "relevance": "Direct back squat depth study measuring vastus medialis, vastus lateralis, biceps femoris, and gluteus maximus in experienced lifters.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "bryanton-2012",
+        "type": "Squat depth and load biomechanics",
+        "shortCitation": "Bryanton et al., JSCR, 2012",
+        "finding": "Relative muscular effort in squatting changed with depth and barbell load across hip, knee, and ankle extensors.",
+        "citation": "Bryanton MA, Kennedy MD, Carey JP, Chiu LZF. Effect of Squat Depth and Barbell Load on Relative Muscular Effort in Squatting. Journal of Strength and Conditioning Research. 2012;26(10):2820-2828. doi:10.1519/JSC.0b013e31826791a7.",
+        "doi": "10.1519/JSC.0b013e31826791a7",
+        "url": "https://doi.org/10.1519/JSC.0b013e31826791a7",
+        "relevance": "Biomechanics source for how depth and load alter knee, hip, and ankle extensor demands in back squatting.",
+        "usedFor": [
+          "primary muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "contreras-2016",
+        "type": "Parallel, full, and front squat EMG",
+        "shortCitation": "Contreras et al., J Appl Biomech, 2016",
+        "finding": "Parallel, full, and front squat variations measured gluteus maximus, biceps femoris, and vastus lateralis EMG amplitudes.",
+        "citation": "Contreras B, Vigotsky AD, Schoenfeld BJ, Beardsley C, McMaster DT, Reyneke JHT, Cronin JB. A Comparison of Gluteus Maximus, Biceps Femoris, and Vastus Lateralis Electromyography Amplitude in Parallel, Full, and Front Squat Variations in Resistance-Trained Females. Journal of Applied Biomechanics. 2016;32(1):16-22. doi:10.1123/jab.2015-0113.",
+        "doi": "10.1123/jab.2015-0113",
+        "url": "https://doi.org/10.1123/jab.2015-0113",
+        "relevance": "Direct squat-variation EMG source for gluteus maximus, biceps femoris, and vastus lateralis in trained participants.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score"
+        ]
+      },
+      {
+        "id": "aspe-2014",
+        "type": "Back squat lower-body and trunk EMG",
+        "shortCitation": "Aspe and Swinton, JSCR, 2014",
+        "finding": "Back squats showed greater posterior trunk and lower-body muscle activity than overhead squats during the concentric phase, with lateral gastrocnemius measured.",
+        "citation": "Aspe RR, Swinton PA. Electromyographic and kinetic comparison of the back squat and overhead squat. Journal of Strength and Conditioning Research. 2014;28(10):2827-2836. doi:10.1519/JSC.0000000000000462.",
+        "doi": "10.1519/JSC.0000000000000462",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24662228/",
+        "relevance": "Direct loaded back squat EMG and kinetic source measuring lower-body muscles and trunk musculature.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "control score",
+          "support score"
+        ]
+      },
+      {
+        "id": "escamilla-2001",
+        "type": "Squat and leg press biomechanics and EMG",
+        "shortCitation": "Escamilla et al., MSSE, 2001",
+        "finding": "Squats produced greater quadriceps and hamstrings activity than high- and low-foot leg press variants; technique changed gastrocnemius activity and knee forces.",
+        "citation": "Escamilla RF, Fleisig GS, Zheng N, Lander JE, Barrentine SW, Andrews JR, Bergemann BW, Moorman CT 3rd. Effects of technique variations on knee biomechanics during the squat and leg press. Medicine and Science in Sports and Exercise. 2001;33(9):1552-1566. doi:10.1097/00005768-200109000-00020.",
+        "doi": "10.1097/00005768-200109000-00020",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11528346/",
+        "relevance": "Direct squat and leg press comparison for lower-body muscle activity, knee loading, stance width, and foot placement effects.",
+        "usedFor": [
+          "secondary muscle role",
+          "support muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "clark-2019",
+        "type": "Back versus hack squat trunk EMG",
+        "shortCitation": "Clark et al., JSCR, 2019",
+        "finding": "Back squats produced higher trunk muscle activation than hack squats at matched relative loads.",
+        "citation": "Clark DR, Lambert MI, Hunter AM. Trunk Muscle Activation in the Back and Hack Squat at the Same Relative Loads. Journal of Strength and Conditioning Research. 2019;33 Suppl 1:S60-S69. doi:10.1519/JSC.0000000000002144.",
+        "doi": "10.1519/JSC.0000000000002144",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28704312/",
+        "relevance": "Direct source for trunk stabilization differences between unsupported back squat and supported hack squat.",
+        "usedFor": [
+          "support muscle role",
+          "control score",
+          "support score"
+        ]
+      },
+      {
+        "id": "wirth-2016",
+        "type": "Back squat versus 45 degree leg press training transfer",
+        "shortCitation": "Wirth et al., JSCR, 2016",
+        "finding": "Eight weeks of parallel squat training improved jump outcomes more than 45 degree leg press training.",
+        "citation": "Wirth K, Hartmann H, Sander A, Mickel C, Szilvas E, Keiner M. The Impact of Back Squat and Leg-Press Exercises on Maximal Strength and Speed-Strength Parameters. Journal of Strength and Conditioning Research. 2016;30(5):1205-1212. doi:10.1519/JSC.0000000000001228.",
+        "doi": "10.1519/JSC.0000000000001228",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26439782/",
+        "relevance": "Training-transfer source comparing back squat and 45 degree leg press effects on maximal and speed-strength outcomes.",
+        "usedFor": [
+          "athletic transfer score",
+          "strength score"
+        ]
+      }
+    ]
+  }
+}

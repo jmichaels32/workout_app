@@ -1,0 +1,172 @@
+{
+  "id": "kneeling_cable_crunch",
+  "name": "Kneeling Cable Crunch",
+  "aliases": [
+    "cable_crunch",
+    "rope_cable_crunch",
+    "kneeling_rope_crunch",
+    "weighted_cable_crunch"
+  ],
+  "family": "crunch",
+  "equipment": "cable",
+  "variantType": "kneeling_cable",
+  "variant": "Kneeling cable crunch with a high pulley and rope or handle attachment, emphasizing loaded trunk flexion.",
+  "description": "Kneel facing the cable with the attachment held near the head or shoulders, keep the hips mostly fixed, curl the ribs toward the pelvis against the cable, then return under control without turning it into a hip hinge.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Abs",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Trunk flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 54,
+      "rationale": "One of the more loadable abdominal isolation options, though technique can shift effort away from the abdominal wall."
+    },
+    "strength": {
+      "score": 46,
+      "rationale": "Good loaded trunk-flexion strength signal, but it is not a global strength anchor and the force path is narrow."
+    },
+    "joint_resilience": {
+      "score": 22,
+      "rationale": "Can build tolerance to controlled spinal flexion, but repeated loaded flexion is not broadly useful for every back or program context."
+    },
+    "athletic_transfer": {
+      "score": 16,
+      "rationale": "Low direct transfer because it is kneeling, externally stabilized, and mainly sagittal-plane trunk flexion."
+    },
+    "control": {
+      "score": 38,
+      "rationale": "Requires enough control to keep the hips fixed and flex through the trunk, but balance and coordination demands are moderate."
+    },
+    "fatigue_efficiency": {
+      "score": 70,
+      "rationale": "Provides a focused abdominal stimulus with low systemic fatigue when the load and range are appropriate."
+    },
+    "setup": {
+      "score": 52,
+      "rationale": "Requires a cable station, high pulley, attachment, and often a pad, but no plate loading."
+    },
+    "ease": {
+      "score": 58,
+      "rationale": "Easy to set up conceptually, but many users compensate with hip flexion, arm pulling, or excessive lumbar motion."
+    },
+    "progression": {
+      "score": 78,
+      "rationale": "Cable-stack increments make load progression much cleaner than most bodyweight abdominal drills."
+    },
+    "support": {
+      "score": 64,
+      "rationale": "The kneeling position and cable path provide moderate stability, though the trunk still has to control the flexion arc."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Loaded and common crunch EMG support rectus as the main target.",
+        "evidence": "Loaded crunch and common abdominal-crunch EMG studies show rectus abdominis is strongly activated during trunk-flexion crunch tasks, supporting the cable crunch as a loadable rectus-focused variant.",
+        "sourceIds": [
+          "moraes-2009",
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "External oblique",
+        "evidenceShort": "Crunch EMG measured external-oblique activation.",
+        "evidence": "Loaded crunch and common crunch EMG studies measured external oblique activity, supporting a meaningful assistive trunk-flexion and bracing role.",
+        "sourceIds": [
+          "moraes-2009",
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      },
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Common crunch EMG supports internal-oblique assistance.",
+        "evidence": "Common abdominal exercise studies that included the crunch measured internal oblique activity, supporting a secondary abdominal-wall role in the kneeling cable crunch.",
+        "sourceIds": [
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Kneeling cable crunch: rectus abdominis primary; external and internal oblique secondary; no separate support muscles listed.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, adaptation, pain response, or long-term safety.",
+    "limitsShort": "Pulley height, rope position, hip motion, spinal range, load, and whether the user rotates or side-bends can change emphasis.",
+    "summary": "The kneeling cable crunch is classified as a loadable trunk-flexion abdominal exercise. Direct evidence for the exact cable variant is limited, so visible roles are based on loaded crunch and common crunch EMG plus the cable variant's same trunk-flexion mechanics.",
+    "clinicalInterpretation": "It is most useful when the cable provides progressive resistance while the hips stay relatively fixed and the trunk curls rather than hinges.",
+    "limitations": "The strongest direct load study used externally loaded floor crunches rather than a kneeling high-pulley cable. Standing cable crunches, oblique cable crunches, and machine crunches should remain separate variants.",
+    "studies": [
+      {
+        "id": "moraes-2009",
+        "type": "Loaded abdominal crunch EMG",
+        "shortCitation": "Moraes et al., Phys Ther Sport, 2009",
+        "finding": "Loaded crunches measured rectus abdominis, external oblique, and rectus femoris EMG; abdominal activation was greatest at the highest tested load condition.",
+        "citation": "Moraes AC, Pinto RS, Valamatos MJ, Valamatos MJ, Pezarat-Correia PL, Okano AH, Santos PM, Cabri JM. EMG activation of abdominal muscles in the crunch exercise performed with different external loads. Physical Therapy in Sport. 2009;10(2):57-62. doi:10.1016/j.ptsp.2009.01.001.",
+        "doi": "10.1016/j.ptsp.2009.01.001",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19376473/",
+        "relevance": "Closest load-progression crunch EMG source for the cable crunch's main advantage.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "progression score"
+        ]
+      },
+      {
+        "id": "escamilla-2006-jospt",
+        "type": "Commercial and common abdominal exercise EMG",
+        "shortCitation": "Escamilla et al., JOSPT, 2006",
+        "finding": "Crunch and several abdominal-machine exercises produced high rectus abdominis and oblique activity.",
+        "citation": "Escamilla RF, McTaggart MSC, Fricklas EJ, DeWitt R, Kelleher P, Taylor MK, Hreljac A, Moorman CT. An electromyographic analysis of commercial and common abdominal exercises: implications for rehabilitation and training. Journal of Orthopaedic and Sports Physical Therapy. 2006;36(2):45-57. doi:10.2519/jospt.2006.36.2.45.",
+        "doi": "10.2519/jospt.2006.36.2.45",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+        "relevance": "Common crunch and abdominal-device EMG source for rectus abdominis and oblique classification.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "youdas-2008",
+        "type": "Crunch and abdominal exercise EMG",
+        "shortCitation": "Youdas et al., JSCR, 2008",
+        "finding": "Compared abdominal crunch, Ab-Slide, supine double leg thrust, and side bridge using rectus abdominis, external oblique, internal oblique, and rectus femoris EMG.",
+        "citation": "Youdas JW, Guck BR, Hebrink RC, Rugotzke JD, Madson TJ, Hollman JH. An electromyographic analysis of the Ab-Slide exercise, abdominal crunch, supine double leg thrust, and side bridge in healthy young adults: implications for rehabilitation professionals. Journal of Strength and Conditioning Research. 2008;22(6):1939-1946. doi:10.1519/JSC.0b013e31818745bf.",
+        "doi": "10.1519/JSC.0b013e31818745bf",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+        "relevance": "Common crunch EMG source including internal oblique and rectus femoris boundary information.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "fatigue efficiency score"
+        ]
+      }
+    ]
+  }
+}

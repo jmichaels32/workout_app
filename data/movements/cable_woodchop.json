@@ -1,0 +1,171 @@
+{
+  "id": "cable_woodchop",
+  "name": "Cable Woodchop",
+  "aliases": [
+    "cable_chop",
+    "standing_cable_chop",
+    "wood_chopper",
+    "cable_wood_chop"
+  ],
+  "family": "woodchop",
+  "equipment": "cable",
+  "variantType": "standing_cable_diagonal",
+  "variant": "Standing diagonal cable woodchop using a cable handle, with the trunk and hips rotating as the handle moves across the body.",
+  "description": "Stand side-on to a cable station, hold the handle with both hands, brace, rotate through the trunk and hips to move the cable diagonally across the body, then return under control without letting the cable pull you out of position.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Obliques",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Trunk rotation",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 34,
+      "rationale": "Can load the obliques, but rotation, momentum, and whole-body contribution make local hypertrophy less precise than a stable flexion or anti-rotation drill."
+    },
+    "strength": {
+      "score": 44,
+      "rationale": "Useful for resisted trunk rotation, but technical execution and stance often limit maximal force expression."
+    },
+    "joint_resilience": {
+      "score": 36,
+      "rationale": "Controlled rotation can build trunk, hip, and shoulder tolerance, but careless loading can add unwanted lumbar rotation or shoulder strain."
+    },
+    "athletic_transfer": {
+      "score": 70,
+      "rationale": "Strong transfer signal for rotational force transfer because it is standing, multiplanar, and can be trained for power or controlled strength."
+    },
+    "control": {
+      "score": 66,
+      "rationale": "Requires coordinated bracing, trunk rotation, hip pivoting, stance control, and cable deceleration."
+    },
+    "fatigue_efficiency": {
+      "score": 52,
+      "rationale": "Moderate fatigue efficiency: it gives useful core and coordination stimulus but can leak effort into arms, hips, and balance."
+    },
+    "setup": {
+      "score": 54,
+      "rationale": "Requires a cable station, handle, pulley-height choice, and enough space to rotate."
+    },
+    "ease": {
+      "score": 42,
+      "rationale": "More technical than most core accessories because stance, pivot, arm path, and trunk timing have to match the cable line."
+    },
+    "progression": {
+      "score": 70,
+      "rationale": "Cable stacks make loading trackable, though speed, range, and stance can still change the stimulus."
+    },
+    "support": {
+      "score": 42,
+      "rationale": "The cable provides a consistent line of resistance, but the user stands freely and self-stabilizes through rotation."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "External oblique",
+        "evidenceShort": "Rotational throwing EMG and oblique-task EMG support the role.",
+        "evidence": "A side medicine-ball throw EMG study found external oblique activity distinguished longer from shorter rotational throws, and oblique-task EMG supports high external-oblique activity under rotational trunk demand.",
+        "sourceIds": [
+          "ikeda-2009",
+          "nakai-2021",
+          "zemkova-2017"
+        ]
+      },
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Oblique-task EMG supports internal-oblique loading under rotational demand.",
+        "evidence": "Self-oblique exercise EMG showed internal oblique activation when the upper limb created a rotational demand through the trunk; the cable woodchop uses a loadable standing cable version of a similar trunk-rotation demand.",
+        "sourceIds": [
+          "nakai-2021",
+          "zemkova-2017"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Rotational and oblique-task studies measured rectus activity.",
+        "evidence": "The rectus abdominis is included as a secondary trunk bracer because rotational throw and oblique-task EMG studies measured abdominal activity while the exact cable woodchop source frames the exercise as a core power and endurance test.",
+        "sourceIds": [
+          "ikeda-2009",
+          "nakai-2021",
+          "zemkova-2017"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Cable woodchop: external and internal oblique primary; rectus abdominis secondary; no separate support muscles listed.",
+    "clinicalShort": "EMG and power tests describe acute performance demands, not hypertrophy, adaptation, or injury risk.",
+    "limitsShort": "High-to-low versus low-to-high path, pulley height, stance width, hip pivot, arm dominance, speed, and load can change emphasis.",
+    "summary": "The cable woodchop is classified as a standing rotational core exercise. The exact cable study supports the movement as a reliable core power/endurance test, while close rotational and oblique EMG studies support external and internal oblique emphasis.",
+    "clinicalInterpretation": "The best use case is controlled rotational force transfer or power, not isolated abdominal hypertrophy.",
+    "limitations": "The exact standing cable woodchop study did not report individual-muscle EMG, so muscle roles use close rotational and oblique EMG evidence. Transversus abdominis, quadratus lumborum, and deep hip rotators were not added as visible roles because they are not locally mapped as display muscles.",
+    "studies": [
+      {
+        "id": "zemkova-2017",
+        "type": "Standing cable woodchop power assessment",
+        "shortCitation": "Zemkova et al., JSCR, 2017",
+        "finding": "Standing cable woodchop power and endurance measures were reliable and sensitive across different weight-stack loads in fit men.",
+        "citation": "Zemkova E, Cepkova A, Uvacek M, Soos L. A novel method for assessing muscle power during the standing cable wood chop exercise. Journal of Strength and Conditioning Research. 2017;31(8):2246-2254. doi:10.1519/JSC.0000000000001692.",
+        "doi": "10.1519/JSC.0000000000001692",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27806016/",
+        "relevance": "Exact standing cable woodchop source for loadability, power, endurance, progression, and movement-family specificity.",
+        "usedFor": [
+          "ratings",
+          "variant specificity",
+          "limitations"
+        ]
+      },
+      {
+        "id": "ikeda-2009",
+        "type": "Rotational medicine-ball throw EMG",
+        "shortCitation": "Ikeda et al., JSCR, 2009",
+        "finding": "During fast side medicine-ball throws, external oblique EMG was the major difference between longer and shorter throwers.",
+        "citation": "Ikeda Y, Miyatsuji K, Kawabata K, Fuchimoto T, Ito A. Analysis of trunk muscle activity in the side medicine-ball throw. Journal of Strength and Conditioning Research. 2009;23(8):2231-2240. doi:10.1519/JSC.0b013e3181b8676f.",
+        "doi": "10.1519/JSC.0b013e3181b8676f",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19826303/",
+        "relevance": "Close dynamic rotational-power EMG source for external oblique and rectus abdominis involvement.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "athletic transfer score"
+        ]
+      },
+      {
+        "id": "nakai-2021",
+        "type": "Oblique and hip muscle EMG",
+        "shortCitation": "Nakai et al., PLoS One, 2021",
+        "finding": "Self-oblique exercise produced coordinated external oblique, internal oblique, gluteus medius, and adductor activity and allowed load modulation.",
+        "citation": "Nakai Y, Kawada M, Miyazaki T, Araki S, Takeshita Y, Kiyama R. A self-oblique exercise that activates the coordinated activity of abdominal and hip muscles: a pilot study. PLoS One. 2021;16(8):e0255035. doi:10.1371/journal.pone.0255035.",
+        "doi": "10.1371/journal.pone.0255035",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34383772/",
+        "relevance": "Close oblique-task EMG source for internal and external oblique activation under rotational trunk demand.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "control score"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "movementId": "barbell_front_squat",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-1",
+  "evidenceStudyIds": [
+    "gullett-2009",
+    "yavuz-2015",
+    "erdag-2019",
+    "contreras-2016"
+  ],
+  "searchedQueries": [
+    "\"front squat\" \"back squat\" EMG quadriceps gluteus hamstrings",
+    "\"A biomechanical comparison of back and front squats\" DOI",
+    "\"Kinematic and EMG activities during front and back squat variations in maximum loads\" DOI",
+    "\"Evaluation of Muscle Activities During Different Squat Variations\" front squat hack squat DOI",
+    "\"front squat\" \"vastus medialis\" \"semitendinosus\" PubMed"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed source/research file ownership, generated bundle rule, and anatomy mesh requirement."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Applied evidence priority, visible-role source requirements, conservative classifications, and rating protocol."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/bulgarian_split_squat.json",
+      "notes": "Used as lower-body squat-family style reference for ratings, tags, and role wording."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/barbell_back_squat.json",
+      "notes": "Companion entry drafted in the same work batch; used to keep front/back squat assumptions and shared evidence IDs consistent."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Quadriceps, Gluteus maximus, Hamstrings, and Trunk stabilizers resolve to local anatomy entries with mesh files."
+    },
+    {
+      "type": "script",
+      "path": "scripts/validate-movements.js",
+      "notes": "Checked JSON contract, evidence study references, and anatomy name matching."
+    },
+    {
+      "type": "paper",
+      "id": "gullett-2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19002072/",
+      "notes": "Direct front/back squat comparison in trained participants using kinetics and surface EMG. Used for front squat muscle recruitment, joint force interpretation, and front/back limitations."
+    },
+    {
+      "type": "paper",
+      "id": "yavuz-2015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25630691/",
+      "notes": "Direct maximal-load front/back squat EMG and kinematics study. Used for quadriceps primary role, hamstrings secondary role, trunk-support role, and front squat technique constraints."
+    },
+    {
+      "type": "paper",
+      "id": "erdag-2019",
+      "url": "https://doi.org/10.1007/978-3-030-35249-3_114",
+      "notes": "Squat-variant EMG conference chapter including front squat and hack squat patterns. Used as close direct squat-variation evidence where exact front-rack details are limited."
+    },
+    {
+      "type": "paper",
+      "id": "contreras-2016",
+      "url": "https://doi.org/10.1123/jab.2015-0113",
+      "notes": "Direct parallel, full, and front squat EMG source in resistance-trained females. Used for gluteus maximus, biceps femoris, and vastus lateralis role support."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Front squat technique blogs and coaching videos",
+      "reason": "Not used because direct front/back squat EMG and kinetics studies were available."
+    },
+    {
+      "title": "Olympic lifting tutorials for clean receiving positions",
+      "reason": "Not used for visible muscle roles because they address skill transfer and coaching rather than front squat muscle activation."
+    },
+    {
+      "title": "Broad claims about upper back, wrist, and shoulder muscles in front squats",
+      "reason": "Not used as visible roles because the local anatomy registry and reviewed evidence did not support a precise app muscle classification beyond Trunk stabilizers."
+    }
+  ],
+  "notes": "Variant assumption: conventional barbell front squat with the bar on the anterior shoulders. Visible map is Quadriceps primary; Gluteus maximus and Hamstrings secondary; Trunk stabilizers support. No included visible muscle lacks a local mesh mapping."
+}

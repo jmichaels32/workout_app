@@ -1,0 +1,164 @@
+{
+  "id": "overhead_cable_triceps_extension",
+  "name": "Overhead Cable Triceps Extension",
+  "aliases": [
+    "cable_overhead_triceps_extension",
+    "overhead_rope_triceps_extension",
+    "cable_overhead_extension",
+    "overhead_cable_elbow_extension",
+    "rope_overhead_triceps_extension"
+  ],
+  "family": "triceps_extension",
+  "equipment": "cable",
+  "variantType": "overhead_cable",
+  "variant": "Cable elbow extension performed with the upper arm flexed overhead, commonly facing away from a pulley with a rope or handle and the elbows pointing forward or upward.",
+  "description": "Set a cable so the line of pull stays behind or below the hands, take the handle overhead, and brace with the ribs stacked over the pelvis. Keep the upper arms mostly fixed, bend the elbows until the triceps are stretched, extend the elbows until the arms are nearly straight, then return under control without letting the shoulders collapse or the low back arch.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 82,
+      "rationale": "Excellent triceps hypertrophy accessory because cable overhead elbow-extension training produced large triceps growth, likely helped by loading the long head at a longer muscle length."
+    },
+    "strength": {
+      "score": 30,
+      "rationale": "Useful for elbow-extension strength, but the overhead isolation setup is not a major maximal-strength expression compared with compound presses."
+    },
+    "joint_resilience": {
+      "score": 28,
+      "rationale": "Can build tolerance to controlled overhead elbow-extension loading, but shoulder flexion and deep elbow flexion make it a narrow resilience tool."
+    },
+    "athletic_transfer": {
+      "score": 3,
+      "rationale": "Very low athletic-transfer signal because it is a stationary single-joint triceps exercise."
+    },
+    "control": {
+      "score": 26,
+      "rationale": "Requires more shoulder, rib, elbow-path, and cable-line control than a pushdown, but still has limited whole-body coordination demand."
+    },
+    "fatigue_efficiency": {
+      "score": 78,
+      "rationale": "High local triceps stimulus with modest systemic cost, though overhead setup and shoulder-position fatigue can reduce efficiency for some users."
+    },
+    "setup": {
+      "score": 62,
+      "rationale": "Requires a cable station, correct pulley height, handle selection, and careful body position, so setup is more involved than a standard pushdown."
+    },
+    "ease": {
+      "score": 70,
+      "rationale": "Learnable, but the overhead position, elbow tracking, cable angle, and trunk bracing are more sensitive than neutral-arm pushdowns."
+    },
+    "progression": {
+      "score": 76,
+      "rationale": "Cable stack loading is trackable, with deductions for friction, attachment differences, body-angle changes, and shoulder-position consistency."
+    },
+    "support": {
+      "score": 44,
+      "rationale": "The cable path is externally loaded and predictable, but the user must stabilize the overhead arm position and trunk without a bench or guided lever."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Cable overhead training studies support the triceps as the target.",
+        "evidence": "Cable overhead-arm elbow extension studies directly trained and measured triceps brachii adaptations, with MRI evidence showing larger hypertrophy than neutral-arm cable extension. Shoulder-position EMG and biomechanics studies support head-level triceps involvement during elbow extension with the arm elevated.",
+        "sourceIds": [
+          "maeo-2023",
+          "stasinaki-2018",
+          "alves-2018",
+          "kholinne-2018"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Overhead cable triceps extension: triceps brachii primary; no visible secondary or support muscles added.",
+    "clinicalShort": "EMG and imaging studies estimate excitation and adaptation under specific protocols, not pain or injury risk.",
+    "limitsShort": "Pulley height, facing direction, rope versus bar, shoulder flexion angle, elbow range, trunk position, load, and fatigue can shift emphasis and tolerance.",
+    "summary": "The overhead cable triceps extension is classified as a cable elbow-extension isolation movement performed with the arm elevated. Direct training studies using cable overhead-arm elbow extension support triceps brachii as the primary visible role. No secondary or support muscles are shown because the reviewed evidence centers on triceps adaptation and head-level triceps behavior, while shoulder and trunk muscles function mainly to hold position.",
+    "clinicalInterpretation": "Surface electromyography and MRI muscle-volume changes help interpret muscle involvement and adaptation in a specific protocol. They should not be treated as direct measures of mechanical tension, individual hypertrophy response, pain risk, or injury risk.",
+    "limitations": "The local anatomy dataset exposes triceps brachii as a whole muscle, not separate long, lateral, and medial heads. Direct training evidence often uses unilateral cable conditions and controlled elbow ranges rather than every gym version of the overhead rope extension. Dumbbell, EZ-bar, machine, seated, kneeling, one-arm, and cable-from-high versus cable-from-low overhead extensions should be separate variants if the app needs that detail.",
+    "studies": [
+      {
+        "id": "maeo-2023",
+        "type": "Direct cable overhead versus neutral-arm hypertrophy study",
+        "shortCitation": "Maeo et al., Eur J Sport Sci, 2023",
+        "finding": "Overhead-arm cable elbow extension produced greater triceps brachii hypertrophy than neutral-arm cable elbow extension despite lower absolute loads.",
+        "citation": "Maeo S, Wu Y, Huang M, Sakurai H, Kusagawa Y, Sugiyama T, Kanehisa H, Isaka T. Triceps brachii hypertrophy is substantially greater after elbow extension training performed in the overhead versus neutral arm position. European Journal of Sport Science. 2023;23(7):1240-1250. doi:10.1080/17461391.2022.2100279.",
+        "doi": "10.1080/17461391.2022.2100279",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/17461391.2022.2100279",
+        "relevance": "Most direct source for the requested cable overhead triceps extension, using a cable machine, overhead arm position, 12 weeks of training, and MRI-measured triceps volume.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "stasinaki-2018",
+        "type": "Cable pushdown versus overhead extension training study",
+        "shortCitation": "Stasinaki et al., J Funct Morphol Kinesiol, 2018",
+        "finding": "Unilateral cable overhead extensions at long fascicle length and cable push-downs at short fascicle length both improved elbow-extension strength and triceps architecture over six weeks.",
+        "citation": "Stasinaki AN, Zaras N, Methenitis S, Tsitkanou S, Krase A, Kavvoura A, Terzis G. Triceps Brachii Muscle Strength and Architectural Adaptations with Resistance Training Exercises at Short or Long Fascicle Length. Journal of Functional Morphology and Kinesiology. 2018;3(2):28. doi:10.3390/jfmk3020028.",
+        "doi": "10.3390/jfmk3020028",
+        "url": "https://www.mdpi.com/2411-5142/3/2/28",
+        "relevance": "Directly studied cable overhead extension as a long-fascicle-length triceps training condition, though the sample was small and novice female participants.",
+        "usedFor": [
+          "primary muscle role",
+          "strength score",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "alves-2018",
+        "type": "Shoulder-position elbow-extension EMG",
+        "shortCitation": "Alves et al., J Sports Med Phys Fitness, 2018",
+        "finding": "Dumbbell elbow extension exercises showed shoulder-position-dependent triceps head activity.",
+        "citation": "Alves D, Matta T, Oliveira L. Effect of shoulder position on triceps brachii heads activity in dumbbell elbow extension exercises. Journal of Sports Medicine and Physical Fitness. 2018;58(9):1247-1252. doi:10.23736/S0022-4707.17.06849-9.",
+        "doi": "10.23736/S0022-4707.17.06849-9",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28677940/",
+        "relevance": "Close elbow-extension EMG evidence for triceps head behavior at different shoulder positions; less direct because it used dumbbells rather than cables.",
+        "usedFor": [
+          "primary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "kholinne-2018",
+        "type": "Triceps head function by shoulder elevation",
+        "shortCitation": "Kholinne et al., Acta Orthop Traumatol Turc, 2018",
+        "finding": "Each triceps head showed different force and activity patterns across shoulder elevation angles during elbow-extension tasks.",
+        "citation": "Kholinne E, Zulkarnain RF, Sun YC, Lim S, Chun JM, Jeon IH. The different role of each head of the triceps brachii muscle in elbow extension. Acta Orthopaedica et Traumatologica Turcica. 2018;52(3):201-205. doi:10.1016/j.aott.2018.02.005.",
+        "doi": "10.1016/j.aott.2018.02.005",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6136322/",
+        "relevance": "Biomechanics and EMG context for why overhead shoulder elevation changes triceps head behavior during elbow extension.",
+        "usedFor": [
+          "primary muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

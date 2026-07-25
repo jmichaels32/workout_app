@@ -1,0 +1,84 @@
+{
+  "movementId": "conventional_barbell_deadlift",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-2",
+  "evidenceStudyIds": [
+    "escamilla-2002",
+    "escamilla-2000",
+    "martin-fuentes-2020",
+    "lee-2018",
+    "andersen-2019",
+    "camara-2016",
+    "nijem-2016"
+  ],
+  "searchedQueries": [
+    "\"conventional deadlift\" EMG quadriceps hamstrings gluteus maximus erector spinae",
+    "\"sumo conventional deadlift\" electromyographic analysis trapezius gastrocnemius abdominals",
+    "\"conventional deadlift\" biomechanics joint moments hip knee trunk",
+    "\"deadlift variants\" systematic review electromyography conventional deadlift",
+    "\"conventional Romanian deadlifts\" electromyographic kinetic comparison",
+    "\"straight bar hex bar deadlift\" muscle activation power characteristics",
+    "\"deadlift with chains\" electromyographic force plate analysis"
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed exclusive source-file workflow and anatomy validation requirement."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Used evidence priority, muscle-role classification criteria, and rating anchors."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Erector spinae, Quadriceps, Gluteus maximus, Hamstrings, Gastrocnemius, Trapezius, and Trunk stabilizers resolve to local mesh mappings."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11932579/",
+      "notes": "Direct conventional and sumo deadlift EMG source for prime movers and support muscles."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10912892/",
+      "notes": "Three-dimensional biomechanical comparison of sumo and conventional deadlifts."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229507",
+      "notes": "Systematic review used for deadlift-family muscle hierarchy and methodology limits."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S1728869X18301291",
+      "notes": "Direct conventional versus Romanian deadlift comparison used to separate movement profiles."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0211021",
+      "notes": "Direct conventional deadlift variable-resistance EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26840440/",
+      "notes": "Straight-bar versus hex-bar deadlift EMG and power source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26840441/",
+      "notes": "Deadlift with and without chains EMG and force-plate source."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Trap-bar deadlift studies used as standalone evidence",
+      "url": "multiple search results",
+      "reason": "Reviewed only for contrast; trap-bar deadlift mechanics differ enough that straight-bar conventional evidence was preferred."
+    },
+    {
+      "title": "Powerlifting tutorials, encyclopedia pages, and training blogs",
+      "url": "multiple search results",
+      "reason": "Rejected as non-primary sources for muscle-role classification."
+    },
+    {
+      "title": "ResearchGate and Semantic Scholar mirror pages",
+      "url": "multiple search results",
+      "reason": "Used only for discovery or abstract cross-checking when PubMed, PLOS, DOI, or publisher records were available."
+    }
+  ],
+  "notes": "Variant assumption is a conventional straight-bar floor pull with hands outside the legs. Primary roles were limited to erector spinae, quadriceps, and gluteus maximus because direct EMG and review evidence show large trunk and knee-extensor demand in addition to hip extension. Hamstrings remain secondary. Latissimus dorsi was not added because exact conventional-deadlift evidence reviewed here did not support it as cleanly as the selected support muscles. No anatomy blockers found."
+}

@@ -1,0 +1,211 @@
+{
+  "id": "bicycle_crunch",
+  "name": "Bicycle Crunch",
+  "aliases": [
+    "bicycle_maneuver",
+    "air_bike_crunch",
+    "alternating_bicycle_crunch"
+  ],
+  "family": "crunch",
+  "equipment": "bodyweight",
+  "variantType": "floor_alternating",
+  "variant": "Bodyweight floor bicycle crunch alternating trunk flexion and rotation toward the opposite knee with a cycling leg action.",
+  "description": "Lie on the floor with the hands lightly behind the head, lift the shoulders, and bring one knee toward the opposite elbow while the other leg extends. Alternate sides in a controlled rhythm, rotating from the ribs instead of pulling the neck, and keep the low back from arching as the legs switch.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Abs",
+      "group": "region"
+    },
+    {
+      "label": "Obliques",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Trunk flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 28,
+      "rationale": "High abdominal EMG signal for a floor drill, but loading is bodyweight and hard to overload precisely."
+    },
+    "strength": {
+      "score": 18,
+      "rationale": "Low strength signal because the exercise is mostly bodyweight trunk flexion and rotation."
+    },
+    "joint_resilience": {
+      "score": 10,
+      "rationale": "Low resilience value because repeated spinal flexion and rotation are not broadly useful as a joint-loading anchor."
+    },
+    "athletic_transfer": {
+      "score": 18,
+      "rationale": "Some transfer to coordinated trunk rotation and limb timing, but no standing, loaded, or sport-specific force transfer."
+    },
+    "control": {
+      "score": 52,
+      "rationale": "Requires alternating trunk rotation, hip flexion, breathing, and low-back position control."
+    },
+    "fatigue_efficiency": {
+      "score": 76,
+      "rationale": "Low setup and low systemic fatigue with a strong local abdominal burn, though technique often degrades with speed."
+    },
+    "setup": {
+      "score": 94,
+      "rationale": "Requires only floor space."
+    },
+    "ease": {
+      "score": 52,
+      "rationale": "Easy to recognize but harder to repeat cleanly without neck pulling, rushing, or losing lumbar control."
+    },
+    "progression": {
+      "score": 10,
+      "rationale": "Progression is mostly reps and tempo; meaningful external loading is awkward."
+    },
+    "support": {
+      "score": 82,
+      "rationale": "The floor supports the body, though the alternating limbs require more self-control than a basic crunch."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Exact bicycle-maneuver EMG ranked rectus activity high.",
+        "evidence": "The San Diego State/ACE abdominal EMG report ranked the bicycle maneuver highest for rectus abdominis activity among the tested exercises, and peer-reviewed crunch-family EMG supports rectus abdominis involvement during floor trunk-flexion tasks.",
+        "sourceIds": [
+          "francis-davis-2001",
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      },
+      {
+        "name": "External oblique",
+        "evidenceShort": "Exact bicycle-maneuver report supports high oblique activity.",
+        "evidence": "The bicycle crunch combines trunk flexion with rotation toward the opposite knee; the exact San Diego State/ACE report ranked the bicycle maneuver near the top for grouped oblique activity, and peer-reviewed abdominal EMG supports external oblique activation in related floor core tasks.",
+        "sourceIds": [
+          "francis-davis-2001",
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      },
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Oblique and rotation evidence support a primary role.",
+        "evidence": "The exact bicycle report groups obliques, and peer-reviewed abdominal exercise EMG measures internal oblique activity during crunch and side-bridge tasks; the alternating trunk-rotation demand supports internal oblique as a primary visible target.",
+        "sourceIds": [
+          "francis-davis-2001",
+          "escamilla-2006-jospt",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Iliopsoas",
+        "evidenceShort": "Alternating hip flexion makes hip flexors assist.",
+        "evidence": "This is a movement-mechanics inference supported by leg-raise and hip-flexor EMG: each bicycle-crunch repetition flexes one hip while the other leg extends, so iliopsoas assists the cycling leg action without being the main target.",
+        "sourceIds": [
+          "lee-2016",
+          "czuppon-2024"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Bicycle crunch: rectus abdominis, external oblique, and internal oblique primary; iliopsoas secondary; no separate support muscles listed.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Speed, range, leg height, neck pulling, and lumbar position strongly change the stimulus and fatigue cost.",
+    "summary": "The bicycle crunch is classified as a floor trunk-flexion and rotation exercise. The exact San Diego State/ACE report supports high rectus abdominis and grouped oblique activity for the bicycle maneuver, while peer-reviewed abdominal EMG supports rectus and oblique roles in crunch-family work. Iliopsoas is included as a secondary hip-flexion assistant because the alternating leg action repeatedly flexes the hip.",
+    "clinicalInterpretation": "Controlled reps with the shoulder blades lifted and rotation from the trunk keep the exercise abdominal. Faster reps may raise fatigue and coordination demand but make the muscle stimulus less precise.",
+    "limitations": "The exact bicycle-maneuver evidence is a university/ACE research report rather than a peer-reviewed journal article, so it is paired with peer-reviewed abdominal and hip-flexor EMG sources. The ACE report groups obliques rather than separating internal and external oblique. Rectus femoris and other hip flexors were not listed because the local anatomy map does not expose all of those muscles as separate visible labels and the app classification is clearer with iliopsoas as the mapped hip-flexor role.",
+    "studies": [
+      {
+        "id": "francis-davis-2001",
+        "type": "San Diego State/ACE abdominal EMG report",
+        "shortCitation": "Francis and Davis, ACE FitnessMatters, 2001",
+        "finding": "The bicycle maneuver ranked highest for rectus abdominis activity and second for grouped oblique activity in a 13-exercise EMG comparison.",
+        "citation": "Francis P, Davis J. New Study Puts the Crunch on Ineffective Ab Exercises. ACE FitnessMatters. May/June 2001. San Diego State University Biomechanics Lab and American Council on Exercise.",
+        "doi": null,
+        "url": "https://www.acefitness.org/getfit/studies/BestWorstAbExercises.pdf",
+        "relevance": "Exact bicycle-crunch report for rectus abdominis and grouped oblique activation.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "escamilla-2006-jospt",
+        "type": "Commercial and common abdominal exercise EMG",
+        "shortCitation": "Escamilla et al., JOSPT, 2006",
+        "finding": "Common abdominal exercise EMG measured rectus abdominis plus external and internal oblique activity in crunch-family tasks.",
+        "citation": "Escamilla RF, McTaggart MSC, Fricklas EJ, et al. An electromyographic analysis of commercial and common abdominal exercises: implications for rehabilitation and training. Journal of Orthopaedic and Sports Physical Therapy. 2006;36(2):45-57. doi:10.2519/jospt.2006.36.2.45.",
+        "doi": "10.2519/jospt.2006.36.2.45",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+        "relevance": "Peer-reviewed abdominal EMG support for rectus and oblique activation in related floor trunk-flexion tasks.",
+        "usedFor": [
+          "primary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "youdas-2008",
+        "type": "Crunch and side-bridge abdominal EMG",
+        "shortCitation": "Youdas et al., JSCR, 2008",
+        "finding": "Compared abdominal crunch, supine double leg thrust, side bridge, and Ab-Slide using rectus abdominis, external oblique, internal oblique, and rectus femoris EMG.",
+        "citation": "Youdas JW, Guck BR, Hebrink RC, Rugotzke JD, Madson TJ, Hollman JH. An electromyographic analysis of the Ab-Slide exercise, abdominal crunch, supine double leg thrust, and side bridge in healthy young adults. Journal of Strength and Conditioning Research. 2008;22(6):1939-1946. doi:10.1519/JSC.0b013e31818745bf.",
+        "doi": "10.1519/JSC.0b013e31818745bf",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+        "relevance": "Close floor-core EMG source supporting rectus abdominis and oblique roles.",
+        "usedFor": [
+          "primary muscle role",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lee-2016",
+        "type": "Sit-up and leg-raise abdominal/lower-limb EMG",
+        "shortCitation": "Lee et al., J Phys Ther Sci, 2016",
+        "finding": "Compared abdominal and lower-limb muscle activity during sit-up and leg-raise tasks.",
+        "citation": "Lee DK, Kang MH, Lee TS, Oh JS. Comparison of muscular activities in the abdomen and lower limbs while performing sit-up and leg-raise. Journal of Physical Therapy Science. 2016;28(2):491-494. doi:10.1589/jpts.28.491.",
+        "doi": "10.1589/jpts.28.491",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27065536/",
+        "relevance": "Close leg-raise source supporting hip-flexion assistance in the alternating leg action.",
+        "usedFor": [
+          "secondary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "czuppon-2024",
+        "type": "Hip flexor EMG",
+        "shortCitation": "Czuppon et al., J Clin Med, 2024",
+        "finding": "Measured hip-flexor muscle activation during common rehabilitation and strength exercises.",
+        "citation": "Czuppon S, et al. Hip Flexor Muscle Activation During Common Rehabilitation and Strength Exercises. Journal of Clinical Medicine. 2024;13(21):6617. doi:10.3390/jcm13216617.",
+        "doi": "10.3390/jcm13216617",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39518756/",
+        "relevance": "Supports iliopsoas as the mapped hip-flexor assistant during repeated hip flexion.",
+        "usedFor": [
+          "secondary muscle role"
+        ]
+      }
+    ]
+  }
+}

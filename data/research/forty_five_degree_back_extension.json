@@ -1,0 +1,62 @@
+{
+  "movementId": "forty_five_degree_back_extension",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-2",
+  "evidenceStudyIds": [
+    "andersen-2021",
+    "bourne-2017",
+    "keerasomboon-2020"
+  ],
+  "searchedQueries": [
+    "\"45-degree back extension\" EMG gluteus maximus biceps femoris erector spinae",
+    "\"45-degree Roman chair\" muscle activity gluteus hamstrings erector spinae",
+    "\"45-degree hip extension\" electromyographic hamstring gluteus maximus erector spinae",
+    "\"Impact of exercise selection on hamstring muscle activation\" 45-degree hip extension",
+    "\"altered knee angle\" \"45-degree hip extension\" electromyographic"
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement-file and research-record requirements plus anatomy coverage rule."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Used direct EMG-first classification, visible role criteria, and rating rules."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Hamstrings, Gluteus maximus, and Erector spinae resolve to existing local mesh mappings."
+    },
+    {
+      "url": "https://www.jssm.org/jssm-20-181.xml-Fulltext",
+      "notes": "Direct 45-degree Roman chair back-extension EMG comparison with Romanian deadlift and seated machine back extension."
+    },
+    {
+      "url": "https://bjsm.bmj.com/content/51/13/1021",
+      "notes": "Hamstring exercise-selection study including 45-degree hip extension."
+    },
+    {
+      "url": "https://www.jssm.org/researchjssm-19-630.xml.xml",
+      "notes": "Direct 45-degree hip-extension knee-angle and contraction-type EMG study."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Commercial hyperextension and Roman-chair tutorials",
+      "url": "multiple search results",
+      "reason": "Rejected for evidence register because direct EMG sources were available."
+    },
+    {
+      "title": "Horizontal back-extension studies",
+      "url": "multiple search results",
+      "reason": "Reviewed for context but not used because the assigned movement specifies a 45-degree setup."
+    },
+    {
+      "title": "Reverse hyperextension sources",
+      "url": "multiple search results",
+      "reason": "Rejected as a distinct movement family with different support and loading mechanics."
+    }
+  ],
+  "notes": "Variant assumption is a 45-degree Roman chair with hip pad support and controlled hip/trunk extension. Hamstrings, gluteus maximus, and erector spinae were all listed as primary because exact studies directly measured substantial activity in all three. No extra visible support muscles were added because the reviewed evidence did not justify a clear app role beyond those local anatomy entries. No anatomy blockers found."
+}

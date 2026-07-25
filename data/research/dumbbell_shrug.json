@@ -1,0 +1,53 @@
+{
+  "movementId": "dumbbell_shrug",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-5",
+  "evidenceStudyIds": [
+    "andersen-2008",
+    "ekstrom-2003"
+  ],
+  "searchedQueries": [
+    "\"dumbbell shrug\" \"upper trapezius\" EMG",
+    "\"shrug exercise\" EMG upper trapezius dumbbell",
+    "\"Muscle activation during selected strength exercises in women with chronic neck muscle pain\" shrug",
+    "\"unilateral shoulder shrug\" \"upper trapezius\" electromyography Ekstrom"
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement and research file contracts."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Confirmed evidence, rating, tag, and anatomy requirements."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Verified local mesh for Trapezius; no standalone levator scapulae or upper trapezius label is available."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18339796/",
+      "notes": "Loaded shrug EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12774999/",
+      "notes": "Unilateral shoulder shrug and trapezius exercise EMG source."
+    },
+    {
+      "url": "https://academic.oup.com/ptj/article/88/6/703/2742306",
+      "notes": "Publisher abstract for Andersen et al. 2008."
+    }
+  ],
+  "excludedSources": [
+    {
+      "source": "Consumer shrug tutorials and social video results",
+      "reason": "Excluded because direct peer-reviewed EMG sources were available."
+    },
+    {
+      "source": "Sources discussing levator scapulae in shrugs",
+      "reason": "Not used as a visible role because data/anatomy.json does not expose a local levator scapulae mesh."
+    }
+  ],
+  "notes": "Variant assumption is a standing bilateral dumbbell shrug with arms at the sides and straight-up scapular elevation. The direct evidence emphasizes upper trapezius, but the local anatomy map exposes only a broader Trapezius entry, so that mapped label is used. No secondary or support muscles are listed because adding grip, levator scapulae, or general postural stabilizers would either lack a local mesh or add weak visible app value."
+}

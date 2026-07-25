@@ -1,0 +1,67 @@
+{
+  "movementId": "lying_floor_leg_raise",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-6",
+  "evidenceStudyIds": [
+    "kim-lee-2016",
+    "okubo-2021"
+  ],
+  "searchedQueries": [
+    "lying floor leg raise electromyography iliopsoas rectus abdominis",
+    "supine straight leg raise psoas major rectus femoris EMG",
+    "active straight leg raise psoas major rectus femoris oblique EMG",
+    "leg raise rectus abdominis external oblique electromyography",
+    "lying leg raise lower limb abdominal muscle activity PubMed"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement/research source-file contracts and anatomy mesh coverage requirement."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Conservative role assignment rules, evidence priority, and ratings anchors."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/hanging_leg_raise.json",
+      "notes": "Leg-raise family structure, hip-flexor/abdominal role wording, and evidence register style."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed visible roles resolve locally: Iliopsoas, Rectus abdominis, External oblique, Internal oblique, and Quadriceps."
+    },
+    {
+      "type": "paper",
+      "id": "kim-lee-2016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27065536/",
+      "notes": "Direct supine sit-up and leg-raise EMG; measured upper/lower rectus abdominis, external oblique, rectus femoris, and iliopsoas."
+    },
+    {
+      "type": "paper",
+      "id": "okubo-2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34455371/",
+      "notes": "Direct active straight-leg-raise EMG with fine-wire psoas major plus surface rectus femoris, rectus abdominis, external oblique, and obliquus internus/transversus."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Surface Electromyographic Activity of the Rectus Abdominis and External Oblique during Isometric and Dynamic Exercises",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36135425/",
+      "reason": "Reviewed as a leg-movement abdominal EMG source but excluded because PubMed lists a 2026 expression of concern and the study does not measure iliopsoas or internal oblique."
+    },
+    {
+      "title": "Wikipedia and consumer exercise pages for leg raise",
+      "reason": "Not used for muscle-role evidence because primary supine leg-raise and active straight-leg-raise studies were available."
+    },
+    {
+      "title": "ResearchGate snippets for leg raise EMG",
+      "reason": "Duplicate or secondary hosting; PubMed/PMC records were preferred."
+    }
+  ],
+  "notes": "Variant is a supine floor straight-leg raise. Iliopsoas and rectus abdominis are both primary because the movement combines hip flexion with anterior-core control of pelvic tilt. The Quadriceps visible role is a support role specifically for the rectus femoris component measured in both reviewed studies; the local anatomy entry is a broader quadriceps group, so the role is worded narrowly. Deep transversus abdominis was not listed because it is not mapped locally as a visible mesh."
+}

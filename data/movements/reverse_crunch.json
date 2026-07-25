@@ -1,0 +1,187 @@
+{
+  "id": "reverse_crunch",
+  "name": "Reverse Crunch",
+  "aliases": [
+    "reverse_curl_up",
+    "floor_reverse_crunch",
+    "hip_lift_crunch"
+  ],
+  "family": "crunch",
+  "equipment": "bodyweight",
+  "variantType": "floor_reverse",
+  "variant": "Bodyweight floor reverse crunch emphasizing posterior pelvic tilt and trunk flexion from the pelvis toward the ribs.",
+  "description": "Lie on the floor with the hips and knees bent, brace lightly, then curl the pelvis off the floor by pulling the knees toward the chest without swinging. Pause with the low back rounded slightly, then lower under control until the pelvis returns to the floor while keeping the movement compact.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Abs",
+      "group": "region"
+    },
+    {
+      "label": "Obliques",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Trunk flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 30,
+      "rationale": "Useful local abdominal stimulus, but bodyweight loading and short range limit hypertrophy progression."
+    },
+    "strength": {
+      "score": 22,
+      "rationale": "Builds low-load trunk-flexion strength, but it is not a high-force strength anchor."
+    },
+    "joint_resilience": {
+      "score": 14,
+      "rationale": "Limited broad resilience value because it is repeated spinal flexion and hip flexion rather than a progressive joint-loading drill."
+    },
+    "athletic_transfer": {
+      "score": 12,
+      "rationale": "Low direct transfer because it lacks standing bracing, anti-rotation, gait, or loaded force-transfer demands."
+    },
+    "control": {
+      "score": 46,
+      "rationale": "Requires pelvic curl control and swing suppression, but the floor makes balance and stabilization demands low."
+    },
+    "fatigue_efficiency": {
+      "score": 78,
+      "rationale": "Quick abdominal stimulus with low systemic fatigue, though the training ceiling is modest."
+    },
+    "setup": {
+      "score": 94,
+      "rationale": "Requires only floor space."
+    },
+    "ease": {
+      "score": 64,
+      "rationale": "Easy to understand, but users often swing the legs or turn it into mostly hip flexion."
+    },
+    "progression": {
+      "score": 18,
+      "rationale": "Progression is mostly reps, tempo, incline, or leverage; external loading is awkward."
+    },
+    "support": {
+      "score": 84,
+      "rationale": "The floor supports the trunk and removes balance demand."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Reverse-crunch EMG supports high rectus activation.",
+        "evidence": "Reverse-crunch and reverse-curl-up EMG evidence directly measures upper and lower rectus abdominis activity, with inclined reverse crunches among the higher abdominal-activation tasks in traditional and nontraditional abdominal exercise research.",
+        "sourceIds": [
+          "escamilla-2006-pt",
+          "clark-2003",
+          "francis-davis-2001"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Reverse-crunch evidence supports oblique contribution.",
+        "evidence": "Escamilla et al. measured internal oblique activity during reverse-crunch-family abdominal work, supporting a secondary trunk-flexion and pelvic-control role.",
+        "sourceIds": [
+          "escamilla-2006-pt"
+        ]
+      },
+      {
+        "name": "External oblique",
+        "evidenceShort": "Exact reverse-crunch report supports oblique activity.",
+        "evidence": "The San Diego State/ACE abdominal EMG report ranked the reverse crunch highly for grouped oblique activity, supporting a secondary external-oblique role alongside the primary rectus abdominis target.",
+        "sourceIds": [
+          "francis-davis-2001",
+          "escamilla-2006-jospt"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Floor reverse crunch: rectus abdominis primary; internal and external oblique secondary; no separate support muscles listed.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Incline angle, knee bend, pelvis curl, speed, and swinging can change abdominal versus hip-flexor emphasis.",
+    "summary": "The reverse crunch is classified as a floor trunk-flexion exercise biased toward posterior pelvic tilt. Direct reverse-crunch and reverse-curl-up evidence supports rectus abdominis as the primary visible target. Obliques are included as secondary contributors because exact and close abdominal EMG sources show meaningful oblique activity during reverse-crunch and crunch-family tasks.",
+    "clinicalInterpretation": "A controlled pelvic curl makes this more abdominal; swinging the legs increases hip-flexor and thigh contribution. The exercise is best treated as a low-setup accessory rather than a heavy abdominal progression.",
+    "limitations": "Escamilla et al. used an inclined 30-degree reverse crunch, which is harder than a flat floor variant. The exact ACE report groups obliques rather than separating internal and external oblique. Rectus femoris was not listed because it is not the intended target and this project does not expose a standalone rectus femoris anatomy label. Weighted reverse crunches, decline reverse crunches, hanging knee raises, and captain's-chair knee raises should be separate entries.",
+    "studies": [
+      {
+        "id": "escamilla-2006-pt",
+        "type": "Traditional and nontraditional abdominal exercise EMG",
+        "shortCitation": "Escamilla et al., Phys Ther, 2006",
+        "finding": "Reverse crunch inclined 30 degrees was among the highest exercises for upper and lower rectus abdominis and internal oblique activity, and it also produced high rectus femoris activity.",
+        "citation": "Escamilla RF, Babb E, DeWitt R, Jew P, Kelleher P, Burnham T, Busch J, D'Anna K, Mowbray R, Imamura RT. Electromyographic analysis of traditional and nontraditional abdominal exercises: implications for rehabilitation and training. Physical Therapy. 2006;86(5):656-671.",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16649890/",
+        "relevance": "Direct reverse-crunch-family EMG evidence for rectus abdominis and internal oblique activity.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "clark-2003",
+        "type": "Upper and lower rectus abdominis exercise EMG",
+        "shortCitation": "Clark et al., JSCR, 2003",
+        "finding": "Compared upper and lower rectus abdominis activity during several abdominal exercises including the reverse curl-up.",
+        "citation": "Clark KM, Holt LE, Sinyard J. Electromyographic comparison of the upper and lower rectus abdominis during abdominal exercises. Journal of Strength and Conditioning Research. 2003;17(3):475-483. doi:10.1519/1533-4287(2003)017<0475:ECOTUA>2.0.CO;2.",
+        "doi": "10.1519/1533-4287(2003)017<0475:ECOTUA>2.0.CO;2",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12930172/",
+        "relevance": "Direct reverse-curl-up evidence for rectus abdominis interpretation and limits around upper/lower abdominal selectivity.",
+        "usedFor": [
+          "primary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "francis-davis-2001",
+        "type": "San Diego State/ACE abdominal EMG report",
+        "shortCitation": "Francis and Davis, ACE FitnessMatters, 2001",
+        "finding": "The reverse crunch ranked above traditional crunch for rectus abdominis and grouped oblique EMG activity in a 13-exercise comparison.",
+        "citation": "Francis P, Davis J. New Study Puts the Crunch on Ineffective Ab Exercises. ACE FitnessMatters. May/June 2001. San Diego State University Biomechanics Lab and American Council on Exercise.",
+        "doi": null,
+        "url": "https://www.acefitness.org/getfit/studies/BestWorstAbExercises.pdf",
+        "relevance": "Exact flat reverse-crunch EMG report for rectus abdominis and grouped oblique activation; interpreted cautiously because it was a research report rather than a peer-reviewed journal article.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "escamilla-2006-jospt",
+        "type": "Commercial and common abdominal exercise EMG",
+        "shortCitation": "Escamilla et al., JOSPT, 2006",
+        "finding": "Common abdominal exercise EMG measured rectus abdominis and oblique activation across crunch-family tasks.",
+        "citation": "Escamilla RF, McTaggart MSC, Fricklas EJ, et al. An electromyographic analysis of commercial and common abdominal exercises: implications for rehabilitation and training. Journal of Orthopaedic and Sports Physical Therapy. 2006;36(2):45-57. doi:10.2519/jospt.2006.36.2.45.",
+        "doi": "10.2519/jospt.2006.36.2.45",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+        "relevance": "Close abdominal exercise source for external-oblique contribution and crunch-family interpretation.",
+        "usedFor": [
+          "secondary muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

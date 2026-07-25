@@ -1,0 +1,196 @@
+{
+  "id": "forearm_plank",
+  "name": "Forearm Plank",
+  "aliases": [
+    "plank",
+    "front_plank",
+    "prone_plank",
+    "elbow_plank"
+  ],
+  "family": "plank",
+  "equipment": "bodyweight",
+  "variantType": "standard_forearm",
+  "variant": "Standard forearm plank hold from elbows and toes with a straight body line and neutral spine.",
+  "description": "Set the elbows under the shoulders, step both feet back, brace the ribs toward the pelvis, and hold a straight line from shoulders through heels without sagging the low back or hiking the hips.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Abs",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Anti-extension",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 18,
+      "rationale": "Useful abdominal tension for beginners, but the load is mostly bodyweight isometric endurance and has a low local hypertrophy ceiling."
+    },
+    "strength": {
+      "score": 25,
+      "rationale": "Builds basic trunk anti-extension strength, but progression is indirect and peak force is much lower than loaded core or compound lifts."
+    },
+    "joint_resilience": {
+      "score": 34,
+      "rationale": "Can build shoulder, trunk, and lumbopelvic tolerance when alignment is held, but it is not a broad joint-loading stimulus."
+    },
+    "athletic_transfer": {
+      "score": 24,
+      "rationale": "Static bracing carries over to general trunk control, but the movement lacks standing force transfer, gait, rotation, or limb coordination."
+    },
+    "control": {
+      "score": 76,
+      "rationale": "High positional-control demand from maintaining rib, pelvis, shoulder, and spinal alignment without external support."
+    },
+    "fatigue_efficiency": {
+      "score": 68,
+      "rationale": "Low systemic fatigue and easy recovery cost, though long holds can drift toward endurance fatigue rather than targeted loading."
+    },
+    "setup": {
+      "score": 96,
+      "rationale": "Requires only floor space and no equipment adjustment."
+    },
+    "ease": {
+      "score": 62,
+      "rationale": "Simple to understand, but many users lose pelvic or lumbar position as fatigue accumulates."
+    },
+    "progression": {
+      "score": 16,
+      "rationale": "Progression is usually by time, lever length, or variation rather than clean load increments."
+    },
+    "support": {
+      "score": 18,
+      "rationale": "The floor supports the forearms and toes, but trunk and shoulder stability are mostly self-generated."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Traditional and modified plank EMG supports rectus activation.",
+        "evidence": "Direct prone-plank EMG studies measured rectus abdominis activity during standard planks, with higher activation when lever length, posterior pelvic tilt, hip adduction, or instability increased the demand.",
+        "sourceIds": [
+          "snarr-esco-2014",
+          "schoenfeld-2014",
+          "kim-kang-2016"
+        ]
+      },
+      {
+        "name": "External oblique",
+        "evidenceShort": "Plank EMG studies consistently measure external-oblique demand.",
+        "evidence": "Traditional plank and modified plank EMG studies measured external oblique activity, and posterior pelvic tilt or additional hip adduction increased external-oblique activation relative to the standard plank.",
+        "sourceIds": [
+          "snarr-esco-2014",
+          "schoenfeld-2014",
+          "kim-kang-2016"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Standard plank EMG measured internal-oblique activation.",
+        "evidence": "A plank EMG study measuring rectus abdominis, internal oblique, and external oblique supports internal oblique as a meaningful trunk-stability contributor, though not the main visible target.",
+        "sourceIds": [
+          "kim-kang-2016"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Prone-bridge studies measure spinal-extensor stabilization demand.",
+        "evidence": "Plank and prone-bridge EMG studies measured erector spinae or related spinal extensor activity, supporting a stabilizing role rather than a primary target in the stable forearm plank.",
+        "sourceIds": [
+          "snarr-esco-2014",
+          "ekstrom-2007"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Forearm plank: rectus abdominis and external oblique primary; internal oblique secondary; erector spinae support.",
+    "clinicalShort": "EMG estimates acute excitation; it does not prove hypertrophy, adaptation, or injury risk.",
+    "limitsShort": "Lever length, pelvic tilt, hip adduction, surface stability, fatigue, and hold duration can materially change activation.",
+    "summary": "The standard forearm plank is classified as a low-setup trunk anti-extension hold. Direct plank EMG supports rectus abdominis, external oblique, and internal oblique involvement, while erector spinae is included as a stabilizer.",
+    "clinicalInterpretation": "The movement is most useful as a bracing and endurance-control drill, not as a high-load abdominal hypertrophy anchor.",
+    "limitations": "Several high-activation results come from modified or unstable plank variations rather than the standard stable forearm plank. Transversus abdominis and quadratus lumborum were not added as visible roles because local anatomy mapping does not provide those muscles as separate display targets.",
+    "studies": [
+      {
+        "id": "snarr-esco-2014",
+        "type": "Plank variation EMG",
+        "shortCitation": "Snarr and Esco, JSCR, 2014",
+        "finding": "Compared traditional stable planks with instability-device planks and measured rectus abdominis, external oblique, and erector spinae EMG.",
+        "citation": "Snarr RL, Esco MR. Electromyographical comparison of plank variations performed with and without instability devices. Journal of Strength and Conditioning Research. 2014;28(11):3298-3305. doi:10.1519/JSC.0000000000000521.",
+        "doi": "10.1519/JSC.0000000000000521",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25264667/",
+        "relevance": "Direct plank-family EMG source for rectus abdominis, external oblique, and erector spinae roles.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "schoenfeld-2014",
+        "type": "Traditional and modified prone plank EMG",
+        "shortCitation": "Schoenfeld et al., Sports Biomech, 2014",
+        "finding": "Long-lever posterior-tilt plank increased upper rectus abdominis, lower abdominal stabilizer, and external oblique activation compared with the traditional prone plank.",
+        "citation": "Schoenfeld BJ, Contreras B, Tiryaki-Sonmez G, Willardson JM, Fontana F. An electromyographic comparison of a modified version of the plank with a long lever and posterior tilt versus the traditional plank exercise. Sports Biomechanics. 2014;13(3):296-306. doi:10.1080/14763141.2014.942355.",
+        "doi": "10.1080/14763141.2014.942355",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25325773/",
+        "relevance": "Direct comparison against traditional prone plank; used to classify abdominal emphasis and note modification effects.",
+        "usedFor": [
+          "primary muscle role",
+          "ratings",
+          "limitations"
+        ]
+      },
+      {
+        "id": "kim-kang-2016",
+        "type": "Plank abdominal EMG",
+        "shortCitation": "Kim et al., J Electromyogr Kinesiol, 2016",
+        "finding": "Measured rectus abdominis, internal oblique, and external oblique during standard plank and plank with additional hip adduction; added hip adduction increased abdominal activity.",
+        "citation": "Kim SY, Kang MH, Kim ER, Jung IG, Seo EY, Oh JS. Comparison of EMG activity on abdominal muscles during plank exercise with unilateral and bilateral additional isometric hip adduction. Journal of Electromyography and Kinesiology. 2016;30:9-14. doi:10.1016/j.jelekin.2016.05.003.",
+        "doi": "10.1016/j.jelekin.2016.05.003",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27213781/",
+        "relevance": "Direct plank source measuring rectus abdominis plus both oblique muscles.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "ekstrom-2007",
+        "type": "Core rehabilitation exercise EMG",
+        "shortCitation": "Ekstrom et al., JOSPT, 2007",
+        "finding": "Measured core, hip, and thigh EMG during prone bridge on elbows and toes and other rehabilitation exercises.",
+        "citation": "Ekstrom RA, Donatelli RA, Carp KC. Electromyographic analysis of core trunk, hip, and thigh muscles during 9 rehabilitation exercises. Journal of Orthopaedic and Sports Physical Therapy. 2007;37(12):754-762. doi:10.2519/jospt.2007.2471.",
+        "doi": "10.2519/jospt.2007.2471",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18560185/",
+        "relevance": "Direct prone-bridge source for stabilizer interpretation and rating boundaries.",
+        "usedFor": [
+          "support muscle role",
+          "ratings",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

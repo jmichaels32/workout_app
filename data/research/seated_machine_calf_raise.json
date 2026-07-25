@@ -1,0 +1,75 @@
+{
+  "movementId": "seated_machine_calf_raise",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-1",
+  "evidenceStudyIds": [
+    "kassiano-2023",
+    "kinoshita-2023",
+    "kinugasa-2005"
+  ],
+  "searchedQueries": [
+    "\"seated calf raise\" electromyography soleus gastrocnemius",
+    "\"bent-leg calf raise\" soleus gastrocnemius study DOI",
+    "\"standing versus seated calf raise\" triceps surae hypertrophy PubMed",
+    "\"Muscle Swelling of the Triceps Surae\" straight-leg bent-leg calf raise DOI",
+    "\"Neuromuscular activation of triceps surae\" fMRI EMG DOI"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed per-movement source ownership, generated bundle rule, required movement fields, research record requirement, and local anatomy coverage rule."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Applied conservative primary/secondary/support classifications, source ID requirements, tag guidance, and rating anchors."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/standing_calf_raise.json",
+      "notes": "Used as the closest calf-raise movement style reference for tags, ratings, muscle wording, and evidence register structure."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Soleus and Gastrocnemius resolve to existing local anatomy entries with calf/lower-body mesh files."
+    },
+    {
+      "type": "script",
+      "path": "scripts/validate-movements.js",
+      "notes": "Checked required fields, sourceId-to-study matching, and anatomy name resolution behavior."
+    },
+    {
+      "type": "paper",
+      "id": "kassiano-2023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37015022/",
+      "notes": "Direct randomized crossover straight-leg versus bent-leg calf-raise study in 17 young women. B-mode ultrasound measured medial gastrocnemius, lateral gastrocnemius, and soleus thickness before and after 4 sets of 20RM to failure. Used for soleus primary and gastrocnemius secondary roles."
+    },
+    {
+      "type": "paper",
+      "id": "kinoshita-2023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38156065/",
+      "notes": "Direct 12-week within-subject standing knee-extended versus seated knee-flexed calf-raise training study. Fourteen untrained adults trained each leg at 70% 1RM; MRI measured soleus and gastrocnemius volumes. Used for hypertrophy scoring and knee-angle limitations."
+    },
+    {
+      "type": "paper",
+      "id": "kinugasa-2005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15809557/",
+      "notes": "Functional MRI and EMG study of triceps surae activation. Used as supporting evidence for keeping soleus and gastrocnemius visible as separate roles."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Generic consumer seated calf raise tutorials",
+      "reason": "Not used because direct PubMed-indexed calf-raise studies were available."
+    },
+    {
+      "title": "Standing calf raise movement file",
+      "path": "data/movements/standing_calf_raise.json",
+      "reason": "Used only as a schema/style reference, not as independent evidence for the seated machine movement."
+    }
+  ],
+  "notes": "Variant assumption: conventional seated machine calf raise with the knees flexed near 90 degrees and resistance applied through a thigh pad. The visible map is Soleus primary and Gastrocnemius secondary. No tibialis or foot-intrinsic support role was added because no current local anatomy mesh mapping supports those names and the visible app classification did not require them. No anatomy blocker was found for the included muscles."
+}

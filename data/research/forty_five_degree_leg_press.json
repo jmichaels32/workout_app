@@ -1,0 +1,105 @@
+{
+  "movementId": "forty_five_degree_leg_press",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-1",
+  "evidenceStudyIds": [
+    "da-silva-2008",
+    "martin-fuentes-2021",
+    "machado-2017",
+    "stien-2021",
+    "escamilla-2001",
+    "wirth-2016"
+  ],
+  "searchedQueries": [
+    "\"45 degree leg press\" EMG quadriceps gluteus hamstrings gastrocnemius",
+    "\"Analysis of muscle activation during different leg press exercises\" DOI",
+    "\"Influence of Feet Position and Execution Velocity\" inclined leg press DOI",
+    "\"Myoeletric Activity of the Quadriceps During Leg Press\" DOI",
+    "\"leg press\" \"squat\" \"knee biomechanics\" Escamilla PubMed",
+    "\"back squat\" \"45 degree leg press\" speed-strength parameters DOI"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement source/research file contract and local anatomy mesh rule."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Applied evidence priority, conservative muscle-role rules, tag guidance, and rating anchors."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/seated_machine_leg_extension.json",
+      "notes": "Used as a machine lower-body reference for guided setup, ratings, and evidence structure."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/dumbbell_walking_lunge.json",
+      "notes": "Used as a compound lower-body reference for multi-muscle role wording and limitation notes."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Quadriceps, Gluteus maximus, Hamstrings, and Gastrocnemius resolve to existing local anatomy entries and mesh files."
+    },
+    {
+      "type": "script",
+      "path": "scripts/validate-movements.js",
+      "notes": "Checked validator expectations for required fields, studies, sourceIds, and anatomy name matching."
+    },
+    {
+      "type": "paper",
+      "id": "da-silva-2008",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18545207/",
+      "notes": "Direct 45 degree leg press EMG study in 14 women comparing 45 degree, high-foot, and low-foot conditions at 40% and 80% 1RM. Measured rectus femoris, vastus lateralis, biceps femoris, gastrocnemius, and gluteus maximus."
+    },
+    {
+      "type": "paper",
+      "id": "martin-fuentes-2021",
+      "url": "https://doi.org/10.1177/19417381211016357",
+      "notes": "Direct inclined leg press study on foot position and execution velocity effects. Used for foot-placement/velocity limitations and primary/secondary role support."
+    },
+    {
+      "type": "paper",
+      "id": "machado-2017",
+      "url": "https://doi.org/10.1519/JSC.0000000000001494",
+      "notes": "Direct leg press quadriceps EMG technique study. Used for quadriceps primary role and technique sensitivity."
+    },
+    {
+      "type": "paper",
+      "id": "stien-2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33707987/",
+      "notes": "Direct leg press versus single-joint exercise EMG in trained men, measuring quadriceps heads, gluteus maximus, and biceps femoris. Used for primary and secondary roles."
+    },
+    {
+      "type": "paper",
+      "id": "escamilla-2001",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11528346/",
+      "notes": "Direct squat and high/low foot leg press biomechanics/EMG source with stance and foot-angle variations. Used for hamstrings, gastrocnemius, knee-loading interpretation, and limitations."
+    },
+    {
+      "type": "paper",
+      "id": "wirth-2016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26439782/",
+      "notes": "Eight-week parallel squat versus 45 degree leg press training study in students. Used for athletic transfer and machine-specific strength interpretation."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Generic leg press tutorials and foot-placement blog posts",
+      "reason": "Not used because direct leg press EMG and biomechanics sources were available."
+    },
+    {
+      "title": "Consumer claims that leg press isolates glutes or hamstrings",
+      "reason": "Not used because reviewed studies show strong foot-position dependence and more consistent quadriceps emphasis."
+    },
+    {
+      "title": "Vertical and horizontal leg press studies",
+      "reason": "Not used for the evidence register unless findings applied to the inclined 45 degree sled assumption."
+    }
+  ],
+  "notes": "Variant assumption: bilateral inclined 45 degree sled leg press with a moderate foot position. Visible map is Quadriceps primary; Gluteus maximus and Hamstrings secondary; Gastrocnemius support. No included visible muscle lacks a local mesh mapping."
+}

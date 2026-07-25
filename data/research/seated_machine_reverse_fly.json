@@ -1,0 +1,49 @@
+{
+  "movementId": "seated_machine_reverse_fly",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-4",
+  "evidenceStudyIds": [
+    "schoenfeld-2013",
+    "kara-2021",
+    "ekstrom-2003"
+  ],
+  "searchedQueries": [
+    "\"reverse pec deck\" electromyography posterior deltoid",
+    "\"reverse fly\" electromyography posterior deltoid trapezius",
+    "\"rear delt fly\" EMG posterior deltoid middle trapezius",
+    "\"seated machine reverse fly\" electromyography",
+    "\"Effect of Hand Position on EMG Activity of the Posterior Shoulder Musculature\"",
+    "\"Scapular retraction exercise\" \"shoulder abduction\" \"middle trapezius\" DOI",
+    "\"Ekstrom\" \"Surface electromyographic analysis of exercises for the trapezius and serratus anterior\" DOI"
+  ],
+  "reviewedFiles": [
+    "docs/movement-data-workflow.md",
+    "docs/movement-research-protocol.md",
+    "data/movements/seated_machine_chest_fly.json",
+    "data/research/seated_machine_chest_fly.json",
+    "data/anatomy.json",
+    "scripts/validate-movements.js",
+    "https://pubmed.ncbi.nlm.nih.gov/23302754/",
+    "https://api.crossref.org/works/10.1519/JSC.0b013e318281e1e9",
+    "https://doi.org/10.4085/1062-6050-0053.21",
+    "https://api.crossref.org/works/10.4085/1062-6050-0053.21",
+    "https://pubmed.ncbi.nlm.nih.gov/12774999/",
+    "https://doi.org/10.2519/jospt.2003.33.5.247"
+  ],
+  "excludedSources": [
+    {
+      "source": "Bent-over dumbbell reverse fly articles and videos",
+      "reason": "Excluded from the main classification because the current entry is a seated guided machine variant with a different stability profile."
+    },
+    {
+      "source": "Rhomboid activation and scapular exercise normalization studies",
+      "reason": "Reviewed but not used for a visible rhomboid role because exact reverse-fly-machine evidence did not isolate rhomboids and the app card is clearer without extrapolating every scapular retractor."
+    },
+    {
+      "source": "Consumer rear-delt machine pages",
+      "reason": "Rejected as primary evidence because direct reverse-fly-machine and peer-reviewed scapular EMG evidence was available."
+    }
+  ],
+  "notes": "Variant assumption: seated reverse pec-deck or rear-delt machine, not a bent-over dumbbell reverse fly. Posterior deltoid is primary from exact reverse-fly-machine EMG. Infraspinatus was measured directly, so the local Rotator cuff anatomy entry is used as support rather than creating an unmapped infraspinatus-only visible role. Middle/lower trapezius support is based on scapular retraction and horizontal-abduction EMG, not exact reverse-fly-machine measurement. Rhomboids were intentionally omitted for evidence clarity. Local anatomy mesh mappings resolve for all visible muscles."
+}

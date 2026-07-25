@@ -1,0 +1,101 @@
+{
+  "movementId": "incline_dumbbell_bench_press",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-2",
+  "evidenceStudyIds": [
+    "luczak-2013",
+    "rodriguez-ridao-2020",
+    "lauver-2016",
+    "cabral-2022",
+    "lopez-vivancos-2023",
+    "farias-2017",
+    "saeterbakken-2011",
+    "wattanaprakornkul-2011",
+    "borges-2019"
+  ],
+  "searchedQueries": [
+    "\"incline dumbbell press\" EMG pectoralis anterior deltoid triceps",
+    "\"dumbbell incline press\" electromyography pectoralis major anterior deltoid",
+    "\"Shoulder Muscle Activation\" dumbbell bench incline shoulder press",
+    "\"bench angle\" electromyographic pectoralis anterior deltoid triceps incline",
+    "\"dumbbell bench press\" stability requirements biceps brachii triceps EMG",
+    "\"bench press\" rotator cuff serratus anterior EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement-file contract, study register requirement, and anatomy coverage rule."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Used direct EMG priority, close-variant evidence rule, tag taxonomy, and rating anchors."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Pectoralis major, Anterior deltoid, Triceps brachii, Biceps brachii, Serratus anterior, and Rotator cuff resolve to local mesh mappings."
+    },
+    {
+      "path": "data/movements/incline_bar_bench_press.json",
+      "notes": "Reviewed local incline barbell evidence patterns and tag vocabulary to keep variant language consistent."
+    },
+    {
+      "path": "data/movements/dumbbell_bench_press.json",
+      "notes": "Reviewed local dumbbell bench support-role and rating patterns for independent dumbbell pressing."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4590897/",
+      "notes": "Direct dumbbell bench, incline, and shoulder press EMG source."
+    },
+    {
+      "url": "https://www.mdpi.com/1660-4601/17/19/7339",
+      "notes": "Bench-angle EMG source for pectoralis major, anterior deltoid, and triceps brachii."
+    },
+    {
+      "url": "https://doi.org/10.1080/17461391.2015.1022605",
+      "notes": "Bench-angle EMG source used for incline-angle interpretation."
+    },
+    {
+      "url": "https://doi.org/10.1111/sms.14082",
+      "notes": "High-density pectoralis EMG source for flat versus incline bench press."
+    },
+    {
+      "url": "https://www.mdpi.com/2076-3417/13/8/5203",
+      "notes": "Systematic review and meta-analysis for pectoralis major activation across bench-press variants."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27669189/",
+      "notes": "Dumbbell, barbell, and machine bench press EMG source used for dumbbell stability and elbow-extension context."
+    },
+    {
+      "url": "https://doi.org/10.1080/02640414.2010.543916",
+      "notes": "Chest press stability comparison used for independent dumbbell support scoring."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+      "notes": "Bench press rotator cuff recruitment source used for shoulder support inference."
+    },
+    {
+      "url": "https://efsupit.ro/images/stories/iunie2019/Art%20131.pdf",
+      "notes": "Chest press serratus anterior and scapular kinematics source used for scapulothoracic support inference."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Incline barbell-only evidence used as direct dumbbell evidence",
+      "url": "multiple bench-angle sources",
+      "reason": "Used only as close bench-angle evidence and clearly marked as applied to dumbbell pressing with modality limitations."
+    },
+    {
+      "title": "Machine incline shoulder press studies",
+      "url": "multiple search results",
+      "reason": "Rejected because a guided shoulder-press path and higher incline shift the task away from the assigned incline dumbbell chest press."
+    },
+    {
+      "title": "Exercise tutorials, blog posts, and video demonstrations",
+      "url": "multiple search results",
+      "reason": "Rejected for muscle-role classification because peer-reviewed EMG and review evidence was available."
+    }
+  ],
+  "notes": "Variant assumption is a moderate-incline dumbbell chest press, not a high-incline shoulder press. Pectoralis major is primary; anterior deltoid and triceps are secondary. Biceps brachii, serratus anterior, and rotator cuff are marked as support from close dumbbell or bench-press evidence where exact incline dumbbell-only measurements were unavailable. No visible upper trapezius role was added despite direct measurement in Luczak et al. because it did not provide a clear app target or support role for this chest movement. No anatomy blockers found."
+}

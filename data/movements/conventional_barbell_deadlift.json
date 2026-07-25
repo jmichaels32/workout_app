@@ -1,0 +1,294 @@
+{
+  "id": "conventional_barbell_deadlift",
+  "name": "Conventional Barbell Deadlift",
+  "aliases": [
+    "conventional_deadlift",
+    "barbell_deadlift",
+    "standard_deadlift",
+    "floor_deadlift"
+  ],
+  "family": "deadlift",
+  "equipment": "barbell",
+  "variantType": "conventional_barbell",
+  "variant": "Free-weight conventional barbell deadlift from the floor with hands outside the legs and a hip-width stance.",
+  "description": "Stand with the bar over the midfoot, hinge down with the hands outside the legs, set the back and lats, brace, and push the floor away while keeping the bar close. Stand tall by extending the knees and hips together, then lower the bar under control back to the floor without letting it drift forward.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Hamstrings",
+      "group": "region"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip extension",
+      "group": "pattern"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 68,
+      "rationale": "Loads many large muscles, but the high systemic cost, floor-start constraints, grip demand, and limited eccentric focus make it less targeted than dedicated hypertrophy lifts."
+    },
+    "strength": {
+      "score": 94,
+      "rationale": "Elite whole-body strength signal because the barbell floor pull allows heavy progressive loading through coordinated hip, knee, and trunk extension."
+    },
+    "joint_resilience": {
+      "score": 50,
+      "rationale": "Can build tolerance to heavy hip-hinge and spinal-position demands, but the high load and technical sensitivity keep it from being a broadly easy resilience drill."
+    },
+    "athletic_transfer": {
+      "score": 58,
+      "rationale": "Useful transfer to forceful lifting from the floor and posterior-chain strength, though bilateral stance and slow heavy loading limit sport-specific coordination."
+    },
+    "control": {
+      "score": 62,
+      "rationale": "Requires bracing, lat tension, bar path control, coordinated knee and hip extension, and consistent floor-start position under load."
+    },
+    "fatigue_efficiency": {
+      "score": 22,
+      "rationale": "The strength signal is high, but systemic fatigue, warm-up cost, grip demand, and spinal erector loading make the stimulus expensive."
+    },
+    "setup": {
+      "score": 42,
+      "rationale": "Needs barbell, plates, floor space, plate changes, warm-up jumps, and usually platform or floor clearance management."
+    },
+    "ease": {
+      "score": 24,
+      "rationale": "Technique is demanding because start position, slack pull, bracing, hip height, bar path, and lockout timing all matter."
+    },
+    "progression": {
+      "score": 86,
+      "rationale": "Very trackable with load and reps, but fatigue, technique drift, and dead-start consistency can limit clean progression."
+    },
+    "support": {
+      "score": 8,
+      "rationale": "Almost no external support: the user controls the bar path, torso, hips, knees, grip, and balance from the floor."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Deadlift EMG reviews and direct studies show high trunk-extensor demand.",
+        "evidence": "Deadlift systematic-review evidence reports high erector spinae activation across deadlift variants, and direct conventional deadlift studies measure paraspinal and erector activity under heavy floor-pull conditions.",
+        "sourceIds": [
+          "martin-fuentes-2020",
+          "escamilla-2002",
+          "andersen-2019",
+          "nijem-2016"
+        ]
+      },
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Conventional deadlift requires substantial knee-extension contribution from the floor.",
+        "evidence": "Deadlift review evidence reports greater quadriceps activation than gluteus maximus and hamstrings in deadlift tasks, and direct conventional deadlift research measures knee-extensor activity during floor pulls.",
+        "sourceIds": [
+          "martin-fuentes-2020",
+          "escamilla-2002",
+          "escamilla-2000",
+          "camara-2016"
+        ]
+      },
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Measured hip-extensor contributor in direct conventional deadlift studies.",
+        "evidence": "Conventional deadlift studies measure gluteus maximus activity and biomechanics support a major hip-extension role from the floor to lockout. It is classified as primary because the movement heavily trains hip extension alongside the knee and trunk extensors.",
+        "sourceIds": [
+          "escamilla-2002",
+          "lee-2018",
+          "camara-2016",
+          "nijem-2016"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Measured posterior-thigh contribution, but not the dominant conventional-deadlift signal.",
+        "evidence": "Direct conventional deadlift EMG studies and the deadlift systematic review measure hamstrings during floor pulls. They are classified as secondary because the conventional deadlift combines hip extension with substantial knee-extension and trunk-extension demand.",
+        "sourceIds": [
+          "martin-fuentes-2020",
+          "escamilla-2002",
+          "lee-2018",
+          "andersen-2019"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Gastrocnemius",
+        "evidenceShort": "Direct conventional deadlift EMG reported calf co-contraction.",
+        "evidence": "Conventional and sumo deadlift EMG research measured gastrocnemius activity and reported lower-limb co-contraction during heavy 12RM pulls. It is included as support because ankle and knee stabilization are meaningful but not the main training target.",
+        "sourceIds": [
+          "escamilla-2002"
+        ]
+      },
+      {
+        "name": "Trapezius",
+        "evidenceShort": "Measured shoulder-girdle support during conventional deadlifts.",
+        "evidence": "Deadlift EMG research measured upper and middle trapezius during conventional deadlift conditions. The role is classified as support because the trapezius helps maintain shoulder girdle position and bar control rather than producing the main lift.",
+        "sourceIds": [
+          "escamilla-2002"
+        ]
+      },
+      {
+        "name": "Trunk stabilizers",
+        "evidenceShort": "Direct deadlift EMG measured abdominal and oblique bracing demand.",
+        "evidence": "Conventional deadlift EMG research included trunk muscles such as rectus abdominis and external oblique under belt and no-belt conditions. The app uses the local trunk stabilizers group to represent bracing support.",
+        "sourceIds": [
+          "escamilla-2002"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Conventional barbell deadlift: erector spinae, quadriceps, and gluteus maximus primary; hamstrings secondary; gastrocnemius, trapezius, and trunk stabilizers support.",
+    "clinicalShort": "EMG and biomechanics estimate acute demand under tested conditions, not hypertrophy, pain risk, or long-term adaptation for a specific lifter.",
+    "limitsShort": "Stance, hip height, bar path, grip, belt use, footwear, load, fatigue, and anthropometry can substantially shift the deadlift profile.",
+    "summary": "The conventional barbell deadlift is classified as a free-weight floor pull with major trunk, knee, and hip extension demands. The visible map emphasizes erector spinae, quadriceps, and gluteus maximus as primary contributors, with hamstrings as a meaningful secondary posterior-chain contributor and selected support roles only where direct EMG evidence exists.",
+    "clinicalInterpretation": "Surface EMG is condition-specific and should be read alongside biomechanics, range of motion, load, and technique. Ratings reflect the conventional deadlift as a high-force barbell skill with a large systemic fatigue cost.",
+    "limitations": "The entry assumes a conventional straight-bar pull from the floor, not sumo, trap-bar, rack pull, deficit pull, Romanian deadlift, stiff-leg deadlift, or chain/band variation. Hamstring contribution varies because the knee and hip extend together, and direct studies differ in loads, normalization methods, lifter training status, belt use, and phase analysis.",
+    "studies": [
+      {
+        "id": "escamilla-2002",
+        "type": "Conventional and sumo deadlift EMG study",
+        "shortCitation": "Escamilla et al., MSSE, 2002",
+        "finding": "Collegiate football players performed sumo and conventional deadlifts at 12RM with and without a belt while quadriceps, hamstrings, gastrocnemius, gluteus maximus, paraspinals, trapezius, and trunk muscles were measured.",
+        "citation": "Escamilla RF, Francisco AC, Kayes AV, Speer KP, Moorman CT 3rd. An electromyographic analysis of sumo and conventional style deadlifts. Medicine and Science in Sports and Exercise. 2002;34(4):682-688. doi:10.1097/00005768-200204000-00019.",
+        "doi": "10.1097/00005768-200204000-00019",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11932579/",
+        "relevance": "Direct conventional deadlift EMG source for prime movers and selected support muscles.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "escamilla-2000",
+        "type": "Conventional and sumo deadlift biomechanics study",
+        "shortCitation": "Escamilla et al., MSSE, 2000",
+        "finding": "Three-dimensional analysis compared sumo and conventional deadlift mechanics, supporting the conventional deadlift's combined hip, knee, and trunk-extension loading profile.",
+        "citation": "Escamilla RF, Francisco AC, Fleisig GS, Barrentine SW, Welch CM, Kayes AV, Speer KP, Andrews JR. A three-dimensional biomechanical analysis of sumo and conventional style deadlifts. Medicine and Science in Sports and Exercise. 2000;32(7):1265-1275. doi:10.1097/00005768-200007000-00013.",
+        "doi": "10.1097/00005768-200007000-00013",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10912892/",
+        "relevance": "Biomechanical support for knee, hip, trunk, and load-path interpretation in conventional deadlifts.",
+        "usedFor": [
+          "primary muscle role",
+          "strength score",
+          "athletic transfer score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "martin-fuentes-2020",
+        "type": "Deadlift EMG systematic review",
+        "shortCitation": "Martin-Fuentes et al., PLOS ONE, 2020",
+        "finding": "Across deadlift studies, erector spinae and quadriceps showed greater activation than gluteus maximus and hamstrings, and deadlift variants showed different hamstring and trunk profiles.",
+        "citation": "Martin-Fuentes I, Oliva-Lozano JM, Muyor JM. Electromyographic activity in deadlift exercise and its variants. A systematic review. PLOS ONE. 2020;15(2):e0229507. doi:10.1371/journal.pone.0229507.",
+        "doi": "10.1371/journal.pone.0229507",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229507",
+        "relevance": "Systematic-review context for conventional deadlift muscle hierarchy and EMG interpretation limits.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "clinical interpretation",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lee-2018",
+        "type": "Conventional versus Romanian deadlift EMG and kinetics study",
+        "shortCitation": "Lee et al., J Exerc Sci Fit, 2018",
+        "finding": "Compared conventional and Romanian deadlifts with electromyographic and kinetic measures, supporting different glute, hamstring, quadriceps, and trunk demands between the variants.",
+        "citation": "Lee S, Schultz J, Timgren J, Staelgraeve K, Miller M, Liu Y. An electromyographic and kinetic comparison of conventional and Romanian deadlifts. Journal of Exercise Science & Fitness. 2018;16(3):87-93. doi:10.1016/j.jesf.2018.08.001.",
+        "doi": "10.1016/j.jesf.2018.08.001",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1728869X18301291",
+        "relevance": "Directly compares conventional and Romanian deadlift variants and informs the different visible maps.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "rating anchors",
+          "limitations"
+        ]
+      },
+      {
+        "id": "andersen-2019",
+        "type": "Conventional deadlift variable-resistance EMG study",
+        "shortCitation": "Andersen et al., PLOS ONE, 2019",
+        "finding": "Resistance-trained men performed heavy conventional barbell deadlifts with constant and reverse-band resistance while gluteus maximus, biceps femoris, semitendinosus, vastus lateralis, and erector spinae were measured.",
+        "citation": "Andersen V, Fimland MS, Mo DA, Iversen VM, Larsen TM, Solheim F, Saeterbakken AH. Electromyographic comparison of the barbell deadlift using constant versus variable resistance in healthy, trained men. PLOS ONE. 2019;14(1):e0211021. doi:10.1371/journal.pone.0211021.",
+        "doi": "10.1371/journal.pone.0211021",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0211021",
+        "relevance": "Direct conventional barbell deadlift EMG source under heavy loading for erector spinae, hamstrings, quadriceps, and gluteus maximus.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "strength score",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "camara-2016",
+        "type": "Straight-bar versus hex-bar deadlift EMG and power study",
+        "shortCitation": "Camara et al., JSCR, 2016",
+        "finding": "Compared muscle activation and power characteristics during straight-bar and hex-bar deadlifts, supporting conventional straight-bar classification against a distinct trap-bar variant.",
+        "citation": "Camara KD, Coburn JW, Dunnick DD, Brown LE, Galpin AJ, Costa PB. An Examination of Muscle Activation and Power Characteristics While Performing the Deadlift Exercise With Straight and Hexagonal Barbells. Journal of Strength and Conditioning Research. 2016;30(5):1183-1188. doi:10.1519/JSC.0000000000001352.",
+        "doi": "10.1519/JSC.0000000000001352",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26840440/",
+        "relevance": "Close direct evidence for straight-bar deadlift muscle activation and power characteristics.",
+        "usedFor": [
+          "primary muscle role",
+          "strength score",
+          "athletic transfer score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "nijem-2016",
+        "type": "Conventional deadlift chain-loading EMG and force-plate study",
+        "shortCitation": "Nijem et al., JSCR, 2016",
+        "finding": "Compared conventional deadlifts with and without chains using EMG and force-plate measures, informing trunk, hip, and knee extensor demand under heavy deadlift loading.",
+        "citation": "Nijem RM, Coburn JW, Brown LE, Lynn SK, Ciccone AB. Electromyographic and Force Plate Analysis of the Deadlift Performed With and Without Chains. Journal of Strength and Conditioning Research. 2016;30(5):1177-1182. doi:10.1519/JSC.0000000000001351.",
+        "doi": "10.1519/JSC.0000000000001351",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26840441/",
+        "relevance": "Direct conventional deadlift movement-family source for heavy loading, EMG, and force production context.",
+        "usedFor": [
+          "primary muscle role",
+          "strength score",
+          "fatigue efficiency score"
+        ]
+      }
+    ]
+  }
+}

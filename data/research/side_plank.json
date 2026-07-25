@@ -1,0 +1,85 @@
+{
+  "movementId": "side_plank",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-6",
+  "evidenceStudyIds": [
+    "youdas-2014-sidebridge",
+    "ekstrom-2007",
+    "kinney-2020",
+    "youdas-2008"
+  ],
+  "searchedQueries": [
+    "side plank side bridge electromyography rectus abdominis external oblique PubMed",
+    "side bridge electromyography gluteus medius external oblique",
+    "lateral plank internal external oblique EMG",
+    "side bridge core trunk hip muscles EMG Sports Health",
+    "side bridge Ab-Slide crunch internal oblique EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement/research source-file contracts and anatomy mesh mapping rule."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Conservative role assignment, source hierarchy, visible-muscle requirement, and rating anchors."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/ground_oblique_crunch.json",
+      "notes": "Oblique/core schema, tags, and evidence wording."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/forearm_plank.json",
+      "notes": "New same-family plank entry used for tag and rating consistency after drafting."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed visible roles resolve locally: External oblique, Internal oblique, Gluteus medius, Rectus abdominis, and Erector spinae. Quadratus lumborum is not mapped."
+    },
+    {
+      "type": "paper",
+      "id": "youdas-2014-sidebridge",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25177418/",
+      "notes": "Direct side-bridge EMG source; measured rectus abdominis, external oblique, longissimus thoracis, lumbar multifidus, and gluteus medius in side-bridge variations."
+    },
+    {
+      "type": "paper",
+      "id": "ekstrom-2007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18560185/",
+      "notes": "Direct side-bridge/prone-bridge source from a nine-exercise rehabilitation EMG comparison; used for external oblique and gluteus medius strengthening interpretation."
+    },
+    {
+      "type": "paper",
+      "id": "kinney-2020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32369764/",
+      "notes": "Direct lateral-plank and lateral-trunk task EMG; measured internal and external oblique activation and reported high lateral-plank values."
+    },
+    {
+      "type": "paper",
+      "id": "youdas-2008",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+      "notes": "Direct side-bridge comparison with other abdominal exercises; measured rectus abdominis, external oblique, internal oblique, and rectus femoris."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Quadratus lumborum-specific side-bridge sources cited within Youdas 2014",
+      "reason": "Considered for biomechanical context, but QL was not added to visible roles because data/anatomy.json has no local quadratus lumborum mesh entry."
+    },
+    {
+      "title": "Consumer exercise pages and social/video results for side plank",
+      "reason": "Not used because direct side-bridge and lateral-plank EMG studies were available."
+    },
+    {
+      "title": "Generic plank pages that do not distinguish side plank from forearm plank",
+      "reason": "Excluded because the assigned variant is a lateral side plank with different muscle emphasis."
+    }
+  ],
+  "notes": "Variant is a standard forearm side plank from the feet. External and internal oblique are primary from direct side-bridge/lateral-plank EMG. Gluteus medius is secondary despite high measured activation because it controls pelvic position rather than being the exercise's main core target. Erector spinae support is based on the longissimus thoracis evidence in side-bridge studies and uses the existing visible spinal-extensor anatomy group. Quadratus lumborum is relevant but not listed because no local mesh mapping exists; no fallback muscle ID was used."
+}

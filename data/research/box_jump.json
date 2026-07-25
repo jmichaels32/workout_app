@@ -1,0 +1,79 @@
+{
+  "movementId": "box_jump",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-2",
+  "evidenceStudyIds": [
+    "ebben-2008",
+    "dos-santos-2024",
+    "koefoed-2022",
+    "bobbert-1986",
+    "jankaew-2023",
+    "ramirez-campillo-2021"
+  ],
+  "searchedQueries": [
+    "\"box jump\" EMG quadriceps hamstrings gastrocnemius",
+    "\"Evaluation of Plyometric Intensity Using Electromyography\" box jump",
+    "\"box height\" \"box jump\" performance peak force power",
+    "\"Effect of Box Height on Box Jump Performance\"",
+    "\"countermovement jump\" biomechanics hip knee ankle moments EMG",
+    "\"vertical jump\" EMG gluteus maximus quadriceps hamstrings landing",
+    "\"plyometric jump training\" electromyographic activity systematic review"
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed source-file workflow and local anatomy mesh requirement."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Used direct evidence priority, close-variant evidence rule, and rating anchors."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Quadriceps, Gluteus maximus, Gastrocnemius, and Hamstrings resolve to local mesh mappings."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18438229/",
+      "notes": "Exact plyometric EMG source including box jumps and lower-limb muscle groups."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11166134/",
+      "notes": "Exact box-jump height study used for progression and box-height interpretation."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32187147/",
+      "notes": "Box-height performance study in elite female handball players."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/BF00943342",
+      "notes": "Countermovement and drop-jump biomechanics source used for hip, knee, and ankle extension demands."
+    },
+    {
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/14763141.2023.2219670",
+      "notes": "Vertical-jump EMG and landing-force source used as close jump-family support for gluteus, quadriceps, and hamstrings."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34027912/",
+      "notes": "Plyometric jump training EMG systematic review used for adaptation and interpretation limits."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Depth jump and drop jump training studies as exact movement sources",
+      "url": "multiple search results",
+      "reason": "Reviewed but not used as exact evidence because the assigned movement is a jump up to a box, not a drop from a box."
+    },
+    {
+      "title": "Weighted jump squat and loaded countermovement jump studies",
+      "url": "multiple search results",
+      "reason": "Rejected for visible roles because external loading changes the movement enough to warrant separate entries."
+    },
+    {
+      "title": "Fitness blogs and box-height progression articles",
+      "url": "multiple search results",
+      "reason": "Rejected in favor of peer-reviewed EMG, biomechanics, and force-plate sources."
+    }
+  ],
+  "notes": "Variant assumption is a two-leg standing bodyweight box jump with countermovement takeoff, landing on the box, and step-down return. Exact box-jump EMG is limited, so gluteus maximus is supported by exact performance studies plus close vertical-jump EMG and biomechanics rather than exact glute EMG from a box-jump-only paper. No trunk or adductor visible support roles were added because the evidence did not justify a concise local anatomy classification. No anatomy blockers found."
+}

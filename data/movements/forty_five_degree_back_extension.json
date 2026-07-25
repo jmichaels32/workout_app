@@ -1,0 +1,178 @@
+{
+  "id": "forty_five_degree_back_extension",
+  "name": "45-Degree Back Extension",
+  "aliases": [
+    "45_degree_back_extension",
+    "forty_five_degree_roman_chair",
+    "roman_chair_back_extension",
+    "45_degree_hyperextension",
+    "back_extension"
+  ],
+  "family": "back_extension",
+  "equipment": "machine",
+  "variantType": "forty_five_degree_roman_chair",
+  "variant": "45-degree Roman chair back extension performed through hip extension with the pelvis supported by the pad.",
+  "description": "Set the hip pad just below the pelvis, brace the feet, cross the arms or hold the load securely, and start with the body in a straight line. Hinge down from the hips without collapsing the lower back, then extend the hips and trunk until the body returns to a straight line without hyperextending at the top.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Hamstrings",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip extension",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 70,
+      "rationale": "Strong hamstring, glute, and erector stimulus for a hinge accessory, with load limited by station setup and torso-held resistance."
+    },
+    "strength": {
+      "score": 52,
+      "rationale": "Builds hip and trunk extension strength well as an accessory, but absolute loading and force expression are lower than barbell hinges."
+    },
+    "joint_resilience": {
+      "score": 62,
+      "rationale": "Useful controlled exposure for the posterior chain and trunk extensors through repeatable range when pad setup and spinal position are appropriate."
+    },
+    "athletic_transfer": {
+      "score": 38,
+      "rationale": "Can support posterior-chain capacity, but the fixed station and bilateral path are less transferable than loaded free-standing or sport-like patterns."
+    },
+    "control": {
+      "score": 44,
+      "rationale": "Requires hip-hinge, pelvic, and trunk-position control, but the foot brace and pad reduce balance and whole-body coordination demands."
+    },
+    "fatigue_efficiency": {
+      "score": 66,
+      "rationale": "Provides useful posterior-chain stimulus with less systemic cost than heavy barbell deadlifts, though local back and hamstring fatigue can still be high."
+    },
+    "setup": {
+      "score": 70,
+      "rationale": "Quick once a 45-degree Roman chair is available, with only pad height, stance, and optional load to set."
+    },
+    "ease": {
+      "score": 54,
+      "rationale": "The station is approachable, but users still need to separate hip motion from lumbar rounding or excessive lockout extension."
+    },
+    "progression": {
+      "score": 54,
+      "rationale": "Load can be added with plates, dumbbells, or vests, but increments and secure loading become awkward compared with barbells or machines."
+    },
+    "support": {
+      "score": 62,
+      "rationale": "The pad and foot brace provide meaningful external support, while the torso still moves freely and requires active trunk control."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Direct 45-degree back-extension studies show high biceps femoris and hamstring activation.",
+        "evidence": "Direct Roman chair and 45-degree hip-extension studies report high biceps femoris or hamstring activation, with Roman chair back extension outperforming Romanian deadlift for biceps femoris in one trained-women comparison.",
+        "sourceIds": [
+          "andersen-2021",
+          "bourne-2017",
+          "keerasomboon-2020"
+        ]
+      },
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Measured gluteus maximus activity supports a primary hip-extension role.",
+        "evidence": "The 45-degree Roman chair back extension directly activated gluteus maximus more than seated machine back extension and similarly to Romanian deadlift across the whole movement in trained women. Hip-extension angle and setup can shift glute versus hamstring emphasis.",
+        "sourceIds": [
+          "andersen-2021",
+          "keerasomboon-2020"
+        ]
+      },
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Direct studies support lower-back extensor activation during the movement.",
+        "evidence": "Direct 45-degree hip-extension and Roman chair studies measure erector spinae activity, and comparison data conclude the exercise is an appropriate selection for lower-back muscle activation.",
+        "sourceIds": [
+          "andersen-2021",
+          "keerasomboon-2020"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "45-degree back extension: hamstrings, gluteus maximus, and erector spinae primary; no visible secondary or support roles added.",
+    "clinicalShort": "EMG estimates acute excitation in the tested setup, not hypertrophy, tissue tolerance, or pain risk.",
+    "limitsShort": "Pad height, knee angle, spinal strategy, load position, top-range lockout, and whether the user biases hip or lumbar motion can change the target profile.",
+    "summary": "The 45-degree back extension is classified as a supported hip-extension and trunk-extension exercise. Direct EMG supports hamstrings, gluteus maximus, and erector spinae as visible primary contributors. No additional support muscles are shown because the reviewed evidence did not justify a concise visible role beyond those three local anatomy mappings.",
+    "clinicalInterpretation": "Surface EMG is useful for classifying acute muscle excitation under a specific Roman chair setup. Ratings treat the movement as a posterior-chain accessory with moderate support and less systemic cost than heavy free-bar hinges.",
+    "limitations": "This entry assumes a 45-degree Roman chair with the hips supported and body moving through roughly hip-extension range. Horizontal back extensions, glute-biased rounded-back styles, heavy barbell good mornings, reverse hypers, and seated back-extension machines should remain separate movement entries.",
+    "studies": [
+      {
+        "id": "andersen-2021",
+        "type": "Hip-extension exercise EMG comparison",
+        "shortCitation": "Andersen et al., JSSM, 2021",
+        "finding": "In resistance-trained women, the 45-degree Roman chair back extension activated biceps femoris more than Romanian deadlift and seated machine back extension, activated gluteus maximus more than seated machine back extension, and showed no erector spinae difference versus the other exercises.",
+        "citation": "Andersen V, Pedersen H, Fimland MS, Shaw M, Solstad TEJ, Stien N, Cumming KT, Saeterbakken AH. Comparison of Muscle Activity in Three Single-Joint, Hip Extension Exercises in Resistance-Trained Women. Journal of Sports Science and Medicine. 2021;20(2):181-187. doi:10.52082/jssm.2021.181.",
+        "doi": "10.52082/jssm.2021.181",
+        "url": "https://www.jssm.org/jssm-20-181.xml-Fulltext",
+        "relevance": "Direct 45-degree Roman chair back-extension EMG source for biceps femoris, gluteus maximus, and erector spinae.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "bourne-2017",
+        "type": "Hamstring exercise selection EMG and fMRI study",
+        "shortCitation": "Bourne et al., BJSM, 2017",
+        "finding": "Exercise selection altered hamstring activation, and the 45-degree hip extension emphasized biceps femoris long head relative to other hamstring exercises.",
+        "citation": "Bourne MN, Williams MD, Opar DA, Al Najjar A, Kerr GK, Shield AJ. Impact of exercise selection on hamstring muscle activation. British Journal of Sports Medicine. 2017;51(13):1021-1028. doi:10.1136/bjsports-2015-095739.",
+        "doi": "10.1136/bjsports-2015-095739",
+        "url": "https://bjsm.bmj.com/content/51/13/1021",
+        "relevance": "Directly includes 45-degree hip extension and supports the hamstrings primary classification and hamstring-region limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "keerasomboon-2020",
+        "type": "45-degree hip-extension knee-angle EMG study",
+        "shortCitation": "Keerasomboon et al., JSSM, 2020",
+        "finding": "Altered knee angle and contraction type changed hamstring EMG during 45-degree hip extension, with measured biceps femoris long head, semitendinosus, semimembranosus, gluteus maximus, and erector spinae activity.",
+        "citation": "Keerasomboon T, Mineta S, Hirose N. Influence of Altered Knee Angle and Muscular Contraction Type on Electromyographic Activity of Hamstring Muscles during 45-degree Hip Extension Exercise. Journal of Sports Science and Medicine. 2020;19(4):630-636.",
+        "url": "https://www.jssm.org/researchjssm-19-630.xml.xml",
+        "relevance": "Direct 45-degree hip-extension evidence for hamstring heads, gluteus maximus, and erector spinae, and for setup-dependent emphasis.",
+        "usedFor": [
+          "primary muscle role",
+          "ease score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

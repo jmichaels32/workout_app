@@ -1,0 +1,222 @@
+{
+  "id": "seated_machine_shoulder_press",
+  "name": "Seated Machine Shoulder Press",
+  "aliases": [
+    "machine_shoulder_press",
+    "selectorized_shoulder_press",
+    "front_machine_shoulder_press",
+    "seated_overhead_press_machine",
+    "machine_overhead_press"
+  ],
+  "family": "shoulder_press",
+  "equipment": "machine",
+  "variantType": "seated_machine",
+  "variant": "Seated guided machine shoulder press from shoulder height to overhead, usually with neutral or semi-neutral handles in front of the body.",
+  "description": "Sit with the back against the pad, feet flat, and the seat adjusted so the handles start near shoulder height. Brace lightly, keep the ribs down and shoulders controlled, press the handles overhead along the guided path until the elbows are nearly straight, then lower under control until the shoulders are loaded without forcing an uncomfortable bottom range.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Shoulders",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 70,
+      "rationale": "Strong shoulder and triceps hypertrophy option because machine evidence supports deltoid and triceps excitation while the guided path reduces coordination cost."
+    },
+    "strength": {
+      "score": 48,
+      "rationale": "Builds vertical pressing force in a repeatable path, but fixed machine mechanics transfer less cleanly to free-weight or sport strength expression."
+    },
+    "joint_resilience": {
+      "score": 28,
+      "rationale": "Can provide controlled overhead exposure, but the fixed path and user-specific shoulder mobility make it a limited general joint-resilience tool."
+    },
+    "athletic_transfer": {
+      "score": 6,
+      "rationale": "Very low transfer because the lift is seated, bilateral, back-supported, and externally guided."
+    },
+    "control": {
+      "score": 8,
+      "rationale": "Low motor-control demand because the machine constrains the path and removes most balance and free-load stabilization."
+    },
+    "fatigue_efficiency": {
+      "score": 78,
+      "rationale": "Good local shoulder and triceps stimulus with low systemic fatigue, though overhead joint tolerance and triceps fatigue can still limit volume."
+    },
+    "setup": {
+      "score": 80,
+      "rationale": "Low-friction once the machine is available, with only seat, handle, and stack adjustments."
+    },
+    "ease": {
+      "score": 90,
+      "rationale": "Easy to learn and repeat because the path, seat, and back pad constrain most of the movement."
+    },
+    "progression": {
+      "score": 82,
+      "rationale": "Machine load and reps are simple to record, with deductions for stack jumps and machine-specific lever paths."
+    },
+    "support": {
+      "score": 96,
+      "rationale": "Very high external support from the seat, back pad, handles, and guided overhead path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Direct machine shoulder-press EMG supports major deltoid involvement.",
+        "evidence": "Front machine shoulder press EMG directly measured anterior deltoid activity, and close Smith-machine shoulder press evidence also found high anterior deltoid activation. Medial deltoid is important in the literature but is not available as a local visible anatomy entry in this dataset.",
+        "sourceIds": [
+          "coratella-2022",
+          "botton-2013",
+          "saeterbakken-2013"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Measured elbow-extension contributor in shoulder-press EMG.",
+        "evidence": "Front machine shoulder press and seated/standing shoulder press studies measured triceps brachii activity during overhead pressing. It is classified as secondary because it extends the elbows while the movement is primarily selected for shoulder pressing.",
+        "sourceIds": [
+          "coratella-2022",
+          "saeterbakken-2013"
+        ]
+      },
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Front machine press evidence shows initial-phase assistance.",
+        "evidence": "Front machine shoulder press EMG measured pectoralis major and found greater excitation in front-machine pressing than behind-neck machine pressing. It is included as a secondary assistant because front overhead press mechanics can involve the clavicular pectoralis major, especially near the start.",
+        "sourceIds": [
+          "coratella-2022"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Overhead-press and shoulder-elevation evidence supports scapular upward-rotation support.",
+        "evidence": "Military-press EMG reports serratus anterior involvement, and shoulder-elevation review evidence identifies serratus anterior as a key scapular upward-rotation and stabilization muscle. In this seated machine variant it is classified as support because the machine guides the press path.",
+        "sourceIds": [
+          "bull-2001",
+          "escamilla-2009"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Biomechanical inference for glenohumeral stabilization during overhead elevation.",
+        "evidence": "This support role is an explicit biomechanics inference: shoulder exercise review evidence describes the rotator cuff as stabilizing the glenohumeral joint and controlling humeral head translation during elevation. Direct seated machine shoulder press rotator-cuff EMG was not found.",
+        "sourceIds": [
+          "escamilla-2009"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Seated machine shoulder press: anterior deltoid primary; triceps brachii and pectoralis major secondary; serratus anterior and rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, pain, or injury risk.",
+    "limitsShort": "Machine path, front versus behind-neck setup, grip, seat height, back pad angle, load, range of motion, and shoulder mobility can shift emphasis.",
+    "summary": "The seated machine shoulder press is classified as a guided vertical pressing exercise. Direct front machine shoulder press evidence supports anterior deltoid, triceps brachii, and pectoralis major involvement. Serratus anterior is included as scapular support from military-press and shoulder-elevation evidence, while rotator cuff support is an explicit biomechanics inference. Medial deltoid and upper trapezius are important in the literature but are not separate visible anatomy entries in this dataset, so they are documented here rather than added as unmapped roles.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation under a specific machine path, load, grip, and range of motion. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, long-term adaptation, pain risk, or injury risk.",
+    "limitations": "Direct machine data come from competitive bodybuilders using a specific Technogym shoulder press, and the front-machine condition used a forward neutral grip. Close evidence includes seated and standing barbell or dumbbell shoulder presses and Smith-machine shoulder press. Commercial shoulder-press machines vary in seat angle, lever path, grip orientation, converging path, starting depth, and whether the handles travel in front of or beside the head.",
+    "studies": [
+      {
+        "id": "coratella-2022",
+        "type": "Direct front/back barbell and machine overhead press EMG",
+        "shortCitation": "Coratella et al., Front Physiol, 2022",
+        "finding": "Front and back machine shoulder press variants were compared with barbell military press; anterior, medial, and posterior deltoid, upper trapezius, pectoralis major, and triceps brachii were measured.",
+        "citation": "Coratella G, Tornatore G, Longo S, Esposito F, Ce E. Front vs Back and Barbell vs Machine Overhead Press: An Electromyographic Analysis and Implications For Resistance Training. Frontiers in Physiology. 2022;13:825880. doi:10.3389/fphys.2022.825880.",
+        "doi": "10.3389/fphys.2022.825880",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9354811/",
+        "relevance": "Most direct source for the front machine shoulder press variant, including measured anterior deltoid, pectoralis major, and triceps brachii activity plus machine-vs-barbell stability implications.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support score",
+          "hypertrophy score",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "saeterbakken-2013",
+        "type": "Seated and standing shoulder press EMG and 1RM comparison",
+        "shortCitation": "Saeterbakken and Fimland, JSCR, 2013",
+        "finding": "Compared seated and standing barbell and dumbbell shoulder presses and measured anterior, medial, and posterior deltoids plus biceps and triceps brachii.",
+        "citation": "Saeterbakken AH, Fimland MS. Effects of Body Position and Loading Modality on Muscle Activity and Strength in Shoulder Presses. Journal of Strength and Conditioning Research. 2013;27(7):1824-1831. doi:10.1519/JSC.0b013e318276b873.",
+        "doi": "10.1519/JSC.0b013e318276b873",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23096062/",
+        "relevance": "Close seated shoulder-press evidence for deltoid and triceps roles and for stability, support, and progression ratings.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support score",
+          "progression score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "botton-2013",
+        "type": "Close Smith-machine shoulder press deltoid EMG",
+        "shortCitation": "Botton et al., Medicina Sportiva, 2013",
+        "finding": "Smith-machine shoulder press produced high anterior deltoid activation compared with several other shoulder or chest exercises.",
+        "citation": "Botton CE, Wilhelm EN, Ughini CC, Pinto RS, Lima CS. Electromyographical analysis of the deltoid between different strength training exercises. Medicina Sportiva. 2013;17(2):67-71. doi:10.5604/17342260.1055261.",
+        "doi": "10.5604/17342260.1055261",
+        "url": "https://exercisesforfree.com/pdf/386.pdf",
+        "relevance": "Close guided shoulder press evidence for anterior deltoid activation; less direct because it used Smith-machine pressing rather than a seated lever shoulder press.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "bull-2001",
+        "type": "Military press serratus and trapezius EMG",
+        "shortCitation": "Bull et al., Electromyogr Clin Neurophysiol, 2001",
+        "finding": "Military press variants with open and middle grip showed high to very high trapezius and serratus anterior activity.",
+        "citation": "Bull ML, Vitti M, Freitas V, Rosa GJ. Electromyographic validation of the trapezius and serratus anterior muscles in military press exercises with open and middle grip. Electromyography and Clinical Neurophysiology. 2001;41(4):203-207. PMID:11441637.",
+        "doi": null,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11441637/",
+        "relevance": "Direct military-press evidence for serratus anterior involvement; used only for scapular support context because the entry is a seated machine press.",
+        "usedFor": [
+          "support muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "escamilla-2009",
+        "type": "Shoulder muscle activity and function review",
+        "shortCitation": "Escamilla et al., Sports Med, 2009",
+        "finding": "Review describes rotator cuff stabilization of the glenohumeral joint and serratus anterior contribution to scapular upward rotation, posterior tilt, and stabilization.",
+        "citation": "Escamilla RF, Yamashiro K, Paulos L, Andrews JR. Shoulder muscle activity and function in common shoulder rehabilitation exercises. Sports Medicine. 2009;39(8):663-685. doi:10.2165/00007256-200939080-00004.",
+        "doi": "10.2165/00007256-200939080-00004",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19769415/",
+        "relevance": "Biomechanics and EMG review evidence for glenohumeral and scapulothoracic support roles during shoulder elevation.",
+        "usedFor": [
+          "support muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

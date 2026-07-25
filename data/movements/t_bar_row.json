@@ -1,0 +1,298 @@
+{
+  "id": "t_bar_row",
+  "name": "T-Bar Row",
+  "aliases": [
+    "tbar_row",
+    "landmine_t_bar_row",
+    "landmine_row",
+    "barbell_t_bar_row",
+    "parallel_landmine_row"
+  ],
+  "family": "row",
+  "equipment": "bar",
+  "variantType": "landmine_t_bar",
+  "variant": "Standing landmine or T-bar row with one end of a bar anchored, a close neutral handle, and no chest pad support.",
+  "description": "Stand over the bar with the far end anchored, hinge at the hips, brace the trunk, and hold the close handle with the arms long. Pull the handle toward the lower chest or upper abdomen by driving the elbows back, keep the torso angle steady, then lower the bar under control without letting the plates pull the shoulders or spine out of position.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 75,
+      "rationale": "Strong back and upper-back hypertrophy stimulus with high loading potential, but unsupported trunk and grip fatigue can leak effort from the target muscles."
+    },
+    "strength": {
+      "score": 68,
+      "rationale": "Good heavy horizontal-pull strength builder because the anchored bar is stable and loadable, though torso angle and hip drive can blur force expression."
+    },
+    "joint_resilience": {
+      "score": 36,
+      "rationale": "Provides useful shoulder, elbow, and trunk loading tolerance, but heavy hinge demands and grip loading limit its resilience-specific value."
+    },
+    "athletic_transfer": {
+      "score": 44,
+      "rationale": "The standing hinge and heavy bilateral pull carry more whole-body transfer than seated rows, but the path is still constrained by the landmine arc."
+    },
+    "control": {
+      "score": 52,
+      "rationale": "Requires hip-hinge position, trunk bracing, scapular timing, and elbow-path control under load."
+    },
+    "fatigue_efficiency": {
+      "score": 52,
+      "rationale": "High stimulus is possible, but axial, grip, and trunk fatigue can accumulate quickly compared with chest-supported rows."
+    },
+    "setup": {
+      "score": 44,
+      "rationale": "Requires a bar, plates, landmine or secure anchor, and a close handle, with loading and stance setup taking time."
+    },
+    "ease": {
+      "score": 52,
+      "rationale": "The pull path is intuitive, but maintaining a stable hinge and avoiding body English under heavy load require practice."
+    },
+    "progression": {
+      "score": 82,
+      "rationale": "Bar and plate loading make progression straightforward, with deductions for plate diameter, landmine geometry, and torso-angle variability."
+    },
+    "support": {
+      "score": 26,
+      "rationale": "The bar end is anchored, but the torso is unsupported and the lifter must stabilize the hinge, shoulders, elbows, and grip."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Row-family EMG supports lat emphasis with close neutral row paths.",
+        "evidence": "Seated and prone row studies show latissimus dorsi is strongly involved in row patterns, especially when the shoulder-abduction angle is low. The close neutral T-bar path usually tracks the elbows near the torso, supporting latissimus dorsi as the primary visible target.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fischer-2025",
+          "lehman-2004",
+          "lincoln-2023"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Teres major",
+        "evidenceShort": "Measured row-family shoulder-extension assistant.",
+        "evidence": "Teres major was measured during seated row EMG and assists the shoulder-extension and adduction pattern also used in the close-grip T-bar row.",
+        "sourceIds": [
+          "fujita-2019",
+          "lincoln-2023"
+        ]
+      },
+      {
+        "name": "Middle trapezius",
+        "evidenceShort": "Measured row contributor for scapular retraction.",
+        "evidence": "Middle or transverse trapezius activity is measured in seated cable and prone row studies, and the T-bar row requires scapular retraction as the handle approaches the torso.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fischer-2025",
+          "lehman-2004",
+          "lincoln-2023"
+        ]
+      },
+      {
+        "name": "Rhomboids",
+        "evidenceShort": "Inferred from row-family grouped EMG and scapular retraction.",
+        "evidence": "This role is marked as inference: Lehman et al. reported grouped middle trapezius/rhomboid activity during row conditions, and the T-bar row finish requires scapular retraction.",
+        "sourceIds": [
+          "lehman-2004",
+          "lincoln-2023"
+        ]
+      },
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Measured row contributor, path-sensitive.",
+        "evidence": "Posterior or rear deltoid activity is measured in seated cable and prone row EMG. It assists shoulder extension and horizontal abduction, with involvement increasing as elbows travel wider or higher.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fischer-2025",
+          "fujita-2019"
+        ]
+      },
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Measured elbow-flexion assistant in row studies.",
+        "evidence": "Biceps brachii is directly measured in seated and prone row EMG studies. It assists elbow flexion during the T-bar row but is not the intended primary back target.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fischer-2025",
+          "lehman-2004"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Row tasks require glenohumeral stabilization.",
+        "evidence": "Row tasks recruit the rotator cuff in a direction-specific way, supporting its classification as shoulder support during loaded rowing rather than a primary hypertrophy target.",
+        "sourceIds": [
+          "wattanaprakornkul-2011"
+        ]
+      },
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Unsupported hinge rows create trunk-support demand.",
+        "evidence": "Free-weight row studies show meaningful erector spinae and lumbar loading demands. In the landmine T-bar row, the erector spinae support the hip-hinged torso while the upper body rows the load.",
+        "sourceIds": [
+          "fenwick-2009",
+          "saeterbakken-2015",
+          "lincoln-2023"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "T-bar row: latissimus dorsi primary; teres major, middle trapezius, rhomboids, posterior deltoid, and biceps brachii secondary; rotator cuff and erector spinae support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Landmine angle, handle width, torso angle, hip drive, grip, plate diameter, load, and chest-supported T-bar machines can materially change emphasis.",
+    "summary": "This entry treats the T-bar row as a standing landmine or barbell T-bar row without a chest pad. Row-family EMG supports latissimus dorsi as the primary target when the elbows track close, with teres major, middle trapezius, rhomboids, posterior deltoid, and biceps brachii assisting. Because the torso is unsupported, erector spinae are visible support; the rotator cuff is included for shoulder stabilization during the pull.",
+    "clinicalInterpretation": "The evidence base is strongest for row-family EMG and trunk-loading studies, with landmine-specific evidence mainly coming from a peer-reviewed technique article. A chest-supported T-bar machine should be treated as a separate variant because its support and fatigue profile differ.",
+    "limitations": "No direct EMG study of a commercial landmine T-bar row was found. The classification transfers close evidence from seated cable rows, prone rows, free-weight row trunk studies, and a landmine row technique paper. Brachialis and brachioradialis were not added because they lack local visible anatomy entries.",
+    "studies": [
+      {
+        "id": "lincoln-2023",
+        "type": "Landmine row technique review",
+        "shortCitation": "Lincoln et al., Strength Cond J, 2023",
+        "finding": "Describes the landmine row as an upper-body pulling exercise using a barbell as a lever, including T-bar row apparatus substitution and programming considerations.",
+        "citation": "Lincoln MA, Sapstead GW, Moore KN, Weldon A. Exercise Technique: The Landmine Row. Strength and Conditioning Journal. 2023;45(3):371-378. doi:10.1519/SSC.0000000000000751.",
+        "doi": "10.1519/SSC.0000000000000751",
+        "url": "https://doi.org/10.1519/SSC.0000000000000751",
+        "relevance": "Peer-reviewed technique source for the landmine/T-bar row variant and its support, setup, and loading characteristics.",
+        "usedFor": [
+          "description",
+          "primary muscle role inference",
+          "secondary muscle role inference",
+          "setup score",
+          "support score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "vasconcelos-2023",
+        "type": "Seated cable row EMG and force study",
+        "shortCitation": "Vasconcelos et al., Int J Strength Cond, 2023",
+        "finding": "Lower-abduction row paths emphasized latissimus dorsi, while higher-abduction paths emphasized upper-back and posterior deltoid muscles.",
+        "citation": "Vasconcelos CMWA, Lopes CR, Almeida VM, Neto WK, Soares EG. Effect Of Different Grip Position And Shoulder-Abduction Angle On Muscle Strength And Activation During The Seated Cable Row. International Journal of Strength and Conditioning. 2023;3(1):1-13. doi:10.47206/ijsc.v3i1.190.",
+        "doi": "10.47206/ijsc.v3i1.190",
+        "url": "https://journal.iusca.org/index.php/Journal/article/view/190",
+        "relevance": "Direct row-family EMG for latissimus dorsi, middle trapezius, posterior deltoid, and biceps brachii by shoulder-abduction angle.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "fischer-2025",
+        "type": "Prone row range-of-motion EMG study",
+        "shortCitation": "Fischer et al., J Electromyogr Kinesiol, 2025",
+        "finding": "Prone barbell row EMG measured latissimus dorsi, transverse trapezius, rear deltoid, and biceps brachii.",
+        "citation": "Fischer J, Burger C, Seguel JM, Rodoplu C, Paternoster FK, Tilp M, Konrad A. Impact of different ranges of motion in the prone barbell row on muscle excitation. Journal of Electromyography and Kinesiology. 2025;83:103025. doi:10.1016/j.jelekin.2025.103025.",
+        "doi": "10.1016/j.jelekin.2025.103025",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40513198/",
+        "relevance": "Close row-family EMG for the main visible pulling muscles.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score"
+        ]
+      },
+      {
+        "id": "lehman-2004",
+        "type": "Latissimus dorsi exercise EMG study",
+        "shortCitation": "Lehman et al., Dynamic Medicine, 2004",
+        "finding": "Seated row produced a high latissimus-to-biceps activation ratio and high grouped middle trapezius/rhomboid activity.",
+        "citation": "Lehman GJ, Buchan DD, Lundy A, Myers N, Nalborczyk A. Variations in muscle activation levels during traditional latissimus dorsi weight training exercises: An experimental study. Dynamic Medicine. 2004;3:4. doi:10.1186/1476-5918-3-4.",
+        "doi": "10.1186/1476-5918-3-4",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15228624/",
+        "relevance": "Row-family EMG evidence for lats, biceps, and grouped middle trapezius/rhomboids.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role inference"
+        ]
+      },
+      {
+        "id": "fujita-2019",
+        "type": "Seated row EMG and verbal-instruction study",
+        "shortCitation": "Fujita et al., Motriz, 2019",
+        "finding": "Seated row at 70% 1RM produced substantial latissimus dorsi, teres major, posterior deltoid, and biceps brachii activity.",
+        "citation": "Fujita RA, De Marchi PU, Silva NRS, Gomes MM. Verbal instruction does not change myoelectric activity during seated row exercise in trained and untrained men. Motriz: Revista de Educacao Fisica. 2019;25(4):e10190100. doi:10.1590/s1980-6574201900040100.",
+        "doi": "10.1590/s1980-6574201900040100",
+        "url": "https://pdfs.semanticscholar.org/2b55/6e63ba0d3019f5e2959b3ec165072f139c4b.pdf",
+        "relevance": "Close row-family EMG for teres major, posterior deltoid, and biceps brachii roles.",
+        "usedFor": [
+          "secondary muscle role",
+          "ease score"
+        ]
+      },
+      {
+        "id": "wattanaprakornkul-2011",
+        "type": "Rotator cuff recruitment study",
+        "shortCitation": "Wattanaprakornkul et al., J Electromyogr Kinesiol, 2011",
+        "finding": "Rotator cuff recruitment during bench press and row was direction-specific, consistent with shoulder stabilization.",
+        "citation": "Wattanaprakornkul D, Halaki M, Cathers I, Ginn KA. Direction-specific recruitment of rotator cuff muscles during bench press and row. Journal of Electromyography and Kinesiology. 2011;21(6):1041-1049. doi:10.1016/j.jelekin.2011.09.002.",
+        "doi": "10.1016/j.jelekin.2011.09.002",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+        "relevance": "Supports rotator cuff shoulder-stability role during rowing.",
+        "usedFor": [
+          "support muscle role",
+          "support score"
+        ]
+      },
+      {
+        "id": "fenwick-2009",
+        "type": "Rowing exercise trunk EMG and lumbar-load study",
+        "shortCitation": "Fenwick et al., JSCR, 2009",
+        "finding": "Different rowing exercises changed trunk muscle activation, lumbar motion, load, and stiffness.",
+        "citation": "Fenwick CMJ, Brown SHM, McGill SM. Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness. Journal of Strength and Conditioning Research. 2009;23(2):350-358. doi:10.1519/JSC.0b013e3181942019.",
+        "doi": "10.1519/JSC.0b013e3181942019",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19197209/",
+        "relevance": "Supports erector spinae and fatigue-cost interpretation for unsupported row variants.",
+        "usedFor": [
+          "support muscle role",
+          "fatigue efficiency score",
+          "control score"
+        ]
+      },
+      {
+        "id": "saeterbakken-2015",
+        "type": "Bi- and unilateral row core EMG study",
+        "shortCitation": "Saeterbakken et al., Int J Sports Med, 2015",
+        "finding": "Free-weight rows produced greater erector spinae or multifidus activity than machine rows, and row laterality altered core-muscle activation.",
+        "citation": "Saeterbakken A, Andersen V, Brudeseth A, Lund H, Fimland MS. The Effect of Performing Bi- and Unilateral Row Exercises on Core Muscle Activation. International Journal of Sports Medicine. 2015;36(11):900-905. doi:10.1055/s-0034-1398646.",
+        "doi": "10.1055/s-0034-1398646",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26134664/",
+        "relevance": "Supports the higher trunk-support demand of free-weight row variants relative to supported machine rows.",
+        "usedFor": [
+          "support muscle role",
+          "control score",
+          "support score"
+        ]
+      }
+    ]
+  }
+}

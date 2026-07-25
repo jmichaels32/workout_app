@@ -1,0 +1,139 @@
+{
+  "id": "dumbbell_shrug",
+  "name": "Dumbbell Shrug",
+  "aliases": [
+    "db_shrug",
+    "standing_dumbbell_shrug",
+    "dumbbell_shoulder_shrug"
+  ],
+  "family": "shrug",
+  "equipment": "dumbbell",
+  "variantType": "standing_dumbbell",
+  "variant": "Standing bilateral dumbbell shrug with arms at the sides and scapular elevation performed without rolling the shoulders.",
+  "description": "Stand tall holding dumbbells at the sides, keep the elbows long and ribs stacked, then lift the shoulders straight up toward the ears without bending the arms or rolling the shoulders. Pause briefly at the top, then lower the shoulder blades under control until the traps are lengthened.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Shoulders",
+      "group": "region"
+    },
+    {
+      "label": "Dumbbell",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 54,
+      "rationale": "Good local trap hypertrophy accessory, but the visible anatomy entry is broad and the movement is narrow."
+    },
+    "strength": {
+      "score": 42,
+      "rationale": "Can be loaded heavily for scapular-elevation strength, though range is short and force expression is not broadly transferable."
+    },
+    "joint_resilience": {
+      "score": 34,
+      "rationale": "Can build neck and shoulder-girdle loading tolerance, but it is not a broad joint-resilience anchor."
+    },
+    "athletic_transfer": {
+      "score": 20,
+      "rationale": "Limited transfer outside loaded carrying and shoulder-girdle bracing contexts."
+    },
+    "control": {
+      "score": 24,
+      "rationale": "Low-to-moderate control demand: the main requirements are posture, straight-up scapular elevation, and avoiding shoulder rolling."
+    },
+    "fatigue_efficiency": {
+      "score": 72,
+      "rationale": "Focused local stimulus with modest systemic cost, although heavy dumbbells add grip and postural fatigue."
+    },
+    "setup": {
+      "score": 86,
+      "rationale": "Requires only dumbbells and standing space, with no bench or machine adjustment."
+    },
+    "ease": {
+      "score": 82,
+      "rationale": "Very easy to learn, with the main errors being arm pull, shoulder rolling, and excessive load."
+    },
+    "progression": {
+      "score": 72,
+      "rationale": "Dumbbell loading and reps are easy to track, but dumbbell jumps and grip can limit smooth progression."
+    },
+    "support": {
+      "score": 42,
+      "rationale": "The movement path is simple, but standing free weights provide little external support."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Trapezius",
+        "evidenceShort": "Shrug EMG shows very high trapezius activation.",
+        "evidence": "Direct shrug EMG evidence reports the highest trapezius activation during shrug variations, with loaded shrugs reaching very high upper-trapezius activity compared with other neck and shoulder strengthening exercises.",
+        "sourceIds": [
+          "andersen-2008",
+          "ekstrom-2003"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Standing dumbbell shrug: trapezius primary; no separate secondary or support muscles listed.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "The visible anatomy entry is whole trapezius even though most shrug evidence emphasizes upper trapezius.",
+    "summary": "The dumbbell shrug is classified as a simple loaded scapular-elevation exercise. Direct EMG evidence supports trapezius as the main target, especially upper-trapezius fibers. No separate support roles are listed because available local anatomy does not expose levator scapulae, and other stabilization claims would not add a clear visible app role.",
+    "clinicalInterpretation": "Shrugs can provide a focused local trap stimulus when performed without shoulder rolling or elbow flexion. EMG evidence supports acute trapezius excitation but does not by itself define hypertrophy, pain outcomes, or injury risk.",
+    "limitations": "The strongest evidence reports upper trapezius, but local anatomy maps Trapezius as a whole and does not provide standalone upper trapezius or levator scapulae meshes. Barbell shrugs, trap-bar shrugs, behind-the-back shrugs, seated dumbbell shrugs, and incline shrugs should be separate entries if added later.",
+    "studies": [
+      {
+        "id": "andersen-2008",
+        "type": "Neck and shoulder strength-exercise EMG",
+        "shortCitation": "Andersen et al., Phys Ther, 2008",
+        "finding": "Shrugs produced the highest trapezius activation among the tested neck and shoulder strengthening exercises in women with trapezius myalgia.",
+        "citation": "Andersen LL, Kjaer M, Andersen CH, Hansen PB, Zebis MK, Hansen K, Sjoegaard G. Muscle activation during selected strength exercises in women with chronic neck muscle pain. Physical Therapy. 2008;88(6):703-711. doi:10.2522/ptj.20070304.",
+        "doi": "10.2522/ptj.20070304",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18339796/",
+        "relevance": "Direct loaded shrug EMG evidence supporting trapezius as the primary visible target.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "joint resilience score",
+          "progression score"
+        ]
+      },
+      {
+        "id": "ekstrom-2003",
+        "type": "Trapezius and serratus anterior exercise EMG",
+        "shortCitation": "Ekstrom et al., JOSPT, 2003",
+        "finding": "The unilateral shoulder shrug produced the greatest upper-trapezius EMG activity among tested trapezius exercises.",
+        "citation": "Ekstrom RA, Donatelli RA, Soderberg GL. Surface electromyographic analysis of exercises for the trapezius and serratus anterior muscles. Journal of Orthopaedic and Sports Physical Therapy. 2003;33(5):247-258. doi:10.2519/jospt.2003.33.5.247.",
+        "doi": "10.2519/jospt.2003.33.5.247",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12774999/",
+        "relevance": "Direct shrug-family EMG evidence for upper-trapezius dominance.",
+        "usedFor": [
+          "primary muscle role",
+          "ease score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

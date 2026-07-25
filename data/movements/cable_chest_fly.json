@@ -1,0 +1,182 @@
+{
+  "id": "cable_chest_fly",
+  "name": "Cable Chest Fly",
+  "aliases": [
+    "standing_cable_chest_fly",
+    "standing_cable_fly",
+    "cable_crossover",
+    "standing_cable_crossover",
+    "cable_pec_fly"
+  ],
+  "family": "chest_fly",
+  "equipment": "cable",
+  "variantType": "standing_cable",
+  "variant": "Bilateral standing cable chest fly or cable crossover using dual cable handles, treated separately from pec-deck, dumbbell fly, and cable chest press variations.",
+  "description": "Stand between two cable pulleys with the handles slightly behind or beside the shoulders, feet staggered or shoulder width, and a small fixed bend in the elbows. Brace the torso, keep the shoulders controlled, sweep the handles forward and together through shoulder horizontal adduction, then return slowly until the chest is stretched without letting the elbows drift behind a comfortable shoulder range.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Chest",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 80,
+      "rationale": "Strong chest hypertrophy option because cable crossover evidence shows high pectoralis activation and the cable path keeps useful tension through much of the fly arc."
+    },
+    "strength": {
+      "score": 24,
+      "rationale": "Builds shoulder-adduction force in a narrow pattern, but low absolute loading and limited pressing specificity keep it from being a major strength anchor."
+    },
+    "joint_resilience": {
+      "score": 20,
+      "rationale": "Can expose the shoulder to controlled horizontal-abduction range, but the stretched long-arm position makes it a narrow and technique-sensitive resilience tool."
+    },
+    "athletic_transfer": {
+      "score": 8,
+      "rationale": "Standing posture and free cable path add a little whole-body organization, but the movement remains a bilateral chest isolation pattern."
+    },
+    "control": {
+      "score": 32,
+      "rationale": "Moderate-low control demand from free handles, cable line, torso position, and scapular control, but balance and coordination demands remain limited."
+    },
+    "fatigue_efficiency": {
+      "score": 84,
+      "rationale": "High local chest stimulus with little systemic fatigue and minimal triceps fatigue leakage compared with pressing."
+    },
+    "setup": {
+      "score": 64,
+      "rationale": "Requires a dual cable station, two handles, matched pulley heights, and a repeatable stance, so setup is more involved than a machine fly."
+    },
+    "ease": {
+      "score": 72,
+      "rationale": "The task is easy to understand, but repeatable shoulder range, torso angle, cable path, and elbow position need attention."
+    },
+    "progression": {
+      "score": 70,
+      "rationale": "Cable stack loads and reps are easy to record, with deductions for stack increments, cable friction, pulley height, and stance changes."
+    },
+    "support": {
+      "score": 34,
+      "rationale": "The cable stack supplies consistent resistance, but the user must stabilize the torso, shoulder path, and handle position without a guided arm path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Direct cable-crossover EMG supports the pec as the main target.",
+        "evidence": "A university EMG thesis directly tested bent-forward cable crossovers and found pectoralis major activation not significantly different from the barbell bench press. A pectoralis-exercise systematic review and close fly-pattern studies support pectoralis major as the intended prime mover for horizontal adduction.",
+        "sourceIds": [
+          "schanke-2012",
+          "lopez-vivancos-2023",
+          "welsch-2005",
+          "solstad-2020"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Anterior deltoid",
+        "evidenceShort": "Fly-pattern EMG supports meaningful shoulder-flexion/adduction assistance.",
+        "evidence": "Direct dumbbell-fly and upper-body lift EMG measured anterior deltoid activity during fly-pattern work. It is classified as secondary because the cable chest fly is programmed as a chest isolation movement and pectoralis major remains the best-supported target.",
+        "sourceIds": [
+          "welsch-2005",
+          "solstad-2020"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Standing cable chest fly: pectoralis major primary; anterior deltoid secondary; no visible support muscles added.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, pain, or injury risk.",
+    "limitsShort": "Pulley height, torso lean, arm path, shoulder rotation, elbow bend, range of motion, and cable friction can shift emphasis.",
+    "summary": "The cable chest fly is classified as a standing cable horizontal-adduction isolation movement. Direct bent-forward cable-crossover evidence supports pectoralis major as the primary visible target. Anterior deltoid is included as a secondary contributor from close fly-pattern EMG, while biceps brachii, serratus anterior, rotator cuff, and trunk stabilizers are not shown because the reviewed evidence did not support a concise visible role for this exact app entry.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute muscle excitation under a specific load, setup, and technique. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, long-term adaptation, pain risk, or injury risk.",
+    "limitations": "The most direct cable evidence is a master's thesis rather than a peer-reviewed journal article, and it measured pectoralis major rather than a full set of shoulder and arm muscles. The remaining direct peer-reviewed fly evidence uses dumbbells rather than cables. Cable fly variants differ meaningfully by pulley height, whether the hands meet or cross, stance, torso lean, stretch depth, elbow angle, and whether the movement is performed seated, standing, high-to-low, or low-to-high.",
+    "studies": [
+      {
+        "id": "schanke-2012",
+        "type": "Direct bent-forward cable crossover pectoralis EMG thesis",
+        "shortCitation": "Schanke, University of Wisconsin-La Crosse thesis, 2012",
+        "finding": "Bent-forward cable crossovers produced pectoralis major activation not significantly different from barbell bench press in the tested protocol.",
+        "citation": "Schanke W. Electromyographical analysis of the pectoralis major muscle during various chest exercises. Master's thesis. University of Wisconsin-La Crosse; 2012.",
+        "doi": null,
+        "url": "https://minds.wisc.edu/items/48f80f8d-09fb-4290-b552-3fc15d3a5f64",
+        "relevance": "Directly included bent-forward cable crossovers in 14 males using 80% 1RM for loaded exercises and compared pectoralis major EMG with other chest movements.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lopez-vivancos-2023",
+        "type": "Pectoralis exercise EMG systematic review and meta-analysis",
+        "shortCitation": "Lopez-Vivancos et al., Applied Sciences, 2023",
+        "finding": "Reviewed pectoralis major EMG across traditional bench press and other pectoral exercise variants, supporting conservative interpretation of chest-exercise EMG.",
+        "citation": "Lopez-Vivancos A, Gonzalez-Galvez N, Orquin-Castrillon FJ, Vale RGDS, Marcos-Pardo PJ. Electromyographic Activity of the Pectoralis Major Muscle during Traditional Bench Press and Other Variants of Pectoral Exercises: A Systematic Review and Meta-Analysis. Applied Sciences. 2023;13(8):5203. doi:10.3390/app13085203.",
+        "doi": "10.3390/app13085203",
+        "url": "https://www.mdpi.com/2076-3417/13/8/5203",
+        "relevance": "Provides movement-family context for pectoralis major activation and EMG limitations across chest exercise variants.",
+        "usedFor": [
+          "primary muscle role",
+          "rating anchors",
+          "limitations"
+        ]
+      },
+      {
+        "id": "welsch-2005",
+        "type": "Direct dumbbell-fly and press EMG",
+        "shortCitation": "Welsch et al., JSCR, 2005",
+        "finding": "Compared pectoralis major and anterior deltoid activity during barbell bench press, dumbbell bench press, and dumbbell fly.",
+        "citation": "Welsch EA, Bird M, Mayhew JL. Electromyographic activity of the pectoralis major and anterior deltoid muscles during three upper-body lifts. Journal of Strength and Conditioning Research. 2005;19(2):449-452. doi:10.1519/14513.1.",
+        "doi": "10.1519/14513.1",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15903389/",
+        "relevance": "Close fly-pattern evidence for pectoralis major and anterior deltoid contribution; less direct because it used dumbbells rather than cables.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "strength score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "solstad-2020",
+        "type": "Direct dumbbell fly EMG comparison",
+        "shortCitation": "Solstad et al., J Sports Sci Med, 2020",
+        "finding": "Dumbbell flyes involved pectoralis major and anterior deltoid but showed lower agonist activation than barbell bench press overall; biceps brachii was higher in flyes, likely from elbow and arm stabilization.",
+        "citation": "Solstad TE, Andersen V, Shaw M, Hoel EM, Vonheim A, Saeterbakken AH. A Comparison of Muscle Activation between Barbell Bench Press and Dumbbell Flyes in Resistance-Trained Males. Journal of Sports Science and Medicine. 2020;19(4):645-651.",
+        "doi": null,
+        "url": "https://www.jssm.org/jssm-19-645.xml-Fulltext",
+        "relevance": "Close fly-pattern evidence in resistance-trained males; used for secondary anterior deltoid role, biceps exclusion boundary, and rating limits.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "biceps exclusion",
+          "control score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

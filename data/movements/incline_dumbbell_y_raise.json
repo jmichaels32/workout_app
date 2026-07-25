@@ -1,0 +1,235 @@
+{
+  "id": "incline_dumbbell_y_raise",
+  "name": "Incline Dumbbell Y Raise",
+  "aliases": [
+    "incline_y_raise",
+    "prone_incline_y_raise",
+    "dumbbell_y_raise",
+    "prone_y_raise"
+  ],
+  "family": "raise",
+  "equipment": "dumbbell",
+  "variantType": "incline_chest_supported",
+  "variant": "Chest-supported incline-bench dumbbell Y raise with the arms lifted in the scapular plane using light dumbbells and a thumbs-up or neutral hand position.",
+  "description": "Set an incline bench around 30 to 45 degrees and lie chest-down with light dumbbells hanging under the shoulders. Brace against the bench, raise the arms up and out into a Y while keeping the elbows soft and the shoulders away from the ears, pause briefly near the top, then lower under control without bouncing off the bottom.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Shoulders",
+      "group": "region"
+    },
+    {
+      "label": "Dumbbell",
+      "group": "equipment"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 30,
+      "rationale": "Focused scapular muscle stimulus, but loads are intentionally light and the hypertrophy ceiling is modest."
+    },
+    "strength": {
+      "score": 18,
+      "rationale": "Low global strength signal because the lever arm is long and load progression is deliberately conservative."
+    },
+    "joint_resilience": {
+      "score": 60,
+      "rationale": "Strong shoulder-girdle resilience accessory when range and load are controlled, especially for scapular upward-rotation tolerance."
+    },
+    "athletic_transfer": {
+      "score": 20,
+      "rationale": "Useful shoulder-positioning carryover, but little direct transfer to whole-body athletic force expression."
+    },
+    "control": {
+      "score": 64,
+      "rationale": "Requires precise scapular motion, arm angle, tempo, and avoidance of shrugging or lumbar compensation."
+    },
+    "fatigue_efficiency": {
+      "score": 82,
+      "rationale": "Very low systemic fatigue with a focused local scapular stimulus when performed strictly."
+    },
+    "setup": {
+      "score": 54,
+      "rationale": "Needs an adjustable bench and light dumbbells, with bench angle and body position affecting repeatability."
+    },
+    "ease": {
+      "score": 42,
+      "rationale": "The motion is simple, but many users over-shrug, use too much load, or lose the intended Y path."
+    },
+    "progression": {
+      "score": 26,
+      "rationale": "Progression is limited by small muscle targets, long lever arms, and dumbbell jump size."
+    },
+    "support": {
+      "score": 70,
+      "rationale": "The bench supports the torso, though the shoulder blades and arms still move freely."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Trapezius (middle and lower fibers)",
+        "evidenceShort": "Prone Y-family EMG supports middle/lower trap emphasis.",
+        "evidence": "Trapezius EMG evidence identifies the prone overhead arm raise in line with the lower trapezius as a maximal lower-trapezius exercise, while scapular-balance studies support exercises that emphasize lower and middle trapezius with controlled upper-trapezius contribution.",
+        "sourceIds": [
+          "ekstrom-2003",
+          "cools-2007",
+          "escamilla-2009"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Serratus anterior",
+        "evidenceShort": "Scapular upward-rotation evidence supports assistance.",
+        "evidence": "The Y raise requires scapular upward rotation and posterior tilt as the arms elevate; shoulder rehabilitation evidence identifies serratus anterior as a key scapular-control muscle during shoulder elevation tasks.",
+        "sourceIds": [
+          "cools-2007",
+          "kibler-2008",
+          "escamilla-2009"
+        ]
+      },
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Rear-shoulder EMG supports an assisting role.",
+        "evidence": "Rear-deltoid EMG from close prone and incline shoulder exercises supports posterior deltoid involvement during chest-supported arm elevation and horizontal-abduction-biased shoulder work, but the intended Y-raise target remains scapular upward-rotation control.",
+        "sourceIds": [
+          "sweeney-2014",
+          "escamilla-2009"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Shoulder-elevation control requires cuff stabilization.",
+        "evidence": "This support role is a biomechanics inference from shoulder rehabilitation review evidence: the rotator cuff stabilizes the humeral head during arm elevation while the scapular muscles control upward rotation.",
+        "sourceIds": [
+          "escamilla-2009",
+          "dark-2007"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Incline dumbbell Y raise: middle/lower trapezius primary; serratus anterior and posterior deltoid secondary; rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Exact incline-bench dumbbell Y-raise evidence is limited; most evidence uses prone floor or rehabilitation Y/full-can variants.",
+    "summary": "The incline dumbbell Y raise is classified as a chest-supported scapular-control accessory. The primary visible target is the project's mapped middle/lower trapezius aggregate because the evidence most strongly supports lower-trapezius activation during prone Y-family arm raises. Serratus anterior is included as an assisting scapular upward-rotation muscle, posterior deltoid as a rear-shoulder assistant, and rotator cuff as support for glenohumeral control.",
+    "clinicalInterpretation": "This movement should usually be loaded lightly enough to keep the arm path, scapular upward rotation, and neck position clean. EMG evidence supports the intended muscle emphasis, but it does not prove injury prevention or long-term adaptation by itself.",
+    "limitations": "The available anatomy map does not expose a standalone lower trapezius mesh, so the visible role uses the existing Trapezius (middle and lower fibers) entry. Upper trapezius is intentionally not listed as a separate visible role because the exercise is typically programmed to minimize shrugging, and no standalone upper-trapezius anatomy entry exists. Standing Y raises, cable Y raises, prone floor Y raises, and heavy rear-delt raises should be separate variants if added later.",
+    "studies": [
+      {
+        "id": "ekstrom-2003",
+        "type": "Trapezius and serratus anterior exercise EMG",
+        "shortCitation": "Ekstrom et al., JOSPT, 2003",
+        "finding": "Prone overhead arm raise in line with the lower trapezius produced the maximum lower-trapezius EMG activity among tested trapezius exercises.",
+        "citation": "Ekstrom RA, Donatelli RA, Soderberg GL. Surface electromyographic analysis of exercises for the trapezius and serratus anterior muscles. Journal of Orthopaedic and Sports Physical Therapy. 2003;33(5):247-258. doi:10.2519/jospt.2003.33.5.247.",
+        "doi": "10.2519/jospt.2003.33.5.247",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12774999/",
+        "relevance": "Most direct Y-family evidence for the lower-trapezius emphasis of the movement.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "cools-2007",
+        "type": "Scapular muscle-balance EMG",
+        "shortCitation": "Cools et al., Am J Sports Med, 2007",
+        "finding": "Several scapular exercises produced favorable upper-to-lower and upper-to-middle trapezius ratios, supporting selective scapular muscle balance training.",
+        "citation": "Cools AM, Dewitte V, Lanszweert F, Notebaert D, Roets A, Soetens B, Cagnie B, Witvrouw EE. Rehabilitation of scapular muscle balance: which exercises to prescribe? American Journal of Sports Medicine. 2007;35(10):1744-1751. doi:10.1177/0363546507303560.",
+        "doi": "10.1177/0363546507303560",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17606671/",
+        "relevance": "Supports the scapular-balance rationale and secondary serratus contribution for light Y-raise programming.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "joint resilience score",
+          "control score"
+        ]
+      },
+      {
+        "id": "kibler-2008",
+        "type": "Scapular-control exercise EMG",
+        "shortCitation": "Kibler et al., Am J Sports Med, 2008",
+        "finding": "Low row, inferior glide, lawnmower, and robbery exercises activated serratus anterior and lower trapezius in clinically meaningful scapular-control patterns.",
+        "citation": "Kibler WB, Sciascia AD, Uhl TL, Tambay N, Cunningham T. Electromyographic analysis of specific exercises for scapular control in early phases of shoulder rehabilitation. American Journal of Sports Medicine. 2008;36(9):1789-1798. doi:10.1177/0363546508316281.",
+        "doi": "10.1177/0363546508316281",
+        "url": "https://journals.sagepub.com/doi/abs/10.1177/0363546508316281",
+        "relevance": "Close scapular-control evidence for serratus anterior and lower-trapezius coordination.",
+        "usedFor": [
+          "secondary muscle role",
+          "joint resilience score",
+          "control score"
+        ]
+      },
+      {
+        "id": "escamilla-2009",
+        "type": "Shoulder rehabilitation exercise review",
+        "shortCitation": "Escamilla et al., Sports Med, 2009",
+        "finding": "Review describes trapezius, serratus anterior, and rotator cuff roles in shoulder elevation and rehabilitation exercises.",
+        "citation": "Escamilla RF, Yamashiro K, Paulos L, Andrews JR. Shoulder muscle activity and function in common shoulder rehabilitation exercises. Sports Medicine. 2009;39(8):663-685. doi:10.2165/00007256-200939080-00004.",
+        "doi": "10.2165/00007256-200939080-00004",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19769415/",
+        "relevance": "Review-level support for scapular upward-rotation and rotator-cuff stabilization interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "sweeney-2014",
+        "type": "Deltoid exercise EMG thesis",
+        "shortCitation": "Sweeney, University of Wisconsin-La Crosse thesis, 2014",
+        "finding": "Seated rear lateral raise and 45-degree incline row were the strongest tested exercises for posterior-deltoid activation.",
+        "citation": "Sweeney SP. Electromyographic analysis of the deltoid muscle during various shoulder exercises. Master's thesis, University of Wisconsin-La Crosse. 2014.",
+        "doi": null,
+        "url": "https://minds.wisc.edu/items/ce6971e9-b01f-4c23-818c-4b432be66b11",
+        "relevance": "Close evidence for posterior-deltoid assistance in chest-supported rear-shoulder lifting patterns.",
+        "usedFor": [
+          "secondary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "dark-2007",
+        "type": "Rotator cuff pulley external-rotation EMG",
+        "shortCitation": "Dark et al., Phys Ther, 2007",
+        "finding": "Shoulder rotation resistance increased recruitment of rotator-cuff and other shoulder rotation torque-generating muscles.",
+        "citation": "Dark A, Ginn KA, Halaki M. Shoulder muscle recruitment patterns during commonly used rotator cuff exercises: an electromyographic study. Physical Therapy. 2007;87(8):1039-1046. doi:10.2522/ptj.20060068.",
+        "doi": "10.2522/ptj.20060068",
+        "url": "https://academic.oup.com/ptj/article-abstract/87/8/1039/2742269",
+        "relevance": "Supports the rotator-cuff stabilization interpretation during resisted shoulder elevation and rotation control.",
+        "usedFor": [
+          "support muscle role",
+          "joint resilience score"
+        ]
+      }
+    ]
+  }
+}

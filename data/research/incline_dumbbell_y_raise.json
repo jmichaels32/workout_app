@@ -1,0 +1,79 @@
+{
+  "movementId": "incline_dumbbell_y_raise",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-5",
+  "evidenceStudyIds": [
+    "ekstrom-2003",
+    "cools-2007",
+    "kibler-2008",
+    "escamilla-2009",
+    "sweeney-2014",
+    "dark-2007"
+  ],
+  "searchedQueries": [
+    "\"incline dumbbell Y raise\" lower trapezius EMG",
+    "\"prone Y raise\" lower trapezius electromyography",
+    "\"Y raise\" \"lower trapezius\" electromyography",
+    "\"Surface electromyographic analysis of exercises for the trapezius and serratus anterior muscles\"",
+    "\"Rehabilitation of scapular muscle balance\" \"which exercises to prescribe\"",
+    "\"Electromyographic analysis of specific exercises for scapular control\""
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed per-movement file contract and generated bundle rule."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Confirmed classification rules, evidence priority, and anatomy mesh gate."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Verified local meshes for Trapezius (middle and lower fibers), serratus anterior, posterior deltoid, and rotator cuff."
+    },
+    {
+      "path": "data/movements/standing_barbell_overhead_press.json",
+      "notes": "Reviewed local shoulder-girdle evidence style and rotator cuff inference wording."
+    },
+    {
+      "path": "data/movements/pull_up.json",
+      "notes": "Reviewed existing use of Trapezius (middle and lower fibers) as a visible anatomy label."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12774999/",
+      "notes": "Primary Y-family trapezius EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17606671/",
+      "notes": "Scapular muscle balance EMG source."
+    },
+    {
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0363546508316281",
+      "notes": "Scapular control EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19769415/",
+      "notes": "Shoulder rehabilitation review used for rotator cuff and scapular interpretation."
+    },
+    {
+      "url": "https://minds.wisc.edu/items/ce6971e9-b01f-4c23-818c-4b432be66b11",
+      "notes": "Posterior-deltoid EMG source for close chest-supported rear-shoulder patterns."
+    },
+    {
+      "url": "https://academic.oup.com/ptj/article-abstract/87/8/1039/2742269",
+      "notes": "Rotator cuff recruitment during pulley rotation exercises."
+    }
+  ],
+  "excludedSources": [
+    {
+      "source": "Healthline, YouTube, Instagram, and general lower-trap exercise guides",
+      "reason": "Excluded because peer-reviewed EMG and review sources were available."
+    },
+    {
+      "source": "Exact incline dumbbell Y-raise consumer exercise pages",
+      "reason": "Reviewed only for variant naming; not used for evidence because they were not primary research."
+    }
+  ],
+  "notes": "Variant assumption is a chest-supported incline-bench dumbbell Y raise using light dumbbells and a thumbs-up or neutral hand position. The strongest direct evidence uses prone floor or rehabilitation Y/full-can patterns rather than an incline bench, so the entry notes this limitation. A standalone lower trapezius label was not used because local anatomy exposes only Trapezius (middle and lower fibers); validation confirms that visible label resolves."
+}

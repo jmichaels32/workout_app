@@ -1,0 +1,65 @@
+{
+  "movementId": "face_pull",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-5",
+  "evidenceStudyIds": [
+    "vasconcelos-2023",
+    "sweeney-2014",
+    "ekstrom-2003",
+    "dark-2007"
+  ],
+  "searchedQueries": [
+    "\"face pull\" EMG posterior deltoid trapezius rotator cuff",
+    "\"face pull\" electromyographic analysis shoulder exercise",
+    "\"standing cable face pull\" electromyography",
+    "\"shoulder muscle recruitment patterns\" rotator cuff exercises DOI",
+    "\"posterior deltoid\" \"45 degree incline row\" EMG",
+    "\"Surface electromyographic analysis of exercises for the trapezius and serratus anterior muscles\""
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement and research file ownership plus generated bundle rule."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Confirmed evidence priority, visible-muscle evidence, rating, and anatomy requirements."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Verified local meshes for posterior deltoid, middle trapezius, rhomboids, and rotator cuff."
+    },
+    {
+      "path": "data/movements/seated_cable_row.json",
+      "notes": "Reviewed existing row-family evidence and wording conventions."
+    },
+    {
+      "url": "https://journal.iusca.org/index.php/Journal/article/download/190/271/1652",
+      "notes": "High-abduction seated cable row EMG; used as closest cable-pull evidence."
+    },
+    {
+      "url": "https://minds.wisc.edu/items/ce6971e9-b01f-4c23-818c-4b432be66b11",
+      "notes": "Posterior-deltoid EMG thesis for close rear-delt and incline-row patterns."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12774999/",
+      "notes": "Trapezius and serratus exercise EMG; used for middle-trapezius and shoulder horizontal-extension context."
+    },
+    {
+      "url": "https://academic.oup.com/ptj/article-abstract/87/8/1039/2742269",
+      "notes": "Rotator cuff recruitment during pulley rotation exercises."
+    }
+  ],
+  "excludedSources": [
+    {
+      "source": "YouTube, Instagram, Facebook, Tom's Guide, Muscle & Fitness, and general exercise-guide face-pull results",
+      "reason": "Excluded under the protocol preference for primary studies, peer-reviewed sources, DOI pages, PubMed, and publisher pages."
+    },
+    {
+      "source": "Exact face-pull social posts citing unspecified EMG claims",
+      "reason": "Reviewed search snippets only; excluded because no peer-reviewed exact face-pull EMG paper or stable primary report was located."
+    }
+  ],
+  "notes": "Variant assumption is a standing cable rope face pull pulled to eye or forehead height with the hands separating beside the face and a mild external-rotation finish. No peer-reviewed exact face-pull EMG study was found, so classification uses close high-abduction cable row, posterior-deltoid rear-shoulder exercise, trapezius horizontal-abduction, and pulley external-rotation evidence. Infraspinatus, teres minor, and upper trapezius are not listed as individual visible muscles because local anatomy exposes a rotator cuff aggregate and trapezius aggregates rather than those exact labels."
+}

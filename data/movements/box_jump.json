@@ -1,0 +1,239 @@
+{
+  "id": "box_jump",
+  "name": "Box Jump",
+  "aliases": [
+    "jump_to_box",
+    "plyometric_box_jump",
+    "standing_box_jump"
+  ],
+  "family": "plyometric_jump",
+  "equipment": "bodyweight",
+  "variantType": "standing_box_jump",
+  "variant": "Standing two-leg box jump using a countermovement takeoff and controlled landing on a stable box.",
+  "description": "Stand facing a stable box with feet about hip to shoulder width, dip into a quick countermovement, swing the arms, and jump up by extending the hips, knees, and ankles together. Land quietly on the box with bent knees and hips, stand under control if needed, then step down before the next rep.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Calves",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Squat",
+      "group": "pattern"
+    },
+    {
+      "label": "Hip extension",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 18,
+      "rationale": "Plyometric contacts are high intent but too brief and hard to progressively tension for meaningful hypertrophy compared with resistance exercises."
+    },
+    "strength": {
+      "score": 30,
+      "rationale": "Can support rate-of-force expression, but unloaded box jumps do not provide high-force progressive overload for maximal strength."
+    },
+    "joint_resilience": {
+      "score": 48,
+      "rationale": "Can build landing and tendon tolerance when dosed well, but poor box choice, fatigue, or uncontrolled landings quickly raise joint stress."
+    },
+    "athletic_transfer": {
+      "score": 82,
+      "rationale": "Excellent transfer signal for lower-body power, coordinated triple extension, landing control, and explosive intent."
+    },
+    "control": {
+      "score": 78,
+      "rationale": "Requires timing, arm swing coordination, takeoff stiffness, landing mechanics, and repeatable foot placement."
+    },
+    "fatigue_efficiency": {
+      "score": 64,
+      "rationale": "Low-rep jumps provide useful power practice with modest metabolic cost, but quality drops quickly when fatigue accumulates."
+    },
+    "setup": {
+      "score": 74,
+      "rationale": "Needs a stable box and clear landing area, but no loading changes or rack setup."
+    },
+    "ease": {
+      "score": 42,
+      "rationale": "Simple to understand but not easy for all users because jump confidence, landing depth, shin clearance, and step-down control matter."
+    },
+    "progression": {
+      "score": 28,
+      "rationale": "Progression by box height is noisy because higher boxes can reward hip-flexion clearance instead of more propulsive output."
+    },
+    "support": {
+      "score": 6,
+      "rationale": "The movement is unsupported in takeoff and landing, aside from the box as a landing target."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Plyometric EMG and jump biomechanics support high knee-extensor demand.",
+        "evidence": "Box-jump and jump-family studies measure quadriceps activity during plyometric jumping, and countermovement-jump biomechanics support a major knee-extension role in takeoff and landing control.",
+        "sourceIds": [
+          "ebben-2008",
+          "bobbert-1986",
+          "jankaew-2023"
+        ]
+      },
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Jump takeoff requires forceful hip extension, supported by vertical-jump EMG.",
+        "evidence": "Exact box-jump performance studies emphasize propulsive output, while vertical-jump EMG and biomechanics support gluteus maximus as a major hip-extension contributor during takeoff and landing control.",
+        "sourceIds": [
+          "bobbert-1986",
+          "dos-santos-2024",
+          "jankaew-2023"
+        ]
+      },
+      {
+        "name": "Gastrocnemius",
+        "evidenceShort": "Direct plyometric EMG measured gastrocnemius during box-jump style tasks.",
+        "evidence": "Plyometric intensity research measured gastrocnemius along with quadriceps and hamstrings across jump exercises, including box jumps. Ankle plantar-flexion demand is also consistent with countermovement-jump biomechanics.",
+        "sourceIds": [
+          "ebben-2008",
+          "bobbert-1986"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Measured jump contributor with hip-extension and landing-control demand.",
+        "evidence": "Plyometric and vertical-jump EMG studies measure hamstrings during jump takeoff or landing tasks. They are classified as secondary because quadriceps, gluteus maximus, and gastrocnemius better represent the primary propulsive profile.",
+        "sourceIds": [
+          "ebben-2008",
+          "jankaew-2023"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Box jump: quadriceps, gluteus maximus, and gastrocnemius primary; hamstrings secondary; no visible support muscles added.",
+    "clinicalShort": "EMG and force-plate data estimate acute jump demand, not hypertrophy or a guarantee of safe landing mechanics.",
+    "limitsShort": "Box height, approach stance, arm swing, depth of countermovement, intent, landing depth, fatigue, and step-down method all change the training signal.",
+    "summary": "The box jump is classified as an unloaded bilateral plyometric jump. Exact box-jump EMG and performance studies support a lower-body power profile, and jump-family biomechanics support the visible quadriceps, gluteus maximus, gastrocnemius, and hamstring map. Progression is scored low because box height does not cleanly equal increased propulsive output.",
+    "clinicalInterpretation": "Box-jump value comes primarily from explosive intent, takeoff coordination, and landing quality rather than from high external load. Ratings should be interpreted as a power and motor-control tool, not a hypertrophy or maximal-strength anchor.",
+    "limitations": "The evidence base combines exact box-jump studies with countermovement-jump and broader plyometric-jump evidence. The entry assumes a two-leg standing box jump with a controlled landing on the box and step-down return, not depth jumps, drop jumps, repeated hurdle hops, single-leg jumps, or weighted jumps.",
+    "studies": [
+      {
+        "id": "ebben-2008",
+        "type": "Plyometric exercise EMG study",
+        "shortCitation": "Ebben et al., JSCR, 2008",
+        "finding": "Plyometric intensity was evaluated using EMG of the quadriceps, hamstrings, and gastrocnemius across multiple jump exercises including box jumps.",
+        "citation": "Ebben WP, Simenz C, Jensen RL. Evaluation of Plyometric Intensity Using Electromyography. Journal of Strength and Conditioning Research. 2008;22(3):861-868. doi:10.1519/JSC.0b013e31816a834b.",
+        "doi": "10.1519/JSC.0b013e31816a834b",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18438229/",
+        "relevance": "Direct plyometric EMG source that includes box jumps and measures the quadriceps, hamstrings, and gastrocnemius groups available in the local anatomy map.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "athletic transfer score",
+          "control score"
+        ]
+      },
+      {
+        "id": "dos-santos-2024",
+        "type": "Box-height performance study",
+        "shortCitation": "Dos Santos et al., IJES, 2024",
+        "finding": "Men and women performed maximal-effort box jumps at different relative box heights; box height generally did not change propulsive performance measures, supporting caution when using height as progression.",
+        "citation": "Dos Santos ML, Shields J, Berton R, Dinyer-McNeely T, Trevino M, Anderson O, Dawes JJ. Does Box Height Matter? A Comparative Analysis of Box Height on Box Jump Performance in Men and Women. International Journal of Exercise Science. 2024;17(1):720-729. doi:10.70252/MTLS9089.",
+        "doi": "10.70252/MTLS9089",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11166134/",
+        "relevance": "Exact box-jump source for box-height progression limits and power-performance interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "progression score",
+          "athletic transfer score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "koefoed-2022",
+        "type": "Box-height performance study",
+        "shortCitation": "Koefoed et al., JSCR, 2022",
+        "finding": "Elite female handball players showed similar key performance measures across low and high box jump heights, reinforcing that box height is not a pure overload measure.",
+        "citation": "Koefoed N, Dam S, Kersting UG. Effect of Box Height on Box Jump Performance in Elite Female Handball Players. Journal of Strength and Conditioning Research. 2022;36(2):508-512. doi:10.1519/JSC.0000000000003481.",
+        "doi": "10.1519/JSC.0000000000003481",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32187147/",
+        "relevance": "Exact box-jump performance source for progression and setup scoring in trained team-sport athletes.",
+        "usedFor": [
+          "progression score",
+          "athletic transfer score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "bobbert-1986",
+        "type": "Countermovement and drop-jump biomechanics study",
+        "shortCitation": "Bobbert et al., Eur J Appl Physiol, 1986",
+        "finding": "Biomechanical analysis of countermovement and drop jumps supports coordinated lower-extremity extension and landing mechanics as the main jumping demand.",
+        "citation": "Bobbert MF, Mackay MT, Schinkelshoek D, Huijing PA, van Ingen Schenau GJ. Biomechanical analysis of drop and countermovement jumps. European Journal of Applied Physiology and Occupational Physiology. 1986;54(6):566-573. doi:10.1007/BF00943342.",
+        "doi": "10.1007/BF00943342",
+        "url": "https://link.springer.com/article/10.1007/BF00943342",
+        "relevance": "Jump-biomechanics support for lower-extremity extension and calf contribution when exact box-jump EMG is limited.",
+        "usedFor": [
+          "primary muscle role",
+          "joint resilience score",
+          "control score"
+        ]
+      },
+      {
+        "id": "jankaew-2023",
+        "type": "Vertical-jump EMG and landing-force study",
+        "shortCitation": "Jankaew et al., Sports Biomech, 2023",
+        "finding": "Double-leg vertical jump tasks measured lower-extremity muscle recruitment including gluteus maximus, quadriceps, and hamstrings across takeoff, contact, and landing phases.",
+        "citation": "Jankaew A, Jan YK, Hwang IS, Kuo LC, Lin CF. Hamstring Muscle Stiffness Affects Lower Extremity Muscle Recruitment and Landing Forces during Double-Legs Vertical Jump. Sports Biomechanics. 2025;24(4):1096-1114. doi:10.1080/14763141.2023.2219670.",
+        "doi": "10.1080/14763141.2023.2219670",
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/14763141.2023.2219670",
+        "relevance": "Close jump-family EMG source supporting gluteus maximus, quadriceps, and hamstring roles during takeoff and landing.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "joint resilience score",
+          "control score"
+        ]
+      },
+      {
+        "id": "ramirez-campillo-2021",
+        "type": "Plyometric jump training EMG systematic review",
+        "shortCitation": "Ramirez-Campillo et al., JSCR, 2021",
+        "finding": "The systematic review found plyometric jump training can improve muscle activation in strength and jumping tasks, while results vary across methods and outcomes.",
+        "citation": "Ramirez-Campillo R, Moran J, Chaabene H, Granacher U, Behm DG, Garcia-Hermoso A, Izquierdo M. Effects of Plyometric Jump Training on Electromyographic Activity and Its Relationship to Strength and Jump Performance in Healthy Trained and Untrained Populations: A Systematic Review of Randomized Controlled Trials. Journal of Strength and Conditioning Research. 2021;35(7):2053-2065. doi:10.1519/JSC.0000000000004056.",
+        "doi": "10.1519/JSC.0000000000004056",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34027912/",
+        "relevance": "Synthesis context for plyometric training adaptation and interpretation limits.",
+        "usedFor": [
+          "athletic transfer score",
+          "fatigue efficiency score",
+          "clinical interpretation"
+        ]
+      }
+    ]
+  }
+}

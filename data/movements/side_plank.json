@@ -1,0 +1,207 @@
+{
+  "id": "side_plank",
+  "name": "Side Plank",
+  "aliases": [
+    "side_bridge",
+    "side_bridge_hold",
+    "lateral_plank",
+    "forearm_side_plank"
+  ],
+  "family": "plank",
+  "equipment": "bodyweight",
+  "variantType": "side_forearm",
+  "variant": "Standard forearm side plank from the feet with the body held in a straight lateral line.",
+  "description": "Lie on one side with the elbow under the shoulder, stack or stagger the feet, lift the hips into a straight line, brace the trunk without rotating forward or back, then hold before lowering under control.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Obliques",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Anti-lateral flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 30,
+      "rationale": "Can provide meaningful oblique and gluteus medius tension, but isometric bodyweight loading limits hypertrophy progression."
+    },
+    "strength": {
+      "score": 34,
+      "rationale": "Good lateral trunk and hip endurance-strength signal, but it is not a heavy progressive strength movement."
+    },
+    "joint_resilience": {
+      "score": 46,
+      "rationale": "Useful for shoulder support tolerance, lateral trunk endurance, and pelvic control when scaled well."
+    },
+    "athletic_transfer": {
+      "score": 38,
+      "rationale": "Lateral trunk and hip control can transfer to running and cutting mechanics, but the base version is static and floor-supported."
+    },
+    "control": {
+      "score": 78,
+      "rationale": "High control demand from resisting lateral flexion, pelvic drop, trunk rotation, and shoulder collapse."
+    },
+    "fatigue_efficiency": {
+      "score": 64,
+      "rationale": "Focused trunk and hip stimulus with low systemic fatigue, though shoulder pressure can become the limiter."
+    },
+    "setup": {
+      "score": 96,
+      "rationale": "Requires only floor space and no equipment."
+    },
+    "ease": {
+      "score": 48,
+      "rationale": "Easy to understand, but harder to repeat cleanly because the shoulder, pelvis, and trunk can compensate in several directions."
+    },
+    "progression": {
+      "score": 20,
+      "rationale": "Progression is mainly by time, lever length, leg lift, or load placement, so it is less precise than cable or machine work."
+    },
+    "support": {
+      "score": 12,
+      "rationale": "Very little external support beyond the elbow and foot contacts; the trunk and hip create most of the stability."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "External oblique",
+        "evidenceShort": "Side-bridge EMG strongly supports external-oblique loading.",
+        "evidence": "Side-bridge and lateral-plank EMG studies report high external oblique activation, with side-bridge evidence meeting strengthening thresholds in healthy adults.",
+        "sourceIds": [
+          "youdas-2014-sidebridge",
+          "ekstrom-2007",
+          "kinney-2020",
+          "youdas-2008"
+        ]
+      },
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Lateral-plank EMG supports high internal-oblique activation.",
+        "evidence": "Lateral-plank and side-bridge EMG studies measured internal oblique activity and support it as a primary lateral-trunk target.",
+        "sourceIds": [
+          "kinney-2020",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Gluteus medius",
+        "evidenceShort": "Side-bridge EMG shows high gluteus medius activation.",
+        "evidence": "Side-bridge EMG studies measured gluteus medius activation above strengthening thresholds on the weightbearing side, supporting a meaningful pelvic-control role.",
+        "sourceIds": [
+          "youdas-2014-sidebridge",
+          "ekstrom-2007"
+        ]
+      },
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Side-bridge studies measure rectus activity as a trunk stabilizer.",
+        "evidence": "Side-bridge EMG measured rectus abdominis activity, but it is secondary because the lateral plank primarily challenges the obliques and lateral hip rather than sagittal trunk flexion.",
+        "sourceIds": [
+          "youdas-2014-sidebridge",
+          "youdas-2008"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Side-bridge studies measured spinal extensor stabilization.",
+        "evidence": "Side-bridge EMG measured longissimus thoracis activity along with other spinal stabilizers; the longissimus component supports erector spinae as a visible spinal-extensor stabilizer role.",
+        "sourceIds": [
+          "youdas-2014-sidebridge",
+          "ekstrom-2007"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Side plank: external and internal oblique primary; gluteus medius and rectus abdominis secondary; erector spinae support.",
+    "clinicalShort": "EMG estimates acute excitation; it does not prove hypertrophy, adaptation, pain response, or injury prevention.",
+    "limitsShort": "Knee-supported regressions, foot position, top-leg lift, rotation, shoulder symptoms, and hold duration change the stimulus.",
+    "summary": "The side plank is classified as a lateral trunk anti-flexion hold. Direct side-bridge and lateral-plank EMG supports high oblique demand and meaningful gluteus medius contribution on the support side.",
+    "clinicalInterpretation": "It is best used for lateral trunk endurance, pelvic control, and shoulder-supported bracing rather than heavy abdominal hypertrophy.",
+    "limitations": "Quadratus lumborum is biomechanically relevant to side-bridge tasks but was not added as a visible role because it has no local anatomy mesh mapping in this repo. The side plank from knees, star plank, Copenhagen plank, and rotational side plank should be separate variants.",
+    "studies": [
+      {
+        "id": "youdas-2014-sidebridge",
+        "type": "Side-bridge trunk and hip EMG",
+        "shortCitation": "Youdas et al., Sports Health, 2014",
+        "finding": "Side-bridge variations produced greater ipsilateral weightbearing-side recruitment; gluteus medius and external oblique met strengthening-threshold criteria.",
+        "citation": "Youdas JW, Boor MMP, Darfler AL, Koenig MK, Mills KM, Hollman JH. Surface electromyographic analysis of core trunk and hip muscles during selected rehabilitation exercises in the side-bridge to neutral spine position. Sports Health. 2014;6(5):416-421. doi:10.1177/1941738114539266.",
+        "doi": "10.1177/1941738114539266",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25177418/",
+        "relevance": "Direct side-bridge source for external oblique, gluteus medius, rectus abdominis, and spinal-extensor support roles.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "ratings"
+        ]
+      },
+      {
+        "id": "ekstrom-2007",
+        "type": "Core rehabilitation exercise EMG",
+        "shortCitation": "Ekstrom et al., JOSPT, 2007",
+        "finding": "Side-bridge exercise could be used for strengthening gluteus medius and external oblique muscles.",
+        "citation": "Ekstrom RA, Donatelli RA, Carp KC. Electromyographic analysis of core trunk, hip, and thigh muscles during 9 rehabilitation exercises. Journal of Orthopaedic and Sports Physical Therapy. 2007;37(12):754-762. doi:10.2519/jospt.2007.2471.",
+        "doi": "10.2519/jospt.2007.2471",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18560185/",
+        "relevance": "Direct side-bridge comparison source for external oblique, gluteus medius, and stabilizer interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "joint resilience score"
+        ]
+      },
+      {
+        "id": "kinney-2020",
+        "type": "Lateral trunk isometric EMG",
+        "shortCitation": "Kinney et al., J Sport Rehabil, 2020",
+        "finding": "The lateral plank activated internal oblique at 107% MVC and external oblique at 72% MVC in a comparison of lateral-trunk tasks.",
+        "citation": "Kinney AL, Giel M, Harre B, Heffner K, McCullough T, Savino M, Scott A, Barrios JA. Surface electromyography of the internal and external oblique muscles during isometric tasks targeting the lateral trunk. Journal of Sport Rehabilitation. 2020;30(2):255-260. doi:10.1123/jsr.2018-0442.",
+        "doi": "10.1123/jsr.2018-0442",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32369764/",
+        "relevance": "Direct lateral-plank oblique EMG source for internal and external oblique primary roles.",
+        "usedFor": [
+          "primary muscle role",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "youdas-2008",
+        "type": "Side bridge and abdominal exercise EMG",
+        "shortCitation": "Youdas et al., JSCR, 2008",
+        "finding": "Compared side bridge with other abdominal exercises using rectus abdominis, external oblique, internal oblique, and rectus femoris EMG.",
+        "citation": "Youdas JW, Guck BR, Hebrink RC, Rugotzke JD, Madson TJ, Hollman JH. An electromyographic analysis of the Ab-Slide exercise, abdominal crunch, supine double leg thrust, and side bridge in healthy young adults: implications for rehabilitation professionals. Journal of Strength and Conditioning Research. 2008;22(6):1939-1946. doi:10.1519/JSC.0b013e31818745bf.",
+        "doi": "10.1519/JSC.0b013e31818745bf",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+        "relevance": "Direct side-bridge source including internal oblique and rectus abdominis activation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "fatigue efficiency score"
+        ]
+      }
+    ]
+  }
+}

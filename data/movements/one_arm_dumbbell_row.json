@@ -1,0 +1,321 @@
+{
+  "id": "one_arm_dumbbell_row",
+  "name": "One-Arm Dumbbell Row",
+  "aliases": [
+    "dumbbell_one_arm_row",
+    "single_arm_dumbbell_row",
+    "one_arm_db_row",
+    "single_arm_db_row",
+    "bench_supported_one_arm_row"
+  ],
+  "family": "row",
+  "equipment": "dumbbell",
+  "variantType": "unilateral_dumbbell_bench_supported",
+  "variant": "One-arm dumbbell row with the opposite hand or knee supported on a bench and the dumbbell pulled toward the hip or lower ribs.",
+  "description": "Set one hand or one hand and knee on a bench, brace the torso, and let the dumbbell hang under the shoulder without rounding the back. Pull the elbow back toward the hip or lower ribs, pause briefly without twisting the torso, then lower until the arm is long and the shoulder blade can reach forward under control.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Dumbbell",
+      "group": "equipment"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 76,
+      "rationale": "Strong unilateral row stimulus for lats, mid-back, posterior shoulder, and elbow flexors, with target quality depending on torso discipline and elbow path."
+    },
+    "strength": {
+      "score": 58,
+      "rationale": "Builds meaningful one-arm pulling strength, but dumbbell size, bench support, grip, and trunk rotation limit clean force expression compared with barbell anchors."
+    },
+    "joint_resilience": {
+      "score": 38,
+      "rationale": "Provides controlled shoulder, elbow, scapular, and trunk exposure, but it is not primarily a joint-resilience drill."
+    },
+    "athletic_transfer": {
+      "score": 42,
+      "rationale": "The unilateral load and anti-rotation demand add some transfer, while bench support and a narrow pull path keep it less sport-like than standing pulls."
+    },
+    "control": {
+      "score": 58,
+      "rationale": "Requires scapular timing, elbow-path control, grip, and trunk anti-rotation while one side works independently."
+    },
+    "fatigue_efficiency": {
+      "score": 62,
+      "rationale": "Good back stimulus with modest systemic cost, but grip, biceps, and torso compensation can limit target loading."
+    },
+    "setup": {
+      "score": 58,
+      "rationale": "Needs an open bench and a suitable dumbbell, with some friction from stance, bench height, and heavy dumbbell handling."
+    },
+    "ease": {
+      "score": 56,
+      "rationale": "Conceptually simple, but consistent torso position, scapular motion, and avoiding rotation take practice."
+    },
+    "progression": {
+      "score": 66,
+      "rationale": "Load and reps are easy to log, but dumbbell jumps can be coarse and performance can change with bench and body position."
+    },
+    "support": {
+      "score": 44,
+      "rationale": "The bench supports part of the body, but the working arm follows a free path and the trunk must resist rotation."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Row-family EMG supports lat emphasis with tucked-elbow paths.",
+        "evidence": "Direct row EMG shows greater latissimus dorsi excitation when shoulder abduction is closer to 0 degrees, and prone row data show latissimus dorsi as a measured prime mover. This one-arm dumbbell variant uses the same shoulder-extension and adduction pattern when the elbow tracks toward the hip.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fischer-2025",
+          "lehman-2004"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Teres major",
+        "evidenceShort": "Measured shoulder-extension assistant in rowing.",
+        "evidence": "Seated row EMG directly measured teres major alongside latissimus dorsi during heavy rowing, supporting a shoulder-extension assistant role that carries to the one-arm dumbbell row when the elbow is driven back.",
+        "sourceIds": [
+          "fujita-2019"
+        ]
+      },
+      {
+        "name": "Middle trapezius",
+        "evidenceShort": "Row EMG supports scapular-retraction contribution.",
+        "evidence": "Seated cable and prone row EMG studies measured middle or transverse trapezius activity during rowing, especially as the shoulder moves into greater abduction or the row reaches the retracted finish.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fischer-2025",
+          "lehman-2004"
+        ]
+      },
+      {
+        "name": "Rhomboids",
+        "evidenceShort": "Inferred from grouped middle trapezius/rhomboid EMG and scapular retraction.",
+        "evidence": "This visible role is marked as inference: Lehman et al. grouped middle trapezius and rhomboid EMG during row tasks, and the one-arm dumbbell row requires scapular retraction as the dumbbell is pulled toward the torso.",
+        "sourceIds": [
+          "lehman-2004",
+          "graham-2001"
+        ]
+      },
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Measured row contributor, especially with wider elbow paths.",
+        "evidence": "Posterior deltoid or rear deltoid activity is directly measured in seated row and prone row EMG studies; it assists shoulder extension and horizontal abduction but remains path-sensitive and secondary to the back target.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fischer-2025",
+          "fujita-2019"
+        ]
+      },
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Measured elbow-flexion assistant in rows.",
+        "evidence": "Row EMG studies repeatedly measure biceps brachii activity, and a unilateral dumbbell row training study found elbow-flexor hypertrophy lower than curls but still present after row training. This supports a secondary elbow-flexor role.",
+        "sourceIds": [
+          "vasconcelos-2023",
+          "fischer-2025",
+          "mannarino-2021"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Direction-specific shoulder stabilization during row.",
+        "evidence": "Rotator cuff recruitment during row tasks is direction-specific and consistent with dynamic glenohumeral stabilization rather than a primary hypertrophy role.",
+        "sourceIds": [
+          "wattanaprakornkul-2011"
+        ]
+      },
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Trunk-position support while rowing.",
+        "evidence": "Row studies measuring trunk musculature show erector spinae involvement during free-weight and unilateral row tasks. Bench support reduces but does not remove the need to hold a stable torso during heavy one-arm dumbbell rows.",
+        "sourceIds": [
+          "fenwick-2009",
+          "saeterbakken-2015"
+        ]
+      },
+      {
+        "name": "External oblique",
+        "evidenceShort": "Unilateral row evidence supports anti-rotation control.",
+        "evidence": "Saeterbakken et al. found unilateral row performance increased external oblique activity compared with bilateral conditions, supporting an anti-rotation support role in one-arm rowing.",
+        "sourceIds": [
+          "saeterbakken-2015"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "One-arm dumbbell row: latissimus dorsi primary; teres major, middle trapezius, rhomboids, posterior deltoid, and biceps brachii secondary; rotator cuff, erector spinae, and external oblique support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Bench setup, torso angle, elbow flare, grip, dumbbell size, range of motion, and trunk rotation can shift emphasis between lats, upper back, posterior shoulder, elbow flexors, and trunk support.",
+    "summary": "The one-arm dumbbell row is classified as a unilateral, partly bench-supported horizontal pulling exercise. Direct evidence for the exact bench-supported dumbbell variant is limited, so the classification combines row-family EMG, unilateral dumbbell row training evidence for elbow flexors, rowing trunk EMG, and a peer-reviewed one-arm dumbbell row technique source. A tucked-elbow path supports latissimus dorsi as the primary target; teres major, middle trapezius, rhomboids, posterior deltoid, and biceps brachii assist the pull; rotator cuff, erector spinae, and external oblique are included as support for shoulder and trunk control.",
+    "clinicalInterpretation": "Surface EMG and short-term hypertrophy studies should not be treated as direct proof of long-term adaptation for every row setup. Technique and load path matter because the same dumbbell can be pulled as a lat-biased row, a wider upper-back row, or a momentum-assisted torso rotation.",
+    "limitations": "The evidence base includes seated cable row, prone barbell row, unilateral row trunk studies, and a unilateral dumbbell row training study. These are close but not identical to every bench-supported one-arm dumbbell row. Brachialis and brachioradialis were not added because they are not available as local visible anatomy entries.",
+    "studies": [
+      {
+        "id": "vasconcelos-2023",
+        "type": "Seated cable row EMG and force study",
+        "shortCitation": "Vasconcelos et al., Int J Strength Cond, 2023",
+        "finding": "Rows closer to 0 degrees of shoulder abduction increased upper and lower latissimus activity, while greater abduction increased upper-back and posterior deltoid activity.",
+        "citation": "Vasconcelos CMWA, Lopes CR, Almeida VM, Neto WK, Soares EG. Effect Of Different Grip Position And Shoulder-Abduction Angle On Muscle Strength And Activation During The Seated Cable Row. International Journal of Strength and Conditioning. 2023;3(1):1-13. doi:10.47206/ijsc.v3i1.190.",
+        "doi": "10.47206/ijsc.v3i1.190",
+        "url": "https://journal.iusca.org/index.php/Journal/article/view/190",
+        "relevance": "Direct row-family EMG of latissimus dorsi, trapezius, posterior deltoid, and biceps brachii across shoulder-abduction and grip conditions.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "fischer-2025",
+        "type": "Prone row range-of-motion EMG study",
+        "shortCitation": "Fischer et al., J Electromyogr Kinesiol, 2025",
+        "finding": "Prone barbell row EMG measured latissimus dorsi, transverse trapezius, rear deltoid, and biceps brachii across full, upper-half, and lower-half ranges of motion.",
+        "citation": "Fischer J, Burger C, Seguel JM, Rodoplu C, Paternoster FK, Tilp M, Konrad A. Impact of different ranges of motion in the prone barbell row on muscle excitation. Journal of Electromyography and Kinesiology. 2025;83:103025. doi:10.1016/j.jelekin.2025.103025.",
+        "doi": "10.1016/j.jelekin.2025.103025",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40513198/",
+        "relevance": "Close row variant with chest support and direct EMG of the main visible back, posterior shoulder, and elbow-flexor contributors.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "progression score"
+        ]
+      },
+      {
+        "id": "lehman-2004",
+        "type": "Latissimus dorsi exercise EMG study",
+        "shortCitation": "Lehman et al., Dynamic Medicine, 2004",
+        "finding": "Seated row produced a high latissimus-to-biceps activation ratio and high grouped middle trapezius/rhomboid activity among traditional latissimus exercises.",
+        "citation": "Lehman GJ, Buchan DD, Lundy A, Myers N, Nalborczyk A. Variations in muscle activation levels during traditional latissimus dorsi weight training exercises: An experimental study. Dynamic Medicine. 2004;3:4. doi:10.1186/1476-5918-3-4.",
+        "doi": "10.1186/1476-5918-3-4",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15228624/",
+        "relevance": "Row-family EMG evidence for latissimus dorsi, biceps brachii, and grouped middle trapezius/rhomboid contribution.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "fujita-2019",
+        "type": "Seated row EMG and verbal-instruction study",
+        "shortCitation": "Fujita et al., Motriz, 2019",
+        "finding": "At 70% 1RM, seated row produced substantial latissimus dorsi, teres major, posterior deltoid, and biceps brachii activity.",
+        "citation": "Fujita RA, De Marchi PU, Silva NRS, Gomes MM. Verbal instruction does not change myoelectric activity during seated row exercise in trained and untrained men. Motriz: Revista de Educacao Fisica. 2019;25(4):e10190100. doi:10.1590/s1980-6574201900040100.",
+        "doi": "10.1590/s1980-6574201900040100",
+        "url": "https://pdfs.semanticscholar.org/2b55/6e63ba0d3019f5e2959b3ec165072f139c4b.pdf",
+        "relevance": "Direct seated row EMG including teres major and posterior deltoid, used as close row-family evidence.",
+        "usedFor": [
+          "secondary muscle role",
+          "ease score"
+        ]
+      },
+      {
+        "id": "mannarino-2021",
+        "type": "Unilateral dumbbell row training study",
+        "shortCitation": "Mannarino et al., JSCR, 2021",
+        "finding": "Eight weeks of unilateral dumbbell row training increased elbow-flexor thickness less than unilateral biceps curl training, supporting biceps as a secondary rather than primary target.",
+        "citation": "Mannarino P, Matta T, Lima J, Simao R, Freitas de Salles B. Single-Joint Exercise Results in Higher Hypertrophy of Elbow Flexors Than Multijoint Exercise. Journal of Strength and Conditioning Research. 2021;35(10):2677-2681. doi:10.1519/JSC.0000000000003234.",
+        "doi": "10.1519/JSC.0000000000003234",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31268995/",
+        "relevance": "Exact unilateral dumbbell row intervention evidence for elbow-flexor contribution and its secondary status.",
+        "usedFor": [
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wattanaprakornkul-2011",
+        "type": "Rotator cuff recruitment study",
+        "shortCitation": "Wattanaprakornkul et al., J Electromyogr Kinesiol, 2011",
+        "finding": "Rotator cuff recruitment during bench press and row was direction-specific, consistent with dynamic shoulder stabilization.",
+        "citation": "Wattanaprakornkul D, Halaki M, Cathers I, Ginn KA. Direction-specific recruitment of rotator cuff muscles during bench press and row. Journal of Electromyography and Kinesiology. 2011;21(6):1041-1049. doi:10.1016/j.jelekin.2011.09.002.",
+        "doi": "10.1016/j.jelekin.2011.09.002",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+        "relevance": "Directly supports rotator cuff involvement as shoulder stabilization during row tasks.",
+        "usedFor": [
+          "support muscle role",
+          "support score"
+        ]
+      },
+      {
+        "id": "fenwick-2009",
+        "type": "Rowing exercise trunk EMG and lumbar-load study",
+        "shortCitation": "Fenwick et al., JSCR, 2009",
+        "finding": "Different rowing exercises produced different trunk muscle activation, lumbar motion, load, and stiffness demands.",
+        "citation": "Fenwick CMJ, Brown SHM, McGill SM. Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness. Journal of Strength and Conditioning Research. 2009;23(2):350-358. doi:10.1519/JSC.0b013e3181942019.",
+        "doi": "10.1519/JSC.0b013e3181942019",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19197209/",
+        "relevance": "Row-family evidence for trunk support and fatigue costs during free-weight and unilateral row variants.",
+        "usedFor": [
+          "support muscle role",
+          "fatigue efficiency score",
+          "control score"
+        ]
+      },
+      {
+        "id": "saeterbakken-2015",
+        "type": "Bi- and unilateral row core EMG study",
+        "shortCitation": "Saeterbakken et al., Int J Sports Med, 2015",
+        "finding": "Unilateral row performance activated the external oblique more than bilateral performance, while free-weight rows produced greater erector spinae or multifidus activity than machine rows.",
+        "citation": "Saeterbakken A, Andersen V, Brudeseth A, Lund H, Fimland MS. The Effect of Performing Bi- and Unilateral Row Exercises on Core Muscle Activation. International Journal of Sports Medicine. 2015;36(11):900-905. doi:10.1055/s-0034-1398646.",
+        "doi": "10.1055/s-0034-1398646",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26134664/",
+        "relevance": "Directly compares unilateral and bilateral row core activation and supports anti-rotation support in one-arm rowing.",
+        "usedFor": [
+          "support muscle role",
+          "control score",
+          "athletic transfer score"
+        ]
+      },
+      {
+        "id": "graham-2001",
+        "type": "One-arm dumbbell row technique article",
+        "shortCitation": "Graham, Strength Cond J, 2001",
+        "finding": "Describes the dumbbell one-arm row technique and setup as a supported unilateral pulling exercise.",
+        "citation": "Graham JF. Dumbbell One-Arm Row. Strength and Conditioning Journal. 2001;23(2):59. doi:10.1519/00126548-200104000-00014.",
+        "doi": "10.1519/00126548-200104000-00014",
+        "url": "https://doi.org/10.1519/00126548-200104000-00014",
+        "relevance": "Peer-reviewed technique source for the exact named movement and setup assumptions.",
+        "usedFor": [
+          "description",
+          "secondary muscle role inference",
+          "setup score",
+          "ease score"
+        ]
+      }
+    ]
+  }
+}

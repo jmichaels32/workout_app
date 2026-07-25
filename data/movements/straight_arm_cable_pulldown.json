@@ -1,0 +1,193 @@
+{
+  "id": "straight_arm_cable_pulldown",
+  "name": "Straight-Arm Cable Pulldown",
+  "aliases": [
+    "straight_arm_pulldown",
+    "straight_arm_pull_down",
+    "cable_straight_arm_pulldown",
+    "cable_lat_pushdown",
+    "lat_pushdown"
+  ],
+  "family": "vertical_pull",
+  "equipment": "cable",
+  "variantType": "standing_straight_arm_cable",
+  "variant": "Standing straight-arm pulldown from a high cable, using a bar or rope and keeping the elbows nearly fixed while pulling toward the thighs.",
+  "description": "Stand facing a high cable with the arms reaching forward and up, ribs and pelvis controlled, and elbows slightly bent but nearly fixed. Pull the handle down in an arc toward the thighs by driving the upper arms down, pause without bending the elbows into a row or triceps pressdown, then return overhead under control.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 70,
+      "rationale": "Good lat-focused hypertrophy accessory with direct straight-arm pulldown EMG support, but total loading is lower than rows and pulldowns."
+    },
+    "strength": {
+      "score": 32,
+      "rationale": "Builds shoulder-extension strength in a narrow pattern, but the standing cable setup and limited load make it a weak global strength anchor."
+    },
+    "joint_resilience": {
+      "score": 28,
+      "rationale": "Can provide controlled overhead-to-extension shoulder exposure, but it is not a broad shoulder or spine resilience movement."
+    },
+    "athletic_transfer": {
+      "score": 20,
+      "rationale": "Some carryover to straight-arm pulling and swimming-like shoulder extension, but the cable path and low whole-body demand keep transfer modest."
+    },
+    "control": {
+      "score": 34,
+      "rationale": "Requires rib control, scapular timing, and keeping elbow angle consistent, but balance and coordination demands are moderate-low."
+    },
+    "fatigue_efficiency": {
+      "score": 76,
+      "rationale": "Efficient local lat stimulus with low systemic cost and less elbow-flexor fatigue than rows or pulldowns."
+    },
+    "setup": {
+      "score": 70,
+      "rationale": "Cable station setup is straightforward, with deductions for attachment choice, pulley height, stack increments, and station availability."
+    },
+    "ease": {
+      "score": 70,
+      "rationale": "Approachable accessory pattern, though users often turn it into a pressdown, row, or torso swing if the load is too heavy."
+    },
+    "progression": {
+      "score": 78,
+      "rationale": "Cable stack load and reps are easy to record, with minor deductions for pulley friction and attachment differences."
+    },
+    "support": {
+      "score": 58,
+      "rationale": "The cable path is stable and externally loaded, but the lifter stands unsupported and must control torso and shoulder position."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Direct straight-arm pulldown EMG supports primary lat role.",
+        "evidence": "A direct pullover versus straight-arm pulldown EMG study found the straight-arm pulldown produced the highest latissimus dorsi activity among the tested muscles and grip widths, supporting latissimus dorsi as the primary visible target.",
+        "sourceIds": [
+          "muyor-2022",
+          "park-2013"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Teres major",
+        "evidenceShort": "Shoulder-extension helper inferred from pulldown-family evidence.",
+        "evidence": "This role is marked as inference: teres major is a close latissimus dorsi synergist for shoulder extension and adduction, and direct lat-pulldown EMG measured teres major as a back-muscle contributor during related pulldown tasks.",
+        "sourceIds": [
+          "signorile-2002",
+          "snyder-2009"
+        ]
+      },
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Direct straight-arm pulldown EMG shows meaningful triceps activity.",
+        "evidence": "The straight-arm pulldown EMG study found triceps brachii activity was higher in the straight-arm pulldown than the barbell pullover conditions, consistent with the long head assisting shoulder extension and the triceps maintaining elbow position.",
+        "sourceIds": [
+          "muyor-2022"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Trapezius (middle and lower fibers)",
+        "evidenceShort": "Pulldown angle evidence supports scapular-control demand.",
+        "evidence": "Isometric pulldown evidence showed angle-dependent lower trapezius activity as shoulder elevation changed. During straight-arm pulldowns, the middle and lower trapezius are best classified as scapular support rather than the main lat target.",
+        "sourceIds": [
+          "park-2013"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Straight-arm cable pulldown: latissimus dorsi primary; teres major and triceps brachii secondary; middle/lower trapezius support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
+    "limitsShort": "Pulley height, handle width, torso lean, shoulder flexion range, elbow bend, load, and whether the user rows or pressdowns the cable can change the movement.",
+    "summary": "The straight-arm cable pulldown is classified as a standing cable shoulder-extension accessory. Direct EMG supports latissimus dorsi as the primary target and triceps brachii as a meaningful secondary contributor. Teres major is included as a secondary role by explicit inference from related pulldown evidence and shoulder-extension mechanics. Middle/lower trapezius are included as scapular support from pulldown-angle evidence.",
+    "clinicalInterpretation": "The strongest exact evidence compares straight-arm pulldowns with pullovers using relatively light loading and specific handle widths. EMG should not be treated as a direct measure of hypertrophy or long-term joint adaptation.",
+    "limitations": "Direct evidence did not isolate teres major or all scapular stabilizers during the exact straight-arm cable movement. Elbow flexion changes the exercise toward a cable pulldown or row and should be treated as a different variant.",
+    "studies": [
+      {
+        "id": "muyor-2022",
+        "type": "Straight-arm pulldown and pullover EMG study",
+        "shortCitation": "Muyor et al., Applied Sciences, 2022",
+        "finding": "Straight-arm pulldown at 100% and 150% biacromial widths produced higher latissimus dorsi and triceps brachii activity than barbell pullover conditions.",
+        "citation": "Muyor JM, Lopez-Minarro PA, Alacid F. Comparison of Electromyographic Activity during Barbell Pullover and Straight Arm Pulldown Exercises. Applied Sciences. 2022;12(21):11138. doi:10.3390/app122111138.",
+        "doi": "10.3390/app122111138",
+        "url": "https://www.mdpi.com/2076-3417/12/21/11138",
+        "relevance": "Direct straight-arm pulldown EMG measuring pectoralis major regions, latissimus dorsi, anterior deltoid, triceps brachii, and rectus abdominis in healthy active adults.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "park-2013",
+        "type": "Isometric pulldown latissimus and lower trapezius EMG",
+        "shortCitation": "Park and Yoo, J Electromyogr Kinesiol, 2013",
+        "finding": "Latissimus dorsi and inferior trapezius activity changed by shoulder angle during isometric pulldown exertions.",
+        "citation": "Park SY, Yoo WG. Selective activation of the latissimus dorsi and the inferior fibers of trapezius at various shoulder angles during isometric pull-down exertion. Journal of Electromyography and Kinesiology. 2013;23(6):1350-1355. doi:10.1016/j.jelekin.2013.08.006.",
+        "doi": "10.1016/j.jelekin.2013.08.006",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1050641113002137",
+        "relevance": "Pulldown-family EMG supporting latissimus dorsi targeting and lower trapezius support across shoulder angles.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "signorile-2002",
+        "type": "Lat pulldown hand-position EMG",
+        "shortCitation": "Signorile et al., JSCR, 2002",
+        "finding": "Lat pulldown hand positions changed latissimus dorsi, teres major, posterior deltoid, pectoralis major, and triceps activity.",
+        "citation": "Signorile JF, Zink AJ, Szwed SP. A comparative electromyographical investigation of muscle utilization patterns using various hand positions during the lat pull-down. Journal of Strength and Conditioning Research. 2002;16(4):539-546. doi:10.1519/1533-4287(2002)016<0539:ACEIOM>2.0.CO;2.",
+        "doi": "10.1519/1533-4287(2002)016<0539:ACEIOM>2.0.CO;2",
+        "url": "https://www.paulogentil.com/pdf/S60.pdf",
+        "relevance": "Related pulldown-family EMG source that directly measured teres major.",
+        "usedFor": [
+          "secondary muscle role inference",
+          "limitations"
+        ]
+      },
+      {
+        "id": "snyder-2009",
+        "type": "Lat pulldown instruction EMG",
+        "shortCitation": "Snyder and Leech, JSCR, 2009",
+        "finding": "Expert instruction could increase latissimus dorsi and teres major activity during the front wide-grip lat pulldown.",
+        "citation": "Snyder BJ, Leech JR. Voluntary increase in latissimus dorsi muscle activity during the lat pull-down following expert instruction. Journal of Strength and Conditioning Research. 2009;23(8):2204-2209. doi:10.1519/JSC.0b013e3181bb7213.",
+        "doi": "10.1519/JSC.0b013e3181bb7213",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19826307/",
+        "relevance": "Related pulldown-family evidence for teres major as a back-muscle contributor.",
+        "usedFor": [
+          "secondary muscle role inference",
+          "ease score"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id": "ez_bar_skull_crusher",
+  "name": "EZ-Bar Skull Crusher",
+  "aliases": [
+    "ez_bar_lying_triceps_extension",
+    "lying_ez_bar_triceps_extension",
+    "ez_bar_triceps_extension",
+    "lying_barbell_triceps_extension",
+    "skullcrusher"
+  ],
+  "family": "triceps_extension",
+  "equipment": "ez_bar",
+  "variantType": "supine_ez_bar",
+  "variant": "Supine EZ-bar lying triceps extension on a flat bench, lowering the bar toward the forehead or slightly behind the head and extending the elbows without turning it into a press.",
+  "description": "Lie on a flat bench holding an EZ bar with the arms angled slightly back from vertical and the elbows about shoulder width. Keep the upper arms mostly fixed, lower the bar under control toward the forehead or just behind the head by bending the elbows, then extend the elbows to return the bar without flaring the elbows or letting the shoulders take over the rep.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 76,
+      "rationale": "Strong triceps hypertrophy accessory because lying barbell triceps press and lying elbow-extension studies support targeted triceps growth and loading."
+    },
+    "strength": {
+      "score": 36,
+      "rationale": "Useful for elbow-extension strength and pressing assistance, but the single-joint setup is less suited to maximal force expression than compound presses."
+    },
+    "joint_resilience": {
+      "score": 22,
+      "rationale": "Can provide controlled elbow-extension loading, but loaded deep elbow flexion and the free bar make it only a narrow resilience tool."
+    },
+    "athletic_transfer": {
+      "score": 2,
+      "rationale": "Very little athletic-transfer signal because the lift is supine, isolated, and not coordinated with whole-body force transfer."
+    },
+    "control": {
+      "score": 28,
+      "rationale": "Requires moderate elbow path, wrist, shoulder angle, and free-bar control, but the bench removes most balance and trunk demand."
+    },
+    "fatigue_efficiency": {
+      "score": 74,
+      "rationale": "Good local triceps stimulus with low systemic fatigue, though elbow irritation and shoulder drift can limit efficient hard sets."
+    },
+    "setup": {
+      "score": 64,
+      "rationale": "Requires a bench, EZ bar, plates or fixed bar selection, and a safe start position, so setup is moderate."
+    },
+    "ease": {
+      "score": 66,
+      "rationale": "The movement is straightforward, but consistent elbow position, bar path, depth, and avoiding a press-out pattern take practice."
+    },
+    "progression": {
+      "score": 72,
+      "rationale": "Load and reps are trackable, with deductions for plate jumps, elbow tolerance, and technique changes as load increases."
+    },
+    "support": {
+      "score": 70,
+      "rationale": "The bench supports the body, but the bar path and elbow position remain free and require user control."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Lying barbell triceps-extension studies support triceps as the target.",
+        "evidence": "Longitudinal training studies using lying barbell triceps press or lying elbow extension measured triceps brachii size and strength adaptations. Exercise-order EMG work also used lying triceps extension as the single-joint triceps task, while elbow-extension biomechanics supports triceps brachii as the prime elbow extensor.",
+        "sourceIds": [
+          "brandao-2020",
+          "goto-2019",
+          "gentil-2007",
+          "kholinne-2018"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "EZ-bar skull crusher: triceps brachii primary; no visible secondary or support muscles added.",
+    "clinicalShort": "EMG and imaging studies estimate excitation and adaptation under specific protocols, not pain or injury risk.",
+    "limitsShort": "Bar type, grip angle, upper-arm angle, lowering target, bench angle, elbow range, load, tempo, and shoulder movement can shift emphasis and tolerance.",
+    "summary": "The EZ-bar skull crusher is classified as a supine free-bar elbow-extension isolation movement. Direct evidence is closest for lying barbell triceps press or lying elbow extension rather than the EZ-bar grip specifically, but those studies support triceps brachii as the primary visible target. No secondary or support muscles are shown because the movement is intended to isolate elbow extension and the reviewed studies did not justify additional mapped visible roles.",
+    "clinicalInterpretation": "Surface electromyography and longitudinal muscle-size measures help interpret triceps involvement under specific setups. They should not be treated as direct measures of mechanical tension, individual hypertrophy response, pain risk, or injury risk.",
+    "limitations": "Direct evidence usually uses straight barbell or dumbbell lying triceps extension labels rather than an EZ bar specifically. The EZ bar mainly changes wrist and grip comfort, so the muscle classification is inferred from lying barbell triceps extension and elbow-extension evidence. Lowering to the forehead, lowering behind the head, incline/decline benches, dumbbells, cables, and close-grip press hybrids should be separate variants if detailed distinctions are needed.",
+    "studies": [
+      {
+        "id": "brandao-2020",
+        "type": "Lying barbell triceps press hypertrophy and strength study",
+        "shortCitation": "Brandao et al., JSCR, 2020",
+        "finding": "A 10-week program including lying barbell triceps press measured triceps brachii cross-sectional area and lying triceps press 1RM adaptations.",
+        "citation": "Brandao L, de Salles Painelli V, Lasevicius T, Silva-Batista C, Brendon H, Schoenfeld BJ, Aihara AY, Cardoso FN, de Almeida Peres B, Teixeira EL. Varying the Order of Combinations of Single- and Multi-Joint Exercises Differentially Affects Resistance Training Adaptations. Journal of Strength and Conditioning Research. 2020;34(5):1254-1263. doi:10.1519/JSC.0000000000003550.",
+        "doi": "10.1519/JSC.0000000000003550",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32149887/",
+        "relevance": "Directly used the lying barbell triceps press, the closest loaded barbell skull-crusher variant, and measured triceps size and strength outcomes.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "strength score",
+          "progression score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "goto-2019",
+        "type": "Lying elbow extension partial versus full ROM training study",
+        "shortCitation": "Goto et al., JSCR, 2019",
+        "finding": "Young trained men performing lying elbow extension increased triceps brachii cross-sectional area and strength after both partial and full range-of-motion protocols.",
+        "citation": "Goto M, Maeda C, Hirayama T, Terada S, Nirengi S, Kurosawa Y, Nagano A, Hamaoka T. Partial Range of Motion Exercise Is Effective for Facilitating Muscle Hypertrophy and Function Through Sustained Intramuscular Hypoxia in Young Trained Men. Journal of Strength and Conditioning Research. 2019;33(5):1286-1294. doi:10.1519/JSC.0000000000002051.",
+        "doi": "10.1519/JSC.0000000000002051",
+        "url": "https://doi.org/10.1519/JSC.0000000000002051",
+        "relevance": "Direct lying elbow-extension training evidence for triceps hypertrophy and strength, though not specific to an EZ-bar grip.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "gentil-2007",
+        "type": "Upper-body exercise-order EMG including lying triceps extension",
+        "shortCitation": "Gentil et al., JSCR, 2007",
+        "finding": "Upper-body exercise-order study included lying triceps extension as the single-joint triceps exercise while monitoring muscle activation and performance.",
+        "citation": "Gentil P, Oliveira E, de Araujo Rocha Junior V, do Carmo J, Bottaro M. Effects of exercise order on upper-body muscle activation and exercise performance. Journal of Strength and Conditioning Research. 2007;21(4):1082-1086. doi:10.1519/R-21216.1.",
+        "doi": "10.1519/R-21216.1",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18076251/",
+        "relevance": "Directly includes lying triceps extension in an EMG exercise-order protocol; used as supporting evidence that the lift functions as a triceps-focused single-joint movement.",
+        "usedFor": [
+          "primary muscle role",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "kholinne-2018",
+        "type": "Triceps head function by shoulder elevation",
+        "shortCitation": "Kholinne et al., Acta Orthop Traumatol Turc, 2018",
+        "finding": "Each triceps head showed different force and activity patterns across shoulder elevation angles during elbow-extension tasks.",
+        "citation": "Kholinne E, Zulkarnain RF, Sun YC, Lim S, Chun JM, Jeon IH. The different role of each head of the triceps brachii muscle in elbow extension. Acta Orthopaedica et Traumatologica Turcica. 2018;52(3):201-205. doi:10.1016/j.aott.2018.02.005.",
+        "doi": "10.1016/j.aott.2018.02.005",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6136322/",
+        "relevance": "Biomechanics and EMG context for triceps contribution to elbow extension when the shoulder is flexed in a lying extension setup.",
+        "usedFor": [
+          "primary muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

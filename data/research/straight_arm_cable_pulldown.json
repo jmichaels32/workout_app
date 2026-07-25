@@ -1,0 +1,50 @@
+{
+  "movementId": "straight_arm_cable_pulldown",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-4",
+  "evidenceStudyIds": [
+    "muyor-2022",
+    "park-2013",
+    "signorile-2002",
+    "snyder-2009"
+  ],
+  "searchedQueries": [
+    "\"straight-arm pulldown\" electromyography latissimus dorsi",
+    "\"straight arm pulldown\" EMG latissimus dorsi",
+    "\"lat pushdown\" electromyography latissimus dorsi",
+    "\"straight-arm\" \"pulldown\" \"latissimus\" \"EMG\"",
+    "\"Comparison of Electromyographic Activity during Barbell Pullover and Straight Arm Pulldown Exercises\"",
+    "\"isometric pull-down\" latissimus dorsi lower trapezius EMG",
+    "\"lat pull-down\" teres major EMG"
+  ],
+  "reviewedFiles": [
+    "docs/movement-data-workflow.md",
+    "docs/movement-research-protocol.md",
+    "data/movements/seated_cable_lat_pulldown.json",
+    "data/research/seated_cable_lat_pulldown.json",
+    "data/anatomy.json",
+    "scripts/validate-movements.js",
+    "https://www.mdpi.com/2076-3417/12/21/11138",
+    "https://api.crossref.org/works/10.3390/app122111138",
+    "https://www.sciencedirect.com/science/article/pii/S1050641113002137",
+    "https://api.crossref.org/works/10.1016/j.jelekin.2013.08.006",
+    "https://www.paulogentil.com/pdf/S60.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/19826307/"
+  ],
+  "excludedSources": [
+    {
+      "source": "Pullover-only EMG studies without a straight-arm cable pulldown condition",
+      "reason": "Reviewed as related shoulder-extension context but not used when direct straight-arm pulldown evidence was available."
+    },
+    {
+      "source": "Lat pulldown grip studies that did not measure teres major or lower trapezius",
+      "reason": "Excluded unless they directly supported a visible role or a clear limitation for this movement."
+    },
+    {
+      "source": "Fitness blogs and video demonstrations for straight-arm pulldowns",
+      "reason": "Rejected as primary evidence because peer-reviewed EMG sources were available."
+    }
+  ],
+  "notes": "Variant assumption: standing high-cable straight-arm pulldown using a bar or rope, with elbows nearly fixed and the handle pulled toward the thighs. Muyor et al. directly supports latissimus dorsi as primary and triceps brachii as a meaningful secondary contributor. Teres major is included only as explicit inference from related pulldown-family EMG and shoulder-extension/adduction mechanics because the exact straight-arm pulldown study did not measure teres major. Middle/lower trapezius support comes from isometric pulldown angle evidence. Pectoralis major and rectus abdominis were measured in the direct study but were not added as visible roles because the straight-arm cable pulldown is more cleanly represented as a lat/triceps/scapular-support movement. Local anatomy mesh mappings resolve for all visible muscles."
+}

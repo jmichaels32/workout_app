@@ -1,0 +1,174 @@
+{
+  "id": "lying_floor_leg_raise",
+  "name": "Lying Floor Leg Raise",
+  "aliases": [
+    "floor_leg_raise",
+    "lying_leg_raise",
+    "supine_leg_raise",
+    "straight_leg_raise"
+  ],
+  "family": "leg_raise",
+  "equipment": "bodyweight",
+  "variantType": "supine_floor",
+  "variant": "Supine floor straight-leg raise performed with the low back controlled against the floor.",
+  "description": "Lie on your back with the legs straight, brace the ribs down, raise the legs without letting the low back arch, pause under control, then lower slowly until the pelvis can still stay stable.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Core",
+      "group": "region"
+    },
+    {
+      "label": "Abs",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip flexion",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 30,
+      "rationale": "Provides local abdominal and hip-flexor loading, but bodyweight leverage and pelvic control limit progressive hypertrophy potential."
+    },
+    "strength": {
+      "score": 28,
+      "rationale": "Builds hip-flexion and anterior-core strength through a long lever, but peak force and progression are modest."
+    },
+    "joint_resilience": {
+      "score": 18,
+      "rationale": "Can build controlled lumbopelvic tolerance, but excessive hip-flexor dominance or lumbar extension can make it a poor resilience choice for some users."
+    },
+    "athletic_transfer": {
+      "score": 18,
+      "rationale": "Useful for basic pelvic control and hip-flexion capacity, but it is supine and has limited carryover to standing or sport-like force transfer."
+    },
+    "control": {
+      "score": 58,
+      "rationale": "Meaningful motor-control demand from keeping the pelvis and lumbar spine stable while the long leg lever moves."
+    },
+    "fatigue_efficiency": {
+      "score": 56,
+      "rationale": "Low systemic fatigue, though hip flexor and low-back compensation can dilute the abdominal stimulus."
+    },
+    "setup": {
+      "score": 96,
+      "rationale": "Requires only floor space and no equipment."
+    },
+    "ease": {
+      "score": 54,
+      "rationale": "The task is simple, but maintaining lumbar position with straight legs is harder than it looks."
+    },
+    "progression": {
+      "score": 18,
+      "rationale": "Progression relies mostly on range, tempo, reps, or ankle loading rather than precise load increments."
+    },
+    "support": {
+      "score": 86,
+      "rationale": "The floor supports the trunk and removes balance demand, though the pelvis must still be actively controlled."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Iliopsoas",
+        "evidenceShort": "Supine leg-raise studies support a primary hip-flexor role.",
+        "evidence": "Supine leg-raise and active straight-leg-raise EMG studies show high hip-flexor demand, with fine-wire psoas major activity increasing toward end-range hip flexion.",
+        "sourceIds": [
+          "kim-lee-2016",
+          "okubo-2021"
+        ]
+      },
+      {
+        "name": "Rectus abdominis",
+        "evidenceShort": "Leg-raise studies measure rectus activity for pelvic control.",
+        "evidence": "Supine leg-raise studies measured upper and lower rectus abdominis activity; the rectus is classified as primary because the movement is only useful when it controls posterior pelvic tilt and lumbar position against the leg lever.",
+        "sourceIds": [
+          "kim-lee-2016",
+          "okubo-2021"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "External oblique",
+        "evidenceShort": "Leg-raise EMG measured external-oblique involvement.",
+        "evidence": "Supine leg-raise EMG measured external oblique activity, supporting a secondary trunk-stability role during the long-lever raise and lower.",
+        "sourceIds": [
+          "kim-lee-2016",
+          "okubo-2021"
+        ]
+      },
+      {
+        "name": "Internal oblique",
+        "evidenceShort": "Active straight-leg raise evidence supports internal-oblique control.",
+        "evidence": "Fine-wire and surface EMG during active straight-leg raise found obliquus internus/transversus activity increased during later raising, holding, and early lowering phases, supporting a secondary pelvic-control role.",
+        "sourceIds": [
+          "okubo-2021"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Rectus femoris EMG supports visible quadriceps assistance.",
+        "evidence": "Supine leg-raise and active straight-leg-raise studies measured rectus femoris activity; it is shown as quadriceps support because the rectus femoris component helps hold the knee extended and assists hip flexion.",
+        "sourceIds": [
+          "kim-lee-2016",
+          "okubo-2021"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Lying floor leg raise: iliopsoas and rectus abdominis primary; external and internal oblique secondary; quadriceps support.",
+    "clinicalShort": "EMG estimates acute excitation and timing, not hypertrophy, adaptation, or injury risk.",
+    "limitsShort": "Knee bend, range, posterior pelvic tilt, hand support, ankle load, tempo, and lumbar control strongly change emphasis.",
+    "summary": "The lying floor leg raise is classified as a hip-flexion plus anterior-core control exercise. Direct supine leg-raise evidence supports hip-flexor demand and abdominal stabilization, with the rectus femoris component of the quadriceps assisting the straight-leg lever.",
+    "clinicalInterpretation": "The movement becomes more abdominal when the pelvis stays posteriorly controlled; it becomes more hip-flexor dominant when the low back arches or the pelvis anteriorly tilts.",
+    "limitations": "Evidence covers supine straight-leg raise and active straight-leg raise, not every gym variation with hands under hips, bent knees, ankle weights, reverse-curl finish, or decline benches.",
+    "studies": [
+      {
+        "id": "kim-lee-2016",
+        "type": "Supine sit-up and leg-raise EMG",
+        "shortCitation": "Kim and Lee, J Phys Ther Sci, 2016",
+        "finding": "Compared supine sit-up and leg-raise activity in upper/lower rectus abdominis, external oblique, rectus femoris, and iliopsoas; leg raises increased hip-flexor activation.",
+        "citation": "Kim K, Lee T. Comparison of muscular activities in the abdomen and lower limbs while performing sit-up and leg-raise. Journal of Physical Therapy Science. 2016;28(2):491-494. doi:10.1589/jpts.28.491.",
+        "doi": "10.1589/jpts.28.491",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27065536/",
+        "relevance": "Direct supine leg-raise source for rectus abdominis, external oblique, iliopsoas, and rectus femoris involvement.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "okubo-2021",
+        "type": "Active straight-leg raise hip-flexor and abdominal EMG",
+        "shortCitation": "Okubo et al., J Electromyogr Kinesiol, 2021",
+        "finding": "Fine-wire psoas major EMG increased toward end-range hip flexion during active straight-leg raise; obliquus internus/transversus activity increased during trunk and pelvic control phases.",
+        "citation": "Okubo Y, Kaneoka K, Hasebe K, Matsunaga N, Imai A, Hodges PW. Differential activation of psoas major and rectus femoris during active straight leg raise to end range. Journal of Electromyography and Kinesiology. 2021;60:102588. doi:10.1016/j.jelekin.2021.102588.",
+        "doi": "10.1016/j.jelekin.2021.102588",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34455371/",
+        "relevance": "Direct straight-leg-raise source for iliopsoas, rectus femoris, rectus abdominis, external oblique, and internal-oblique/transversus activity.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "control score"
+        ]
+      }
+    ]
+  }
+}

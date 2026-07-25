@@ -1,0 +1,68 @@
+{
+  "movementId": "reverse_crunch",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-5",
+  "evidenceStudyIds": [
+    "escamilla-2006-pt",
+    "clark-2003",
+    "francis-davis-2001",
+    "escamilla-2006-jospt"
+  ],
+  "searchedQueries": [
+    "\"reverse crunch\" electromyography rectus abdominis oblique",
+    "\"reverse curl-up\" rectus abdominis electromyography",
+    "\"reverse crunch\" \"rectus abdominis\" EMG",
+    "\"New Study Puts the Crunch on Ineffective Ab Exercises\" reverse crunch",
+    "\"Electromyographic analysis of traditional and nontraditional abdominal exercises\" reverse crunch"
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed source file contract and generated bundle rule."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Confirmed abdominal movement classification and anatomy requirements."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Verified local meshes for rectus abdominis, internal oblique, and external oblique."
+    },
+    {
+      "path": "data/movements/ground_oblique_crunch.json",
+      "notes": "Reviewed local crunch-family evidence and scoring style."
+    },
+    {
+      "path": "data/movements/hanging_leg_raise.json",
+      "notes": "Reviewed local leg-raise and abdominal evidence style."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16649890/",
+      "notes": "Direct reverse-crunch inclined 30-degree EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12930172/",
+      "notes": "Reverse curl-up rectus abdominis EMG source."
+    },
+    {
+      "url": "https://www.acefitness.org/getfit/studies/BestWorstAbExercises.pdf",
+      "notes": "Exact flat reverse-crunch and bicycle maneuver EMG report."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+      "notes": "Close crunch-family abdominal EMG source."
+    }
+  ],
+  "excludedSources": [
+    {
+      "source": "Consumer reverse-crunch tutorials and social/video results",
+      "reason": "Excluded because primary EMG sources were available."
+    },
+    {
+      "source": "Sources emphasizing rectus femoris or generic hip flexors",
+      "reason": "Not used as visible roles because rectus femoris is not exposed as a standalone local anatomy label and hip flexors are not the intended target for this entry."
+    }
+  ],
+  "notes": "Variant assumption is a flat floor bodyweight reverse crunch with a compact posterior pelvic tilt. Escamilla et al. studied a harder 30-degree incline reverse crunch, so that evidence is interpreted as reverse-crunch-family support rather than exact flat-floor scoring. The exact ACE report is useful for flat reverse crunch and grouped obliques but is not peer-reviewed, so it is paired with peer-reviewed abdominal EMG studies."
+}

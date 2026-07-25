@@ -1,0 +1,92 @@
+{
+  "movementId": "ez_bar_skull_crusher",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-3",
+  "evidenceStudyIds": [
+    "brandao-2020",
+    "goto-2019",
+    "gentil-2007",
+    "kholinne-2018"
+  ],
+  "searchedQueries": [
+    "\"skull crusher\" electromyography triceps brachii study",
+    "\"lying triceps extension\" electromyography triceps brachii",
+    "\"barbell lying triceps extension\" EMG triceps",
+    "\"EZ bar\" \"skull crusher\" EMG",
+    "\"Varying the Order of Combinations of Single- and Multi-Joint Exercises\" \"lying barbell triceps press\"",
+    "\"Partial Range of Motion Exercise Is Effective\" \"lying elbow extension\"",
+    "\"Gentil\" \"lying triceps extension\" EMG triceps brachii",
+    "\"The different role of each head of the triceps brachii muscle in elbow extension\""
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement and research JSON ownership, anatomy mesh, and validation workflow."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Evidence priority, conservative visible role rules, tag taxonomy, and rating anchors."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-backlog.md",
+      "notes": "Confirmed canonical ID and variant note for EZ-bar skull crusher; file was only read, not edited."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/bar_bench_press.json",
+      "notes": "Bar and bench tag precedent."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Triceps brachii resolves to local mesh files; individual triceps heads are not separate visible anatomy entries."
+    },
+    {
+      "type": "paper-record",
+      "id": "brandao-2020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32149887/",
+      "notes": "Ten-week resistance-training study using lying barbell triceps press and measuring triceps brachii cross-sectional area and 1RM."
+    },
+    {
+      "type": "paper-record",
+      "id": "goto-2019",
+      "url": "https://doi.org/10.1519/JSC.0000000000002051",
+      "notes": "Lying elbow-extension training study comparing partial and full range of motion and measuring triceps brachii CSA and strength."
+    },
+    {
+      "type": "paper-record",
+      "id": "gentil-2007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18076251/",
+      "notes": "Upper-body exercise-order EMG study including lying triceps extension as a single-joint triceps exercise."
+    },
+    {
+      "type": "paper",
+      "id": "kholinne-2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6136322/",
+      "notes": "Triceps head activity and force during elbow extension at different shoulder elevation angles."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer skull crusher tutorials and exercise library pages",
+      "reason": "Useful for common setup terminology only; not used for role evidence because primary training and EMG sources were available."
+    },
+    {
+      "title": "Social posts and short videos ranking skull crusher activation",
+      "reason": "Excluded under the protocol preference against social/video explanations."
+    },
+    {
+      "title": "EZ-bar-specific coaching pages",
+      "reason": "Reviewed for variant terminology but not used as evidence because the claims were not primary research."
+    },
+    {
+      "title": "Close-grip bench press triceps studies",
+      "reason": "Not used because the requested movement is a lying triceps extension, not a compound press."
+    }
+  ],
+  "notes": "Variant assumption is the supine EZ-bar skull crusher on a flat bench. Exact EZ-bar EMG was not found in the reviewed source set, so the movement uses lying barbell triceps press, lying elbow extension, and elbow-extension biomechanics evidence. The EZ-bar grip is treated as an implement variation that changes wrist/grip comfort more than the primary muscle role. Visible roles are intentionally limited to Triceps brachii."
+}

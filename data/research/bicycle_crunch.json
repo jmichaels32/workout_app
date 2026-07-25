@@ -1,0 +1,78 @@
+{
+  "movementId": "bicycle_crunch",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-5",
+  "evidenceStudyIds": [
+    "francis-davis-2001",
+    "escamilla-2006-jospt",
+    "youdas-2008",
+    "lee-2016",
+    "czuppon-2024"
+  ],
+  "searchedQueries": [
+    "\"bicycle crunch\" EMG rectus abdominis oblique",
+    "\"bicycle maneuver\" electromyographic abdominal exercises study",
+    "\"bicycle maneuver\" \"Francis\" \"Davis\" \"EMG\"",
+    "\"New Study Puts the Crunch on Ineffective Ab Exercises\" bicycle maneuver",
+    "\"abdominal crunch side bridge oblique EMG\"",
+    "\"hip flexor muscle activation\" leg raise iliopsoas EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed source file contract and generated bundle rule."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Confirmed primary/secondary/support definitions, evidence recording, and anatomy gate."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Verified local meshes for rectus abdominis, external oblique, internal oblique, and iliopsoas."
+    },
+    {
+      "path": "data/movements/ground_oblique_crunch.json",
+      "notes": "Reviewed local oblique crunch evidence and scoring style."
+    },
+    {
+      "path": "data/movements/hanging_leg_raise.json",
+      "notes": "Reviewed local hip-flexor and abdominal role wording."
+    },
+    {
+      "url": "https://www.acefitness.org/getfit/studies/BestWorstAbExercises.pdf",
+      "notes": "Exact bicycle maneuver EMG report."
+    },
+    {
+      "url": "https://www.acefitness.org/about-ace/press-room/in-the-news/246/american-council-on-exercise-ace-sponsored-study-reveals-best-and-worst-abdominal-exercises/",
+      "notes": "ACE summary page for study sample, methods, and rankings."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16494072/",
+      "notes": "Peer-reviewed abdominal exercise EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18978615/",
+      "notes": "Crunch and side-bridge abdominal EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27065536/",
+      "notes": "Leg-raise and sit-up abdominal/lower-limb EMG source."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39518756/",
+      "notes": "Hip flexor EMG source for iliopsoas role."
+    }
+  ],
+  "excludedSources": [
+    {
+      "source": "Consumer bicycle-crunch exercise guides, blogs, and social/video results",
+      "reason": "Excluded because the evidence register uses the exact ACE report plus peer-reviewed abdominal and hip-flexor EMG sources."
+    },
+    {
+      "source": "Wikipedia abdominal exercise EMG ranking table",
+      "reason": "Reviewed as a pointer to the ACE report only; not used as evidence."
+    }
+  ],
+  "notes": "Variant assumption is a floor bicycle crunch with alternating trunk rotation toward the opposite knee and a controlled cycling leg action. The exact bicycle-maneuver source is a university/ACE research report rather than a peer-reviewed paper, so it is interpreted cautiously and paired with peer-reviewed abdominal EMG sources. The ACE report groups obliques, so the internal/external oblique split is supported by close peer-reviewed crunch and side-bridge evidence plus rotation mechanics."
+}

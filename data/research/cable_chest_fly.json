@@ -1,0 +1,91 @@
+{
+  "movementId": "cable_chest_fly",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-3",
+  "evidenceStudyIds": [
+    "schanke-2012",
+    "lopez-vivancos-2023",
+    "welsch-2005",
+    "solstad-2020"
+  ],
+  "searchedQueries": [
+    "\"cable crossover\" electromyography pectoralis major anterior deltoid study DOI",
+    "\"cable chest fly\" EMG pectoralis major anterior deltoid",
+    "\"cable crossover\" \"pectoralis major\" \"anterior deltoid\" electromyography",
+    "\"Schanke\" \"cable crossover\" \"pectoralis major\"",
+    "\"Electromyographical analysis of the pectoralis major muscle during various chest exercises\" \"cable crossover\"",
+    "\"Electromyographic Activity of the Pectoralis Major and Anterior Deltoid\" \"Three Upper-Body Lifts\" PubMed",
+    "\"Electromyographic Activity of the Pectoralis Major Muscle during Traditional Bench Press\" cable crossover"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement and research JSON ownership, anatomy mesh, and validation workflow."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Evidence priority, conservative visible role rules, tag taxonomy, and rating anchors."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/seated_machine_chest_fly.json",
+      "notes": "Closest local schema and rating precedent for a chest fly movement."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/research/seated_machine_chest_fly.json",
+      "notes": "Companion research-record structure and source-review detail."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Pectoralis major and Anterior deltoid resolve to local mesh files."
+    },
+    {
+      "type": "thesis-record",
+      "id": "schanke-2012",
+      "url": "https://minds.wisc.edu/items/48f80f8d-09fb-4290-b552-3fc15d3a5f64",
+      "notes": "University repository record and abstract directly include bent-forward cable crossovers with pectoralis major EMG in 14 males at 80% 1RM."
+    },
+    {
+      "type": "systematic-review",
+      "id": "lopez-vivancos-2023",
+      "url": "https://www.mdpi.com/2076-3417/13/8/5203",
+      "notes": "Pectoralis major EMG review/meta-analysis across bench press and pectoral exercise variants; used for movement-family context and limits."
+    },
+    {
+      "type": "paper-record",
+      "id": "welsch-2005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15903389/",
+      "notes": "Direct dumbbell-fly and press EMG comparing pectoralis major and anterior deltoid in 12 college-age participants using 6RM loads."
+    },
+    {
+      "type": "paper",
+      "id": "solstad-2020",
+      "url": "https://www.jssm.org/jssm-19-645.xml-Fulltext",
+      "notes": "Direct dumbbell fly comparison in resistance-trained males; used as close fly-pattern evidence and to avoid over-listing biceps for the cable variant."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer cable crossover and cable chest fly articles",
+      "reason": "Not used for visible muscle roles because primary, review, or university sources were available."
+    },
+    {
+      "title": "ACE and fitness articles summarizing the Schanke thesis",
+      "reason": "Used only for discovery; the university repository record was closer to the primary source."
+    },
+    {
+      "title": "ResearchGate and Academia reposts of chest fly papers",
+      "reason": "Duplicate or secondary hosting; PubMed, JSSM, MDPI, and university repository pages were preferred."
+    },
+    {
+      "title": "Cable fly social-video and bodybuilding posts",
+      "reason": "Excluded under the protocol preference against social/video explanations as evidence sources."
+    }
+  ],
+  "notes": "Variant assumption is a standing bilateral cable chest fly or cable crossover using dual cable handles. Visible roles are conservative: Pectoralis major primary from direct cable-crossover pectoralis EMG, Anterior deltoid secondary from close fly-pattern EMG. Biceps brachii was not shown because stronger biceps evidence comes from dumbbell flyes with independent free weights. Serratus anterior, rotator cuff, and trunk stabilizers were not shown because exact cable-fly evidence did not justify a concise app-facing support role. Main uncertainty is variation: high-to-low, mid-height, low-to-high, seated, and one-arm cable flys can change line of pull and shoulder demands."
+}

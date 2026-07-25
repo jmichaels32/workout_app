@@ -1,0 +1,73 @@
+{
+  "movementId": "barbell_romanian_deadlift",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-2",
+  "evidenceStudyIds": [
+    "coratella-2022",
+    "lee-2018",
+    "martin-fuentes-2020",
+    "andersen-2021",
+    "mccurdy-koldenhoven-2025"
+  ],
+  "searchedQueries": [
+    "\"Romanian deadlift\" EMG biceps femoris semitendinosus gluteus maximus erector spinae",
+    "\"Romanian deadlift\" electromyographic posterior chain 80% 1RM",
+    "\"conventional and Romanian deadlifts\" electromyographic kinetic comparison",
+    "\"deadlift variants\" systematic review electromyography Romanian deadlift",
+    "\"45-degree Roman chair\" \"Romanian deadlift\" muscle activity",
+    "\"traditional landmine Romanian deadlift\" muscle activation range of motion"
+  ],
+  "reviewedFiles": [
+    {
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed per-movement source-file workflow, research-record requirement, and anatomy mesh blocker rule."
+    },
+    {
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Used EMG priority rules, visible-muscle classification criteria, tag taxonomy, and rating anchors."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Hamstrings, Gluteus maximus, Erector spinae, Latissimus dorsi, Trapezius, and Gluteus medius resolve to local mesh mappings."
+    },
+    {
+      "url": "https://www.mdpi.com/1660-4601/19/3/1903",
+      "notes": "Direct Romanian, step-Romanian, and stiff-leg deadlift EMG source used for hamstrings, glutes, gluteus medius, and erector spinae."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S1728869X18301291",
+      "notes": "Direct conventional versus Romanian deadlift EMG and kinetics comparison."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229507",
+      "notes": "Deadlift EMG systematic review used for variant-level interpretation and EMG limitations."
+    },
+    {
+      "url": "https://www.jssm.org/jssm-20-181.xml-Fulltext",
+      "notes": "Direct comparison of Romanian deadlift, 45-degree Roman chair back extension, and seated machine back extension."
+    },
+    {
+      "url": "https://journal.iusca.org/index.php/Journal/article/view/370",
+      "notes": "Traditional versus landmine RDL EMG source used for latissimus dorsi, trapezius, erector spinae, gluteus maximus, and biceps femoris context."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "General RDL tutorials and coaching articles",
+      "url": "multiple search results",
+      "reason": "Rejected for visible muscle-role classification because direct EMG and systematic-review sources were available."
+    },
+    {
+      "title": "Straight-leg deadlift-only discussions",
+      "url": "multiple search results",
+      "reason": "Reviewed for terminology but not used as aliases or primary evidence because stiff-leg and Romanian deadlifts should remain distinct variants."
+    },
+    {
+      "title": "ResearchGate mirrors of included studies",
+      "url": "https://www.researchgate.net/",
+      "reason": "Used only for discovery when journal, DOI, PubMed, or publisher pages were available."
+    }
+  ],
+  "notes": "Variant assumption is a standing barbell Romanian deadlift with soft knees and no floor reset. Hamstrings and gluteus maximus were kept primary; erector spinae was kept secondary because RDL-specific evidence emphasizes hamstrings relative to the trunk extensors. Upper-back and hip support roles were added only where direct RDL-family EMG measured the muscle. No anatomy blockers found."
+}

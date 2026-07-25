@@ -1,0 +1,239 @@
+{
+  "id": "forty_five_degree_leg_press",
+  "name": "45 Degree Leg Press",
+  "aliases": [
+    "45_degree_leg_press",
+    "incline_leg_press",
+    "sled_leg_press",
+    "plate_loaded_leg_press",
+    "forty_five_degree_leg_press"
+  ],
+  "family": "leg_press",
+  "equipment": "machine",
+  "variantType": "forty_five_degree_machine",
+  "variant": "Inclined 45 degree sled leg press with both feet on the platform; treated separately from horizontal, vertical, unilateral, and calf-raise leg press variants.",
+  "description": "Sit into the sled with the back and hips braced against the pads, place both feet on the platform at a repeatable width and height, unlock the safety handles, and lower the sled until the hips and knees reach a controlled depth without the pelvis lifting. Press the platform away through the whole foot, stop short of slamming into lockout, and reset the safeties before exiting.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Leg press",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 82,
+      "rationale": "Excellent supported lower-body loading, especially for quadriceps, with meaningful glute contribution that depends strongly on foot height, depth, and hip motion."
+    },
+    "strength": {
+      "score": 72,
+      "rationale": "Allows heavy lower-body force production and clean progressive loading, but the fixed seated path is less transferable as a global strength anchor than free squatting."
+    },
+    "joint_resilience": {
+      "score": 56,
+      "rationale": "Provides controlled knee and hip loading with less balance demand, but fixed machine geometry, deep hip flexion, and heavy sled loads can concentrate stress if setup is poor."
+    },
+    "athletic_transfer": {
+      "score": 28,
+      "rationale": "Closed-chain leg force has some carryover, but training evidence shows weaker jump transfer than back squat and the seated guided path removes most sport-like coordination."
+    },
+    "control": {
+      "score": 12,
+      "rationale": "Low Motor Control demand because the seat and sled guide the path, leaving mostly foot placement, depth, tempo, and knee tracking to control."
+    },
+    "fatigue_efficiency": {
+      "score": 68,
+      "rationale": "High local lower-body stimulus with less trunk fatigue than squats, though very heavy bilateral loading still creates substantial peripheral and systemic fatigue."
+    },
+    "setup": {
+      "score": 62,
+      "rationale": "Requires a large specific machine, plate loading, safeties, and seat setup, but execution is repeatable once loaded."
+    },
+    "ease": {
+      "score": 74,
+      "rationale": "Generally easy to learn because balance and bar control are removed, though depth, pelvic position, foot placement, and safety handles still matter."
+    },
+    "progression": {
+      "score": 84,
+      "rationale": "Load, reps, range, and foot placement are trackable, with deductions for large plate jumps, sled friction, and machine-to-machine variability."
+    },
+    "support": {
+      "score": 90,
+      "rationale": "Very high external support from the back pad, hip support, sled rails, platform, and safety stops."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Inclined leg press EMG supports high quadriceps activation.",
+        "evidence": "Direct leg press studies measuring rectus femoris, vastus lateralis, and vastus medialis show substantial quadriceps activation, with foot placement and load changing regional emphasis.",
+        "sourceIds": [
+          "da-silva-2008",
+          "martin-fuentes-2021",
+          "machado-2017",
+          "stien-2021",
+          "escamilla-2001"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Meaningful hip-extension contributor, especially with higher feet and deeper range.",
+        "evidence": "Leg press EMG studies measure gluteus maximus activity and show that foot placement can increase its contribution, but generic 45 degree leg press evidence is more consistently quadriceps-dominant.",
+        "sourceIds": [
+          "da-silva-2008",
+          "stien-2021",
+          "martin-fuentes-2021"
+        ]
+      },
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Measured assistant during leg press, generally below main extensor targets.",
+        "evidence": "Leg press and squat comparison studies measure hamstring activation, but hamstring activity is generally secondary because the machine task is dominated by knee and hip extension rather than isolated knee flexion.",
+        "sourceIds": [
+          "da-silva-2008",
+          "escamilla-2001",
+          "stien-2021"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Gastrocnemius",
+        "evidenceShort": "Measured ankle/knee support contribution in leg press variants.",
+        "evidence": "Direct leg press studies measured gastrocnemius activity and found technique-sensitive involvement, supporting a support role during loaded sled pressing rather than a primary calf-training role.",
+        "sourceIds": [
+          "da-silva-2008",
+          "escamilla-2001"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "45 degree leg press: quadriceps primary; gluteus maximus and hamstrings secondary; gastrocnemius support.",
+    "clinicalShort": "Leg press EMG is sensitive to machine geometry, foot placement, load, range, and normalization method; it does not directly measure hypertrophy or injury risk.",
+    "limitsShort": "Foot height, stance width, toe angle, sled angle, seat/back angle, pelvic control, depth, lockout, and machine friction materially change emphasis.",
+    "summary": "The 45 degree leg press is classified as a supported inclined sled lower-body press. Direct leg press evidence supports quadriceps as the most consistent primary target, with gluteus maximus and hamstrings as secondary contributors and gastrocnemius as a support muscle for ankle/knee control during the press.",
+    "clinicalInterpretation": "Surface EMG studies show acute excitation under specific foot positions and loads, while biomechanics and training studies clarify load transfer and joint demands. These findings should not be interpreted as exact hypertrophy predictions for every commercial machine.",
+    "limitations": "This entry assumes a bilateral 45 degree sled with a moderate foot position. High-foot, low-foot, wide-stance, narrow-stance, single-leg, horizontal, vertical, and calf-press variations can change the visible emphasis enough to deserve separate entries if needed.",
+    "studies": [
+      {
+        "id": "da-silva-2008",
+        "type": "45 degree leg press EMG variation study",
+        "shortCitation": "Da Silva et al., JSCR, 2008",
+        "finding": "45 degree, high-foot, and low-foot leg press variations changed rectus femoris, vastus lateralis, biceps femoris, gastrocnemius, and gluteus maximus activity.",
+        "citation": "Da Silva EM, Brentano MA, Cadore EL, De Almeida AP, Kruel LF. Analysis of muscle activation during different leg press exercises at submaximum effort levels. Journal of Strength and Conditioning Research. 2008;22(4):1059-1065. doi:10.1519/JSC.0b013e3181739445.",
+        "doi": "10.1519/JSC.0b013e3181739445",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18545207/",
+        "relevance": "Direct 45 degree leg press EMG source measuring major thigh, hip, and calf muscles under different foot-placement and load conditions.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "martin-fuentes-2021",
+        "type": "Inclined leg press foot-position and velocity EMG",
+        "shortCitation": "Martin-Fuentes et al., Sports Health, 2021",
+        "finding": "Feet position and execution velocity influenced muscle activation and kinematic outputs during inclined leg press exercise.",
+        "citation": "Martin-Fuentes I, Oliva-Lozano JM, Muyor JM. Influence of Feet Position and Execution Velocity on Muscle Activation and Kinematic Parameters During the Inclined Leg Press Exercise. Sports Health. 2022;14(3):317-327. doi:10.1177/19417381211016357.",
+        "doi": "10.1177/19417381211016357",
+        "url": "https://doi.org/10.1177/19417381211016357",
+        "relevance": "Direct inclined leg press source for foot-position and execution-velocity effects on lower-limb muscle activation and movement mechanics.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "ease score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "machado-2017",
+        "type": "Leg press quadriceps technique EMG",
+        "shortCitation": "Machado et al., JSCR, 2017",
+        "finding": "Quadriceps myoelectric activity varied across leg press techniques.",
+        "citation": "Machado W, Paz G, Mendes L, Maia M, Winchester JB, Lima V, Willardson JM, Miranda H. Myoeletric Activity of the Quadriceps During Leg Press Exercise Performed With Differing Techniques. Journal of Strength and Conditioning Research. 2017;31(2):422-429. doi:10.1519/JSC.0000000000001494.",
+        "doi": "10.1519/JSC.0000000000001494",
+        "url": "https://doi.org/10.1519/JSC.0000000000001494",
+        "relevance": "Direct leg press source for quadriceps activation under technique variations.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "stien-2021",
+        "type": "Leg press versus single-joint lower-limb EMG",
+        "shortCitation": "Stien et al., JSSM, 2021",
+        "finding": "Leg press produced high vastus lateralis activity and meaningful gluteus maximus activation compared with single-joint exercises in trained men.",
+        "citation": "Stien N, Saeterbakken AH, Andersen V. Electromyographic Comparison of Five Lower-Limb Muscles between Single- and Multi-Joint Exercises among Trained Men. Journal of Sports Science and Medicine. 2021;20(1):56-61. doi:10.52082/jssm.2021.56.",
+        "doi": "10.52082/jssm.2021.56",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33707987/",
+        "relevance": "Direct leg press comparison measuring vastus lateralis, vastus medialis, rectus femoris, gluteus maximus, and biceps femoris in trained men.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "escamilla-2001",
+        "type": "Squat and leg press biomechanics and EMG",
+        "shortCitation": "Escamilla et al., MSSE, 2001",
+        "finding": "Squat and high/low foot-placement leg press variations differed in quadriceps, hamstrings, gastrocnemius activity, and knee joint forces.",
+        "citation": "Escamilla RF, Fleisig GS, Zheng N, Lander JE, Barrentine SW, Andrews JR, Bergemann BW, Moorman CT 3rd. Effects of technique variations on knee biomechanics during the squat and leg press. Medicine and Science in Sports and Exercise. 2001;33(9):1552-1566. doi:10.1097/00005768-200109000-00020.",
+        "doi": "10.1097/00005768-200109000-00020",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11528346/",
+        "relevance": "Direct leg press and squat source for lower-body muscle activity, knee forces, foot placement, stance width, and technique limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "wirth-2016",
+        "type": "Back squat versus 45 degree leg press training transfer",
+        "shortCitation": "Wirth et al., JSCR, 2016",
+        "finding": "Parallel squat training improved jump outcomes more than 45 degree leg press training after eight weeks.",
+        "citation": "Wirth K, Hartmann H, Sander A, Mickel C, Szilvas E, Keiner M. The Impact of Back Squat and Leg-Press Exercises on Maximal Strength and Speed-Strength Parameters. Journal of Strength and Conditioning Research. 2016;30(5):1205-1212. doi:10.1519/JSC.0000000000001228.",
+        "doi": "10.1519/JSC.0000000000001228",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26439782/",
+        "relevance": "Direct 45 degree leg press training comparison for transfer and strength-score interpretation.",
+        "usedFor": [
+          "athletic transfer score",
+          "strength score",
+          "control score"
+        ]
+      }
+    ]
+  }
+}

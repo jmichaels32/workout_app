@@ -1,0 +1,184 @@
+{
+  "id": "cable_triceps_pushdown",
+  "name": "Cable Triceps Pushdown",
+  "aliases": [
+    "triceps_pushdown",
+    "cable_pushdown",
+    "triceps_pressdown",
+    "cable_triceps_pressdown",
+    "rope_triceps_pushdown",
+    "straight_bar_triceps_pushdown"
+  ],
+  "family": "triceps_extension",
+  "equipment": "cable",
+  "variantType": "standing_cable_pushdown",
+  "variant": "Standing high-pulley cable elbow extension with the upper arms held near the torso, using a bar, rope, V-handle, or similar attachment.",
+  "description": "Stand facing a high cable with the elbows close to the sides and the forearms bent near 90 degrees. Brace lightly, keep the upper arms mostly still, press the handle down by extending the elbows until the arms are straight, then let the handle rise under control without letting the shoulders roll forward or the elbows drift up.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Push",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 72,
+      "rationale": "Strong triceps hypertrophy accessory because direct pushdown EMG and cable training studies support targeted elbow-extension loading with low unrelated fatigue."
+    },
+    "strength": {
+      "score": 34,
+      "rationale": "Useful for elbow-extension strength, but the single-joint cable setup is less representative of heavy compound pressing or maximal force expression."
+    },
+    "joint_resilience": {
+      "score": 26,
+      "rationale": "Can load the elbow extensors through controlled range, but it is not a broad shoulder or elbow resilience exercise."
+    },
+    "athletic_transfer": {
+      "score": 2,
+      "rationale": "Minimal athletic-transfer signal because the movement is isolated, bilateral, and stationary."
+    },
+    "control": {
+      "score": 12,
+      "rationale": "Low control demand because the cable constrains resistance direction and the main task is keeping the upper arms still."
+    },
+    "fatigue_efficiency": {
+      "score": 86,
+      "rationale": "Very efficient local triceps work with little systemic fatigue, low setup leakage, and minimal chest or shoulder fatigue compared with presses."
+    },
+    "setup": {
+      "score": 72,
+      "rationale": "Requires a cable station, high pulley, attachment, and stack adjustment, but no bench or complex body setup."
+    },
+    "ease": {
+      "score": 92,
+      "rationale": "One of the easiest triceps movements to learn and repeat because posture and elbow extension are simple to control."
+    },
+    "progression": {
+      "score": 80,
+      "rationale": "Stack load and reps are easy to record, with deductions for cable friction, attachment changes, and stack increment size."
+    },
+    "support": {
+      "score": 62,
+      "rationale": "Moderately supported by the cable path and stable stance, though the torso and upper arms still need to resist movement."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Triceps brachii",
+        "evidenceShort": "Direct pushdown EMG measures triceps heads during loaded elbow extension.",
+        "evidence": "Direct standing cable pushdown studies measured triceps brachii heads during dynamic elbow extension and fatigue conditions. Training studies using neutral-arm cable pushdowns also support the pushdown as a targeted triceps hypertrophy and strength exercise.",
+        "sourceIds": [
+          "rendos-2016",
+          "hussain-2020",
+          "stasinaki-2018",
+          "maeo-2023",
+          "kholinne-2018"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Cable triceps pushdown: triceps brachii primary; no visible secondary or support muscles added.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, pain, or injury risk.",
+    "limitsShort": "Attachment, grip, elbow path, shoulder position, torso lean, cable height, load, speed, and fatigue can shift head-level emphasis and technique.",
+    "summary": "The cable triceps pushdown is classified as a standing neutral-arm elbow-extension isolation movement. Direct EMG evidence supports the triceps brachii as the visible primary target. Forearm muscles were measured in handle-comparison work but are not available as local anatomy entries and are not central to the app classification. Shoulder and trunk muscles are not shown because the reviewed sources did not justify a concise visible role beyond posture control.",
+    "clinicalInterpretation": "Surface electromyography is useful for estimating acute triceps excitation under a specific attachment, load, tempo, and fatigue state. It should not be interpreted as a direct measure of hypertrophy, mechanical tension, long-term adaptation, pain risk, or injury risk.",
+    "limitations": "The local anatomy dataset exposes triceps brachii as a whole muscle, not separate long, lateral, and medial heads. Direct pushdown studies measured head-level behavior, but the app entry collapses that evidence into the aggregate Triceps brachii role. Rope, straight-bar, V-bar, unilateral, reverse-grip, and bent-over pushdowns can alter forearm and shoulder mechanics and should be separate variants if the app needs that detail.",
+    "studies": [
+      {
+        "id": "rendos-2016",
+        "type": "Direct cable triceps pushdown handle EMG",
+        "shortCitation": "Rendos et al., JSCR, 2016",
+        "finding": "Standing triceps pushdowns from 90 to 0 degrees elbow flexion measured lateral and long triceps heads; handle type did not significantly change triceps RMS EMG.",
+        "citation": "Rendos NK, Heredia Vargas HM, Alipio TC, Regis RC, Romero MA, Signorile JF. Differences in Muscle Activity During Cable Resistance Training Are Influenced by Variations in Handle Types. Journal of Strength and Conditioning Research. 2016;30(7):2001-2009. doi:10.1519/JSC.0000000000001293.",
+        "doi": "10.1519/JSC.0000000000001293",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26694502/",
+        "relevance": "Directly studied standing triceps pushdown with cable attachments and measured triceps brachii lateral and long heads plus forearm muscles.",
+        "usedFor": [
+          "primary muscle role",
+          "ease score",
+          "progression score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "hussain-2020",
+        "type": "Direct triceps pushdown fatigue EMG",
+        "shortCitation": "Hussain et al., Front Physiol, 2020",
+        "finding": "Measured all three triceps heads during straight-bar triceps pushdowns across intensity, speed, and fatigue conditions.",
+        "citation": "Hussain J, Sundaraj K, Subramaniam ID, Lam CK. Muscle Fatigue in the Three Heads of Triceps Brachii During Intensity and Speed Variations of Triceps Push-Down Exercise. Frontiers in Physiology. 2020;11:112. doi:10.3389/fphys.2020.00112.",
+        "doi": "10.3389/fphys.2020.00112",
+        "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2020.00112/full",
+        "relevance": "Directly matches the standing straight-bar triceps pushdown setup and supports triceps as the target muscle across load, speed, and fatigue contexts.",
+        "usedFor": [
+          "primary muscle role",
+          "fatigue efficiency score",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "stasinaki-2018",
+        "type": "Cable pushdown versus overhead extension training study",
+        "shortCitation": "Stasinaki et al., J Funct Morphol Kinesiol, 2018",
+        "finding": "Novice women trained unilateral cable push-downs at short fascicle length or overhead extensions at long fascicle length for six weeks; both conditions improved elbow-extension strength and triceps architecture.",
+        "citation": "Stasinaki AN, Zaras N, Methenitis S, Tsitkanou S, Krase A, Kavvoura A, Terzis G. Triceps Brachii Muscle Strength and Architectural Adaptations with Resistance Training Exercises at Short or Long Fascicle Length. Journal of Functional Morphology and Kinesiology. 2018;3(2):28. doi:10.3390/jfmk3020028.",
+        "doi": "10.3390/jfmk3020028",
+        "url": "https://www.mdpi.com/2411-5142/3/2/28",
+        "relevance": "Directly used cable push-downs as a neutral-arm triceps training condition and informs hypertrophy, strength, and limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "strength score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "maeo-2023",
+        "type": "Cable overhead versus neutral-arm elbow-extension hypertrophy study",
+        "shortCitation": "Maeo et al., Eur J Sport Sci, 2023",
+        "finding": "Using a cable machine, overhead-arm elbow extension produced greater triceps hypertrophy than neutral-arm elbow extension, but both conditions increased triceps size and strength.",
+        "citation": "Maeo S, Wu Y, Huang M, Sakurai H, Kusagawa Y, Sugiyama T, Kanehisa H, Isaka T. Triceps brachii hypertrophy is substantially greater after elbow extension training performed in the overhead versus neutral arm position. European Journal of Sport Science. 2023;23(7):1240-1250. doi:10.1080/17461391.2022.2100279.",
+        "doi": "10.1080/17461391.2022.2100279",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/17461391.2022.2100279",
+        "relevance": "Direct cable training comparison including a neutral-arm condition corresponding to pushdown-style elbow extension.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "strength score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "kholinne-2018",
+        "type": "Triceps head function by shoulder elevation",
+        "shortCitation": "Kholinne et al., Acta Orthop Traumatol Turc, 2018",
+        "finding": "Each triceps head showed different force and activity patterns across shoulder elevation angles during elbow-extension tasks.",
+        "citation": "Kholinne E, Zulkarnain RF, Sun YC, Lim S, Chun JM, Jeon IH. The different role of each head of the triceps brachii muscle in elbow extension. Acta Orthopaedica et Traumatologica Turcica. 2018;52(3):201-205. doi:10.1016/j.aott.2018.02.005.",
+        "doi": "10.1016/j.aott.2018.02.005",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6136322/",
+        "relevance": "Biomechanics and EMG context for head-level triceps contribution in elbow extension at neutral and elevated shoulder angles.",
+        "usedFor": [
+          "primary muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

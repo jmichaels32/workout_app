@@ -1,0 +1,170 @@
+{
+  "id": "seated_machine_reverse_fly",
+  "name": "Seated Machine Reverse Fly",
+  "aliases": [
+    "reverse_pec_deck",
+    "machine_reverse_fly",
+    "rear_delt_machine_fly",
+    "rear_delt_fly",
+    "reverse_fly_machine"
+  ],
+  "family": "reverse_fly",
+  "equipment": "machine",
+  "variantType": "seated_machine",
+  "variant": "Seated reverse pec-deck or rear-delt fly machine with a guided horizontal-abduction path.",
+  "description": "Sit facing the pad or in the machine's reverse-fly position with the handles near shoulder height and the chest supported if the machine provides a pad. Keep the ribs controlled and elbows softly bent, sweep the arms out and back along the guided path, pause without shrugging, then return until the posterior shoulders are stretched without losing shoulder position.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Shoulders",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 72,
+      "rationale": "Good posterior-shoulder hypertrophy accessory with direct reverse-fly-machine EMG support, but total load and target area are narrow."
+    },
+    "strength": {
+      "score": 20,
+      "rationale": "Builds horizontal-abduction strength in a small range, but it is not a meaningful global strength anchor."
+    },
+    "joint_resilience": {
+      "score": 28,
+      "rationale": "Can train controlled posterior-shoulder and scapular tolerance, but machine path and small loads keep resilience impact limited."
+    },
+    "athletic_transfer": {
+      "score": 8,
+      "rationale": "Low transfer because the exercise is seated, guided, bilateral, and isolated from whole-body force production."
+    },
+    "control": {
+      "score": 12,
+      "rationale": "Requires some scapular and humeral-position awareness, but the machine removes most path and balance demands."
+    },
+    "fatigue_efficiency": {
+      "score": 84,
+      "rationale": "Efficient posterior-shoulder stimulus with low systemic fatigue and little unrelated loading when the machine fits well."
+    },
+    "setup": {
+      "score": 78,
+      "rationale": "Low friction once the machine is available, with seat height, handle orientation, and start range as the main adjustments."
+    },
+    "ease": {
+      "score": 84,
+      "rationale": "Easy to learn because the machine guides the path, though grip and range need adjustment to avoid shrugging or shoulder irritation."
+    },
+    "progression": {
+      "score": 76,
+      "rationale": "Machine load and reps are easy to track, with deductions for stack increments, machine geometry, and range-stop differences."
+    },
+    "support": {
+      "score": 90,
+      "rationale": "Very high external support from the seat, pads, and guided arms, even though the shoulder still stabilizes the motion."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Direct reverse-fly-machine EMG supports primary posterior deltoid role.",
+        "evidence": "A direct reverse-fly-machine EMG study measured posterior deltoid activity and found hand position can significantly change posterior deltoid activation, supporting it as the primary target of the machine reverse fly.",
+        "sourceIds": [
+          "schoenfeld-2013"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": [
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Infraspinatus EMG supports shoulder-stabilizing support.",
+        "evidence": "The reverse-fly-machine study directly measured infraspinatus and found greater activity with a neutral hand position, supporting rotator cuff involvement as glenohumeral support rather than the main visible target.",
+        "sourceIds": [
+          "schoenfeld-2013"
+        ]
+      },
+      {
+        "name": "Trapezius (middle and lower fibers)",
+        "evidenceShort": "Scapular-retraction and horizontal-abduction evidence supports support role.",
+        "evidence": "Scapular-retraction EMG and prone horizontal-abduction evidence show meaningful middle and lower trapezius involvement when the shoulders abduct or retract. In the guided reverse fly, these fibers are classified as scapular support.",
+        "sourceIds": [
+          "kara-2021",
+          "ekstrom-2003"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Seated machine reverse fly: posterior deltoid primary; rotator cuff and middle/lower trapezius support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, pain, or injury risk.",
+    "limitsShort": "Handle orientation, seat height, chest-pad support, start range, elbow bend, load, shrugging, and machine arm path can shift posterior deltoid, infraspinatus, and trapezius contribution.",
+    "summary": "The seated machine reverse fly is classified as a guided horizontal-abduction accessory. Direct reverse-fly-machine EMG supports posterior deltoid as the primary target and infraspinatus, represented by the local rotator cuff entry, as shoulder support. Middle/lower trapezius are included as support from scapular-retraction and prone horizontal-abduction evidence rather than as the main target.",
+    "clinicalInterpretation": "The exact reverse-fly-machine evidence studied hand position in trained men and measured posterior deltoid, middle deltoid, and infraspinatus, not every commercial machine path or all scapular muscles. EMG should not be read as direct long-term hypertrophy or injury-risk evidence.",
+    "limitations": "Rhomboids were not added because the best exact machine evidence did not isolate them and the concise visible classification is clearer without extrapolating every scapular retractor. A bent-over dumbbell reverse fly should be treated as a separate variant because the trunk and free-weight stability demands differ.",
+    "studies": [
+      {
+        "id": "schoenfeld-2013",
+        "type": "Reverse-fly-machine hand-position EMG study",
+        "shortCitation": "Schoenfeld et al., JSCR, 2013",
+        "finding": "Neutral hand position on the reverse fly machine significantly increased posterior deltoid and infraspinatus mean EMG activity compared with pronated hand position.",
+        "citation": "Schoenfeld B, Sonmez RGT, Kolber MJ, Contreras B, Harris R, Ozen S. Effect of hand position on EMG activity of the posterior shoulder musculature during a horizontal abduction exercise. Journal of Strength and Conditioning Research. 2013;27(10):2644-2649. doi:10.1519/JSC.0b013e318281e1e9.",
+        "doi": "10.1519/JSC.0b013e318281e1e9",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23302754/",
+        "relevance": "Directly studied the reverse fly machine in resistance-trained men and measured posterior deltoid, middle deltoid, and infraspinatus.",
+        "usedFor": [
+          "primary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "ease score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "kara-2021",
+        "type": "Scapular-retraction trapezius EMG study",
+        "shortCitation": "Kara et al., J Athl Train, 2021",
+        "finding": "Scapular retraction at different shoulder-abduction angles produced meaningful upper, middle, and lower trapezius activity, with 90 degrees activating all trapezius parts.",
+        "citation": "Kara D, Harput G, Duzgun I. Shoulder-Abduction Angle and Trapezius Muscle Activity During Scapular-Retraction Exercise. Journal of Athletic Training. 2021;56(12):1327-1333. doi:10.4085/1062-6050-0053.21.",
+        "doi": "10.4085/1062-6050-0053.21",
+        "url": "https://doi.org/10.4085/1062-6050-0053.21",
+        "relevance": "Close scapular-retraction evidence for middle and lower trapezius support during horizontal-abduction style shoulder work.",
+        "usedFor": [
+          "support muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "ekstrom-2003",
+        "type": "Trapezius and serratus anterior exercise EMG study",
+        "shortCitation": "Ekstrom et al., JOSPT, 2003",
+        "finding": "Shoulder horizontal extension with external rotation and prone arm raises produced high middle or lower trapezius EMG activity.",
+        "citation": "Ekstrom RA, Donatelli RA, Soderberg GL. Surface electromyographic analysis of exercises for the trapezius and serratus anterior muscles. Journal of Orthopaedic and Sports Physical Therapy. 2003;33(5):247-258. doi:10.2519/jospt.2003.33.5.247.",
+        "doi": "10.2519/jospt.2003.33.5.247",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12774999/",
+        "relevance": "Close shoulder horizontal-abduction and scapular-control evidence for middle and lower trapezius support.",
+        "usedFor": [
+          "support muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

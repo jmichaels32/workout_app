@@ -1,0 +1,127 @@
+{
+  "movementId": "barbell_back_squat",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-1",
+  "evidenceStudyIds": [
+    "gullett-2009",
+    "yavuz-2015",
+    "caterisano-2002",
+    "bryanton-2012",
+    "contreras-2016",
+    "aspe-2014",
+    "escamilla-2001",
+    "clark-2019",
+    "wirth-2016"
+  ],
+  "searchedQueries": [
+    "\"barbell back squat\" EMG quadriceps gluteus maximus hamstrings",
+    "\"back squat\" depth EMG gluteus maximus vastus lateralis PubMed",
+    "\"front squat\" \"back squat\" EMG kinetics Gullett DOI",
+    "\"Kinematic and EMG activities\" front back squat maximum loads DOI",
+    "\"Effect of Squat Depth and Barbell Load\" relative muscular effort DOI",
+    "\"Trunk Muscle Activation\" back hack squat same relative loads DOI",
+    "\"back squat\" \"45 degree leg press\" training jump performance DOI"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed exclusive per-movement file ownership, generated movement bundle rule, movement contract, and anatomy coverage requirement."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Applied direct EMG and biomechanics priority, conservative role assignment, existing tag taxonomy, and rating anchors."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/bulgarian_split_squat.json",
+      "notes": "Used as a lower-body squat-family style reference for ratings, visible-role wording, and support muscle treatment."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/dumbbell_walking_lunge.json",
+      "notes": "Used as a compound lower-body reference for tags, multi-role muscles, and research limitations."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Quadriceps, Gluteus maximus, Hamstrings, Trunk stabilizers, and Gastrocnemius resolve to existing local anatomy entries and mesh files."
+    },
+    {
+      "type": "script",
+      "path": "scripts/validate-movements.js",
+      "notes": "Checked required field validation, rating keys, evidence.studies requirements, and sourceIds/anatomy name matching."
+    },
+    {
+      "type": "paper",
+      "id": "gullett-2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19002072/",
+      "notes": "Direct crossover study in 15 trained participants comparing back and front squat joint kinetics and muscle activity. Used for knee extensor demand, back/front constraints, and joint-resilience interpretation."
+    },
+    {
+      "type": "paper",
+      "id": "yavuz-2015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25630691/",
+      "notes": "Direct front/back squat maximal-load EMG study in 12 participants measuring vastus lateralis, vastus medialis, rectus femoris, semitendinosus, biceps femoris, gluteus maximus, and erector spinae. Used for role assignments and technique limits."
+    },
+    {
+      "type": "paper",
+      "id": "caterisano-2002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12173958/",
+      "notes": "Direct back squat depth EMG in experienced lifters using partial, parallel, and full depths. Used for gluteus maximus depth sensitivity and quad/glute primary roles."
+    },
+    {
+      "type": "paper",
+      "id": "bryanton-2012",
+      "url": "https://doi.org/10.1519/JSC.0b013e31826791a7",
+      "notes": "Squat depth and load biomechanics/modeling source. Used for depth/load effects on relative hip, knee, and ankle extensor effort."
+    },
+    {
+      "type": "paper",
+      "id": "contreras-2016",
+      "url": "https://doi.org/10.1123/jab.2015-0113",
+      "notes": "Direct parallel, full, and front squat EMG source in resistance-trained females measuring gluteus maximus, biceps femoris, and vastus lateralis."
+    },
+    {
+      "type": "paper",
+      "id": "aspe-2014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24662228/",
+      "notes": "Direct back squat and overhead squat EMG/kinetics source measuring lower-body muscles, gastrocnemius, erector spinae, rectus abdominis, and external oblique at multiple relative intensities."
+    },
+    {
+      "type": "paper",
+      "id": "escamilla-2001",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11528346/",
+      "notes": "Direct squat and leg press biomechanics/EMG source with stance and foot-angle variations. Used for hamstring, gastrocnemius, and knee-force interpretation."
+    },
+    {
+      "type": "paper",
+      "id": "clark-2019",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28704312/",
+      "notes": "Direct back and hack squat trunk activation comparison at 65-95% relative loads. Used to support trunk stabilizer role and lower external support score."
+    },
+    {
+      "type": "paper",
+      "id": "wirth-2016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26439782/",
+      "notes": "Eight-week training intervention comparing parallel squat and 45 degree leg press effects on maximal strength and speed-strength parameters. Used for athletic-transfer scoring."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Generic squat tutorials and coaching videos",
+      "reason": "Not used for visible roles because direct EMG, biomechanics, and training-transfer studies were available."
+    },
+    {
+      "title": "Consumer muscle charts listing every squat muscle",
+      "reason": "Not used because the app requires a one-sentence evidence rationale and local anatomy mesh coverage for every visible role."
+    },
+    {
+      "title": "Broad adductor claims from secondary summaries",
+      "reason": "Not used as a visible role because local anatomy contains Adductor longus but not a broad adductor or adductor magnus entry, and the reviewed direct sources did not justify mapping a deep squat adductor role specifically to Adductor longus."
+    }
+  ],
+  "notes": "Variant assumption: generic free-weight back squat, not separated into high-bar, low-bar, heel-elevated, pause, box, or powerlifting variants. Visible map is intentionally conservative. Quadriceps and Gluteus maximus are primary; Hamstrings secondary; Trunk stabilizers and Gastrocnemius support. No included visible muscle lacks a local mesh mapping."
+}

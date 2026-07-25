@@ -1,0 +1,234 @@
+{
+  "id": "machine_hack_squat",
+  "name": "Machine Hack Squat",
+  "aliases": [
+    "hack_squat",
+    "hack_squat_machine",
+    "sled_hack_squat",
+    "angled_hack_squat"
+  ],
+  "family": "squat",
+  "equipment": "machine",
+  "variantType": "guided_machine",
+  "variant": "Angled hack squat machine with back and shoulder pads and a fixed sled path; treated separately from barbell hack squat, Smith squat, leg press, and free-weight squat variants.",
+  "description": "Set the shoulders and back firmly against the pads, place the feet on the platform at a repeatable height and width, unlock the sled, and descend under control while keeping the heels down and knees tracking over the feet. Drive through the platform to stand without slamming into lockout, then engage the safeties before stepping out.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Quads",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Squat",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 84,
+      "rationale": "Excellent machine-supported squat stimulus, usually quad-biased with meaningful glute loading when depth and foot placement allow."
+    },
+    "strength": {
+      "score": 70,
+      "rationale": "Supports heavy bilateral lower-body loading, but strength expression is highly machine-specific and less self-stabilized than free squatting."
+    },
+    "joint_resilience": {
+      "score": 60,
+      "rationale": "Provides controlled knee and hip loading through useful range, with deductions because fixed sled geometry and deep knee flexion can be unforgiving if setup is mismatched."
+    },
+    "athletic_transfer": {
+      "score": 22,
+      "rationale": "Lower transfer than free squats because the pad and rails remove much of the balance, bracing, and whole-body coordination."
+    },
+    "control": {
+      "score": 10,
+      "rationale": "Low Motor Control demand because the back pad and guided sled path stabilize most of the movement."
+    },
+    "fatigue_efficiency": {
+      "score": 66,
+      "rationale": "Good local lower-body stimulus with less trunk fatigue than back squats, though heavy sled loading still creates major quad and systemic fatigue."
+    },
+    "setup": {
+      "score": 56,
+      "rationale": "Requires a specific machine, plate or stack loading, safety setup, and repeatable foot placement."
+    },
+    "ease": {
+      "score": 68,
+      "rationale": "Easier to stabilize than free squats, but foot placement, depth, heel contact, pelvic position, and safety handles still require attention."
+    },
+    "progression": {
+      "score": 80,
+      "rationale": "Load, reps, and range are easy to track, with deductions for large plate jumps and machine-to-machine path differences."
+    },
+    "support": {
+      "score": 92,
+      "rationale": "Very high external support from the shoulder pads, back pad, foot platform, rails, and safety catches."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Hack squat and close machine squat evidence support a quad-biased role.",
+        "evidence": "Hack squat variation EMG and close leg press/squat studies support high knee-extensor demand in guided lower-body pressing, with quadriceps classified as the main visible target.",
+        "sourceIds": [
+          "erdag-2019",
+          "da-silva-2008",
+          "escamilla-2001",
+          "gullett-2009"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Hip-extension contributor, foot-placement and depth sensitive.",
+        "evidence": "Squat-variation and leg press evidence measures gluteus maximus involvement in related guided and free squat patterns; in the hack squat it is meaningful but typically secondary to the quad-biased sled path.",
+        "sourceIds": [
+          "erdag-2019",
+          "da-silva-2008",
+          "contreras-2016"
+        ]
+      },
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Measured assistant with reduced emphasis in hack squat comparisons.",
+        "evidence": "Squat-variation and leg press studies measure hamstring activity, but hack squat support and knee-extension dominance keep hamstrings in a secondary role rather than a main target.",
+        "sourceIds": [
+          "erdag-2019",
+          "escamilla-2001",
+          "da-silva-2008"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Trunk stabilizers",
+        "evidenceShort": "Measured but lower than unsupported back squat.",
+        "evidence": "A direct back-versus-hack squat study found trunk activation is load sensitive in both lifts but lower in the hack squat, supporting a small visible support role due to bracing against the machine.",
+        "sourceIds": [
+          "clark-2019"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Machine hack squat: quadriceps primary; gluteus maximus and hamstrings secondary; trunk stabilizers support.",
+    "clinicalShort": "Exact hack squat EMG evidence is thinner than free squat and leg press evidence, so close guided-squat and leg-press studies are used conservatively.",
+    "limitsShort": "Machine angle, back-pad angle, foot height, stance width, depth, heel lift, lockout, load, and sled friction can all change emphasis.",
+    "summary": "The machine hack squat is classified as a guided machine squat with high external support. Direct hack squat trunk-activation evidence and squat-variant EMG, combined with close leg press and squat biomechanics, support quadriceps as the primary target, gluteus maximus and hamstrings as secondary contributors, and trunk stabilizers as a smaller support role.",
+    "clinicalInterpretation": "Because commercial hack squat machines vary substantially, direct evidence from one machine path may not generalize perfectly. The classification emphasizes visible roles that are consistent across the available direct hack, squat-variation, leg press, and biomechanics evidence.",
+    "limitations": "This entry assumes a conventional angled sled hack squat with the back supported. It is not a barbell hack squat, pendulum squat, Smith machine squat, or leg press. The local anatomy registry does not contain a broad adductor or adductor magnus mesh, so no visible adductor role was added.",
+    "studies": [
+      {
+        "id": "erdag-2019",
+        "type": "Squat variation EMG",
+        "shortCitation": "Erdag and Yavuz, AISC, 2019",
+        "finding": "Front, hack, and other squat variations were compared using EMG from lower-limb and trunk muscles.",
+        "citation": "Erdag D, Yavuz HU. Evaluation of Muscle Activities During Different Squat Variations Using Electromyography Signals. In: Ahram T, Karwowski W, Pickl S, Taiar R, editors. Human Systems Engineering and Design II. Advances in Intelligent Systems and Computing. 2019;1026:859-865. doi:10.1007/978-3-030-35249-3_114.",
+        "doi": "10.1007/978-3-030-35249-3_114",
+        "url": "https://doi.org/10.1007/978-3-030-35249-3_114",
+        "relevance": "Closest direct hack squat EMG source for lower-limb and trunk role classification.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "clark-2019",
+        "type": "Back versus hack squat trunk EMG",
+        "shortCitation": "Clark et al., JSCR, 2019",
+        "finding": "Hack squats allowed higher absolute loads but produced lower trunk muscle activation than back squats at matched relative loads.",
+        "citation": "Clark DR, Lambert MI, Hunter AM. Trunk Muscle Activation in the Back and Hack Squat at the Same Relative Loads. Journal of Strength and Conditioning Research. 2019;33 Suppl 1:S60-S69. doi:10.1519/JSC.0000000000002144.",
+        "doi": "10.1519/JSC.0000000000002144",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28704312/",
+        "relevance": "Direct hack squat evidence for machine support, trunk stabilizer role, and support/control ratings.",
+        "usedFor": [
+          "support muscle role",
+          "control score",
+          "support score",
+          "strength score"
+        ]
+      },
+      {
+        "id": "da-silva-2008",
+        "type": "45 degree leg press EMG variation study",
+        "shortCitation": "Da Silva et al., JSCR, 2008",
+        "finding": "Leg press foot placement and load changed quadriceps, hamstring, gastrocnemius, and gluteus maximus activation.",
+        "citation": "Da Silva EM, Brentano MA, Cadore EL, De Almeida AP, Kruel LF. Analysis of muscle activation during different leg press exercises at submaximum effort levels. Journal of Strength and Conditioning Research. 2008;22(4):1059-1065. doi:10.1519/JSC.0b013e3181739445.",
+        "doi": "10.1519/JSC.0b013e3181739445",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18545207/",
+        "relevance": "Close guided-machine lower-body press evidence for quadriceps, gluteus maximus, and hamstring role support when exact hack squat muscle data are limited.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "escamilla-2001",
+        "type": "Squat and leg press biomechanics and EMG",
+        "shortCitation": "Escamilla et al., MSSE, 2001",
+        "finding": "Squat and leg press technique variations altered lower-body muscle activity and knee joint forces.",
+        "citation": "Escamilla RF, Fleisig GS, Zheng N, Lander JE, Barrentine SW, Andrews JR, Bergemann BW, Moorman CT 3rd. Effects of technique variations on knee biomechanics during the squat and leg press. Medicine and Science in Sports and Exercise. 2001;33(9):1552-1566. doi:10.1097/00005768-200109000-00020.",
+        "doi": "10.1097/00005768-200109000-00020",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11528346/",
+        "relevance": "Biomechanics and EMG source for guided lower-body press and squat comparisons, foot placement, stance, and knee-loading limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "gullett-2009",
+        "type": "Free squat biomechanics and EMG comparison",
+        "shortCitation": "Gullett et al., JSCR, 2009",
+        "finding": "Front and back squats produced similar overall muscle recruitment, helping anchor the expected lower-body extensor pattern for squat variants.",
+        "citation": "Gullett JC, Tillman MD, Gutierrez GM, Chow JW. A biomechanical comparison of back and front squats in healthy trained individuals. Journal of Strength and Conditioning Research. 2009;23(1):284-292. doi:10.1519/JSC.0b013e31818546bb.",
+        "doi": "10.1519/JSC.0b013e31818546bb",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19002072/",
+        "relevance": "Close free-squat comparator used only to anchor the lower-body extensor demands of squat-family movement patterns.",
+        "usedFor": [
+          "primary muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "contreras-2016",
+        "type": "Parallel, full, and front squat EMG",
+        "shortCitation": "Contreras et al., J Appl Biomech, 2016",
+        "finding": "Squat variations measured gluteus maximus, biceps femoris, and vastus lateralis EMG amplitudes.",
+        "citation": "Contreras B, Vigotsky AD, Schoenfeld BJ, Beardsley C, McMaster DT, Reyneke JHT, Cronin JB. A Comparison of Gluteus Maximus, Biceps Femoris, and Vastus Lateralis Electromyography Amplitude in Parallel, Full, and Front Squat Variations in Resistance-Trained Females. Journal of Applied Biomechanics. 2016;32(1):16-22. doi:10.1123/jab.2015-0113.",
+        "doi": "10.1123/jab.2015-0113",
+        "url": "https://doi.org/10.1123/jab.2015-0113",
+        "relevance": "Close squat-variation EMG source for gluteus maximus, biceps femoris, and vastus lateralis role support.",
+        "usedFor": [
+          "secondary muscle role",
+          "hypertrophy score"
+        ]
+      }
+    ]
+  }
+}

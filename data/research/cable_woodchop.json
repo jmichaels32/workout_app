@@ -1,0 +1,74 @@
+{
+  "movementId": "cable_woodchop",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-6",
+  "evidenceStudyIds": [
+    "zemkova-2017",
+    "ikeda-2009",
+    "nakai-2021"
+  ],
+  "searchedQueries": [
+    "standing cable wood chop exercise electromyography rectus abdominis external oblique internal oblique",
+    "standing cable chop electromyography trunk rotation exercise external oblique internal oblique",
+    "wood chop exercise EMG oblique abdominal PubMed",
+    "diagonal chop lift exercise EMG trunk muscles",
+    "side medicine ball throw EMG external oblique trunk rotation"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Per-movement ownership, JSON contract, and local anatomy mesh requirement."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Evidence hierarchy, inference boundaries, tags, and 0-100 rating rules."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/ground_oblique_crunch.json",
+      "notes": "Oblique/core movement schema, tags, and abdominal role wording."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed visible roles resolve locally: External oblique, Internal oblique, and Rectus abdominis."
+    },
+    {
+      "type": "paper",
+      "id": "zemkova-2017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27806016/",
+      "notes": "Exact standing cable woodchop study; measured power and endurance across weight-stack loads, but not individual-muscle EMG."
+    },
+    {
+      "type": "paper",
+      "id": "ikeda-2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19826303/",
+      "notes": "Close dynamic trunk-rotation EMG source using side medicine-ball throws; measured pectoralis major, rectus abdominis, external oblique, and latissimus dorsi."
+    },
+    {
+      "type": "paper",
+      "id": "nakai-2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34383772/",
+      "notes": "Close oblique-task EMG source; measured external oblique, internal oblique, rectus abdominis, gluteus medius, and adductor longus during supine and half-kneeling self-oblique exercises."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Verywell Fit, Muscle and Strength, Healthline, Fitbod, Motra, and similar cable woodchop exercise pages",
+      "reason": "Consumer exercise instruction sources; not used for muscle-role evidence."
+    },
+    {
+      "title": "Social/video results for cable woodchops and cable trunk rotations",
+      "reason": "Not used because they are not primary EMG or biomechanics studies."
+    },
+    {
+      "title": "Core Muscle Activity During Physical Fitness Exercises: A Systematic Review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7345922/",
+      "reason": "Reviewed for context but excluded from the evidence register because the final set uses primary studies."
+    }
+  ],
+  "notes": "Variant is a standing diagonal cable woodchop. The exact cable woodchop source supports movement specificity, loadability, power, and endurance ratings but not individual muscle roles. External oblique is the strongest primary role from close rotational EMG. Internal oblique is primary from close oblique-task EMG plus the trunk-rotation demand, so this is explicitly a close-evidence inference. Rectus abdominis is secondary as a trunk bracer. Transversus abdominis, quadratus lumborum, and deep hip rotators were not listed because they are not locally mapped as visible muscles in data/anatomy.json."
+}

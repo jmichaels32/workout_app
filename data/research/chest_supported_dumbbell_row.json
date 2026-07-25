@@ -1,0 +1,55 @@
+{
+  "movementId": "chest_supported_dumbbell_row",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-4",
+  "evidenceStudyIds": [
+    "fischer-2025",
+    "garcia-jaen-2021",
+    "vasconcelos-2023",
+    "lehman-2004",
+    "fujita-2019",
+    "wattanaprakornkul-2011"
+  ],
+  "searchedQueries": [
+    "\"chest-supported row\" \"Journal of Electromyography\" \"dumbbell\"",
+    "\"dumbbell chest-supported row\" \"electromyographic\"",
+    "\"bench pull\" dumbbell row EMG latissimus dorsi trapezius",
+    "\"prone row\" dumbbell EMG latissimus dorsi",
+    "\"Garcia-Jaen\" \"chest-supported row\"",
+    "\"Electromyographical responses of the lumbar, dorsal and shoulder musculature\" DOI",
+    "\"Impact of different ranges of motion in the prone barbell row on muscle excitation\""
+  ],
+  "reviewedFiles": [
+    "docs/movement-data-workflow.md",
+    "docs/movement-research-protocol.md",
+    "data/movements/seated_cable_row.json",
+    "data/research/seated_cable_row.json",
+    "data/anatomy.json",
+    "scripts/validate-movements.js",
+    "https://pubmed.ncbi.nlm.nih.gov/40513198/",
+    "https://efsupit.ro/images/stories/iunie2021/Art%20236.pdf",
+    "https://doi.org/10.7752/jpes.2021.04236",
+    "https://journal.iusca.org/index.php/Journal/article/view/190",
+    "https://pubmed.ncbi.nlm.nih.gov/15228624/",
+    "https://pdfs.semanticscholar.org/2b55/6e63ba0d3019f5e2959b3ec165072f139c4b.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/21978788/",
+    "https://api.crossref.org/works/10.1016/j.jelekin.2025.103025",
+    "https://api.crossref.org/works/10.47206/ijsc.v3i1.190"
+  ],
+  "excludedSources": [
+    {
+      "source": "Consumer pages describing chest-supported rows and dumbbell row variations",
+      "reason": "Rejected because direct or close peer-reviewed row-family evidence was available."
+    },
+    {
+      "source": "T-bar and landmine row technique papers",
+      "reason": "Reviewed during nearby movement research but not used because this entry is a dumbbell bench-supported row rather than a barbell landmine row."
+    },
+    {
+      "source": "Unstable-surface and suspension-row articles",
+      "reason": "Excluded because the chest-supported dumbbell row has a different stability profile and trunk-support demand."
+    }
+  ],
+  "notes": "Variant assumption: bilateral dumbbell row performed prone or chest-supported on an incline bench. The strongest close source is prone barbell row EMG because it fixes the torso and measures latissimus dorsi, transverse trapezius, rear deltoid, and biceps brachii. Garcia-Jaen et al. was used for the standing versus bench-supported row posture distinction, not as the only muscle-role anchor. No visible erector spinae or oblique support was added because the chest pad materially reduces trunk demand and the app card should stay focused. Rhomboids are marked as inference from grouped row EMG and scapular-retraction mechanics. Local anatomy mesh mappings resolve for all visible muscles."
+}

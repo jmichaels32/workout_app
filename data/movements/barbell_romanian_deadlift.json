@@ -1,0 +1,244 @@
+{
+  "id": "barbell_romanian_deadlift",
+  "name": "Barbell Romanian Deadlift",
+  "aliases": [
+    "romanian_deadlift",
+    "rdl",
+    "barbell_rdl",
+    "romanian_barbell_deadlift"
+  ],
+  "family": "deadlift",
+  "equipment": "barbell",
+  "variantType": "romanian_barbell",
+  "variant": "Free-weight barbell Romanian deadlift started from standing, using a hip hinge with soft knees and the bar kept close to the legs.",
+  "description": "Stand tall with a loaded barbell in the hands, feet about hip width, knees softly unlocked, lats set, and ribs stacked over the pelvis. Push the hips back while keeping the bar close to the thighs and shins, lower until the hamstrings limit the hinge without rounding the back, then drive the hips forward to stand tall under control.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Hamstrings",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip extension",
+      "group": "pattern"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 78,
+      "rationale": "High posterior-chain hypertrophy signal, especially for hamstrings and gluteus maximus, with useful loaded lengthened-position exposure."
+    },
+    "strength": {
+      "score": 72,
+      "rationale": "Strong hip-hinge loading option, though peak whole-body force and floor-start specificity are lower than a conventional deadlift."
+    },
+    "joint_resilience": {
+      "score": 48,
+      "rationale": "Provides controlled hamstring, hip, and trunk loading through a long range, but heavy hinges can be sensitive to lumbar position and hamstring tolerance."
+    },
+    "athletic_transfer": {
+      "score": 42,
+      "rationale": "Useful hinge and posterior-chain capacity can carry over to sprinting, jumping, and lifting tasks, but the movement is still bilateral and constrained."
+    },
+    "control": {
+      "score": 56,
+      "rationale": "Requires meaningful hip-hinge control, bracing, bar proximity, and hamstring-range awareness without a guided path."
+    },
+    "fatigue_efficiency": {
+      "score": 52,
+      "rationale": "Good local posterior-chain stimulus, but grip, spinal erector demand, and systemic fatigue reduce efficiency compared with more supported hamstring options."
+    },
+    "setup": {
+      "score": 54,
+      "rationale": "Requires a bar, plates, space, and warm-up sets, but the lift starts from standing and does not need a rack setup."
+    },
+    "ease": {
+      "score": 46,
+      "rationale": "The pattern is simple once learned, but many users need coaching to keep a true hinge, neutral trunk, close bar path, and appropriate knee bend."
+    },
+    "progression": {
+      "score": 78,
+      "rationale": "Barbell loading is trackable and granular, with small deductions because range of motion and hinge depth can drift as load increases."
+    },
+    "support": {
+      "score": 18,
+      "rationale": "The user controls the entire free-weight path, trunk position, grip, and balance with no external body support."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Direct RDL EMG supports high biceps femoris and semitendinosus demand.",
+        "evidence": "Direct Romanian deadlift studies measured biceps femoris and semitendinosus activity during loaded hinges, and the deadlift systematic review reports that the Romanian deadlift emphasizes hamstring activation relative to the erector spinae.",
+        "sourceIds": [
+          "coratella-2022",
+          "lee-2018",
+          "martin-fuentes-2020",
+          "andersen-2021"
+        ]
+      },
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Hip-extension EMG shows substantial gluteus maximus involvement.",
+        "evidence": "Romanian deadlift studies directly measure gluteus maximus during heavy hip hinges. It is listed as primary because the standard barbell Romanian deadlift trains loaded hip extension alongside the hamstrings.",
+        "sourceIds": [
+          "coratella-2022",
+          "lee-2018",
+          "andersen-2021",
+          "mccurdy-koldenhoven-2025"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Measured trunk-extensor demand, but less target-dominant than hamstrings in RDL evidence.",
+        "evidence": "Romanian deadlift EMG studies measure erector spinae activity, and back-extension comparison data show similar erector spinae activation across hip-extension exercises. It is classified as secondary because the RDL card is primarily a hip-hinge posterior-thigh and glute movement, not a lower-back isolation exercise.",
+        "sourceIds": [
+          "coratella-2022",
+          "martin-fuentes-2020",
+          "andersen-2021",
+          "mccurdy-koldenhoven-2025"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Measured in RDL variation research as part of free-bar stabilization.",
+        "evidence": "RDL variation research measured latissimus dorsi along with posterior-chain muscles. For the standard barbell RDL, it is included as bar-path and shoulder-extension support rather than a primary pulling target.",
+        "sourceIds": [
+          "mccurdy-koldenhoven-2025"
+        ]
+      },
+      {
+        "name": "Trapezius",
+        "evidenceShort": "Measured upper-back stabilizer demand in RDL variation research.",
+        "evidence": "RDL variation research measured middle trapezius while comparing traditional and landmine Romanian deadlifts. The role is classified as support because it helps maintain shoulder girdle and bar position during the hinge.",
+        "sourceIds": [
+          "mccurdy-koldenhoven-2025"
+        ]
+      },
+      {
+        "name": "Gluteus medius",
+        "evidenceShort": "Measured gluteal stabilizer during RDL variants.",
+        "evidence": "Direct Romanian deadlift EMG measured gluteus medius along with gluteus maximus and hamstring muscles. It is included as hip-pelvis support in the bilateral hinge, not as the main target.",
+        "sourceIds": [
+          "coratella-2022"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Barbell Romanian deadlift: hamstrings and gluteus maximus primary; erector spinae secondary; latissimus dorsi, trapezius, and gluteus medius support.",
+    "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, pain risk, or injury probability.",
+    "limitsShort": "Knee bend, bar distance, hip range, load, tempo, straps, fatigue, and whether the lifter starts from the floor or standing can shift muscle emphasis.",
+    "summary": "The barbell Romanian deadlift is classified as a free-weight hip-hinge exercise. Direct EMG evidence supports hamstrings and gluteus maximus as the primary posterior-chain targets, with meaningful erector spinae demand for trunk position. Upper-back and hip-pelvis stabilizers are included only where they have direct RDL-family measurement support.",
+    "clinicalInterpretation": "Surface electromyography should be interpreted as condition-specific muscle excitation. The ratings combine direct RDL studies, deadlift-family review evidence, and explicit judgment about loadability, setup, fatigue, and skill demand.",
+    "limitations": "The app entry assumes a standard standing barbell RDL rather than a deficit RDL, stiff-leg deadlift, single-leg RDL, landmine RDL, dumbbell RDL, or floor-start deadlift. Surface EMG cannot resolve every hamstring head equally and does not directly measure long-term growth or tissue tolerance.",
+    "studies": [
+      {
+        "id": "coratella-2022",
+        "type": "Romanian deadlift variation EMG study",
+        "shortCitation": "Coratella et al., IJERPH, 2022",
+        "finding": "Competitive bodybuilders performed Romanian, step-Romanian, and stiff-leg deadlifts at 80% 1RM while gluteus maximus, gluteus medius, biceps femoris, semitendinosus, and erector spinae regions were measured.",
+        "citation": "Coratella G, Tornatore G, Longo S, Esposito F, Ce E. An Electromyographic Analysis of Romanian, Step-Romanian, and Stiff-Leg Deadlift: Implication for Resistance Training. International Journal of Environmental Research and Public Health. 2022;19(3):1903. doi:10.3390/ijerph19031903.",
+        "doi": "10.3390/ijerph19031903",
+        "url": "https://www.mdpi.com/1660-4601/19/3/1903",
+        "relevance": "Direct barbell Romanian deadlift and close-variant EMG source for hamstrings, gluteus maximus, gluteus medius, and erector spinae.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "lee-2018",
+        "type": "Conventional versus Romanian deadlift EMG and kinetics study",
+        "shortCitation": "Lee et al., J Exerc Sci Fit, 2018",
+        "finding": "Compared conventional and Romanian deadlifts using electromyographic and kinetic measures, supporting variant-specific interpretation of hamstring, gluteal, erector, and quadriceps demand.",
+        "citation": "Lee S, Schultz J, Timgren J, Staelgraeve K, Miller M, Liu Y. An electromyographic and kinetic comparison of conventional and Romanian deadlifts. Journal of Exercise Science & Fitness. 2018;16(3):87-93. doi:10.1016/j.jesf.2018.08.001.",
+        "doi": "10.1016/j.jesf.2018.08.001",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1728869X18301291",
+        "relevance": "Directly compares the assigned Romanian deadlift with the conventional deadlift and informs the different muscle-role and rating profiles.",
+        "usedFor": [
+          "primary muscle role",
+          "rating anchors",
+          "limitations"
+        ]
+      },
+      {
+        "id": "martin-fuentes-2020",
+        "type": "Deadlift EMG systematic review",
+        "shortCitation": "Martin-Fuentes et al., PLOS ONE, 2020",
+        "finding": "The review reported that Romanian deadlift evidence is associated with lower erector spinae activation than biceps femoris and semitendinosus, and that hamstring activation patterns vary across deadlift variants.",
+        "citation": "Martin-Fuentes I, Oliva-Lozano JM, Muyor JM. Electromyographic activity in deadlift exercise and its variants. A systematic review. PLOS ONE. 2020;15(2):e0229507. doi:10.1371/journal.pone.0229507.",
+        "doi": "10.1371/journal.pone.0229507",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229507",
+        "relevance": "Systematic review context for deadlift-family EMG and the Romanian deadlift hamstring-versus-erector interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "clinical interpretation",
+          "limitations"
+        ]
+      },
+      {
+        "id": "andersen-2021",
+        "type": "Hip-extension exercise EMG comparison",
+        "shortCitation": "Andersen et al., JSSM, 2021",
+        "finding": "In resistance-trained women, Romanian deadlift and 45-degree Roman chair back extension produced greater gluteus maximus activity than seated machine back extension; Romanian deadlift also exceeded seated machine back extension for biceps femoris.",
+        "citation": "Andersen V, Pedersen H, Fimland MS, Shaw M, Solstad TEJ, Stien N, Cumming KT, Saeterbakken AH. Comparison of Muscle Activity in Three Single-Joint, Hip Extension Exercises in Resistance-Trained Women. Journal of Sports Science and Medicine. 2021;20(2):181-187. doi:10.52082/jssm.2021.181.",
+        "doi": "10.52082/jssm.2021.181",
+        "url": "https://www.jssm.org/jssm-20-181.xml-Fulltext",
+        "relevance": "Directly includes the Romanian deadlift and compares gluteus maximus, biceps femoris, and erector spinae activation against close hip-extension exercises.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "mccurdy-koldenhoven-2025",
+        "type": "Traditional versus landmine Romanian deadlift EMG study",
+        "shortCitation": "McCurdy and Koldenhoven, IJSC, 2025",
+        "finding": "Traditional and landmine Romanian deadlifts were compared at 8RM with EMG from middle trapezius, latissimus dorsi, erector spinae, gluteus maximus, and biceps femoris.",
+        "citation": "McCurdy KW, Koldenhoven RM. Comparison of Muscle Activation and Range of Motion between the Traditional and Landmine Romanian Deadlift. International Journal of Strength and Conditioning. 2025;5(1). doi:10.47206/ijsc.v5i1.370.",
+        "doi": "10.47206/ijsc.v5i1.370",
+        "url": "https://journal.iusca.org/index.php/Journal/article/view/370",
+        "relevance": "Direct RDL-family evidence for upper-back and latissimus support roles plus gluteus maximus, biceps femoris, and erector spinae interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "support score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

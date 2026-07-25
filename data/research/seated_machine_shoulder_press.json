@@ -1,0 +1,98 @@
+{
+  "movementId": "seated_machine_shoulder_press",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex-worker-3",
+  "evidenceStudyIds": [
+    "coratella-2022",
+    "saeterbakken-2013",
+    "botton-2013",
+    "bull-2001",
+    "escamilla-2009"
+  ],
+  "searchedQueries": [
+    "\"machine shoulder press\" electromyography anterior deltoid triceps study",
+    "\"Front vs Back and Barbell vs Machine Overhead Press\" electromyographic analysis",
+    "\"seated machine shoulder press\" EMG deltoid triceps",
+    "\"Smith machine shoulder press\" \"anterior deltoid\" EMG",
+    "\"Effects of body position and loading modality on muscle activity and strength in shoulder presses\" PubMed",
+    "\"military press\" serratus anterior trapezius EMG",
+    "\"shoulder muscle activity and function\" rotator cuff serratus anterior review"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement and research JSON ownership, anatomy mesh, and validation workflow."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Evidence priority, conservative visible role rules, tag taxonomy, and rating anchors."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/standing_barbell_overhead_press.json",
+      "notes": "Closest local shoulder-press precedent, including treatment of medial deltoid as unavailable in local anatomy."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/research/standing_barbell_overhead_press.json",
+      "notes": "Companion research-record structure for shoulder-press evidence."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed visible muscles Anterior deltoid, Triceps brachii, Pectoralis major, Serratus anterior, and Rotator cuff resolve to local mesh files; no Medial deltoid entry exists."
+    },
+    {
+      "type": "paper",
+      "id": "coratella-2022",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9354811/",
+      "notes": "Direct front/back machine shoulder press and barbell military press EMG in competitive bodybuilders; measured deltoids, upper trapezius, pectoralis major, and triceps brachii."
+    },
+    {
+      "type": "paper-record",
+      "id": "saeterbakken-2013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23096062/",
+      "notes": "Seated and standing shoulder press EMG and 1RM comparison; used as close seated shoulder-press evidence and for support/progression ratings."
+    },
+    {
+      "type": "paper",
+      "id": "botton-2013",
+      "url": "https://exercisesforfree.com/pdf/386.pdf",
+      "notes": "Guided Smith-machine shoulder press deltoid EMG; used as close evidence for anterior deltoid activation."
+    },
+    {
+      "type": "paper-record",
+      "id": "bull-2001",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11441637/",
+      "notes": "Military press serratus anterior and trapezius EMG; used only for scapular support context."
+    },
+    {
+      "type": "review-record",
+      "id": "escamilla-2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19769415/",
+      "notes": "Shoulder exercise review describing rotator cuff stabilization and serratus anterior role in scapular upward rotation during humeral elevation."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer seated machine shoulder press tutorials",
+      "reason": "Useful for terminology only; not used for muscle-role evidence because primary EMG and review sources were available."
+    },
+    {
+      "title": "Social posts and short videos about shoulder press muscle emphasis",
+      "reason": "Excluded under the protocol preference against social/video explanations."
+    },
+    {
+      "title": "Behind-neck machine shoulder press evidence from Coratella et al.",
+      "reason": "Reviewed as part of the same direct study but not used as the primary variant assumption because the app entry assumes a front guided shoulder press."
+    },
+    {
+      "title": "Upper trapezius and medial deltoid role claims",
+      "reason": "The evidence supports involvement, but the local anatomy dataset has no separate upper-trapezius or medial-deltoid visible entry; these were documented in limitations instead of being added as unmapped muscles."
+    }
+  ],
+  "notes": "Variant assumption is a seated front machine shoulder press with guided handles and back support. Visible roles follow local anatomy constraints and existing standing_barbell_overhead_press precedent. Medial deltoid is likely important for shoulder pressing but lacks a local anatomy mesh entry, so it was not listed as a visible role. Upper trapezius was also not listed because only the aggregate Trapezius entry exists and the existing shoulder-press precedent avoids mapping upper-trapezius-specific findings to that broad label."
+}
