@@ -1034,7 +1034,38 @@
       min-height: 14px;
       padding: 0;
       border: 1px solid var(--soft-line);
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
       background: var(--panel);
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 900;
+      line-height: 1;
+      --rep-fill: 0%;
+    }
+
+    .rep-box::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: var(--rep-fill);
+      background: var(--accent);
+    }
+
+    .rep-box span {
+      position: relative;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .rep-box.grouped {
+      flex-basis: 28px;
+      width: 28px;
+      min-width: 28px;
+      height: 20px;
+      min-height: 20px;
     }
 
     .rep-box:hover,
@@ -1045,16 +1076,19 @@
 
     .rep-box.filled {
       border-color: var(--accent-line);
-      background: var(--accent);
+      color: var(--accent-ink);
+      --rep-fill: 100%;
+    }
+
+    .rep-box.partial {
+      border-color: var(--accent-line);
     }
 
     .rep-box.extra {
       border-color: var(--accent-line);
-      background: var(--panel);
     }
 
     .rep-box.extra.filled {
-      background: var(--accent);
       color: var(--accent-ink);
     }
 
@@ -2198,6 +2232,10 @@
 
     @media (max-width: 560px) {
       .app { padding: 12px 8px 20px; }
+      input,
+      select {
+        font-size: 16px;
+      }
       h1 { font-size: clamp(28px, 8vw, 34px); overflow-wrap: break-word; }
       .movement-home-header,
       .home-panel,
@@ -2474,6 +2512,8 @@
       bodyweight: { label: "Bodyweight", sets: 3, repMin: 8, repMax: 20, loadStep: 0, rirTarget: 2 }
     };
     const RIR_CYCLE = [null, 3, 2, 1, 0];
+    const REP_GROUP_SIZE = 5;
+    const REP_GROUP_THRESHOLD = REP_GROUP_SIZE * 2;
 
     const movementHome = document.getElementById("movementHome");
     const movementWorkoutPage = document.getElementById("movementWorkoutPage");
@@ -3175,6 +3215,7 @@
           data-workout-id="${escapeHTML(workout.id)}"
           data-block-id="${escapeHTML(block.id)}"
           data-movement-id="${escapeHTML(entry.movementId)}"
+          data-set-index="${setIndex}"
           data-target-reps="${set.targetReps}"
           data-completed-reps="${set.completedReps}"
           data-extra-slots="${extraSlots}"
@@ -3210,28 +3251,85 @@
 
     function renderRepBoxes(workout, block, entry, set, setIndex) {
       const extraSlots = Math.max(0, set.extraSlots, set.completedReps - set.targetReps);
-      const boxes = Array.from({ length: set.targetReps + extraSlots }, (_, index) => {
-        const reps = index + 1;
-        const filled = reps <= set.completedReps ? " filled" : "";
-        const extra = reps > set.targetReps ? " extra" : "";
+      return renderRepBoxUnits({
+        workoutId: workout.id,
+        blockId: block.id,
+        movementId: entry.movementId,
+        setIndex,
+        targetReps: set.targetReps,
+        completedReps: set.completedReps,
+        totalSlots: set.targetReps + extraSlots
+      });
+    }
+
+    function repBoxUnits(totalReps) {
+      const total = Math.max(0, nullableInteger(totalReps) || 0);
+      if (total < REP_GROUP_THRESHOLD) {
+        return Array.from({ length: total }, (_, index) => {
+          const reps = index + 1;
+          return { start: reps, end: reps, size: 1 };
+        });
+      }
+
+      const groups = Math.floor(total / REP_GROUP_SIZE);
+      const remainder = total % REP_GROUP_SIZE;
+      const groupedUnits = Array.from({ length: groups }, (_, index) => ({
+        start: index * REP_GROUP_SIZE + 1,
+        end: (index + 1) * REP_GROUP_SIZE,
+        size: REP_GROUP_SIZE
+      }));
+      const singleUnits = Array.from({ length: remainder }, (_, index) => {
+        const reps = groups * REP_GROUP_SIZE + index + 1;
+        return { start: reps, end: reps, size: 1 };
+      });
+      return [...groupedUnits, ...singleUnits];
+    }
+
+    function renderRepBoxUnits({
+      workoutId,
+      blockId,
+      movementId,
+      setIndex,
+      targetReps,
+      completedReps,
+      totalSlots
+    }) {
+      return repBoxUnits(totalSlots).map(unit => {
+        const fillPercent = repUnitFillPercent(unit, completedReps);
+        const filled = fillPercent >= 100 ? " filled" : "";
+        const partial = fillPercent > 0 && fillPercent < 100 ? " partial" : "";
+        const grouped = unit.size > 1 ? " grouped" : "";
+        const extra = unit.start > targetReps ? " extra" : "";
+        const label = unit.size > 1 ? String(unit.size) : "";
+        const ariaLabel = unit.size > 1
+          ? `Record ${unit.start} through ${unit.end} of ${targetReps} reps`
+          : `Record ${unit.end} of ${targetReps} reps`;
         return `
           <button
             type="button"
-            class="rep-box rep-box-unit${extra}${filled}"
-            data-workout-id="${escapeHTML(workout.id)}"
-            data-block-id="${escapeHTML(block.id)}"
-            data-movement-id="${escapeHTML(entry.movementId)}"
+            class="rep-box rep-box-unit${grouped}${extra}${filled}${partial}"
+            style="--rep-fill: ${fillPercent}%;"
+            data-workout-id="${escapeHTML(workoutId)}"
+            data-block-id="${escapeHTML(blockId)}"
+            data-movement-id="${escapeHTML(movementId)}"
             data-set-index="${setIndex}"
-            data-reps="${reps}"
-            data-target-reps="${set.targetReps}"
+            data-reps="${unit.end}"
+            data-rep-start="${unit.start}"
+            data-rep-size="${unit.size}"
+            data-target-reps="${targetReps}"
             onpointerdown="startRepBoxDrag(event)"
             onpointerenter="continueRepBoxDrag(event)"
             onclick="recordRepBoxClick(event)"
-            aria-label="Record ${reps} of ${set.targetReps} reps"
-          ></button>
+            aria-label="${escapeHTML(ariaLabel)}"
+          ><span>${escapeHTML(label)}</span></button>
         `;
       }).join("");
-      return boxes;
+    }
+
+    function repUnitFillPercent(unit, completedReps) {
+      if (completedReps < unit.start) return 0;
+      if (completedReps >= unit.end) return 100;
+      return Math.round(((completedReps - unit.start + 1) / unit.size) * 100);
     }
 
     function renderExtraRepControls(workout, block, entry, set, setIndex) {
@@ -3438,11 +3536,24 @@
     function repsFromPointer(tile, clientX) {
       const boxes = [...(tile?.querySelectorAll(".rep-box-unit") || [])];
       if (!boxes.length) return 0;
-      return boxes.reduce((count, box) => {
+      const firstRect = boxes[0].getBoundingClientRect();
+      if (clientX < firstRect.left) return 0;
+      let reps = 0;
+      boxes.forEach(box => {
         const rect = box.getBoundingClientRect();
-        const midpoint = rect.left + rect.width / 2;
-        return clientX >= midpoint ? count + 1 : count;
-      }, 0);
+        const start = Number(box.dataset.repStart || box.dataset.reps);
+        const end = Number(box.dataset.reps);
+        const size = Math.max(1, Number(box.dataset.repSize || 1));
+        if (clientX >= rect.right) {
+          reps = end;
+          return;
+        }
+        if (clientX >= rect.left && clientX < rect.right) {
+          const position = Math.max(0, Math.min(rect.width, clientX - rect.left));
+          reps = Math.max(start, Math.min(end, start + Math.floor((position / rect.width) * size)));
+        }
+      });
+      return reps;
     }
 
     function sameRepDragTarget(a, b) {
@@ -3474,10 +3585,15 @@
       tile.dataset.extraSlots = String(slotCount);
       syncExtraRepBoxes(tile, completedReps, targetReps);
       tile.querySelectorAll(".rep-box-unit").forEach(button => {
-        button.classList.toggle("filled", Number(button.dataset.reps) <= Math.min(completedReps, targetReps));
-        if (button.classList.contains("extra")) {
-          button.classList.toggle("filled", Number(button.dataset.reps) <= completedReps);
-        }
+        const unit = {
+          start: Number(button.dataset.repStart || button.dataset.reps),
+          end: Number(button.dataset.reps),
+          size: Math.max(1, Number(button.dataset.repSize || 1))
+        };
+        const fillPercent = repUnitFillPercent(unit, completedReps);
+        button.style.setProperty("--rep-fill", `${fillPercent}%`);
+        button.classList.toggle("filled", fillPercent >= 100);
+        button.classList.toggle("partial", fillPercent > 0 && fillPercent < 100);
       });
       updateTargetCountUI(tile, targetReps);
       updateExtraRepControls(tile);
@@ -3516,30 +3632,19 @@
     function syncExtraRepBoxes(tile, completedReps, targetReps) {
       const row = tile.querySelector(".set-rep-boxes");
       if (!row) return;
-      row.querySelectorAll(".rep-box-unit.extra").forEach(button => button.remove());
       const extra = Math.max(
         0,
         Number(tile.dataset.extraSlots || 0),
         completedReps - targetReps
       );
-      if (!extra) return;
-      const firstBox = row.querySelector(".rep-box-unit");
-      const dataset = firstBox?.dataset || {};
-      Array.from({ length: extra }, (_, index) => targetReps + index + 1).forEach(reps => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = `rep-box rep-box-unit extra${reps <= completedReps ? " filled" : ""}`;
-        button.dataset.workoutId = dataset.workoutId || "";
-        button.dataset.blockId = dataset.blockId || "";
-        button.dataset.movementId = dataset.movementId || "";
-        button.dataset.setIndex = dataset.setIndex || "0";
-        button.dataset.reps = String(reps);
-        button.dataset.targetReps = String(targetReps);
-        button.setAttribute("aria-label", `Record ${reps} of ${targetReps} reps`);
-        button.addEventListener("pointerdown", startRepBoxDrag);
-        button.addEventListener("pointerenter", continueRepBoxDrag);
-        button.addEventListener("click", recordRepBoxClick);
-        row.append(button);
+      row.innerHTML = renderRepBoxUnits({
+        workoutId: tile.dataset.workoutId || "",
+        blockId: tile.dataset.blockId || "",
+        movementId: tile.dataset.movementId || "",
+        setIndex: Number(tile.dataset.setIndex || 0),
+        targetReps,
+        completedReps,
+        totalSlots: targetReps + extra
       });
     }
 
