@@ -1011,7 +1011,7 @@
       box-shadow: inset 0 0 0 2px var(--accent);
       background: var(--accent-soft);
       color: var(--ink);
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 850;
       text-align: center;
     }
@@ -3042,7 +3042,7 @@
             <strong data-live-progress-percent>${progress.percent}%</strong>
           </div>
           <span class="live-progress-track" aria-hidden="true"><span class="live-progress-fill"></span></span>
-          <span class="movement-count" data-live-progress-count>${progress.completed}/${progress.total} movements complete</span>
+          <span class="movement-count" data-live-progress-count>${progress.completed}/${progress.total} reps complete</span>
         </div>
       `;
     }
@@ -3090,12 +3090,22 @@
 
     function liveWorkoutProgress(workout) {
       const entries = workoutEntries(workout).filter(entry => movementById(entry.movementId));
-      const total = entries.length;
-      const completed = entries.filter(entry => liveMovementComplete(workout, entry)).length;
+      const totals = entries.reduce((summary, entry) => {
+        const movement = movementById(entry.movementId);
+        const plan = movementProgressionPlan(movement, entry, workout);
+        plan.setTargets.forEach((target, setIndex) => {
+          const set = displayLiveSet(entry, target, setIndex);
+          const targetReps = Math.max(1, nullableInteger(set.targetReps) || 1);
+          const completedReps = Math.max(0, nullableInteger(set.completedReps) || 0);
+          summary.total += targetReps;
+          summary.completed += set.done ? targetReps : Math.min(completedReps, targetReps);
+        });
+        return summary;
+      }, { total: 0, completed: 0 });
       return {
-        total,
-        completed,
-        percent: total ? Math.round((completed / total) * 100) : 0
+        total: totals.total,
+        completed: totals.completed,
+        percent: totals.total ? Math.round((totals.completed / totals.total) * 100) : 0
       };
     }
 
@@ -3500,7 +3510,7 @@
       const percent = progressRoot.querySelector("[data-live-progress-percent]");
       const count = progressRoot.querySelector("[data-live-progress-count]");
       if (percent) percent.textContent = `${progress.percent}%`;
-      if (count) count.textContent = `${progress.completed}/${progress.total} movements complete`;
+      if (count) count.textContent = `${progress.completed}/${progress.total} reps complete`;
     }
 
     function syncExtraRepBoxes(tile, completedReps, targetReps) {
