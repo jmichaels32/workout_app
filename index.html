@@ -1521,10 +1521,9 @@
       color: var(--muted);
     }
 
-    .collection-rack,
-    .collection-options,
     .movement-card-tags,
-    .evidence-meta {
+    .evidence-meta,
+    .selected-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
@@ -1588,74 +1587,111 @@
       background: var(--panel);
     }
 
-    .collection-picker {
+    .collection-tree,
+    .collection-sort-tree {
       display: grid;
+      grid-template-columns: minmax(128px, 0.7fr) minmax(142px, 1fr) minmax(142px, 1fr);
       gap: 8px;
+      align-items: start;
+      overflow-x: auto;
     }
 
-    .collection-rack {
+    .collection-sort-tree {
+      grid-template-columns: minmax(128px, 0.8fr) minmax(150px, 1fr) minmax(116px, 0.75fr);
+    }
+
+    .collection-tree-column,
+    .sort-tree-column {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+      min-width: 0;
+      gap: 6px;
+      padding-left: 8px;
+      border-left: 1px solid var(--ink-12);
+      animation: tree-branch-open 160ms ease-out;
     }
 
-    .collection-rack .tag {
-      justify-content: space-between;
+    .collection-tree-column:first-child,
+    .sort-tree-column:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .collection-tree-column-header {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .collection-tree-button,
+    .sort-tree-button,
+    .sort-direction-button {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 8px;
       width: 100%;
       min-height: 44px;
+      padding: 8px;
+      text-align: left;
+      background: var(--control);
+      border-color: var(--control-line);
+      color: var(--ink);
+      font-size: 12px;
     }
 
-    .collection-rack .tag::after {
-      content: "+";
+    .collection-tree-button::after,
+    .sort-tree-button::after {
+      content: "";
       color: var(--muted);
       font-weight: 700;
     }
 
-    .collection-rack .tag.active::after {
-      content: "-";
+    .collection-tree-button.branch::after,
+    .sort-tree-button.branch::after {
+      content: ">";
+    }
+
+    .collection-tree-button span,
+    .sort-tree-button span,
+    .sort-direction-button span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .collection-tree-button.active,
+    .sort-tree-button.active,
+    .sort-direction-button.active {
+      border-color: var(--accent-line);
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-weight: 800;
+    }
+
+    .collection-tree-button.active span,
+    .sort-tree-button.active span,
+    .sort-direction-button.active span {
       color: var(--accent-ink);
     }
 
-    .collection-rack .tag.has-selection:not(.active) {
+    .collection-tree-button.open:not(.active),
+    .sort-tree-button.open:not(.active) {
+      border-color: var(--line);
+      background: var(--panel-2);
+      color: var(--ink);
+    }
+
+    .collection-tree-button.partial:not(.active) {
       border-color: var(--accent-line);
       background: var(--accent-soft);
       color: var(--ink);
     }
 
-    .collection-options,
     .selected-tags {
       padding-top: 8px;
       border-top: 1px solid var(--ink-12);
-    }
-
-    .region-filter-tree {
-      display: grid;
-      gap: 6px;
-      width: 100%;
-    }
-
-    .region-macro-row {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 6px;
-    }
-
-    .region-sub-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      padding-top: 6px;
-      border-top: 1px solid var(--ink-12);
-    }
-
-    .region-macro-row .tag {
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .tag.open:not(.active) {
-      border-color: var(--control-line);
-      background: var(--control);
-      color: var(--ink);
     }
 
     .collection-sort {
@@ -1663,60 +1699,65 @@
       gap: 6px;
     }
 
-    .collection-sort-row {
+    .sort-direction-cell {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      min-width: 0;
       gap: 6px;
+      padding-left: 8px;
+      border-left: 1px solid var(--ink-12);
     }
 
-    .sort-button {
-      min-height: 38px;
-      padding: 7px 8px;
-      background: var(--control);
-      border-color: var(--control-line);
-      color: var(--ink);
-      font-size: 12px;
-    }
-
-    .sort-button.active {
-      border-color: var(--group-color, var(--accent-line));
-      background: color-mix(in srgb, var(--group-color, var(--accent)) 16%, var(--panel));
-      color: var(--ink);
-    }
-
-    .sort-subtype-menu {
+    .sort-gear-row {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: 42px minmax(0, 1fr);
       gap: 6px;
-      overflow: hidden;
+      align-items: center;
     }
 
-    .sort-subtype-grid {
+    .sort-gear-button {
       display: grid;
-      grid-column: var(--sort-column, 2);
-      gap: 6px;
-      transform-origin: top;
-      animation: subtype-open 170ms ease-out;
-    }
-
-    .sort-subtype-button {
-      min-height: 38px;
-      padding: 7px 8px;
+      place-items: center;
+      width: 42px;
+      min-width: 42px;
+      min-height: 42px;
       border-color: var(--control-line);
       background: var(--control);
       color: var(--ink);
-      font-size: 12px;
+      font-size: 18px;
+      font-weight: 900;
     }
 
-    .sort-subtype-button.active {
-      border-color: var(--group-color, var(--accent-line));
-      background: color-mix(in srgb, var(--group-color, var(--accent)) 16%, var(--panel));
+    .sort-gear-button.active {
+      border-color: var(--line);
+      background: var(--panel-2);
       color: var(--ink);
     }
 
-    @keyframes subtype-open {
-      from { max-height: 0; opacity: 0; transform: scaleY(0.96) translateY(-4px); }
-      to { max-height: 340px; opacity: 1; transform: scaleY(1) translateY(0); }
+    .sort-direction-label {
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .sort-direction-label span {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .sort-direction-menu {
+      display: grid;
+      gap: 6px;
+      animation: tree-branch-open 160ms ease-out;
+    }
+
+    @keyframes tree-branch-open {
+      from { opacity: 0; transform: translateX(-5px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
     .tag {
@@ -2224,8 +2265,9 @@
         background: var(--accent-soft);
       }
 
-      .collection-rack .tag.has-selection:not(.active),
-      .tag.open:not(.active) {
+      .collection-tree-button.open:not(.active),
+      .collection-tree-button.partial:not(.active),
+      .sort-tree-button.open:not(.active) {
         border-color: var(--control-line);
         background: var(--control);
       }
@@ -2296,10 +2338,10 @@
       .collection-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .collection-menu-button { padding: 8px; }
       .collection-menu-button span { font-size: 11px; }
-      .collection-sort-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .sort-subtype-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .sort-subtype-grid { grid-column: 1 / -1; }
-      .region-macro-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .collection-tree,
+      .collection-sort-tree {
+        grid-template-columns: repeat(3, minmax(126px, 1fr));
+      }
       .home-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .home-stat { min-height: 54px; padding: 8px; }
       .home-stat strong { font-size: 18px; }
@@ -2343,7 +2385,7 @@
       .block-movement-row button { width: 100%; }
       .workout-builder-save-footer { grid-template-columns: 1fr; }
       .workout-builder-save-footer button { width: 100%; }
-      .collection-options, .movement-card-tags { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+      .movement-card-tags { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
       .rating-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 6px;
@@ -2541,6 +2583,7 @@
     let collectionSortSubtype = null;
     let collectionSortDirection = "none";
     let collectionSortMenuOpen = false;
+    let collectionSortDirectionOpen = false;
     let activeMovementId = null;
     let compareAnchorId = null;
     let compareTargetId = null;
@@ -5220,15 +5263,15 @@
 
     function renderCollectionFilterPanel() {
       return `
-        <div class="collection-dropdown-panel collection-picker" aria-label="Movement filters">
-          <div class="collection-rack">
-            ${movementCollections().map(renderCollectionRackButton).join("")}
-          </div>
-          ${activeCollectionGroup ? `
-            <div class="collection-options">
-              ${renderCollectionOptions()}
+        <div class="collection-dropdown-panel" aria-label="Movement filters">
+          <div class="collection-tree">
+            <div class="collection-tree-column">
+              <span class="collection-tree-column-header">Category</span>
+              ${movementCollections().map(renderCollectionRootButton).join("")}
             </div>
-          ` : ""}
+            ${activeCollectionGroup ? renderCollectionBranchColumn() : ""}
+            ${activeCollectionGroup === "region" && activeRegionMacro ? renderRegionLeafColumn(activeRegionMacro) : ""}
+          </div>
           ${selectedCollectionTags.length ? `
             <div class="selected-tags">
               ${selectedCollectionTagObjects().map(renderSelectedCollectionTag).join("")}
@@ -5241,69 +5284,88 @@
     function renderCollectionSortPanel() {
       return `
         <div class="collection-dropdown-panel">
-          ${renderCollectionSort()}
+          <div class="collection-sort-tree" aria-label="Movement sorting">
+            <div class="sort-tree-column">
+              <span class="collection-tree-column-header">Score</span>
+              ${Object.entries(SORT_LABELS).map(([key, label]) => renderSortMetricButton(key, label)).join("")}
+            </div>
+            ${renderSortBranchColumn()}
+            ${renderSortDirectionPanel()}
+          </div>
         </div>
       `;
     }
 
-    function renderCollectionSort() {
-      const directionActive = isSortingActive() ? " active" : "";
-      const directionStyle = isSortingActive() ? ratingStyle(collectionSortMetric) : "";
+    function renderSortBranchColumn() {
+      const ratings = sortSubtypeRatings();
+      if (!ratings || !collectionSortMenuOpen) return "";
       return `
-        <div class="collection-sort" aria-label="Movement sorting">
-          <div class="collection-sort-row">
-            ${Object.entries(SORT_LABELS).map(([key, label]) => renderSortButton(key, label)).join("")}
+        <div class="sort-tree-column" style="${ratingStyle(collectionSortMetric)}">
+          <span class="collection-tree-column-header">${escapeHTML(SORT_LABELS[collectionSortMetric])}</span>
+          ${Object.entries(ratings).map(([key, label]) => renderSortSubtypeButton(key, label)).join("")}
+        </div>
+      `;
+    }
+
+    function renderSortDirectionPanel() {
+      return `
+        <div class="sort-direction-cell">
+          <span class="collection-tree-column-header">Direction</span>
+          <div class="sort-gear-row">
             <button
               type="button"
-              class="sort-button${directionActive}"
-              style="${directionStyle}"
-              onclick="toggleSortDirection()"
-              aria-label="Toggle sort direction"
-            >${escapeHTML(SORT_DIRECTIONS[collectionSortDirection])}</button>
+              class="sort-gear-button${collectionSortDirectionOpen ? " active" : ""}"
+              onclick="toggleSortDirectionMenu()"
+              aria-expanded="${collectionSortDirectionOpen ? "true" : "false"}"
+              aria-label="Open sort direction settings"
+            >&#9881;</button>
+            <div class="sort-direction-label">
+              <span>Order</span>
+              ${escapeHTML(SORT_DIRECTIONS[collectionSortDirection])}
+            </div>
           </div>
-          ${renderSortSubtypePicker()}
+          ${collectionSortDirectionOpen ? `
+            <div class="sort-direction-menu">
+              ${Object.entries(SORT_DIRECTIONS).map(([key, label]) => `
+                <button
+                  type="button"
+                  class="sort-direction-button${collectionSortDirection === key ? " active" : ""}"
+                  onclick="setSortDirection('${escapeJS(key)}')"
+                  aria-pressed="${collectionSortDirection === key ? "true" : "false"}"
+                >${escapeHTML(label)}</button>
+              `).join("")}
+            </div>
+          ` : ""}
         </div>
       `;
     }
 
-    function renderSortSubtypePicker() {
-      const ratings = sortSubtypeRatings();
-      if (!ratings || !isSortingActive() || !collectionSortMenuOpen) return "";
-      const column = collectionSortMetric === "metadata" ? 3 : 2;
-      return `
-        <div class="sort-subtype-menu" style="${ratingStyle(collectionSortMetric)} --sort-column: ${column};">
-          <div class="sort-subtype-grid">
-            ${Object.entries(ratings).map(([key, label]) => `
-              <button
-                type="button"
-                class="sort-subtype-button${activeSortSubtype() === key ? " active" : ""}"
-                onclick="setCollectionSortSubtype('${escapeJS(key)}')"
-                aria-pressed="${activeSortSubtype() === key ? "true" : "false"}"
-              >${escapeHTML(label)}</button>
-            `).join("")}
-          </div>
-        </div>
-      `;
-    }
-
-    function renderSortButton(key, label) {
+    function renderSortMetricButton(key, label) {
       const active = isSortingActive() && collectionSortMetric === key ? " active" : "";
-      const buttonLabel = sortButtonLabel(key, label);
+      const open = collectionSortMetric === key && sortSubtypeRatings(key) && collectionSortMenuOpen ? " open" : "";
+      const branch = sortSubtypeRatings(key) ? " branch" : "";
       return `
         <button
           type="button"
-          class="sort-button${active}"
+          class="sort-tree-button${branch}${open}${active}"
           style="${ratingStyle(key)}"
           onclick="setCollectionSort('${escapeJS(key)}')"
           aria-pressed="${isSortingActive() && collectionSortMetric === key ? "true" : "false"}"
-        >${escapeHTML(buttonLabel)}</button>
+        >${escapeHTML(label)}</button>
       `;
     }
 
-    function sortButtonLabel(key, fallback) {
-      if (!isSortingActive() || collectionSortMetric !== key || collectionSortMenuOpen) return fallback;
-      const ratings = sortSubtypeRatings(key);
-      return ratings?.[activeSortSubtype()] || fallback;
+    function renderSortSubtypeButton(key, label) {
+      const active = isSortingActive() && activeSortSubtype() === key ? " active" : "";
+      return `
+        <button
+          type="button"
+          class="sort-tree-button${active}"
+          style="${ratingStyle(key)}"
+          onclick="setCollectionSortSubtype('${escapeJS(key)}')"
+          aria-pressed="${activeSortSubtype() === key ? "true" : "false"}"
+        >${escapeHTML(label)}</button>
+      `;
     }
 
     function filterControlLabel() {
@@ -5352,18 +5414,18 @@
       `;
     }
 
-    function renderCollectionRackButton(collection) {
+    function renderCollectionRootButton(collection) {
       const selectedCount = selectedCountForGroup(collection.label);
       const isActive = activeCollectionGroup === collection.label;
       const active = isActive ? " active" : "";
-      const selected = selectedCount ? " has-selection" : "";
+      const hasSelection = selectedCount > 0;
       return `
         <button
           type="button"
-          class="${tagClass(collectionTagFor(collection.label, collection.group))}${active}${selected}"
+          class="collection-tree-button branch${active}${hasSelection ? " partial" : ""}"
           onclick="openMovementGroup('${escapeJS(collection.label)}')"
           aria-label="Open ${escapeHTML(collectionTitle(collection))}"
-        >${escapeHTML(collectionTitle(collection))}${selectedCount ? ` ${selectedCount}` : ""}</button>
+          >${escapeHTML(collectionTitle(collection))}${selectedCount ? `<span>${selectedCount}</span>` : ""}</button>
       `;
     }
 
@@ -5373,43 +5435,54 @@
       return `
         <button
           type="button"
-          class="${tagClass(collectionTagFor(collection.label, collection.group))}${active}"
+          class="collection-tree-button${active}"
           onclick="toggleCollectionTag('${escapeJS(collection.label)}', '${escapeJS(collection.group)}')"
           aria-pressed="${isActive ? "true" : "false"}"
-        >${escapeHTML(collectionTitle(collection))}</button>
+        >${escapeHTML(collectionTitle(collection))}<span>${collection.count}</span></button>
       `;
     }
 
-    function renderCollectionOptions() {
-      if (activeCollectionGroup === "region") return renderRegionCollectionOptions();
-      return collectionFilters().map(renderCollectionFilter).join("");
+    function renderCollectionBranchColumn() {
+      if (activeCollectionGroup === "region") return renderRegionMacroColumn();
+      return `
+        <div class="collection-tree-column">
+          <span class="collection-tree-column-header">${escapeHTML(tagGroupLabel(activeCollectionGroup))}</span>
+          ${collectionFilters().map(renderCollectionFilter).join("") || `<span class="movement-count">No options yet.</span>`}
+        </div>
+      `;
     }
 
-    function renderRegionCollectionOptions() {
+    function renderRegionMacroColumn() {
       return `
-        <div class="region-filter-tree">
-          <div class="region-macro-row">
-            ${REGION_MACRO_ORDER.map(renderRegionMacroFilter).join("")}
-          </div>
-          ${activeRegionMacro ? `
-            <div class="region-sub-row">
-              ${regionSubFilters(activeRegionMacro).map(renderCollectionFilter).join("") || `<span class="movement-count">No subgroups yet.</span>`}
-            </div>
-          ` : ""}
+        <div class="collection-tree-column">
+          <span class="collection-tree-column-header">Muscle group</span>
+          ${REGION_MACRO_ORDER.map(renderRegionMacroFilter).join("")}
+        </div>
+      `;
+    }
+
+    function renderRegionLeafColumn(macro) {
+      const filters = regionSubFilters(macro);
+      return `
+        <div class="collection-tree-column">
+          <span class="collection-tree-column-header">${escapeHTML(macro)}</span>
+          ${filters.map(renderCollectionFilter).join("") || `<span class="movement-count">No subgroups yet.</span>`}
         </div>
       `;
     }
 
     function renderRegionMacroFilter(label) {
       const count = regionMacroCount(label);
-      const selected = isCollectionTagSelected(label, "region") ? " active" : "";
+      const selected = isRegionMacroSelected(label) ? " active" : "";
+      const partial = isRegionMacroPartial(label) ? " partial" : "";
       const open = activeRegionMacro === label ? " open" : "";
+      const branch = regionSubFilters(label).length ? " branch" : "";
       return `
         <button
           type="button"
-          class="${tagClass({ group: "region", label })}${selected}${open}"
+          class="collection-tree-button${branch}${open}${selected}${partial}"
           onclick="toggleRegionMacro('${escapeJS(label)}')"
-          aria-pressed="${isCollectionTagSelected(label, "region") ? "true" : "false"}"
+          aria-pressed="${isRegionMacroSelected(label) ? "true" : "false"}"
         >${escapeHTML(label)} <span>${count}</span></button>
       `;
     }
@@ -5540,7 +5613,10 @@
 
     function toggleCollectionFilters(options = {}) {
       collectionFiltersOpen = !collectionFiltersOpen;
-      if (collectionFiltersOpen) collectionSortOpen = false;
+      if (collectionFiltersOpen) {
+        collectionSortOpen = false;
+        collectionSortDirectionOpen = false;
+      }
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -5548,7 +5624,12 @@
 
     function toggleCollectionSortPanel(options = {}) {
       collectionSortOpen = !collectionSortOpen;
-      if (collectionSortOpen) collectionFiltersOpen = false;
+      if (collectionSortOpen) {
+        collectionFiltersOpen = false;
+        collectionSortMenuOpen = Boolean(sortSubtypeRatings(collectionSortMetric));
+      } else {
+        collectionSortDirectionOpen = false;
+      }
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -5556,11 +5637,19 @@
 
     function toggleCollectionTag(label, group, options = {}) {
       const key = collectionTagKey(label, group);
-      selectedCollectionTags = isCollectionTagSelected(label, group)
+      let nextTags = isCollectionTagSelected(label, group)
         ? selectedCollectionTags.filter(item => item !== key)
         : [...selectedCollectionTags, key];
+      if (group === "region" && labelIsRegionSubgroup(label)) {
+        const macro = regionMacroForLabel(label);
+        nextTags = nextTags.filter(item => item !== collectionTagKey(macro, "region"));
+        activeRegionMacro = macro;
+      } else if (group === "region" && REGION_MACRO_ORDER.includes(label)) {
+        activeRegionMacro = label;
+      }
+      selectedCollectionTags = uniqueCollectionTagKeys(nextTags);
       activeCollectionGroup = group;
-      if (group === "region") activeRegionMacro = regionMacroForLabel(label);
+      if (group !== "region") activeRegionMacro = null;
       collectionFiltersOpen = true;
       movementView = "collection";
       activeMovementId = null;
@@ -5575,6 +5664,7 @@
       collectionSortDirection = collectionSortDirection === "none" ? "desc" : collectionSortDirection;
       collectionSortOpen = true;
       collectionFiltersOpen = false;
+      collectionSortDirectionOpen = false;
       collectionSortMenuOpen = Boolean(sortSubtypeRatings(collectionSortMetric)) &&
         (!sameActiveMetric || !collectionSortMenuOpen);
       movementView = "collection";
@@ -5584,8 +5674,10 @@
 
     function setCollectionSortSubtype(subtype, options = {}) {
       collectionSortSubtype = normalizeSortSubtype(collectionSortMetric, subtype);
-      collectionSortMenuOpen = false;
-      collectionSortOpen = false;
+      collectionSortDirection = collectionSortDirection === "none" ? "desc" : collectionSortDirection;
+      collectionSortMenuOpen = true;
+      collectionSortOpen = true;
+      collectionSortDirectionOpen = false;
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -5596,6 +5688,26 @@
       if (!isSortingActive()) collectionSortMenuOpen = false;
       collectionSortOpen = true;
       collectionFiltersOpen = false;
+      collectionSortDirectionOpen = false;
+      movementView = "collection";
+      activeMovementId = null;
+      renderMovementApp(options);
+    }
+
+    function toggleSortDirectionMenu(options = {}) {
+      collectionSortDirectionOpen = !collectionSortDirectionOpen;
+      collectionSortOpen = true;
+      collectionFiltersOpen = false;
+      movementView = "collection";
+      activeMovementId = null;
+      renderMovementApp(options);
+    }
+
+    function setSortDirection(direction, options = {}) {
+      collectionSortDirection = normalizeSortDirection(direction, true);
+      collectionSortOpen = true;
+      collectionFiltersOpen = false;
+      collectionSortDirectionOpen = false;
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
@@ -5604,17 +5716,30 @@
     function openMovementGroup(group, options = {}) {
       activeCollectionGroup = group;
       if (group !== "region") activeRegionMacro = null;
-      if (group === "region" && !activeRegionMacro) activeRegionMacro = firstRegionMacro();
+      if (group === "region" && !activeRegionMacro) activeRegionMacro = inferActiveRegionMacro();
       collectionFiltersOpen = true;
       collectionSortOpen = false;
+      collectionSortDirectionOpen = false;
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
     }
 
     function toggleRegionMacro(label, options = {}) {
+      const labels = regionMacroSelectionLabels(label);
+      const keys = labels.map(item => collectionTagKey(item, "region"));
+      const allSelected = Boolean(keys.length && keys.every(key => selectedCollectionTags.includes(key)));
       activeRegionMacro = label;
-      toggleCollectionTag(label, "region", options);
+      activeCollectionGroup = "region";
+      selectedCollectionTags = selectedCollectionTags.filter(key => !keys.includes(key));
+      if (!allSelected) selectedCollectionTags = [...selectedCollectionTags, ...keys];
+      selectedCollectionTags = uniqueCollectionTagKeys(selectedCollectionTags);
+      collectionFiltersOpen = true;
+      collectionSortOpen = false;
+      collectionSortDirectionOpen = false;
+      movementView = "collection";
+      activeMovementId = null;
+      renderMovementApp(options);
     }
 
     function openMovementBackToCollection(options = {}) {
@@ -5732,6 +5857,7 @@
       collectionSortSubtype = normalizeSortSubtype(collectionSortMetric, params.get("rating"));
       collectionSortDirection = normalizeSortDirection(params.get("direction"), Boolean(routeSortMetric));
       collectionSortMenuOpen = false;
+      collectionSortDirectionOpen = false;
       const routeCompareAnchor = movementById(params.get("compare"));
       const routeCompareTarget = movementById(params.get("compareWith"));
       const routeCompareOrigin = movementById(params.get("compareOrigin")) || routeCompareAnchor;
@@ -5925,6 +6051,7 @@
         collectionFiltersOpen = false;
         collectionSortOpen = false;
         collectionSortMenuOpen = false;
+        collectionSortDirectionOpen = false;
         activeMovementId = event.state.activeMovementId || null;
         compareAnchorId = event.state.compareAnchorId || null;
         compareTargetId = event.state.compareTargetId || null;
@@ -6007,7 +6134,7 @@
     function inferActiveRegionMacro() {
       const regionTag = selectedCollectionTagObjects().find(tag => tag.group === "region");
       if (regionTag) return regionMacroForLabel(regionTag.label);
-      return activeCollectionGroup === "region" ? firstRegionMacro() : null;
+      return null;
     }
 
     function regionMacroForLabel(label) {
@@ -6017,6 +6144,29 @@
 
     function labelIsRegionSubgroup(label) {
       return Object.values(REGION_HIERARCHY).some(labels => labels.includes(label));
+    }
+
+    function regionMacroSelectionLabels(label) {
+      const labels = [label, ...regionSubFilters(label).map(filter => filter.label)];
+      return labels
+        .filter((item, index) => labels.indexOf(item) === index)
+        .filter(item => collectionCount(item, "region") > 0);
+    }
+
+    function isRegionMacroSelected(label) {
+      const childLabels = regionSubFilters(label).map(filter => filter.label);
+      if (isCollectionTagSelected(label, "region")) return true;
+      return Boolean(childLabels.length && childLabels.every(item => isCollectionTagSelected(item, "region")));
+    }
+
+    function isRegionMacroPartial(label) {
+      const selected = regionMacroSelectionLabels(label)
+        .filter(item => isCollectionTagSelected(item, "region"));
+      return Boolean(selected.length && !isRegionMacroSelected(label));
+    }
+
+    function uniqueCollectionTagKeys(keys) {
+      return [...new Set(keys.map(String))];
     }
 
     function collectionMovements(label = null, group = null) {
@@ -6158,15 +6308,7 @@
     }
 
     function effectiveSelectedTags(selectedTags) {
-      const selectedSubRegionMacros = new Set(selectedTags
-        .filter(tag => tag.group === "region" && labelIsRegionSubgroup(tag.label))
-        .map(tag => regionMacroForLabel(tag.label))
-      );
-      return selectedTags.filter(tag => {
-        if (tag.group !== "region") return true;
-        if (!REGION_MACRO_ORDER.includes(tag.label)) return true;
-        return !selectedSubRegionMacros.has(tag.label);
-      });
+      return selectedTags;
     }
 
     function collectionTagFor(label, group) {
