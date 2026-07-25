@@ -114,15 +114,6 @@
     ],
     "support": [
       {
-        "name": "Erector spinae",
-        "evidenceShort": "Review evidence includes erector spinae in the hip-thrust excitation sequence.",
-        "evidence": "Systematic review evidence reports erector spinae involvement during barbell hip thrusts, consistent with trunk and lumbopelvic stabilization under a loaded bar.",
-        "sourceIds": [
-          "krause-neto-2019",
-          "otsuka-2021"
-        ]
-      },
-      {
         "name": "Gluteus medius",
         "evidenceShort": "Measured as a stabilizing gluteal contributor in hip-thrust research.",
         "evidence": "Hip-thrust review evidence includes gluteus medius among muscles evaluated. It is classified as support because the standard bilateral barbell setup mainly demands sagittal-plane hip extension rather than frontal-plane hip control.",
@@ -143,12 +134,12 @@
     ]
   },
   "evidence": {
-    "verdict": "Barbell hip thrust: gluteus maximus primary; hamstrings secondary; erector spinae, gluteus medius, and quadriceps support.",
+    "verdict": "Barbell hip thrust: gluteus maximus primary; hamstrings secondary; gluteus medius and quadriceps support.",
     "clinicalShort": "EMG estimates acute excitation; biomechanics estimate joint demand. Neither directly guarantees hypertrophy, injury risk, or individual progression.",
     "limitsShort": "Bench height, foot distance, pelvic tilt, bar position, range of motion, load, and pause style materially change emphasis.",
-    "summary": "The barbell hip thrust is classified as a free-weight lower-body hip-extension movement. The evidence base supports a gluteus-maximus-dominant profile with meaningful hamstring contribution and visible trunk, gluteus medius, and quadriceps support demands.",
+    "summary": "The barbell hip thrust is classified as a free-weight lower-body hip-extension movement. The evidence base supports a gluteus-maximus-dominant profile with meaningful hamstring contribution plus visible gluteus medius and quadriceps support demands.",
     "clinicalInterpretation": "Surface electromyography should be interpreted alongside joint action, external load, range of motion, and technique. The classification here treats the standard barbell hip thrust as a loaded bilateral exercise, not a bodyweight bridge or single-leg variation.",
-    "limitations": "Machine, banded, American, single-leg, bodyweight bridge, and elevated-foot variants should be separate entries if the app needs variant-specific scoring.",
+    "limitations": "Machine, banded, American, single-leg, bodyweight bridge, and elevated-foot variants should be separate entries if the app needs variant-specific scoring. Trunk and lumbopelvic stabilization are acknowledged in the evidence but are not shown as a separate visible muscle-map target for this entry.",
     "studies": [
       {
         "id": "contreras-2015",
@@ -177,7 +168,6 @@
         "usedFor": [
           "primary muscle role",
           "secondary muscle role",
-          "support muscle role",
           "athletic transfer score",
           "limitations"
         ]
@@ -208,7 +198,6 @@
         "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251418",
         "relevance": "Biomechanical source for lumbopelvic and hip-extension demand in trained sprinters.",
         "usedFor": [
-          "support muscle role",
           "athletic transfer score",
           "joint resilience score"
         ]

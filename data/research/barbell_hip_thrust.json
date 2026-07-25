@@ -45,7 +45,7 @@
     },
     {
       "path": "data/anatomy.json",
-      "notes": "Confirmed gluteus maximus, hamstrings, erector spinae, gluteus medius, and quadriceps all resolve to local anatomy mesh mappings."
+      "notes": "Confirmed gluteus maximus, hamstrings, gluteus medius, and quadriceps all resolve to local anatomy mesh mappings. Erector spinae was reviewed but excluded from the visible map to avoid loading a full back mesh group for a lower-body hip-extension card."
     }
   ],
   "excludedSources": [
@@ -54,5 +54,5 @@
       "reason": "Useful for practical vocabulary, but not used for muscle roles or ratings because peer-reviewed EMG and biomechanics sources were available."
     }
   ],
-  "notes": "This entry treats normal hip thrust as the standard loaded barbell version. Bodyweight glute bridge, single-leg hip thrust, banded hip thrust, American hip thrust, and machine hip thrust should remain separate movement entries."
+  "notes": "This entry treats normal hip thrust as the standard loaded barbell version. Bodyweight glute bridge, single-leg hip thrust, banded hip thrust, American hip thrust, and machine hip thrust should remain separate movement entries. Lumbopelvic and trunk stabilization is noted in the evidence record, but erector spinae is not displayed as a separate visible target in the MVP muscle map."
 }

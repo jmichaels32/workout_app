@@ -2152,6 +2152,14 @@
       font-weight: 700;
     }
 
+    .anatomy-fallback-chip.workout {
+      --chip-color: var(--accent);
+      --chip-alpha: 35%;
+      border-color: color-mix(in srgb, var(--chip-color) 44%, var(--soft-line));
+      background: color-mix(in srgb, var(--chip-color) var(--chip-alpha), var(--panel));
+      color: var(--ink);
+    }
+
     .anatomy-selection-label {
       position: absolute;
       left: 10px;
@@ -6365,18 +6373,7 @@
     }
 
     function movementSearchText(movement) {
-      return normalizeSearchText([
-        movement.id,
-        movement.name,
-        movement.family,
-        movement.equipment,
-        movement.variantType,
-        movement.variant,
-        movement.description,
-        ...(movement.aliases || []),
-        ...(movement.tags || []).flatMap(tag => [tag.label, tag.group]),
-        ...ROLE_GROUPS.flatMap(group => movementMuscles(movement, group.key).map(muscle => muscle.name))
-      ].join(" "));
+      return normalizeSearchText(movement.name);
     }
 
     function normalizeSearchText(value) {
@@ -7021,14 +7018,16 @@
 
         const parts = workout ? workoutMeshParts(workout) : movementMeshParts(movement);
         if (!parts.length) {
-          const viewer = workout ? null : createMuscleMapFallback(container, movement);
+          const viewer = createSubjectFallback(container, subject);
           initializedViewers.add(container);
           if (viewer) {
-            viewersByMovementId.set(movement.id, viewer);
-            const selectedMuscle = window.workoutApp?.selectedMuscles?.[movement.id];
-            if (selectedMuscle) viewer.setSelection(selectedMuscle);
+            if (movement) {
+              viewersByMovementId.set(movement.id, viewer);
+              const selectedMuscle = window.workoutApp?.selectedMuscles?.[movement.id];
+              if (selectedMuscle) viewer.setSelection(selectedMuscle);
+            }
           } else {
-            showViewerMessage(container, "No local workout meshes");
+            showViewerMessage(container, workout ? "No local workout meshes" : "No local movement meshes");
           }
           return;
         }
@@ -7043,7 +7042,13 @@
         } catch (error) {
           initializedViewers.add(container);
           console.error("Could not initialize local anatomy viewer", error);
-          showViewerMessage(container, "3D viewer unavailable");
+          const viewer = createSubjectFallback(container, subject);
+          if (viewer && movement) {
+            viewersByMovementId.set(movement.id, viewer);
+            const selectedMuscle = window.workoutApp?.selectedMuscles?.[movement.id];
+            if (selectedMuscle) viewer.setSelection(selectedMuscle);
+          }
+          if (!viewer) showViewerMessage(container, "3D viewer unavailable");
         }
       });
     };
@@ -7123,7 +7128,9 @@
         const loadedMeshCount = [...meshesByMuscleId.values()].reduce((sum, meshes) => sum + meshes.length, 0);
         if (!loadedMeshCount) {
           if (failed.length) console.warn("BodyParts3D mesh load failures", failed);
-          showViewerMessage(container, "3D mesh unavailable");
+          const fallbackViewer = createSubjectFallback(container, movement);
+          if (!isWorkoutSubject(movement) && fallbackViewer) viewersByMovementId.set(movement.id, fallbackViewer);
+          if (!fallbackViewer) showViewerMessage(container, "3D mesh unavailable");
           return;
         }
         if (failed.length) console.warn("BodyParts3D partial mesh load failures", failed);
@@ -7396,6 +7403,60 @@
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       renderer.setSize(width, height, false);
+    }
+
+    function createSubjectFallback(container, subject) {
+      return isWorkoutSubject(subject)
+        ? createWorkoutMapFallback(container, subject)
+        : createMuscleMapFallback(container, subject);
+    }
+
+    function isWorkoutSubject(subject) {
+      return Boolean(subject?.blocks || subject?.movements || subject?.date);
+    }
+
+    function createWorkoutMapFallback(container, workout) {
+      const app = window.workoutApp || {};
+      const heatmap = app.workoutMuscleHeatmap?.(workout) || [];
+      if (!heatmap.length) return null;
+
+      const root = document.createElement("div");
+      root.className = "anatomy-fallback";
+
+      const header = document.createElement("div");
+      const title = document.createElement("h4");
+      title.textContent = "Muscle map";
+      const note = document.createElement("p");
+      note.textContent = "3D viewer unavailable; showing the workout heatmap.";
+      header.append(title, note);
+
+      const grid = document.createElement("div");
+      grid.className = "anatomy-fallback-grid";
+
+      const card = document.createElement("div");
+      card.className = "anatomy-fallback-role";
+      const muscles = document.createElement("div");
+      muscles.className = "anatomy-fallback-muscles";
+      const maxScore = Math.max(...heatmap.map(item => Number(item.score) || 0), 1);
+      const color = /^#[0-9a-f]{6}$/i.test(String(workout.color || "")) ? workout.color : "#c8ff00";
+
+      heatmap.forEach(item => {
+        const intensity = Math.max(0.08, Math.min(1, (Number(item.score) || 0) / maxScore));
+        const chip = document.createElement("span");
+        chip.className = "anatomy-fallback-chip workout";
+        chip.style.setProperty("--chip-color", color);
+        chip.style.setProperty("--chip-alpha", `${Math.round(18 + intensity * 58)}%`);
+        chip.title = `${item.name}: ${item.score}`;
+        chip.textContent = item.name;
+        muscles.append(chip);
+      });
+
+      card.append(muscles);
+      grid.append(card);
+      root.append(header, grid);
+      container.replaceChildren(root);
+
+      return { setSelection() {} };
     }
 
     function createMuscleMapFallback(container, movement) {
