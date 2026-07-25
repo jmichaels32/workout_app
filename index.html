@@ -1263,14 +1263,57 @@
       padding: 12px;
     }
 
+    .block-header {
+      align-items: start;
+    }
+
+    .block-header > div:first-child {
+      min-width: 0;
+    }
+
     .block-header h3 {
       margin: 0;
     }
 
     .block-actions {
       display: flex;
-      gap: 6px;
+      flex: 0 0 auto;
+      gap: 4px;
       justify-content: flex-end;
+    }
+
+    .block-icon-button {
+      display: grid;
+      width: 34px;
+      min-width: 34px;
+      height: 34px;
+      min-height: 34px;
+      padding: 0;
+      place-items: center;
+      border-color: var(--control-line);
+      background: var(--panel);
+      color: var(--ink);
+    }
+
+    .block-icon-button.add {
+      border-color: var(--add-line);
+      background: var(--add-soft);
+    }
+
+    .block-icon-button.danger:hover,
+    .block-icon-button.danger:focus-visible {
+      border-color: #b00020;
+      background: #fff2f2;
+    }
+
+    .block-icon-button svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 2;
     }
 
     .block-movement-list {
@@ -1279,10 +1322,32 @@
     }
 
     .block-movement-row {
-      padding: 10px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
     }
 
-    .block-movement-row strong {
+    .block-movement-title-button {
+      display: grid;
+      min-width: 0;
+      min-height: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+    }
+
+    .block-movement-title-button:hover,
+    .block-movement-title-button:focus-visible {
+      background: transparent;
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .block-movement-title-button strong {
       display: block;
       overflow-wrap: anywhere;
     }
@@ -2363,6 +2428,22 @@
       .block-movement-row .compare-tray-actions { width: 100%; }
       .block-actions button,
       .block-movement-row button { width: 100%; }
+      .block-header {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+      .block-actions {
+        width: auto;
+      }
+      .block-actions .block-icon-button,
+      .block-movement-row .block-icon-button {
+        width: 34px;
+        min-width: 34px;
+      }
+      .block-movement-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+      }
       .workout-builder-save-footer { grid-template-columns: 1fr; }
       .workout-builder-save-footer button { width: 100%; }
       .movement-card-tags { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
@@ -3773,8 +3854,22 @@
               <h3>${isInterleaved ? "Interleaved Block" : "Movement Block"}</h3>
             </div>
             <div class="block-actions">
-              <button type="button" class="add-movement-button" onclick="openWorkoutMovementPicker('${escapeJS(workout.id)}', '${escapeJS(block.id)}')">Add Movement</button>
-              ${workoutBlocks(workout).length > 1 ? `<button type="button" class="delete-button" onclick="removeWorkoutBlock('${escapeJS(workout.id)}', '${escapeJS(block.id)}')">Remove Block</button>` : ""}
+              <button
+                type="button"
+                class="block-icon-button add"
+                onclick="openWorkoutMovementPicker('${escapeJS(workout.id)}', '${escapeJS(block.id)}')"
+                aria-label="Add movement to block ${index + 1}"
+                title="Add movement"
+              >${renderUiIcon("plus")}</button>
+              ${workoutBlocks(workout).length > 1 ? `
+                <button
+                  type="button"
+                  class="block-icon-button danger"
+                  onclick="removeWorkoutBlock('${escapeJS(workout.id)}', '${escapeJS(block.id)}')"
+                  aria-label="Remove block ${index + 1}"
+                  title="Remove block"
+                >${renderUiIcon("trash")}</button>
+              ` : ""}
             </div>
           </div>
           <div class="block-movement-list">
@@ -3789,16 +3884,45 @@
       if (!movement) return "";
       return `
         <div class="block-movement-row">
-          <div>
+          <button
+            type="button"
+            class="block-movement-title-button"
+            onclick="viewWorkoutMovement('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')"
+            aria-label="View ${escapeHTML(movement.name)}"
+          >
             <strong>${escapeHTML(movement.name)}</strong>
             <span class="movement-count">${escapeHTML(movementMuscles(movement, "primary").map(muscle => muscle.name).join(", ") || "Primary pending")}</span>
-          </div>
-          <div class="compare-tray-actions">
-            <button type="button" class="compare-button" onclick="viewWorkoutMovement('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')">View</button>
-            <button type="button" class="delete-button" onclick="removeMovementFromBlock('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')">Remove</button>
-          </div>
+          </button>
+          <button
+            type="button"
+            class="block-icon-button danger"
+            onclick="removeMovementFromBlock('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')"
+            aria-label="Remove ${escapeHTML(movement.name)} from block"
+            title="Remove movement"
+          >${renderUiIcon("trash")}</button>
         </div>
       `;
+    }
+
+    function renderUiIcon(name) {
+      const icons = {
+        plus: `
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 5v14"></path>
+            <path d="M5 12h14"></path>
+          </svg>
+        `,
+        trash: `
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 6h18"></path>
+            <path d="M8 6V4h8v2"></path>
+            <path d="M19 6l-1 14H6L5 6"></path>
+            <path d="M10 11v5"></path>
+            <path d="M14 11v5"></path>
+          </svg>
+        `
+      };
+      return icons[name] || "";
     }
 
     function calendarDayLabel(date, dayWorkouts) {
