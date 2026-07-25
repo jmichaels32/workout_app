@@ -634,6 +634,56 @@
       margin-top: 10px;
     }
 
+    .workout-muscle-map {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--soft-line);
+      background: var(--panel);
+    }
+
+    .workout-muscle-map-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--soft-line);
+    }
+
+    .workout-muscle-map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(240px, 0.82fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .workout-map-visual {
+      display: grid;
+      gap: 8px;
+    }
+
+    .local-anatomy-viewer.workout-anatomy-viewer {
+      min-height: 460px;
+    }
+
+    .heatmap-legend {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .heatmap-legend-ramp {
+      height: 8px;
+      border: 1px solid var(--soft-line);
+      background: linear-gradient(90deg, #dfe8e1, var(--accent));
+    }
+
     .workout-heatmap-header {
       display: flex;
       align-items: center;
@@ -2271,6 +2321,8 @@
       .calendar-workout-button:focus-visible { width: min(100%, 82px); }
       .workout-template-tile { padding: 10px; }
       .workout-template-plus { width: 36px; height: 36px; font-size: 24px; }
+      .workout-muscle-map-grid { grid-template-columns: minmax(0, 1fr); }
+      .local-anatomy-viewer.workout-anatomy-viewer { min-height: 360px; }
       .schedule-modal { padding: 8px; }
       .schedule-dialog { width: 100%; max-height: 82dvh; }
       .live-block-grid { grid-template-columns: repeat(var(--movement-count, 1), minmax(154px, 1fr)); }
@@ -2536,6 +2588,9 @@
         workouts,
         workoutTemplates,
         muscleRolesForMovement,
+        muscleIdForName,
+        workoutMuscleHeatmap,
+        workoutRecordById,
         selectedMuscles
       };
     }
@@ -2795,7 +2850,6 @@
             <h3>${escapeHTML(workoutTitle(template))}</h3>
             <p class="listing-summary">${escapeHTML(workoutSummary(template, movements))}</p>
           </div>
-          ${renderWorkoutHeatmap(template, { compact: true, limit: 5 })}
         </button>
       `;
     }
@@ -2900,6 +2954,36 @@
       return Number.isInteger(number) ? String(number) : number.toFixed(1);
     }
 
+    function renderWorkoutMuscleMap(workout) {
+      const heatmap = workoutMuscleHeatmap(workout);
+      if (!heatmap.length) return "";
+      return `
+        <section class="workout-muscle-map" aria-label="Workout muscle map">
+          <div class="workout-muscle-map-head">
+            <p class="section-label">Muscle Map</p>
+            <span class="movement-count">${escapeHTML(formatHeatmapScore(workoutMovements(workout).length * WORKOUT_HEATMAP_POINTS_PER_MOVEMENT))} pts</span>
+          </div>
+          <div class="workout-muscle-map-grid">
+            <div class="movement-visual workout-map-visual">
+              <div
+                class="local-anatomy-viewer workout-anatomy-viewer"
+                data-workout-id="${escapeHTML(workout.id)}"
+                aria-label="${escapeHTML(workoutTitle(workout))} workout muscle activation viewer"
+              >
+                <div class="anatomy-loading">Loading workout muscle map</div>
+              </div>
+              <div class="heatmap-legend">
+                <span>Less</span>
+                <span class="heatmap-legend-ramp" aria-hidden="true"></span>
+                <span>More</span>
+              </div>
+            </div>
+            ${renderWorkoutHeatmap(workout)}
+          </div>
+        </section>
+      `;
+    }
+
     function renderWorkoutColorPicker(workout) {
       const activeColor = workoutColor(workout);
       return `
@@ -2959,11 +3043,11 @@
               <button type="button" class="detail-evidence-button" onclick="addWorkoutBlock('${escapeJS(workout.id)}')">Add Block</button>
               <button type="button" class="delete-button" onclick="deleteWorkout('${escapeJS(workout.id)}')">${isTemplate ? "Delete Template" : "Delete Workout"}</button>
             </div>
-            ${renderWorkoutHeatmap(workout)}
           </section>
           <section class="workout-block-list" aria-label="Workout flow">
             ${blocks.map((block, index) => renderWorkoutBlock(workout, block, index)).join("")}
           </section>
+          ${renderWorkoutMuscleMap(workout)}
           ${isTemplate ? "" : `
             <section class="workout-builder-save-footer" aria-label="Save scheduled workout">
               <span class="movement-count">Saved on ${escapeHTML(shortDateLabel(workout.date))}.</span>
@@ -3007,7 +3091,6 @@
               <span class="workout-color-chip" aria-hidden="true"></span>
             </div>
             <span class="movement-count">${escapeHTML(shortDateLabel(workout.date))}</span>
-            ${renderWorkoutHeatmap(workout)}
           </section>
           <section class="live-workout-list" aria-label="Live workout movements">
             ${blocks.map((block, index) => renderLiveWorkoutBlock(workout, block, index)).join("")}
@@ -6380,29 +6463,39 @@
         if (container.closest("[hidden], [inert]")) return;
         if (!hasVisibleSize(container)) return;
 
-        const movement = window.workoutApp?.movementLibrary?.find(item => item.id === container.dataset.movementId);
-        if (!movement) {
+        const workout = container.dataset.workoutId
+          ? window.workoutApp?.workoutRecordById?.(container.dataset.workoutId)
+          : null;
+        const movement = container.dataset.movementId
+          ? window.workoutApp?.movementLibrary?.find(item => item.id === container.dataset.movementId)
+          : null;
+        const subject = workout || movement;
+        if (!subject) {
           initializedViewers.add(container);
-          showViewerMessage(container, "Missing movement data");
+          showViewerMessage(container, container.dataset.workoutId ? "Missing workout data" : "Missing movement data");
           return;
         }
 
-        const parts = movementMeshParts(movement);
+        const parts = workout ? workoutMeshParts(workout) : movementMeshParts(movement);
         if (!parts.length) {
-          const viewer = createMuscleMapFallback(container, movement);
+          const viewer = workout ? null : createMuscleMapFallback(container, movement);
           initializedViewers.add(container);
-          viewersByMovementId.set(movement.id, viewer);
-          const selectedMuscle = window.workoutApp?.selectedMuscles?.[movement.id];
-          if (selectedMuscle) viewer.setSelection(selectedMuscle);
+          if (viewer) {
+            viewersByMovementId.set(movement.id, viewer);
+            const selectedMuscle = window.workoutApp?.selectedMuscles?.[movement.id];
+            if (selectedMuscle) viewer.setSelection(selectedMuscle);
+          } else {
+            showViewerMessage(container, "No local workout meshes");
+          }
           return;
         }
 
         try {
-          const viewer = createLocalAnatomyViewer(container, movement, parts);
+          const viewer = createLocalAnatomyViewer(container, subject, parts);
           initializedViewers.add(container);
-          viewersByMovementId.set(movement.id, viewer);
+          if (movement) viewersByMovementId.set(movement.id, viewer);
 
-          const selectedMuscle = window.workoutApp?.selectedMuscles?.[movement.id];
+          const selectedMuscle = movement ? window.workoutApp?.selectedMuscles?.[movement.id] : null;
           if (selectedMuscle) viewer.setSelection(selectedMuscle);
         } catch (error) {
           initializedViewers.add(container);
@@ -6523,7 +6616,7 @@
         meshesByMuscleId.forEach(meshes => {
           meshes.forEach(mesh => {
             const selected = mesh.userData.muscleId === muscleId;
-            mesh.material = materialForRole(mesh.userData.role, hasSelection && !selected ? "dimmed" : selected ? "selected" : "base");
+            mesh.material = materialForMeshState(mesh, hasSelection && !selected ? "dimmed" : selected ? "selected" : "base");
             setMeshOutline(mesh, selected);
           });
         });
@@ -6569,6 +6662,32 @@
       return [...parts, ...contextParts];
     }
 
+    function workoutMeshParts(workout) {
+      const app = window.workoutApp || {};
+      const musclesById = new Map((app.anatomyMuscles || []).map(muscle => [muscle.id, muscle]));
+      const heatmap = app.workoutMuscleHeatmap?.(workout) || [];
+      const maxScore = Math.max(...heatmap.map(item => Number(item.score) || 0), 1);
+      const usedMeshFiles = new Set();
+
+      return heatmap
+        .map(item => {
+          const muscleId = app.muscleIdForName?.(item.name) || fallbackMuscleId(item.name);
+          const muscle = musclesById.get(muscleId);
+          return {
+            muscle,
+            role: "workout",
+            score: Number(item.score) || 0,
+            intensity: Math.max(0.08, Math.min(1, (Number(item.score) || 0) / maxScore))
+          };
+        })
+        .filter(part => part.muscle?.meshFiles?.length)
+        .filter(part => {
+          const unseen = part.muscle.meshFiles.some(file => !usedMeshFiles.has(file));
+          part.muscle.meshFiles.forEach(file => usedMeshFiles.add(file));
+          return unseen;
+        });
+    }
+
     function movementContextGroup(movement, roles) {
       const roleIds = new Set(Object.keys(roles));
       const lowerBodyIds = ["quadriceps", "gluteus_maximus", "gluteus_medius", "adductor_longus", "gastrocnemius", "hamstrings", "biceps_femoris", "semitendinosus", "semimembranosus"];
@@ -6582,7 +6701,7 @@
       const meshBase = window.workoutApp?.anatomyMeshBase || "./assets/bodyparts3d/";
       const object = await loader.loadAsync(meshBase + file);
       const role = part.role;
-      const material = materialForRole(role, "base");
+      const material = materialForPart(part, "base");
       const muscleName = part.muscle.displayName || part.muscle.name;
 
       object.traverse(child => {
@@ -6591,6 +6710,8 @@
         child.userData.muscleId = part.muscle.id;
         child.userData.muscleName = muscleName;
         child.userData.role = role;
+        child.userData.score = part.score || 0;
+        child.userData.intensity = part.intensity || 0;
         child.renderOrder = role === "context" ? 1 : 2;
         if (!meshesByMuscleId.has(part.muscle.id)) {
           meshesByMuscleId.set(part.muscle.id, []);
@@ -6603,6 +6724,16 @@
 
       root.add(object);
       return object;
+    }
+
+    function materialForPart(part, state) {
+      if (part.role === "workout") return materialForWorkoutIntensity(part.intensity, state);
+      return materialForRole(part.role, state);
+    }
+
+    function materialForMeshState(mesh, state) {
+      if (mesh.userData.role === "workout") return materialForWorkoutIntensity(mesh.userData.intensity, state);
+      return materialForRole(mesh.userData.role, state);
     }
 
     function materialForRole(role, state) {
@@ -6624,6 +6755,37 @@
       }
 
       return roleMaterials.get(key);
+    }
+
+    function materialForWorkoutIntensity(intensity, state) {
+      const clamped = Math.max(0, Math.min(1, Number(intensity) || 0));
+      const bucket = Math.round(clamped * 12);
+      const key = `workout:${state}:${bucket}`;
+      if (!roleMaterials.has(key)) {
+        const color = state === "selected"
+          ? new THREE.Color(selectedMuscleColor)
+          : workoutHeatmapColor(bucket / 12);
+        const opacity = state === "dimmed" ? 0.22 : 0.52 + (bucket / 12) * 0.48;
+        roleMaterials.set(key, new THREE.MeshStandardMaterial({
+          color,
+          emissive: color,
+          emissiveIntensity: state === "selected" ? 0.36 : 0.08 + (bucket / 12) * 0.18,
+          opacity,
+          roughness: 0.72,
+          metalness: 0,
+          transparent: opacity < 1,
+          depthWrite: opacity >= 0.7,
+          side: THREE.DoubleSide
+        }));
+      }
+
+      return roleMaterials.get(key);
+    }
+
+    function workoutHeatmapColor(intensity) {
+      const low = new THREE.Color(0xdfe8e1);
+      const high = new THREE.Color(selectedMuscleColor);
+      return low.lerp(high, Math.max(0, Math.min(1, Number(intensity) || 0)));
     }
 
     function materialOpacity(role, state) {
