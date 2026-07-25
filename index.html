@@ -1545,13 +1545,26 @@
       align-items: center;
       gap: 1px 8px;
       min-height: 44px;
+      width: 100%;
+      padding-right: 32px;
       text-align: left;
+    }
+
+    .collection-menu-shell {
+      position: relative;
+      min-width: 0;
+    }
+
+    .collection-sort-shell .collection-menu-button {
+      padding-right: 76px;
     }
 
     .collection-menu-button::after {
       content: "+";
-      grid-column: 2;
-      grid-row: 1 / 3;
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
       color: var(--muted);
       font-weight: 700;
     }
@@ -1578,11 +1591,42 @@
       background: var(--accent-soft);
     }
 
+    .collection-menu-gear-button {
+      position: absolute;
+      top: 1px;
+      right: 34px;
+      display: grid;
+      width: 36px;
+      min-width: 36px;
+      height: calc(100% - 2px);
+      min-height: 0;
+      padding: 0;
+      place-items: center;
+      border: 0;
+      border-left: 1px solid var(--ink-12);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .collection-menu-gear-button.active {
+      background: var(--panel-2);
+    }
+
+    .collection-menu-gear-button svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
     .collection-dropdown-panel {
       display: grid;
       grid-column: 1 / -1;
-      gap: 8px;
-      padding: 10px;
+      gap: 0;
+      padding: 0;
       border: 1px solid var(--soft-line);
       background: var(--panel);
     }
@@ -1591,7 +1635,7 @@
     .collection-sort-tree {
       display: grid;
       grid-template-columns: minmax(128px, 0.7fr) minmax(142px, 1fr) minmax(142px, 1fr);
-      gap: 8px;
+      gap: 0;
       align-items: start;
       overflow-x: auto;
     }
@@ -1604,24 +1648,14 @@
     .sort-tree-column {
       display: grid;
       min-width: 0;
-      gap: 6px;
-      padding-left: 8px;
-      border-left: 1px solid var(--ink-12);
+      gap: 0;
       animation: tree-branch-open 160ms ease-out;
     }
 
-    .collection-tree-column:first-child,
-    .sort-tree-column:first-child {
-      padding-left: 0;
-      border-left: 0;
-    }
-
-    .collection-tree-column-header {
-      color: var(--muted);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .collection-tree-column + .collection-tree-column,
+    .sort-tree-column + .sort-tree-column,
+    .sort-direction-cell {
+      margin-left: -1px;
     }
 
     .collection-tree-button,
@@ -1641,16 +1675,10 @@
       font-size: 12px;
     }
 
-    .collection-tree-button::after,
-    .sort-tree-button::after {
-      content: "";
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .collection-tree-button.branch::after,
-    .sort-tree-button.branch::after {
-      content: ">";
+    .collection-tree-button + .collection-tree-button,
+    .sort-tree-button + .sort-tree-button,
+    .sort-direction-button + .sort-direction-button {
+      margin-top: -1px;
     }
 
     .collection-tree-button span,
@@ -1702,56 +1730,7 @@
     .sort-direction-cell {
       display: grid;
       min-width: 0;
-      gap: 6px;
-      padding-left: 8px;
-      border-left: 1px solid var(--ink-12);
-    }
-
-    .sort-gear-row {
-      display: grid;
-      grid-template-columns: 42px minmax(0, 1fr);
-      gap: 6px;
-      align-items: center;
-    }
-
-    .sort-gear-button {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      min-width: 42px;
-      min-height: 42px;
-      border-color: var(--control-line);
-      background: var(--control);
-      color: var(--ink);
-      font-size: 18px;
-      font-weight: 900;
-    }
-
-    .sort-gear-button.active {
-      border-color: var(--line);
-      background: var(--panel-2);
-      color: var(--ink);
-    }
-
-    .sort-direction-label {
-      display: grid;
-      gap: 2px;
-      min-width: 0;
-      color: var(--ink);
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .sort-direction-label span {
-      color: var(--muted);
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .sort-direction-menu {
-      display: grid;
-      gap: 6px;
+      gap: 0;
       animation: tree-branch-open 160ms ease-out;
     }
 
@@ -5249,12 +5228,21 @@
             onclick="toggleCollectionFilters()"
             aria-expanded="${collectionFiltersOpen ? "true" : "false"}"
           >Filters <span>${escapeHTML(filterControlLabel())}</span></button>
-          <button
-            type="button"
-            class="collection-menu-button${collectionSortOpen ? " active" : ""}"
-            onclick="toggleCollectionSortPanel()"
-            aria-expanded="${collectionSortOpen ? "true" : "false"}"
-          >Sort <span>${escapeHTML(sortControlLabel())}</span></button>
+          <div class="collection-menu-shell collection-sort-shell">
+            <button
+              type="button"
+              class="collection-menu-button${collectionSortOpen ? " active" : ""}"
+              onclick="toggleCollectionSortPanel()"
+              aria-expanded="${collectionSortOpen ? "true" : "false"}"
+            >Sort <span>${escapeHTML(sortControlLabel())}</span></button>
+            <button
+              type="button"
+              class="collection-menu-gear-button${collectionSortDirectionOpen ? " active" : ""}"
+              onclick="toggleSortDirectionMenu()"
+              aria-expanded="${collectionSortDirectionOpen ? "true" : "false"}"
+              aria-label="Sort direction"
+            >${renderSortGearIcon()}</button>
+          </div>
           ${collectionFiltersOpen ? renderCollectionFilterPanel() : ""}
           ${collectionSortOpen ? renderCollectionSortPanel() : ""}
         </section>
@@ -5266,7 +5254,6 @@
         <div class="collection-dropdown-panel" aria-label="Movement filters">
           <div class="collection-tree">
             <div class="collection-tree-column">
-              <span class="collection-tree-column-header">Category</span>
               ${movementCollections().map(renderCollectionRootButton).join("")}
             </div>
             ${activeCollectionGroup ? renderCollectionBranchColumn() : ""}
@@ -5286,11 +5273,10 @@
         <div class="collection-dropdown-panel">
           <div class="collection-sort-tree" aria-label="Movement sorting">
             <div class="sort-tree-column">
-              <span class="collection-tree-column-header">Score</span>
               ${Object.entries(SORT_LABELS).map(([key, label]) => renderSortMetricButton(key, label)).join("")}
             </div>
             ${renderSortBranchColumn()}
-            ${renderSortDirectionPanel()}
+            ${collectionSortDirectionOpen ? renderSortDirectionPanel() : ""}
           </div>
         </div>
       `;
@@ -5301,7 +5287,6 @@
       if (!ratings || !collectionSortMenuOpen) return "";
       return `
         <div class="sort-tree-column" style="${ratingStyle(collectionSortMetric)}">
-          <span class="collection-tree-column-header">${escapeHTML(SORT_LABELS[collectionSortMetric])}</span>
           ${Object.entries(ratings).map(([key, label]) => renderSortSubtypeButton(key, label)).join("")}
         </div>
       `;
@@ -5310,33 +5295,24 @@
     function renderSortDirectionPanel() {
       return `
         <div class="sort-direction-cell">
-          <span class="collection-tree-column-header">Direction</span>
-          <div class="sort-gear-row">
+          ${Object.entries(SORT_DIRECTIONS).map(([key, label]) => `
             <button
               type="button"
-              class="sort-gear-button${collectionSortDirectionOpen ? " active" : ""}"
-              onclick="toggleSortDirectionMenu()"
-              aria-expanded="${collectionSortDirectionOpen ? "true" : "false"}"
-              aria-label="Open sort direction settings"
-            >&#9881;</button>
-            <div class="sort-direction-label">
-              <span>Order</span>
-              ${escapeHTML(SORT_DIRECTIONS[collectionSortDirection])}
-            </div>
-          </div>
-          ${collectionSortDirectionOpen ? `
-            <div class="sort-direction-menu">
-              ${Object.entries(SORT_DIRECTIONS).map(([key, label]) => `
-                <button
-                  type="button"
-                  class="sort-direction-button${collectionSortDirection === key ? " active" : ""}"
-                  onclick="setSortDirection('${escapeJS(key)}')"
-                  aria-pressed="${collectionSortDirection === key ? "true" : "false"}"
-                >${escapeHTML(label)}</button>
-              `).join("")}
-            </div>
-          ` : ""}
+              class="sort-direction-button${collectionSortDirection === key ? " active" : ""}"
+              onclick="setSortDirection('${escapeJS(key)}')"
+              aria-pressed="${collectionSortDirection === key ? "true" : "false"}"
+            >${escapeHTML(label)}</button>
+          `).join("")}
         </div>
+      `;
+    }
+
+    function renderSortGearIcon() {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"></path>
+          <path d="M19.4 15a8 8 0 0 0 .1-1l2-1.2-2-3.5-2.3 1a7.6 7.6 0 0 0-1.7-1L15.2 7h-4l-.3 2.3a7.6 7.6 0 0 0-1.7 1l-2.3-1-2 3.5 2 1.2a8 8 0 0 0 0 2l-2 1.2 2 3.5 2.3-1a7.6 7.6 0 0 0 1.7 1l.3 2.3h4l.3-2.3a7.6 7.6 0 0 0 1.7-1l2.3 1 2-3.5-2.1-1.2Z"></path>
+        </svg>
       `;
     }
 
@@ -5446,7 +5422,6 @@
       if (activeCollectionGroup === "region") return renderRegionMacroColumn();
       return `
         <div class="collection-tree-column">
-          <span class="collection-tree-column-header">${escapeHTML(tagGroupLabel(activeCollectionGroup))}</span>
           ${collectionFilters().map(renderCollectionFilter).join("") || `<span class="movement-count">No options yet.</span>`}
         </div>
       `;
@@ -5455,7 +5430,6 @@
     function renderRegionMacroColumn() {
       return `
         <div class="collection-tree-column">
-          <span class="collection-tree-column-header">Muscle group</span>
           ${REGION_MACRO_ORDER.map(renderRegionMacroFilter).join("")}
         </div>
       `;
@@ -5465,7 +5439,6 @@
       const filters = regionSubFilters(macro);
       return `
         <div class="collection-tree-column">
-          <span class="collection-tree-column-header">${escapeHTML(macro)}</span>
           ${filters.map(renderCollectionFilter).join("") || `<span class="movement-count">No subgroups yet.</span>`}
         </div>
       `;
