@@ -628,12 +628,6 @@
       font-weight: 700;
     }
 
-    .workout-heatmap {
-      display: grid;
-      gap: 6px;
-      margin-top: 10px;
-    }
-
     .workout-muscle-map {
       display: grid;
       gap: 10px;
@@ -651,13 +645,6 @@
       border-bottom: 1px solid var(--soft-line);
     }
 
-    .workout-muscle-map-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.18fr) minmax(240px, 0.82fr);
-      gap: 12px;
-      align-items: stretch;
-    }
-
     .workout-map-visual {
       display: grid;
       gap: 8px;
@@ -665,108 +652,6 @@
 
     .local-anatomy-viewer.workout-anatomy-viewer {
       min-height: 460px;
-    }
-
-    .heatmap-legend {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr) auto;
-      gap: 8px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    .heatmap-legend-ramp {
-      height: 8px;
-      border: 1px solid var(--soft-line);
-      background: linear-gradient(90deg, #dfe8e1, var(--accent));
-    }
-
-    .workout-heatmap-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 0;
-      text-transform: uppercase;
-    }
-
-    .workout-heatmap-header strong {
-      color: var(--ink);
-      font-size: 11px;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .workout-heatmap-list {
-      display: grid;
-      gap: 5px;
-    }
-
-    .heatmap-row {
-      display: grid;
-      grid-template-columns: minmax(76px, 0.72fr) minmax(0, 1fr) 32px;
-      align-items: center;
-      gap: 6px;
-      min-width: 0;
-      font-size: 11px;
-      font-weight: 750;
-    }
-
-    .heatmap-row span:first-child {
-      min-width: 0;
-      overflow: hidden;
-      color: var(--muted);
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .heatmap-track {
-      display: block;
-      height: 8px;
-      border: 1px solid var(--ink-12);
-      background: var(--panel-2);
-    }
-
-    .heatmap-fill {
-      display: block;
-      height: 100%;
-      width: var(--heatmap-width, 0%);
-      background: var(--accent);
-    }
-
-    .heatmap-score {
-      color: var(--ink);
-      text-align: right;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .workout-heatmap.compact {
-      gap: 5px;
-      margin-top: 8px;
-    }
-
-    .workout-heatmap.compact .workout-heatmap-header,
-    .workout-heatmap.compact .workout-heatmap-header strong {
-      font-size: 10px;
-      line-height: 1.1;
-    }
-
-    .workout-heatmap.compact .heatmap-row {
-      grid-template-columns: minmax(64px, 0.66fr) minmax(0, 1fr) 26px;
-      gap: 5px;
-      font-size: 10px;
-    }
-
-    .workout-heatmap-empty {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
     }
 
     .workout-color-picker {
@@ -2321,7 +2206,6 @@
       .calendar-workout-button:focus-visible { width: min(100%, 82px); }
       .workout-template-tile { padding: 10px; }
       .workout-template-plus { width: 36px; height: 36px; font-size: 24px; }
-      .workout-muscle-map-grid { grid-template-columns: minmax(0, 1fr); }
       .local-anatomy-viewer.workout-anatomy-viewer { min-height: 360px; }
       .schedule-modal { padding: 8px; }
       .schedule-dialog { width: 100%; max-height: 82dvh; }
@@ -2916,69 +2800,22 @@
         .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
     }
 
-    function renderWorkoutHeatmap(workout, options = {}) {
-      const heatmap = workoutMuscleHeatmap(workout);
-      if (!heatmap.length) {
-        return options.showEmpty ? `<p class="workout-heatmap-empty">Muscle heatmap appears after movements are added.</p>` : "";
-      }
-      const visibleItems = Number.isFinite(options.limit) ? heatmap.slice(0, options.limit) : heatmap;
-      const maxScore = Math.max(...heatmap.map(item => item.score), 1);
-      const totalPoints = workoutMovements(workout).length * WORKOUT_HEATMAP_POINTS_PER_MOVEMENT;
-      const shownSuffix = visibleItems.length < heatmap.length ? ` +${heatmap.length - visibleItems.length}` : "";
-      return `
-        <div class="workout-heatmap${options.compact ? " compact" : ""}" aria-label="Workout muscle activation heatmap">
-          <div class="workout-heatmap-header">
-            <span>Muscle Heatmap${escapeHTML(shownSuffix)}</span>
-            <strong>${escapeHTML(formatHeatmapScore(totalPoints))} pts</strong>
-          </div>
-          <div class="workout-heatmap-list">
-            ${visibleItems.map(item => renderWorkoutHeatmapRow(item, maxScore)).join("")}
-          </div>
-        </div>
-      `;
-    }
-
-    function renderWorkoutHeatmapRow(item, maxScore) {
-      const width = Math.max(3, Math.round((item.score / Math.max(maxScore, 1)) * 100));
-      return `
-        <div class="heatmap-row">
-          <span title="${escapeHTML(item.name)}">${escapeHTML(item.name)}</span>
-          <span class="heatmap-track" aria-hidden="true"><span class="heatmap-fill" style="--heatmap-width: ${width}%"></span></span>
-          <span class="heatmap-score">${escapeHTML(formatHeatmapScore(item.score))}</span>
-        </div>
-      `;
-    }
-
-    function formatHeatmapScore(value) {
-      const number = Number(value) || 0;
-      return Number.isInteger(number) ? String(number) : number.toFixed(1);
-    }
-
     function renderWorkoutMuscleMap(workout) {
       const heatmap = workoutMuscleHeatmap(workout);
       if (!heatmap.length) return "";
       return `
-        <section class="workout-muscle-map" aria-label="Workout muscle map">
+        <section class="workout-muscle-map" style="${workoutColorStyle(workout)}" aria-label="Workout muscle map">
           <div class="workout-muscle-map-head">
             <p class="section-label">Muscle Map</p>
-            <span class="movement-count">${escapeHTML(formatHeatmapScore(workoutMovements(workout).length * WORKOUT_HEATMAP_POINTS_PER_MOVEMENT))} pts</span>
           </div>
-          <div class="workout-muscle-map-grid">
-            <div class="movement-visual workout-map-visual">
-              <div
-                class="local-anatomy-viewer workout-anatomy-viewer"
-                data-workout-id="${escapeHTML(workout.id)}"
-                aria-label="${escapeHTML(workoutTitle(workout))} workout muscle activation viewer"
-              >
-                <div class="anatomy-loading">Loading workout muscle map</div>
-              </div>
-              <div class="heatmap-legend">
-                <span>Less</span>
-                <span class="heatmap-legend-ramp" aria-hidden="true"></span>
-                <span>More</span>
-              </div>
+          <div class="movement-visual workout-map-visual">
+            <div
+              class="local-anatomy-viewer workout-anatomy-viewer"
+              data-workout-id="${escapeHTML(workout.id)}"
+              aria-label="${escapeHTML(workoutTitle(workout))} workout muscle activation viewer"
+            >
+              <div class="anatomy-loading">Loading workout muscle map</div>
             </div>
-            ${renderWorkoutHeatmap(workout)}
           </div>
         </section>
       `;
@@ -6676,6 +6513,7 @@
           return {
             muscle,
             role: "workout",
+            color: workout.color || "#c8ff00",
             score: Number(item.score) || 0,
             intensity: Math.max(0.08, Math.min(1, (Number(item.score) || 0) / maxScore))
           };
@@ -6710,6 +6548,7 @@
         child.userData.muscleId = part.muscle.id;
         child.userData.muscleName = muscleName;
         child.userData.role = role;
+        child.userData.workoutColor = part.color || "#c8ff00";
         child.userData.score = part.score || 0;
         child.userData.intensity = part.intensity || 0;
         child.renderOrder = role === "context" ? 1 : 2;
@@ -6727,12 +6566,12 @@
     }
 
     function materialForPart(part, state) {
-      if (part.role === "workout") return materialForWorkoutIntensity(part.intensity, state);
+      if (part.role === "workout") return materialForWorkoutColor(part.color, state);
       return materialForRole(part.role, state);
     }
 
     function materialForMeshState(mesh, state) {
-      if (mesh.userData.role === "workout") return materialForWorkoutIntensity(mesh.userData.intensity, state);
+      if (mesh.userData.role === "workout") return materialForWorkoutColor(mesh.userData.workoutColor, state);
       return materialForRole(mesh.userData.role, state);
     }
 
@@ -6757,19 +6596,18 @@
       return roleMaterials.get(key);
     }
 
-    function materialForWorkoutIntensity(intensity, state) {
-      const clamped = Math.max(0, Math.min(1, Number(intensity) || 0));
-      const bucket = Math.round(clamped * 12);
-      const key = `workout:${state}:${bucket}`;
+    function materialForWorkoutColor(colorValue, state) {
+      const colorHex = /^#[0-9a-f]{6}$/i.test(String(colorValue || "")) ? String(colorValue) : "#c8ff00";
+      const key = `workout:${state}:${colorHex}`;
       if (!roleMaterials.has(key)) {
         const color = state === "selected"
           ? new THREE.Color(selectedMuscleColor)
-          : workoutHeatmapColor(bucket / 12);
-        const opacity = state === "dimmed" ? 0.22 : 0.52 + (bucket / 12) * 0.48;
+          : new THREE.Color(colorHex);
+        const opacity = state === "dimmed" ? 0.22 : 0.94;
         roleMaterials.set(key, new THREE.MeshStandardMaterial({
           color,
           emissive: color,
-          emissiveIntensity: state === "selected" ? 0.36 : 0.08 + (bucket / 12) * 0.18,
+          emissiveIntensity: state === "selected" ? 0.36 : 0.14,
           opacity,
           roughness: 0.72,
           metalness: 0,
@@ -6780,12 +6618,6 @@
       }
 
       return roleMaterials.get(key);
-    }
-
-    function workoutHeatmapColor(intensity) {
-      const low = new THREE.Color(0xdfe8e1);
-      const high = new THREE.Color(selectedMuscleColor);
-      return low.lerp(high, Math.max(0, Math.min(1, Number(intensity) || 0)));
     }
 
     function materialOpacity(role, state) {
