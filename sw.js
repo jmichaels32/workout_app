@@ -1,5 +1,5 @@
-const CACHE_NAME = "movement-library-mvp-v100";
-const ASSETS = ["./", "index.html", "manifest.webmanifest", "icon.svg", "data/movements.json"];
+const CACHE_NAME = "movement-library-mvp-v101";
+const ASSETS = ["./", "index.html", "manifest.webmanifest", "icon.svg", "assets/icons/sort-gear.png", "data/movements.json"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)));

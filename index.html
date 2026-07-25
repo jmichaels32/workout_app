@@ -1522,8 +1522,7 @@
     }
 
     .movement-card-tags,
-    .evidence-meta,
-    .selected-tags {
+    .evidence-meta {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
@@ -1612,14 +1611,11 @@
       background: var(--panel-2);
     }
 
-    .collection-menu-gear-button svg {
-      width: 17px;
-      height: 17px;
-      fill: none;
-      stroke: currentColor;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-width: 1.8;
+    .collection-menu-gear-button img {
+      display: block;
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
     }
 
     .collection-dropdown-panel {
@@ -1715,11 +1711,6 @@
       border-color: var(--accent-line);
       background: var(--accent-soft);
       color: var(--ink);
-    }
-
-    .selected-tags {
-      padding-top: 8px;
-      border-top: 1px solid var(--ink-12);
     }
 
     .collection-sort {
@@ -5241,7 +5232,7 @@
               onclick="toggleSortDirectionMenu()"
               aria-expanded="${collectionSortDirectionOpen ? "true" : "false"}"
               aria-label="Sort direction"
-            >${renderSortGearIcon()}</button>
+            ><img src="assets/icons/sort-gear.png" alt=""></button>
           </div>
           ${collectionFiltersOpen ? renderCollectionFilterPanel() : ""}
           ${collectionSortOpen ? renderCollectionSortPanel() : ""}
@@ -5259,11 +5250,6 @@
             ${activeCollectionGroup ? renderCollectionBranchColumn() : ""}
             ${activeCollectionGroup === "region" && activeRegionMacro ? renderRegionLeafColumn(activeRegionMacro) : ""}
           </div>
-          ${selectedCollectionTags.length ? `
-            <div class="selected-tags">
-              ${selectedCollectionTagObjects().map(renderSelectedCollectionTag).join("")}
-            </div>
-          ` : ""}
         </div>
       `;
     }
@@ -5295,7 +5281,7 @@
     function renderSortDirectionPanel() {
       return `
         <div class="sort-direction-cell">
-          ${Object.entries(SORT_DIRECTIONS).map(([key, label]) => `
+          ${Object.entries(SORT_DIRECTIONS).filter(([key]) => key !== "none").map(([key, label]) => `
             <button
               type="button"
               class="sort-direction-button${collectionSortDirection === key ? " active" : ""}"
@@ -5304,15 +5290,6 @@
             >${escapeHTML(label)}</button>
           `).join("")}
         </div>
-      `;
-    }
-
-    function renderSortGearIcon() {
-      return `
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"></path>
-          <path d="M19.4 15a8 8 0 0 0 .1-1l2-1.2-2-3.5-2.3 1a7.6 7.6 0 0 0-1.7-1L15.2 7h-4l-.3 2.3a7.6 7.6 0 0 0-1.7 1l-2.3-1-2 3.5 2 1.2a8 8 0 0 0 0 2l-2 1.2 2 3.5 2.3-1a7.6 7.6 0 0 0 1.7 1l.3 2.3h4l.3-2.3a7.6 7.6 0 0 0 1.7-1l2.3 1 2-3.5-2.1-1.2Z"></path>
-        </svg>
       `;
     }
 
@@ -5457,17 +5434,6 @@
           onclick="toggleRegionMacro('${escapeJS(label)}')"
           aria-pressed="${isRegionMacroSelected(label) ? "true" : "false"}"
         >${escapeHTML(label)} <span>${count}</span></button>
-      `;
-    }
-
-    function renderSelectedCollectionTag(tag) {
-      return `
-        <button
-          type="button"
-          class="${tagClass(tag)} active"
-          onclick="toggleCollectionTag('${escapeJS(tag.label)}', '${escapeJS(tag.group)}')"
-          aria-label="Remove ${escapeHTML(tag.label)} filter"
-        >${escapeHTML(tag.label)}</button>
       `;
     }
 
