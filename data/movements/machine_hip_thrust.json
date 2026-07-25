@@ -1,0 +1,202 @@
+{
+  "id": "machine_hip_thrust",
+  "name": "Machine Hip Thrust",
+  "aliases": [
+    "hip_thrust_machine",
+    "glute_drive_machine",
+    "selectorized_hip_thrust"
+  ],
+  "family": "hip_thrust",
+  "equipment": "machine",
+  "variantType": "guided_machine",
+  "variant": "Guided hip-thrust machine with a fixed pad or belt loading the hips and external support from the machine frame.",
+  "description": "Sit into the machine with the upper back and hips aligned to the pads, secure the hip pad or belt low across the pelvis, plant the feet evenly, brace the trunk, drive the hips up by squeezing the glutes until the hips reach full extension, then lower under control while keeping the ribs down and the pelvis stable.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Hamstrings",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip extension",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 86,
+      "rationale": "Excellent glute hypertrophy option because the machine stabilizes setup while direct comparison evidence reports gluteus maximus activation similar to barbell hip thrusts."
+    },
+    "strength": {
+      "score": 62,
+      "rationale": "Builds loaded hip-extension strength, but the guided machine path is less transferable to free-weight force expression."
+    },
+    "joint_resilience": {
+      "score": 42,
+      "rationale": "Provides controlled hip-extension loading with low knee demand, but the guided setup gives limited broad joint-capacity exposure."
+    },
+    "athletic_transfer": {
+      "score": 24,
+      "rationale": "The machine is highly constrained and supported, so transfer to upright or dynamic athletic movement is narrow despite strong glute loading."
+    },
+    "control": {
+      "score": 10,
+      "rationale": "Very low motor-control demand because the machine removes most balance, bar positioning, and path management."
+    },
+    "fatigue_efficiency": {
+      "score": 88,
+      "rationale": "Very efficient local glute stimulus with low setup leakage, low balance cost, and little unrelated systemic fatigue."
+    },
+    "setup": {
+      "score": 84,
+      "rationale": "Fast setup once the machine is available, with mainly seat, pad, belt, and load adjustments."
+    },
+    "ease": {
+      "score": 86,
+      "rationale": "Easier than free-weight hip thrusts because the machine simplifies loading, positioning, and repeated set execution."
+    },
+    "progression": {
+      "score": 86,
+      "rationale": "Machine loads and reps are easy to record and repeat, with deductions for machine-specific leverage and stack increments."
+    },
+    "support": {
+      "score": 94,
+      "rationale": "Very high external support from the frame, pads, foot platform, and guided loading path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Direct machine comparison reports gluteus maximus activation similar to barbell hip thrusts.",
+        "evidence": "Machine-versus-barbell hip-thrust evidence reports similar gluteus maximus activation between the machine and free-weight versions. Broader hip-thrust research supports gluteus maximus as the dominant hip-extension target.",
+        "sourceIds": [
+          "petrizzo-2023",
+          "krause-neto-2019",
+          "contreras-2015"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Machine comparison reports higher biceps femoris activation than the barbell version.",
+        "evidence": "The direct machine-versus-barbell comparison measured greater biceps femoris activation in the machine condition, while broader hip-thrust evidence supports hamstrings as meaningful secondary hip extensors.",
+        "sourceIds": [
+          "petrizzo-2023",
+          "krause-neto-2019",
+          "contreras-2015"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Gluteus medius",
+        "evidenceShort": "Hip-thrust literature includes gluteus medius as a measured gluteal contributor.",
+        "evidence": "Systematic review evidence includes gluteus medius among hip-thrust muscles evaluated. It is listed as support because the standard machine movement is bilateral and guided.",
+        "sourceIds": [
+          "krause-neto-2019"
+        ]
+      },
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Vastus lateralis is measured at lower activation than barbell in the machine comparison.",
+        "evidence": "The direct machine comparison measured vastus lateralis activity and reported lower mean activation than the free-weight version, supporting a small support classification rather than a target-muscle role.",
+        "sourceIds": [
+          "petrizzo-2023",
+          "contreras-2015"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Machine hip thrust: gluteus maximus primary; hamstrings secondary; gluteus medius and quadriceps support.",
+    "clinicalShort": "EMG estimates acute excitation and should not be treated as a direct measure of hypertrophy, safety, or individual adaptation.",
+    "limitsShort": "Machine brand, pad path, hip-belt position, foot platform, seat angle, and range of motion can materially change loading.",
+    "summary": "The machine hip thrust is classified as a guided lower-body hip-extension movement. The direct comparison evidence supports a gluteus-maximus-dominant profile similar to barbell hip thrusts, with meaningful hamstring contribution and limited quadriceps involvement.",
+    "clinicalInterpretation": "The machine version should be scored separately from the barbell version because external support, setup friction, path constraint, and ease of repeated loading are materially different even when glute activation is similar.",
+    "limitations": "The available direct machine evidence is narrower than the barbell evidence base and may not generalize across all commercial hip-thrust machines.",
+    "studies": [
+      {
+        "id": "petrizzo-2023",
+        "type": "Machine versus barbell hip thrust EMG",
+        "shortCitation": "Petrizzo et al., MSSE, 2023",
+        "finding": "Machine and free-weight hip thrusts showed similar gluteus maximus mean activation; the machine showed greater biceps femoris mean activation and lower vastus lateralis mean activation.",
+        "citation": "Petrizzo J, Lopez J, Gaeta A, Aquino M, Otto R, Wygand J. Machine Vs. Barbell Hip Thrust: Electromyographic, Biomechanical, And Ease Of Use Comparison: 2266. Medicine and Science in Sports and Exercise. 2023;55(9S):749. doi:10.1249/01.mss.0000986876.72568.fb.",
+        "doi": "10.1249/01.mss.0000986876.72568.fb",
+        "url": "https://scholarlyworks.adelphi.edu/esploro/outputs/journalArticle/Machine-Vs-Barbell-Hip-Thrust-Electromyographic/991004365122106266",
+        "relevance": "Direct machine hip-thrust evidence for gluteus maximus, biceps femoris, vastus lateralis, and ease-of-use comparison with free weight.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "setup score",
+          "ease score",
+          "support score"
+        ]
+      },
+      {
+        "id": "krause-neto-2019",
+        "type": "Barbell hip thrust systematic review",
+        "shortCitation": "Krause Neto et al., JSSM, 2019",
+        "finding": "The review concluded that hip-thrust mechanics favor hip-extensor activation, with an excitation sequence led by gluteus maximus followed by erector spinae, hamstrings, and quadriceps femoris.",
+        "citation": "Krause Neto W, Vieira TL, Gama EF. Barbell Hip Thrust, Muscular Activation and Performance: A Systematic Review. Journal of Sports Science and Medicine. 2019;18(2):198-206.",
+        "url": "https://www.jssm.org/jssm-18-198.xml-Fulltext",
+        "relevance": "Broader hip-thrust movement-family evidence for muscle hierarchy and role boundaries.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "contreras-2015",
+        "type": "Barbell hip thrust versus back squat EMG",
+        "shortCitation": "Contreras et al., J Appl Biomech, 2015",
+        "finding": "The barbell hip thrust produced greater upper/lower gluteus maximus and biceps femoris activity than the back squat in the tested condition, while vastus lateralis favored the squat.",
+        "citation": "Contreras B, Vigotsky AD, Schoenfeld BJ, Beardsley C, Cronin J. A Comparison of Gluteus Maximus, Biceps Femoris, and Vastus Lateralis Electromyographic Activity in the Back Squat and Barbell Hip Thrust Exercises. Journal of Applied Biomechanics. 2015;31(6):452-458. doi:10.1123/jab.2014-0301.",
+        "doi": "10.1123/jab.2014-0301",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26214739/",
+        "relevance": "Direct barbell hip-thrust EMG source used to anchor the general hip-thrust muscle profile.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role"
+        ]
+      },
+      {
+        "id": "brazil-2021",
+        "type": "Barbell hip thrust biomechanics",
+        "shortCitation": "Brazil et al., PLOS ONE, 2021",
+        "finding": "Biomechanical analysis of trained lifters at 70% 1RM characterized hip and knee extensor demand across the barbell hip thrust.",
+        "citation": "Brazil A, Needham L, Palmer JL, Bezodis IN. A comprehensive biomechanical analysis of the barbell hip thrust. PLOS ONE. 2021;16(3):e0249307. doi:10.1371/journal.pone.0249307.",
+        "doi": "10.1371/journal.pone.0249307",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249307",
+        "relevance": "Movement-family biomechanics source used for hip-extension loading and progression interpretation.",
+        "usedFor": [
+          "strength score",
+          "progression score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

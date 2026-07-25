@@ -213,6 +213,12 @@
       padding: 16px;
     }
 
+    .home-panel {
+      position: relative;
+      min-height: 132px;
+      padding-right: 152px;
+    }
+
     .home-actions,
     .calendar-toolbar,
     .day-panel-header,
@@ -230,7 +236,20 @@
     }
 
     .home-actions.single {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+
+    .home-library-link {
+      display: flex;
+      width: 118px;
+      min-height: 76px;
+      align-items: flex-end;
       justify-content: flex-start;
+      text-align: left;
     }
 
     .home-stats {
@@ -1586,6 +1605,25 @@
       color: var(--muted);
     }
 
+    .collection-search {
+      display: grid;
+      margin-bottom: 8px;
+    }
+
+    .collection-search-input {
+      min-height: 44px;
+      border-color: var(--control-line);
+      background: var(--panel);
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 650;
+    }
+
+    .collection-search-input::placeholder {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
     .movement-card-tags,
     .evidence-meta {
       display: flex;
@@ -2390,6 +2428,8 @@
       .home-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .home-stat { min-height: 54px; padding: 8px; }
       .home-stat strong { font-size: 18px; }
+      .home-panel { min-height: 128px; padding-right: 134px; }
+      .home-library-link { width: 112px; min-height: 72px; }
       .calendar-toolbar, .day-panel-header, .workout-library-header { align-items: stretch; flex-direction: column; }
       .workout-library-header h2 { text-align: left; }
       .calendar-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -2638,6 +2678,7 @@
     let activeCollectionGroup = null;
     let activeRegionMacro = null;
     let selectedCollectionTags = [];
+    let collectionSearchQuery = "";
     let collectionFiltersOpen = false;
     let collectionSortOpen = false;
     let collectionSortMetric = "composite";
@@ -2740,11 +2781,10 @@
       movementHome.innerHTML = `
         <div class="home-shell">
           <section class="home-panel">
-            <p class="eyebrow">Home</p>
             <h1>Calendar</h1>
             <p>${escapeHTML(homeSummaryText())}</p>
             <div class="home-actions single">
-              <button type="button" class="compare-button" onclick="openMovementCollection()">Movement Library</button>
+              <button type="button" class="compare-button home-library-link" onclick="openMovementCollection()">Movement Library</button>
             </div>
           </section>
           <section class="home-stats" aria-label="Workout summary">
@@ -2811,7 +2851,6 @@
     function renderMobileCalendarWeek(week) {
       return `
         <section class="mobile-week-block" aria-label="${escapeHTML(week.label)}">
-          <h3>${escapeHTML(week.label)}</h3>
           <div class="mobile-week-days">
             ${week.days.map(date => renderCalendarDay(date, { mobile: true })).join("")}
           </div>
@@ -3095,7 +3134,7 @@
         <div class="workout-builder">
           <div class="screen-topbar">
             <button type="button" class="back-button" onclick="exitWorkoutBuilder('${escapeJS(workout.id)}')">Back</button>
-            <span class="movement-count">${escapeHTML(isTemplate ? "Template" : shortDateLabel(workout.date))}</span>
+            ${isTemplate ? "" : `<span class="movement-count">${escapeHTML(shortDateLabel(workout.date))}</span>`}
           </div>
           <section class="workout-builder-header">
             <p class="eyebrow">${isTemplate ? "Workout Template" : "Scheduled Workout"}</p>
@@ -3845,13 +3884,11 @@
 
     function renderWorkoutBlock(workout, block, index) {
       const movements = blockMovements(block);
-      const isInterleaved = movements.length > 1;
       return `
         <article class="workout-block">
           <div class="block-header">
             <div>
-              <p class="eyebrow">Block ${index + 1}${isInterleaved ? " · Interleaved" : ""}</p>
-              <h3>${isInterleaved ? "Interleaved Block" : "Movement Block"}</h3>
+              <p class="eyebrow">Block ${index + 1}</p>
             </div>
             <div class="block-actions">
               <button
@@ -5097,12 +5134,13 @@
         <section class="collection-header">
           <div class="collection-title">
             <h1>Movements</h1>
-            <p>${escapeHTML(scope)} · ${movements.length} movement${movements.length === 1 ? "" : "s"}</p>
+            <p id="collectionSummaryText">${escapeHTML(collectionResultSummary(scope, movements.length))}</p>
           </div>
         </section>
         ${renderCompareTray()}
+        ${renderCollectionSearch()}
         ${renderCollectionControls()}
-        <div class="movement-list">
+        <div id="movementList" class="movement-list">
           ${movements.map(renderMovementListing).join("") || `<p class="empty-state">No movements in this collection yet.</p>`}
         </div>
       `;
@@ -5374,6 +5412,24 @@
       `;
     }
 
+    function renderCollectionSearch() {
+      return `
+        <div class="collection-search">
+          <input
+            class="collection-search-input"
+            type="search"
+            value="${escapeHTML(collectionSearchQuery)}"
+            placeholder="Search movements"
+            aria-label="Search movements"
+            autocomplete="off"
+            autocapitalize="none"
+            spellcheck="false"
+            oninput="handleCollectionSearchInput(event)"
+          >
+        </div>
+      `;
+    }
+
     function renderCollectionFilterPanel() {
       return `
         <div class="collection-dropdown-panel" aria-label="Movement filters">
@@ -5477,6 +5533,12 @@
         ? "Composite"
         : sortSubtypeRatings(collectionSortMetric)?.[activeSortSubtype()] || SORT_LABELS[collectionSortMetric];
       return `${metric}, ${direction}`;
+    }
+
+    function collectionResultSummary(scope, count) {
+      const search = normalizeSearchText(collectionSearchQuery);
+      const prefix = search ? `${scope} · "${collectionSearchQuery.trim()}"` : scope;
+      return `${prefix} · ${count} movement${count === 1 ? "" : "s"}`;
     }
 
     function renderCompareTray() {
@@ -5688,9 +5750,26 @@
         activeCollectionGroup = null;
         activeRegionMacro = null;
       }
+      if (!options.preserveSearch) collectionSearchQuery = "";
       movementView = "collection";
       activeMovementId = null;
       renderMovementApp(options);
+    }
+
+    function handleCollectionSearchInput(event) {
+      collectionSearchQuery = String(event.target.value || "").slice(0, 80);
+      updateCollectionResults();
+    }
+
+    function updateCollectionResults() {
+      const movements = collectionMovements();
+      const summary = document.getElementById("collectionSummaryText");
+      const list = document.getElementById("movementList");
+      if (summary) summary.textContent = collectionResultSummary(collectionSummaryLabel(), movements.length);
+      if (list) {
+        list.innerHTML = movements.map(renderMovementListing).join("") ||
+          `<p class="empty-state">No movements in this collection yet.</p>`;
+      }
     }
 
     function toggleCollectionFilters(options = {}) {
@@ -5935,6 +6014,7 @@
       const routeView = params.get("view");
       const collection = params.get("collection");
       const group = params.get("group");
+      collectionSearchQuery = String(params.get("q") || "").slice(0, 80);
       const routeTags = selectedTagsFromParam(params.get("tags"));
       const routeSortMetric = params.get("sort");
       collectionSortMetric = normalizeSortMetric(routeSortMetric);
@@ -6028,6 +6108,7 @@
         collectionSortMetric,
         collectionSortSubtype,
         collectionSortDirection,
+        collectionSearchQuery,
         activeMovementId,
         compareAnchorId,
         compareTargetId,
@@ -6050,6 +6131,7 @@
       url.searchParams.delete("sort");
       url.searchParams.delete("rating");
       url.searchParams.delete("direction");
+      url.searchParams.delete("q");
       url.searchParams.delete("workout");
       url.searchParams.delete("template");
       url.searchParams.delete("block");
@@ -6070,6 +6152,7 @@
         if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
         if (activeWorkoutTemplateId) url.searchParams.set("template", activeWorkoutTemplateId);
         if (activeBlockId) url.searchParams.set("block", activeBlockId);
+        if (collectionSearchQuery.trim()) url.searchParams.set("q", collectionSearchQuery.trim());
         url.searchParams.delete("movement");
       } else if (movementView === "detail") {
         url.searchParams.set("view", "detail");
@@ -6083,6 +6166,7 @@
         if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
         if (activeWorkoutTemplateId) url.searchParams.set("template", activeWorkoutTemplateId);
         if (activeBlockId) url.searchParams.set("block", activeBlockId);
+        if (collectionSearchQuery.trim()) url.searchParams.set("q", collectionSearchQuery.trim());
         url.searchParams.set("movement", activeMovementId);
       } else if (movementView === "workout") {
         url.searchParams.set("view", "workout");
@@ -6111,6 +6195,7 @@
         if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
         if (activeWorkoutTemplateId) url.searchParams.set("template", activeWorkoutTemplateId);
         if (activeBlockId) url.searchParams.set("block", activeBlockId);
+        if (collectionSearchQuery.trim()) url.searchParams.set("q", collectionSearchQuery.trim());
         url.searchParams.delete("movement");
       }
       return url;
@@ -6132,6 +6217,7 @@
         collectionSortMetric = normalizeSortMetric(event.state.collectionSortMetric);
         collectionSortSubtype = normalizeSortSubtype(collectionSortMetric, event.state.collectionSortSubtype);
         collectionSortDirection = normalizeSortDirection(event.state.collectionSortDirection);
+        collectionSearchQuery = String(event.state.collectionSearchQuery || "").slice(0, 80);
         collectionFiltersOpen = false;
         collectionSortOpen = false;
         collectionSortMenuOpen = false;
@@ -6254,19 +6340,52 @@
 
     function collectionMovements(label = null, group = null) {
       const selectedTags = selectedCollectionTagObjects();
-      if (!selectedTags.length && !label) return sortedMovements(movementLibrary);
+      if (!selectedTags.length && !label) return sortedMovements(searchMovements(movementLibrary));
       if (!label) {
-        return sortedMovements(movementLibrary.filter(movement => movementMatchesSelectedTags(movement, selectedTags)));
+        return sortedMovements(searchMovements(movementLibrary.filter(movement => movementMatchesSelectedTags(movement, selectedTags))));
       }
       if (group === "region" && REGION_MACRO_ORDER.includes(label)) {
         const labels = regionMacroFilterLabels(label);
-        return sortedMovements(movementLibrary.filter(movement =>
+        return sortedMovements(searchMovements(movementLibrary.filter(movement =>
           movementMatchesAnyTagLabels(movement, labels, group)
-        ));
+        )));
       }
-      return sortedMovements(movementLibrary.filter(movement =>
+      return sortedMovements(searchMovements(movementLibrary.filter(movement =>
         movement.tags?.some(tag => tag.label === label && (!group || tag.group === group))
-      ));
+      )));
+    }
+
+    function searchMovements(movements) {
+      const terms = normalizeSearchText(collectionSearchQuery).split(" ").filter(Boolean);
+      if (!terms.length) return movements;
+      return movements.filter(movement => {
+        const haystack = movementSearchText(movement);
+        return terms.every(term => haystack.includes(term));
+      });
+    }
+
+    function movementSearchText(movement) {
+      return normalizeSearchText([
+        movement.id,
+        movement.name,
+        movement.family,
+        movement.equipment,
+        movement.variantType,
+        movement.variant,
+        movement.description,
+        ...(movement.aliases || []),
+        ...(movement.tags || []).flatMap(tag => [tag.label, tag.group]),
+        ...ROLE_GROUPS.flatMap(group => movementMuscles(movement, group.key).map(muscle => muscle.name))
+      ].join(" "));
+    }
+
+    function normalizeSearchText(value) {
+      return String(value || "")
+        .toLowerCase()
+        .replace(/[_-]+/g, " ")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
     }
 
     function sortedMovements(movements) {

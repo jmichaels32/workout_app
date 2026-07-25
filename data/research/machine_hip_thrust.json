@@ -1,0 +1,47 @@
+{
+  "movementId": "machine_hip_thrust",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "petrizzo-2023",
+    "krause-neto-2019",
+    "contreras-2015",
+    "brazil-2021"
+  ],
+  "searchedQueries": [
+    "machine hip thrust electromyography gluteus maximus hamstrings PubMed",
+    "Machine Vs Barbell Hip Thrust Electromyographic Biomechanical Ease Of Use Comparison",
+    "glute drive machine hip thrust electromyography study gluteus maximus",
+    "machine hip thrust versus barbell hip thrust EMG study"
+  ],
+  "reviewedFiles": [
+    {
+      "url": "https://scholarlyworks.adelphi.edu/esploro/outputs/journalArticle/Machine-Vs-Barbell-Hip-Thrust-Electromyographic/991004365122106266",
+      "notes": "Direct machine-versus-barbell hip-thrust evidence for gluteus maximus, biceps femoris, vastus lateralis, and ease of use."
+    },
+    {
+      "url": "https://www.jssm.org/jssm-18-198.xml-Fulltext",
+      "notes": "Systematic review used as broader hip-thrust movement-family evidence because direct machine literature is narrow."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26214739/",
+      "notes": "Direct barbell hip-thrust EMG source used to anchor the standard hip-thrust muscle hierarchy."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249307",
+      "notes": "Barbell hip-thrust biomechanics source used only for movement-family load and progression interpretation."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Confirmed gluteus maximus, hamstrings, gluteus medius, and quadriceps resolve to local anatomy mesh mappings."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Manufacturer pages for glute-drive and hip-thrust machines",
+      "reason": "Useful for naming, but not used for ratings or muscle roles because the evidence entry should remain study-backed."
+    }
+  ],
+  "notes": "This entry covers guided hip-thrust machines as a machine category. Brand-specific machines may need separate variants if pad path, body position, or loading curve differs enough to affect ratings."
+}

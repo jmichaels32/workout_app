@@ -1,0 +1,250 @@
+{
+  "id": "barbell_hip_thrust",
+  "name": "Barbell Hip Thrust",
+  "aliases": [
+    "hip_thrust",
+    "normal_hip_thrust",
+    "bar_hip_thrust",
+    "loaded_hip_thrust"
+  ],
+  "family": "hip_thrust",
+  "equipment": "barbell",
+  "variantType": "free_weight_barbell",
+  "variant": "Free-weight hip thrust with the upper back on a bench and a loaded barbell across the hips.",
+  "description": "Sit with the upper back against a stable bench, roll a padded bar over the hips, plant the feet about shoulder-width with the shins near vertical at the top, brace the trunk, drive the hips upward until the torso and thighs are roughly in line, then lower under control without letting the ribs flare or the pelvis dump forward.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Hamstrings",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Bench",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip extension",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 84,
+      "rationale": "Excellent glute hypertrophy tool because the external load is applied directly across hip extension and the evidence consistently shows high gluteus maximus activation."
+    },
+    "strength": {
+      "score": 68,
+      "rationale": "Strong hip-extension loading option, but the bar position, bench support, and shorter knee contribution make it less globally strength-representative than squats or deadlifts."
+    },
+    "joint_resilience": {
+      "score": 50,
+      "rationale": "Useful loaded hip-extension exposure with relatively low knee demand, but it is not a broad lower-body joint-capacity exercise."
+    },
+    "athletic_transfer": {
+      "score": 46,
+      "rationale": "Has plausible transfer to horizontal hip-extension tasks, but the supported supine posture limits direct carryover compared with upright, unilateral, or locomotor patterns."
+    },
+    "control": {
+      "score": 28,
+      "rationale": "Requires pelvic and trunk control, but balance and path demands are low because the upper back and feet create a stable base."
+    },
+    "fatigue_efficiency": {
+      "score": 72,
+      "rationale": "High local glute stimulus for moderate systemic cost, with some efficiency lost to bar setup, abdominal pressure, and heavy loading discomfort."
+    },
+    "setup": {
+      "score": 46,
+      "rationale": "Requires a bench, bar, plates, hip pad, floor space, and setup time to get the bar into position."
+    },
+    "ease": {
+      "score": 44,
+      "rationale": "Simple conceptually, but bench height, foot distance, pelvic position, rib control, and bar comfort make consistent execution moderately difficult."
+    },
+    "progression": {
+      "score": 82,
+      "rationale": "Load and reps are very trackable once setup is standardized, and the barbell allows small progressive jumps."
+    },
+    "support": {
+      "score": 38,
+      "rationale": "The bench supports the torso, but the user still controls bar position, pelvis, foot pressure, and trunk stiffness."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Hip-thrust EMG consistently places gluteus maximus as the dominant target.",
+        "evidence": "Barbell hip-thrust EMG and systematic review evidence support gluteus maximus as the primary hip-extension target, with greater or high activation versus common comparison exercises in multiple tested conditions.",
+        "sourceIds": [
+          "contreras-2015",
+          "krause-neto-2019",
+          "petrizzo-2023",
+          "mccurdy-2021"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Hamstrings",
+        "evidenceShort": "Biceps femoris and hamstrings are repeatedly measured during hip thrusts.",
+        "evidence": "Direct hip-thrust studies measure biceps femoris or broader hamstring activation. The role is meaningful but secondary because the movement is most consistently gluteus-maximus dominant.",
+        "sourceIds": [
+          "contreras-2015",
+          "krause-neto-2019",
+          "petrizzo-2023",
+          "mccurdy-2021"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Erector spinae",
+        "evidenceShort": "Review evidence includes erector spinae in the hip-thrust excitation sequence.",
+        "evidence": "Systematic review evidence reports erector spinae involvement during barbell hip thrusts, consistent with trunk and lumbopelvic stabilization under a loaded bar.",
+        "sourceIds": [
+          "krause-neto-2019",
+          "otsuka-2021"
+        ]
+      },
+      {
+        "name": "Gluteus medius",
+        "evidenceShort": "Measured as a stabilizing gluteal contributor in hip-thrust research.",
+        "evidence": "Hip-thrust review evidence includes gluteus medius among muscles evaluated. It is classified as support because the standard bilateral barbell setup mainly demands sagittal-plane hip extension rather than frontal-plane hip control.",
+        "sourceIds": [
+          "krause-neto-2019"
+        ]
+      },
+      {
+        "name": "Quadriceps",
+        "evidenceShort": "Vastus lateralis is measured, but knee-extension demand is limited.",
+        "evidence": "Hip-thrust EMG and biomechanics studies include vastus lateralis or knee-extensor demand, but the movement remains hip-extension biased, so quadriceps are listed as support rather than a primary target.",
+        "sourceIds": [
+          "contreras-2015",
+          "brazil-2021",
+          "petrizzo-2023"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Barbell hip thrust: gluteus maximus primary; hamstrings secondary; erector spinae, gluteus medius, and quadriceps support.",
+    "clinicalShort": "EMG estimates acute excitation; biomechanics estimate joint demand. Neither directly guarantees hypertrophy, injury risk, or individual progression.",
+    "limitsShort": "Bench height, foot distance, pelvic tilt, bar position, range of motion, load, and pause style materially change emphasis.",
+    "summary": "The barbell hip thrust is classified as a free-weight lower-body hip-extension movement. The evidence base supports a gluteus-maximus-dominant profile with meaningful hamstring contribution and visible trunk, gluteus medius, and quadriceps support demands.",
+    "clinicalInterpretation": "Surface electromyography should be interpreted alongside joint action, external load, range of motion, and technique. The classification here treats the standard barbell hip thrust as a loaded bilateral exercise, not a bodyweight bridge or single-leg variation.",
+    "limitations": "Machine, banded, American, single-leg, bodyweight bridge, and elevated-foot variants should be separate entries if the app needs variant-specific scoring.",
+    "studies": [
+      {
+        "id": "contreras-2015",
+        "type": "Barbell hip thrust versus back squat EMG",
+        "shortCitation": "Contreras et al., J Appl Biomech, 2015",
+        "finding": "The barbell hip thrust produced greater upper/lower gluteus maximus and biceps femoris activity than the back squat in the tested condition, while vastus lateralis favored the squat.",
+        "citation": "Contreras B, Vigotsky AD, Schoenfeld BJ, Beardsley C, Cronin J. A Comparison of Gluteus Maximus, Biceps Femoris, and Vastus Lateralis Electromyographic Activity in the Back Squat and Barbell Hip Thrust Exercises. Journal of Applied Biomechanics. 2015;31(6):452-458. doi:10.1123/jab.2014-0301.",
+        "doi": "10.1123/jab.2014-0301",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26214739/",
+        "relevance": "Direct barbell hip-thrust EMG source for gluteus maximus, biceps femoris, and vastus lateralis roles.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score"
+        ]
+      },
+      {
+        "id": "krause-neto-2019",
+        "type": "Barbell hip thrust systematic review",
+        "shortCitation": "Krause Neto et al., JSSM, 2019",
+        "finding": "The review concluded that hip-thrust mechanics favor hip-extensor activation, with an excitation sequence led by gluteus maximus followed by erector spinae, hamstrings, and quadriceps femoris.",
+        "citation": "Krause Neto W, Vieira TL, Gama EF. Barbell Hip Thrust, Muscular Activation and Performance: A Systematic Review. Journal of Sports Science and Medicine. 2019;18(2):198-206.",
+        "url": "https://www.jssm.org/jssm-18-198.xml-Fulltext",
+        "relevance": "Synthesis source for overall muscle-role hierarchy and performance-transfer limits.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "athletic transfer score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "brazil-2021",
+        "type": "Barbell hip thrust biomechanics",
+        "shortCitation": "Brazil et al., PLOS ONE, 2021",
+        "finding": "Biomechanical analysis of trained lifters at 70% 1RM characterized hip and knee extensor demand across the barbell hip thrust.",
+        "citation": "Brazil A, Needham L, Palmer JL, Bezodis IN. A comprehensive biomechanical analysis of the barbell hip thrust. PLOS ONE. 2021;16(3):e0249307. doi:10.1371/journal.pone.0249307.",
+        "doi": "10.1371/journal.pone.0249307",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249307",
+        "relevance": "Direct biomechanical source for hip-extension loading, progression, and quadriceps support interpretation.",
+        "usedFor": [
+          "support muscle role",
+          "strength score",
+          "progression score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "otsuka-2021",
+        "type": "Sprint-athlete hip thrust kinetics",
+        "shortCitation": "Otsuka et al., PLOS ONE, 2021",
+        "finding": "In sprinters, barbell hip thrust produced large lumbosacral and hip extension moments compared with back squat and deadlift conditions.",
+        "citation": "Otsuka M, Honjo T, Nagano A, Isaka T. Kinetics in lumbosacral and lower-limb joints of sprinters during barbell hip thrust compared to deadlift and back squat. PLOS ONE. 2021;16(7):e0251418. doi:10.1371/journal.pone.0251418.",
+        "doi": "10.1371/journal.pone.0251418",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251418",
+        "relevance": "Biomechanical source for lumbopelvic and hip-extension demand in trained sprinters.",
+        "usedFor": [
+          "support muscle role",
+          "athletic transfer score",
+          "joint resilience score"
+        ]
+      },
+      {
+        "id": "petrizzo-2023",
+        "type": "Machine versus barbell hip thrust EMG",
+        "shortCitation": "Petrizzo et al., MSSE, 2023",
+        "finding": "Machine and free-weight hip thrusts showed similar gluteus maximus mean activation; the machine showed greater biceps femoris mean activation and lower vastus lateralis mean activation.",
+        "citation": "Petrizzo J, Lopez J, Gaeta A, Aquino M, Otto R, Wygand J. Machine Vs. Barbell Hip Thrust: Electromyographic, Biomechanical, And Ease Of Use Comparison: 2266. Medicine and Science in Sports and Exercise. 2023;55(9S):749. doi:10.1249/01.mss.0000986876.72568.fb.",
+        "doi": "10.1249/01.mss.0000986876.72568.fb",
+        "url": "https://scholarlyworks.adelphi.edu/esploro/outputs/journalArticle/Machine-Vs-Barbell-Hip-Thrust-Electromyographic/991004365122106266",
+        "relevance": "Direct comparison source for free-weight versus machine hip thrust muscle activation and ease-of-use scoring.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "setup score",
+          "ease score"
+        ]
+      },
+      {
+        "id": "mccurdy-2021",
+        "type": "Hip thrust and RFESS EMG",
+        "shortCitation": "McCurdy et al., JSCR, 2021",
+        "finding": "In trained females, hip thrust and rear-foot-elevated split squat conditions measured hip and knee extensor activation including gluteus maximus and hamstrings.",
+        "citation": "McCurdy K, Walker J, Kelly C, Polinski M. Hip and Knee Extensor Activation During the Hip Thrust and Rear-Foot-Elevated Split Squat in Trained Females. Journal of Strength and Conditioning Research. 2021;35(5):1201-1207. doi:10.1519/JSC.0000000000004035.",
+        "doi": "10.1519/JSC.0000000000004035",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33900255/",
+        "relevance": "Direct hip-thrust movement-family EMG source in trained women.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score"
+        ]
+      }
+    ]
+  }
+}

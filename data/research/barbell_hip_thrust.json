@@ -1,0 +1,58 @@
+{
+  "movementId": "barbell_hip_thrust",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-25",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "contreras-2015",
+    "krause-neto-2019",
+    "brazil-2021",
+    "otsuka-2021",
+    "petrizzo-2023",
+    "mccurdy-2021"
+  ],
+  "searchedQueries": [
+    "hip thrust electromyography gluteus maximus biceps femoris study PubMed",
+    "barbell hip thrust electromyographic activity gluteus maximus biceps femoris erector spinae DOI",
+    "A Comparison of Gluteus Maximus Biceps Femoris Vastus Lateralis Barbell Hip Thrust",
+    "Barbell Hip Thrust Muscular Activation and Performance systematic review",
+    "machine vs barbell hip thrust electromyographic biomechanical ease of use"
+  ],
+  "reviewedFiles": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26214739/",
+      "notes": "Direct barbell hip-thrust versus squat EMG source for gluteus maximus, biceps femoris, and vastus lateralis."
+    },
+    {
+      "url": "https://www.jssm.org/jssm-18-198.xml-Fulltext",
+      "notes": "Systematic review used for overall hip-thrust muscle activation hierarchy and performance-transfer boundary."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249307",
+      "notes": "Direct biomechanical barbell hip-thrust analysis used for loading and support-role interpretation."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251418",
+      "notes": "Sprinter biomechanics paper used for lumbosacral and hip-extension demand context."
+    },
+    {
+      "url": "https://scholarlyworks.adelphi.edu/esploro/outputs/journalArticle/Machine-Vs-Barbell-Hip-Thrust-Electromyographic/991004365122106266",
+      "notes": "Machine-versus-barbell conference paper used only as a comparative source for free-weight setup and ease."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33900255/",
+      "notes": "Direct hip-thrust EMG source in trained females."
+    },
+    {
+      "path": "data/anatomy.json",
+      "notes": "Confirmed gluteus maximus, hamstrings, erector spinae, gluteus medius, and quadriceps all resolve to local anatomy mesh mappings."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Commercial hip-thrust tutorials and equipment pages",
+      "reason": "Useful for practical vocabulary, but not used for muscle roles or ratings because peer-reviewed EMG and biomechanics sources were available."
+    }
+  ],
+  "notes": "This entry treats normal hip thrust as the standard loaded barbell version. Bodyweight glute bridge, single-leg hip thrust, banded hip thrust, American hip thrust, and machine hip thrust should remain separate movement entries."
+}
