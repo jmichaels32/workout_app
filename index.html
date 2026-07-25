@@ -95,6 +95,12 @@
 
     button:hover { border-color: #8f98a6; background: var(--control-hover); }
     button:active { background: var(--accent-soft); }
+    button:disabled {
+      border-color: var(--ink-12);
+      background: var(--panel-2);
+      color: var(--muted);
+      cursor: default;
+    }
     button:focus-visible,
     input:focus-visible,
     .movement-listing:focus-visible {
@@ -775,23 +781,90 @@
       margin-bottom: 0;
     }
 
+    .live-progress {
+      display: grid;
+      gap: 7px;
+    }
+
+    .live-progress-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .live-progress-row strong {
+      font-size: 22px;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+
+    .live-progress-track {
+      height: 8px;
+      border: 1px solid var(--soft-line);
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    .live-progress-fill {
+      display: block;
+      width: var(--progress, 0%);
+      height: 100%;
+      background: var(--workout-color, var(--accent));
+      transition: width 160ms ease;
+    }
+
     .live-workout-list {
       display: grid;
       gap: 10px;
+      touch-action: pan-y;
     }
 
     .live-workout-block {
       display: grid;
-      gap: 0;
+      gap: 12px;
       padding: 12px;
+    }
+
+    .live-workout-block.is-complete {
+      border-color: var(--accent-line);
+      box-shadow: inset 0 0 0 1px var(--accent-line);
+    }
+
+    .live-block-header {
+      display: grid;
+      grid-template-columns: minmax(74px, 1fr) auto minmax(74px, 1fr);
+      gap: 8px;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--soft-line);
+    }
+
+    .live-block-header button:first-child {
+      justify-self: start;
+    }
+
+    .live-block-header button:last-child {
+      justify-self: end;
+    }
+
+    .live-block-index {
+      display: grid;
+      gap: 2px;
+      text-align: center;
+    }
+
+    .live-block-index strong {
+      font-size: 18px;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
     }
 
     .live-block-grid {
       display: grid;
-      grid-template-columns: repeat(var(--movement-count, 1), minmax(168px, 1fr));
+      grid-template-columns: minmax(0, 1fr);
       gap: 10px;
-      overflow-x: auto;
-      padding-bottom: 2px;
+      min-width: 0;
     }
 
     .live-workout-row {
@@ -800,6 +873,11 @@
       padding: 10px;
       border: 1px solid var(--ink-12);
       background: var(--panel);
+    }
+
+    .live-workout-row.is-complete {
+      border-color: var(--accent-line);
+      background: var(--accent-soft);
     }
 
     .live-row-header {
@@ -2215,7 +2293,6 @@
       .local-anatomy-viewer.workout-anatomy-viewer { min-height: 360px; }
       .schedule-modal { padding: 8px; }
       .schedule-dialog { width: 100%; max-height: 82dvh; }
-      .live-block-grid { grid-template-columns: repeat(var(--movement-count, 1), minmax(154px, 1fr)); }
       .workout-builder-actions,
       .block-header,
       .block-movement-row,
@@ -2918,6 +2995,8 @@
       }
 
       const blocks = workoutBlocks(workout);
+      const blockState = liveBlockState(workout, blocks);
+      const progress = liveWorkoutProgress(workout);
       const completeLabel = workout.status === "completed" ? "Reopen" : "Finish";
       movementLivePage.innerHTML = `
         <div class="live-workout" style="${workoutColorStyle(workout)}">
@@ -2937,9 +3016,15 @@
               <span class="workout-color-chip" aria-hidden="true"></span>
             </div>
             <span class="movement-count">${escapeHTML(shortDateLabel(workout.date))}</span>
+            ${renderLiveWorkoutProgress(progress)}
           </section>
-          <section class="live-workout-list" aria-label="Live workout movements">
-            ${blocks.map((block, index) => renderLiveWorkoutBlock(workout, block, index)).join("")}
+          <section
+            class="live-workout-list"
+            aria-label="Live workout movements"
+            ontouchstart="startLiveBlockSwipe(event)"
+            ontouchend="finishLiveBlockSwipe(event)"
+          >
+            ${blockState.block ? renderLiveWorkoutBlock(workout, blockState.block, blockState.index, blockState.count) : `<p class="empty-state">No blocks in this workout yet.</p>`}
           </section>
           <section class="live-workout-footer" aria-label="Workout save status">
             <span class="movement-count">Saved on this device as you log.</span>
@@ -2949,12 +3034,33 @@
       `;
     }
 
-    function renderLiveWorkoutBlock(workout, block, index) {
-      const movements = blockMovements(block);
-      const movementCount = Math.max(1, Math.min(3, movements.length || 1));
+    function renderLiveWorkoutProgress(progress) {
       return `
-        <article class="live-workout-block" aria-label="Workout block ${index + 1}">
-          <div class="live-block-grid" style="--movement-count: ${movementCount};">
+        <div class="live-progress" data-live-progress style="--progress: ${progress.percent}%">
+          <div class="live-progress-row">
+            <span class="movement-count">Progress</span>
+            <strong data-live-progress-percent>${progress.percent}%</strong>
+          </div>
+          <span class="live-progress-track" aria-hidden="true"><span class="live-progress-fill"></span></span>
+          <span class="movement-count" data-live-progress-count>${progress.completed}/${progress.total} movements complete</span>
+        </div>
+      `;
+    }
+
+    function renderLiveWorkoutBlock(workout, block, index, blockCount) {
+      const movements = blockMovements(block);
+      const complete = liveBlockComplete(workout, block) ? " is-complete" : "";
+      return `
+        <article class="live-workout-block${complete}" aria-label="Workout block ${index + 1} of ${blockCount}">
+          <div class="live-block-header">
+            <button type="button" class="back-button" onclick="changeLiveBlock(-1)" ${index <= 0 ? "disabled" : ""}>Prev</button>
+            <div class="live-block-index">
+              <span class="movement-count">Block</span>
+              <strong>${index + 1}/${Math.max(1, blockCount)}</strong>
+            </div>
+            <button type="button" class="compare-button" onclick="changeLiveBlock(1)" ${index >= blockCount - 1 ? "disabled" : ""}>Next</button>
+          </div>
+          <div class="live-block-grid">
             ${movements.map(entry => renderLiveWorkoutRow(workout, block, entry)).join("") || `<div class="block-empty">No movements in this workout yet.</div>`}
           </div>
         </article>
@@ -2966,8 +3072,9 @@
       if (!movement) return "";
       const plan = movementProgressionPlan(movement, entry, workout);
       const displaySets = plan.setTargets.map((target, setIndex) => displayLiveSet(entry, target, setIndex));
+      const complete = displaySets.length && displaySets.every(set => set.done) ? " is-complete" : "";
       return `
-        <div class="live-workout-row">
+        <div class="live-workout-row${complete}" data-live-movement-row>
           <div class="live-row-header">
             <button type="button" class="live-movement-title-button" onclick="openMovementQuickView('${escapeJS(movement.id)}')">${escapeHTML(movement.name)}</button>
           </div>
@@ -2981,13 +3088,87 @@
       `;
     }
 
+    function liveWorkoutProgress(workout) {
+      const entries = workoutEntries(workout).filter(entry => movementById(entry.movementId));
+      const total = entries.length;
+      const completed = entries.filter(entry => liveMovementComplete(workout, entry)).length;
+      return {
+        total,
+        completed,
+        percent: total ? Math.round((completed / total) * 100) : 0
+      };
+    }
+
+    function liveMovementComplete(workout, entry) {
+      const movement = movementById(entry?.movementId);
+      if (!movement) return false;
+      const plan = movementProgressionPlan(movement, entry, workout);
+      const sets = plan.setTargets.map((target, setIndex) => displayLiveSet(entry, target, setIndex));
+      return Boolean(sets.length && sets.every(set => set.done));
+    }
+
+    function liveBlockComplete(workout, block) {
+      const entries = blockMovements(block);
+      return Boolean(entries.length && entries.every(entry => liveMovementComplete(workout, entry)));
+    }
+
+    function liveBlockState(workout, blocks = workoutBlocks(workout)) {
+      if (!blocks.length) return { block: null, index: 0, count: 0 };
+      let index = blocks.findIndex(block => block.id === activeBlockId);
+      if (index < 0) {
+        index = blocks.findIndex(block => !liveBlockComplete(workout, block));
+      }
+      if (index < 0) index = 0;
+      activeBlockId = blocks[index].id;
+      return { block: blocks[index], index, count: blocks.length };
+    }
+
+    function changeLiveBlock(direction) {
+      const workout = activeScheduledWorkout();
+      const blocks = workoutBlocks(workout);
+      if (!workout || blocks.length < 2) return;
+      const state = liveBlockState(workout, blocks);
+      const nextIndex = Math.max(0, Math.min(blocks.length - 1, state.index + direction));
+      if (nextIndex === state.index) return;
+      activeBlockId = blocks[nextIndex].id;
+      renderMovementApp({ replaceHistory: true });
+    }
+
+    let liveBlockSwipeStart = null;
+
+    function startLiveBlockSwipe(event) {
+      if (event.target.closest(".set-rep-boxes, .set-target-tools, .set-load-button, button, input")) return;
+      const touch = event.changedTouches?.[0];
+      if (!touch) return;
+      liveBlockSwipeStart = { x: touch.clientX, y: touch.clientY };
+    }
+
+    function finishLiveBlockSwipe(event) {
+      if (!liveBlockSwipeStart) return;
+      const touch = event.changedTouches?.[0];
+      if (!touch) return;
+      const dx = touch.clientX - liveBlockSwipeStart.x;
+      const dy = touch.clientY - liveBlockSwipeStart.y;
+      liveBlockSwipeStart = null;
+      if (Math.abs(dx) < 72 || Math.abs(dy) > 58) return;
+      changeLiveBlock(dx < 0 ? 1 : -1);
+    }
+
     function renderLiveSetTile(workout, block, entry, plan, set, setIndex) {
       const done = set.completedReps >= set.targetReps ? " is-done" : "";
       const loadDisplay = formatLoadDisplay(set.load, plan.schema);
       const loadEmpty = loadDisplay === "--" ? " empty" : "";
       const extraSlots = Math.max(0, set.extraSlots, set.completedReps - set.targetReps);
       return `
-        <article class="live-set-tile${done}" data-target-reps="${set.targetReps}" data-completed-reps="${set.completedReps}" data-extra-slots="${extraSlots}">
+        <article
+          class="live-set-tile${done}"
+          data-workout-id="${escapeHTML(workout.id)}"
+          data-block-id="${escapeHTML(block.id)}"
+          data-movement-id="${escapeHTML(entry.movementId)}"
+          data-target-reps="${set.targetReps}"
+          data-completed-reps="${set.completedReps}"
+          data-extra-slots="${extraSlots}"
+        >
           <button
             type="button"
             class="set-load-button${loadEmpty}"
@@ -3290,6 +3471,36 @@
       });
       updateTargetCountUI(tile, targetReps);
       updateExtraRepControls(tile);
+      syncLiveCompletionUI(tile);
+    }
+
+    function syncLiveCompletionUI(tile) {
+      const movementRow = tile.closest("[data-live-movement-row]");
+      if (movementRow) {
+        const setTiles = [...movementRow.querySelectorAll(".live-set-tile")];
+        movementRow.classList.toggle("is-complete", Boolean(setTiles.length && setTiles.every(item => item.classList.contains("is-done"))));
+      }
+
+      const block = tile.closest(".live-workout-block");
+      if (block) {
+        const movementRows = [...block.querySelectorAll("[data-live-movement-row]")];
+        block.classList.toggle("is-complete", Boolean(movementRows.length && movementRows.every(row => row.classList.contains("is-complete"))));
+      }
+
+      updateLiveProgressUI(tile.dataset.workoutId);
+    }
+
+    function updateLiveProgressUI(workoutId) {
+      const workout = workoutRecordById(workoutId);
+      if (!workout) return;
+      const progress = liveWorkoutProgress(workout);
+      const progressRoot = document.querySelector("[data-live-progress]");
+      if (!progressRoot) return;
+      progressRoot.style.setProperty("--progress", `${progress.percent}%`);
+      const percent = progressRoot.querySelector("[data-live-progress-percent]");
+      const count = progressRoot.querySelector("[data-live-progress-count]");
+      if (percent) percent.textContent = `${progress.percent}%`;
+      if (count) count.textContent = `${progress.completed}/${progress.total} movements complete`;
     }
 
     function syncExtraRepBoxes(tile, completedReps, targetReps) {
@@ -5557,6 +5768,7 @@
       } else if (movementView === "live") {
         url.searchParams.set("view", "live");
         if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
+        if (activeBlockId) url.searchParams.set("block", activeBlockId);
         url.searchParams.delete("group");
         url.searchParams.delete("movement");
         url.searchParams.delete("tags");
