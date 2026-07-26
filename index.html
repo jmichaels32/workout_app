@@ -640,43 +640,6 @@
       line-height: 1.25;
     }
 
-    .workout-rating-strip {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 6px;
-      min-width: 0;
-    }
-
-    .workout-rating-chip {
-      display: grid;
-      gap: 2px;
-      min-width: 0;
-      min-height: 42px;
-      align-content: center;
-      padding: 7px;
-      border: 1px solid color-mix(in srgb, var(--group-color) 55%, var(--line));
-      background:
-        linear-gradient(90deg, color-mix(in srgb, var(--group-color) 18%, transparent) var(--score-percent, 0%), transparent var(--score-percent, 0%)),
-        var(--panel);
-      color: var(--ink);
-    }
-
-    .workout-rating-chip span {
-      color: var(--muted);
-      font-size: 9px;
-      font-weight: 850;
-      letter-spacing: 0;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-
-    .workout-rating-chip strong {
-      font-size: 16px;
-      font-weight: 900;
-      line-height: 1;
-      font-variant-numeric: tabular-nums;
-    }
-
     .workout-training-overview {
       display: grid;
       gap: 14px;
@@ -3247,7 +3210,6 @@
             <h3>${escapeHTML(workoutTitle(template))}</h3>
             <p class="listing-summary">${escapeHTML(workoutSummary(template, movements))}</p>
           </div>
-          ${renderWorkoutRatingStrip(template)}
         </button>
       `;
     }
@@ -3265,7 +3227,6 @@
                 ${movements.slice(0, 6).map(movement => `<span class="tag tag-library">${escapeHTML(movement.name)}</span>`).join("")}
               </div>
             ` : ""}
-            ${renderWorkoutRatingStrip(workout)}
           </div>
           <div class="compare-tray-actions">
             <span class="workout-status ${escapeHTML(workout.status)}">${escapeHTML(status)}</span>
@@ -3288,43 +3249,6 @@
       if (movements.length) return `${movements.length} movement${movements.length === 1 ? "" : "s"} selected.`;
       if (workout.status === "completed") return "Completed workout saved without movement details.";
       return "No movements selected.";
-    }
-
-    function renderWorkoutRatingStrip(workout) {
-      const summary = workoutRatingSummary(workout);
-      if (!summary.count) return "";
-      return `
-        <div class="workout-rating-strip" aria-label="Workout summed ratings">
-          ${renderWorkoutRatingChip("Training", summary.training, summary.trainingMax, "training")}
-        </div>
-      `;
-    }
-
-    function renderWorkoutRatingChip(label, score, maxScore, ratingGroup) {
-      return `
-        <span
-          class="workout-rating-chip"
-          style="${ratingStyle(ratingGroup, scorePercent(score, maxScore), ratingGroup)} --score-percent: ${scorePercent(score, maxScore)}%;"
-          title="${escapeHTML(`${score} of ${maxScore}`)}"
-        >
-          <span>${escapeHTML(label)}</span>
-          <strong>${score}</strong>
-        </span>
-      `;
-    }
-
-    function workoutRatingSummary(workout) {
-      const entries = workoutEntries(workout)
-        .map(entry => movementById(entry.movementId))
-        .filter(Boolean);
-      const trainingKeys = Object.keys(TRAINING_RATINGS);
-      const training = entries.reduce((sum, movement) =>
-        sum + trainingKeys.reduce((subtotal, key) => subtotal + ratingScore(movement, key), 0), 0);
-      return {
-        count: entries.length,
-        training,
-        trainingMax: entries.length * trainingKeys.length * 100
-      };
     }
 
     function renderWorkoutTrainingOverview(workout) {
@@ -3512,7 +3436,6 @@
               oninput="updateWorkoutTitle('${escapeJS(workout.id)}', this.value)"
             >
             ${renderWorkoutColorPicker(workout)}
-            ${renderWorkoutRatingStrip(workout)}
             <div class="workout-builder-actions">
               <button type="button" class="detail-evidence-button" onclick="addWorkoutBlock('${escapeJS(workout.id)}')">Add Block</button>
               <button type="button" class="delete-button" onclick="deleteWorkout('${escapeJS(workout.id)}')">${isTemplate ? "Delete Template" : "Delete Workout"}</button>
