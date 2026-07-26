@@ -1,0 +1,175 @@
+{
+  "id": "seated_machine_hip_abduction",
+  "name": "Seated Machine Hip Abduction",
+  "aliases": [
+    "hip_abduction_machine",
+    "seated_hip_abductor",
+    "seated_machine_hip_abductor",
+    "abductor_machine"
+  ],
+  "family": "hip_abduction",
+  "equipment": "machine",
+  "variantType": "seated_machine",
+  "variant": "Seated hip-abduction machine with lateral thigh pads and guided resistance away from the body midline.",
+  "description": "Sit with the pelvis and trunk fixed against the pads, place the outside of the thighs against the pads, brace lightly, press the thighs outward through a controlled hip-abduction range, pause without rocking the trunk, then return under control until the stack is close to resting.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Glutes",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip abduction",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 58,
+      "rationale": "Useful isolated stimulus for the lateral hip, especially gluteus medius, but the trained muscle mass is smaller and exact hypertrophy evidence is narrower than for major compound lower-body lifts."
+    },
+    "strength": {
+      "score": 28,
+      "rationale": "Builds isolated hip-abduction force, but has limited expression of integrated lower-body strength."
+    },
+    "joint_resilience": {
+      "score": 54,
+      "rationale": "Can train frontal-plane hip capacity in a controlled way, but the seated guided task does not fully represent upright pelvic control or dynamic knee/hip mechanics."
+    },
+    "athletic_transfer": {
+      "score": 18,
+      "rationale": "Some relevance to lateral hip capacity, but low direct transfer because the task is seated, supported, and single-joint."
+    },
+    "control": {
+      "score": 6,
+      "rationale": "Very low Motor Control demand beyond posture, range, and avoiding trunk rocking."
+    },
+    "fatigue_efficiency": {
+      "score": 76,
+      "rationale": "Good local lateral-hip stimulus with low systemic fatigue and little unrelated recovery cost."
+    },
+    "setup": {
+      "score": 74,
+      "rationale": "Requires the machine and pad setting, but loading is fast and repeatable once seated."
+    },
+    "ease": {
+      "score": 90,
+      "rationale": "Simple guided movement with little balance or coordination demand."
+    },
+    "progression": {
+      "score": 78,
+      "rationale": "Load, reps, range, and tempo are easy to track, with deductions for stack increments and machine-specific geometry."
+    },
+    "support": {
+      "score": 96,
+      "rationale": "Very high external support from the seat, back pad, handles, thigh pads, and guided lever path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Gluteus medius",
+        "evidenceShort": "Machine hip abduction directly targets gluteus medius in machine/free-weight EMG comparison evidence.",
+        "evidence": "A direct hip-abduction-machine study concluded that the machine preferentially targets gluteus medius while minimizing tensor fascia latae activation compared with tested free-weight options. Broader hip-abduction EMG reviews also support gluteus medius as a central hip-abduction target.",
+        "sourceIds": [
+          "de-almeida-paz-2022",
+          "brandt-2013",
+          "macadam-2015"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Gluteus maximus",
+        "evidenceShort": "Upper gluteus maximus can contribute during hip-abduction and external-rotation tasks.",
+        "evidence": "Hip-abduction and hip external-rotation EMG literature includes gluteus maximus as a measured contributor, but the seated machine is classified as gluteus-medius dominant rather than a primary gluteus-maximus exercise.",
+        "sourceIds": [
+          "macadam-2015",
+          "distefano-2009"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Seated machine hip abduction: gluteus medius primary; gluteus maximus secondary; no visible support muscles added.",
+    "clinicalShort": "EMG estimates acute muscle excitation under specific posture, load, and range conditions; it does not directly measure hypertrophy, pain risk, or individual adaptation.",
+    "limitsShort": "Hip flexion angle, torso lean, pad height, range, pelvis motion, foot position, load, and machine geometry can shift gluteus medius, gluteus maximus, and tensor fascia latae emphasis.",
+    "summary": "The seated machine hip abduction is classified as a guided lower-body hip-abduction isolation exercise. Direct machine evidence supports gluteus medius as the primary visible target, with gluteus maximus treated as secondary because hip-abduction and hip external-rotation literature shows contribution but not primary dominance for this seated machine card.",
+    "clinicalInterpretation": "The current local anatomy registry does not include tensor fasciae latae or gluteus minimus meshes, so they are discussed as limitations rather than shown as visible roles. The visible map is intentionally conservative and should be expanded if those mesh assets are added.",
+    "limitations": "Exact commercial machine geometry and torso angle may materially alter activation. Elastic-resistance abduction may produce higher gluteus medius recruitment than the machine in some conditions, so this card should not be interpreted as the universal best hip-abduction option.",
+    "studies": [
+      {
+        "id": "de-almeida-paz-2022",
+        "type": "Direct hip-abduction-machine EMG comparison",
+        "shortCitation": "de Almeida Paz et al., J Bodyw Mov Ther, 2022",
+        "finding": "The authors concluded that the hip abduction machine was best among tested single-joint options for targeting gluteus medius while minimizing tensor fascia latae activation.",
+        "citation": "de Almeida Paz I, Frigotto MF, Cardoso CA, Rabello R, Rodrigues R. Hip abduction machine is better than free weights to target the gluteus medius while minimizing tensor fascia latae activation. Journal of Bodywork and Movement Therapies. 2022;30:160-167. doi:10.1016/j.jbmt.2022.01.001.",
+        "doi": "10.1016/j.jbmt.2022.01.001",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S1360859222000018",
+        "relevance": "Directly supports the primary gluteus medius role and machine-specific classification.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "brandt-2013",
+        "type": "Machine versus elastic hip abduction/adduction EMG",
+        "shortCitation": "Brandt et al., IJSPT, 2013",
+        "finding": "Hip abduction and adduction exercises using isotonic machines and elastic resistance produced load-related EMG responses; elastic abduction recruited gluteus medius more than the machine condition in this sample.",
+        "citation": "Brandt M, Jakobsen MD, Thorborg K, Sundstrup EH, Jay K, Andersen LL. Perceived loading and muscle activity during hip strengthening exercises: comparison of elastic resistance and machine exercises. International Journal of Sports Physical Therapy. 2013;8(6):811-819.",
+        "url": "https://nfa.elsevierpure.com/en/publications/perceived-loading-and-muscle-activity-during-hip-strengthening-ex",
+        "relevance": "Close machine-specific EMG source for hip abduction loading, progression, and machine limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "progression score",
+          "setup score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "macadam-2015",
+        "type": "Hip abduction and external rotation EMG systematic review",
+        "shortCitation": "Macadam et al., IJSPT, 2015",
+        "finding": "The review summarized gluteus medius and gluteus maximus activation across dynamic hip-abduction and external-rotation exercises.",
+        "citation": "Macadam P, Cronin J, Contreras B. An examination of the gluteal muscle activity associated with dynamic hip abduction and hip external rotation exercise: a systematic review. International Journal of Sports Physical Therapy. 2015;10(5):573-591.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4595911/",
+        "relevance": "Movement-family source for gluteus medius and gluteus maximus role boundaries.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "clinical interpretation"
+        ]
+      },
+      {
+        "id": "distefano-2009",
+        "type": "Common therapeutic gluteal exercise EMG",
+        "shortCitation": "DiStefano et al., JOSPT, 2009",
+        "finding": "Gluteus medius and gluteus maximus activation varied substantially across common therapeutic exercises.",
+        "citation": "DiStefano LJ, Blackburn JT, Marshall SW, Padua DA. Gluteal muscle activation during common therapeutic exercises. Journal of Orthopaedic and Sports Physical Therapy. 2009;39(7):532-540. doi:10.2519/jospt.2009.2796.",
+        "doi": "10.2519/jospt.2009.2796",
+        "url": "https://www.jospt.org/doi/10.2519/jospt.2009.2796",
+        "relevance": "Supporting gluteus maximus and gluteus medius activation context for non-machine hip exercises.",
+        "usedFor": [
+          "secondary muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

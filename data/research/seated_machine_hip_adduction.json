@@ -1,0 +1,54 @@
+{
+  "movementId": "seated_machine_hip_adduction",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-26",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "brandt-2013",
+    "serner-2014",
+    "ishoi-2016"
+  ],
+  "searchedQueries": [
+    "\"seated hip adduction machine\" \"EMG\" \"adductor longus\"",
+    "\"hip adduction machine\" \"adductor longus\" \"doi\"",
+    "\"adductor machine\" \"adductor longus\" electromyography",
+    "\"EMG evaluation of hip adduction exercises for soccer players\"",
+    "\"Copenhagen Adduction exercise\" eccentric hip adduction strength randomized"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "paper",
+      "id": "brandt-2013",
+      "url": "https://nfa.elsevierpure.com/en/publications/perceived-loading-and-muscle-activity-during-hip-strengthening-ex",
+      "notes": "Machine and elastic hip adduction/abduction EMG comparison used for machine-specific loading and setup context."
+    },
+    {
+      "type": "paper",
+      "id": "serner-2014",
+      "url": "https://bjsm.bmj.com/content/48/14/1108",
+      "notes": "Adductor longus EMG exercise-selection source used to classify hip adduction as an adductor-primary pattern and contextualize groin-capacity transfer."
+    },
+    {
+      "type": "paper",
+      "id": "ishoi-2016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26589458/",
+      "notes": "Copenhagen adduction randomized intervention used only as movement-family context for adductor strength adaptation, not as direct evidence for the seated machine."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Adductor longus resolves to a local mesh. Adductor magnus, adductor brevis, gracilis, and pectineus are not currently mapped, so the visible adductor map is incomplete by design."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer gym guides and coaching articles about the adductor machine",
+      "reason": "Not used for roles or ratings because direct or close EMG sources were available."
+    },
+    {
+      "title": "General adductor anatomy summaries",
+      "reason": "Reviewed for anatomical context but excluded from visible roles unless the muscles already had local mesh mappings."
+    }
+  ],
+  "notes": "Variant assumption: generic seated hip-adduction machine with medial thigh pads. The movement likely loads a broader adductor group, but the MVP anatomy registry currently exposes Adductor longus only, so this record avoids implying mesh precision that does not exist yet."
+}

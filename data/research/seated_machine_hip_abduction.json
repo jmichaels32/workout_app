@@ -1,0 +1,62 @@
+{
+  "movementId": "seated_machine_hip_abduction",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-26",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "de-almeida-paz-2022",
+    "brandt-2013",
+    "macadam-2015",
+    "distefano-2009"
+  ],
+  "searchedQueries": [
+    "\"seated hip abduction\" \"gluteus medius\" EMG",
+    "\"hip abduction machine\" \"gluteus medius\"",
+    "\"hip abduction machine is better than free weights\" \"tensor fascia latae\"",
+    "\"Which exercises target the gluteal muscles while minimizing activation of the tensor fascia lata\"",
+    "\"An examination of the gluteal muscle activity associated with dynamic hip abduction\"",
+    "\"Gluteal muscle activation during common therapeutic exercises\""
+  ],
+  "reviewedFiles": [
+    {
+      "type": "paper",
+      "id": "de-almeida-paz-2022",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1360859222000018",
+      "notes": "Direct hip-abduction-machine EMG comparison used for gluteus medius primary role and machine-specific limitations."
+    },
+    {
+      "type": "paper",
+      "id": "brandt-2013",
+      "url": "https://nfa.elsevierpure.com/en/publications/perceived-loading-and-muscle-activity-during-hip-strengthening-ex",
+      "notes": "Machine and elastic hip abduction/adduction EMG comparison used for machine loading, setup, and progression context."
+    },
+    {
+      "type": "paper",
+      "id": "macadam-2015",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4595911/",
+      "notes": "Systematic review used for hip-abduction and external-rotation gluteus medius/gluteus maximus role boundaries."
+    },
+    {
+      "type": "paper",
+      "id": "distefano-2009",
+      "url": "https://www.jospt.org/doi/10.2519/jospt.2009.2796",
+      "notes": "Common therapeutic exercise EMG used as supporting gluteus medius and gluteus maximus activation context."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Gluteus medius and Gluteus maximus resolve to local meshes. Tensor fasciae latae and Gluteus minimus are not currently mapped, so they were not added as visible roles."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer gym guides and coaching articles about the abductor machine",
+      "reason": "Not used for roles or ratings because direct or close EMG sources were available."
+    },
+    {
+      "title": "Tensor fasciae latae anatomy summaries",
+      "reason": "Reviewed for anatomical context but excluded from the visible map because there is no local mesh mapping yet."
+    }
+  ],
+  "notes": "Variant assumption: generic seated hip-abduction machine with lateral thigh pads. The visible map is intentionally conservative: Gluteus medius primary and Gluteus maximus secondary only. Future anatomy imports should add tensor fasciae latae and gluteus minimus before creating a richer lateral-hip map."
+}

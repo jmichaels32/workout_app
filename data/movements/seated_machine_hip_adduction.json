@@ -1,0 +1,152 @@
+{
+  "id": "seated_machine_hip_adduction",
+  "name": "Seated Machine Hip Adduction",
+  "aliases": [
+    "hip_adduction_machine",
+    "seated_hip_adductor",
+    "seated_machine_hip_adductor",
+    "adductor_machine"
+  ],
+  "family": "hip_adduction",
+  "equipment": "machine",
+  "variantType": "seated_machine",
+  "variant": "Seated hip-adduction machine with medial thigh pads and guided resistance toward the body midline.",
+  "description": "Sit with the pelvis and trunk fixed against the pads, place the inside of the thighs against the pads, brace lightly, squeeze the thighs inward through a controlled hip-adduction range, pause without rocking the trunk, then return under control until the stack is close to resting.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Lower body",
+      "group": "region"
+    },
+    {
+      "label": "Adductors",
+      "group": "region"
+    },
+    {
+      "label": "Machine",
+      "group": "equipment"
+    },
+    {
+      "label": "Hip adduction",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 62,
+      "rationale": "Useful direct inner-thigh stimulus, but visible scoring is conservative because the current map represents adductor longus rather than the whole adductor group."
+    },
+    "strength": {
+      "score": 28,
+      "rationale": "Builds isolated hip-adduction force, but does not express integrated lower-body strength."
+    },
+    "joint_resilience": {
+      "score": 58,
+      "rationale": "Can load hip-adductor capacity in a controlled range and may be useful as a groin-capacity accessory, but the seated guided task is not the same as sport-speed adduction or cutting demands."
+    },
+    "athletic_transfer": {
+      "score": 16,
+      "rationale": "Has narrow transfer through adductor capacity, but low direct transfer because the task is seated, supported, and single-joint."
+    },
+    "control": {
+      "score": 5,
+      "rationale": "Very low Motor Control demand beyond posture, range, and avoiding trunk or pelvic compensation."
+    },
+    "fatigue_efficiency": {
+      "score": 78,
+      "rationale": "Good local adductor stimulus with low systemic fatigue and low unrelated recovery cost."
+    },
+    "setup": {
+      "score": 74,
+      "rationale": "Requires the machine and pad setting, but loading is quick and repeatable once seated."
+    },
+    "ease": {
+      "score": 90,
+      "rationale": "Simple guided movement with very low balance and coordination demand."
+    },
+    "progression": {
+      "score": 78,
+      "rationale": "Load, reps, range, and tempo are easy to track, with deductions for stack increments and machine-specific geometry."
+    },
+    "support": {
+      "score": 96,
+      "rationale": "Very high external support from the seat, back pad, handles, thigh pads, and guided lever path."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Adductor longus",
+        "evidenceShort": "Machine hip adduction and adductor-exercise EMG support adductor longus as a primary visible target.",
+        "evidence": "Machine hip-adduction EMG and broader hip-adduction exercise evidence support the adductor group as the target. The app currently shows adductor longus because it is the local adductor mesh available.",
+        "sourceIds": [
+          "brandt-2013",
+          "serner-2014",
+          "ishoi-2016"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Seated machine hip adduction: adductor longus primary; no visible secondary or support muscles added.",
+    "clinicalShort": "EMG estimates acute excitation; it should not be treated as a direct measure of hypertrophy, injury prevention, pain response, or individual adaptation.",
+    "limitsShort": "Hip flexion angle, starting width, pad height, pelvis motion, range, load, and machine geometry can shift adductor longus, adductor magnus, gracilis, and pectineus contribution.",
+    "summary": "The seated machine hip adduction is classified as a guided lower-body hip-adduction isolation exercise. Machine EMG and adductor exercise evidence support a primary adductor target role, but the visible MVP map is intentionally limited to adductor longus because broader adductor meshes are not yet in the local anatomy registry.",
+    "clinicalInterpretation": "The machine is useful for controlled inner-thigh loading, but it should not be equated with Copenhagen adduction, cutting, skating, sprinting, or other high-control groin tasks. Those movements should have separate entries if added.",
+    "limitations": "The visible map underrepresents the full adductor complex because adductor magnus, adductor brevis, gracilis, and pectineus are not currently exposed as local meshes.",
+    "studies": [
+      {
+        "id": "brandt-2013",
+        "type": "Machine versus elastic hip abduction/adduction EMG",
+        "shortCitation": "Brandt et al., IJSPT, 2013",
+        "finding": "Hip adduction and abduction exercises using isotonic machines and elastic resistance produced load-related EMG responses in the target hip muscles.",
+        "citation": "Brandt M, Jakobsen MD, Thorborg K, Sundstrup EH, Jay K, Andersen LL. Perceived loading and muscle activity during hip strengthening exercises: comparison of elastic resistance and machine exercises. International Journal of Sports Physical Therapy. 2013;8(6):811-819.",
+        "url": "https://nfa.elsevierpure.com/en/publications/perceived-loading-and-muscle-activity-during-hip-strengthening-ex",
+        "relevance": "Close machine-specific EMG source for hip adduction loading, repeatability, and machine limitations.",
+        "usedFor": [
+          "primary muscle role",
+          "progression score",
+          "setup score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "serner-2014",
+        "type": "Hip adduction exercise EMG study",
+        "shortCitation": "Serner et al., Br J Sports Med, 2014",
+        "finding": "Adductor longus activity differed substantially across common hip-adduction exercises used for groin injury prevention and rehabilitation.",
+        "citation": "Serner A, Jakobsen MD, Andersen LL, Holmich P, Sundstrup E, Thorborg K. EMG evaluation of hip adduction exercises for soccer players: implications for exercise selection in prevention and treatment of groin injuries. British Journal of Sports Medicine. 2014;48(14):1108-1114. doi:10.1136/bjsports-2012-091746.",
+        "doi": "10.1136/bjsports-2012-091746",
+        "url": "https://bjsm.bmj.com/content/48/14/1108",
+        "relevance": "Adductor longus EMG source for hip-adduction role boundaries and groin-capacity interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "joint resilience score",
+          "athletic transfer score",
+          "clinical interpretation"
+        ]
+      },
+      {
+        "id": "ishoi-2016",
+        "type": "Copenhagen adduction strength intervention",
+        "shortCitation": "Ishoi et al., Scand J Med Sci Sports, 2016",
+        "finding": "An eight-week Copenhagen adduction intervention increased eccentric hip-adduction strength in soccer players.",
+        "citation": "Ishoi L, Sorensen CN, Kaae NM, Jorgensen LB, Holmich P, Serner A. Large eccentric strength increase using the Copenhagen Adduction exercise in football: A randomized controlled trial. Scandinavian Journal of Medicine & Science in Sports. 2016;26(11):1334-1342. doi:10.1111/sms.12585.",
+        "doi": "10.1111/sms.12585",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26589458/",
+        "relevance": "Movement-family source for adductor strength adaptation; used to contextualize machine adduction as a lower-control accessory rather than a sport-transfer equivalent.",
+        "usedFor": [
+          "joint resilience score",
+          "athletic transfer score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}
