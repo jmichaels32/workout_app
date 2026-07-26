@@ -1,0 +1,78 @@
+{
+  "movementId": "bar_wrist_curl",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-26",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "ikeda-2025",
+    "forman-2020",
+    "gazzoni-2014"
+  ],
+  "searchedQueries": [
+    "\"wrist curl\" electromyography forearm flexors",
+    "\"wrist flexion\" EMG flexor carpi radialis flexor carpi ulnaris",
+    "\"forearm rotation\" wrist flexor extensor muscle activities",
+    "\"dynamic wrist flexion-extension\" forearm muscle activity EMG",
+    "\"forearm muscle activity\" wrist and finger movements electromyography"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed every visible muscle must resolve to local anatomy."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Used rating anchors and conservative visible role rules."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Added Wrist flexors aggregate using BodyParts3D forearm component meshes."
+    },
+    {
+      "type": "public-dataset",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_parts_list_e.txt",
+      "notes": "Used to identify forearm flexor BodyParts3D concept IDs."
+    },
+    {
+      "type": "public-dataset",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_element_parts.txt",
+      "notes": "Used to map forearm flexor concept IDs to FJ OBJ files."
+    },
+    {
+      "type": "paper",
+      "id": "ikeda-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11740565/",
+      "notes": "Direct wrist flexor/extensor EMG across forearm positions."
+    },
+    {
+      "type": "paper-record",
+      "id": "forman-2020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32636014/",
+      "notes": "Dynamic wrist flexion-extension EMG using a wrist robot."
+    },
+    {
+      "type": "paper",
+      "id": "gazzoni-2014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4188712/",
+      "notes": "Multi-channel forearm EMG during wrist and finger movements."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Bodybuilding forearm exercise lists",
+      "reason": "Not used because direct wrist and forearm EMG sources were available."
+    },
+    {
+      "title": "Physical therapy blogs for golfer's elbow",
+      "reason": "Rejected for role evidence; useful only as future rehab-context reading."
+    },
+    {
+      "title": "Behind-the-back wrist curl tutorials",
+      "reason": "Excluded because this entry is a forearms-supported seated bar wrist curl."
+    }
+  ],
+  "notes": "Variant assumption is a seated forearms-supported bar wrist curl. Visible role uses the aggregate Wrist flexors anatomy entry, which includes BodyParts3D meshes for flexor carpi radialis, flexor carpi ulnaris heads, flexor digitorum superficialis, flexor digitorum profundus, and related anterior forearm components."
+}

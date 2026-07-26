@@ -1,0 +1,75 @@
+{
+  "movementId": "dead_hang",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-26",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "ferrer-uris-2023",
+    "youdas-2010",
+    "dickie-2017",
+    "snarr-2017"
+  ],
+  "searchedQueries": [
+    "\"dead hang\" electromyography forearm flexors",
+    "\"finger dead-hang\" forearm EMG rock climbers",
+    "\"static hang\" forearm flexor EMG",
+    "\"pull-up\" EMG latissimus dorsi infraspinatus lower trapezius",
+    "\"traditional pull-up\" middle trapezius latissimus EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement/research JSON ownership and anatomy validation."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Used conservative role rules because passive and active hangs can differ."
+    },
+    {
+      "type": "schema-example",
+      "path": "data/movements/pull_up.json",
+      "notes": "Reused overhead-bar support-role precedent for latissimus dorsi, rotator cuff, and middle/lower trapezius."
+    },
+    {
+      "type": "paper",
+      "id": "ferrer-uris-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10249616/",
+      "notes": "Direct maximal isometric finger dead-hang EMG in rock climbers, measuring forearm flexors/extensors."
+    },
+    {
+      "type": "paper-record",
+      "id": "youdas-2010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21068680/",
+      "notes": "Pull-up EMG source used conservatively for shoulder-girdle support."
+    },
+    {
+      "type": "paper-record",
+      "id": "dickie-2017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28011412/",
+      "notes": "Pull-up grip-variation EMG source used for support-role context."
+    },
+    {
+      "type": "paper",
+      "id": "snarr-2017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5548150/",
+      "notes": "Traditional pull-up EMG source used for latissimus and middle-trapezius support boundaries."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Decompression and shoulder-health claims from consumer dead-hang articles",
+      "reason": "Excluded because they were not controlled muscle-activation or biomechanics evidence."
+    },
+    {
+      "title": "Pull-up programming blogs",
+      "reason": "Not used because direct dead-hang forearm EMG and peer-reviewed pull-up EMG were available."
+    },
+    {
+      "title": "Captain's-chair and hanging leg raise abdominal EMG sources",
+      "reason": "Excluded because this entry is a static bar hang, not a trunk-flexion movement."
+    }
+  ],
+  "notes": "Variant assumption is a timed bar dead hang with enough shoulder control to avoid painful end-range collapse. Passive and active dead hangs may later split into separate entries. The direct EMG source is climbing-specific finger dead-hangs, so shoulder roles rely on close pull-up EMG and are marked as support."
+}

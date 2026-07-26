@@ -1,0 +1,75 @@
+{
+  "movementId": "bar_hammer_curl",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-26",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "coratella-2023",
+    "marcolin-2018",
+    "ikeda-2025",
+    "gazzoni-2014"
+  ],
+  "searchedQueries": [
+    "\"hammer curl\" electromyography brachioradialis biceps brachii",
+    "\"neutral grip curl\" EMG brachioradialis biceps brachii",
+    "\"biceps curl\" handgrip neutral supinated pronated EMG",
+    "\"barbell curl\" EMG biceps brachii brachioradialis",
+    "\"brachialis\" \"brachioradialis\" neutral grip curl"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement/research JSON ownership and anatomy validation."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Used evidence priority and rating anchors."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Added Brachialis, Brachioradialis, and Wrist flexors mesh mappings."
+    },
+    {
+      "type": "paper",
+      "id": "coratella-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10054060/",
+      "notes": "Direct neutral, pronated, and supinated cable curl handgrip EMG."
+    },
+    {
+      "type": "paper",
+      "id": "marcolin-2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6047503/",
+      "notes": "Straight bar, EZ-bar, and dumbbell curl EMG source measuring biceps brachii and brachioradialis."
+    },
+    {
+      "type": "paper",
+      "id": "ikeda-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11740565/",
+      "notes": "Wrist flexor/extensor activity across forearm positions, used for support-role context."
+    },
+    {
+      "type": "paper",
+      "id": "gazzoni-2014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4188712/",
+      "notes": "Forearm EMG during wrist and finger movements, used for grip-support context."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer hammer curl variation rankings",
+      "reason": "Not used because peer-reviewed curl handgrip EMG sources were available."
+    },
+    {
+      "title": "Dumbbell hammer curl tutorials",
+      "reason": "Reviewed for naming only; excluded because this entry is a neutral-grip bar variant."
+    },
+    {
+      "title": "Reverse curl evidence",
+      "reason": "Kept separate because pronated reverse curls are not the same as neutral-grip hammer curls."
+    }
+  ],
+  "notes": "Variant assumption is a neutral-grip hammer/triceps bar curl. If the user means a straight-bar curl, use or add a separate straight bar curl entry. Brachialis is shown using a real mesh but the evidence is partly biomechanical because it is deep and not directly isolated by the main surface EMG studies."
+}

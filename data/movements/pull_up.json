@@ -104,6 +104,14 @@
         ]
       },
       {
+        "name": "Brachioradialis",
+        "evidenceShort": "Forearm/elbow-flexor activity is measured during pull-up variants.",
+        "evidence": "Pull-up grip-variation EMG measured brachioradialis activity across pull-up variants. It is included as a secondary elbow-flexor and grip-adjacent contributor rather than a primary back target.",
+        "sourceIds": [
+          "dickie-2017"
+        ]
+      },
+      {
         "name": "Posterior deltoid",
         "evidenceShort": "Measured shoulder-extension assistant in traditional pull-ups.",
         "evidence": "Traditional pull-up EMG directly measured posterior deltoid along with latissimus dorsi, middle trapezius, and biceps brachii, supporting a meaningful shoulder-extension assistant role rather than a primary target.",
@@ -144,12 +152,12 @@
     ]
   },
   "evidence": {
-    "verdict": "Pronated bodyweight pull-up: latissimus dorsi primary; biceps brachii, posterior deltoid, and pectoralis major secondary; middle/lower trapezius and rotator cuff support.",
+    "verdict": "Pronated bodyweight pull-up: latissimus dorsi primary; biceps brachii, brachioradialis, posterior deltoid, and pectoralis major secondary; middle/lower trapezius and rotator cuff support.",
     "clinicalShort": "EMG estimates acute excitation, not hypertrophy, mechanical tension, adaptation, or injury risk.",
     "limitsShort": "Grip width, grip orientation, bar path, range of motion, swing, fatigue, and relative body mass can shift muscle contribution and performance.",
-    "summary": "The pull-up is classified as an unsupported bodyweight vertical pull from a fixed bar with a pronated grip. Direct pull-up EMG supports latissimus dorsi as the primary visible target, with biceps brachii, posterior deltoid, and pectoralis major as meaningful secondary contributors. Middle/lower trapezius and rotator cuff involvement are included as support because the evidence points to scapular and glenohumeral control demands rather than primary hypertrophy targeting.",
+    "summary": "The pull-up is classified as an unsupported bodyweight vertical pull from a fixed bar with a pronated grip. Direct pull-up EMG supports latissimus dorsi as the primary visible target, with biceps brachii, brachioradialis, posterior deltoid, and pectoralis major as meaningful secondary contributors. Middle/lower trapezius and rotator cuff involvement are included as support because the evidence points to scapular and glenohumeral control demands rather than primary hypertrophy targeting.",
     "clinicalInterpretation": "Surface EMG and shoulder modeling are useful for estimating acute excitation and loading in specific pull-up setups, but they should not be treated as direct measures of hypertrophy, long-term adaptation, or injury risk. A bodyweight pull-up also mixes target-muscle capacity with relative body mass and technique quality.",
-    "limitations": "The entry applies only to a strict pronated bodyweight pull-up from a fixed bar. Chin-ups, neutral-grip pull-ups, towel pull-ups, suspension pull-ups, assisted pull-ups, kipping pull-ups, and weighted pull-ups should be treated as separate variants. Brachioradialis and brachialis were not added as visible roles because the current local anatomy map does not expose those muscles; biceps brachii is the mapped elbow-flexor role retained for the app card.",
+    "limitations": "The entry applies only to a strict pronated bodyweight pull-up from a fixed bar. Chin-ups, neutral-grip pull-ups, towel pull-ups, suspension pull-ups, assisted pull-ups, kipping pull-ups, and weighted pull-ups should be treated as separate variants. Brachialis remains excluded because the reviewed exact sources do not isolate it cleanly enough for this visible role map.",
     "studies": [
       {
         "id": "youdas-2010",

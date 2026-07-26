@@ -24,6 +24,10 @@
       "group": "region"
     },
     {
+      "label": "Arms",
+      "group": "region"
+    },
+    {
       "label": "Cable",
       "group": "equipment"
     },

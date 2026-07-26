@@ -1,0 +1,193 @@
+{
+  "id": "bar_hammer_curl",
+  "name": "Bar Hammer Curl",
+  "aliases": [
+    "hammer_bar_curl",
+    "neutral_grip_bar_curl",
+    "triceps_bar_hammer_curl",
+    "parallel_grip_bar_curl"
+  ],
+  "family": "biceps_curl",
+  "equipment": "bar",
+  "variantType": "standing_neutral_grip_bar",
+  "variant": "Standing neutral-grip curl using a hammer-curl bar, triceps bar, or parallel-grip bar attachment; this is not a straight-bar supinated curl.",
+  "description": "Stand tall holding a neutral-grip hammer bar with the palms facing each other, keep the elbows close to the ribs and wrists stiff, curl the bar upward without swinging the torso, then lower under control until the elbows are long without letting the shoulders roll forward.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Arms",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 58,
+      "rationale": "Good elbow-flexor hypertrophy accessory, especially for brachialis and brachioradialis, but neutral-grip curl studies do not show it clearly beating all supinated curl variants for biceps."
+    },
+    "strength": {
+      "score": 34,
+      "rationale": "Useful local elbow-flexion strength builder, though it remains a single-joint arm accessory."
+    },
+    "joint_resilience": {
+      "score": 12,
+      "rationale": "Can expose elbows and wrists to controlled neutral-grip loading, but it is not a broad resilience anchor."
+    },
+    "athletic_transfer": {
+      "score": 3,
+      "rationale": "Very little whole-body or sport-like transfer beyond arm and grip capacity."
+    },
+    "control": {
+      "score": 18,
+      "rationale": "Requires wrist and elbow-path discipline with a free implement, but has low balance and bracing demand."
+    },
+    "fatigue_efficiency": {
+      "score": 76,
+      "rationale": "Focused arm stimulus with little systemic fatigue, assuming the shoulders and low back are not used to swing the load."
+    },
+    "setup": {
+      "score": 50,
+      "rationale": "Needs a neutral-grip hammer or triceps bar; setup is easy if available but less universal than dumbbells or a straight bar."
+    },
+    "ease": {
+      "score": 74,
+      "rationale": "Easy to learn and often wrist-friendly, though users must avoid turning it into a shoulder swing."
+    },
+    "progression": {
+      "score": 68,
+      "rationale": "Load and reps are trackable, with deductions for plate jumps and bar availability."
+    },
+    "support": {
+      "score": 22,
+      "rationale": "The lift is unsupported and free-moving, so the user controls body position, wrists, elbows, and shoulder drift."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Brachialis",
+        "evidenceShort": "Neutral/semi-pronated elbow flexion favors non-supinating elbow flexors.",
+        "evidence": "Curl handgrip literature identifies biceps brachii, brachioradialis, and brachialis as main elbow flexors and discusses forearm-position-dependent contribution. Brachialis is listed from anatomy and movement mechanics because direct surface EMG studies usually cannot isolate it well.",
+        "sourceIds": [
+          "coratella-2023",
+          "marcolin-2018"
+        ]
+      },
+      {
+        "name": "Brachioradialis",
+        "evidenceShort": "Curl handgrip EMG directly measures brachioradialis.",
+        "evidence": "Biceps-curl EMG studies measured brachioradialis during neutral, semi-pronated, straight-bar, EZ-bar, and dumbbell curl variants, supporting it as a major visible elbow-flexor target for hammer-style curls.",
+        "sourceIds": [
+          "coratella-2023",
+          "marcolin-2018"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Neutral-grip curl EMG still shows biceps brachii contribution.",
+        "evidence": "Neutral-grip and bar-variant curl studies directly measured biceps brachii activation. It is secondary here because the neutral grip reduces the supination-specific biceps advantage and the movement is being classified as a hammer-style curl.",
+        "sourceIds": [
+          "coratella-2023",
+          "marcolin-2018"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Wrist flexors",
+        "evidenceShort": "Grip and wrist position require forearm support.",
+        "evidence": "Wrist and forearm EMG studies show wrist flexors participate in gripping and wrist-position control. They are listed as support because the bar must be held stable, not because the movement is a wrist curl.",
+        "sourceIds": [
+          "ikeda-2025",
+          "gazzoni-2014"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Bar hammer curl: brachialis and brachioradialis primary; biceps brachii secondary; wrist flexors support.",
+    "clinicalShort": "Surface EMG estimates acute excitation; brachialis role is partly biomechanical because it is hard to isolate with surface EMG.",
+    "limitsShort": "Neutral-bar availability, handle spacing, wrist position, torso swing, elbow drift, load, tempo, and bar path can change the elbow-flexor emphasis.",
+    "summary": "The bar hammer curl is classified as a standing neutral-grip elbow-flexion accessory. Direct curl handgrip studies support meaningful biceps brachii and brachioradialis activity, while brachialis is included as a primary elbow-flexor target from anatomy and forearm-position mechanics because it is a deep muscle not well captured by surface EMG. Wrist flexors are shown as support for grip and wrist stabilization.",
+    "clinicalInterpretation": "This is best treated as an arm-accessory movement with a stronger brachialis/brachioradialis bias than a supinated curl. It should not be collapsed with straight-bar curls or dumbbell hammer curls once the library needs more variant precision.",
+    "limitations": "The visible entry assumes a true neutral-grip bar. A straight bar curl, EZ-bar curl, reverse curl, rope cable hammer curl, and dumbbell hammer curl are separate variants. Surface EMG evidence is strongest for biceps brachii and brachioradialis; brachialis is deep and therefore represented with explicit biomechanical inference.",
+    "studies": [
+      {
+        "id": "coratella-2023",
+        "type": "Biceps curl handgrip EMG",
+        "shortCitation": "Coratella et al., Sports, 2023",
+        "finding": "Supinated, pronated, and neutral cable curl handgrips changed biceps brachii, brachioradialis, and anterior deltoid excitation in competitive bodybuilders.",
+        "citation": "Coratella G, Tornatore G, Longo S, Toninelli N, Padovan R, Esposito F, Ce E. Biceps Brachii and Brachioradialis Excitation in Biceps Curl Exercise: Different Handgrips, Different Synergy. Sports. 2023;11(3):64. doi:10.3390/sports11030064.",
+        "doi": "10.3390/sports11030064",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10054060/",
+        "relevance": "Direct neutral-grip curl evidence for biceps brachii and brachioradialis contribution.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "marcolin-2018",
+        "type": "Curl variant EMG",
+        "shortCitation": "Marcolin et al., PeerJ, 2018",
+        "finding": "Straight barbell, EZ-bar, and dumbbell curls produced different biceps brachii and brachioradialis EMG patterns across repetition phases.",
+        "citation": "Marcolin G, Panizzolo FA, Petrone N, Moro T, Grigoletto D, Piccolo D, Paoli A. Differences in electromyographic activity of biceps brachii and brachioradialis while performing three variants of curl. PeerJ. 2018;6:e5165. doi:10.7717/peerj.5165.",
+        "doi": "10.7717/peerj.5165",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6047503/",
+        "relevance": "Bar-curl evidence for elbow-flexor recruitment and bar/grip variant boundaries.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "progression score"
+        ]
+      },
+      {
+        "id": "ikeda-2025",
+        "type": "Forearm rotation and wrist muscle EMG",
+        "shortCitation": "Ikeda et al., J Orthop Surg Res, 2025",
+        "finding": "Wrist flexor and extensor activity changed with forearm rotation during controlled wrist torque tasks.",
+        "citation": "Ikeda K, Kaneoka K, Matsunaga N, Ikumi A, Yamazaki M, Yoshii Y. Effects of forearm rotation on wrist flexor and extensor muscle activities. Journal of Orthopaedic Surgery and Research. 2025;20(1):53. doi:10.1186/s13018-024-05363-x.",
+        "doi": "10.1186/s13018-024-05363-x",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11740565/",
+        "relevance": "Forearm and wrist-position evidence for the support role of wrist flexors.",
+        "usedFor": [
+          "support muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "gazzoni-2014",
+        "type": "Forearm EMG during wrist and finger movements",
+        "shortCitation": "Gazzoni et al., PLoS ONE, 2014",
+        "finding": "Multi-channel EMG quantified forearm muscle activity during wrist and finger movement tasks.",
+        "citation": "Gazzoni M, Celadon N, Mastrapasqua D, Paleari M, Margaria V, Ariano P. Quantifying forearm muscle activity during wrist and finger movements by means of multi-channel electromyography. PLoS ONE. 2014;9(10):e109943. doi:10.1371/journal.pone.0109943.",
+        "doi": "10.1371/journal.pone.0109943",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4188712/",
+        "relevance": "Broader forearm EMG context for gripping and wrist-position stabilization.",
+        "usedFor": [
+          "support muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

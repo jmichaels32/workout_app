@@ -1,0 +1,150 @@
+{
+  "id": "bar_wrist_extension",
+  "name": "Bar Wrist Extension",
+  "aliases": [
+    "wrist_extension",
+    "reverse_wrist_curl",
+    "barbell_reverse_wrist_curl",
+    "forearm_extensor_curl"
+  ],
+  "family": "wrist_extension",
+  "equipment": "bar",
+  "variantType": "seated_forearms_supported",
+  "variant": "Seated wrist extension with a straight or EZ bar held palms-down while the forearms are supported on the thighs or a bench.",
+  "description": "Sit with the forearms supported and palms facing down while holding a light bar, let the wrists flex under control, lift the knuckles by extending the wrists without moving the elbows, then lower smoothly until the forearm extensors are loaded again.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Arms",
+      "group": "region"
+    },
+    {
+      "label": "Bar",
+      "group": "equipment"
+    },
+    {
+      "label": "Wrist extension",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 34,
+      "rationale": "Direct extensor loading can build visible forearm tissue, but the target muscle mass and overload ceiling are small."
+    },
+    "strength": {
+      "score": 14,
+      "rationale": "Improves wrist-extension force but is not a broad strength movement."
+    },
+    "joint_resilience": {
+      "score": 38,
+      "rationale": "Controlled wrist-extension loading can be useful for wrist and lateral-elbow capacity, but must be progressed conservatively."
+    },
+    "athletic_transfer": {
+      "score": 6,
+      "rationale": "Some grip and wrist-control relevance, but little direct transfer from the supported isolation setup."
+    },
+    "control": {
+      "score": 8,
+      "rationale": "Very low coordination demand beyond keeping the wrist path isolated."
+    },
+    "fatigue_efficiency": {
+      "score": 84,
+      "rationale": "Very low systemic fatigue and focused local loading, assuming small enough load jumps."
+    },
+    "setup": {
+      "score": 72,
+      "rationale": "Requires a light bar and support surface, with low setup complexity."
+    },
+    "ease": {
+      "score": 82,
+      "rationale": "Simple movement pattern, though users need light loading and controlled range to avoid wrist irritation."
+    },
+    "progression": {
+      "score": 58,
+      "rationale": "Load and reps are trackable, but useful increments are small and bar loading is often too coarse."
+    },
+    "support": {
+      "score": 84,
+      "rationale": "The forearms can be fully supported, leaving the wrist extensors as the main active target."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Wrist extensors",
+        "evidenceShort": "Wrist extension EMG directly measures extensor carpi activity.",
+        "evidence": "Wrist extension and forearm-rotation EMG studies measured extensor carpi radialis brevis, extensor carpi ulnaris, and other posterior-forearm muscles during wrist-extension output, supporting the wrist-extensor group as the primary visible target.",
+        "sourceIds": [
+          "ikeda-2025",
+          "forman-2020",
+          "gazzoni-2014"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Bar wrist extension: wrist extensor group primary; no visible secondary or support muscles added.",
+    "clinicalShort": "Surface EMG estimates acute excitation and coordination, not hypertrophy, pain response, or tendon safety.",
+    "limitsShort": "Forearm support, wrist range, bar shape, load, tempo, grip, pronation/supination angle, and elbow position can change wrist-extensor demand.",
+    "summary": "The bar wrist extension is classified as a supported wrist-extension isolation exercise. Direct wrist-extension EMG and forearm-rotation evidence support extensor carpi radialis, extensor carpi ulnaris, extensor digitorum, and related posterior-forearm muscles as the primary local targets. The app displays these as the aggregate Wrist extensors mesh group.",
+    "clinicalInterpretation": "This movement is best interpreted as a small-muscle wrist and forearm accessory. It can complement grip-heavy training, but its direct training signal is narrow.",
+    "limitations": "The visible anatomy uses an aggregate forearm-extensor mesh group rather than separate ECRL, ECRB, ECU, EDC, and other extensor entries. Dumbbell, cable, band, Tyler-twist, and wrist-roller extension variants should be separate movements if added.",
+    "studies": [
+      {
+        "id": "ikeda-2025",
+        "type": "Forearm rotation and wrist muscle EMG",
+        "shortCitation": "Ikeda et al., J Orthop Surg Res, 2025",
+        "finding": "Wrist extension output showed forearm-position-sensitive activity of extensor carpi radialis brevis, while extensor carpi ulnaris behaved differently across positions.",
+        "citation": "Ikeda K, Kaneoka K, Matsunaga N, Ikumi A, Yamazaki M, Yoshii Y. Effects of forearm rotation on wrist flexor and extensor muscle activities. Journal of Orthopaedic Surgery and Research. 2025;20(1):53. doi:10.1186/s13018-024-05363-x.",
+        "doi": "10.1186/s13018-024-05363-x",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11740565/",
+        "relevance": "Direct wrist-extension EMG source for wrist-extensor role boundaries.",
+        "usedFor": [
+          "primary muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "forman-2020",
+        "type": "Dynamic wrist flexion-extension EMG",
+        "shortCitation": "Forman et al., J Biomech, 2020",
+        "finding": "Dynamic wrist flexion-extension movement was used to characterize forearm muscle activity in young adults.",
+        "citation": "Forman DA, Forman GN, Avila-Mireles EJ, Mugnosso M, Zenzeri J, Murphy B, Holmes MWR. Characterizing forearm muscle activity in young adults during dynamic wrist flexion-extension movement using a wrist robot. Journal of Biomechanics. 2020;109908. doi:10.1016/j.jbiomech.2020.109908.",
+        "doi": "10.1016/j.jbiomech.2020.109908",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32636014/",
+        "relevance": "Dynamic wrist movement EMG evidence for the local forearm-muscle classification.",
+        "usedFor": [
+          "primary muscle role",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "gazzoni-2014",
+        "type": "Forearm EMG during wrist and finger movements",
+        "shortCitation": "Gazzoni et al., PLoS ONE, 2014",
+        "finding": "Multi-channel EMG quantified forearm muscle activity during wrist and finger movement tasks.",
+        "citation": "Gazzoni M, Celadon N, Mastrapasqua D, Paleari M, Margaria V, Ariano P. Quantifying forearm muscle activity during wrist and finger movements by means of multi-channel electromyography. PLoS ONE. 2014;9(10):e109943. doi:10.1371/journal.pone.0109943.",
+        "doi": "10.1371/journal.pone.0109943",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4188712/",
+        "relevance": "Broader forearm EMG source supporting wrist/finger movement muscle-group interpretation.",
+        "usedFor": [
+          "primary muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

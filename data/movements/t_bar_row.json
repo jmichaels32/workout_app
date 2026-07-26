@@ -170,7 +170,7 @@
     "limitsShort": "Landmine angle, handle width, torso angle, hip drive, grip, plate diameter, load, and chest-supported T-bar machines can materially change emphasis.",
     "summary": "This entry treats the T-bar row as a standing landmine or barbell T-bar row without a chest pad. Row-family EMG supports latissimus dorsi as the primary target when the elbows track close, with teres major, middle trapezius, rhomboids, posterior deltoid, and biceps brachii assisting. Because the torso is unsupported, erector spinae are visible support; the rotator cuff is included for shoulder stabilization during the pull.",
     "clinicalInterpretation": "The evidence base is strongest for row-family EMG and trunk-loading studies, with landmine-specific evidence mainly coming from a peer-reviewed technique article. A chest-supported T-bar machine should be treated as a separate variant because its support and fatigue profile differ.",
-    "limitations": "No direct EMG study of a commercial landmine T-bar row was found. The classification transfers close evidence from seated cable rows, prone rows, free-weight row trunk studies, and a landmine row technique paper. Brachialis and brachioradialis were not added because they lack local visible anatomy entries.",
+    "limitations": "No direct EMG study of a commercial landmine T-bar row was found. The classification transfers close evidence from seated cable rows, prone rows, free-weight row trunk studies, and a landmine row technique paper. Brachialis and brachioradialis remain excluded because the reviewed row sources do not isolate them cleanly enough for this visible role map.",
     "studies": [
       {
         "id": "lincoln-2023",

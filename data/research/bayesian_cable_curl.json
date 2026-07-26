@@ -1,0 +1,68 @@
+{
+  "movementId": "bayesian_cable_curl",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-26",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "parpa-2025",
+    "coratella-2023",
+    "marcolin-2018"
+  ],
+  "searchedQueries": [
+    "\"Bayesian cable curl\" electromyography biceps brachii",
+    "\"cable curl\" electromyography biceps brachii",
+    "\"biceps curl\" \"brachioradialis\" EMG",
+    "\"traditional dumbbell\" \"Bayesian cable curl\"",
+    "\"biceps curl\" handgrip neutral supinated EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Movement JSON, research JSON, and local anatomy requirements."
+    },
+    {
+      "type": "local-doc",
+      "path": "docs/movement-research-protocol.md",
+      "notes": "Evidence priority, visible muscle rules, tag taxonomy, and rating anchors."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Biceps brachii and Brachioradialis resolve to local mesh files after forearm anatomy import."
+    },
+    {
+      "type": "paper",
+      "id": "parpa-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12550948/",
+      "notes": "Exact Bayesian cable curl versus traditional dumbbell curl biceps brachii EMG source."
+    },
+    {
+      "type": "paper",
+      "id": "coratella-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10054060/",
+      "notes": "Cable biceps curl handgrip EMG source measuring biceps brachii and brachioradialis."
+    },
+    {
+      "type": "paper",
+      "id": "marcolin-2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6047503/",
+      "notes": "Straight bar, EZ-bar, and dumbbell curl EMG source measuring biceps brachii and brachioradialis."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer Bayesian curl tutorials and hypertrophy rankings",
+      "reason": "Not used for classification because a direct Bayesian curl EMG paper is available."
+    },
+    {
+      "title": "Short-form videos and social posts about lengthened curls",
+      "reason": "Excluded under the protocol preference for papers and DOI/PMC/PubMed records."
+    },
+    {
+      "title": "General elbow-flexor anatomy pages",
+      "reason": "Not needed for the visible primary role because direct biceps curl EMG sources were available."
+    }
+  ],
+  "notes": "Variant assumption is a single-arm low-cable Bayesian curl facing away from the stack. Visible primary is Biceps brachii from direct Bayesian curl EMG. Brachioradialis is secondary from curl handgrip evidence; Brachialis was not added because the exact Bayesian study did not measure it."
+}

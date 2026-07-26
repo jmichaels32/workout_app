@@ -1,0 +1,196 @@
+{
+  "id": "dead_hang",
+  "name": "Dead Hang",
+  "aliases": [
+    "bar_dead_hang",
+    "pull_up_bar_hang",
+    "active_dead_hang",
+    "passive_dead_hang"
+  ],
+  "family": "hang",
+  "equipment": "bodyweight",
+  "variantType": "overhead_bar_hang",
+  "variant": "Timed bodyweight hang from a fixed overhead bar, performed with a full grip and controlled shoulders; passive and active shoulder positions should be split later if needed.",
+  "description": "Grip a fixed overhead bar with both hands, let the feet leave the floor, keep the ribs organized, and hold the hang without swinging while maintaining enough shoulder control that the upper arms do not collapse painfully toward the ears.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Arms",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 8,
+      "rationale": "Low hypertrophy signal because it is an isometric grip and shoulder-position hold rather than a full-range loaded muscle-building movement."
+    },
+    "strength": {
+      "score": 18,
+      "rationale": "Can improve grip and hanging strength endurance, but load is mostly bodyweight and does not express broad maximal strength."
+    },
+    "joint_resilience": {
+      "score": 62,
+      "rationale": "Useful controlled exposure for grip, wrist, elbow, and overhead shoulder tolerance when progressed conservatively."
+    },
+    "athletic_transfer": {
+      "score": 42,
+      "rationale": "Meaningful transfer to climbing, pull-up preparation, obstacle tasks, and bodyweight hanging tolerance, but little lower-body or loaded gait transfer."
+    },
+    "control": {
+      "score": 28,
+      "rationale": "Requires shoulder position, grip pressure, rib position, and swing suppression, especially in an active hang."
+    },
+    "fatigue_efficiency": {
+      "score": 76,
+      "rationale": "Low systemic fatigue and simple loading, though grip and shoulder tissues can become the limiting recovery cost."
+    },
+    "setup": {
+      "score": 90,
+      "rationale": "Needs only a stable overhead bar and enough clearance."
+    },
+    "ease": {
+      "score": 64,
+      "rationale": "Conceptually simple, but bodyweight load, grip endurance, and overhead shoulder tolerance make it less easy than it appears."
+    },
+    "progression": {
+      "score": 32,
+      "rationale": "Time is easy to measure, but load progression is coarse unless assistance, added load, grip size, or hold type is standardized."
+    },
+    "support": {
+      "score": 4,
+      "rationale": "Almost no external support; the whole body is suspended from the hands."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Wrist flexors",
+        "evidenceShort": "Dead-hang EMG directly measures finger and wrist flexor activity.",
+        "evidence": "Maximal isometric finger dead-hang EMG in climbers measured flexor digitorum profundus, flexor digitorum superficialis, and flexor carpi radialis, supporting the forearm flexor group as the primary local target for a hanging grip task.",
+        "sourceIds": [
+          "ferrer-uris-2023"
+        ]
+      }
+    ],
+    "secondary": [],
+    "support": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Pull-up EMG and hanging mechanics support shoulder-girdle contribution.",
+        "evidence": "Pull-up EMG studies show substantial latissimus dorsi activity in hanging-to-pulling tasks. In a dead hang it is treated as shoulder-girdle support rather than a hypertrophy target because the task is mostly isometric and lacks active pulling range.",
+        "sourceIds": [
+          "youdas-2010",
+          "snarr-2017"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Pull-up infraspinatus evidence supports glenohumeral support.",
+        "evidence": "Pull-up EMG measured infraspinatus and shoulder-girdle activity; the aggregate rotator cuff is listed as support for controlling the humeral head during a suspended overhead position.",
+        "sourceIds": [
+          "youdas-2010"
+        ]
+      },
+      {
+        "name": "Trapezius (middle and lower fibers)",
+        "evidenceShort": "Pull-up EMG supports scapular support demand.",
+        "evidence": "Pull-up EMG studies measured lower and middle trapezius activity, supporting scapular support during hanging and pull-up-related shoulder positioning.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017",
+          "snarr-2017"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Dead hang: wrist flexors primary; latissimus dorsi, rotator cuff, and middle/lower trapezius support.",
+    "clinicalShort": "EMG estimates acute excitation under a specific hang or pull-up protocol, not injury prevention, decompression, or long-term adaptation.",
+    "limitsShort": "Grip width, bar diameter, passive versus active shoulder position, scapular depression, body mass, swing, duration, pain, and fatigue can change the training signal.",
+    "summary": "The dead hang is classified as a suspended bodyweight grip and shoulder-tolerance exercise. Direct finger dead-hang EMG supports forearm flexors as the primary visible target. Pull-up EMG is used conservatively for shoulder support roles because it measures the same overhead hanging apparatus but includes active pulling, so latissimus dorsi, rotator cuff, and trapezius are support rather than primary roles.",
+    "clinicalInterpretation": "This movement should be used as a grip and overhead-position capacity tool, not as a primary lat, biceps, or shoulder hypertrophy exercise. Passive and active hangs can feel very different and may deserve separate entries after testing.",
+    "limitations": "The best direct EMG source is climbing-specific finger dead-hangs on holds rather than a standard pull-up bar dead hang. The local anatomy map groups finger and wrist flexors into Wrist flexors. Finger flexor pulleys, deeper hand muscles, and individual rotator cuff muscles are not separately displayed.",
+    "studies": [
+      {
+        "id": "ferrer-uris-2023",
+        "type": "Direct finger dead-hang forearm EMG",
+        "shortCitation": "Ferrer-Uris et al., PeerJ, 2023",
+        "finding": "Rock climbers performing maximal isometric finger dead-hangs showed grip-position-dependent activity in flexor digitorum profundus, flexor digitorum superficialis, flexor carpi radialis, and extensor digitorum.",
+        "citation": "Ferrer-Uris B, Arias D, Torrado P, Marina M, Busquets A. Exploring forearm muscle coordination and training applications of various grip positions during maximal isometric finger dead-hangs in rock climbers. PeerJ. 2023;11:e15464. doi:10.7717/peerj.15464.",
+        "doi": "10.7717/peerj.15464",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10249616/",
+        "relevance": "Direct dead-hang EMG source for the primary forearm-flexor role.",
+        "usedFor": [
+          "primary muscle role",
+          "strength score",
+          "joint resilience score",
+          "athletic transfer score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "youdas-2010",
+        "type": "Pull-up, chin-up, and rotating-handle EMG",
+        "shortCitation": "Youdas et al., JSCR, 2010",
+        "finding": "Conventional pull-ups measured latissimus dorsi, biceps brachii, infraspinatus, lower trapezius, pectoralis major, erector spinae, and external oblique activity.",
+        "citation": "Youdas JW, Amundson CL, Cicero KS, Hahn JJ, Harezlak DT, Hollman JH. Surface electromyographic activation patterns and elbow joint motion during a pull-up, chin-up, or Perfect-Pullup rotational exercise. Journal of Strength and Conditioning Research. 2010;24(12):3404-3414. doi:10.1519/JSC.0b013e3181f1598c.",
+        "doi": "10.1519/JSC.0b013e3181f1598c",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21068680/",
+        "relevance": "Close overhead-bar evidence for shoulder-girdle support during hanging and pull-up setup.",
+        "usedFor": [
+          "support muscle role",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "dickie-2017",
+        "type": "Pull-up grip-variation EMG",
+        "shortCitation": "Dickie et al., J Electromyogr Kinesiol, 2017",
+        "finding": "Pronated, supinated, neutral, and rope pull-ups produced broadly similar shoulder, arm, and forearm activation across full repetitions, with grip-related differences.",
+        "citation": "Dickie JA, Faulkner JA, Barnes MJ, Lark SD. Electromyographic analysis of muscle activation during pull-up variations. Journal of Electromyography and Kinesiology. 2017;32:30-36. doi:10.1016/j.jelekin.2016.11.004.",
+        "doi": "10.1016/j.jelekin.2016.11.004",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28011412/",
+        "relevance": "Close pull-up variation evidence for grip and scapular-support context.",
+        "usedFor": [
+          "support muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "snarr-2017",
+        "type": "Traditional, suspension, and towel pull-up EMG",
+        "shortCitation": "Snarr et al., J Hum Kinet, 2017",
+        "finding": "Traditional pronated pull-ups produced meaningful latissimus dorsi, posterior deltoid, middle trapezius, and biceps brachii activity.",
+        "citation": "Snarr RL, Hallmark AV, Casey JC, Esco MR. Electromyographical Comparison of a Traditional, Suspension Device, and Towel Pull-Up. Journal of Human Kinetics. 2017;58:5-13. doi:10.1515/hukin-2017-0068.",
+        "doi": "10.1515/hukin-2017-0068",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5548150/",
+        "relevance": "Close bar-hanging pull-up evidence for latissimus dorsi and middle trapezius support boundaries.",
+        "usedFor": [
+          "support muscle role",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

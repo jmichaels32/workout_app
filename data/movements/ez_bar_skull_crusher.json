@@ -24,6 +24,10 @@
       "group": "region"
     },
     {
+      "label": "Arms",
+      "group": "region"
+    },
+    {
       "label": "Bar",
       "group": "equipment"
     },

@@ -679,10 +679,15 @@
 
     .workout-training-overview {
       display: grid;
-      gap: 10px;
+      gap: 14px;
       padding: 12px;
       border: 1px solid var(--soft-line);
       background: var(--panel);
+    }
+
+    .workout-score-section {
+      display: grid;
+      gap: 8px;
     }
 
     .workout-training-grid {
@@ -725,6 +730,8 @@
     }
 
     .workout-training-track {
+      position: relative;
+      display: block;
       height: 6px;
       border: 1px solid var(--soft-line);
       background: var(--panel-2);
@@ -735,6 +742,22 @@
       display: block;
       width: var(--score-percent, 0%);
       height: 100%;
+      background: var(--group-color);
+    }
+
+    .workout-score-dot {
+      position: absolute;
+      top: 50%;
+      left: var(--dot-left, 0%);
+      z-index: 1;
+      width: 7px;
+      height: 7px;
+      border: 1px solid var(--group-color);
+      background: var(--panel);
+      transform: translate(-50%, -50%);
+    }
+
+    .workout-score-dot.best {
       background: var(--group-color);
     }
 
@@ -2835,7 +2858,7 @@
     const TAG_GROUP_ORDER = ["region", "equipment", "pattern"];
     const REGION_MACRO_ORDER = ["Upper body", "Core", "Lower body", "Misc"];
     const REGION_HIERARCHY = {
-      "Upper body": ["Chest", "Back", "Shoulders"],
+      "Upper body": ["Chest", "Back", "Shoulders", "Arms"],
       "Core": ["Abs", "Obliques"],
       "Lower body": ["Quads", "Hamstrings", "Glutes", "Adductors", "Calves"],
       "Misc": []
@@ -2848,7 +2871,8 @@
       semimembranosus: "Semi&shy;membranosus",
       latissimus: "Latis&shy;simus",
       pectoralis: "Pector&shy;alis",
-      stabilizers: "stabil&shy;izers"
+      stabilizers: "stabil&shy;izers",
+      brachioradialis: "Brachio&shy;radialis"
     };
     const SORT_LABELS = {
       composite: "Composite",
@@ -3304,27 +3328,49 @@
     }
 
     function renderWorkoutTrainingOverview(workout) {
-      const rows = workoutTrainingCategoryScores(workout);
-      if (!rows.length) return "";
+      const trainingRows = workoutTrainingCategoryScores(workout);
+      const setupRows = workoutMetadataCategoryScores(workout);
+      if (!trainingRows.length && !setupRows.length) return "";
       return `
         <section class="workout-training-overview" aria-label="Workout training score detail">
-          <p class="section-label">Training Coverage</p>
-          <div class="workout-training-grid">
-            ${rows.map(row => renderWorkoutTrainingScore(row)).join("")}
-          </div>
+          ${trainingRows.length ? `
+            <div class="workout-score-section">
+              <p class="section-label">Training Max</p>
+              <div class="workout-training-grid">
+                ${trainingRows.map(row => renderWorkoutTrainingScore(row, "training")).join("")}
+              </div>
+            </div>
+          ` : ""}
+          ${setupRows.length ? `
+            <div class="workout-score-section">
+              <p class="section-label">Setup Average</p>
+              <div class="workout-training-grid">
+                ${setupRows.map(row => renderWorkoutTrainingScore(row, "metadata")).join("")}
+              </div>
+            </div>
+          ` : ""}
         </section>
       `;
     }
 
-    function renderWorkoutTrainingScore(row) {
+    function renderWorkoutTrainingScore(row, ratingGroup) {
       const percent = scorePercent(row.score, row.maxScore);
       return `
-        <div class="workout-training-score" style="${ratingStyle(row.key, percent, "training")} --score-percent: ${percent}%;">
+        <div class="workout-training-score" style="${ratingStyle(row.key, percent, ratingGroup)} --score-percent: ${percent}%;">
           <div class="workout-training-score-head">
             <strong>${escapeHTML(row.label)}</strong>
             <span>${row.score}/${row.maxScore}</span>
           </div>
-          <span class="workout-training-track" aria-hidden="true"><span class="workout-training-fill"></span></span>
+          <span class="workout-training-track" aria-hidden="true">
+            <span class="workout-training-fill"></span>
+            ${(row.distribution || []).map(item => `
+              <span
+                class="workout-score-dot${item.score === row.score ? " best" : ""}"
+                style="--dot-left: ${scorePercent(item.score, row.maxScore)}%;"
+                title="${escapeHTML(`${item.name}: ${item.score}`)}"
+              ></span>
+            `).join("")}
+          </span>
         </div>
       `;
     }
@@ -3334,11 +3380,31 @@
         .map(entry => movementById(entry.movementId))
         .filter(Boolean);
       if (!movements.length) return [];
-      return Object.entries(TRAINING_RATINGS).map(([key, label]) => ({
+      return Object.entries(TRAINING_RATINGS).map(([key, label]) => {
+        const distribution = movements.map(movement => ({
+          name: movement.name,
+          score: ratingScore(movement, key)
+        }));
+        return {
+          key,
+          label,
+          score: Math.max(...distribution.map(item => item.score), 0),
+          maxScore: 100,
+          distribution
+        };
+      });
+    }
+
+    function workoutMetadataCategoryScores(workout) {
+      const movements = workoutEntries(workout)
+        .map(entry => movementById(entry.movementId))
+        .filter(Boolean);
+      if (!movements.length) return [];
+      return Object.entries(METADATA_RATINGS).map(([key, label]) => ({
         key,
         label,
-        score: movements.reduce((sum, movement) => sum + ratingScore(movement, key), 0),
-        maxScore: movements.length * 100
+        score: Math.round(movements.reduce((sum, movement) => sum + ratingScore(movement, key), 0) / movements.length),
+        maxScore: 100
       }));
     }
 

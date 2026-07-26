@@ -54,7 +54,7 @@
     },
     {
       "source": "Forearm and grip-muscle discussion sources",
-      "reason": "Not used because brachialis, brachioradialis, and forearm flexor groups are not currently exposed as local visible anatomy entries in data/anatomy.json."
+      "reason": "Not used because the reviewed row sources did not isolate brachialis, brachioradialis, or forearm flexor groups cleanly enough for this visible role map."
     }
   ],
   "notes": "Variant assumption: unilateral dumbbell row with at least partial bench support and a hip/lower-rib pull target, not an unsupported Kroc row or chest-supported bilateral dumbbell row. Direct exact one-arm dumbbell row EMG for all visible back muscles was not found; primary and secondary back roles transfer from seated cable row, prone row, and row-family EMG. Biceps brachii is supported by exact unilateral dumbbell row training evidence but kept secondary because curls produced greater elbow-flexor hypertrophy. External oblique support is included because unilateral row evidence showed higher external oblique activity than bilateral rows; erector spinae is included as support, with the bench-support caveat. Local anatomy mesh mappings resolve for Latissimus dorsi, Teres major, Middle trapezius, Rhomboids, Posterior deltoid, Biceps brachii, Rotator cuff, Erector spinae, and External oblique."

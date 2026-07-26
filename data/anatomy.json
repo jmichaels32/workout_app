@@ -81,6 +81,130 @@
       ]
     },
     {
+      "id": "brachialis",
+      "name": "Brachialis",
+      "region": "Arm",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA37667",
+        "FMA37668",
+        "FMA37669"
+      ],
+      "meshFiles": [
+        "forearm/FJ1486.obj",
+        "forearm/FJ1486M.obj"
+      ]
+    },
+    {
+      "id": "brachioradialis",
+      "name": "Brachioradialis",
+      "region": "Forearm",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA38485",
+        "FMA38486",
+        "FMA38487"
+      ],
+      "meshFiles": [
+        "forearm/FJ1487.obj",
+        "forearm/FJ1487M.obj"
+      ]
+    },
+    {
+      "id": "wrist_flexors",
+      "name": "Wrist flexors",
+      "displayName": "Wrist flexor group",
+      "aliases": [
+        "Forearm flexors",
+        "Flexor carpi radialis",
+        "Flexor carpi ulnaris",
+        "Flexor digitorum superficialis",
+        "Flexor digitorum profundus"
+      ],
+      "region": "Forearm",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA38456",
+        "FMA38459",
+        "FMA38460",
+        "FMA38461",
+        "FMA38469",
+        "FMA38470",
+        "FMA38471",
+        "FMA38478",
+        "FMA38479",
+        "FMA38480",
+        "FMA38615",
+        "FMA38616",
+        "FMA38617",
+        "FMA38618",
+        "FMA38619",
+        "FMA38620"
+      ],
+      "meshFiles": [
+        "forearm/FJ1473.obj",
+        "forearm/FJ1473M.obj",
+        "forearm/FJ1475.obj",
+        "forearm/FJ1475M.obj",
+        "forearm/FJ1496.obj",
+        "forearm/FJ1496M.obj",
+        "forearm/FJ1497.obj",
+        "forearm/FJ1497M.obj",
+        "forearm/FJ1498.obj",
+        "forearm/FJ1498M.obj",
+        "forearm/FJ1499.obj",
+        "forearm/FJ1499M.obj",
+        "forearm/FJ1502.obj",
+        "forearm/FJ1502M.obj",
+        "forearm/FJ1503.obj",
+        "forearm/FJ1503M.obj",
+        "forearm/FJ1518.obj",
+        "forearm/FJ1518M.obj"
+      ]
+    },
+    {
+      "id": "wrist_extensors",
+      "name": "Wrist extensors",
+      "displayName": "Wrist extensor group",
+      "aliases": [
+        "Forearm extensors",
+        "Extensor carpi radialis longus",
+        "Extensor carpi radialis brevis",
+        "Extensor carpi ulnaris",
+        "Extensor digitorum"
+      ],
+      "region": "Forearm",
+      "source": "BodyParts3D isa_parts_list_e",
+      "fmaIds": [
+        "FMA38488",
+        "FMA38491",
+        "FMA38494",
+        "FMA38495",
+        "FMA38496",
+        "FMA38497",
+        "FMA38498",
+        "FMA38499",
+        "FMA38500",
+        "FMA38501",
+        "FMA38502",
+        "FMA38506",
+        "FMA38507",
+        "FMA38508"
+      ],
+      "meshFiles": [
+        "forearm/FJ1472.obj",
+        "forearm/FJ1472M.obj",
+        "forearm/FJ1489.obj",
+        "forearm/FJ1489M.obj",
+        "forearm/FJ1490.obj",
+        "forearm/FJ1490M.obj",
+        "forearm/FJ1492.obj",
+        "forearm/FJ1492M.obj",
+        "forearm/FJ1517.obj",
+        "forearm/FJ1517M.obj"
+      ]
+    },
+    {
       "id": "serratus_anterior",
       "name": "Serratus anterior",
       "region": "Torso",

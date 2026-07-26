@@ -1,0 +1,161 @@
+{
+  "id": "bayesian_cable_curl",
+  "name": "Bayesian Cable Curl",
+  "aliases": [
+    "bayesian_curl",
+    "single_arm_bayesian_curl",
+    "low_cable_biceps_curl",
+    "behind_body_cable_curl"
+  ],
+  "family": "biceps_curl",
+  "equipment": "cable",
+  "variantType": "single_arm_low_cable_lengthened",
+  "variant": "Single-arm cable curl facing away from a low pulley, with the working shoulder slightly extended behind the torso at the start.",
+  "description": "Stand facing away from a low cable with one handle in the working hand, step forward until the cable gently pulls the arm behind the torso, keep the elbow close to the side, curl the handle toward the shoulder without swinging, then lower under control until the elbow is long and the biceps is loaded in the stretched start position.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Arms",
+      "group": "region"
+    },
+    {
+      "label": "Cable",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 62,
+      "rationale": "Useful biceps hypertrophy accessory with a lengthened start position, but direct EMG found lower biceps activation than traditional dumbbell curls in a small sample."
+    },
+    "strength": {
+      "score": 22,
+      "rationale": "Builds elbow-flexion strength locally, but single-arm cable loading and body position make it a poor maximal-strength anchor."
+    },
+    "joint_resilience": {
+      "score": 8,
+      "rationale": "Only a narrow elbow-flexor tolerance signal; shoulder extension and cable traction can make it less forgiving for some users."
+    },
+    "athletic_transfer": {
+      "score": 1,
+      "rationale": "Almost no sport-like transfer beyond general elbow-flexor capacity."
+    },
+    "control": {
+      "score": 16,
+      "rationale": "Requires more shoulder and trunk organization than a standard curl, but still remains a simple single-joint task."
+    },
+    "fatigue_efficiency": {
+      "score": 78,
+      "rationale": "Good local arm stimulus with low systemic fatigue, although cable setup and posture can leak effort away from the biceps."
+    },
+    "setup": {
+      "score": 54,
+      "rationale": "Requires an open cable station, low pulley, handle, stance spacing, and consistent body angle."
+    },
+    "ease": {
+      "score": 68,
+      "rationale": "The curl action is simple, but the behind-body shoulder position and cable line make consistent execution less obvious than a standard curl."
+    },
+    "progression": {
+      "score": 74,
+      "rationale": "Cable stack load and reps are easy to record, with deductions for pulley friction, stack increments, and body-position drift."
+    },
+    "support": {
+      "score": 34,
+      "rationale": "The cable path is predictable, but the user must stabilize the shoulder, torso, and arm without external support."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Direct Bayesian curl EMG measured biceps brachii activity.",
+        "evidence": "A direct Bayesian-versus-dumbbell curl EMG study measured biceps brachii activation and supports the Bayesian curl as a biceps-focused elbow-flexion exercise, while showing lower acute biceps activation than the tested traditional dumbbell curl condition.",
+        "sourceIds": [
+          "parpa-2025",
+          "coratella-2023"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Brachioradialis",
+        "evidenceShort": "Curl handgrip studies support elbow-flexor contribution.",
+        "evidence": "Biceps-curl EMG studies measured brachioradialis activity across curl handgrips and bar variants. The Bayesian curl is still classified as biceps-dominant because the exact Bayesian study measured only biceps brachii.",
+        "sourceIds": [
+          "coratella-2023",
+          "marcolin-2018"
+        ]
+      }
+    ],
+    "support": []
+  },
+  "evidence": {
+    "verdict": "Bayesian cable curl: biceps brachii primary; brachioradialis secondary; no separate support muscle listed.",
+    "clinicalShort": "Surface EMG estimates acute excitation, not hypertrophy, long-term adaptation, pain, or injury risk.",
+    "limitsShort": "Pulley height, cable angle, shoulder extension, torso lean, handle, load, tempo, and elbow drift can change the biceps and forearm contribution.",
+    "summary": "The Bayesian cable curl is classified as a single-arm cable elbow-flexion accessory with the shoulder slightly extended at the start. Direct Bayesian cable curl EMG supports biceps brachii as the primary visible target, but the available study found lower biceps activation than traditional dumbbell curls under its protocol. Brachioradialis is included as a secondary elbow flexor from curl handgrip literature, not from the exact Bayesian study.",
+    "clinicalInterpretation": "The movement is best treated as a useful arm accessory and variation, not as a globally superior biceps exercise. The longer starting position may be desirable for some programming goals, but acute EMG alone should not be treated as proof of long-term hypertrophy superiority.",
+    "limitations": "The direct Bayesian study was small and measured biceps brachii only. Brachialis was not added as a visible role because the exact study did not measure it; it can be revisited if future sources or app anatomy need a more complete elbow-flexor breakdown. Dumbbell incline curls, preacher curls, standing cable curls, and machine curls should remain separate movements.",
+    "studies": [
+      {
+        "id": "parpa-2025",
+        "type": "Direct Bayesian cable curl EMG",
+        "shortCitation": "Parpa et al., Muscles, 2025",
+        "finding": "A within-subject comparison found significantly greater biceps brachii EMG amplitude in traditional dumbbell curls than Bayesian cable curls at the tested relative load.",
+        "citation": "Parpa K, Vasiliou A, Michaelides M, Govindasamy K, Chernov A, Intziegianni K. An Exploratory Study of Biceps Brachii Electromyographic Activity During Traditional Dumbbell Versus Bayesian Cable Curls. Muscles. 2025;4(4):45. doi:10.3390/muscles4040045.",
+        "doi": "10.3390/muscles4040045",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12550948/",
+        "relevance": "Exact movement-family source for the Bayesian cable curl and biceps brachii role.",
+        "usedFor": [
+          "primary muscle role",
+          "hypertrophy score",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "coratella-2023",
+        "type": "Biceps curl handgrip EMG",
+        "shortCitation": "Coratella et al., Sports, 2023",
+        "finding": "Supinated, pronated, and neutral cable curl handgrips changed biceps brachii, brachioradialis, and anterior deltoid excitation in trained bodybuilders.",
+        "citation": "Coratella G, Tornatore G, Longo S, Toninelli N, Padovan R, Esposito F, Ce E. Biceps Brachii and Brachioradialis Excitation in Biceps Curl Exercise: Different Handgrips, Different Synergy. Sports. 2023;11(3):64. doi:10.3390/sports11030064.",
+        "doi": "10.3390/sports11030064",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10054060/",
+        "relevance": "Close cable-curl evidence for handgrip-sensitive biceps and brachioradialis contribution.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "limitations"
+        ]
+      },
+      {
+        "id": "marcolin-2018",
+        "type": "Curl variant EMG",
+        "shortCitation": "Marcolin et al., PeerJ, 2018",
+        "finding": "Straight barbell, EZ-bar, and dumbbell curls produced different biceps brachii and brachioradialis EMG patterns across repetition phases.",
+        "citation": "Marcolin G, Panizzolo FA, Petrone N, Moro T, Grigoletto D, Piccolo D, Paoli A. Differences in electromyographic activity of biceps brachii and brachioradialis while performing three variants of curl. PeerJ. 2018;6:e5165. doi:10.7717/peerj.5165.",
+        "doi": "10.7717/peerj.5165",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6047503/",
+        "relevance": "Movement-family evidence for elbow-flexor contribution and bar/curl variant boundaries.",
+        "usedFor": [
+          "secondary muscle role",
+          "progression score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}
