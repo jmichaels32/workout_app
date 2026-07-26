@@ -642,7 +642,7 @@
 
     .workout-rating-strip {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: minmax(0, 1fr);
       gap: 6px;
       min-width: 0;
     }
@@ -675,6 +675,67 @@
       font-weight: 900;
       line-height: 1;
       font-variant-numeric: tabular-nums;
+    }
+
+    .workout-training-overview {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--soft-line);
+      background: var(--panel);
+    }
+
+    .workout-training-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .workout-training-score {
+      display: grid;
+      gap: 7px;
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid color-mix(in srgb, var(--group-color) 55%, var(--line));
+      background:
+        linear-gradient(90deg, color-mix(in srgb, var(--group-color) 18%, transparent) var(--score-percent, 0%), transparent var(--score-percent, 0%)),
+        var(--panel);
+    }
+
+    .workout-training-score-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .workout-training-score-head strong {
+      overflow-wrap: anywhere;
+      font-size: 12px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .workout-training-score-head span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .workout-training-track {
+      height: 6px;
+      border: 1px solid var(--soft-line);
+      background: var(--panel-2);
+      overflow: hidden;
+    }
+
+    .workout-training-fill {
+      display: block;
+      width: var(--score-percent, 0%);
+      height: 100%;
+      background: var(--group-color);
     }
 
     .template-movement-count {
@@ -939,6 +1000,13 @@
     .live-row-header {
       display: grid;
       gap: 10px;
+    }
+
+    .live-row-title-line {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
     }
 
     .live-movement-title-button {
@@ -1430,6 +1498,7 @@
       gap: 8px;
       align-items: center;
       padding: 8px 10px;
+      touch-action: pan-y;
     }
 
     .block-movement-row.is-dragging {
@@ -1447,6 +1516,12 @@
     .block-movement-list.is-drop-target {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
+    }
+
+    .block-movement-row.is-remove-swiping {
+      border-color: #b00020;
+      background: #fff2f2;
+      transition: transform 80ms ease;
     }
 
     .block-movement-drag-handle {
@@ -1503,21 +1578,6 @@
       justify-content: flex-end;
       gap: 4px;
       min-width: 0;
-    }
-
-    .set-count-label {
-      display: inline-flex;
-      min-width: 42px;
-      min-height: 34px;
-      align-items: center;
-      justify-content: center;
-      padding: 0 6px;
-      border: 1px solid var(--soft-line);
-      background: var(--panel);
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 850;
-      white-space: nowrap;
     }
 
     .block-empty {
@@ -2622,13 +2682,16 @@
       .live-workout-row { align-items: stretch; flex-direction: column; }
       .block-actions,
       .block-movement-row .compare-tray-actions { width: 100%; }
-      .block-actions button { width: 100%; }
+      .block-actions button { width: auto; }
       .block-header {
         align-items: flex-start;
         flex-direction: row;
       }
       .block-actions {
         width: auto;
+      }
+      .block-actions .block-flow-button {
+        min-width: 84px;
       }
       .block-actions .block-icon-button,
       .block-movement-row .block-icon-button {
@@ -3209,7 +3272,6 @@
       return `
         <div class="workout-rating-strip" aria-label="Workout summed ratings">
           ${renderWorkoutRatingChip("Training", summary.training, summary.trainingMax, "training")}
-          ${renderWorkoutRatingChip("Setup", summary.setup, summary.setupMax, "metadata")}
         </div>
       `;
     }
@@ -3232,18 +3294,52 @@
         .map(entry => movementById(entry.movementId))
         .filter(Boolean);
       const trainingKeys = Object.keys(TRAINING_RATINGS);
-      const setupKeys = Object.keys(METADATA_RATINGS);
       const training = entries.reduce((sum, movement) =>
         sum + trainingKeys.reduce((subtotal, key) => subtotal + ratingScore(movement, key), 0), 0);
-      const setup = entries.reduce((sum, movement) =>
-        sum + setupKeys.reduce((subtotal, key) => subtotal + ratingScore(movement, key), 0), 0);
       return {
         count: entries.length,
         training,
-        setup,
-        trainingMax: entries.length * trainingKeys.length * 100,
-        setupMax: entries.length * setupKeys.length * 100
+        trainingMax: entries.length * trainingKeys.length * 100
       };
+    }
+
+    function renderWorkoutTrainingOverview(workout) {
+      const rows = workoutTrainingCategoryScores(workout);
+      if (!rows.length) return "";
+      return `
+        <section class="workout-training-overview" aria-label="Workout training score detail">
+          <p class="section-label">Training Coverage</p>
+          <div class="workout-training-grid">
+            ${rows.map(row => renderWorkoutTrainingScore(row)).join("")}
+          </div>
+        </section>
+      `;
+    }
+
+    function renderWorkoutTrainingScore(row) {
+      const percent = scorePercent(row.score, row.maxScore);
+      return `
+        <div class="workout-training-score" style="${ratingStyle(row.key, percent, "training")} --score-percent: ${percent}%;">
+          <div class="workout-training-score-head">
+            <strong>${escapeHTML(row.label)}</strong>
+            <span>${row.score}/${row.maxScore}</span>
+          </div>
+          <span class="workout-training-track" aria-hidden="true"><span class="workout-training-fill"></span></span>
+        </div>
+      `;
+    }
+
+    function workoutTrainingCategoryScores(workout) {
+      const movements = workoutEntries(workout)
+        .map(entry => movementById(entry.movementId))
+        .filter(Boolean);
+      if (!movements.length) return [];
+      return Object.entries(TRAINING_RATINGS).map(([key, label]) => ({
+        key,
+        label,
+        score: movements.reduce((sum, movement) => sum + ratingScore(movement, key), 0),
+        maxScore: movements.length * 100
+      }));
     }
 
     function workoutMuscleHeatmap(workout) {
@@ -3360,6 +3456,7 @@
             ${blocks.map((block, index) => renderWorkoutBlock(workout, block, index)).join("")}
           </section>
           ${renderWorkoutMuscleMap(workout)}
+          ${renderWorkoutTrainingOverview(workout)}
           ${isTemplate ? "" : `
             <section class="workout-builder-save-footer" aria-label="Save scheduled workout">
               <span class="movement-count">Saved on ${escapeHTML(shortDateLabel(workout.date))}.</span>
@@ -3490,7 +3587,10 @@
       return `
         <div class="live-workout-row${complete}" data-live-movement-row>
           <div class="live-row-header">
-            <button type="button" class="live-movement-title-button" onclick="openMovementQuickView('${escapeJS(movement.id)}')">${escapeHTML(movement.name)}</button>
+            <div class="live-row-title-line">
+              <button type="button" class="live-movement-title-button" onclick="openMovementQuickView('${escapeJS(movement.id)}')">${escapeHTML(movement.name)}</button>
+              ${renderLiveAddSetButton(workout, block, entry, movement)}
+            </div>
           </div>
           <div class="live-target-strip" aria-label="Next target">
             <span class="live-target-box"><span>Beat</span><strong>${escapeHTML(plan.previousSummary)}</strong></span>
@@ -3512,12 +3612,28 @@
       return `
         <div class="live-workout-row single-set${complete}" data-live-movement-row>
           <div class="live-row-header">
-            <button type="button" class="live-movement-title-button" onclick="openMovementQuickView('${escapeJS(movement.id)}')">${escapeHTML(movement.name)}</button>
+            <div class="live-row-title-line">
+              <button type="button" class="live-movement-title-button" onclick="openMovementQuickView('${escapeJS(movement.id)}')">${escapeHTML(movement.name)}</button>
+              ${setIndex === 0 ? renderLiveAddSetButton(workout, block, entry, movement) : ""}
+            </div>
           </div>
           <div class="live-set-grid">
             ${renderLiveSetTile(workout, block, entry, plan, set, setIndex)}
           </div>
         </div>
+      `;
+    }
+
+    function renderLiveAddSetButton(workout, block, entry, movement) {
+      const setCount = targetSetCountForEntry(movement, entry, workout);
+      return `
+        <button
+          type="button"
+          class="block-icon-button add live-add-set-button"
+          onclick="addSetToWorkoutMovement('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(entry.movementId)}')"
+          aria-label="Add set ${setCount + 1} to ${escapeHTML(movement.name)}"
+          title="Add set"
+        >${renderUiIcon("plus")}</button>
       `;
     }
 
@@ -4141,13 +4257,15 @@
               <p class="eyebrow">Block ${index + 1}</p>
             </div>
             <div class="block-actions">
-              <button
-                type="button"
-                class="block-flow-button${flowMode === "interleaved" ? " active" : ""}"
-                onclick="toggleWorkoutBlockFlow('${escapeJS(workout.id)}', '${escapeJS(block.id)}')"
-                aria-pressed="${flowMode === "interleaved" ? "true" : "false"}"
-                title="Toggle set order"
-              >${flowMode === "interleaved" ? "Interleave" : "Straight"}</button>
+              ${movements.length > 1 ? `
+                <button
+                  type="button"
+                  class="block-flow-button${flowMode === "interleaved" ? " active" : ""}"
+                  onclick="toggleWorkoutBlockFlow('${escapeJS(workout.id)}', '${escapeJS(block.id)}')"
+                  aria-pressed="${flowMode === "interleaved" ? "true" : "false"}"
+                  title="Toggle set order"
+                >${flowMode === "interleaved" ? "Interleave" : "Straight"}</button>
+              ` : ""}
               <button
                 type="button"
                 class="block-icon-button add"
@@ -4183,7 +4301,6 @@
     function renderBlockMovementRow(workout, block, entry, movementIndex) {
       const movement = movementById(entry.movementId);
       if (!movement) return "";
-      const setCount = targetSetCountForEntry(movement, entry);
       return `
         <div
           class="block-movement-row"
@@ -4196,6 +4313,10 @@
           ondragleave="clearBuilderDropTarget(event)"
           ondrop="dropBuilderMovementOnRow(event, '${escapeJS(workout.id)}', '${escapeJS(block.id)}', ${movementIndex})"
           ondragend="finishBuilderMovementDrag()"
+          onpointerdown="startBuilderRemoveSwipe(event)"
+          onpointermove="moveBuilderRemoveSwipe(event)"
+          onpointerup="finishBuilderRemoveSwipe(event, '${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')"
+          onpointercancel="cancelBuilderRemoveSwipe(event)"
         >
           <button
             type="button"
@@ -4207,29 +4328,12 @@
           <button
             type="button"
             class="block-movement-title-button"
-            onclick="viewWorkoutMovement('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')"
+            onclick="if (consumeBuilderRowClick()) return; viewWorkoutMovement('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')"
             aria-label="View ${escapeHTML(movement.name)}"
           >
             <strong>${escapeHTML(movement.name)}</strong>
             <span class="movement-count">${escapeHTML(movementMuscles(movement, "primary").map(muscle => muscle.name).join(", ") || "Primary pending")}</span>
           </button>
-          <div class="block-movement-tools">
-            <span class="set-count-label">${setCount} set${setCount === 1 ? "" : "s"}</span>
-            <button
-              type="button"
-              class="block-icon-button add"
-              onclick="addSetToWorkoutMovement('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')"
-              aria-label="Add set to ${escapeHTML(movement.name)}"
-              title="Add set"
-            >${renderUiIcon("plus")}</button>
-            <button
-              type="button"
-              class="block-icon-button danger"
-              onclick="removeMovementFromBlock('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(movement.id)}')"
-              aria-label="Remove ${escapeHTML(movement.name)} from block"
-              title="Remove movement"
-            >${renderUiIcon("trash")}</button>
-          </div>
         </div>
       `;
     }
@@ -4370,6 +4474,7 @@
         target: null,
         dragging: false
       };
+      event.stopPropagation();
     }
 
     function handleBuilderPointerMove(event) {
@@ -4420,6 +4525,59 @@
     window.addEventListener("pointermove", handleBuilderPointerMove);
     window.addEventListener("pointerup", finishBuilderPointerDrag);
     window.addEventListener("pointercancel", finishBuilderPointerDrag);
+
+    let builderRemoveSwipe = null;
+    let suppressBuilderRowClickUntil = 0;
+
+    function startBuilderRemoveSwipe(event) {
+      if (event.pointerType === "mouse" || event.target.closest(".block-movement-drag-handle")) return;
+      const row = event.currentTarget;
+      builderRemoveSwipe = {
+        pointerId: event.pointerId,
+        row,
+        startX: event.clientX,
+        startY: event.clientY,
+        dx: 0,
+        active: false
+      };
+      row.setPointerCapture?.(event.pointerId);
+    }
+
+    function moveBuilderRemoveSwipe(event) {
+      if (!builderRemoveSwipe || builderRemoveSwipe.pointerId !== event.pointerId) return;
+      const dx = event.clientX - builderRemoveSwipe.startX;
+      const dy = event.clientY - builderRemoveSwipe.startY;
+      if (!builderRemoveSwipe.active && (Math.abs(dx) < 8 || Math.abs(dx) < Math.abs(dy))) return;
+      if (dx > 0) return;
+      event.preventDefault();
+      builderRemoveSwipe.active = true;
+      builderRemoveSwipe.dx = Math.max(-110, dx);
+      builderRemoveSwipe.row.classList.add("is-remove-swiping");
+      builderRemoveSwipe.row.style.transform = `translateX(${builderRemoveSwipe.dx}px)`;
+    }
+
+    function finishBuilderRemoveSwipe(event, workoutId, blockId, movementId) {
+      if (!builderRemoveSwipe || builderRemoveSwipe.pointerId !== event.pointerId) return;
+      const shouldRemove = builderRemoveSwipe.active && builderRemoveSwipe.dx <= -82;
+      const row = builderRemoveSwipe.row;
+      cancelBuilderRemoveSwipe(event);
+      if (!shouldRemove) return;
+      suppressBuilderRowClickUntil = Date.now() + 500;
+      removeMovementFromBlock(workoutId, blockId, movementId);
+    }
+
+    function cancelBuilderRemoveSwipe(event) {
+      if (!builderRemoveSwipe || (event?.pointerId !== undefined && builderRemoveSwipe.pointerId !== event.pointerId)) return;
+      const row = builderRemoveSwipe.row;
+      row.classList.remove("is-remove-swiping");
+      row.style.transform = "";
+      row.releasePointerCapture?.(builderRemoveSwipe.pointerId);
+      builderRemoveSwipe = null;
+    }
+
+    function consumeBuilderRowClick() {
+      return Date.now() < suppressBuilderRowClickUntil;
+    }
 
     function calendarDayLabel(date, dayWorkouts) {
       const base = DAY_FORMATTER.format(date);
@@ -4812,7 +4970,7 @@
 
     function movementProgressionPlan(movement, entry, workout) {
       const schema = progressionSchemaForMovement(movement);
-      const targetSetCount = targetSetCountForEntry(movement, entry);
+      const targetSetCount = targetSetCountForEntry(movement, entry, workout);
       const previous = previousMovementPerformance(movement.id, workout);
       const previousSets = previous?.sets || [];
       const setTargets = nextSetTargets(previousSets, schema, targetSetCount);
@@ -4847,9 +5005,10 @@
       return DEFAULT_PROGRESSIONS.compound;
     }
 
-    function targetSetCountForEntry(movement, entry) {
+    function targetSetCountForEntry(movement, entry, workout = null) {
       const schema = progressionSchemaForMovement(movement);
-      return Math.max(1, Number(entry?.target?.sets) || schema.sets);
+      const scheduledWorkout = isWorkoutRecord(workout);
+      return Math.max(1, scheduledWorkout ? Number(entry?.target?.sets) || schema.sets : schema.sets);
     }
 
     function previousMovementPerformance(movementId, currentWorkout) {
@@ -5168,10 +5327,11 @@
     }
 
     function addSetToWorkoutMovement(workoutId, blockId, movementId) {
-      updateWorkoutMovementEntry(workoutId, blockId, movementId, (entry) => {
+      if (!workouts.some(workout => workout.id === workoutId)) return;
+      updateWorkoutMovementEntry(workoutId, blockId, movementId, (entry, workout) => {
         const movement = movementById(entry.movementId);
         if (!movement) return entry;
-        const currentSetCount = targetSetCountForEntry(movement, entry);
+        const currentSetCount = targetSetCountForEntry(movement, entry, workout);
         return {
           ...entry,
           target: {
@@ -5479,6 +5639,7 @@
       return workoutBlocks(workout).map(block => createWorkoutBlock(
         normalizeMovementEntries(block.movements || []).map(entry => ({
           ...entry,
+          target: null,
           performedSets: []
         })),
         block.flowMode

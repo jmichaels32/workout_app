@@ -1,4 +1,4 @@
-const CACHE_NAME = "movement-library-mvp-v107";
+const CACHE_NAME = "movement-library-mvp-v108";
 const ASSETS = ["./", "index.html", "manifest.webmanifest", "icon.svg", "assets/icons/sort-gear.png", "data/movements.json"];
 
 self.addEventListener("install", event => {
