@@ -29,6 +29,8 @@
       --control: var(--bg);
       --control-hover: #f7f9ef;
       --control-line: #bfc5bb;
+      --control-hover-line: #8f98a6;
+      --panel-hover: #fbfcfe;
       --accent: #c8ff00;
       --accent-hover: #dfff32;
       --accent-soft: #f3ffd1;
@@ -38,6 +40,11 @@
       --add-hover: #9bd5ff;
       --add-soft: #edf8ff;
       --add-line: #2387c9;
+      --danger: #b00020;
+      --danger-soft: #fff2f2;
+      --remove-line: #c94a3a;
+      --remove-soft: #ffe7e2;
+      --workout-map-low: #dfe8e1;
       --score-composite: #c8ff00;
       --score-training: #8fb7ff;
       --score-metadata: #7b5cff;
@@ -93,7 +100,7 @@
       transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
     }
 
-    button:hover { border-color: #8f98a6; background: var(--control-hover); }
+    button:hover { border-color: var(--control-hover-line); background: var(--control-hover); }
     button:active { background: var(--accent-soft); }
     button:disabled {
       border-color: var(--ink-12);
@@ -181,7 +188,7 @@
 
     .section-label { margin: 20px 0 10px; }
 
-    .featured-strip, .movement-list, .evidence-content, .role-evidence-grid, .muscle-role { display: grid; gap: 10px; }
+    .movement-list, .evidence-content, .role-evidence-grid, .muscle-role { display: grid; gap: 10px; }
 
     .screen-topbar {
       display: flex;
@@ -198,17 +205,14 @@
 
     .home-panel,
     .calendar-panel,
-    .day-panel,
     .workout-library-panel,
-    .home-stat,
-    .workout-card {
+    .home-stat {
       border: 1px solid var(--soft-line);
       background: var(--panel);
     }
 
     .home-panel,
     .calendar-panel,
-    .day-panel,
     .workout-library-panel {
       padding: 16px;
     }
@@ -221,9 +225,7 @@
 
     .home-actions,
     .calendar-toolbar,
-    .day-panel-header,
-    .workout-library-header,
-    .workout-card {
+    .workout-library-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -534,12 +536,6 @@
       width: min(100%, 112px);
     }
 
-    .day-panel {
-      display: grid;
-      gap: 10px;
-    }
-
-    .day-panel-header,
     .workout-library-header {
       align-items: start;
     }
@@ -554,13 +550,6 @@
       font-size: clamp(30px, 7vw, 48px);
       line-height: 1;
       text-align: right;
-    }
-
-    .workout-list,
-    .template-list,
-    .schedule-picker {
-      display: grid;
-      gap: 8px;
     }
 
     .template-grid {
@@ -766,7 +755,7 @@
     .workout-map-gradient {
       height: 8px;
       border: 1px solid var(--soft-line);
-      background: linear-gradient(90deg, #dfe8e1, var(--workout-color));
+      background: linear-gradient(90deg, var(--workout-map-low), var(--workout-color));
     }
 
     .workout-color-picker {
@@ -809,44 +798,6 @@
     .workout-library-panel {
       display: grid;
       gap: 10px;
-    }
-
-    .schedule-picker {
-      padding-top: 10px;
-      border-top: 1px solid var(--ink-12);
-    }
-
-    .workout-card {
-      align-items: start;
-      padding: 10px;
-    }
-
-    .workout-card h3 {
-      margin-bottom: 4px;
-      font-size: 18px;
-    }
-
-    .workout-status {
-      display: inline-flex;
-      min-height: 28px;
-      align-items: center;
-      padding: 4px 7px;
-      border: 1px solid var(--soft-line);
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .workout-status.completed {
-      border-color: var(--accent-line);
-      background: var(--accent);
-      color: var(--accent-ink);
-    }
-
-    .workout-status.draft,
-    .workout-status.active {
-      border-color: var(--line);
-      color: var(--ink);
     }
 
     .workout-builder {
@@ -1107,8 +1058,8 @@
     }
 
     .live-set-tile.is-remove-ready {
-      border-color: #c94a3a;
-      background: #ffe7e2;
+      border-color: var(--remove-line);
+      background: var(--remove-soft);
     }
 
     .set-load-button,
@@ -1275,49 +1226,6 @@
       cursor: default;
     }
 
-    .rir-chip {
-      min-height: 30px;
-      padding: 4px 6px;
-      border-color: var(--soft-line);
-      font-size: 11px;
-      font-weight: 800;
-      text-align: center;
-    }
-
-    .rir-chip {
-      display: grid;
-      place-items: center;
-      background: var(--panel);
-      color: var(--muted);
-      line-height: 1;
-    }
-
-    .rir-chip strong {
-      display: block;
-      color: inherit;
-      font-size: 13px;
-      line-height: 1;
-    }
-
-    .rir-chip.rir-3,
-    .rir-chip.rir-2 {
-      border-color: var(--accent-line);
-      background: var(--accent);
-      color: var(--accent-ink);
-    }
-
-    .rir-chip.rir-1 {
-      border-color: #d39a00;
-      background: #ffd84d;
-      color: var(--ink);
-    }
-
-    .rir-chip.rir-0 {
-      border-color: #b94835;
-      background: #ff8b72;
-      color: var(--ink);
-    }
-
     .live-workout-footer {
       position: sticky;
       bottom: 12px;
@@ -1400,8 +1308,8 @@
     }
 
     .delete-button:hover {
-      background: #fff2f2;
-      border-color: #b00020;
+      background: var(--danger-soft);
+      border-color: var(--danger);
     }
 
     .workout-block-list {
@@ -1470,8 +1378,8 @@
 
     .block-icon-button.danger:hover,
     .block-icon-button.danger:focus-visible {
-      border-color: #b00020;
-      background: #fff2f2;
+      border-color: var(--danger);
+      background: var(--danger-soft);
     }
 
     .block-icon-button svg {
@@ -1517,8 +1425,8 @@
     }
 
     .block-movement-row.is-remove-swiping {
-      border-color: #b00020;
-      background: #fff2f2;
+      border-color: var(--danger);
+      background: var(--danger-soft);
       transition: transform 80ms ease;
     }
 
@@ -2069,8 +1977,8 @@
     }
 
     .movement-listing:hover {
-      border-color: #8f98a6;
-      background: #fbfcfe;
+      border-color: var(--control-hover-line);
+      background: var(--panel-hover);
     }
 
     .movement-listing {
@@ -2481,8 +2389,8 @@
     }
 
     .confirm-actions .delete-button {
-      background: #fff2f2;
-      border-color: #b00020;
+      background: var(--danger-soft);
+      border-color: var(--danger);
     }
 
     .quick-view-dialog .detail-hero,
@@ -2581,7 +2489,6 @@
       .movement-home-header,
       .home-panel,
       .calendar-panel,
-      .day-panel,
       .workout-library-panel,
       .workout-builder-header,
       .workout-block,
@@ -2645,7 +2552,7 @@
       .home-stat strong { font-size: 18px; }
       .home-panel { min-height: 128px; padding-right: 134px; }
       .home-library-link { width: 112px; min-height: 72px; }
-      .calendar-toolbar, .day-panel-header, .workout-library-header { align-items: stretch; flex-direction: column; }
+      .calendar-toolbar, .workout-library-header { align-items: stretch; flex-direction: column; }
       .workout-library-header h2 { text-align: left; }
       .calendar-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .month-calendar { display: none; }
@@ -2873,7 +2780,6 @@
       isolation: { label: "Isolation", sets: 3, repMin: 10, repMax: 15, loadStep: 5, rirTarget: 2 },
       bodyweight: { label: "Bodyweight", sets: 3, repMin: 8, repMax: 20, loadStep: 0, rirTarget: 2 }
     };
-    const RIR_CYCLE = [null, 3, 2, 1, 0];
     const REP_GROUP_SIZE = 5;
     const REP_GROUP_THRESHOLD = 12;
     const REP_GROUP_TAIL = REP_GROUP_THRESHOLD - REP_GROUP_SIZE;
@@ -3226,30 +3132,6 @@
       `;
     }
 
-    function renderWorkoutCard(workout) {
-      const movements = workoutMovements(workout);
-      const status = formatWorkoutStatus(workout.status);
-      return `
-        <article class="workout-card">
-          <div>
-            <h3>${escapeHTML(workoutTitle(workout))}</h3>
-            <p class="listing-summary">${escapeHTML(workoutSummary(workout, movements))}</p>
-            ${movements.length ? `
-              <div class="movement-card-tags">
-                ${movements.slice(0, 6).map(movement => `<span class="tag tag-library">${escapeHTML(movement.name)}</span>`).join("")}
-              </div>
-            ` : ""}
-          </div>
-          <div class="compare-tray-actions">
-            <span class="workout-status ${escapeHTML(workout.status)}">${escapeHTML(status)}</span>
-            ${workout.status === "draft" || workout.status === "active" ? `
-              <button type="button" class="compare-button" onclick="openWorkoutBuilder('${escapeJS(workout.id)}')">Open Workout</button>
-            ` : ""}
-          </div>
-        </article>
-      `;
-    }
-
     function workoutTitle(workout) {
       if (workout.title) return workout.title;
       if (workout.name) return workout.name;
@@ -3312,9 +3194,7 @@
     }
 
     function workoutTrainingCategoryScores(workout) {
-      const movements = workoutEntries(workout)
-        .map(entry => movementById(entry.movementId))
-        .filter(Boolean);
+      const movements = workoutMovementEntries(workout).map(entry => entry.movement);
       if (!movements.length) return [];
       return Object.entries(TRAINING_RATINGS).map(([key, label]) => {
         const distribution = movements.map(movement => ({
@@ -3332,9 +3212,7 @@
     }
 
     function workoutMetadataCategoryScores(workout) {
-      const movements = workoutEntries(workout)
-        .map(entry => movementById(entry.movementId))
-        .filter(Boolean);
+      const movements = workoutMovementEntries(workout).map(entry => entry.movement);
       if (!movements.length) return [];
       return Object.entries(METADATA_RATINGS).map(([key, label]) => ({
         key,
@@ -3639,10 +3517,9 @@
     }
 
     function liveWorkoutProgress(workout) {
-      const entries = workoutEntries(workout).filter(entry => movementById(entry.movementId));
+      const entries = workoutMovementEntries(workout);
       const totals = entries.reduce((summary, entry) => {
-        const movement = movementById(entry.movementId);
-        const plan = movementProgressionPlan(movement, entry, workout);
+        const plan = movementProgressionPlan(entry.movement, entry, workout);
         plan.setTargets.forEach((target, setIndex) => {
           const set = displayLiveSet(entry, target, setIndex);
           const targetReps = Math.max(1, nullableInteger(set.targetReps) || 1);
@@ -3944,21 +3821,6 @@
           hidden
           aria-label="Remove one unused extra rep slot"
         >-</button>
-      `;
-    }
-
-    function renderRirChip(workout, block, entry, set, setIndex) {
-      const rir = normalizeRirValue(set.rir);
-      const className = rir === null ? "" : ` rir-${rir}`;
-      const label = rir === null ? "?" : rir === 3 ? "3+" : String(rir);
-      return `
-        <button
-          type="button"
-          class="rir-chip${className}"
-          onclick="cyclePerformedSetRir('${escapeJS(workout.id)}', '${escapeJS(block.id)}', '${escapeJS(entry.movementId)}', ${setIndex})"
-          aria-label="Cycle set ${setIndex + 1} reps in reserve"
-          title="Tap to cycle RIR"
-        ><strong>${escapeHTML(label)}</strong></button>
       `;
     }
 
@@ -4695,17 +4557,6 @@
       renderMovementApp({ skipHistory: true });
     }
 
-    function selectCalendarDate(dateKey) {
-      const parsed = parseDateKey(dateKey);
-      selectedCalendarDate = formatDateKey(parsed);
-      if (!sameMonth(parsed, visibleCalendarMonth)) {
-        visibleCalendarMonth = monthStart(parsed);
-      }
-      activeMobileCalendarDate = null;
-      schedulePickerOpen = false;
-      renderMovementApp({ skipHistory: true });
-    }
-
     function selectMobileCalendarDay(dateKey, event) {
       event?.preventDefault();
       const normalizedDate = formatDateKey(parseDateKey(dateKey));
@@ -5146,23 +4997,6 @@
       return targets;
     }
 
-    function displayPerformedSet(entry, target, setIndex) {
-      const existing = normalizePerformedSet(entry.performedSets?.[setIndex]);
-      if (!existing) return { ...target, done: false };
-      return {
-        load: Object.hasOwn(existing, "load") ? existing.load : target.load,
-        reps: Object.hasOwn(existing, "reps") ? existing.reps : target.reps,
-        rir: Object.hasOwn(existing, "rir") ? existing.rir : target.rir,
-        done: Boolean(existing.done)
-      };
-    }
-
-    function formatTargetSet(target, schema) {
-      const reps = Number.isFinite(target.reps) ? target.reps : schema.repMin;
-      if (Number.isFinite(target.load)) return `${formatSetNumber(target.load)} x ${reps}`;
-      return schema.loadStep ? `set load x ${reps}` : `BW x ${reps}`;
-    }
-
     function summarizeSetTargets(sets, schema) {
       const firstLoad = sets.find(set => Number.isFinite(set.load))?.load;
       const reps = sets
@@ -5227,39 +5061,6 @@
           updatedAt: new Date().toISOString()
         }));
       }, { skipRender: true, markActive: true });
-    }
-
-    function cyclePerformedSetRir(workoutId, blockId, movementId, setIndex) {
-      updateWorkoutMovementEntry(workoutId, blockId, movementId, (entry, workout) => {
-        const target = setTargetForEntry(workout, entry, setIndex);
-        return setPerformedSetAt(entry, setIndex, existing => {
-          const base = performedSetWithTarget(target, existing);
-          const current = normalizeRirValue(base.rir);
-          const currentIndex = RIR_CYCLE.findIndex(value => value === current);
-          const nextRir = RIR_CYCLE[(currentIndex + 1) % RIR_CYCLE.length];
-          return {
-            ...base,
-            rir: nextRir,
-            updatedAt: new Date().toISOString()
-          };
-        });
-      }, { markActive: true });
-    }
-
-    function togglePerformedSetDone(workoutId, blockId, movementId, setIndex) {
-      updateWorkoutMovementEntry(workoutId, blockId, movementId, (entry, workout) => {
-        const target = setTargetForEntry(workout, entry, setIndex);
-        return setPerformedSetAt(entry, setIndex, existing => {
-          const base = performedSetWithTarget(target, existing);
-          const done = !base.done;
-          return {
-            ...base,
-            done,
-            completedAt: done ? new Date().toISOString() : null,
-            updatedAt: new Date().toISOString()
-          };
-        });
-      }, { markActive: true });
     }
 
     function toggleLiveWorkoutComplete(workoutId) {
@@ -5571,44 +5372,58 @@
     }
 
     function loadStoredWorkouts() {
-      try {
-        const parsed = JSON.parse(localStorage.getItem(WORKOUT_STORAGE_KEY) || "[]");
-        return Array.isArray(parsed)
-          ? parsed.map(normalizeWorkoutRecord).filter(isWorkoutRecord).sort(compareWorkouts)
-          : [];
-      } catch (error) {
-        console.warn("Could not read workout storage", error);
-        return [];
-      }
+      return loadStoredList(WORKOUT_STORAGE_KEY, normalizeWorkoutRecord, isWorkoutRecord, compareWorkouts, "workout");
     }
 
     function saveStoredWorkouts() {
-      try {
-        workouts = [...workouts].map(normalizeWorkoutRecord).filter(isWorkoutRecord).sort(compareWorkouts);
-        localStorage.setItem(WORKOUT_STORAGE_KEY, JSON.stringify(workouts));
-      } catch (error) {
-        console.warn("Could not save workout storage", error);
-      }
+      workouts = saveStoredList(WORKOUT_STORAGE_KEY, workouts, normalizeWorkoutRecord, isWorkoutRecord, compareWorkouts, "workout");
     }
 
     function loadStoredWorkoutTemplates() {
+      return loadStoredList(
+        WORKOUT_TEMPLATE_STORAGE_KEY,
+        normalizeWorkoutTemplateRecord,
+        isWorkoutTemplateRecord,
+        compareWorkoutTemplates,
+        "workout template"
+      );
+    }
+
+    function saveStoredWorkoutTemplates() {
+      workoutTemplates = saveStoredList(
+        WORKOUT_TEMPLATE_STORAGE_KEY,
+        workoutTemplates,
+        normalizeWorkoutTemplateRecord,
+        isWorkoutTemplateRecord,
+        compareWorkoutTemplates,
+        "workout template"
+      );
+    }
+
+    function loadStoredList(storageKey, normalizeItem, validateItem, compareItems, label) {
       try {
-        const parsed = JSON.parse(localStorage.getItem(WORKOUT_TEMPLATE_STORAGE_KEY) || "[]");
-        return Array.isArray(parsed)
-          ? parsed.map(normalizeWorkoutTemplateRecord).filter(isWorkoutTemplateRecord).sort(compareWorkoutTemplates)
-          : [];
+        const parsed = JSON.parse(localStorage.getItem(storageKey) || "[]");
+        return normalizeStoredList(parsed, normalizeItem, validateItem, compareItems);
       } catch (error) {
-        console.warn("Could not read workout template storage", error);
+        console.warn(`Could not read ${label} storage`, error);
         return [];
       }
     }
 
-    function saveStoredWorkoutTemplates() {
+    function normalizeStoredList(items, normalizeItem, validateItem, compareItems) {
+      return Array.isArray(items)
+        ? items.map(normalizeItem).filter(validateItem).sort(compareItems)
+        : [];
+    }
+
+    function saveStoredList(storageKey, items, normalizeItem, validateItem, compareItems, label) {
       try {
-        workoutTemplates = [...workoutTemplates].map(normalizeWorkoutTemplateRecord).filter(isWorkoutTemplateRecord).sort(compareWorkoutTemplates);
-        localStorage.setItem(WORKOUT_TEMPLATE_STORAGE_KEY, JSON.stringify(workoutTemplates));
+        const normalized = normalizeStoredList(items, normalizeItem, validateItem, compareItems);
+        localStorage.setItem(storageKey, JSON.stringify(normalized));
+        return normalized;
       } catch (error) {
-        console.warn("Could not save workout template storage", error);
+        console.warn(`Could not save ${label} storage`, error);
+        return Array.isArray(items) ? items : [];
       }
     }
 
@@ -5794,9 +5609,13 @@
     }
 
     function workoutMovements(workout) {
+      return workoutMovementEntries(workout).map(entry => entry.movement);
+    }
+
+    function workoutMovementEntries(workout) {
       return workoutEntries(workout)
-        .map(entry => movementById(typeof entry === "string" ? entry : entry.movementId))
-        .filter(Boolean);
+        .map(entry => ({ ...entry, movement: movementById(entry.movementId) }))
+        .filter(entry => entry.movement);
     }
 
     function workoutBlocks(workout) {
@@ -5843,12 +5662,6 @@
       if (dayWorkouts.some(workout => workout.status === "active")) return "active";
       if (dayWorkouts.some(workout => workout.status === "draft")) return "draft";
       return "";
-    }
-
-    function formatWorkoutStatus(status) {
-      if (status === "completed") return "Completed";
-      if (status === "active") return "Active";
-      return "Draft";
     }
 
     function shortDateLabel(dateKey) {
@@ -6633,17 +6446,6 @@
       renderMovementApp(options);
     }
 
-    function toggleSortDirection(options = {}) {
-      collectionSortDirection = nextSortDirection(collectionSortDirection);
-      if (!isSortingActive()) collectionSortMenuOpen = false;
-      collectionSortOpen = true;
-      collectionFiltersOpen = false;
-      collectionSortDirectionOpen = false;
-      movementView = "collection";
-      activeMovementId = null;
-      renderMovementApp(options);
-    }
-
     function toggleSortDirectionMenu(options = {}) {
       collectionSortDirectionOpen = !collectionSortDirectionOpen;
       collectionSortOpen = true;
@@ -6911,82 +6713,69 @@
 
     function movementRouteUrl() {
       const url = new URL(window.location.href);
-      url.searchParams.delete("open");
-      url.searchParams.delete("collection");
-      url.searchParams.delete("compare");
-      url.searchParams.delete("compareWith");
-      url.searchParams.delete("compareOrigin");
-      url.searchParams.delete("sort");
-      url.searchParams.delete("rating");
-      url.searchParams.delete("direction");
-      url.searchParams.delete("q");
-      url.searchParams.delete("workout");
-      url.searchParams.delete("template");
-      url.searchParams.delete("block");
+      clearRouteParams(url);
       if (movementView === "home") {
-        url.searchParams.delete("view");
-        url.searchParams.delete("group");
-        url.searchParams.delete("movement");
-        url.searchParams.delete("tags");
+        return url;
       } else if (movementView === "collection") {
         url.searchParams.set("view", "collection");
-        setSortParams(url);
-        if (activeCollectionGroup) url.searchParams.set("group", activeCollectionGroup);
-        else url.searchParams.delete("group");
-        if (selectedCollectionTags.length) url.searchParams.set("tags", selectedCollectionTags.join(","));
-        else url.searchParams.delete("tags");
-        if (compareAnchorId) url.searchParams.set("compare", compareAnchorId);
-        if (compareOriginMovementId) url.searchParams.set("compareOrigin", compareOriginMovementId);
-        if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
-        if (activeWorkoutTemplateId) url.searchParams.set("template", activeWorkoutTemplateId);
-        if (activeBlockId) url.searchParams.set("block", activeBlockId);
-        if (collectionSearchQuery.trim()) url.searchParams.set("q", collectionSearchQuery.trim());
-        url.searchParams.delete("movement");
+        setCollectionRouteParams(url);
       } else if (movementView === "detail") {
         url.searchParams.set("view", "detail");
-        setSortParams(url);
-        if (activeCollectionGroup) url.searchParams.set("group", activeCollectionGroup);
-        else url.searchParams.delete("group");
-        if (selectedCollectionTags.length) url.searchParams.set("tags", selectedCollectionTags.join(","));
-        else url.searchParams.delete("tags");
-        if (compareAnchorId) url.searchParams.set("compare", compareAnchorId);
-        if (compareOriginMovementId) url.searchParams.set("compareOrigin", compareOriginMovementId);
-        if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
-        if (activeWorkoutTemplateId) url.searchParams.set("template", activeWorkoutTemplateId);
-        if (activeBlockId) url.searchParams.set("block", activeBlockId);
-        if (collectionSearchQuery.trim()) url.searchParams.set("q", collectionSearchQuery.trim());
+        setCollectionRouteParams(url);
         url.searchParams.set("movement", activeMovementId);
       } else if (movementView === "workout") {
         url.searchParams.set("view", "workout");
-        if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
-        if (activeWorkoutTemplateId) url.searchParams.set("template", activeWorkoutTemplateId);
-        url.searchParams.delete("group");
-        url.searchParams.delete("movement");
-        url.searchParams.delete("tags");
+        setActiveWorkoutRouteParams(url);
       } else if (movementView === "live") {
         url.searchParams.set("view", "live");
-        if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
-        if (activeBlockId) url.searchParams.set("block", activeBlockId);
-        url.searchParams.delete("group");
-        url.searchParams.delete("movement");
-        url.searchParams.delete("tags");
+        setActiveWorkoutRouteParams(url, { includeTemplate: false, includeBlock: true });
       } else if (movementView === "compare") {
         url.searchParams.set("view", "compare");
-        setSortParams(url);
-        if (activeCollectionGroup) url.searchParams.set("group", activeCollectionGroup);
-        else url.searchParams.delete("group");
-        if (selectedCollectionTags.length) url.searchParams.set("tags", selectedCollectionTags.join(","));
-        else url.searchParams.delete("tags");
-        if (compareAnchorId) url.searchParams.set("compare", compareAnchorId);
-        if (compareTargetId) url.searchParams.set("compareWith", compareTargetId);
-        if (compareOriginMovementId) url.searchParams.set("compareOrigin", compareOriginMovementId);
-        if (activeWorkoutId) url.searchParams.set("workout", activeWorkoutId);
-        if (activeWorkoutTemplateId) url.searchParams.set("template", activeWorkoutTemplateId);
-        if (activeBlockId) url.searchParams.set("block", activeBlockId);
-        if (collectionSearchQuery.trim()) url.searchParams.set("q", collectionSearchQuery.trim());
-        url.searchParams.delete("movement");
+        setCollectionRouteParams(url, { includeCompareTarget: true });
       }
       return url;
+    }
+
+    function clearRouteParams(url) {
+      [
+        "open",
+        "collection",
+        "view",
+        "group",
+        "movement",
+        "tags",
+        "compare",
+        "compareWith",
+        "compareOrigin",
+        "sort",
+        "rating",
+        "direction",
+        "q",
+        "workout",
+        "template",
+        "block"
+      ].forEach(param => url.searchParams.delete(param));
+    }
+
+    function setRouteParam(url, key, value) {
+      if (value) url.searchParams.set(key, value);
+    }
+
+    function setCollectionRouteParams(url, { includeCompareTarget = false } = {}) {
+      setSortParams(url);
+      setRouteParam(url, "group", activeCollectionGroup);
+      if (selectedCollectionTags.length) url.searchParams.set("tags", selectedCollectionTags.join(","));
+      setRouteParam(url, "compare", compareAnchorId);
+      if (includeCompareTarget) setRouteParam(url, "compareWith", compareTargetId);
+      setRouteParam(url, "compareOrigin", compareOriginMovementId);
+      setActiveWorkoutRouteParams(url, { includeBlock: true });
+      setRouteParam(url, "q", collectionSearchQuery.trim());
+    }
+
+    function setActiveWorkoutRouteParams(url, { includeTemplate = true, includeBlock = false } = {}) {
+      setRouteParam(url, "workout", activeWorkoutId);
+      if (includeTemplate) setRouteParam(url, "template", activeWorkoutTemplateId);
+      if (includeBlock) setRouteParam(url, "block", activeBlockId);
     }
 
     function setSortParams(url) {
@@ -7077,10 +6866,6 @@
       return movementLibrary.filter(movement =>
         movementMatchesAnyTagLabels(movement, labels, "region")
       ).length;
-    }
-
-    function firstRegionMacro() {
-      return REGION_MACRO_ORDER.find(label => regionMacroCount(label) > 0) || REGION_MACRO_ORDER[0];
     }
 
     function inferActiveRegionMacro() {
@@ -7188,12 +6973,6 @@
 
     function isSortingActive() {
       return collectionSortDirection !== "none";
-    }
-
-    function nextSortDirection(direction) {
-      if (direction === "desc") return "asc";
-      if (direction === "asc") return "none";
-      return "desc";
     }
 
     function sortSubtypeRatings(metric = collectionSortMetric) {
