@@ -1,0 +1,75 @@
+{
+  "movementId": "bar_reverse_curl",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-30",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "coratella-2023",
+    "marcolin-2018",
+    "ikeda-2025",
+    "gazzoni-2014"
+  ],
+  "searchedQueries": [
+    "\"reverse curl\" electromyography brachioradialis",
+    "\"pronated biceps curl\" brachioradialis EMG",
+    "\"biceps curl\" pronated supinated neutral handgrip EMG",
+    "\"EZ bar reverse curl\" muscle activation"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Confirmed movement file requirements and anatomy validation gate."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Brachioradialis, Brachialis, Biceps brachii, and Wrist extensors have local mesh mappings."
+    },
+    {
+      "type": "movement-reference",
+      "path": "data/movements/bar_hammer_curl.json",
+      "notes": "Used curl-family evidence wording and variant boundary style."
+    },
+    {
+      "type": "movement-reference",
+      "path": "data/movements/bar_wrist_extension.json",
+      "notes": "Checked wrist extensor support and reverse-wrist-curl boundary language."
+    },
+    {
+      "type": "paper",
+      "id": "coratella-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10054060/",
+      "notes": "Pronated, neutral, and supinated curl handgrip EMG source."
+    },
+    {
+      "type": "paper",
+      "id": "marcolin-2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6047503/",
+      "notes": "Straight bar, EZ-bar, and dumbbell curl EMG source for elbow flexors."
+    },
+    {
+      "type": "paper",
+      "id": "ikeda-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11740565/",
+      "notes": "Wrist flexor and extensor activity across forearm rotation."
+    },
+    {
+      "type": "paper",
+      "id": "gazzoni-2014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4188712/",
+      "notes": "Forearm muscle activity during wrist and finger movement tasks."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Reverse wrist curl tutorials",
+      "reason": "Excluded because reverse wrist curls train wrist extension, while the movement added here is pronated elbow flexion."
+    },
+    {
+      "title": "Consumer reverse curl ranking pages",
+      "reason": "Not used because peer-reviewed curl handgrip and forearm EMG evidence was available."
+    }
+  ],
+  "notes": "Variant assumption is a standing pronated bar reverse curl. Straight bar and EZ/curl-bar versions are grouped for MVP discoverability; if wrist comfort, load capacity, or grip angle becomes important, split them later. This should not be confused with bar wrist extension or reverse wrist curl."
+}

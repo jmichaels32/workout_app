@@ -1,0 +1,79 @@
+{
+  "movementId": "incline_dumbbell_curl",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-30",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "oliveira-2009",
+    "attarieh-2025",
+    "marcolin-2018",
+    "coratella-2023",
+    "ikeda-2025",
+    "gazzoni-2014"
+  ],
+  "searchedQueries": [
+    "\"incline dumbbell curl\" biceps brachii EMG",
+    "\"shoulder position\" biceps curl EMG incline preacher standing",
+    "\"shoulder extended\" biceps curl hypertrophy brachialis",
+    "\"incline biceps curl\" muscle activation"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Checked movement JSON, research JSON, evidence IDs, and anatomy validation expectations."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Biceps brachii, Brachialis, Brachioradialis, and Wrist flexors have local mesh mappings."
+    },
+    {
+      "type": "paper",
+      "id": "oliveira-2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24150552/",
+      "notes": "Direct incline dumbbell curl EMG compared with standing and preacher curl positions."
+    },
+    {
+      "type": "paper",
+      "id": "attarieh-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11906226/",
+      "notes": "Shoulder-extended cable curl training evidence for biceps brachii and brachialis thickness."
+    },
+    {
+      "type": "paper",
+      "id": "marcolin-2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6047503/",
+      "notes": "Dumbbell curl EMG source measuring biceps brachii and brachioradialis."
+    },
+    {
+      "type": "paper",
+      "id": "coratella-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10054060/",
+      "notes": "Curl handgrip EMG source for brachioradialis and biceps role boundaries."
+    },
+    {
+      "type": "paper",
+      "id": "ikeda-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11740565/",
+      "notes": "Forearm rotation and wrist flexor/extensor EMG context."
+    },
+    {
+      "type": "paper",
+      "id": "gazzoni-2014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4188712/",
+      "notes": "Forearm EMG during wrist and finger tasks, used for support-role context."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer incline curl tutorials and ranking pages",
+      "reason": "Not used because direct shoulder-position curl EMG and peer-reviewed curl evidence were available."
+    },
+    {
+      "title": "Bayesian cable curl pages",
+      "reason": "Used only as a shoulder-extended concept boundary; the movement added here is dumbbell incline curl, not cable Bayesian curl."
+    }
+  ],
+  "notes": "Variant assumption is a seated incline dumbbell curl with the shoulder held behind the torso. Bench angle matters; an upright seated curl, spider curl, preacher curl, and Bayesian cable curl should stay separate."
+}

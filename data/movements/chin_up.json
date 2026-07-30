@@ -1,0 +1,249 @@
+{
+  "id": "chin_up",
+  "name": "Chin-Up",
+  "aliases": [
+    "chinup",
+    "supinated_pull_up",
+    "underhand_pull_up",
+    "bodyweight_chin_up",
+    "strict_chin_up"
+  ],
+  "family": "vertical_pull",
+  "equipment": "bodyweight",
+  "variantType": "supinated_bodyweight_bar",
+  "variant": "Supinated bodyweight pull from a fixed overhead bar, performed without assistance, kipping, or added external load.",
+  "description": "Hang from a fixed overhead bar with a supinated grip, set the shoulders without swinging, pull the chest toward the bar by driving the elbows down while keeping the ribs controlled, then lower under control to a full hang.",
+  "communityRating": {
+    "averageStars": null,
+    "reviewCount": 0,
+    "scale": 5
+  },
+  "tags": [
+    {
+      "label": "Upper body",
+      "group": "region"
+    },
+    {
+      "label": "Back",
+      "group": "region"
+    },
+    {
+      "label": "Arms",
+      "group": "region"
+    },
+    {
+      "label": "Calisthenics",
+      "group": "equipment"
+    },
+    {
+      "label": "Pull",
+      "group": "pattern"
+    }
+  ],
+  "ratings": {
+    "hypertrophy": {
+      "score": 78,
+      "rationale": "Strong bodyweight stimulus for lats and elbow flexors, with more biceps emphasis than a pronated pull-up."
+    },
+    "strength": {
+      "score": 76,
+      "rationale": "High-force vertical pull with meaningful relative-strength demand and elbow-flexor involvement."
+    },
+    "joint_resilience": {
+      "score": 38,
+      "rationale": "Can build shoulder, elbow, and grip tolerance, but the supinated hanging position can be less forgiving for elbows and wrists."
+    },
+    "athletic_transfer": {
+      "score": 66,
+      "rationale": "Transfers well to climbing, self-movement, obstacle, and grappling-adjacent pulling tasks, though the fixed bar and bilateral pattern limit specificity."
+    },
+    "control": {
+      "score": 58,
+      "rationale": "Requires scapular timing, grip control, elbow tracking, and swing management without torso support."
+    },
+    "fatigue_efficiency": {
+      "score": 56,
+      "rationale": "Efficient setup and high stimulus, but grip, elbow flexors, shoulders, and failed reps can add recovery cost."
+    },
+    "setup": {
+      "score": 86,
+      "rationale": "Needs only a fixed overhead bar, though bar availability, height, and grip comfort matter."
+    },
+    "ease": {
+      "score": 34,
+      "rationale": "Often slightly easier than pronated pull-ups for many users, but still requires substantial relative strength."
+    },
+    "progression": {
+      "score": 36,
+      "rationale": "Reps are easy to track, but overload is coarse unless assistance or added weight becomes its own tracked variant."
+    },
+    "support": {
+      "score": 8,
+      "rationale": "The hands are fixed to the bar, but the rest of the body is suspended and unsupported."
+    }
+  },
+  "muscles": {
+    "primary": [
+      {
+        "name": "Latissimus dorsi",
+        "evidenceShort": "Chin-up and pull-up EMG supports high latissimus dorsi activity.",
+        "evidence": "Pull-up and chin-up EMG studies directly measured latissimus dorsi activity during supinated and other pull-up variants. It remains a primary vertical-pull target.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017",
+          "urbanczyk-2020"
+        ]
+      },
+      {
+        "name": "Biceps brachii",
+        "evidenceShort": "Supinated chin-up EMG directly measures high biceps contribution.",
+        "evidence": "Chin-up and pull-up EMG studies directly measured biceps brachii, with the supinated chin-up condition increasing elbow-flexor relevance compared with a pronated pull-up. It is primary here because the underhand grip makes biceps involvement central to the variant.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017"
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Brachioradialis",
+        "evidenceShort": "Pull-up variation EMG directly measures brachioradialis.",
+        "evidence": "Pull-up grip-variation EMG measured brachioradialis activity across supinated, pronated, neutral, and rope pull-up variants. It is secondary because it assists elbow flexion and grip rather than defining the movement target.",
+        "sourceIds": [
+          "dickie-2017"
+        ]
+      },
+      {
+        "name": "Pectoralis major",
+        "evidenceShort": "Measured shoulder-adduction assistant during chin-up and pull-up conditions.",
+        "evidence": "Chin-up and pull-up EMG measured pectoralis major activity. It is included as a secondary shoulder-adduction contributor, not a chest target.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017"
+        ]
+      },
+      {
+        "name": "Posterior deltoid",
+        "evidenceShort": "Traditional pull-up EMG supports posterior shoulder contribution.",
+        "evidence": "Traditional pull-up EMG measured posterior deltoid activity during vertical pulling. It is listed as secondary because it assists shoulder extension and upper-arm motion.",
+        "sourceIds": [
+          "snarr-2017"
+        ]
+      }
+    ],
+    "support": [
+      {
+        "name": "Trapezius (middle and lower fibers)",
+        "evidenceShort": "Trapezius activity supports scapular control in pull-up variants.",
+        "evidence": "Pull-up and chin-up EMG studies measured lower and middle trapezius activity and support a scapular-control role. It is support because the visible target is the vertical pull, not trap hypertrophy.",
+        "sourceIds": [
+          "youdas-2010",
+          "dickie-2017",
+          "snarr-2017"
+        ]
+      },
+      {
+        "name": "Rotator cuff",
+        "evidenceShort": "Infraspinatus EMG and shoulder modeling support glenohumeral stabilization.",
+        "evidence": "Chin-up and pull-up research measured infraspinatus activity and modeled rotator-cuff loading across pull-up techniques. The broader rotator cuff is shown as support for shoulder stability.",
+        "sourceIds": [
+          "youdas-2010",
+          "urbanczyk-2020"
+        ]
+      }
+    ]
+  },
+  "evidence": {
+    "verdict": "Supinated bodyweight chin-up: latissimus dorsi and biceps brachii primary; brachioradialis, pectoralis major, and posterior deltoid secondary; middle/lower trapezius and rotator cuff support.",
+    "clinicalShort": "EMG estimates acute excitation; body mass, grip comfort, and technique strongly affect performance.",
+    "limitsShort": "Grip width, supination tolerance, range of motion, bar path, swing, fatigue, and body mass can shift muscle contribution and difficulty.",
+    "summary": "The chin-up is classified as a strict supinated bodyweight vertical pull. Direct chin-up and pull-up EMG supports latissimus dorsi and biceps brachii as primary visible targets, with brachioradialis, pectoralis major, and posterior deltoid as secondary contributors. Trapezius and rotator cuff roles are shown as support for scapular and shoulder control.",
+    "clinicalInterpretation": "The chin-up should be tracked separately from a pronated pull-up because the supinated grip increases elbow-flexor relevance and changes elbow, wrist, and shoulder tolerance. It remains a high-value pull-day movement when the user can perform it with controlled range.",
+    "limitations": "The entry applies to a strict supinated bodyweight chin-up from a fixed bar. Assisted chin-ups, weighted chin-ups, neutral-grip pull-ups, ring chin-ups, kipping chin-ups, and machine-assisted versions should be separate variants.",
+    "studies": [
+      {
+        "id": "youdas-2010",
+        "type": "Pull-up, chin-up, and rotating-handle EMG",
+        "shortCitation": "Youdas et al., JSCR, 2010",
+        "finding": "Conventional pull-ups and chin-ups showed substantial latissimus dorsi, biceps brachii, infraspinatus, lower trapezius, pectoralis major, erector spinae, and external oblique activation.",
+        "citation": "Youdas JW, Amundson CL, Cicero KS, Hahn JJ, Harezlak DT, Hollman JH. Surface electromyographic activation patterns and elbow joint motion during a pull-up, chin-up, or Perfect-Pullup rotational exercise. Journal of Strength and Conditioning Research. 2010;24(12):3404-3414. doi:10.1519/JSC.0b013e3181f1598c.",
+        "doi": "10.1519/JSC.0b013e3181f1598c",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21068680/",
+        "relevance": "Directly studied chin-up and pull-up EMG with the muscles needed for this visible role map.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "control score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "dickie-2017",
+        "type": "Pull-up grip-variation EMG",
+        "shortCitation": "Dickie et al., J Electromyogr Kinesiol, 2017",
+        "finding": "Pronated, supinated, neutral, and rope pull-ups produced broadly similar shoulder-arm-forearm activation across full repetitions, with grip-specific differences.",
+        "citation": "Dickie JA, Faulkner JA, Barnes MJ, Lark SD. Electromyographic analysis of muscle activation during pull-up variations. Journal of Electromyography and Kinesiology. 2017;32:30-36. doi:10.1016/j.jelekin.2016.11.004.",
+        "doi": "10.1016/j.jelekin.2016.11.004",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28011412/",
+        "relevance": "Directly includes the supinated pull-up condition and measures relevant back, arm, forearm, and shoulder muscles.",
+        "usedFor": [
+          "primary muscle role",
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "limitations"
+        ]
+      },
+      {
+        "id": "snarr-2017",
+        "type": "Traditional, suspension, and towel pull-up EMG",
+        "shortCitation": "Snarr et al., J Hum Kinet, 2017",
+        "finding": "Traditional pronated pull-ups produced meaningful latissimus dorsi, posterior deltoid, middle trapezius, and biceps brachii activity.",
+        "citation": "Snarr RL, Hallmark AV, Casey JC, Esco MR. Electromyographical Comparison of a Traditional, Suspension Device, and Towel Pull-Up. Journal of Human Kinetics. 2017;58:5-13. doi:10.1515/hukin-2017-0068.",
+        "doi": "10.1515/hukin-2017-0068",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5548150/",
+        "relevance": "Close fixed-bar pull-up evidence for posterior deltoid, middle trapezius, latissimus dorsi, and biceps involvement.",
+        "usedFor": [
+          "secondary muscle role",
+          "support muscle role",
+          "hypertrophy score",
+          "fatigue efficiency score"
+        ]
+      },
+      {
+        "id": "ronai-2014",
+        "type": "Pull-up technique article",
+        "shortCitation": "Ronai and Scibek, Strength Cond J, 2014",
+        "finding": "Described pull-up setup, phases, technique, progressions, and common variation boundaries.",
+        "citation": "Ronai P, Scibek E. The Pull-up. Strength & Conditioning Journal. 2014;36(3):88-90. doi:10.1519/SSC.0000000000000052.",
+        "doi": "10.1519/SSC.0000000000000052",
+        "url": "https://digitalcommons.sacredheart.edu/pthms_fac/129/",
+        "relevance": "Peer-reviewed technique context for fixed-bar pull-up and chin-up variant boundaries.",
+        "usedFor": [
+          "description",
+          "setup score",
+          "ease score",
+          "progression score",
+          "support score"
+        ]
+      },
+      {
+        "id": "urbanczyk-2020",
+        "type": "Pull-up shoulder muscle-force modeling",
+        "shortCitation": "Urbanczyk et al., Scand J Med Sci Sports, 2020",
+        "finding": "Kinematic, kinetic, and shoulder-modeling analysis found variant-specific muscle-force patterns and emphasized rotator cuff, scapular stabilizer, and shoulder-girdle loading during pull-ups.",
+        "citation": "Urbanczyk CA, Prinold JAI, Reilly P, Bull AMJ. Avoiding high-risk rotator cuff loading: Muscle force during three pull-up techniques. Scandinavian Journal of Medicine & Science in Sports. 2020;30(11):2205-2214. doi:10.1111/sms.13780.",
+        "doi": "10.1111/sms.13780",
+        "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/sms.13780",
+        "relevance": "Pull-up biomechanics and modeled muscle-force evidence for shoulder and rotator-cuff support roles.",
+        "usedFor": [
+          "support muscle role",
+          "joint resilience score",
+          "limitations"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "movementId": "standing_dumbbell_biceps_curl",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-30",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "oliveira-2009",
+    "marcolin-2018",
+    "coratella-2023",
+    "ikeda-2025",
+    "gazzoni-2014"
+  ],
+  "searchedQueries": [
+    "\"standing dumbbell curl\" biceps brachii electromyography",
+    "\"biceps curl\" dumbbell EMG brachioradialis",
+    "\"biceps curl\" supinated pronated neutral handgrip EMG",
+    "\"standing bicep curl\" muscle activation"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Checked required movement and research JSON fields, evidence source IDs, and anatomy validation expectations."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed Biceps brachii, Brachialis, Brachioradialis, and Wrist flexors have local mesh mappings."
+    },
+    {
+      "type": "movement-reference",
+      "path": "data/movements/bar_hammer_curl.json",
+      "notes": "Used existing curl-family role style, handgrip evidence boundaries, and support-muscle wording."
+    },
+    {
+      "type": "paper",
+      "id": "oliveira-2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24150552/",
+      "notes": "Direct comparison of standing dumbbell, incline dumbbell, and preacher curls for biceps brachii EMG."
+    },
+    {
+      "type": "paper",
+      "id": "marcolin-2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6047503/",
+      "notes": "Biceps brachii and brachioradialis EMG during dumbbell, straight bar, and EZ-bar curl variants."
+    },
+    {
+      "type": "paper",
+      "id": "coratella-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10054060/",
+      "notes": "Supinated, pronated, and neutral curl handgrip EMG in trained bodybuilders."
+    },
+    {
+      "type": "paper",
+      "id": "ikeda-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11740565/",
+      "notes": "Forearm rotation and wrist flexor/extensor EMG context for support roles."
+    },
+    {
+      "type": "paper",
+      "id": "gazzoni-2014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4188712/",
+      "notes": "Forearm EMG during wrist and finger tasks, used as broad grip-stability context."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer standing dumbbell curl tutorials",
+      "reason": "Not used because direct peer-reviewed dumbbell curl and handgrip EMG evidence was available."
+    },
+    {
+      "title": "Hammer curl and reverse curl pages",
+      "reason": "Excluded because neutral and pronated grip curl variants are separate movement entries."
+    }
+  ],
+  "notes": "Variant assumption is a standing supinated dumbbell biceps curl. Alternating and bilateral execution are grouped for the MVP because both preserve the same basic unsupported dumbbell elbow-flexion pattern; strict one-arm concentration curls, incline curls, preacher curls, hammer curls, reverse curls, cable curls, and machine curls remain separate variants."
+}

@@ -1,0 +1,82 @@
+{
+  "movementId": "chin_up",
+  "status": "reviewed",
+  "lastReviewed": "2026-07-30",
+  "researchedBy": "codex",
+  "evidenceStudyIds": [
+    "youdas-2010",
+    "dickie-2017",
+    "snarr-2017",
+    "ronai-2014",
+    "urbanczyk-2020"
+  ],
+  "searchedQueries": [
+    "\"chin-up\" electromyography latissimus dorsi biceps brachii",
+    "\"pull-up\" \"chin-up\" EMG PubMed",
+    "\"supinated pull-up\" electromyography brachioradialis",
+    "\"chin-up\" rotator cuff infraspinatus EMG"
+  ],
+  "reviewedFiles": [
+    {
+      "type": "local-doc",
+      "path": "docs/movement-data-workflow.md",
+      "notes": "Checked movement/research file contract and anatomy validation."
+    },
+    {
+      "type": "local-data",
+      "path": "data/anatomy.json",
+      "notes": "Confirmed all visible chin-up muscles have local mesh mappings."
+    },
+    {
+      "type": "movement-reference",
+      "path": "data/movements/pull_up.json",
+      "notes": "Used exact pull-up/chin-up evidence register and role boundaries to create the supinated variant."
+    },
+    {
+      "type": "research-reference",
+      "path": "data/research/pull_up.json",
+      "notes": "Reviewed prior source search notes, excluded sources, and exact PubMed/PMC links."
+    },
+    {
+      "type": "paper",
+      "id": "youdas-2010",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21068680/",
+      "notes": "Direct pull-up, chin-up, and Perfect-Pullup EMG study."
+    },
+    {
+      "type": "paper",
+      "id": "dickie-2017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28011412/",
+      "notes": "Direct pull-up grip-variation EMG, including supinated condition."
+    },
+    {
+      "type": "paper",
+      "id": "snarr-2017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5548150/",
+      "notes": "Traditional pull-up EMG for posterior deltoid, middle trapezius, lats, and biceps context."
+    },
+    {
+      "type": "paper",
+      "id": "ronai-2014",
+      "url": "https://digitalcommons.sacredheart.edu/pthms_fac/129/",
+      "notes": "Peer-reviewed technique and progression context for fixed-bar pull-up variants."
+    },
+    {
+      "type": "paper",
+      "id": "urbanczyk-2020",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/sms.13780",
+      "notes": "Pull-up shoulder biomechanics and modeled rotator-cuff/scapular loading."
+    }
+  ],
+  "excludedSources": [
+    {
+      "title": "Consumer chin-up versus pull-up comparison pages",
+      "reason": "Excluded because direct pull-up/chin-up EMG and biomechanics sources were available."
+    },
+    {
+      "title": "Assisted chin-up and weighted chin-up programming articles",
+      "reason": "Excluded because assistance and external load should be separate variants once needed."
+    }
+  ],
+  "notes": "Variant assumption is a strict bodyweight chin-up with a supinated fixed-bar grip. The entry intentionally separates chin-up from pronated pull-up because the hand position changes elbow-flexor emphasis and tolerance. Brachialis is not shown because the exact pull-up/chin-up sources do not isolate it cleanly enough for the visible map."
+}
