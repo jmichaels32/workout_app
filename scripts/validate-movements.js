@@ -131,8 +131,12 @@ function validateMovement(file, movement, seenIds) {
   if (!Array.isArray(movement?.tags) || !movement.tags.length) {
     errors.push(`${relative(file)}: tags must be a non-empty array`);
   } else {
+    const seenTags = new Set();
     movement.tags.forEach((tag, index) => {
       if (!tag.label || !tag.group) errors.push(`${relative(file)}: tags[${index}] requires label and group`);
+      const tagKey = `${normalizeName(tag.group)}:${normalizeName(tag.label)}`;
+      if (seenTags.has(tagKey)) errors.push(`${relative(file)}: duplicate tag "${tag.group}/${tag.label}"`);
+      seenTags.add(tagKey);
     });
   }
 
@@ -149,12 +153,16 @@ function validateMovement(file, movement, seenIds) {
   if (!movement?.evidence || !Array.isArray(studies) || !studies.length) {
     errors.push(`${relative(file)}: evidence.studies must be a non-empty array`);
   }
+  if (studyIds.size !== studies.length) {
+    errors.push(`${relative(file)}: evidence.studies contains duplicate IDs`);
+  }
   studies.forEach((study, index) => {
     ["id", "type", "shortCitation", "finding", "citation", "url", "relevance"].forEach(field => {
       if (!study[field]) errors.push(`${relative(file)}: evidence.studies[${index}].${field} is required`);
     });
   });
 
+  const seenMuscles = new Map();
   MUSCLE_GROUPS.forEach(group => {
     const muscles = movement?.muscles?.[group];
     if (!Array.isArray(muscles)) {
@@ -163,6 +171,11 @@ function validateMovement(file, movement, seenIds) {
     }
     muscles.forEach((muscle, index) => {
       if (!muscle.name) errors.push(`${relative(file)}: muscles.${group}[${index}].name is required`);
+      const muscleKey = normalizeName(muscle.name);
+      if (seenMuscles.has(muscleKey)) {
+        errors.push(`${relative(file)}: muscle "${muscle.name}" appears in both ${seenMuscles.get(muscleKey)} and ${group}`);
+      }
+      seenMuscles.set(muscleKey, group);
       if (muscle.name && !anatomyMuscleForName(muscle.name)) {
         errors.push(`${relative(file)}: muscles.${group}[${index}].name "${muscle.name}" has no local anatomy mesh mapping`);
       }
@@ -232,6 +245,17 @@ function main() {
     const movement = readJSON(fullPath);
     if (movement) validateMovement(fullPath, movement, seenIds);
   });
+
+  if (fs.existsSync(researchDir)) {
+    fs.readdirSync(researchDir)
+      .filter(file => file.endsWith(".json"))
+      .forEach(file => {
+        const movementId = path.basename(file, ".json");
+        if (!seenIds.has(movementId)) {
+          errors.push(`${relative(path.join(researchDir, file))}: has no matching movement file`);
+        }
+      });
+  }
 
   if (errors.length) {
     console.error(errors.join("\n"));

@@ -100,6 +100,7 @@ Do not hand-edit `data/movements.json`. It is a generated bundle for the browser
 ```bash
 node scripts/validate-movements.js
 node scripts/build-movements.js
+node scripts/build-movements.js --check
 ```
 
 Every movement entry should include:

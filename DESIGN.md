@@ -1,144 +1,89 @@
-# Design System — "Thermograph"
+# Design System
 
-This file is the single source of truth for how this app looks. **Read it before
-touching any UI code.** If a change can't be expressed with the tokens and rules
-below, the design system gets updated first — the change doesn't ship on a
-one-off color or font.
+This file describes the UI that is currently shipped. Update it before introducing a new visual rule.
 
-The reference mood: a thermal camera pointed at training. Warm carbon-black
-ground, film grain, glowing heat gradients that MEAN something, huge condensed
-headlines, tiny monospace labels. Editorial and experimental — printed race bib
-meets thermographic scan — never dashboard, never neon-gamer.
+## Product principle
 
----
+The interface exists to make workout planning and logging fast. Use spatial grouping, ordering, and interaction before adding explanatory text. Decorative styling must not compete with movement names, targets, set progress, or calendar state.
 
-## 1. The two rules
+## Visual language
 
-1. **Chrome is ink on carbon.** Text, borders, buttons, cards: warm off-white
-   ink on warm near-black. Hierarchy = type size/weight and ink *tint*.
-2. **Color is temperature, and temperature is meaning.** Every colored pixel
-   comes from the one heat ramp below and encodes intensity: cool indigo = low,
-   magenta = mid, ember/amber = high. If a color isn't saying "how hot," it
-   shouldn't be colored.
+- White page and panel surfaces with black text.
+- Square corners and thin borders; no decorative shadows.
+- One primary volt-green accent for current, selected, completed, and composite states.
+- Blue identifies additive actions and training scores.
+- Purple identifies setup metadata.
+- Red is reserved for destructive actions and errors.
+- User-selected workout colors identify templates and calendar entries. They are identity markers, not general UI accents.
 
-## 2. Color tokens
+All reusable colors live in `:root` in `styles.css`. Components use those variables instead of adding one-off values.
 
-Defined once in `:root` in `index.html`. Never hard-code hex values in
-components; always use the variable.
+### Core tokens
 
-### Chrome (the quiet 90%)
+| Token | Purpose |
+| --- | --- |
+| `--bg`, `--panel` | Page and primary surfaces |
+| `--panel-2` | Quiet secondary surface |
+| `--ink`, `--muted` | Primary and secondary text |
+| `--line`, `--soft-line` | Strong and quiet boundaries |
+| `--accent` | Selection, today, completion, composite score |
+| `--add` | Additive actions and training score |
+| `--score-metadata` | Setup metadata score |
+| `--danger` | Destructive actions and errors only |
 
-| Token         | Value                     | Use                                                  |
-| ------------- | ------------------------- | ---------------------------------------------------- |
-| `--bg`        | `#131118`                 | Page ground. Warm carbon black, slight plum cast.    |
-| `--panel`     | `#1c1923`                 | Cards / surfaces on the ground.                      |
-| `--panel-2`   | `#262230`                 | Inputs, nested surfaces.                             |
-| `--ink`       | `#f2ede4`                 | Text. Warm paper white (heritage of v1).             |
-| `--muted`     | `#a49b8e`                 | Secondary text, micro-labels.                        |
-| `--line`      | `rgba(242,237,228,0.5)`   | Strong 1px borders (heroes, tiles, dialogs).         |
-| `--soft-line` | `rgba(242,237,228,0.14)`  | Hairline 1px borders (cards, chips).                 |
-| `--ink-25`    | `rgba(242,237,228,0.25)`  | Empty stars, disabled marks.                         |
-| `--ink-12`    | `rgba(242,237,228,0.12)`  | Empty dots, faintest fills.                          |
-| `--button`    | `--ink`                   | Filled (primary) button background — the light block.|
-| `--button-ink`| `#16131b`                 | Text on filled buttons / light blocks.               |
-| `--danger`    | `#ff453a`                 | Errors / destructive only.                           |
+The 3D movement viewer is grayscale by default. Selecting a muscle uses `--accent`. Workout heatmaps use the workout's chosen color, with intensity encoding the accumulated primary/secondary/support score.
 
-### The heat ramp (the loud 10%)
+## Shape and controls
 
-| Token        | Value     | Temperature            |
-| ------------ | --------- | ---------------------- |
-| `--heat-0`   | `#3946d8` | Cold — indigo          |
-| `--heat-25`  | `#7d3bee` | Cool — violet          |
-| `--heat-50`  | `#e0369e` | Mid — magenta          |
-| `--heat-75`  | `#ff4d1f` | Hot — ember (= `--accent`) |
-| `--heat-100` | `#ffa62b` | Peak — amber           |
+- Corners remain square.
+- Boundaries are one pixel; spacing and borders create hierarchy.
+- Buttons share the page surface unless color communicates a state or action.
+- Use icons for compact, familiar actions such as add, remove, drag, and settings.
+- Keep destructive controls visually separate from ordinary navigation.
+- Native browser confirmation dialogs are not used; confirmations use the app modal.
 
-`--thermal-ramp` is the full linear gradient of all five stops. In JS,
-`heatColor(score)` interpolates the ramp for any 0–100 value — always use it,
-never pick a ramp color by hand for data.
+## Typography
 
-Readable-on-dark text variants (for small colored text only): primary
-`#ffa62b`, secondary `#f04fae`, support `#8a93ff`.
+- Use the system sans-serif stack already defined by `--font-body`.
+- Movement and workout names carry hierarchy through size and weight.
+- Labels are short and secondary; do not add headings that merely repeat layout structure.
+- Do not shrink essential mobile text to fit. Wrap names and preserve readable line height.
 
-### Where heat is ALLOWED
+## Layout and information flow
 
-- Score numbers (`heatColor(score)`) and the global score chip.
-- Muscle roles everywhere they appear: primary = amber/ember, secondary =
-  magenta, support = indigo. Including the 3D viewer (it IS a thermal scan).
-- Selected/active states: active filter chip = ember, selected muscle = ember.
-- Community stars (filled = amber).
-- The one art moment per screen (see §5) and the thermal-ramp spine strips.
+- Mobile is the primary viewport; verify at 390px before desktop.
+- The app is a centered single-column shell with additional columns only where comparison benefits from them.
+- Repeated movement cards use stable grids so scores and controls do not shift between entries.
+- Expanded views add detail without repeating the compressed card's title, tags, description, or summary scores.
+- Workout blocks are defined by their containers and order, not extra labels.
+- Live workouts show one block at a time on mobile and expose progress continuously.
 
-### Where heat is FORBIDDEN
+## Color semantics
 
-Body text, card borders, ordinary buttons, backgrounds of readable surfaces,
-"success" semantics, and any second decorative accent. No green anywhere.
+Color must answer one of these questions:
 
-## 3. Typography
+- What is selected or current?
+- Is this action additive or destructive?
+- Is this score training, setup, or composite?
+- Which workout does this calendar item represent?
+- How strongly is this muscle represented in the workout?
 
-Three voices, no more:
+If color answers none of them, use a neutral surface.
 
-| Voice       | Stack                                                          | Rules                                                              |
-| ----------- | -------------------------------------------------------------- | ------------------------------------------------------------------ |
-| **Display** | `"DIN Condensed", "Arial Narrow", "Aptos", system-ui`           | UPPERCASE, weight 900, line-height 0.9, huge (`clamp(42px…96px)`). Headlines, movement names, tile titles, big numbers. |
-| **Label**   | `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas`         | UPPERCASE, 9–11px, letter-spacing 0.06–0.14em, weight 700–900. Eyebrows, tags, buttons, counts, chips. |
-| **Body**    | `ui-sans-serif, system-ui, -apple-system, "Segoe UI"`           | Sentence case, 13–14px, line-height 1.45–1.55, ink at 75–100%.     |
+## Interaction rules
 
-## 4. Shape & texture
+- Preserve user context when closing a detail, compare, editor, or modal view.
+- Filters retain selection across category branches.
+- Changes made during a live workout persist immediately to local storage.
+- Drag and swipe interactions need visible handles or affordances and a non-gesture fallback when the action is essential.
+- Avoid extra confirmation steps for reversible actions. Confirm destructive template or workout deletion.
 
-- **Corners are square.** `border-radius: 0` everywhere (dots excepted).
-- **Borders are 1px**, `--line` for frames, `--soft-line` for the rest.
-  Borders do the separating, not shadows.
-- **Film grain everywhere:** a fixed full-viewport SVG-noise overlay
-  (`body::after`, soft-light, ~0.35 opacity). Never remove it; never exceed
-  0.5 opacity.
-- **No glows.** `box-shadow` bloom around chips/dots/markers reads as cheap
-  90s render. The only shadow in the app is the modal dialog's. Richness comes
-  from the raster art, grain, and type — not bloom.
-- **Blur is for depth:** `backdrop-filter` on the modal scrim only. Never blur
-  readable text.
-- **Dot grids stay the data motif:** ratings are 10-dot rows — filled dots are
-  ink, empty dots `--ink-12`. The heat lives in the score *number* only; a
-  rainbow of colored dots is too loud.
+## Shipping checklist
 
-## 5. Art moments — composed, not random, and NEVER faked in CSS
-
-**The house art is pre-rendered raster, not CSS.** Stacked radial-gradients +
-`filter: blur()` is the mesh-gradient starter pack and it shows. Organic art
-(thermal fields, waves, contours) is generated offline by
-`scripts/generate_art.py` (spectral noise → domain warp → thermal LUT →
-isotherm contours → film grain; fixed seeds, deterministic) and shipped as
-assets in `assets/art/`. CSS's only jobs on top of art are layout, a dark
-legibility scrim (`linear-gradient` over the image), and typography. If a new
-screen needs art, add a render function to the script — do not build it from
-CSS primitives.
-
-**Exactly one art moment per screen:**
-
-- **Home hero:** `assets/art/thermal-hero.webp`, `background-size: cover`,
-  `background-position: 100% 0%` (the hot core lives top-right; text sits on
-  the dark left), with a bottom-up scrim for the headline.
-- **Collection header:** the *spine* — a 5px `--thermal-ramp` strip across the
-  top edge. Quiet signature, not a second image.
-- **Detail page:** the 3D thermal body is the art; nothing else is colored
-  except the score chip, score numbers, and role labels.
-
-Lists, cards, and grids stay clean — art never sits behind text people scan.
-
-## 6. Layout
-
-- Max width 1080px, centered. Mobile-first: must work at 390px; desktop is the
-  mobile view with more air.
-- Spacing unit 4px; common gaps 8 / 10 / 12 / 14 / 18.
-- Touch targets ≥ 44px.
-
-## 7. Checklist before shipping any UI change
-
-1. Zero new hex values outside `:root`; data colors only via `heatColor()`.
-2. Every colored element answers "what temperature is this?" — if it can't,
-   it's ink.
-3. One art moment per screen, max. Grain intact. No CSS-built art — raster
-   assets from `scripts/generate_art.py` only.
-4. All-caps text is Display or Label voice; corners square; borders 1px.
-5. No glow shadows anywhere; blur only on the modal scrim.
-6. Looks right at 390px first, 1080px second.
+1. The main calendar, movement search/filter, template builder, and live logging flows work at 390px.
+2. Text and controls do not overflow their containers.
+3. Interactive state is visible without relying on hover.
+4. New colors use existing semantic tokens.
+5. Hidden or replaced 3D viewers stop rendering and release their WebGL resources.
+6. Movement changes pass validation and `data/movements.json` is current.
+7. The service-worker cache version is bumped when deployed app files change.

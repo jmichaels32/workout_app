@@ -1,6 +1,6 @@
-# Movement Library MVP
+# Workout MVP
 
-**UI work?** Read [DESIGN.md](DESIGN.md) first — all colors, type, and component rules live there.
+**UI work?** Read [DESIGN.md](DESIGN.md) first; it records the shipped interaction and visual rules.
 
 A local-first workout PWA focused on one question for this iteration:
 
@@ -55,9 +55,22 @@ After changing movement data, run:
 ```bash
 node scripts/validate-movements.js
 node scripts/build-movements.js
+node scripts/build-movements.js --check
 ```
 
 See [docs/movement-data-workflow.md](docs/movement-data-workflow.md) for the agent workflow.
+
+## App structure
+
+```text
+index.html              Static application shell
+styles.css              Visual system and responsive layout
+js/app.js               Application state, rendering, and workflow coordinator
+js/config.js            Shared product constants
+js/events.js            Delegated DOM action routing
+js/storage.js           Local-storage persistence boundary
+js/anatomy-viewer.js    Three.js anatomy rendering and lifecycle
+```
 
 ## Do not add yet
 

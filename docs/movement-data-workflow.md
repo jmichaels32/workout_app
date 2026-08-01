@@ -66,6 +66,7 @@ Run this before handing off movement data:
 node scripts/validate-movements.js
 node scripts/build-movements.js
 node scripts/validate-movements.js
+node scripts/build-movements.js --check
 ```
 
 The app reads the generated bundle:

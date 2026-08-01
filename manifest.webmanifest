@@ -1,7 +1,7 @@
 {
-  "name": "Movement Library MVP",
-  "short_name": "Movements",
-  "description": "A local-first movement library for evidence-backed exercise classification.",
+  "name": "Workout",
+  "short_name": "Workout",
+  "description": "A local-first workout planner and logger with an evidence-backed movement library.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

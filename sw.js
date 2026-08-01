@@ -1,5 +1,21 @@
-const CACHE_NAME = "movement-library-mvp-v113";
-const ASSETS = ["./", "index.html", "manifest.webmanifest", "icon.svg", "assets/icons/sort-gear.png", "data/movements.json"];
+const CACHE_NAME = "workout-mvp-v116";
+const ASSETS = [
+  "./",
+  "index.html",
+  "styles.css",
+  "manifest.webmanifest",
+  "icon.svg",
+  "assets/icons/sort-gear.png",
+  "data/movements.json",
+  "js/app.js",
+  "js/anatomy-viewer.js",
+  "js/config.js",
+  "js/events.js",
+  "js/storage.js",
+  "vendor/three/three.module.js",
+  "vendor/three/OrbitControls.js",
+  "vendor/three/OBJLoader.js"
+];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)));
