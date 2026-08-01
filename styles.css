@@ -362,15 +362,30 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 }
 
 .calendar-workout-indicator.status-completed {
+  width: 14px;
+  height: 14px;
+  flex-basis: 14px;
   border-color: var(--line);
   background: var(--workout-color);
   box-shadow: inset 0 0 0 2px var(--panel);
-  transform: rotate(45deg) scale(0.86);
+  transform: rotate(45deg) scale(0.92);
+}
+
+.calendar-workout-indicator.status-completed.kind-rest {
+  border: 2px solid var(--muted);
+  background: var(--panel);
+  box-shadow: none;
 }
 
 .calendar-day.completed:not(.today),
 .mobile-calendar-day.completed:not(.today) {
   background: color-mix(in srgb, var(--accent) 5%, var(--panel));
+}
+
+.calendar-day.rest-day:not(.today),
+.mobile-calendar-day.rest-day:not(.today) {
+  background: var(--panel-2);
+  box-shadow: inset 3px 0 0 var(--ink-25);
 }
 
 .calendar-day-workout-list {
@@ -423,7 +438,7 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 
 .calendar-day-add-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
   gap: 8px;
   margin-top: 10px;
 }
@@ -732,17 +747,18 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 
 .workout-color-picker {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 44px);
-  gap: 8px;
-  max-width: 100%;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  width: min(100%, 344px);
 }
 
 .workout-color-swatch {
   --workout-color: var(--accent);
-  width: 44px;
-  min-width: 44px;
-  height: 44px;
-  min-height: 44px;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1;
   padding: 0;
   border: 1px solid var(--soft-line);
   background: var(--workout-color);
@@ -754,10 +770,11 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 }
 
 .workout-custom-color {
-  width: 44px;
-  min-width: 44px;
-  height: 44px;
-  min-height: 44px;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1;
   padding: 0;
   border: 1px solid var(--line);
   background: var(--panel);
@@ -1565,12 +1582,11 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: 8px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   align-items: center;
-  padding: 8px 10px;
+  padding: 6px 4px;
   border: 0;
-  border-top: 1px solid var(--ink-12);
   background: var(--panel);
   touch-action: pan-y;
   transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
@@ -1604,31 +1620,6 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   transform: translateX(-64px);
 }
 
-.block-movement-drag-handle {
-  display: grid;
-  width: 44px;
-  min-width: 44px;
-  height: 44px;
-  min-height: 44px;
-  padding: 0;
-  place-items: center;
-  border-color: var(--soft-line);
-  background: var(--panel);
-  color: var(--muted);
-  cursor: grab;
-  touch-action: none;
-}
-
-.block-movement-drag-handle:active {
-  cursor: grabbing;
-}
-
-.block-movement-drag-handle svg {
-  width: 15px;
-  height: 15px;
-  fill: currentColor;
-}
-
 .block-movement-title-button {
   display: grid;
   min-width: 0;
@@ -1637,7 +1628,15 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   border: 0;
   background: transparent;
   color: var(--ink);
+  cursor: grab;
   text-align: left;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.block-movement-title-button:active {
+  cursor: grabbing;
 }
 
 .block-movement-title-button:hover,
@@ -1872,6 +1871,10 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 .collection-header {
   display: block;
   margin-bottom: 10px;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--soft-line);
+  background: transparent;
 }
 
 .collection-title h1 { margin-bottom: 4px; }
@@ -2133,7 +2136,6 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 }
 
 .movement-listing:hover {
-  border-color: var(--control-hover-line);
   background: var(--panel-hover);
 }
 
@@ -2143,7 +2145,10 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   gap: 12px;
   align-items: start;
   width: 100%;
-  padding: 12px;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--soft-line);
+  background: transparent;
   cursor: pointer;
   text-align: left;
 }
@@ -2251,7 +2256,8 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 .community-stars .filled { color: var(--ink); }
 
 .movement-summary-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-.movement-summary-meta span, .evidence-chip { border: 1px solid var(--soft-line); padding: 5px 6px; }
+.movement-summary-meta span { padding: 5px 0; }
+.evidence-chip { border: 1px solid var(--soft-line); padding: 5px 6px; }
 
 .movement-listing-actions {
   display: flex;
@@ -2756,7 +2762,6 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   .home-stat strong { font-size: 18px; }
   .home-panel { min-height: 128px; padding-right: 134px; }
   .home-library-link { width: 112px; min-height: 72px; }
-  .workout-color-picker { grid-template-columns: repeat(4, 44px); }
   .calendar-toolbar, .workout-library-header { align-items: stretch; flex-direction: column; }
   .workout-library-header h2 { text-align: left; }
   .calendar-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -2778,6 +2783,7 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   .calendar-day-number { font-size: 12px; }
   .calendar-day-actions { left: 4px; right: 4px; bottom: 4px; gap: 2px; }
   .calendar-workout-indicator { width: 10px; height: 10px; flex-basis: 10px; }
+  .calendar-workout-indicator.status-completed { width: 12px; height: 12px; flex-basis: 12px; }
   .workout-template-tile { padding: 10px; }
   .workout-template-plus { width: 36px; height: 36px; font-size: 24px; }
   .local-anatomy-viewer.workout-anatomy-viewer { min-height: 360px; }
@@ -2806,7 +2812,7 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
     min-width: 44px;
   }
   .block-movement-row {
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
     align-items: center;
   }
   .block-movement-title-button { width: auto; }

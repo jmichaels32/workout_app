@@ -87,6 +87,7 @@ const DELEGATED_HANDLERS = {
     closeCalendarDaySheet: () => closeCalendarDaySheet(),
     openSchedulePicker: (event, control) => openSchedulePicker(control.dataset.dateKey, event),
     openQuickActivity: (event, control) => openQuickActivity(control.dataset.dateKey, event),
+    createRestDay: (event, control) => createRestDay(control.dataset.dateKey, event),
     closeQuickActivity: () => closeQuickActivity(),
     openLiveWorkout: (event, control) => {
       event.stopPropagation();
@@ -374,6 +375,7 @@ function renderCalendarDay(date, options = {}) {
     !isMobile && !sameMonth(date, visibleCalendarMonth) ? "outside-month" : "",
     key === todayKey() ? "today" : "",
     dayWorkouts.length ? "has-workout" : "",
+    dayWorkouts.some(workout => workout.kind === "rest") ? "rest-day" : "",
     status
   ].filter(Boolean).join(" ");
 
@@ -418,7 +420,7 @@ function renderCalendarDay(date, options = {}) {
 function renderCalendarWorkoutIndicators(dayWorkouts) {
   return dayWorkouts.slice(0, MAX_WORKOUTS_PER_DAY).map(workout => `
     <span
-      class="calendar-workout-indicator status-${escapeHTML(workout.status)}"
+      class="calendar-workout-indicator status-${escapeHTML(workout.status)} kind-${escapeHTML(workout.kind || "workout")}"
       style="${workoutColorStyle(workout)}"
       aria-hidden="true"
     ></span>
@@ -428,7 +430,8 @@ function renderCalendarWorkoutIndicators(dayWorkouts) {
 function renderCalendarDaySheet() {
   if (!calendarDaySheetOpen) return "";
   const dayWorkouts = workoutsForDate(selectedCalendarDate);
-  const canAdd = dayWorkouts.length < MAX_WORKOUTS_PER_DAY;
+  const hasRestDay = dayWorkouts.some(workout => workout.kind === "rest");
+  const canAdd = dayWorkouts.length < MAX_WORKOUTS_PER_DAY && !hasRestDay;
   return `
     <div class="schedule-modal calendar-day-modal" data-action="closeCalendarDaySheet" role="presentation">
       <section class="schedule-dialog calendar-day-dialog" data-action="stopPropagation" role="dialog" aria-modal="true" aria-label="Entries on ${escapeHTML(DAY_FORMATTER.format(parseDateKey(selectedCalendarDate)))}">
@@ -440,7 +443,7 @@ function renderCalendarDaySheet() {
           ${dayWorkouts.map(workout => `
             <button
               type="button"
-              class="calendar-day-workout-option${workout.status === "completed" ? " completed" : ""}"
+              class="calendar-day-workout-option${workout.status === "completed" ? " completed" : ""}${workout.kind === "rest" ? " rest" : ""}"
               style="${workoutColorStyle(workout)}"
               data-action="openLiveWorkout"
               data-workout-id="${escapeHTML(workout.id)}"
@@ -448,13 +451,21 @@ function renderCalendarDaySheet() {
               <span class="calendar-day-workout-color" aria-hidden="true"></span>
               <span>
                 <strong>${escapeHTML(workoutTitle(workout))}</strong>
-                <small>${escapeHTML(workout.status === "completed" ? "Completed" : "Open workout")}</small>
+                <small>${escapeHTML(workout.kind === "rest" ? "Rest day" : workout.status === "completed" ? "Completed" : "Open workout")}</small>
               </span>
             </button>
           `).join("") || `<p class="empty-state">Nothing logged.</p>`}
         </div>
         ${canAdd ? `
           <div class="calendar-day-add-actions">
+            ${dayWorkouts.length ? "" : `
+              <button
+                type="button"
+                class="compare-button calendar-day-add-button"
+                data-action="createRestDay"
+                data-date-key="${escapeHTML(selectedCalendarDate)}"
+              >Rest Day</button>
+            `}
             <button
               type="button"
               class="compare-button calendar-day-add-button"
@@ -468,7 +479,7 @@ function renderCalendarDaySheet() {
               data-date-key="${escapeHTML(selectedCalendarDate)}"
             >Add Workout</button>
           </div>
-        ` : `<p class="movement-count">Maximum of ${MAX_WORKOUTS_PER_DAY} entries.</p>`}
+        ` : hasRestDay ? "" : `<p class="movement-count">Maximum of ${MAX_WORKOUTS_PER_DAY} entries.</p>`}
       </section>
     </div>
   `;
@@ -513,7 +524,7 @@ function renderScheduleModal() {
             <button type="button" class="back-button" data-action="closeSchedulePicker">Close</button>
           </div>
           <p class="empty-state">No workout templates yet. Create one below.</p>
-          <button type="button" class="detail-evidence-button" data-action="createWorkoutTemplate">Add Workout</button>
+          <button type="button" class="detail-evidence-button" data-action="createWorkoutTemplate">Add Template</button>
         </section>
       </div>
     `;
@@ -540,9 +551,9 @@ function renderScheduleModal() {
 function renderWorkoutTemplateList() {
   return `
     <div class="template-grid">
-      <button type="button" class="workout-template-tile add" data-action="createWorkoutTemplate" aria-label="Add workout">
+      <button type="button" class="workout-template-tile add" data-action="createWorkoutTemplate" aria-label="Add template">
         <span class="workout-template-plus" aria-hidden="true">+</span>
-        <strong>Add Workout</strong>
+        <strong>Add Template</strong>
       </button>
       ${workoutTemplates.map(template => renderWorkoutTemplateTile(template, { mode: "library", dateKey: selectedCalendarDate })).join("")}
     </div>
@@ -843,13 +854,13 @@ function renderLiveWorkoutPage() {
 }
 
 function renderCompletedWorkoutPage(workout) {
-  const isActivity = workout.kind === "activity";
+  const isQuickEntry = workout.kind !== "workout";
   const blocks = workoutBlocks(workout).filter(block => blockMovements(block).length);
   movementLivePage.innerHTML = `
     <div class="completed-workout" style="${workoutColorStyle(workout)}">
       <div class="screen-topbar">
         <button type="button" class="back-button" data-action="openMovementHome">Back</button>
-        ${isActivity ? `
+        ${isQuickEntry ? `
           <button type="button" class="delete-button" data-action="deleteWorkout" data-workout-id="${escapeHTML(workout.id)}">Delete</button>
         ` : `
           <button type="button" class="compare-button" data-action="toggleLiveWorkoutComplete" data-workout-id="${escapeHTML(workout.id)}">Reopen</button>
@@ -1846,15 +1857,9 @@ function renderBlockMovementRow(workout, block, entry, movementIndex) {
       >
         <button
           type="button"
-          class="block-movement-drag-handle"
-          data-pointerdown-action="startBuilderPointerDrag"
-          aria-label="Drag ${escapeHTML(movement.name)}"
-          title="Drag movement"
-        >${renderUiIcon("grip")}</button>
-        <button
-          type="button"
           class="block-movement-title-button"
           data-action="viewWorkoutMovement"
+          data-pointerdown-action="startBuilderPointerDrag"
           data-workout-id="${escapeHTML(workout.id)}"
           data-block-id="${escapeHTML(block.id)}"
           data-movement-id="${escapeHTML(movement.id)}"
@@ -1885,16 +1890,6 @@ function renderUiIcon(name) {
         <path d="M14 11v5"></path>
       </svg>
     `,
-    grip: `
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <circle cx="9" cy="6" r="1.5"></circle>
-        <circle cx="15" cy="6" r="1.5"></circle>
-        <circle cx="9" cy="12" r="1.5"></circle>
-        <circle cx="15" cy="12" r="1.5"></circle>
-        <circle cx="9" cy="18" r="1.5"></circle>
-        <circle cx="15" cy="18" r="1.5"></circle>
-      </svg>
-    `
   };
   return icons[name] || "";
 }
@@ -1994,9 +1989,9 @@ function clearBuilderDropMarkers() {
 }
 
 function startBuilderPointerDrag(event, control = event.currentTarget) {
+  if (event.pointerType === "mouse") return;
   const row = control.closest(".block-movement-row");
   if (!row) return;
-  event.preventDefault();
   activeBuilderMovementDrag = builderDragPayloadFromRow(row);
   builderPointerDrag = {
     startX: event.clientX,
@@ -2004,14 +1999,25 @@ function startBuilderPointerDrag(event, control = event.currentTarget) {
     target: null,
     dragging: false
   };
+  startBuilderRemoveSwipe(event, row);
   event.stopPropagation();
 }
 
 function handleBuilderPointerMove(event) {
   if (!builderPointerDrag || !activeBuilderMovementDrag) return;
-  const moved = Math.hypot(event.clientX - builderPointerDrag.startX, event.clientY - builderPointerDrag.startY);
+  const dx = event.clientX - builderPointerDrag.startX;
+  const dy = event.clientY - builderPointerDrag.startY;
+  const moved = Math.hypot(dx, dy);
+  if (builderRemoveSwipe?.active) {
+    builderPointerDrag = null;
+    activeBuilderMovementDrag = null;
+    return;
+  }
   if (!builderPointerDrag.dragging && moved < 8) return;
+  if (!builderPointerDrag.dragging && Math.abs(dx) >= Math.abs(dy)) return;
+  if (!builderPointerDrag.dragging) cancelBuilderRemoveSwipe(event);
   builderPointerDrag.dragging = true;
+  event.preventDefault();
   activeBuilderMovementDrag.sourceRow?.classList.add("is-dragging");
   clearBuilderDropMarkers();
   const element = document.elementFromPoint(event.clientX, event.clientY);
@@ -2040,6 +2046,7 @@ function finishBuilderPointerDrag() {
   const target = builderPointerDrag.target;
   const payload = activeBuilderMovementDrag;
   const didDrag = builderPointerDrag.dragging;
+  if (didDrag) suppressBuilderRowClickUntil = Date.now() + 500;
   if (didDrag && target?.blockId) {
     moveBuilderMovement(
       payload.workoutId,
@@ -2060,7 +2067,7 @@ let builderRemoveSwipe = null;
 let suppressBuilderRowClickUntil = 0;
 
 function startBuilderRemoveSwipe(event, control = event.currentTarget) {
-  if (event.pointerType === "mouse" || event.target.closest(".block-movement-drag-handle")) return;
+  if (event.pointerType === "mouse") return;
   const row = control;
   closeRevealedBuilderRows(row);
   if (row.classList.contains("is-remove-revealed")) {
@@ -2238,7 +2245,8 @@ function createQuickActivity(event, form) {
     form.elements.title?.focus();
     return;
   }
-  if (workoutsForDate(selectedCalendarDate).length >= MAX_WORKOUTS_PER_DAY) {
+  const dayWorkouts = workoutsForDate(selectedCalendarDate);
+  if (dayWorkouts.length >= MAX_WORKOUTS_PER_DAY || dayWorkouts.some(workout => workout.kind === "rest")) {
     quickActivityOpen = false;
     calendarDaySheetOpen = true;
     renderMovementApp({ skipHistory: true });
@@ -2269,6 +2277,38 @@ function createQuickActivity(event, form) {
   renderMovementApp({ skipHistory: true });
 }
 
+function createRestDay(dateKey, event) {
+  event?.preventDefault();
+  event?.stopPropagation();
+  const normalizedDate = formatDateKey(parseDateKey(dateKey));
+  if (workoutsForDate(normalizedDate).length) return;
+  const now = new Date().toISOString();
+  workouts = [
+    ...workouts,
+    {
+      id: `rest_${normalizedDate}_${Date.now().toString(36)}`,
+      kind: "rest",
+      templateId: null,
+      date: normalizedDate,
+      status: "completed",
+      title: "Rest Day",
+      color: "#9aa3ad",
+      createdAt: now,
+      updatedAt: now,
+      completedAt: now,
+      blocks: []
+    }
+  ];
+  selectedCalendarDate = normalizedDate;
+  visibleCalendarMonth = monthStart(parseDateKey(normalizedDate));
+  calendarDaySheetOpen = true;
+  schedulePickerOpen = false;
+  quickActivityOpen = false;
+  saveStoredWorkouts();
+  publishAppData();
+  renderMovementApp({ skipHistory: true });
+}
+
 function createWorkoutTemplate() {
   const now = new Date().toISOString();
   const id = `template_${Date.now().toString(36)}`;
@@ -2293,7 +2333,7 @@ function scheduleWorkoutFromTemplate(templateId, dateKey) {
   if (!template) return;
   const normalizedDate = formatDateKey(parseDateKey(dateKey));
   const scheduledForDay = workoutsForDate(normalizedDate);
-  if (scheduledForDay.length >= MAX_WORKOUTS_PER_DAY) {
+  if (scheduledForDay.length >= MAX_WORKOUTS_PER_DAY || scheduledForDay.some(workout => workout.kind === "rest")) {
     selectedCalendarDate = normalizedDate;
     schedulePickerOpen = false;
     quickActivityOpen = false;
@@ -3104,9 +3144,9 @@ function deleteWorkout(workoutId) {
 
   const workout = workouts.find(item => item.id === workoutId);
   if (!workout) return;
-  const isActivity = workout.kind === "activity";
+  const entryLabel = workout.kind === "rest" ? "rest day" : workout.kind === "activity" ? "activity" : "workout";
   openConfirmDialog({
-    title: isActivity ? "Delete activity?" : "Delete workout?",
+    title: `Delete ${entryLabel}?`,
     message: `"${workoutTitle(workout)}" on ${shortDateLabel(workout.date)} will be removed from the calendar.`,
     confirmLabel: "Yes, delete",
     onConfirm: () => {
@@ -3223,9 +3263,9 @@ function saveStoredWorkoutTemplates() {
 
 function normalizeWorkoutRecord(workout) {
   if (!workout || typeof workout !== "object") return workout;
-  const kind = workout.kind === "activity" ? "activity" : "workout";
+  const kind = ["activity", "rest"].includes(workout.kind) ? workout.kind : "workout";
   const legacyMovements = normalizeMovementEntries(workout.movements || []);
-  const blocks = kind === "activity"
+  const blocks = kind !== "workout"
     ? []
     : Array.isArray(workout.blocks) && workout.blocks.length
       ? workout.blocks.map(normalizeWorkoutBlock)
