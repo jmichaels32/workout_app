@@ -13,6 +13,12 @@
   "variantType": "pronated_bodyweight_bar",
   "variant": "Pronated bodyweight pull-up from a fixed overhead bar, performed without assistance, kipping, or added external load.",
   "description": "Hang from a fixed overhead bar with a pronated grip and arms long, then set the shoulders down without swinging. Pull the chest toward the bar by driving the elbows down and back until the chin clears the bar, then lower under control to the starting hang while keeping the torso organized.",
+  "tracking": {
+    "metric": "reps",
+    "targetMin": 3,
+    "targetMax": 8,
+    "targetStep": 1
+  },
   "communityRating": {
     "averageStars": null,
     "reviewCount": 0,

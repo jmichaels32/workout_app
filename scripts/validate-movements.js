@@ -140,6 +140,21 @@ function validateMovement(file, movement, seenIds) {
     });
   }
 
+  if (movement?.tracking !== undefined) {
+    const tracking = movement.tracking;
+    if (!["reps", "seconds"].includes(tracking?.metric)) {
+      errors.push(`${relative(file)}: tracking.metric must be "reps" or "seconds"`);
+    }
+    ["targetMin", "targetMax", "targetStep"].forEach(field => {
+      if (!Number.isFinite(tracking?.[field]) || tracking[field] <= 0) {
+        errors.push(`${relative(file)}: tracking.${field} must be a positive number`);
+      }
+    });
+    if (Number.isFinite(tracking?.targetMin) && Number.isFinite(tracking?.targetMax) && tracking.targetMin > tracking.targetMax) {
+      errors.push(`${relative(file)}: tracking.targetMin cannot exceed tracking.targetMax`);
+    }
+  }
+
   REQUIRED_RATINGS.forEach(key => {
     if (!movement?.ratings || movement.ratings[key] === undefined) {
       errors.push(`${relative(file)}: missing ratings.${key}`);

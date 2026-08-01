@@ -95,9 +95,11 @@ export const WORKOUT_COLOR_OPTIONS = [
   { label: "Slate", value: "#9aa3ad" }
 ];
 export const DEFAULT_PROGRESSIONS = {
-  compound: { label: "Compound", sets: 3, repMin: 8, repMax: 12, loadStep: 5, rirTarget: 2 },
-  isolation: { label: "Isolation", sets: 3, repMin: 10, repMax: 15, loadStep: 5, rirTarget: 2 },
-  bodyweight: { label: "Bodyweight", sets: 3, repMin: 8, repMax: 20, loadStep: 0, rirTarget: 2 }
+  compound: { label: "Compound", metric: "reps", sets: 3, repMin: 8, repMax: 12, repStep: 1, loadStep: 5, rirTarget: 2 },
+  isolation: { label: "Isolation", metric: "reps", sets: 3, repMin: 10, repMax: 15, repStep: 1, loadStep: 5, rirTarget: 2 },
+  bodyweight: { label: "Bodyweight", metric: "reps", sets: 3, repMin: 8, repMax: 20, repStep: 1, loadStep: 0, rirTarget: 2 },
+  relativeStrength: { label: "Relative strength", metric: "reps", sets: 3, repMin: 3, repMax: 8, repStep: 1, loadStep: 0, rirTarget: 2 },
+  timed: { label: "Timed hold", metric: "seconds", sets: 3, durationMin: 30, durationMax: 60, durationStep: 5, loadStep: 0, rirTarget: 2 }
 };
 export const REP_GROUP_SIZE = 5;
 export const REP_GROUP_THRESHOLD = 12;

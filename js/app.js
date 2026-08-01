@@ -112,8 +112,8 @@ const DELEGATED_HANDLERS = {
     removeLiveSet: (event, control) => removeLiveSet(event, control),
     openSetLoadEditor: (event, control) => openSetLoadEditor(event, control),
     toggleExtraRepButton: (event, control) => toggleExtraRepButton(event, control),
-    addExtraRepSlot: (event, control) => addExtraRepSlot(event, control),
-    removeExtraRepSlot: (event, control) => removeExtraRepSlot(event, control),
+    increaseTargetReps: (event, control) => adjustTargetReps(event, control, 1),
+    decreaseTargetReps: (event, control) => adjustTargetReps(event, control, -1),
     toggleWorkoutBlockFlow: (event, control) => toggleWorkoutBlockFlow(control.dataset.workoutId, control.dataset.blockId),
     openWorkoutMovementPicker: (event, control) => openWorkoutMovementPicker(control.dataset.workoutId, control.dataset.blockId),
     removeWorkoutBlock: (event, control) => removeWorkoutBlock(control.dataset.workoutId, control.dataset.blockId),
@@ -150,6 +150,7 @@ const DELEGATED_HANDLERS = {
   input: {
     updateWorkoutColor: (event, control) => updateWorkoutColor(control.dataset.workoutId, control.value),
     updateWorkoutTitle: (event, control) => updateWorkoutTitle(control.dataset.workoutId, control.value),
+    updateTimedSetDuration: (event, control) => updateTimedSetDuration(event, control),
     handleCollectionSearchInput: event => handleCollectionSearchInput(event)
   },
   submit: {
@@ -316,10 +317,9 @@ function renderMovementHome() {
       </section>
       ${renderCalendarDaySheet()}
       ${renderScheduleModal()}
-      <section id="workoutLibraryPanel" class="workout-library-panel" aria-label="Workout library">
+      <section id="workoutLibraryPanel" class="workout-library-panel" aria-label="Workout templates">
         <div class="workout-library-header">
-          <p class="eyebrow">Workout Library</p>
-          <h2>Saved Workouts</h2>
+          <h2>Workout Templates</h2>
         </div>
         ${renderWorkoutTemplateList()}
       </section>
@@ -421,7 +421,7 @@ function renderCalendarDay(date, options = {}) {
 function renderCalendarWorkoutIndicators(dayWorkouts) {
   return dayWorkouts.slice(0, MAX_WORKOUTS_PER_DAY).map(workout => `
     <span
-      class="calendar-workout-indicator"
+      class="calendar-workout-indicator status-${escapeHTML(workout.status)}"
       style="${workoutColorStyle(workout)}"
       aria-hidden="true"
     ></span>
@@ -446,7 +446,7 @@ function renderCalendarDaySheet() {
           ${dayWorkouts.map(workout => `
             <button
               type="button"
-              class="calendar-day-workout-option"
+              class="calendar-day-workout-option${workout.status === "completed" ? " completed" : ""}"
               style="${workoutColorStyle(workout)}"
               data-action="openLiveWorkout"
               data-workout-id="${escapeHTML(workout.id)}"
@@ -485,7 +485,7 @@ function renderScheduleModal() {
             </div>
             <button type="button" class="back-button" data-action="closeSchedulePicker">Close</button>
           </div>
-          <p class="empty-state">No saved workouts yet. Make one in the Workout Library below.</p>
+          <p class="empty-state">No workout templates yet. Create one below.</p>
           <button type="button" class="detail-evidence-button" data-action="createWorkoutTemplate">Add Workout</button>
         </section>
       </div>
@@ -544,7 +544,6 @@ function renderWorkoutTemplateTile(template, { mode, dateKey }) {
       </span>
       <div>
         <h3>${escapeHTML(workoutTitle(template))}</h3>
-        <p class="listing-summary">${escapeHTML(workoutSummary(template, movements))}</p>
       </div>
     </button>
   `;
@@ -555,12 +554,6 @@ function workoutTitle(workout) {
   if (workout.name) return workout.name;
   if (workout.status === "completed") return "Completed Workout";
   return workout.status ? "Workout Draft" : "Untitled Workout";
-}
-
-function workoutSummary(workout, movements) {
-  if (movements.length) return `${movements.length} movement${movements.length === 1 ? "" : "s"} selected.`;
-  if (workout.status === "completed") return "Completed workout saved without movement details.";
-  return "No movements selected.";
 }
 
 function renderWorkoutTrainingOverview(workout) {
@@ -781,10 +774,15 @@ function renderLiveWorkoutPage() {
     return;
   }
 
+  if (workout.status === "completed") {
+    renderCompletedWorkoutPage(workout);
+    return;
+  }
+
   const blocks = workoutBlocks(workout);
   const blockState = liveBlockState(workout, blocks);
   const progress = liveWorkoutProgress(workout);
-  const completeLabel = workout.status === "completed" ? "Reopen" : "Finish";
+  const completeLabel = "Finish";
   movementLivePage.innerHTML = `
     <div class="live-workout" style="${workoutColorStyle(workout)}">
       <div class="screen-topbar">
@@ -813,10 +811,74 @@ function renderLiveWorkoutPage() {
       >
         ${blockState.block ? renderLiveWorkoutBlock(workout, blockState.block, blockState.index, blockState.count) : `<p class="empty-state">No blocks in this workout yet.</p>`}
       </section>
-      <section class="live-workout-footer" aria-label="Workout save status">
-        <span class="movement-count">Saved on this device as you log.</span>
-        <button type="button" data-action="toggleLiveWorkoutComplete" data-workout-id="${escapeHTML(workout.id)}">${completeLabel}</button>
+    </div>
+  `;
+}
+
+function renderCompletedWorkoutPage(workout) {
+  const blocks = workoutBlocks(workout);
+  movementLivePage.innerHTML = `
+    <div class="completed-workout" style="${workoutColorStyle(workout)}">
+      <div class="screen-topbar">
+        <button type="button" class="back-button" data-action="openMovementHome">Back</button>
+        <button type="button" class="compare-button" data-action="toggleLiveWorkoutComplete" data-workout-id="${escapeHTML(workout.id)}">Reopen</button>
+      </div>
+      <header class="completed-workout-header">
+        <div>
+          <p class="eyebrow">Completed</p>
+          <h1>${escapeHTML(workoutTitle(workout))}</h1>
+        </div>
+        <span class="completed-workout-mark" aria-hidden="true"></span>
+        <p class="movement-count">${escapeHTML(shortDateLabel(workout.date))}</p>
+      </header>
+      <section class="completed-workout-blocks" aria-label="Completed workout record">
+        ${blocks.map((block, index) => renderCompletedWorkoutBlock(workout, block, index)).join("") || `<p class="empty-state">No movements were recorded.</p>`}
       </section>
+    </div>
+  `;
+}
+
+function renderCompletedWorkoutBlock(workout, block, blockIndex) {
+  const movements = blockMovements(block);
+  return `
+    <section class="completed-workout-block">
+      <p class="eyebrow">Block ${blockIndex + 1}</p>
+      ${movements.map(entry => renderCompletedWorkoutMovement(workout, entry)).join("") || `<p class="movement-count">No movements.</p>`}
+    </section>
+  `;
+}
+
+function renderCompletedWorkoutMovement(workout, entry) {
+  const movement = entry.movement;
+  const plan = movementProgressionPlan(movement, entry, workout);
+  const sets = plan.setTargets.map((target, setIndex) => displayLiveSet(entry, target, setIndex));
+  return `
+    <div class="completed-workout-movement">
+      <button type="button" class="live-movement-title-button" data-action="openMovementQuickView" data-movement-id="${escapeHTML(movement.id)}">${escapeHTML(movement.name)}</button>
+      <div class="completed-set-list">
+        ${sets.map((set, setIndex) => renderCompletedSet(set, plan.schema, setIndex)).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderCompletedSet(set, schema, setIndex) {
+  if (set.metric === "seconds") {
+    const actual = set.completedDurationSeconds || 0;
+    return `
+      <div class="completed-set-row${set.done ? " done" : ""}">
+        <span>Set ${setIndex + 1}</span>
+        <strong>${actual} sec</strong>
+        <small>Target ${set.targetDurationSeconds} sec</small>
+      </div>
+    `;
+  }
+  const load = formatLoadDisplay(set.load, schema);
+  return `
+    <div class="completed-set-row${set.done ? " done" : ""}">
+      <span>Set ${setIndex + 1}</span>
+      <strong>${escapeHTML(load)} × ${set.completedReps}</strong>
+      <small>Target ${set.targetReps}</small>
     </div>
   `;
 }
@@ -829,7 +891,7 @@ function renderLiveWorkoutProgress(progress) {
         <strong data-live-progress-percent>${progress.percent}%</strong>
       </div>
       <span class="live-progress-track" aria-hidden="true"><span class="live-progress-fill"></span></span>
-      <span class="movement-count" data-live-progress-count>${progress.completed}/${progress.total} reps complete</span>
+      <span class="movement-count" data-live-progress-count>${progress.completed}/${progress.total} sets complete</span>
     </div>
   `;
 }
@@ -947,17 +1009,18 @@ function liveWorkoutProgress(workout) {
     const plan = movementProgressionPlan(entry.movement, entry, workout);
     plan.setTargets.forEach((target, setIndex) => {
       const set = displayLiveSet(entry, target, setIndex);
-      const targetReps = Math.max(1, nullableInteger(set.targetReps) || 1);
-      const completedReps = Math.max(0, nullableInteger(set.completedReps) || 0);
-      summary.total += targetReps;
-      summary.completed += set.done ? targetReps : Math.min(completedReps, targetReps);
+      const targetValue = set.metric === "seconds" ? set.targetDurationSeconds : set.targetReps;
+      const completedValue = set.metric === "seconds" ? set.completedDurationSeconds : set.completedReps;
+      summary.total += 1;
+      summary.completed += set.done ? 1 : 0;
+      summary.progress += Math.min(1, Math.max(0, completedValue) / Math.max(1, targetValue));
     });
     return summary;
-  }, { total: 0, completed: 0 });
+  }, { total: 0, completed: 0, progress: 0 });
   return {
     total: totals.total,
     completed: totals.completed,
-    percent: totals.total ? Math.round((totals.completed / totals.total) * 100) : 0
+    percent: totals.total ? Math.round((totals.progress / totals.total) * 100) : 0
   };
 }
 
@@ -1086,10 +1149,13 @@ function resetLiveSetSwipe() {
 }
 
 function renderLiveSetTile(workout, block, entry, plan, set, setIndex) {
+  if (set.metric === "seconds") {
+    return renderTimedLiveSetTile(workout, block, entry, plan, set, setIndex);
+  }
   const done = set.completedReps >= set.targetReps ? " is-done" : "";
   const loadDisplay = formatLoadDisplay(set.load, plan.schema);
   const loadEmpty = loadDisplay === "--" ? " empty" : "";
-  const extraSlots = Math.max(0, set.extraSlots, set.completedReps - set.targetReps);
+  const totalSlots = Math.max(set.targetReps, set.completedReps);
   return `
     <article
       class="live-set-tile${done}"
@@ -1099,7 +1165,7 @@ function renderLiveSetTile(workout, block, entry, plan, set, setIndex) {
       data-set-index="${setIndex}"
       data-target-reps="${set.targetReps}"
       data-completed-reps="${set.completedReps}"
-      data-extra-slots="${extraSlots}"
+      data-extra-slots="0"
       aria-label="${escapeHTML(entry.movement.name)} set ${setIndex + 1}. Swipe left to remove this set."
       data-pointerdown-action="startLiveSetSwipe"
       data-pointermove-action="moveLiveSetSwipe"
@@ -1124,7 +1190,7 @@ function renderLiveSetTile(workout, block, entry, plan, set, setIndex) {
         tabindex="0"
         aria-label="${escapeHTML(entry.movement.name)} set ${setIndex + 1} completed reps"
         aria-valuemin="0"
-        aria-valuemax="${set.targetReps + extraSlots}"
+        aria-valuemax="${totalSlots}"
         aria-valuenow="${set.completedReps}"
         data-pointerdown-action="startRepStripDrag"
         data-keydown-action="handleRepStripKeydown"
@@ -1139,14 +1205,67 @@ function renderLiveSetTile(workout, block, entry, plan, set, setIndex) {
           data-target-reps="${set.targetReps}"
           data-action="toggleExtraRepButton"
           aria-label="Edit rep slots for ${escapeHTML(entry.movement.name)} set ${setIndex + 1}"
-        >${set.targetReps + extraSlots}</button>
+        >${set.targetReps}</button>
       </div>
     </article>
   `;
 }
 
+function renderTimedLiveSetTile(workout, block, entry, plan, set, setIndex) {
+  const done = set.completedDurationSeconds >= set.targetDurationSeconds ? " is-done" : "";
+  return `
+    <article
+      class="live-set-tile timed-set-tile${done}"
+      data-workout-id="${escapeHTML(workout.id)}"
+      data-block-id="${escapeHTML(block.id)}"
+      data-movement-id="${escapeHTML(entry.movementId)}"
+      data-set-index="${setIndex}"
+      data-target-duration="${set.targetDurationSeconds}"
+      data-completed-duration="${set.completedDurationSeconds}"
+      aria-label="${escapeHTML(entry.movement.name)} set ${setIndex + 1}. Target ${set.targetDurationSeconds} seconds. Swipe left to remove this set."
+      data-pointerdown-action="startLiveSetSwipe"
+      data-pointermove-action="moveLiveSetSwipe"
+      data-pointerup-action="finishLiveSetSwipe"
+      data-pointercancel-action="cancelLiveSetSwipe"
+    >
+      <span class="timed-set-target">
+        <small>Target</small>
+        <strong>${set.targetDurationSeconds} sec</strong>
+      </span>
+      <label class="timed-duration-field">
+        <input
+          type="number"
+          inputmode="numeric"
+          min="0"
+          step="1"
+          value="${escapeHTML(set.completedDurationSeconds || "")}"
+          placeholder="${set.targetDurationSeconds}"
+          data-input-action="updateTimedSetDuration"
+          data-workout-id="${escapeHTML(workout.id)}"
+          data-block-id="${escapeHTML(block.id)}"
+          data-movement-id="${escapeHTML(entry.movementId)}"
+          data-set-index="${setIndex}"
+          data-target-duration="${set.targetDurationSeconds}"
+          aria-label="Seconds completed for ${escapeHTML(entry.movement.name)} set ${setIndex + 1}"
+        >
+        <span>sec</span>
+      </label>
+      <button
+        type="button"
+        class="timed-set-remove-button"
+        data-action="removeLiveSet"
+        data-workout-id="${escapeHTML(workout.id)}"
+        data-block-id="${escapeHTML(block.id)}"
+        data-movement-id="${escapeHTML(entry.movementId)}"
+        data-set-index="${setIndex}"
+        ${plan.setTargets.length <= 1 ? "disabled" : ""}
+        aria-label="Remove set ${setIndex + 1}"
+      >${renderUiIcon("trash")}</button>
+    </article>
+  `;
+}
+
 function renderRepBoxes(workout, block, entry, set, setIndex) {
-  const extraSlots = Math.max(0, set.extraSlots, set.completedReps - set.targetReps);
   return renderRepBoxUnits({
     workoutId: workout.id,
     blockId: block.id,
@@ -1154,7 +1273,7 @@ function renderRepBoxes(workout, block, entry, set, setIndex) {
     setIndex,
     targetReps: set.targetReps,
     completedReps: set.completedReps,
-    totalSlots: set.targetReps + extraSlots
+    totalSlots: Math.max(set.targetReps, set.completedReps)
   });
 }
 
@@ -1232,9 +1351,9 @@ function renderExtraRepControls(workout, block, entry, set, setIndex, setCount) 
       data-set-index="${setIndex}"
       data-target-reps="${set.targetReps}"
       data-current-reps="${set.completedReps}"
-      data-action="addExtraRepSlot"
+      data-action="increaseTargetReps"
       hidden
-      aria-label="Add one extra rep slot beyond ${set.targetReps}"
+      aria-label="Increase target above ${set.targetReps} reps"
     >+</button>
     <button
       type="button"
@@ -1245,9 +1364,9 @@ function renderExtraRepControls(workout, block, entry, set, setIndex, setCount) 
       data-set-index="${setIndex}"
       data-target-reps="${set.targetReps}"
       data-current-reps="${set.completedReps}"
-      data-action="removeExtraRepSlot"
+      data-action="decreaseTargetReps"
       hidden
-      aria-label="Remove one unused extra rep slot"
+      aria-label="Decrease target below ${set.targetReps} reps"
     >-</button>
     <button
       type="button"
@@ -1266,15 +1385,36 @@ function renderExtraRepControls(workout, block, entry, set, setIndex, setCount) 
 
 function displayLiveSet(entry, target, setIndex) {
   const existing = normalizePerformedSet(entry.performedSets?.[setIndex]);
-  const targetReps = Math.max(1, nullableInteger(target.reps) || 1);
+  if (target.metric === "seconds" || Number.isFinite(target.durationSeconds)) {
+    const targetDurationSeconds = Math.max(
+      1,
+      nullableInteger(existing?.targetDurationSeconds) || nullableInteger(target.durationSeconds) || 1
+    );
+    const completedDurationSeconds = Math.max(0, nullableInteger(existing?.durationSeconds) || 0);
+    return {
+      metric: "seconds",
+      targetDurationSeconds,
+      completedDurationSeconds,
+      rir: existing?.rir ?? null,
+      done: completedDurationSeconds >= targetDurationSeconds
+    };
+  }
+
+  const plannedTargetReps = Math.max(1, nullableInteger(target.reps) || 1);
+  const targetReps = Math.max(
+    1,
+    Number.isFinite(existing?.targetReps)
+      ? existing.targetReps + Math.max(0, existing.extraSlots)
+      : plannedTargetReps
+  );
   const completedReps = Math.max(0, nullableInteger(existing?.reps) || 0);
-  const extraSlots = Math.max(0, nullableInteger(existing?.extraSlots) || 0, completedReps - targetReps);
   return {
+    metric: "reps",
     load: existing?.load ?? target.load ?? null,
     targetLoad: existing?.targetLoad ?? target.load ?? null,
     targetReps,
     completedReps,
-    extraSlots,
+    extraSlots: 0,
     rir: existing?.rir ?? null,
     done: completedReps >= targetReps
   };
@@ -1304,7 +1444,7 @@ function handleRepStripKeydown(event, control = event.currentTarget) {
   const tile = control.closest(".live-set-tile");
   if (!tile) return;
   const currentReps = Number(tile.dataset.completedReps || 0);
-  const maxReps = Number(tile.dataset.targetReps || 0) + Number(tile.dataset.extraSlots || 0);
+  const maxReps = Math.max(Number(tile.dataset.targetReps || 0), currentReps);
   let reps = null;
   if (event.key === "ArrowRight" || event.key === "ArrowUp") reps = Math.min(maxReps, currentReps + 1);
   if (event.key === "ArrowLeft" || event.key === "ArrowDown") reps = Math.max(0, currentReps - 1);
@@ -1315,55 +1455,32 @@ function handleRepStripKeydown(event, control = event.currentTarget) {
   recordRepBoxPayload(repStripPayload(control, null, reps));
 }
 
-function addExtraRepSlot(event, control = event.currentTarget) {
+function adjustTargetReps(event, control = event.currentTarget, delta = 0) {
   event.preventDefault();
   event.stopPropagation();
   const button = control;
   const tile = button.closest(".live-set-tile");
   if (!tile) return;
-  const targetReps = Number(button.dataset.targetReps);
-  const completedReps = Number(tile.dataset.completedReps || button.dataset.currentReps || 0);
-  const currentSlots = Math.max(0, Number(tile.dataset.extraSlots || 0));
-  const nextSlots = currentSlots + 1;
-  tile.dataset.extraSlots = String(nextSlots);
+  const completedReps = Math.max(0, Number(tile.dataset.completedReps || 0));
+  const targetReps = Math.max(1, Number(tile.dataset.targetReps || button.dataset.targetReps || 1));
+  const nextTargetReps = Math.max(1, targetReps + delta);
+  if (nextTargetReps === targetReps) return;
+  tile.dataset.targetReps = String(nextTargetReps);
+  tile.dataset.extraSlots = "0";
   tile.classList.add("is-extra-editing");
-  syncExtraRepBoxes(tile, completedReps, targetReps);
-  updateTargetCountUI(tile, targetReps);
+  tile.classList.toggle("is-done", completedReps >= nextTargetReps);
+  syncExtraRepBoxes(tile, completedReps, nextTargetReps);
+  updateTargetCountUI(tile, nextTargetReps);
   updateExtraRepControls(tile);
-  recordPerformedExtraSlots(
+  recordPerformedTargetReps(
     button.dataset.workoutId,
     button.dataset.blockId,
     button.dataset.movementId,
     Number(button.dataset.setIndex),
-    nextSlots,
-    targetReps
+    nextTargetReps,
+    completedReps
   );
-}
-
-function removeExtraRepSlot(event, control = event.currentTarget) {
-  event.preventDefault();
-  event.stopPropagation();
-  const button = control;
-  const tile = button.closest(".live-set-tile");
-  if (!tile) return;
-  const targetReps = Number(tile.dataset.targetReps || button.dataset.targetReps);
-  const completedReps = Number(tile.dataset.completedReps || button.dataset.currentReps || 0);
-  const completedExtra = Math.max(0, completedReps - targetReps);
-  const currentSlots = Math.max(0, Number(tile.dataset.extraSlots || 0));
-  const nextSlots = Math.max(completedExtra, currentSlots - 1);
-  tile.dataset.extraSlots = String(nextSlots);
-  tile.classList.add("is-extra-editing");
-  syncExtraRepBoxes(tile, completedReps, targetReps);
-  updateTargetCountUI(tile, targetReps);
-  updateExtraRepControls(tile);
-  recordPerformedExtraSlots(
-    button.dataset.workoutId,
-    button.dataset.blockId,
-    button.dataset.movementId,
-    Number(button.dataset.setIndex),
-    nextSlots,
-    targetReps
-  );
+  syncLiveCompletionUI(tile);
 }
 
 function toggleExtraRepButton(event, control = event.currentTarget) {
@@ -1372,11 +1489,7 @@ function toggleExtraRepButton(event, control = event.currentTarget) {
   const tile = control.closest(".live-set-tile");
   if (!tile) return;
   const targetReps = Number(tile.dataset.targetReps || control.dataset.targetReps);
-  const completedReps = Number(tile.dataset.completedReps || 0);
-  tile.dataset.extraSlots = String(Math.max(
-    Number(tile.dataset.extraSlots || 0),
-    Math.max(0, completedReps - targetReps)
-  ));
+  tile.dataset.extraSlots = "0";
   tile.classList.add("is-extra-editing");
   updateExtraRepControls(tile);
   tile.querySelector(".extra-rep-add-button")?.focus();
@@ -1455,9 +1568,7 @@ function updateRepBoxUI(tile, completedReps, targetReps) {
   if (!tile) return;
   tile.classList.toggle("is-done", completedReps >= targetReps);
   tile.dataset.completedReps = String(completedReps);
-  const completedExtra = Math.max(0, completedReps - targetReps);
-  const slotCount = Math.max(Number(tile.dataset.extraSlots || 0), completedExtra);
-  tile.dataset.extraSlots = String(slotCount);
+  tile.dataset.extraSlots = "0";
   syncExtraRepBoxes(tile, completedReps, targetReps);
   tile.querySelectorAll(".rep-box-unit").forEach(button => {
     const unit = {
@@ -1501,17 +1612,13 @@ function updateLiveProgressUI(workoutId) {
   const percent = progressRoot.querySelector("[data-live-progress-percent]");
   const count = progressRoot.querySelector("[data-live-progress-count]");
   if (percent) percent.textContent = `${progress.percent}%`;
-  if (count) count.textContent = `${progress.completed}/${progress.total} reps complete`;
+  if (count) count.textContent = `${progress.completed}/${progress.total} sets complete`;
 }
 
 function syncExtraRepBoxes(tile, completedReps, targetReps) {
   const row = tile.querySelector(".set-rep-boxes");
   if (!row) return;
-  const extra = Math.max(
-    0,
-    Number(tile.dataset.extraSlots || 0),
-    completedReps - targetReps
-  );
+  const totalSlots = Math.max(targetReps, completedReps);
   row.innerHTML = renderRepBoxUnits({
     workoutId: tile.dataset.workoutId || "",
     blockId: tile.dataset.blockId || "",
@@ -1519,17 +1626,16 @@ function syncExtraRepBoxes(tile, completedReps, targetReps) {
     setIndex: Number(tile.dataset.setIndex || 0),
     targetReps,
     completedReps,
-    totalSlots: targetReps + extra
+    totalSlots
   });
-  row.setAttribute("aria-valuemax", String(targetReps + extra));
+  row.setAttribute("aria-valuemax", String(totalSlots));
   row.setAttribute("aria-valuenow", String(completedReps));
 }
 
 function updateTargetCountUI(tile, targetReps) {
   const targetCount = tile.querySelector(".set-target-count");
   if (!targetCount) return;
-  const visibleReps = targetReps + Math.max(0, Number(tile.dataset.extraSlots || 0));
-  targetCount.textContent = String(visibleReps);
+  targetCount.textContent = String(targetReps);
   targetCount.dataset.targetReps = String(targetReps);
 }
 
@@ -1537,8 +1643,6 @@ function updateExtraRepControls(tile) {
   const editing = tile.classList.contains("is-extra-editing");
   const targetReps = Number(tile.dataset.targetReps || 0);
   const completedReps = Number(tile.dataset.completedReps || 0);
-  const completedExtra = Math.max(0, completedReps - targetReps);
-  const currentSlots = Math.max(0, Number(tile.dataset.extraSlots || 0));
   const addButton = tile.querySelector(".extra-rep-add-button");
   const removeButton = tile.querySelector(".extra-rep-remove-button");
   const removeSetButton = tile.querySelector(".set-remove-button");
@@ -1552,7 +1656,7 @@ function updateExtraRepControls(tile) {
     button.dataset.targetReps = String(targetReps);
   });
   if (removeButton) {
-    removeButton.disabled = currentSlots <= completedExtra;
+    removeButton.disabled = targetReps <= 1;
   }
 }
 
@@ -1574,7 +1678,7 @@ function closeExtraRepEditor(tile) {
   const targetReps = Number(tile.dataset.targetReps || 0);
   const completedReps = Number(tile.dataset.completedReps || 0);
   tile.classList.remove("is-extra-editing");
-  tile.dataset.extraSlots = String(Math.max(0, Number(tile.dataset.extraSlots || 0), completedReps - targetReps));
+  tile.dataset.extraSlots = "0";
   syncExtraRepBoxes(tile, completedReps, targetReps);
   updateTargetCountUI(tile, targetReps);
   updateExtraRepControls(tile);
@@ -2132,6 +2236,10 @@ function scheduleWorkoutFromTemplate(templateId, dateKey) {
 function openWorkoutBuilder(workoutId, options = {}) {
   const workout = workouts.find(item => item.id === workoutId);
   if (!workout) return;
+  if (workout.status === "completed") {
+    openLiveWorkout(workout.id, options);
+    return;
+  }
   activeWorkoutId = workout.id;
   activeWorkoutTemplateId = null;
   activeBlockId = null;
@@ -2398,13 +2506,33 @@ function movementProgressionPlan(movement, entry, workout) {
     schema,
     setTargets,
     previousSummary: previousSets.length ? summarizeSetTargets(previousSets, schema) : "No history",
-    ruleLabel: schema.loadStep
-      ? `Fill reps, then +${schema.loadStep} lb`
-      : "Fill reps, then harder"
+    ruleLabel: schema.metric === "seconds"
+      ? `Complete holds, then +${schema.durationStep} sec`
+      : schema.loadStep
+        ? `Complete reps, then +${schema.loadStep} lb`
+        : "Complete reps, then harder"
   };
 }
 
 function progressionSchemaForMovement(movement) {
+  if (movement.tracking?.metric === "seconds") {
+    return {
+      ...DEFAULT_PROGRESSIONS.timed,
+      durationMin: movement.tracking.targetMin,
+      durationMax: movement.tracking.targetMax,
+      durationStep: movement.tracking.targetStep
+    };
+  }
+
+  if (movement.tracking?.metric === "reps") {
+    return {
+      ...DEFAULT_PROGRESSIONS.relativeStrength,
+      repMin: movement.tracking.targetMin,
+      repMax: movement.tracking.targetMax,
+      repStep: movement.tracking.targetStep
+    };
+  }
+
   const text = [
     movement.id,
     movement.name,
@@ -2413,6 +2541,10 @@ function progressionSchemaForMovement(movement) {
     movement.variantType,
     ...(movement.tags || []).map(tag => tag.label)
   ].join(" ").toLowerCase();
+
+  if (/chin[_ -]?up|pull[_ -]?up|parallel[_ -]?bar[_ -]?dip|\bdip\b/.test(text)) {
+    return DEFAULT_PROGRESSIONS.relativeStrength;
+  }
 
   if (/push[_ -]?up|pull[_ -]?up|dip|calisthenics|bodyweight/.test(text)) {
     return DEFAULT_PROGRESSIONS.bodyweight;
@@ -2447,21 +2579,43 @@ function previousMovementPerformance(movementId, currentWorkout) {
 
 function performedSetsWithValues(entry) {
   return normalizePerformedSets(entry?.performedSets || [])
-    .filter(set => set.done || Number.isFinite(set.reps));
+    .filter(set => set.done || Number.isFinite(set.reps) || Number.isFinite(set.durationSeconds));
 }
 
 function nextSetTargets(previousSets, schema, targetSetCount) {
+  if (schema.metric === "seconds") {
+    const targets = Array.from({ length: targetSetCount }, (_, index) => {
+      const previous = previousSets[index] || previousSets[previousSets.length - 1] || {};
+      return {
+        load: null,
+        durationSeconds: Number.isFinite(previous.durationSeconds) ? previous.durationSeconds : schema.durationMin,
+        rir: normalizeRirValue(previous.rir) ?? schema.rirTarget,
+        done: false,
+        metric: "seconds"
+      };
+    });
+    if (!previousSets.length || !previousSets.every(set => set.done)) return targets;
+    return targets.map(set => ({
+      ...set,
+      durationSeconds: Math.min(schema.durationMax, set.durationSeconds + schema.durationStep),
+      rir: schema.rirTarget
+    }));
+  }
+
   const targets = Array.from({ length: targetSetCount }, (_, index) => {
     const previous = previousSets[index] || previousSets[previousSets.length - 1] || {};
     return {
       load: Number.isFinite(previous.load) ? previous.load : null,
       reps: Number.isFinite(previous.reps) ? previous.reps : schema.repMin,
       rir: normalizeRirValue(previous.rir) ?? schema.rirTarget,
-      done: false
+      done: false,
+      metric: "reps"
     };
   });
 
   if (!previousSets.length) return targets;
+
+  if (!previousSets.every(set => set.done)) return targets;
 
   const hasLoad = schema.loadStep > 0 && targets.every(set => Number.isFinite(set.load));
   const allAtTop = targets.every(set => Number(set.reps) >= schema.repMax);
@@ -2476,22 +2630,22 @@ function nextSetTargets(previousSets, schema, targetSetCount) {
     }));
   }
 
-  const upgradeIndex = targets.findIndex(set =>
-    Number(set.reps) < schema.repMax &&
-    (set.rir === null || set.rir >= 1)
-  );
-  if (upgradeIndex >= 0) {
-    targets[upgradeIndex] = {
-      ...targets[upgradeIndex],
-      reps: Math.min(schema.repMax, Number(targets[upgradeIndex].reps) + 1),
-      rir: schema.rirTarget
-    };
-  }
-
-  return targets;
+  if (!allRecovered) return targets;
+  return targets.map(set => ({
+    ...set,
+    reps: Math.min(schema.repMax, Number(set.reps) + schema.repStep),
+    rir: schema.rirTarget
+  }));
 }
 
 function summarizeSetTargets(sets, schema) {
+  if (schema.metric === "seconds") {
+    const durations = sets
+      .map(set => Number.isFinite(set.durationSeconds) ? set.durationSeconds : null)
+      .filter(value => value !== null)
+      .join("/");
+    return `${durations || schema.durationMin} sec`;
+  }
   const firstLoad = sets.find(set => Number.isFinite(set.load))?.load;
   const reps = sets
     .map(set => Number.isFinite(set.reps) ? set.reps : null)
@@ -2514,6 +2668,7 @@ function recordPerformedReps(workoutId, blockId, movementId, setIndex, reps, tar
         targetLoad: target.load ?? base.targetLoad ?? null,
         targetReps: requiredReps,
         reps: completedReps,
+        extraSlots: 0,
         done,
         completedAt: done ? new Date().toISOString() : null,
         updatedAt: new Date().toISOString()
@@ -2522,18 +2677,54 @@ function recordPerformedReps(workoutId, blockId, movementId, setIndex, reps, tar
   }, { skipRender: true, markActive: true });
 }
 
-function recordPerformedExtraSlots(workoutId, blockId, movementId, setIndex, extraSlots, targetReps) {
-  const slotCount = Math.max(0, nullableInteger(extraSlots) || 0);
+function updateTimedSetDuration(event, control = event.currentTarget) {
+  const completedDurationSeconds = Math.max(0, nullableInteger(control.value) || 0);
+  const targetDurationSeconds = Math.max(1, nullableInteger(control.dataset.targetDuration) || 1);
+  recordPerformedDuration(
+    control.dataset.workoutId,
+    control.dataset.blockId,
+    control.dataset.movementId,
+    Number(control.dataset.setIndex),
+    completedDurationSeconds,
+    targetDurationSeconds
+  );
+  const tile = control.closest(".live-set-tile");
+  if (!tile) return;
+  tile.dataset.completedDuration = String(completedDurationSeconds);
+  tile.classList.toggle("is-done", completedDurationSeconds >= targetDurationSeconds);
+  syncLiveCompletionUI(tile);
+}
+
+function recordPerformedDuration(workoutId, blockId, movementId, setIndex, durationSeconds, targetSeconds) {
+  updateWorkoutMovementEntry(workoutId, blockId, movementId, (entry, workout) => {
+    const target = setTargetForEntry(workout, entry, setIndex);
+    const done = durationSeconds >= targetSeconds;
+    return setPerformedSetAt(entry, setIndex, existing => ({
+      ...performedSetWithTarget(target, existing),
+      targetDurationSeconds: targetSeconds,
+      durationSeconds,
+      done,
+      completedAt: done ? new Date().toISOString() : null,
+      updatedAt: new Date().toISOString()
+    }));
+  }, { skipRender: true, markActive: true });
+}
+
+function recordPerformedTargetReps(workoutId, blockId, movementId, setIndex, targetReps, completedReps) {
   const requiredReps = Math.max(1, nullableInteger(targetReps) || 1);
+  const actualReps = Math.max(0, nullableInteger(completedReps) || 0);
   updateWorkoutMovementEntry(workoutId, blockId, movementId, (entry, workout) => {
     const target = setTargetForEntry(workout, entry, setIndex);
     return setPerformedSetAt(entry, setIndex, existing => {
       const base = performedSetWithTarget(target, existing);
+      const done = actualReps >= requiredReps;
       return {
         ...base,
         targetLoad: target.load ?? base.targetLoad ?? null,
         targetReps: requiredReps,
-        extraSlots: slotCount,
+        extraSlots: 0,
+        done,
+        completedAt: done ? existing.completedAt || new Date().toISOString() : null,
         updatedAt: new Date().toISOString()
       };
     });
@@ -2544,16 +2735,18 @@ function updatePerformedSet(workoutId, blockId, movementId, setIndex, field, val
   const numericValue = field === "reps" ? nullableInteger(value) : nullableNumber(value);
   updateWorkoutMovementEntry(workoutId, blockId, movementId, (entry, workout) => {
     const target = setTargetForEntry(workout, entry, setIndex);
-    const targetReps = Math.max(1, nullableInteger(target.reps) || 1);
-    const done = field === "reps" ? (numericValue || 0) >= targetReps : undefined;
-    return setPerformedSetAt(entry, setIndex, existing => ({
-      ...performedSetWithTarget(target, existing),
-      targetLoad: target.load ?? existing.targetLoad ?? null,
-      targetReps,
-      [field]: numericValue,
-      ...(done === undefined ? {} : { done, completedAt: done ? new Date().toISOString() : null }),
-      updatedAt: new Date().toISOString()
-    }));
+    return setPerformedSetAt(entry, setIndex, existing => {
+      const targetReps = Math.max(1, nullableInteger(existing.targetReps) || nullableInteger(target.reps) || 1);
+      const done = field === "reps" ? (numericValue || 0) >= targetReps : undefined;
+      return {
+        ...performedSetWithTarget(target, existing),
+        targetLoad: target.load ?? existing.targetLoad ?? null,
+        targetReps,
+        [field]: numericValue,
+        ...(done === undefined ? {} : { done, completedAt: done ? new Date().toISOString() : null }),
+        updatedAt: new Date().toISOString()
+      };
+    });
   }, { skipRender: true, markActive: true });
 }
 
@@ -2577,21 +2770,24 @@ function setTargetForEntry(workout, entry, setIndex) {
 }
 
 function updateWorkoutMovementEntry(workoutId, blockId, movementId, entryUpdater, options = {}) {
-  updateWorkout(workoutId, workout => ({
-    ...workout,
-    status: options.markActive && workout.status === "draft" ? "active" : workout.status,
-    updatedAt: new Date().toISOString(),
-    blocks: workoutBlocks(workout).map(block =>
-      block.id === blockId
-        ? {
-            ...block,
-            movements: normalizeMovementEntries(block.movements).map(entry =>
-              entry.movementId === movementId ? entryUpdater(entry, workout, block) : entry
-            )
-          }
-        : block
-    )
-  }), options);
+  updateWorkout(workoutId, workout => {
+    if (workout.status === "completed") return workout;
+    return {
+      ...workout,
+      status: options.markActive && workout.status === "draft" ? "active" : workout.status,
+      updatedAt: new Date().toISOString(),
+      blocks: workoutBlocks(workout).map(block =>
+        block.id === blockId
+          ? {
+              ...block,
+              movements: normalizeMovementEntries(block.movements).map(entry =>
+                entry.movementId === movementId ? entryUpdater(entry, workout, block) : entry
+              )
+            }
+          : block
+      )
+    };
+  }, options);
 }
 
 function setPerformedSetAt(entry, setIndex, setUpdater) {
@@ -2600,8 +2796,10 @@ function setPerformedSetAt(entry, setIndex, setUpdater) {
     performedSets.push({
       targetLoad: null,
       targetReps: null,
+      targetDurationSeconds: null,
       load: null,
       reps: null,
+      durationSeconds: null,
       extraSlots: 0,
       rir: null,
       done: false,
@@ -2617,8 +2815,10 @@ function performedSetWithTarget(target = {}, existing = {}) {
   return {
     targetLoad: existing.targetLoad ?? target.load ?? null,
     targetReps: existing.targetReps ?? target.reps ?? null,
+    targetDurationSeconds: existing.targetDurationSeconds ?? target.durationSeconds ?? null,
     load: existing.load ?? target.load ?? null,
     reps: existing.reps ?? null,
+    durationSeconds: existing.durationSeconds ?? null,
     extraSlots: Math.max(0, nullableInteger(existing.extraSlots) || 0),
     rir: existing.rir ?? null,
     done: Boolean(existing.done),
@@ -2788,7 +2988,7 @@ function deleteWorkout(workoutId) {
   if (template) {
     openConfirmDialog({
       title: "Delete template?",
-      message: `"${workoutTitle(template)}" will be removed from your workout library. Scheduled workouts already created from it will stay on the calendar.`,
+      message: `"${workoutTitle(template)}" will be removed from your workout templates. Scheduled workouts already created from it will stay on the calendar.`,
       confirmLabel: "Yes, delete",
       onConfirm: () => {
         workoutTemplates = workoutTemplates.filter(item => item.id !== workoutId);
@@ -2990,8 +3190,10 @@ function normalizePerformedSet(set) {
   return {
     targetLoad: nullableNumber(set.targetLoad),
     targetReps: nullableInteger(set.targetReps),
+    targetDurationSeconds: nullableInteger(set.targetDurationSeconds),
     load: nullableNumber(set.load),
     reps: nullableInteger(set.reps),
+    durationSeconds: nullableInteger(set.durationSeconds),
     extraSlots: Math.max(0, nullableInteger(set.extraSlots) || 0),
     rir: normalizeRirValue(set.rir),
     done: Boolean(set.done),
@@ -4145,7 +4347,7 @@ function applyInitialMovementRoute() {
     return;
   }
   if (routeView === "workout" && routeWorkoutRecord) {
-    movementView = "workout";
+    movementView = routeWorkoutRecord.status === "completed" ? "live" : "workout";
     if (routeWorkoutRecord.date) {
       selectedCalendarDate = routeWorkoutRecord.date;
       visibleCalendarMonth = monthStart(parseDateKey(routeWorkoutRecord.date));

@@ -13,6 +13,12 @@
   "variantType": "supinated_bodyweight_bar",
   "variant": "Supinated bodyweight pull from a fixed overhead bar, performed without assistance, kipping, or added external load.",
   "description": "Hang from a fixed overhead bar with a supinated grip, set the shoulders without swinging, pull the chest toward the bar by driving the elbows down while keeping the ribs controlled, then lower under control to a full hang.",
+  "tracking": {
+    "metric": "reps",
+    "targetMin": 3,
+    "targetMax": 8,
+    "targetStep": 1
+  },
   "communityRating": {
     "averageStars": null,
     "reviewCount": 0,

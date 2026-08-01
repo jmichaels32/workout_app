@@ -12,6 +12,12 @@
   "variantType": "side_forearm",
   "variant": "Standard forearm side plank from the feet with the body held in a straight lateral line.",
   "description": "Lie on one side with the elbow under the shoulder, stack or stagger the feet, lift the hips into a straight line, brace the trunk without rotating forward or back, then hold before lowering under control.",
+  "tracking": {
+    "metric": "seconds",
+    "targetMin": 30,
+    "targetMax": 60,
+    "targetStep": 5
+  },
   "communityRating": {
     "averageStars": null,
     "reviewCount": 0,

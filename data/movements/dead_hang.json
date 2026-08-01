@@ -12,6 +12,12 @@
   "variantType": "overhead_bar_hang",
   "variant": "Timed bodyweight hang from a fixed overhead bar, performed with a full grip and controlled shoulders; passive and active shoulder positions should be split later if needed.",
   "description": "Grip a fixed overhead bar with both hands, let the feet leave the floor, keep the ribs organized, and hold the hang without swinging while maintaining enough shoulder control that the upper arms do not collapse painfully toward the ears.",
+  "tracking": {
+    "metric": "seconds",
+    "targetMin": 20,
+    "targetMax": 60,
+    "targetStep": 5
+  },
   "communityRating": {
     "averageStars": null,
     "reviewCount": 0,

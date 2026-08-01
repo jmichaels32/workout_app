@@ -38,6 +38,19 @@ Each movement file must include:
 - `muscles`
 - `evidence`
 
+Add `tracking` when a movement should not use the generic repetition prescription:
+
+```json
+{
+  "metric": "seconds",
+  "targetMin": 30,
+  "targetMax": 60,
+  "targetStep": 5
+}
+```
+
+`metric` is `reps` or `seconds`. Use movement-specific targets for timed holds and relative-strength movements whose realistic entry point differs from the generic defaults.
+
 Every visible muscle role must cite one or more IDs from `evidence.studies`.
 
 Every visible muscle role must also resolve to `data/anatomy.json` and that anatomy entry must point to existing files under `assets/bodyparts3d/`. Use the validator as the gate; do not rely on visual inspection to catch missing meshes.
