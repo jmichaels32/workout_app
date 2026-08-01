@@ -75,6 +75,8 @@ let visibleCalendarMonth = monthStart(parseDateKey(selectedCalendarDate));
 let pendingConfirmAction = null;
 let activeBuilderMovementDrag = null;
 let builderPointerDrag = null;
+const BUILDER_DRAG_HOLD_MS = 450;
+const BUILDER_DRAG_MOVE_TOLERANCE = 10;
 const selectedMuscles = {};
 
 const DELEGATED_HANDLERS = {
@@ -1968,7 +1970,8 @@ function dropBuilderMovementOnBlock(event, workoutId, targetBlockId, control = e
 }
 
 function finishBuilderMovementDrag() {
-  activeBuilderMovementDrag?.sourceRow?.classList.remove("is-dragging");
+  if (builderPointerDrag?.holdTimer) window.clearTimeout(builderPointerDrag.holdTimer);
+  activeBuilderMovementDrag?.sourceRow?.classList.remove("is-dragging", "is-drag-armed");
   activeBuilderMovementDrag = null;
   builderPointerDrag = null;
   clearBuilderDropMarkers();
@@ -1994,13 +1997,31 @@ function startBuilderPointerDrag(event, control = event.currentTarget) {
   if (!row) return;
   activeBuilderMovementDrag = builderDragPayloadFromRow(row);
   builderPointerDrag = {
+    pointerId: event.pointerId,
     startX: event.clientX,
     startY: event.clientY,
     target: null,
-    dragging: false
+    dragging: false,
+    holdTimer: window.setTimeout(activateBuilderPointerDrag, BUILDER_DRAG_HOLD_MS)
   };
   startBuilderRemoveSwipe(event, row);
   event.stopPropagation();
+}
+
+function activateBuilderPointerDrag() {
+  if (!builderPointerDrag || !activeBuilderMovementDrag || builderRemoveSwipe?.active) return;
+  builderPointerDrag.holdTimer = null;
+  builderPointerDrag.dragging = true;
+  cancelBuilderRemoveSwipe();
+  const row = activeBuilderMovementDrag.sourceRow;
+  row?.classList.add("is-dragging", "is-drag-armed");
+  row?.setPointerCapture?.(builderPointerDrag.pointerId);
+}
+
+function abandonPendingBuilderPointerDrag() {
+  if (builderPointerDrag?.holdTimer) window.clearTimeout(builderPointerDrag.holdTimer);
+  builderPointerDrag = null;
+  activeBuilderMovementDrag = null;
 }
 
 function handleBuilderPointerMove(event) {
@@ -2008,17 +2029,16 @@ function handleBuilderPointerMove(event) {
   const dx = event.clientX - builderPointerDrag.startX;
   const dy = event.clientY - builderPointerDrag.startY;
   const moved = Math.hypot(dx, dy);
-  if (builderRemoveSwipe?.active) {
-    builderPointerDrag = null;
-    activeBuilderMovementDrag = null;
+  if (!builderPointerDrag.dragging && builderRemoveSwipe?.active) {
+    abandonPendingBuilderPointerDrag();
     return;
   }
-  if (!builderPointerDrag.dragging && moved < 8) return;
-  if (!builderPointerDrag.dragging && Math.abs(dx) >= Math.abs(dy)) return;
-  if (!builderPointerDrag.dragging) cancelBuilderRemoveSwipe(event);
-  builderPointerDrag.dragging = true;
+  if (!builderPointerDrag.dragging) {
+    if (moved <= BUILDER_DRAG_MOVE_TOLERANCE) return;
+    abandonPendingBuilderPointerDrag();
+    return;
+  }
   event.preventDefault();
-  activeBuilderMovementDrag.sourceRow?.classList.add("is-dragging");
   clearBuilderDropMarkers();
   const element = document.elementFromPoint(event.clientX, event.clientY);
   const row = element?.closest?.(".block-movement-row");
@@ -2043,6 +2063,7 @@ function handleBuilderPointerMove(event) {
 
 function finishBuilderPointerDrag() {
   if (!builderPointerDrag || !activeBuilderMovementDrag) return;
+  if (builderPointerDrag.holdTimer) window.clearTimeout(builderPointerDrag.holdTimer);
   const target = builderPointerDrag.target;
   const payload = activeBuilderMovementDrag;
   const didDrag = builderPointerDrag.dragging;
@@ -2059,9 +2080,13 @@ function finishBuilderPointerDrag() {
   finishBuilderMovementDrag();
 }
 
+function cancelBuilderPointerDrag() {
+  finishBuilderMovementDrag();
+}
+
 window.addEventListener("pointermove", handleBuilderPointerMove);
 window.addEventListener("pointerup", finishBuilderPointerDrag);
-window.addEventListener("pointercancel", finishBuilderPointerDrag);
+window.addEventListener("pointercancel", cancelBuilderPointerDrag);
 
 let builderRemoveSwipe = null;
 let suppressBuilderRowClickUntil = 0;
