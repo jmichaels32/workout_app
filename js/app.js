@@ -66,6 +66,7 @@ let activeBlockId = null;
 let workoutBuilderReturnWorkoutId = null;
 let schedulePickerOpen = false;
 let calendarDaySheetOpen = false;
+let quickActivityOpen = false;
 let initialEvidenceOpened = false;
 let workouts = loadStoredWorkouts();
 let workoutTemplates = loadStoredWorkoutTemplates();
@@ -85,6 +86,8 @@ const DELEGATED_HANDLERS = {
     openCalendarDaySheet: (event, control) => openCalendarDaySheet(control.dataset.dateKey, event),
     closeCalendarDaySheet: () => closeCalendarDaySheet(),
     openSchedulePicker: (event, control) => openSchedulePicker(control.dataset.dateKey, event),
+    openQuickActivity: (event, control) => openQuickActivity(control.dataset.dateKey, event),
+    closeQuickActivity: () => closeQuickActivity(),
     openLiveWorkout: (event, control) => {
       event.stopPropagation();
       openLiveWorkout(control.dataset.workoutId);
@@ -154,7 +157,8 @@ const DELEGATED_HANDLERS = {
     handleCollectionSearchInput: event => handleCollectionSearchInput(event)
   },
   submit: {
-    confirmSaveWorkoutAsTemplate: (event, control) => confirmSaveWorkoutAsTemplate(event, control.dataset.workoutId)
+    confirmSaveWorkoutAsTemplate: (event, control) => confirmSaveWorkoutAsTemplate(event, control.dataset.workoutId),
+    createQuickActivity: (event, control) => createQuickActivity(event, control)
   },
   keydown: {
     handleMovementListingKey: (event, control) => handleMovementListingKey(event, control.dataset.movementId),
@@ -291,7 +295,6 @@ function renderMovementHome() {
     <div class="home-shell">
       <section class="home-panel">
         <h1>Calendar</h1>
-        <p>${escapeHTML(homeSummaryText())}</p>
         <div class="home-actions single">
           <button type="button" class="compare-button home-library-link" data-action="openMovementCollection">Movement Library</button>
         </div>
@@ -317,6 +320,7 @@ function renderMovementHome() {
       </section>
       ${renderCalendarDaySheet()}
       ${renderScheduleModal()}
+      ${renderQuickActivityModal()}
       <section id="workoutLibraryPanel" class="workout-library-panel" aria-label="Workout templates">
         <div class="workout-library-header">
           <h2>Workout Templates</h2>
@@ -335,13 +339,6 @@ function renderHomeStat(label, value, caption) {
       <span class="movement-count">${escapeHTML(caption)}</span>
     </div>
   `;
-}
-
-function homeSummaryText() {
-  const completedDays = completedWorkoutDaysInWindow(30);
-  if (!workouts.length && !workoutTemplates.length) return "No workouts planned yet.";
-  if (completedDays) return `${completedDays} completed day${completedDays === 1 ? "" : "s"} in the last 30.`;
-  return `${workoutCountByStatus(["draft", "active"])} draft${workoutCountByStatus(["draft", "active"]) === 1 ? "" : "s"} planned, ${workoutTemplates.length} saved.`;
 }
 
 function renderCalendarHeader() {
@@ -434,12 +431,9 @@ function renderCalendarDaySheet() {
   const canAdd = dayWorkouts.length < MAX_WORKOUTS_PER_DAY;
   return `
     <div class="schedule-modal calendar-day-modal" data-action="closeCalendarDaySheet" role="presentation">
-      <section class="schedule-dialog calendar-day-dialog" data-action="stopPropagation" role="dialog" aria-modal="true" aria-label="Workouts on ${escapeHTML(DAY_FORMATTER.format(parseDateKey(selectedCalendarDate)))}">
+      <section class="schedule-dialog calendar-day-dialog" data-action="stopPropagation" role="dialog" aria-modal="true" aria-label="Entries on ${escapeHTML(DAY_FORMATTER.format(parseDateKey(selectedCalendarDate)))}">
         <div class="schedule-dialog-header">
-          <div>
-            <p class="eyebrow">Workout Day</p>
-            <h2>${escapeHTML(DAY_FORMATTER.format(parseDateKey(selectedCalendarDate)))}</h2>
-          </div>
+          <h2>${escapeHTML(DAY_FORMATTER.format(parseDateKey(selectedCalendarDate)))}</h2>
           <button type="button" class="back-button" data-action="closeCalendarDaySheet">Close</button>
         </div>
         <div class="calendar-day-workout-list">
@@ -457,16 +451,49 @@ function renderCalendarDaySheet() {
                 <small>${escapeHTML(workout.status === "completed" ? "Completed" : "Open workout")}</small>
               </span>
             </button>
-          `).join("") || `<p class="empty-state">No workouts scheduled.</p>`}
+          `).join("") || `<p class="empty-state">Nothing logged.</p>`}
         </div>
         ${canAdd ? `
-          <button
-            type="button"
-            class="detail-evidence-button calendar-day-add-button"
-            data-action="openSchedulePicker"
-            data-date-key="${escapeHTML(selectedCalendarDate)}"
-          >Add Workout</button>
-        ` : `<p class="movement-count">Maximum of ${MAX_WORKOUTS_PER_DAY} workouts scheduled.</p>`}
+          <div class="calendar-day-add-actions">
+            <button
+              type="button"
+              class="compare-button calendar-day-add-button"
+              data-action="openQuickActivity"
+              data-date-key="${escapeHTML(selectedCalendarDate)}"
+            >Add Activity</button>
+            <button
+              type="button"
+              class="detail-evidence-button calendar-day-add-button"
+              data-action="openSchedulePicker"
+              data-date-key="${escapeHTML(selectedCalendarDate)}"
+            >Add Workout</button>
+          </div>
+        ` : `<p class="movement-count">Maximum of ${MAX_WORKOUTS_PER_DAY} entries.</p>`}
+      </section>
+    </div>
+  `;
+}
+
+function renderQuickActivityModal() {
+  if (!quickActivityOpen) return "";
+  return `
+    <div class="schedule-modal" data-action="closeQuickActivity" role="presentation">
+      <section class="schedule-dialog quick-activity-dialog" data-action="stopPropagation" role="dialog" aria-modal="true" aria-label="Add activity">
+        <div class="schedule-dialog-header">
+          <h2>Add Activity</h2>
+          <button type="button" class="back-button" data-action="closeQuickActivity">Close</button>
+        </div>
+        <form class="quick-activity-form" data-submit-action="createQuickActivity">
+          <label>
+            <span>Name</span>
+            <input name="title" maxlength="80" placeholder="Soccer practice" autocomplete="off" required autofocus>
+          </label>
+          <label class="quick-activity-color-field">
+            <span>Color</span>
+            <input type="color" name="color" value="${escapeHTML(WORKOUT_COLOR_OPTIONS[0].value)}" aria-label="Activity color">
+          </label>
+          <button type="submit" class="detail-evidence-button">Save Activity</button>
+        </form>
       </section>
     </div>
   `;
@@ -816,12 +843,17 @@ function renderLiveWorkoutPage() {
 }
 
 function renderCompletedWorkoutPage(workout) {
-  const blocks = workoutBlocks(workout);
+  const isActivity = workout.kind === "activity";
+  const blocks = workoutBlocks(workout).filter(block => blockMovements(block).length);
   movementLivePage.innerHTML = `
     <div class="completed-workout" style="${workoutColorStyle(workout)}">
       <div class="screen-topbar">
         <button type="button" class="back-button" data-action="openMovementHome">Back</button>
-        <button type="button" class="compare-button" data-action="toggleLiveWorkoutComplete" data-workout-id="${escapeHTML(workout.id)}">Reopen</button>
+        ${isActivity ? `
+          <button type="button" class="delete-button" data-action="deleteWorkout" data-workout-id="${escapeHTML(workout.id)}">Delete</button>
+        ` : `
+          <button type="button" class="compare-button" data-action="toggleLiveWorkoutComplete" data-workout-id="${escapeHTML(workout.id)}">Reopen</button>
+        `}
       </div>
       <header class="completed-workout-header">
         <div>
@@ -831,9 +863,11 @@ function renderCompletedWorkoutPage(workout) {
         <span class="completed-workout-mark" aria-hidden="true"></span>
         <p class="movement-count">${escapeHTML(shortDateLabel(workout.date))}</p>
       </header>
-      <section class="completed-workout-blocks" aria-label="Completed workout record">
-        ${blocks.map((block, index) => renderCompletedWorkoutBlock(workout, block, index)).join("") || `<p class="empty-state">No movements were recorded.</p>`}
-      </section>
+      ${blocks.length ? `
+        <section class="completed-workout-blocks" aria-label="Completed workout record">
+          ${blocks.map((block, index) => renderCompletedWorkoutBlock(workout, block, index)).join("")}
+        </section>
+      ` : ""}
     </div>
   `;
 }
@@ -1729,9 +1763,7 @@ function renderWorkoutBlock(workout, block, index) {
   return `
     <article class="workout-block">
       <div class="block-header">
-        <div>
-          <p class="eyebrow">Block ${index + 1}</p>
-        </div>
+        <h3>Block ${index + 1}</h3>
         <div class="block-actions">
           ${movements.length > 1 ? `
             <button
@@ -2105,8 +2137,8 @@ document.addEventListener("pointerdown", closeBuilderRemoveActionsFromPointer, t
 
 function calendarDayLabel(date, dayWorkouts) {
   const base = DAY_FORMATTER.format(date);
-  if (!dayWorkouts.length) return `${base}, no workouts`;
-  return `${base}, ${dayWorkouts.length} workout${dayWorkouts.length === 1 ? "" : "s"}`;
+  if (!dayWorkouts.length) return `${base}, nothing logged`;
+  return `${base}, ${dayWorkouts.length} entr${dayWorkouts.length === 1 ? "y" : "ies"}`;
 }
 
 function changeCalendarMonth(delta) {
@@ -2116,6 +2148,8 @@ function changeCalendarMonth(delta) {
     1
   ));
   calendarDaySheetOpen = false;
+  schedulePickerOpen = false;
+  quickActivityOpen = false;
   renderMovementApp({ skipHistory: true });
 }
 
@@ -2126,6 +2160,7 @@ function changeCalendarRange(delta) {
     visibleCalendarMonth = monthStart(nextDate);
     calendarDaySheetOpen = false;
     schedulePickerOpen = false;
+    quickActivityOpen = false;
     renderMovementApp({ skipHistory: true });
     return;
   }
@@ -2141,6 +2176,7 @@ function goToToday() {
   visibleCalendarMonth = monthStart(parseDateKey(selectedCalendarDate));
   calendarDaySheetOpen = false;
   schedulePickerOpen = false;
+  quickActivityOpen = false;
   renderMovementApp({ skipHistory: true });
 }
 
@@ -2151,12 +2187,14 @@ function openCalendarDaySheet(dateKey, event) {
   selectedCalendarDate = normalizedDate;
   visibleCalendarMonth = monthStart(parseDateKey(normalizedDate));
   schedulePickerOpen = false;
+  quickActivityOpen = false;
   calendarDaySheetOpen = true;
   renderMovementApp({ skipHistory: true });
 }
 
 function closeCalendarDaySheet() {
   calendarDaySheetOpen = false;
+  quickActivityOpen = false;
   renderMovementApp({ skipHistory: true });
 }
 
@@ -2165,6 +2203,7 @@ function openSchedulePicker(dateKey, event) {
   event?.stopPropagation();
   selectedCalendarDate = formatDateKey(parseDateKey(dateKey));
   calendarDaySheetOpen = false;
+  quickActivityOpen = false;
   schedulePickerOpen = true;
   renderMovementApp({ skipHistory: true });
 }
@@ -2172,6 +2211,61 @@ function openSchedulePicker(dateKey, event) {
 function closeSchedulePicker() {
   schedulePickerOpen = false;
   calendarDaySheetOpen = true;
+  renderMovementApp({ skipHistory: true });
+}
+
+function openQuickActivity(dateKey, event) {
+  event?.preventDefault();
+  event?.stopPropagation();
+  selectedCalendarDate = formatDateKey(parseDateKey(dateKey));
+  calendarDaySheetOpen = false;
+  schedulePickerOpen = false;
+  quickActivityOpen = true;
+  renderMovementApp({ skipHistory: true });
+}
+
+function closeQuickActivity() {
+  quickActivityOpen = false;
+  calendarDaySheetOpen = true;
+  renderMovementApp({ skipHistory: true });
+}
+
+function createQuickActivity(event, form) {
+  event.preventDefault();
+  const formData = new FormData(form);
+  const title = String(formData.get("title") || "").trim().slice(0, 80);
+  if (!title) {
+    form.elements.title?.focus();
+    return;
+  }
+  if (workoutsForDate(selectedCalendarDate).length >= MAX_WORKOUTS_PER_DAY) {
+    quickActivityOpen = false;
+    calendarDaySheetOpen = true;
+    renderMovementApp({ skipHistory: true });
+    return;
+  }
+
+  const now = new Date().toISOString();
+  workouts = [
+    ...workouts,
+    {
+      id: `activity_${selectedCalendarDate}_${Date.now().toString(36)}`,
+      kind: "activity",
+      templateId: null,
+      date: selectedCalendarDate,
+      status: "completed",
+      title,
+      color: normalizeWorkoutColor(formData.get("color")),
+      createdAt: now,
+      updatedAt: now,
+      completedAt: now,
+      blocks: []
+    }
+  ];
+  quickActivityOpen = false;
+  calendarDaySheetOpen = true;
+  saveStoredWorkouts();
+  publishAppData();
   renderMovementApp({ skipHistory: true });
 }
 
@@ -2202,6 +2296,7 @@ function scheduleWorkoutFromTemplate(templateId, dateKey) {
   if (scheduledForDay.length >= MAX_WORKOUTS_PER_DAY) {
     selectedCalendarDate = normalizedDate;
     schedulePickerOpen = false;
+    quickActivityOpen = false;
     calendarDaySheetOpen = true;
     renderMovementApp({ skipHistory: true });
     return;
@@ -2228,6 +2323,7 @@ function scheduleWorkoutFromTemplate(templateId, dateKey) {
   visibleCalendarMonth = monthStart(parseDateKey(normalizedDate));
   schedulePickerOpen = false;
   calendarDaySheetOpen = false;
+  quickActivityOpen = false;
   saveStoredWorkouts();
   publishAppData();
   openWorkoutBuilder(id, { replaceHistory: false });
@@ -2247,6 +2343,7 @@ function openWorkoutBuilder(workoutId, options = {}) {
   selectedCalendarDate = workout.date;
   schedulePickerOpen = false;
   calendarDaySheetOpen = false;
+  quickActivityOpen = false;
   movementView = "workout";
   renderMovementApp(options);
 }
@@ -2260,6 +2357,7 @@ function openLiveWorkout(workoutId, options = {}) {
   selectedCalendarDate = workout.date;
   schedulePickerOpen = false;
   calendarDaySheetOpen = false;
+  quickActivityOpen = false;
   movementView = "live";
   renderMovementApp(options);
 }
@@ -2377,6 +2475,8 @@ function openWorkoutTemplateBuilder(templateId, options = {}) {
   activeBlockId = null;
   workoutBuilderReturnWorkoutId = null;
   schedulePickerOpen = false;
+  calendarDaySheetOpen = false;
+  quickActivityOpen = false;
   movementView = "workout";
   renderMovementApp(options);
 }
@@ -3004,8 +3104,9 @@ function deleteWorkout(workoutId) {
 
   const workout = workouts.find(item => item.id === workoutId);
   if (!workout) return;
+  const isActivity = workout.kind === "activity";
   openConfirmDialog({
-    title: "Delete workout?",
+    title: isActivity ? "Delete activity?" : "Delete workout?",
     message: `"${workoutTitle(workout)}" on ${shortDateLabel(workout.date)} will be removed from the calendar.`,
     confirmLabel: "Yes, delete",
     onConfirm: () => {
@@ -3060,7 +3161,8 @@ function syncModalScrollLock() {
     !movementQuickViewModal.hidden ||
     !confirmModal.hidden ||
     schedulePickerOpen ||
-    calendarDaySheetOpen;
+    calendarDaySheetOpen ||
+    quickActivityOpen;
   document.body.style.overflow = modalOpen ? "hidden" : "";
 }
 
@@ -3121,12 +3223,16 @@ function saveStoredWorkoutTemplates() {
 
 function normalizeWorkoutRecord(workout) {
   if (!workout || typeof workout !== "object") return workout;
+  const kind = workout.kind === "activity" ? "activity" : "workout";
   const legacyMovements = normalizeMovementEntries(workout.movements || []);
-  const blocks = Array.isArray(workout.blocks) && workout.blocks.length
-    ? workout.blocks.map(normalizeWorkoutBlock)
-    : [createWorkoutBlock(legacyMovements)];
+  const blocks = kind === "activity"
+    ? []
+    : Array.isArray(workout.blocks) && workout.blocks.length
+      ? workout.blocks.map(normalizeWorkoutBlock)
+      : [createWorkoutBlock(legacyMovements)];
   return {
     id: String(workout.id || `workout_${workout.date || todayKey()}_${Date.now().toString(36)}`),
+    kind,
     templateId: workout.templateId || null,
     date: /^\d{4}-\d{2}-\d{2}$/.test(workout.date || "") ? workout.date : todayKey(),
     status: ["draft", "active", "completed"].includes(workout.status) ? workout.status : "draft",
@@ -4032,6 +4138,7 @@ function openMovementHome(options = {}) {
   activeBlockId = null;
   schedulePickerOpen = false;
   calendarDaySheetOpen = false;
+  quickActivityOpen = false;
   activeCollectionGroup = null;
   activeRegionMacro = null;
   activeMovementId = null;
@@ -4304,6 +4411,9 @@ function finishDetailSwipe(event) {
 
 function applyInitialMovementRoute() {
   const params = new URLSearchParams(window.location.search);
+  schedulePickerOpen = false;
+  calendarDaySheetOpen = false;
+  quickActivityOpen = false;
   const routeView = params.get("view");
   const collection = params.get("collection");
   const group = params.get("group");

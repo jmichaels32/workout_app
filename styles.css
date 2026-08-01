@@ -229,9 +229,9 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   display: flex;
   width: 118px;
   min-height: 76px;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .home-stats {
@@ -421,19 +421,20 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   white-space: nowrap;
 }
 
-.calendar-day-workout-option small {
-  color: var(--muted);
+.calendar-day-add-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .calendar-day-add-button {
   width: 100%;
-  margin-top: 10px;
+  margin: 0;
 }
 
-.calendar-day-dialog h2 {
-  margin: 0;
-  color: var(--ink);
-  font-size: 20px;
+.calendar-day-workout-option small {
+  color: var(--muted);
 }
 
 .mobile-week-block {
@@ -730,9 +731,10 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 }
 
 .workout-color-picker {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 44px);
   gap: 8px;
+  max-width: 100%;
 }
 
 .workout-color-swatch {
@@ -1452,15 +1454,15 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
 }
 
 .block-header {
-  align-items: start;
-}
-
-.block-header > div:first-child {
-  min-width: 0;
+  align-items: center;
 }
 
 .block-header h3 {
   margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1.15;
 }
 
 .block-actions {
@@ -2580,6 +2582,36 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   margin-bottom: 12px;
 }
 
+.calendar-day-dialog .schedule-dialog-header h2,
+.quick-activity-dialog .schedule-dialog-header h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.quick-activity-form {
+  display: grid;
+  gap: 14px;
+}
+
+.quick-activity-form label {
+  margin: 0;
+}
+
+.quick-activity-color-field input {
+  width: 52px;
+  min-width: 52px;
+  height: 52px;
+  min-height: 52px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.quick-activity-color-field input::-webkit-color-swatch-wrapper { padding: 0; }
+.quick-activity-color-field input::-webkit-color-swatch { border: 0; }
+.quick-activity-color-field input::-moz-color-swatch { border: 0; }
+
 .evidence-dialog-header {
   display: flex;
   align-items: start;
@@ -2675,10 +2707,10 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   .listing-copy { grid-area: copy; }
   .movement-arrow { grid-area: arrow; justify-self: end; }
   .home-actions.single {
-    top: 50%;
-    bottom: auto;
+    top: auto;
+    bottom: 16px;
     display: flex;
-    transform: translateY(-50%);
+    transform: none;
   }
   .detail-actions {
     align-items: center;
@@ -2724,6 +2756,7 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   .home-stat strong { font-size: 18px; }
   .home-panel { min-height: 128px; padding-right: 134px; }
   .home-library-link { width: 112px; min-height: 72px; }
+  .workout-color-picker { grid-template-columns: repeat(4, 44px); }
   .calendar-toolbar, .workout-library-header { align-items: stretch; flex-direction: column; }
   .workout-library-header h2 { text-align: left; }
   .calendar-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -2758,7 +2791,7 @@ label { display: grid; gap: 6px; margin-bottom: 16px; color: var(--muted); }
   .block-movement-row .compare-tray-actions { width: 100%; }
   .block-actions button { width: auto; }
   .block-header {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
   }
   .block-actions {
